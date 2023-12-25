@@ -1,5 +1,3 @@
-library botton_nav_bar;
-
 import 'package:botton_nav_bar/src/notched_shape.dart';
 
 import 'package:flutter/material.dart';
