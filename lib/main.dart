@@ -1,4 +1,5 @@
 import 'package:yeerlo/colors/app_colors.dart';
+import 'package:yeerlo/data.dart';
 import 'package:yeerlo/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -13,14 +14,21 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Yeerlo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: darkOrangeColor,
-        ),
-        useMaterial3: false,
-        fontFamily: 'DM Sans',
-        
-      ),
+      theme: isLightTheme
+          ? ThemeData(
+              colorScheme: ColorScheme.fromSeed(
+                seedColor: lightOrangeColor,
+              ),
+              useMaterial3: false,
+              fontFamily: 'DM Sans',
+            )
+          : ThemeData(
+              colorScheme: ColorScheme.fromSeed(
+                seedColor: darkOrangeColor,
+              ),
+              useMaterial3: false,
+              fontFamily: 'DM Sans',
+            ),
       home: const HomePage(),
       debugShowCheckedModeBanner: false,
     );
