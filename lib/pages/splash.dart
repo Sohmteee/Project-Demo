@@ -13,7 +13,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
       body: Center(
-        child: Image,
+        child: Image.asset('assets/images/icons/light-icon.png'),
       ),
     );
   }
