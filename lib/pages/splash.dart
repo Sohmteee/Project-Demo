@@ -16,15 +16,18 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: Theme.of(context).colorScheme.primary,
       body: Center(
         child: Stack(
-          alignment: Alignment.center,
+          clipBehavior: Clip.none,
           children: [
             if (!isLightTheme)
-              Container(
-                width: MediaQuery.of(context).size.width * 5,
-                height: MediaQuery.of(context).size.width * 5,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  shape: BoxShape.circle,
+              Positioned(
+                top: 0,
+                child: Container(
+                  width: MediaQuery.of(context).size.width * 2,
+                  height: MediaQuery.of(context).size.width * 2,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    shape: BoxShape.circle,
+                  ),
                 ),
               ),
             SizedBox(
