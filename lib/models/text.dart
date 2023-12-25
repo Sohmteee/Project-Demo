@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DMSansText extends StatelessWidget {
-   DMSansText({
+  DMSansText({
     super.key,
     required this.text,
     this.fontSize,
@@ -13,9 +13,7 @@ class DMSansText extends StatelessWidget {
   final String text;
   double? fontSize;
   FontWeight? fontWeight;
-
   Color? color;
-
   TextAlign? textAlign;
 
   @override
