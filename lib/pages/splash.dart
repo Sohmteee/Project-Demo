@@ -13,16 +13,28 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
+  void initState() {
+    Future.delayed(5.seconds, () {
+      Navigator.pushReplacementNamed(context, '/home');
+    });
+
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
       body: Container(
-        decoration:(!isLightTheme) ? const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/dark-gradient-background.png'),
-            fit: BoxFit.cover,
-          ),
-        ) : null,
+        decoration: (!isLightTheme)
+            ? const BoxDecoration(
+                image: DecorationImage(
+                  image:
+                      AssetImage('assets/images/dark-gradient-background.png'),
+                  fit: BoxFit.cover,
+                ),
+              )
+            : null,
         child: Center(
           child: SizedBox(
             width: 224.w,
