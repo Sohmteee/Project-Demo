@@ -32,9 +32,9 @@ class _SplashScreenState extends State<SplashScreen> {
                 controller.repeat();
               })
               .shimmer(
-                delay: 1.5.seconds,
+                delay: 1.7.seconds,
                 color: lightOrangeColor,
-                duration: 1.seconds,
+                duration: .8.seconds,
               )
               .scaleXY(
                 delay: 1.5.seconds,
