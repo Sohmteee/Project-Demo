@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: false,
         fontFamily: 'DM Sans',
+        
       ),
       home: const HomePage(),
       debugShowCheckedModeBanner: false,
