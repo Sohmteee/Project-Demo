@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/data.dart';
-import 'package:yeerlo/pages/splash.dart';
+import 'package:yeerlo/screens/home.dart';
+import 'package:yeerlo/screens/splash.dart';
 import 'package:flutter/services.dart';
 
 void main() {
@@ -26,27 +27,29 @@ class MyApp extends StatelessWidget {
         splitScreenMode: true,
         builder: (_, child) {
           return MaterialApp(
-            title: 'Yeerlo',
-            theme: isLightTheme
-                ? ThemeData(
-                    colorScheme: ColorScheme.fromSeed(
-                      seedColor: lightOrangeColor,
-                      primary: Colors.white,
+              title: 'Yeerlo',
+              theme: isLightTheme
+                  ? ThemeData(
+                      colorScheme: ColorScheme.fromSeed(
+                        seedColor: lightOrangeColor,
+                        primary: Colors.white,
+                      ),
+                      useMaterial3: false,
+                      fontFamily: 'DM Sans',
+                    )
+                  : ThemeData(
+                      colorScheme: ColorScheme.fromSeed(
+                        seedColor: darkOrangeColor,
+                        primary: Colors.black,
+                      ),
+                      useMaterial3: false,
+                      fontFamily: 'DM Sans',
                     ),
-                    useMaterial3: false,
-                    fontFamily: 'DM Sans',
-                  )
-                : ThemeData(
-                    colorScheme: ColorScheme.fromSeed(
-                      seedColor: darkOrangeColor,
-                      primary: Colors.black,
-                    ),
-                    useMaterial3: false,
-                    fontFamily: 'DM Sans',
-                  ),
-            home: const SplashScreen(),
-            debugShowCheckedModeBanner: false,
-          );
+              home: const SplashScreen(),
+              debugShowCheckedModeBanner: false,
+              routes: {
+                '/home': (context) => const HomeScreen(),
+              });
         });
   }
 }
