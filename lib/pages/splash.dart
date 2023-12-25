@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yeerlo/data.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -16,7 +17,8 @@ class _SplashScreenState extends State<SplashScreen> {
         child: SizedBox(
           width: 224,
           height: 155,
-          child: Image.asset('assets/images/logos/${isLightTheme ? 'light}-logo.png'),
+          child: Image.asset(
+              'assets/images/logos/${isLightTheme ? 'light' : 'dark'}-logo.png'),
         ),
       ),
     );
