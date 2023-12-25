@@ -27,26 +27,27 @@ class _SplashScreenState extends State<SplashScreen> {
             width: 224.w,
             height: 155.h,
             child: Image.asset('assets/images/logos/light-logo.png'),
-          ).animate(onPlay: (controller) {
-            controller.repeat();
-          }).shimmer(
-            delay: 2.seconds,
-            color: lightOrangeColor,
-            duration: 1.5.seconds,
-          ).scaleXY(
-            delay: 2.seconds,
-            begin: 1,
-            end: 1.1,
-            duration: 1.5.seconds,
-          ).then().scaleXY(
-            delay: 2.seconds,
-            begin: 1.1,
-            end: 1,
-            duration: 1.5.seconds,
-          ).animate(
-            delay: 2.seconds,
-            duration: 1.5.seconds,
-            curve: Curves.easeInOut,
+          )
+              .animate(onPlay: (controller) {
+                controller.repeat();
+              })
+              .shimmer(
+                delay: 2.seconds,
+                color: lightOrangeColor,
+                duration: 1.5.seconds,
+              )
+              .scaleXY(
+                delay: 2.seconds,
+                begin: 1,
+                end: 1.01,
+                duration: 1.5.seconds,
+              )
+              .then()
+              .scaleXY(
+                begin: 1,
+                end: .91,
+                duration: .5.seconds,
+              ),
         ),
       ),
     );
