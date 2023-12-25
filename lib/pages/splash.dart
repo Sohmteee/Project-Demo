@@ -16,6 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: Theme.of(context).colorScheme.primary,
       body: Center(
         child: Stack(
+          alignment: Alignment.center,
           children: [
             if (!isLightTheme)
               Container(
