@@ -21,7 +21,6 @@ final lightBlueBackgroundColor = HexColor('#D6FEFF');
 final cyanBackgroundColor = HexColor('#E5FEFF');
 final backgroundColor = isLightTheme ? Colors.white : Vx.gray800;
 
-#, #F1573D
-
 final lightGreyBackgroundColor = HexColor('#FFB459');
+final darkGreyBackgroundColor = HexColor('#F1573D');
 

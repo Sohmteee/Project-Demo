@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:yeerlo/colors/app_colors.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -20,7 +21,8 @@ class _SplashScreenState extends State<SplashScreen> {
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                
+                lightGreyBackgroundColor,
+                darkGreyBackgroundColor,
               ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
