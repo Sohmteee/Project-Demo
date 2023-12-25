@@ -38,7 +38,15 @@ class _SplashScreenState extends State<SplashScreen> {
             begin: 1,
             end: 1.1,
             duration: 1.5.seconds,
-          ),
+          ).then().scaleXY(
+            delay: 2.seconds,
+            begin: 1.1,
+            end: 1,
+            duration: 1.5.seconds,
+          ).animate(
+            delay: 2.seconds,
+            duration: 1.5.seconds,
+            curve: Curves.easeInOut,
         ),
       ),
     );
