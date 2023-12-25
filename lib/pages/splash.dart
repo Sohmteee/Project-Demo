@@ -20,11 +20,12 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             if (!isLightTheme)
               Positioned(
-                top: 0,
+                top: -800,
+                
                 child: Container(
                   width: MediaQuery.of(context).size.width * 2,
                   height: MediaQuery.of(context).size.width * 2,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     shape: BoxShape.circle,
                   ),
