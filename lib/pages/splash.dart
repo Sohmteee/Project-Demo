@@ -19,10 +19,12 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             if (!isLightTheme)
               Container(
-                width: MediaQuery.of(context).size.width * 2,
+                width: MediaQuery.of(context).size.width * .5,
                 height: MediaQuery.of(context).size.height * .5,
-                color: Colors.white,
-                child: Image.asset('assets/images/logos/dark-logo.png'),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  shape: BoxShape.circle,
+                ),
               ),
             SizedBox(
               width: 224.w,
