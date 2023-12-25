@@ -14,10 +14,14 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
       body: Center(
-        child: SizedBox(
-          width: 224.w,
-          height: 155.h,
-          child: Image.asset('assets/images/logos/light-logo.png'),
+        child: Stack(
+          children: [
+            SizedBox(
+              width: 224.w,
+              height: 155.h,
+              child: Image.asset('assets/images/logos/light-logo.png'),
+            ),
+          ],
         ),
       ),
     );
