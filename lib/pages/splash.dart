@@ -25,9 +25,9 @@ class _SplashScreenState extends State<SplashScreen> {
                 top: -710,
                 left: -300,
                 child: Blur(
-                  blur: 10,
+                  blur: 50,
                   blurColor: Colors.white.withOpacity(0.1),
-                  
+                  borderRadius: BorderRadius.circular(1000),
                   child: Container(
                     width: MediaQuery.of(context).size.width * 2,
                     height: MediaQuery.of(context).size.width * 2,
