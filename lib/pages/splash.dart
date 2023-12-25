@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:yeerlo/data.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -16,6 +17,12 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
         child: Stack(
           children: [
+            if (!isLightTheme)
+              Container(
+                width: 224.w,
+                height: 155.h,
+                child: Image.asset('assets/images/logos/dark-logo.png'),
+              ),
             SizedBox(
               width: 224.w,
               height: 155.h,
