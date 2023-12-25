@@ -1,11 +1,17 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/data.dart';
-import 'package:yeerlo/pages/home_page.dart';
-import 'package:flutter/material.dart';
 import 'package:yeerlo/pages/splash.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+    ),
+  );
+
   runApp(const MyApp());
 }
 
