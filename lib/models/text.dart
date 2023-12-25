@@ -32,3 +32,19 @@ class DMSansText extends StatelessWidget {
     );
   }
 }
+
+class AirBnBText extends StatelessWidget {
+  const AirBnBText({
+    super.key,
+    required this.text,
+    this.fontSize,
+    this.fontWeight,
+    this.color,
+    
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Text();
+  }
+}
