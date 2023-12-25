@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -14,8 +15,8 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: Theme.of(context).colorScheme.primary,
       body: Center(
         child: SizedBox(
-          width: 224,
-          height: 155,
+          width: 224.w,
+          height: 155.h,
           child: Image.asset('assets/images/logos/light-logo.png'),
         ),
       ),
