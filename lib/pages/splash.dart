@@ -20,8 +20,8 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             if (!isLightTheme)
               Positioned(
-                top: -800,
-                
+                top: -710,
+                left: -300,
                 child: Container(
                   width: MediaQuery.of(context).size.width * 2,
                   height: MediaQuery.of(context).size.width * 2,
