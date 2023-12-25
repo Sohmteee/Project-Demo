@@ -46,7 +46,7 @@ class _SplashScreenState extends State<SplashScreen> {
               .scaleXY(
                 begin: 1,
                 end: .91,
-                duration: 1.5.seconds,
+                duration: .5.seconds,
               ),
         ),
       ),
