@@ -26,8 +26,13 @@ class _SplashScreenState extends State<SplashScreen> {
           child: SizedBox(
             width: 224.w,
             height: 155.h,
-            child: Image.asset('assets/images/logos/light-logo.png'),
-          ).animate().shimmer(color: lightOrangeColor),
+            child: Image.asset('assets/images/logos/light-logo.png')
+                .animate()
+                .shimmer(
+                  color: lightOrangeColor,
+                  duration: 1.5.seconds,
+                ),
+          ),
         ),
       ),
     );
