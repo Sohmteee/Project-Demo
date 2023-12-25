@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 
@@ -26,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
             width: 224.w,
             height: 155.h,
             child: Image.asset('assets/images/logos/light-logo.png'),
-          ),
+          ).animate().shimmer(color: lightOrangeColor),
         ),
       ),
     );
