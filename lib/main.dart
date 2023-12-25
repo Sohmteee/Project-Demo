@@ -1,3 +1,4 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/data.dart';
 import 'package:yeerlo/pages/home_page.dart';
@@ -13,27 +14,33 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Yeerlo',
-      theme: isLightTheme
-          ? ThemeData(
-              colorScheme: ColorScheme.fromSeed(
-                seedColor: lightOrangeColor,
-                primary: Colors.white,
-              ),
-              useMaterial3: false,
-              fontFamily: 'DM Sans',
-            )
-          : ThemeData(
-              colorScheme: ColorScheme.fromSeed(
-                seedColor: darkOrangeColor,
-                primary: Colors.black,
-              ),
-              useMaterial3: false,
-              fontFamily: 'DM Sans',
-            ),
-      home: const SplashScreen(),
-      debugShowCheckedModeBanner: false,
-    );
+    return ScreenUtilInit(
+        designSize: const Size(375, 812),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: (_, child) {
+          return MaterialApp(
+            title: 'Yeerlo',
+            theme: isLightTheme
+                ? ThemeData(
+                    colorScheme: ColorScheme.fromSeed(
+                      seedColor: lightOrangeColor,
+                      primary: Colors.white,
+                    ),
+                    useMaterial3: false,
+                    fontFamily: 'DM Sans',
+                  )
+                : ThemeData(
+                    colorScheme: ColorScheme.fromSeed(
+                      seedColor: darkOrangeColor,
+                      primary: Colors.black,
+                    ),
+                    useMaterial3: false,
+                    fontFamily: 'DM Sans',
+                  ),
+            home: const SplashScreen(),
+            debugShowCheckedModeBanner: false,
+          );
+        });
   }
 }
