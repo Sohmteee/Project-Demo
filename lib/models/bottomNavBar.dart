@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api, implementation_imports
+
 import 'package:botton_nav_bar/src/notched_shape.dart';
 
 import 'package:flutter/material.dart';
