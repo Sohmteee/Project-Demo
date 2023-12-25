@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "811573430307",
+    "project_id": "yeerlo-mobile",
+    "storage_bucket": "yeerlo-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:811573430307:android:dd29149004b896f0044996",
+        "android_client_info": {
+          "package_name": "yeerlo.ymobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "811573430307-3c981v1jrb1gt9pt9lkqh5ftf4gmsgb9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKlPxOURbeqKS4mdk0NEl930jOJr8LuOU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "811573430307-3c981v1jrb1gt9pt9lkqh5ftf4gmsgb9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
