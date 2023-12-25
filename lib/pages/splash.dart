@@ -33,6 +33,11 @@ class _SplashScreenState extends State<SplashScreen> {
             delay: 2.seconds,
             color: lightOrangeColor,
             duration: 1.5.seconds,
+          ).scaleXY(
+            delay: 2.seconds,
+            begin: 1,
+            end: 1,
+            duration: 1.5.seconds,
           ),
         ),
       ),
