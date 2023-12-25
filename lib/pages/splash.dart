@@ -20,8 +20,8 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             if (!isLightTheme)
               Container(
-                width: MediaQuery.of(context).size.width * .5,
-                height: MediaQuery.of(context).size.height * .5,
+                width: MediaQuery.of(context).size.width * 5,
+                height: MediaQuery.of(context).size.width * 5,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   shape: BoxShape.circle,
