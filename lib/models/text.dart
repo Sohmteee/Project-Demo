@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
 
 class DMSansText extends StatelessWidget {
-  const DMSansText({
+   DMSansText({
     super.key,
-    this.text,
+    required this.text,
     this.fontSize,
     this.fontWeight,
     this.color,
-    this.letterSpacing,
-    this.lineHeight,
-    
+    this.textAlign,
   });
+
+  final String text;
+  double? fontSize;
+  FontWeight? fontWeight;
+
+  Color? color;
+
+  TextAlign? textAlign;
 
   @override
   Widget build(BuildContext context) {
