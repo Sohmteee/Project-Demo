@@ -14,21 +14,23 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
-      body: Center(
-        child: Container(
-          width: 224.w,
-          height: 155.h,
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                lightGreyBackgroundColor,
-                darkGreyBackgroundColor,
-              ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              lightGreyBackgroundColor,
+              darkGreyBackgroundColor,
+            ],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
           ),
-          child: Image.asset('assets/images/logos/light-logo.png'),
+        ),
+        child: Center(
+          child: SizedBox(
+            width: 224.w,
+            height: 155.h,
+            child: Image.asset('assets/images/logos/light-logo.png'),
+          ),
         ),
       ),
     );
