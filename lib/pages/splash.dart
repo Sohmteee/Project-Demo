@@ -17,7 +17,15 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Container(
           width: 224.w,
           height: 155.h,
-          decoration: BoxDecoration(),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+          ),
           child: Image.asset('assets/images/logos/light-logo.png'),
         ),
       ),
