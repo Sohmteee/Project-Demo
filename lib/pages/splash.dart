@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
         child: SizedBox(
           width: 224,
           height: 155,
-          child: Image.asset('assets/images/logos/light-logo.png'),
+          child: Image.asset('assets/images/logos/${isLightTheme ? 'light}-logo.png'),
         ),
       ),
     );
