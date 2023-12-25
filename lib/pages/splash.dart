@@ -1,8 +1,5 @@
-import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:velocity_x/velocity_x.dart';
-import 'package:yeerlo/data.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -17,33 +14,11 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
       body: Center(
-        child: Stack(
-          clipBehavior: Clip.none,
-          children: [
-            if (!isLightTheme)
-              Positioned(
-                top: -710,
-                left: -300,
-                child: Blur(
-                  blur: 50,
-                  blurColor: Colors.white.withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(1000),
-                  child: Container(
-                    width: MediaQuery.of(context).size.width * 2,
-                    height: MediaQuery.of(context).size.width * 2,
-                    decoration: const BoxDecoration(
-                      color: Vx.gray200,
-                      shape: BoxShape.circle,
-                    ),
-                  ),
-                ),
-              ),
-            SizedBox(
-              width: 224.w,
-              height: 155.h,
-              child: Image.asset('assets/images/logos/light-logo.png'),
-            ),
-          ],
+        child: Container(
+          width: 224.w,
+          height: 155.h,
+          decoration: BoxDecoration(),
+          child: Image.asset('assets/images/logos/light-logo.png'),
         ),
       ),
     );
