@@ -13,7 +13,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
       body: Center(
-        child: Text('Splash Screen'),
+        child: Image,
       ),
     );
   }
