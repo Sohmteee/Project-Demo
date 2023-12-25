@@ -19,8 +19,9 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             if (!isLightTheme)
               Container(
-                width: 224.w,
-                height: 155.h,
+                width: MediaQuery.of(context).size.width * 2,
+                height: MediaQuery.of(context).size.height * .5,
+                color: Colors.white,
                 child: Image.asset('assets/images/logos/dark-logo.png'),
               ),
             SizedBox(
