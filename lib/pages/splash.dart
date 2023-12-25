@@ -34,10 +34,10 @@ class _SplashScreenState extends State<SplashScreen> {
               .shimmer(
                 delay: 2.seconds,
                 color: lightOrangeColor,
-                duration: .5.seconds,
+                duration: 1.seconds,
               )
               .scaleXY(
-                delay: 1.5.seconds,
+                delay: 2.seconds,
                 begin: 1,
                 end: 1.1,
                 duration: 1.seconds,
