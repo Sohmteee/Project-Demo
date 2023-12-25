@@ -15,15 +15,9 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
       body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              lightGreyBackgroundColor,
-              darkGreyBackgroundColor,
-            ],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
+        decoration: DecorationImage(
+          image: AssetImage('assets/images/backgrounds/splash-bg.png'),
+          fit: BoxFit.cover,
         ),
         child: Center(
           child: SizedBox(
