@@ -40,7 +40,7 @@ class _SignInScreenState extends State<SignInScreen> {
               child: AirBnBText(
                 'Sign in',
                 fontSize: 24.sp,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w500,
                 color: themedTextColor,
               ),
             ),
@@ -73,14 +73,14 @@ class _SignInScreenState extends State<SignInScreen> {
                     AirBnBText(
                       'Remember Me',
                       fontSize: 18.sp,
-                      fontWeight: FontWeight.w300,
+                      fontWeight: FontWeight.w400,
                     ),
                   ],
                 ),
                 AirBnBText(
                   'Forgot Password?',
                   fontSize: 18.sp,
-                  fontWeight: FontWeight.w300,
+                  fontWeight: FontWeight.w400,
                 ),
               ],
             ),
