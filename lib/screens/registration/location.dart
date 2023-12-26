@@ -150,7 +150,6 @@ class _LocationScreenState extends State<LocationScreen> {
                   ),
                   dropdownStyleData: DropdownStyleData(
                     maxHeight: 200,
-                    width: 200,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(14),
                       color: Colors.redAccent,
