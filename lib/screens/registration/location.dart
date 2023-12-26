@@ -73,8 +73,9 @@ class _LocationScreenState extends State<LocationScreen> {
                 ),
               ),
               SizedBox(height: 30.h),
-              SearchAnchor(builder: (context, controller) {
-                return Container(
+              SearchAnchor(
+                  builder: (context, controller) {
+                    return Container(
                       padding: EdgeInsets.symmetric(horizontal: 15.w),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12.r),
@@ -113,16 +114,17 @@ class _LocationScreenState extends State<LocationScreen> {
                             ),
                           ),
                           Icon(
-                                showPassword
-                                    ? IconlyLight.show
-                                    : IconlyLight.hide,
-                                size: 22.sp,
-                                color: registrationIconColor,
-                              ),
+                            IconlyLight.search,
+                            size: 22.sp,
+                            color: registrationIconColor,
+                          ),
                         ],
                       ),
                     );
-              }, suggestionsBuilder: suggestionsBuilder),
+                  },
+                  suggestionsBuilder: (context, controller){
+                    return Container()
+                  },),
               AppTextField(
                 hintText: 'abc@email.com',
                 icon: Icon(
