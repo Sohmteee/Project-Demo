@@ -75,10 +75,9 @@ class _LocationScreenState extends State<LocationScreen> {
               ),
               SizedBox(height: 30.h),
               TypeAheadField(
+                
                 itemBuilder: (context, city) {
-                  return Text(city.name),
-                    subtitle: Text(city.country),
-                  );
+                  return Text(city);
                 },
               ),
               AppTextField(
