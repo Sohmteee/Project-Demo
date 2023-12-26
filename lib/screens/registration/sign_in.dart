@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
@@ -117,6 +119,17 @@ class _SignInScreenState extends State<SignInScreen> {
                   text: 'Login with Google',
                   onPressed: () {},
                 ),
+                if (Platform.isIOS)
+                  Column(
+                    children: [
+                      SizedBox(height: 18.h),
+                      LoginOption(
+                        logo: 'assets/images/logos/apple-logo.png',
+                        text: 'Login with Apple ID',
+                        onPressed: () {},
+                      ),
+                    ],
+                  ),
                 SizedBox(height: 40.h),
                 Text.rich(
                   TextSpan(
