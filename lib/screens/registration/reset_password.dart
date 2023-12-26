@@ -67,34 +67,16 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                   ),
                 ),
                 SizedBox(height: 21.h),
-                AppTextField(
-                  hintText: 'Full name',
-                  icon: Icon(
-                    IconlyLight.profile,
-                    size: 22.sp,
-                    color: registrationIconColor,
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: DMSansText(
+                    'We’ve sent  a verification code to \nikay@gmail.com',
+                    color: Theme.of(context).colorScheme.secondary,
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w400,
+                    height: 1.8,
                   ),
                 ),
-                SizedBox(height: 19.h),
-                AppTextField(
-                  hintText: 'abc@email.com',
-                  icon: Icon(
-                    IconlyLight.message,
-                    size: 22.sp,
-                    color: registrationIconColor,
-                  ),
-                ),
-                SizedBox(height: 19.h),
-                AppTextField(
-                  isPassword: true,
-                  hintText: 'Your Password',
-                  icon: Icon(
-                    IconlyLight.lock,
-                    size: 22.sp,
-                    color: registrationIconColor,
-                  ),
-                ),
-                SizedBox(height: 19.h),
                 AppTextField(
                   isPassword: true,
                   hintText: 'Confirm Password',
@@ -104,34 +86,8 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                     color: registrationIconColor,
                   ),
                 ),
-                SizedBox(height: 19.h),
-                AppTextField(
-                  hintText: 'Referral (Optional)',
-                  icon: Stack(
-                    alignment: Alignment.center,
-                    clipBehavior: Clip.none,
-                    children: [
-                      Container(width: 20.w),
-                      Positioned(
-                        left: -7.w,
-                        child: Icon(
-                          IconlyLight.profile,
-                          size: 22.sp,
-                          color: registrationIconColor,
-                        ),
-                      ),
-                      Positioned(
-                        right: -7.w,
-                        child: Icon(
-                          IconlyLight.profile,
-                          size: 22.sp,
-                          color: registrationIconColor,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: 40.h),
+                SizedBox(height: 26.h),
+                
                 ArrowButton(
                   text: 'SIGN UP',
                   onPressed: () {
