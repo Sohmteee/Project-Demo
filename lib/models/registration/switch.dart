@@ -45,8 +45,8 @@ class _AppSwitchState extends State<AppSwitch> {
               curve: Curves.easeIn,
               left: isSwitched ? 12.w : 0,
               child: Container(
-                width: 14.w,
-                height: 14.h,
+                width: 16.w,
+                height: 16.h,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(95.r),
