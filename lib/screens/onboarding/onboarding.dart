@@ -94,15 +94,18 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
                           });
                         }
                       },
-                      child: AnimatedOpacity(
-                        opacity: (onBoardingIndex == 0) ? 0 : 1,
-                        duration: 0.25.seconds,
-                        child: AirBnBText(
-                          'Skip',
-                          color: Colors.white,
-                          fontSize: 18.sp,
-                          fontWeight: FontWeight.w500,
-                          height: 0.10.h,
+                      child: Padding(
+                        padding: EdgeInsets.all(10.sp),
+                        child: AnimatedOpacity(
+                          opacity: (onBoardingIndex == 0) ? 0.5 : 1,
+                          duration: 0.25.seconds,
+                          child: AirBnBText(
+                            'Skip',
+                            color: Colors.white,
+                            fontSize: 18.sp,
+                            fontWeight: FontWeight.w500,
+                            height: 0.10.h,
+                          ),
                         ),
                       ),
                     ),
