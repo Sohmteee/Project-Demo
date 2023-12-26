@@ -91,7 +91,16 @@ class _LocationScreenState extends State<LocationScreen> {
                     padding: EdgeInsets.only(left: 5.w, right: 15.w),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12.r),
-                      border: GradientBoxBorder(gradient: gradient),
+                      border: GradientBoxBorder(
+                        gradient: LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [
+                            lightOrangeColor,
+                            darkOrangeColor,
+                          ],
+                        ),
+                      ),
                     ),
                     child: Row(
                       children: [
@@ -109,8 +118,8 @@ class _LocationScreenState extends State<LocationScreen> {
                         ShaderMask(
                           blendMode: BlendMode.srcIn,
                           shaderCallback: (Rect bounds) => LinearGradient(
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
                             colors: [
                               lightOrangeColor,
                               darkOrangeColor,
