@@ -18,7 +18,6 @@ class ResetPasswordScreen extends StatefulWidget {
 }
 
 class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
-
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
@@ -70,7 +69,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                 Align(
                   alignment: Alignment.centerLeft,
                   child: DMSansText(
-                    'We’ve sent  a verification code to \nikay@gmail.com',
+                    'Please enter your email address to request a password reset code',
                     color: Theme.of(context).colorScheme.secondary,
                     fontSize: 16.sp,
                     fontWeight: FontWeight.w400,
@@ -87,7 +86,6 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                   ),
                 ),
                 SizedBox(height: 26.h),
-                
                 ArrowButton(
                   text: 'SIGN UP',
                   onPressed: () {

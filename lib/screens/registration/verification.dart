@@ -81,7 +81,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
               ArrowButton(
                 text: 'CONTINUE',
                 onPressed: () {
-                  // Navigator.pushReplacementNamed(context, '/home');
+                  Navigator.pushNamed(context, '/home');
                 },
               ),
               SizedBox(height: 24.h),
