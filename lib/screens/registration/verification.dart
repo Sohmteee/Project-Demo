@@ -163,6 +163,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
       pinputAutovalidateMode: PinputAutovalidateMode.onSubmit,
       showCursor: false,
       onCompleted: (pin) => print(pin),
+      
       preFilledWidget: DMSansText(
         '-',
         fontSize: 24.sp,
