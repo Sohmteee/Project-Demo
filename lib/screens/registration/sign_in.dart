@@ -43,7 +43,7 @@ class _SignInScreenState extends State<SignInScreen> {
             ),
             SizedBox(height: 21.h),
             const RegistrationTextField(
-              hintText: 'Ikay@email.com',
+              hintText: 'abc@email.com',
               icon: IconlyLight.message,
             ),
             SizedBox(height: 19.h),

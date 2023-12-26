@@ -41,7 +41,7 @@ class _RegistrationTextFieldState extends State<RegistrationTextField> {
           Expanded(
             child: TextField(
               controller: widget.controller,
-              cursorColor: lightOrangeColor,
+              cursorColor: darkOrangeColor,
               decoration: InputDecoration(
                 hintText: widget.hintText,
                 hintStyle: TextStyle(
