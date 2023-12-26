@@ -94,7 +94,11 @@ class LoginOption extends StatelessWidget {
         child: Center(
           child: Row(
             children: [
-              Image.asset
+              Image.asset(
+                'assets/images/logos/google-logo.png',
+                width: 24.w,
+                height: 24.h,
+              ),
               AirBnBText(
                 text,
                 color: Theme.of(context).colorScheme.secondary,
