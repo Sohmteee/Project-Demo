@@ -40,36 +40,43 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
             ),
             SizedBox(height: 21.h),
-            const Spacer(),
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12.r),
                 border: Border.all(
-                  color: themedBorderColor,
+                  color: linkTextColor,
                   width: 1.w,
                 ),
               ),
-              child: Expanded(
-                child: TextField(
-                  decoration: InputDecoration(
-                    hintText: 'Email',
-                    hintStyle: TextStyle(
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w400,
-                      color: themedTextColor,
-                    ),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12.r),
-                      borderSide: BorderSide.none,
-                    ),
-                    contentPadding: EdgeInsets.symmetric(
-                      horizontal: 20.w,
-                      vertical: 20.h,
+              child: Row(
+                children: [
+                  
+                  Icon(IconlyLight.message,
+                      size: 24.sp, color: themedTextColor),
+                  Expanded(
+                    child: TextField(
+                      decoration: InputDecoration(
+                        hintText: 'Email',
+                        hintStyle: TextStyle(
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w400,
+                          color: themedTextColor,
+                        ),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12.r),
+                          borderSide: BorderSide.none,
+                        ),
+                        contentPadding: EdgeInsets.symmetric(
+                          horizontal: 20.w,
+                          vertical: 20.h,
+                        ),
+                      ),
                     ),
                   ),
-                ),
+                ],
               ),
             ),
+            const Spacer(),
           ],
         ),
       ),
