@@ -15,29 +15,29 @@ class _AppSwitchState extends State<AppSwitch> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Container(
-          width: 32.w,
-          height: 20.h,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(95.r),
-            border: Border.all(
-              color: darkOrangeColor,
-              width: 1.w,
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          isSwitched = !isSwitched;
+        });
+      },
+      child: Stack(
+        children: [
+          Container(
+            width: 32.w,
+            height: 20.h,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(95.r),
+              border: Border.all(
+                color: darkOrangeColor,
+                width: 1.w,
+              ),
             ),
           ),
-        ),
-        AnimatedPositioned(
-          duration: 0.2.seconds,
-          curve: Curves.easeIn,
-          left: isSwitched ? 12.w : 0,
-          child: GestureDetector(
-            onTap: () {
-              setState(() {
-                isSwitched = !isSwitched;
-              });
-            },
+          AnimatedPositioned(
+            duration: 0.2.seconds,
+            curve: Curves.easeIn,
+            left: isSwitched ? 12.w : 0,
             child: Container(
               width: 20.w,
               height: 20.h,
@@ -47,8 +47,8 @@ class _AppSwitchState extends State<AppSwitch> {
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
