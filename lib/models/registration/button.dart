@@ -66,10 +66,12 @@ class ArrowButton extends StatelessWidget {
 class LoginOption extends StatelessWidget {
   const LoginOption({
     super.key,
+    required this.logo,
     required this.text,
     required this.onPressed,
   });
 
+  final String logo;
   final String text;
   final Function() onPressed;
 
@@ -95,7 +97,7 @@ class LoginOption extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              'assets/images/logos/google-logo.png',
+              logo,
               width: 24.w,
               height: 24.h,
             ),

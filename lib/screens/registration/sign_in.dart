@@ -114,7 +114,14 @@ class _SignInScreenState extends State<SignInScreen> {
             ),
             SizedBox(height: 5.h),
             LoginOption(
+              logo: 'assets/images/logos/google-logo.png',
               text: 'Login with Google',
+              onPressed: () {},
+            ),
+            SizedBox(height: 5.h),
+            LoginOption(
+              logo: 'assets/images/logos/apple-logo.png',
+              text: 'Login with Apple ID',
               onPressed: () {},
             ),
             const Spacer(),
