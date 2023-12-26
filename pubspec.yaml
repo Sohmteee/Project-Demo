@@ -59,6 +59,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/logos/
+    - assets/images/onboarding/
     - assets/svg/
     - assets/svg/drawer/
 
