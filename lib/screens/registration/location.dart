@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
-import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/countries.dart';
 import 'package:yeerlo/models/registration/button.dart';
 import 'package:yeerlo/models/registration/textfield.dart';
@@ -80,6 +79,17 @@ class _LocationScreenState extends State<LocationScreen> {
                 itemBuilder: (context, country) {
                   return Text(country.toString());
                 },
+                builder: (context, controller, focusNode) {
+    return TextField(
+      controller: controller,
+      focusNode: focusNode,
+      autofocus: true,
+      decoration: InputDecoration(
+        border: OutlineInputBorder()
+        labelText: 'City'
+      )
+    );
+  },
                 suggestionsCallback: (pattern) {
                   return countries
                       .where((country) =>
