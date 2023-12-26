@@ -18,7 +18,6 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
-  bool rememberMe = true;
 
   @override
   Widget build(BuildContext context) {
