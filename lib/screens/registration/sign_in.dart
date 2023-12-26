@@ -29,7 +29,7 @@ class _SignInScreenState extends State<SignInScreen> {
         ),
         child: Column(
           children: [
-            const Spacer(),
+            Expanded(child: Container())
             Image.asset(
               'assets/images/logos/light-logo.png',
               width: 174.w,
@@ -124,7 +124,7 @@ class _SignInScreenState extends State<SignInScreen> {
               text: 'Login with Apple ID',
               onPressed: () {},
             ),
-            const Spacer(),
+            Expanded(child: Container())
             Text.rich(
               TextSpan(
                 children: [
