@@ -161,6 +161,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
       pinputAutovalidateMode: PinputAutovalidateMode.onSubmit,
       showCursor: true,
       onCompleted: (pin) => print(pin),
+      preFilledWidget: Ai,
     );
   }
 }
