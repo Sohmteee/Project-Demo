@@ -113,6 +113,10 @@ class _SignInScreenState extends State<SignInScreen> {
               fontWeight: FontWeight.w500,
             ),
             SizedBox(height: 5.h),
+            LoginOption(
+              text: 'Login with Google',
+              onPressed: () {},
+            ),
             const Spacer(),
           ],
         ),

@@ -81,15 +81,9 @@ class LoginOption extends StatelessWidget {
         width: 270.w,
         height: 58.h,
         decoration: BoxDecoration(
+          color: ,
           borderRadius: BorderRadius.circular(16.r),
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              lightOrangeColor,
-              darkOrangeColor,
-            ],
-          ),
+          
           boxShadow: [
             BoxShadow(
               color: Colors.grey.withOpacity(0.3),
