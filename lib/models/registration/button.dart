@@ -91,23 +91,23 @@ class LoginOption extends StatelessWidget {
             ),
           ],
         ),
-        child: Center(
-          child: Row(
-            children: [
-              Image.asset(
-                'assets/images/logos/google-logo.png',
-                width: 24.w,
-                height: 24.h,
-              ),
-              AirBnBText(
-                text,
-                color: Theme.of(context).colorScheme.secondary,
-                fontSize: 18.sp,
-                fontWeight: FontWeight.w400,
-                // letterSpacing: 1,
-              ),
-            ],
-          ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/images/logos/google-logo.png',
+              width: 24.w,
+              height: 24.h,
+            ),
+            SizedBox(width: 10.w),
+            AirBnBText(
+              text,
+              color: Theme.of(context).colorScheme.secondary,
+              fontSize: 18.sp,
+              fontWeight: FontWeight.w400,
+              // letterSpacing: 1,
+            ),
+          ],
         ),
       ),
     );
