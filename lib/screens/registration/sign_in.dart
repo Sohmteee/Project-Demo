@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:yeerlo/colors/app_colors.dart';
+import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/models/text.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -51,7 +52,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.r),
-                  borderSide: BorderSide(color: ),
+                  borderSide: BorderSide(color: HexColor('#E4DFDF')),
                 ),
                 contentPadding: EdgeInsets.symmetric(
                   horizontal: 20.w,
