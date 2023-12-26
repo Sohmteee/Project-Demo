@@ -42,7 +42,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       return Column(
         children: [
           const Spacer(),
-          Image.asset(onBoardingData[onBoardingIndex]['image']),
+          Image.asset(onBoardingData[index]['image']),
           const Spacer(flex: 2),
         ],
       );
