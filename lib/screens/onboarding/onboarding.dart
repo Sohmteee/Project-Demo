@@ -84,7 +84,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 borderRadius: BorderRadius.vertical(
                   top: Radius.circular(40.r),
                 ),
-                gradient: LinearGradient(
+                gradient: isLightTheme ? LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
