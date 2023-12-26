@@ -72,7 +72,67 @@ class _LocationScreenState extends State<LocationScreen> {
                 ),
               ),
               SizedBox(height: 30.h),
-              SearchAnchor(builder: ((context, controller) => ), suggestionsBuilder: suggestionsBuilder),
+              SearchAnchor(builder: (context, controller) {
+                return Container(
+                      padding: EdgeInsets.symmetric(horizontal: 15.w),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12.r),
+                        border: Border.all(
+                          color: HexColor('#E4DFDF'),
+                          width: 1.w,
+                        ),
+                      ),
+                      child: Row(
+                        children: [
+                          widget.icon,
+                          Expanded(
+                            child: TextField(
+                              controller: widget.controller,
+                              cursorColor: darkOrangeColor,
+                              obscureText:
+                                  widget.isPassword ? !showPassword : false,
+                              style: TextStyle(
+                                fontSize: 16.sp,
+                                fontWeight: FontWeight.w400,
+                                color: Theme.of(context).colorScheme.secondary,
+                              ),
+                              decoration: InputDecoration(
+                                hintText: widget.hintText,
+                                hintStyle: TextStyle(
+                                  fontSize: 16.sp,
+                                  fontWeight: FontWeight.w400,
+                                  color: linkTextColor,
+                                ),
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(12.r),
+                                  borderSide: BorderSide.none,
+                                ),
+                                contentPadding: EdgeInsets.symmetric(
+                                  horizontal: 14.w,
+                                  vertical: 20.h,
+                                ),
+                              ),
+                            ),
+                          ),
+                          if (widget.isPassword)
+                            GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  showPassword = !showPassword;
+                                });
+                              },
+                              child: Icon(
+                                showPassword
+                                    ? IconlyLight.show
+                                    : IconlyLight.hide,
+                                size: 22.sp,
+                                color: registrationIconColor,
+                              ),
+                            ),
+                        ],
+                      ),
+                    );
+              }, suggestionsBuilder: suggestionsBuilder),
               AppTextField(
                 hintText: 'abc@email.com',
                 icon: Icon(
