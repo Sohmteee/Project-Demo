@@ -117,13 +117,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   text: 'Login with Google',
                   onPressed: () {},
                 ),
-                SizedBox(height: 18.h),
-                LoginOption(
-                  logo: 'assets/images/logos/apple-logo.png',
-                  text: 'Login with Apple ID',
-                  onPressed: () {},
-                ),
-                SizedBox(height: 35.h),
+                SizedBox(height: 40.h),
                 Text.rich(
                   TextSpan(
                     children: [
@@ -149,6 +143,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   ),
                   textAlign: TextAlign.center,
                 ),
+                SizedBox(height: 40.h),
               ],
             ),
           ),
