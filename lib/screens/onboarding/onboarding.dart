@@ -44,7 +44,14 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
           Column(
             children: [
               const Spacer(),
-              Image.asset(onBoardingData[onBoardingIndex]['image']),
+              Image.asset(onBoardingData[onBoardingIndex]['image'])
+                  .animate()
+                  .moveY(
+                    delay: 0.5.seconds,
+                    begin: 100.h,
+                    end: 0,
+                    duration: 0.5.seconds,
+                  ),
               const Spacer(flex: 2),
             ],
           ),
@@ -96,6 +103,7 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
                       },
                       child: Container(
                         padding: EdgeInsets.all(10.sp),
+                        color: Colors.transparent,
                         child: AnimatedOpacity(
                           opacity: (onBoardingIndex == 0) ? 0.5 : 1,
                           duration: 0.25.seconds,
@@ -140,6 +148,7 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
                       },
                       child: Container(
                         padding: EdgeInsets.all(10.sp),
+                        color: Colors.transparent,
                         child: AirBnBText(
                           'Next',
                           textAlign: TextAlign.right,
