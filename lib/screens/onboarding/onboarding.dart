@@ -41,7 +41,18 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
       body: Stack(
         alignment: Alignment.bottomCenter,
         children: [
-          pageview
+          PageView.builder(
+            itemCount: 3,
+            itemBuilder: (context, index) {
+              return Column(
+                children: [
+                  const Spacer(),
+                  Image.asset(onBoardingData[onBoardingIndex]['image']),
+                  const Spacer(flex: 2),
+                ],
+              );
+            },
+          ),
           Container(
             padding: EdgeInsets.all(40.sp),
             width: double.infinity,
