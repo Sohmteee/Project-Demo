@@ -79,7 +79,7 @@ class _LocationScreenState extends State<LocationScreen> {
               TypeAheadField(
                 itemBuilder: (context, country) {
                   return ListTile(
-                    // minimumVerticalPadding
+                    minVerticalPadding: 2,
                     title: AirBnBText(
                       country.toString(),
                     ),
