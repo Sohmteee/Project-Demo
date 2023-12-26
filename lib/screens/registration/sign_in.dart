@@ -48,6 +48,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   fontWeight: FontWeight.w400,
                   color: themedTextColor,
                 ),
+                ic
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12.r),
                   borderSide: BorderSide(
