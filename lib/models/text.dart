@@ -10,6 +10,7 @@ class DMSansText extends StatelessWidget {
     this.fontWeight,
     this.color,
     this.textAlign,
+    this.height,
   });
 
   final String text;
@@ -17,6 +18,7 @@ class DMSansText extends StatelessWidget {
   FontWeight? fontWeight;
   Color? color;
   TextAlign? textAlign;
+  double? height;
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +30,7 @@ class DMSansText extends StatelessWidget {
         fontWeight: fontWeight,
         color: color,
         fontFamily: 'DM Sans',
+        height: height,
       ),
     );
   }
