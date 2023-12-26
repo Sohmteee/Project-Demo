@@ -27,120 +27,128 @@ class _SignUpScreenState extends State<SignUpScreen> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.primary,
         elevation: 0,
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Icon(
+            IconlyLight.arrowLeft,
+            color: Theme.of(context).colorScheme.secondary,
+            size: 24.sp,
+          ),
+        ),
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          physics: const BouncingScrollPhysics(),
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30.w),
-            child: Column(
-              children: [
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: AirBnBText(
-                    'Sign up',
-                    fontSize: 24.sp,
-                    fontWeight: FontWeight.w500,
-                    color: themedTextColor,
-                  ),
-                ),
-                SizedBox(height: 21.h),
-                const AppTextField(
-                  hintText: 'Full name',
-                  icon: IconlyLight.profile,
-                ),
-                SizedBox(height: 19.h),
-                const AppTextField(
-                  hintText: 'abc@email.com',
-                  icon: IconlyLight.message,
-                ),
-                SizedBox(height: 19.h),
-                const AppTextField(
-                  isPassword: true,
-                  hintText: 'Your Password',
-                  icon: IconlyLight.lock,
-                ),
-                SizedBox(height: 19.h),
-                const AppTextField(
-                  isPassword: true,
-                  hintText: 'Confirm Password',
-                  icon: IconlyLight.lock,
-                ),
-                SizedBox(height: 19.h),
-                const AppTextField(
-                  isPassword: true,
-                  hintText: 'Referral',
-                  icon: IconlyLight.profile,
-                ),
-                SizedBox(height: 40.h),
-                ArrowButton(
-                  text: 'SIGN UP',
-                  onPressed: () {
-                    // Navigator.pushReplacementNamed(context, '/home');
-                  },
-                ),
-                SizedBox(height: 24.h),
-                AirBnBText(
-                  'OR',
-                  color: const Color(0xFF9D9898),
-                  fontSize: 18.sp,
+      body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 30.w),
+          child: Column(
+            children: [
+              Align(
+                alignment: Alignment.centerLeft,
+                child: AirBnBText(
+                  'Sign up',
+                  fontSize: 24.sp,
                   fontWeight: FontWeight.w500,
+                  color: themedTextColor,
                 ),
-                SizedBox(height: 5.h),
-                LoginOption(
-                  logo: 'assets/images/logos/google-logo.png',
-                  text: 'Login with Google',
-                  onPressed: () {},
+              ),
+              SizedBox(height: 21.h),
+              const AppTextField(
+                hintText: 'Full name',
+                icon: IconlyLight.profile,
+              ),
+              SizedBox(height: 19.h),
+              const AppTextField(
+                hintText: 'abc@email.com',
+                icon: IconlyLight.message,
+              ),
+              SizedBox(height: 19.h),
+              const AppTextField(
+                isPassword: true,
+                hintText: 'Your Password',
+                icon: IconlyLight.lock,
+              ),
+              SizedBox(height: 19.h),
+              const AppTextField(
+                isPassword: true,
+                hintText: 'Confirm Password',
+                icon: IconlyLight.lock,
+              ),
+              SizedBox(height: 19.h),
+              const AppTextField(
+                isPassword: true,
+                hintText: 'Referral',
+                icon: IconlyLight.profile,
+              ),
+              SizedBox(height: 40.h),
+              ArrowButton(
+                text: 'SIGN UP',
+                onPressed: () {
+                  // Navigator.pushReplacementNamed(context, '/home');
+                },
+              ),
+              SizedBox(height: 24.h),
+              AirBnBText(
+                'OR',
+                color: const Color(0xFF9D9898),
+                fontSize: 18.sp,
+                fontWeight: FontWeight.w500,
+              ),
+              SizedBox(height: 5.h),
+              LoginOption(
+                logo: 'assets/images/logos/google-logo.png',
+                text: 'Login with Google',
+                onPressed: () {},
+              ),
+              Opacity(
+                opacity: /* Platform.isIOS ? 1 : 0 */ 1,
+                child: Column(
+                  children: [
+                    SizedBox(height: 18.h),
+                    LoginOption(
+                      logo: 'assets/images/logos/apple-logo.png',
+                      text: 'Login with Apple ID',
+                      onPressed: () {
+                        if (Platform.isIOS) {}
+                      },
+                    ),
+                  ],
                 ),
-                Opacity(
-                  opacity: /* Platform.isIOS ? 1 : 0 */ 1,
-                  child: Column(
+              ),
+              SizedBox(height: 40.h),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Text.rich(
+                  TextSpan(
                     children: [
-                      SizedBox(height: 18.h),
-                      LoginOption(
-                        logo: 'assets/images/logos/apple-logo.png',
-                        text: 'Login with Apple ID',
-                        onPressed: () {
-                          if (Platform.isIOS) {}
-                        },
+                      TextSpan(
+                        text: 'Already have an account?  ',
+                        style: TextStyle(
+                          color: Theme.of(context).colorScheme.secondary,
+                          fontSize: 16.sp,
+                          fontFamily: 'AirBnB',
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      TextSpan(
+                        text: 'Sign in',
+                        style: TextStyle(
+                          color: lightOrangeColor,
+                          fontSize: 16.sp,
+                          fontFamily: 'AirBnB',
+                          fontWeight: FontWeight.w400,
+                        ),
                       ),
                     ],
                   ),
+                  textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 40.h),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                  child: Text.rich(
-                    TextSpan(
-                      children: [
-                        TextSpan(
-                          text: 'Already have an account?  ',
-                          style: TextStyle(
-                            color: Theme.of(context).colorScheme.secondary,
-                            fontSize: 16.sp,
-                            fontFamily: 'AirBnB',
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                        TextSpan(
-                          text: 'Sign in',
-                          style: TextStyle(
-                            color: lightOrangeColor,
-                            fontSize: 16.sp,
-                            fontFamily: 'AirBnB',
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                      ],
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                SizedBox(height: 40.h),
-              ],
-            ),
+              ),
+              SizedBox(height: 40.h),
+            ],
           ),
         ),
       ),
