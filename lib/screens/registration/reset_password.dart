@@ -76,6 +76,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                     height: 1.8,
                   ),
                 ),
+                SizedBox(height: 26.h),
                 AppTextField(
                   isPassword: true,
                   hintText: 'Confirm Password',
