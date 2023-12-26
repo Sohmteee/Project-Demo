@@ -34,7 +34,7 @@ class ArrowButton extends StatelessWidget {
           ),
           boxShadow: [
             BoxShadow(
-              color: Color(0x3FD2D4E2),
+              color: Colors.grey.withOpacity(0.3),
               blurRadius: 30.r,
               offset: const Offset(0, 10),
             ),
