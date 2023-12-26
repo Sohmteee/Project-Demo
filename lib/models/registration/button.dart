@@ -18,6 +18,7 @@ class ArrowButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ZoomTapAnimation(
+      onTap: onPressed,
       child: Container(
         width: 270.w,
         height: 58.h,

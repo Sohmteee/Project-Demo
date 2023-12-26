@@ -47,6 +47,7 @@ class _AppTextFieldState extends State<AppTextField> {
             child: TextField(
               controller: widget.controller,
               cursorColor: darkOrangeColor,
+              obscureText: widget.isPassword ? !showPassword : false,
               decoration: InputDecoration(
                 hintText: widget.hintText,
                 hintStyle: TextStyle(
