@@ -27,9 +27,9 @@ class _SignInScreenState extends State<SignInScreen> {
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.primary,
         ),
-        child: ListView(
+        child: Column(
           children: [
-            const Spacer(),
+            SizedBox(height: 45.h),
             Image.asset(
               'assets/images/logos/light-logo.png',
               width: 174.w,
