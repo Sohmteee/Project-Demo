@@ -23,6 +23,8 @@ class RegistrationTextField extends StatefulWidget {
 }
 
 class _RegistrationTextFieldState extends State<RegistrationTextField> {
+  bool showPassword = false;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -64,10 +66,17 @@ class _RegistrationTextFieldState extends State<RegistrationTextField> {
             ),
           ),
           if (widget.isPassword)
-            Icon(
-              IconlyLight.hide, // IconlyLight.show
-              size: 22.sp,
-              color: registrationIconColor,
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  showPassword = !showPassword;
+                });
+              },
+              child: Icon(
+                showPassword ? IconlyLight.show : IconlyLight.hide,
+                size: 22.sp,
+                color: registrationIconColor,
+              ),
             ),
         ],
       ),
