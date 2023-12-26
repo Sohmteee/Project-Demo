@@ -42,6 +42,7 @@ class ArrowButton extends StatelessWidget {
           Positioned(
             right: 14.w,
             child: Container(
+              margin: EdgeInsets.symmetric(vertical: 10.h),
               width: 35.w,
               height: 35.w,
               decoration: const BoxDecoration(
