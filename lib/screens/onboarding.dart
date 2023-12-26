@@ -176,7 +176,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           padding: EdgeInsets.all(10.sp),
                           color: Colors.transparent,
                           child: AirBnBText(
-                            'Next',
+                            onBoardingIndex < 2 ? 'Next' : 'Get Started',
                             textAlign: TextAlign.right,
                             color: Colors.white,
                             fontSize: 18.sp,
