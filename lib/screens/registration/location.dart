@@ -20,6 +20,7 @@ class LocationScreen extends StatefulWidget {
 class _LocationScreenState extends State<LocationScreen> {
   @override
   Widget build(BuildContext context) {
+    final TextEditingController searchController = TextEditingController();
     final themeProvider = Provider.of<ThemeProvider>(context);
 
     return Scaffold(
@@ -75,7 +76,7 @@ class _LocationScreenState extends State<LocationScreen> {
               ),
               SizedBox(height: 30.h),
               TypeAheadField(
-                
+                 
                 itemBuilder: (context, countries) {
                   return Text(countries);
                 },
