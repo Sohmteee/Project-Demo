@@ -66,44 +66,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   icon: IconlyLight.lock,
                 ),
                 SizedBox(height: 19.h),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          rememberMe = !rememberMe;
-                        });
-                      },
-                      child: Row(
-                        children: [
-                          AppSwitch(
-                            value: rememberMe,
-                            onChanged: (value) {
-                              setState(() {
-                                rememberMe = value!;
-                              });
-                            },
-                          ),
-                          SizedBox(width: 6.w),
-                          AirBnBText(
-                            'Remember Me',
-                            fontSize: 18.sp,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ],
-                      ),
-                    ),
-                    AirBnBText(
-                      'Forgot Password?',
-                      fontSize: 18.sp,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ],
+                const AppTextField(
+                  isPassword: true,
+                  hintText: 'Referral',
+                  icon: IconlyLight.profile,
                 ),
-                SizedBox(height: 36.h),
+                SizedBox(height: 40.h),
                 ArrowButton(
-                  text: 'SIGN IN',
+                  text: 'SIGN UP',
                   onPressed: () {
                     // Navigator.pushReplacementNamed(context, '/home');
                   },
