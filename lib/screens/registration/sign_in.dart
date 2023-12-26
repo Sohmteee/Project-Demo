@@ -84,6 +84,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 ),
               ],
             ),
+            SizedBox(height: 36.h),
             const Spacer(),
           ],
         ),
