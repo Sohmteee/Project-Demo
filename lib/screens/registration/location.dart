@@ -86,45 +86,57 @@ class _LocationScreenState extends State<LocationScreen> {
                   );
                 },
                 builder: (context, controller, focusNode) {
-                  return Container(
-                    padding: EdgeInsets.only(left: 5.w, right: 15.w),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12.r),
-                      border: Border.all(
-                        color: HexColor('#E4DFDF'),
-                        width: 1.w,
+                  return ShaderMask(
+                    blendMode: BlendMode.srcIn,
+                    shaderCallback: (Rect bounds) => LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [
+                        lightOrangeColor,
+                        darkOrangeColor,
+                      ],
+                      tileMode: TileMode.mirror,
+                    ).createShader(bounds),
+                    child: Container(
+                      padding: EdgeInsets.only(left: 5.w, right: 15.w),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12.r),
+                        border: Border.all(
+                          color: HexColor('#E4DFDF'),
+                          width: 1.w,
+                        ),
                       ),
-                    ),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: TextField(
-                            controller: controller,
-                            focusNode: focusNode,
-                            decoration: const InputDecoration(
-                              border: OutlineInputBorder(
-                                  borderSide: BorderSide.none),
-                              labelText: 'United States',
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: TextField(
+                              controller: controller,
+                              focusNode: focusNode,
+                              decoration: const InputDecoration(
+                                border: OutlineInputBorder(
+                                    borderSide: BorderSide.none),
+                                labelText: 'United States',
+                              ),
                             ),
                           ),
-                        ),
-                        ShaderMask(
-                          blendMode: BlendMode.srcIn,
-                          shaderCallback: (Rect bounds) => LinearGradient(
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                            colors: [
-                              lightOrangeColor,
-                              darkOrangeColor,
-                            ],
-                            tileMode: TileMode.mirror,
-                          ).createShader(bounds),
-                          child: Icon(
-                            IconlyLight.search,
-                            size: 20.sp,
+                          ShaderMask(
+                            blendMode: BlendMode.srcIn,
+                            shaderCallback: (Rect bounds) => LinearGradient(
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                              colors: [
+                                lightOrangeColor,
+                                darkOrangeColor,
+                              ],
+                              tileMode: TileMode.mirror,
+                            ).createShader(bounds),
+                            child: Icon(
+                              IconlyLight.search,
+                              size: 20.sp,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   );
                 },
