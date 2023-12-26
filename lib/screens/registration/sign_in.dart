@@ -117,7 +117,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         ),
                         GestureDetector(
                           onTap: () {
-                            Navigator.pushNamed(context, '/forgot-password');
+                            Navigator.pushNamed(context, '/reset-password');
                           },
                           child: AirBnBText(
                             'Forgot Password?',
