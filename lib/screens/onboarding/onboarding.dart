@@ -94,7 +94,7 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
                           });
                         }
                       },
-                      child: Padding(
+                      child: Container(
                         padding: EdgeInsets.all(10.sp),
                         child: AnimatedOpacity(
                           opacity: (onBoardingIndex == 0) ? 0.5 : 1,
@@ -138,7 +138,7 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
                           Navigator.pushReplacementNamed(context, '/home');
                         }
                       },
-                      child: Padding(
+                      child: Container(
                         padding: EdgeInsets.all(10.sp),
                         child: AirBnBText(
                           'Next',
