@@ -42,13 +42,17 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       return Column(
         children: [
           const Spacer(),
-          Image.asset(onBoardingData[index]['image']).animate().moveY(
-                delay: 400.milliseconds,
-                begin: 450.h,
-                end: 0,
-                duration: 600.milliseconds,
-                curve: Curves.elasticOut,
-              ),
+          Stack(
+            children: [
+              Image.asset(onBoardingData[index]['image'], ).animate().moveY(
+                    delay: 400.milliseconds,
+                    begin: 450.h,
+                    end: 0,
+                    duration: 600.milliseconds,
+                    curve: Curves.elasticOut,
+                  ),
+            ],
+          ),
           const Spacer(flex: 2),
         ],
       );
