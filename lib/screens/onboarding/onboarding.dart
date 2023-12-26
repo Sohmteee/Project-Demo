@@ -55,6 +55,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     });
     return Scaffold(
       body: Container(
+        /*
+        decoration: if (isLightTheme) ? BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/onboarding/onb-bg.png'),
+            fit: BoxFit.cover,
+          ),
+        ) : null,
+        */ 
         child: Stack(
           alignment: Alignment.bottomCenter,
           children: [
