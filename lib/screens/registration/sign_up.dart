@@ -99,7 +99,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   children: [
                     Container(width: 20.w),
                     Positioned(
-                      left: -5.w,
+                      left: -7.w,
                       child: Icon(
                         IconlyLight.profile,
                         size: 22.sp,
@@ -107,7 +107,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ),
                     ),
                     Positioned(
-                      right: -5.w,
+                      right: -7.w,
                       child: Icon(
                         IconlyLight.profile,
                         size: 22.sp,
