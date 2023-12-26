@@ -60,7 +60,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           color: Theme.of(context).colorScheme.primary,
           image: (!isLightTheme)
               ? const DecorationImage(
-                  image: AssetImage('assets/images/dark-gradient-background.png'),
+                  image:
+                      AssetImage('assets/images/dark-gradient-background.png'),
                   fit: BoxFit.cover,
                 )
               : null,
@@ -81,17 +82,22 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               width: double.infinity,
               height: 250.h,
               decoration: BoxDecoration(
+                color: !isLightTheme
+                    ? Theme.of(context).colorScheme.primary
+                    : null,
                 borderRadius: BorderRadius.vertical(
                   top: Radius.circular(40.r),
                 ),
-                gradient: isLightTheme ? LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    lightOrangeColor,
-                    darkOrangeColor,
-                  ],
-                ),
+                gradient: isLightTheme
+                    ? LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          lightOrangeColor,
+                          darkOrangeColor,
+                        ],
+                      )
+                    : null,
               ),
               child: Column(
                 children: [
