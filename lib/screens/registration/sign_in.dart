@@ -67,11 +67,9 @@ class _SignInScreenState extends State<SignInScreen> {
                   },
                 ),
                 AirBnBText(
-                  'Remember me',
-                  color: Color(0xFF110C26),
+                  'Remember Me',
                   fontSize: 14.sp,
                   fontWeight: FontWeight.w400,
-                  height: 0.12,
                 ),
               ],
             ),
