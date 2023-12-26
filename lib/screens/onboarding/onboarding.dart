@@ -46,7 +46,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 delay: 400.milliseconds,
                 begin: 450.h,
                 end: 0,
-                duration: 500.milliseconds,
+                duration: 600.milliseconds,
                 curve: Curves.elasticOut,
               ),
           const Spacer(flex: 2),
