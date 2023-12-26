@@ -109,11 +109,13 @@ class _LocationScreenState extends State<LocationScreen> {
                           ),
                         ),
                         ShaderMask(
-                          shaderCallback: (Rect bounds) => const RadialGradient(
-                            center: Alignment.center,
-                            radius: 0.5,
+                          shaderCallback: (Rect bounds) => LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
                             colors: [
-                              ligh
+                              lightOrangeColor,
+                              lightOrangeColor,
+                              darkOrangeColor,
                             ],
                             tileMode: TileMode.mirror,
                           ).createShader(bounds),
