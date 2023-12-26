@@ -24,8 +24,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-  final themeProvider = Provider.of<ThemeProvider>(context);
-
+    final themeProvider = Provider.of<ThemeProvider>(context);
 
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle(
@@ -33,7 +32,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       ),
       child: AdvancedDrawer(
         controller: drawerController,
-        backdropColor: themeProvider.themeType == ThemeType.light ? backgroundColor : Vx.gray800,
+        backdropColor: themeProvider.themeType == ThemeType.light
+            ? backgroundColor
+            : Vx.gray800,
         drawer: buildDrawerItems(),
         childDecoration: BoxDecoration(
           borderRadius: BorderRadius.circular(40),
@@ -46,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           ],
         ),
         child: Scaffold(
-          backgroundColor: isLightTheme ? backgroundColor : Vx.gray800,
+          backgroundColor: themeProvider.themeType == ThemeType.light ? backgroundColor : Vx.gray800,
           appBar: buildAppBar(),
           body: buildBottomNavBar(),
         ),
@@ -54,9 +55,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     );
   }
 
-  Widget buildDrawerItems() {
+  Widget buildDrawerItems(ThemeProvider themeProvider) {
     return Scaffold(
-      backgroundColor: isLightTheme ? backgroundColor : Vx.gray800,
+      backgroundColor: themeProvider.themeType == ThemeType.light ? backgroundColor : Vx.gray800,
       body: Padding(
         padding: const EdgeInsets.fromLTRB(20, 40, 20, 10),
         child: Column(
@@ -75,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 Text(
                   'Ashfak Sayem',
                   style: TextStyle(
-                    color: isLightTheme ? blackTextColor : Colors.white,
+                    color: themeProvider.themeType == ThemeType.light ? blackTextColor : Colors.white,
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
@@ -124,7 +125,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       Text(
                         drawerOptions[index]['title'],
                         style: TextStyle(
-                          color: isLightTheme ? blackTextColor : Colors.white,
+                          color: themeProvider.themeType == ThemeType.light ? blackTextColor : Colors.white,
                           fontSize: 18,
                         ),
                       ),
@@ -143,11 +144,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   GestureDetector(
                     onTap: () {
                       setState(() {
-                        isLightTheme = !isLightTheme;
+                        themeProvider.themeType == ThemeType.light = !themeProvider.themeType == ThemeType.light;
                       });
                     },
                     child: RotatedBox(
-                      quarterTurns: isLightTheme ? 0 : 2,
+                      quarterTurns: themeProvider.themeType == ThemeType.light ? 0 : 2,
                       child: SvgPicture.asset(
                         'assets/svg/drawer/theme-switch.svg',
                       ),
@@ -155,9 +156,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   ),
                   SizedBox(width: 15),
                   Text(
-                    '${isLightTheme ? 'Light' : 'Dark'} Mode',
+                    '${themeProvider.themeType == ThemeType.light ? 'Light' : 'Dark'} Mode',
                     style: TextStyle(
-                      color: isLightTheme ? blackTextColor : Colors.white,
+                      color: themeProvider.themeType == ThemeType.light ? blackTextColor : Colors.white,
                       fontSize: 18,
                     ),
                   ),
@@ -199,7 +200,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
   BottomNavBar buildBottomNavBar() {
     return BottomNavBar(
-      bottomNavBarColor: isLightTheme ? backgroundColor : Vx.gray800,
+      bottomNavBarColor: themeProvider.themeType == ThemeType.light ? backgroundColor : Vx.gray800,
       bottomNavItemIconHeight: 20,
       bottomNavItemLabelHeight: 15,
       fabWidth: 50,
@@ -219,7 +220,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         ),
         child: Icon(
           Icons.add_box,
-          color: isLightTheme ? backgroundColor : Vx.gray800,
+          color: themeProvider.themeType == ThemeType.light ? backgroundColor : Vx.gray800,
         ),
       ),
       bottomItems: [
@@ -230,7 +231,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           label: 'Explore',
           bottomItemSelectedColor: darkOrangeColor,
           screen: Container(
-            color: isLightTheme ? backgroundColor : Vx.gray800,
+            color: themeProvider.themeType == ThemeType.light ? backgroundColor : Vx.gray800,
             child: ListView(
               physics: const BouncingScrollPhysics(),
               children: [
@@ -247,7 +248,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       Text(
                         'Near You',
                         style: TextStyle(
-                          color: isLightTheme ? blackTextColor : Colors.white,
+                          color: themeProvider.themeType == ThemeType.light ? blackTextColor : Colors.white,
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                         ),
@@ -317,7 +318,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             height: 150,
             decoration: BoxDecoration(
               color:
-                  isLightTheme ? lightBlueBackgroundColor : blueColorCategory,
+                  themeProvider.themeType == ThemeType.light ? lightBlueBackgroundColor : blueColorCategory,
               borderRadius: BorderRadius.circular(20),
             ),
             child: Stack(
@@ -346,7 +347,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             Text(
                               'Invite your friends',
                               style: TextStyle(
-                                color: isLightTheme
+                                color: themeProvider.themeType == ThemeType.light
                                     ? blackTextColor
                                     : Colors.white,
                                 fontSize: 20,
@@ -358,7 +359,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               'Earn 0.1 USDT for each friend \nyou refer',
                               style: TextStyle(
                                 color:
-                                    isLightTheme ? greyTextColor : Vx.gray200,
+                                    themeProvider.themeType == ThemeType.light ? greyTextColor : Vx.gray200,
                                 fontSize: 16,
                               ),
                             ),
@@ -412,7 +413,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               Text(
                 'Upcoming Events',
                 style: TextStyle(
-                  color: isLightTheme ? blackTextColor : Colors.white,
+                  color: themeProvider.themeType == ThemeType.light ? blackTextColor : Colors.white,
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),
@@ -448,7 +449,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 margin: EdgeInsets.symmetric(horizontal: 5),
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: isLightTheme ? Colors.white : Vx.gray600,
+                  color: themeProvider.themeType == ThemeType.light ? Colors.white : Vx.gray600,
                   borderRadius: BorderRadius.circular(20),
                   boxShadow: [
                     BoxShadow(
@@ -544,7 +545,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     Text(
                       upcomingEvents[index]['title'],
                       style: TextStyle(
-                        color: isLightTheme ? blackTextColor : Colors.white,
+                        color: themeProvider.themeType == ThemeType.light ? blackTextColor : Colors.white,
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                         letterSpacing: .5,
