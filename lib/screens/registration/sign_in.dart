@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:yeerlo/colors/app_colors.dart';
@@ -34,6 +35,12 @@ class _SignInScreenState extends State<SignInScreen> {
               'assets/images/logos/light-logo.png',
               width: 174.w,
               height: 84.h,
+            ).animate(onPlay: (controller) {
+              controller.repeat();
+            }).shimmer(
+              delay: 2.5.seconds,
+              color: lightOrangeColor,
+              duration: 1.seconds,
             ),
             SizedBox(height: 44.h),
             Align(
