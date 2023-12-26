@@ -91,10 +91,7 @@ class _LocationScreenState extends State<LocationScreen> {
                     focusNode: focusNode,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: HexColor('#E4DFDF'),
-                          width: 1.w,
-                        ),
+                        borderSide: BorderSide.,
                         borderRadius: BorderRadius.circular(12.r),
                       ),
                       labelText: 'City',
