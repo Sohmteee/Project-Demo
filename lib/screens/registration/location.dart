@@ -73,8 +73,16 @@ class _LocationScreenState extends State<LocationScreen> {
                 ),
               ),
               SizedBox(height: 30.h),
-              
-              
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 15.w),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12.r),
+                  border: Border.all(
+                    color: HexColor('#E4DFDF'),
+                    width: 1.w,
+                  ),
+                ),
+              ),
               AppTextField(
                 hintText: 'abc@email.com',
                 icon: Icon(
