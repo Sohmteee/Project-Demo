@@ -13,7 +13,11 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
     return Scaffold(
       body: Container(
         child: Column(
-          children: [Image.asset('assets/images/onboarding/onb-1.png')],
+          children: [
+            Spacer(),
+            Image.asset('assets/images/onboarding/onb-1.png'),
+            Spacer(flex: 2),
+          ],
         ),
       ),
     );
