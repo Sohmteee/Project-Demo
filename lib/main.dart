@@ -52,6 +52,7 @@ class MyApp extends StatelessWidget {
                 ),
           home: const SplashScreen(),
           debugShowCheckedModeBanner: false,
+          initialRoute: '/splash',
           routes: {
             '/onboarding': (context) => const OnboardingScreen(),
             '/home': (context) => const HomeScreen(),
