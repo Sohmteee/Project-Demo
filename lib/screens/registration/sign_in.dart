@@ -40,7 +40,6 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
             ),
             SizedBox(height: 21.h),
-            const Spacer(),
             TextField(
               decoration: InputDecoration(
                 hintText: 'Email',
@@ -50,17 +49,18 @@ class _SignInScreenState extends State<SignInScreen> {
                   color: themedTextColor,
                 ),
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8.r),
+                  borderRadius: BorderRadius.circular(12.r),
                   borderSide: BorderSide(
-                    color: redColorCategory,
+                    color: linkTextColor,
                   ),
                 ),
                 contentPadding: EdgeInsets.symmetric(
-                  horizontal: 20.w,
+                  horizontal: 15.w,
                   vertical: 20.h,
                 ),
               ),
             ),
+            const Spacer(),
           ],
         ),
       ),
