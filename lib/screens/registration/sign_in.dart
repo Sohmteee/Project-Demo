@@ -48,6 +48,7 @@ class _SignInScreenState extends State<SignInScreen> {
             ),
             SizedBox(height: 19.h),
             const RegistrationTextField(
+              isPassword: true,
               hintText: 'Your Password',
               icon: IconlyLight.lock,
             ),

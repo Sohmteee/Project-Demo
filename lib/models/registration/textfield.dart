@@ -63,11 +63,12 @@ class _RegistrationTextFieldState extends State<RegistrationTextField> {
               ),
             ),
           ),
-          Icon(
-            IconlyLight.hide, // IconlyLight.show
-            size: 22.sp,
-            color: registrationIconColor,
-          ),
+          if (widget.isPassword)
+            Icon(
+              IconlyLight.hide, // IconlyLight.show
+              size: 22.sp,
+              color: registrationIconColor,
+            ),
         ],
       ),
     );
