@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/data.dart';
 import 'package:yeerlo/models/text.dart';
+import 'package:yeerlo/providers/theme.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -39,6 +41,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context);
+
     List pages = List.generate(3, (index) {
       return Column(
         children: [
@@ -58,7 +62,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       body: Container(
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.primary,
-          image: (!isLightTheme)
+          image: (themeProvider.themeType == ThemeType.dark)
               ? const DecorationImage(
                   image:
                       AssetImage('assets/images/dark-gradient-background.png'),
@@ -82,7 +86,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               width: double.infinity,
               height: 250.h,
               decoration: BoxDecoration(
-                color: !isLightTheme ? backgroundColor : null,
+                color:  themeProvider.themeType == ThemeType.dark
+                    ? backgroundColor : null,
                 borderRadius: BorderRadius.vertical(
                   top: Radius.circular(40.r),
                 ),
