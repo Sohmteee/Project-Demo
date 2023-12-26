@@ -55,7 +55,7 @@ class _LocationScreenState extends State<LocationScreen> {
               Align(
                 alignment: Alignment.centerLeft,
                 child: AirBnBText(
-                  'Reset Password',
+                  'Your Location',
                   fontSize: 24.sp,
                   fontWeight: FontWeight.w500,
                   color: Theme.of(context).colorScheme.secondary,
@@ -65,7 +65,7 @@ class _LocationScreenState extends State<LocationScreen> {
               Align(
                 alignment: Alignment.centerLeft,
                 child: DMSansText(
-                  'Please enter your email address \nto request a password reset code',
+                  'Please enter your current location',
                   color: Theme.of(context).colorScheme.secondary,
                   fontSize: 16.sp,
                   fontWeight: FontWeight.w400,
