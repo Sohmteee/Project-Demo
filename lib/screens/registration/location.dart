@@ -82,6 +82,7 @@ class _LocationScreenState extends State<LocationScreen> {
                     width: 1.w,
                   ),
                 ),
+                child: DropdownButtonHideUnderline(),
               ),
               AppTextField(
                 hintText: 'abc@email.com',
