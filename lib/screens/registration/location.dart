@@ -87,7 +87,7 @@ class _LocationScreenState extends State<LocationScreen> {
                 },
                 builder: (context, controller, focusNode) {
                   return Container(
-                    padding: EdgeInsets.symmetric(horizontal: 15.w),
+                    padding: EdgeInsets.symmetric(horizontal: 5.w),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12.r),
                       border: Border.all(
