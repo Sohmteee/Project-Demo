@@ -60,7 +60,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                 child: AirBnBText(
                   'Verification',
                   fontSize: 24.sp,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w500,
                   color: Theme.of(context).colorScheme.secondary,
                 ),
               ),
@@ -72,6 +72,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                   color: Theme.of(context).colorScheme.secondary,
                   fontSize: 16.sp,
                   fontWeight: FontWeight.w400,
+                  height: 1.8,
                 ),
               ),
               SizedBox(height: 27.h),
