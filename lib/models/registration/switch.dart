@@ -24,6 +24,7 @@ class _AppSwitchState extends State<AppSwitch> {
       child: Container(
         width: 32.w,
         height: 20.h,
+        padding: EdgeInsets.all(2.w),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(95.r),
           border: Border.all(
@@ -38,9 +39,8 @@ class _AppSwitchState extends State<AppSwitch> {
               curve: Curves.easeIn,
               left: isSwitched ? 12.w : 0,
               child: Container(
-                width: 20.w,
-                height: 20.h,
-                padding: EdgeInsets.all(2.w),
+                width: 14.w,
+                height: 14.h,
                 decoration: BoxDecoration(
                   color: darkOrangeColor,
                   borderRadius: BorderRadius.circular(95.r),
