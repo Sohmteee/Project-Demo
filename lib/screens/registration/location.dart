@@ -92,6 +92,7 @@ class _LocationScreenState extends State<LocationScreen> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12.r),
                       border: GradientBoxBorder(
+                        width: 2,
                         gradient: LinearGradient(
                           begin: Alignment.topCenter,
                           end: Alignment.bottomCenter,
