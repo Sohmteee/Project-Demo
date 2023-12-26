@@ -144,21 +144,14 @@ class _VerificationScreenState extends State<VerificationScreen> {
       border: Border.all(color: lightOrangeColor),
     );
 
-    final submittedPinTheme = defaultPinTheme.copyWith(
-      decoration: defaultPinTheme.decoration?.copyWith(
-        color: Color.fromRGBO(14, 194, 83, 1),
-      ),
-    );
     return Pinput(
       defaultPinTheme: defaultPinTheme,
       focusedPinTheme: focusedPinTheme,
-      submittedPinTheme: submittedPinTheme,
       validator: (s) {
         return s == '4444' ? null : 'OTP is incorrect (Correct OTP is 4444)';
       },
       pinputAutovalidateMode: PinputAutovalidateMode.onSubmit,
       showCursor: false,
-      onCompleted: (pin) => print(pin),
       onTapOutside: (event) {
         FocusScope.of(context).unfocus();
       },

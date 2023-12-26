@@ -136,7 +136,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ArrowButton(
                   text: 'SIGN UP',
                   onPressed: () {
-                    Navigator.pushReplacementNamed(context, '/verification');
+                    Navigator.pushNamed(context, '/verification');
                   },
                 ),
                 SizedBox(height: 24.h),
