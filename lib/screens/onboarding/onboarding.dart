@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/models/text.dart';
@@ -22,8 +23,7 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
     {
       'image': 'assets/images/onboarding/onb-2.png',
       'title': 'Spot Engaging Events on \nyour Calendar',
-      'description':
-          'Personalized calendar ensuring you never '
+      'description': 'Personalized calendar ensuring you never '
           '\nmiss the perfect event that fits '
           '\nseamlessly into your schedule',
     },
@@ -44,9 +44,7 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
           Column(
             children: [
               const Spacer(),
-              Image.asset(
-                onBoardingData[onBoardingIndex]['image']
-              ),
+              Image.asset(onBoardingData[onBoardingIndex]['image']),
               const Spacer(flex: 2),
             ],
           ),
@@ -88,14 +86,24 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Opacity(
-                      opacity: 0.50,
-                      child: AirBnBText(
-                        'Skip',
-                        color: Colors.white,
-                        fontSize: 18.sp,
-                        fontWeight: FontWeight.w500,
-                        height: 0.10.h,
+                    GestureDetector(
+                      onTap: () {
+                        if (onBoardingIndex > 0) {
+                          setState(() {
+                            onBoardingIndex--;
+                          });
+                        }
+                      },
+                      child: AnimatedOpacity(
+                        opacity: (onBoardingIndex == 0) ? 0 : 1,
+                        duration: 0.25.seconds,
+                        child: AirBnBText(
+                          'Skip',
+                          color: Colors.white,
+                          fontSize: 18.sp,
+                          fontWeight: FontWeight.w500,
+                          height: 0.10.h,
+                        ),
                       ),
                     ),
                     Row(
@@ -117,13 +125,24 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
                         },
                       ),
                     ),
-                    AirBnBText(
-                      'Next',
-                      textAlign: TextAlign.right,
-                      color: Colors.white,
-                      fontSize: 18.sp,
-                      fontWeight: FontWeight.w500,
-                      height: 0.10.h,
+                    GestureDetector(
+                      onTap: () {
+                        if (onBoardingIndex < 2) {
+                          setState(() {
+                            onBoardingIndex++;
+                          });
+                        } else {
+                          Navigator.pushReplacementNamed(context, '/home');
+                        }
+                      },
+                      child: AirBnBText(
+                        'Next',
+                        textAlign: TextAlign.right,
+                        color: Colors.white,
+                        fontSize: 18.sp,
+                        fontWeight: FontWeight.w500,
+                        height: 0.10.h,
+                      ),
                     )
                   ],
                 ),
