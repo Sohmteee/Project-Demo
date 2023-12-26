@@ -38,9 +38,9 @@ class _SignInScreenState extends State<SignInScreen> {
             ).animate(onPlay: (controller) {
               controller.repeat();
             }).shimmer(
-              delay: 2.5.seconds,
+              delay: 2.seconds,
               color: lightOrangeColor,
-              duration: 1.seconds,
+              duration: 2.seconds,
             ),
             SizedBox(height: 44.h),
             Align(
