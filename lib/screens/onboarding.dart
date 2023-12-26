@@ -120,15 +120,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          if (onBoardingIndex > 0) {
-                            setState(() {
-                              onBoardingIndex--;
-                            });
-                            pageController.previousPage(
-                              duration: 300.milliseconds,
-                              curve: Curves.easeIn,
-                            );
-                          }
+                          Navigator.pushReplacementNamed(context, '/sign-in');
                         },
                         child: Container(
                           padding: EdgeInsets.all(10.sp),
@@ -177,7 +169,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               curve: Curves.easeIn,
                             );
                           } else {
-                            Navigator.pushReplacementNamed(context, '/home');
+                            Navigator.pushReplacementNamed(context, '/sign-in');
                           }
                         },
                         child: Container(
