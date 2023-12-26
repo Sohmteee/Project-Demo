@@ -43,9 +43,16 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         children: [
           const Spacer(),
           Stack(
+            alignment: Alignment.center,
             children: [
-              Image.asset(onBoardingData[index]['image']),
+              Image.asset(
+                onBoardingData[index]['image'],
+                width: 271.w,
+                height: 460.h,
+              ),
               Container(
+                width: 271.w,
+                height: 460.h,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.topCenter,
@@ -55,7 +62,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       Colors.black.withOpacity(0.75),
                     ],
                   ),
-                ),
                 ),
               )
             ],
