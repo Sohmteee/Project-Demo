@@ -89,15 +89,13 @@ class _LocationScreenState extends State<LocationScreen> {
                             child: TextField(
                               controller: controller,
                               cursorColor: darkOrangeColor,
-                              obscureText:
-                                  widget.isPassword ? !showPassword : false,
                               style: TextStyle(
                                 fontSize: 16.sp,
                                 fontWeight: FontWeight.w400,
                                 color: Theme.of(context).colorScheme.secondary,
                               ),
                               decoration: InputDecoration(
-                                hintText: widget.hintText,
+                                hintText: 'Choose country',
                                 hintStyle: TextStyle(
                                   fontSize: 16.sp,
                                   fontWeight: FontWeight.w400,
