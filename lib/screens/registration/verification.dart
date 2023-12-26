@@ -3,11 +3,13 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/data.dart';
 import 'package:yeerlo/models/registration/button.dart';
 import 'package:yeerlo/models/registration/textfield.dart';
 import 'package:yeerlo/models/text.dart';
+import 'package:yeerlo/providers/theme.dart';
 
 class VerificationScreen extends StatefulWidget {
   const VerificationScreen({super.key});
@@ -21,7 +23,8 @@ class _VerificationScreenState extends State<VerificationScreen> {
 
   @override
   Widget build(BuildContext context) {
-    
+    final themeProvider = Provider.of<ThemeProvider>(context);
+
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
       extendBodyBehindAppBar: true,
@@ -41,7 +44,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
       ),
       body: Container(
         padding: EdgeInsets.only(top: 80.h),
-        decoration: (!isLightTheme)
+        decoration: (themeProvider.themeType == ThemeType.dark)
             ? const BoxDecoration(
                 image: DecorationImage(
                   image:
