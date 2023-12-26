@@ -120,7 +120,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          Navigator.pushReplacementNamed(context, '/sign-in');
+                          Navigator.pushReplacementNamed(context, '/sign-up');
                         },
                         child: Container(
                           padding: EdgeInsets.all(10.sp),
@@ -169,7 +169,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               curve: Curves.easeIn,
                             );
                           } else {
-                            Navigator.pushReplacementNamed(context, '/sign-in');
+                            Navigator.pushReplacementNamed(context, '/sign-up');
                           }
                         },
                         child: Container(
