@@ -42,9 +42,14 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
             ),
             SizedBox(height: 21.h),
-            RegistrationTextField(
-              hintText: 'Email',
-              icon: IconlyLight.email,
+            const RegistrationTextField(
+              hintText: 'Ikay@email.com',
+              icon: IconlyLight.message,
+            ),
+            SizedBox(height: 19.h),
+            const RegistrationTextField(
+              hintText: 'Your Password',
+              icon: IconlyLight.lock,
             ),
             const Spacer(),
           ],
