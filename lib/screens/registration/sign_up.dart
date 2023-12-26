@@ -43,23 +43,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
             padding: EdgeInsets.symmetric(horizontal: 30.w),
             child: Column(
               children: [
-                SizedBox(height: 45.h),
-                Image.asset(
-                  'assets/images/logos/light-logo.png',
-                  width: 174.w,
-                  height: 84.h,
-                ).animate(onPlay: (controller) {
-                  controller.repeat();
-                }).shimmer(
-                  delay: 2.seconds,
-                  color: lightOrangeColor,
-                  duration: 2.seconds,
-                ),
-                SizedBox(height: 44.h),
                 Align(
                   alignment: Alignment.centerLeft,
                   child: AirBnBText(
-                    'Sign in',
+                    'Sign up',
                     fontSize: 24.sp,
                     fontWeight: FontWeight.w500,
                     color: themedTextColor,
