@@ -92,12 +92,17 @@ class LoginOption extends StatelessWidget {
           ],
         ),
         child: Center(
-          child: AirBnBText(
-            text,
-            color: Theme.of(context).colorScheme.secondary,
-            fontSize: 18.sp,
-            fontWeight: FontWeight.w400,
-            // letterSpacing: 1,
+          child: Row(
+            children: [
+              Image.asset
+              AirBnBText(
+                text,
+                color: Theme.of(context).colorScheme.secondary,
+                fontSize: 18.sp,
+                fontWeight: FontWeight.w400,
+                // letterSpacing: 1,
+              ),
+            ],
           ),
         ),
       ),
