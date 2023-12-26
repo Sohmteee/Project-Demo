@@ -40,6 +40,7 @@ dependencies:
   flutter_iconly: ^1.0.2
   flutter_screenutil: ^5.9.0
   flutter_svg: ^2.0.9
+  flutter_typeahead: ^5.0.1
   pinput: ^3.0.1
   provider: ^6.1.1
   velocity_x: ^4.1.2
