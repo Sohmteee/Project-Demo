@@ -78,12 +78,16 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ),
             child: Column(
               children: [
-                DMSansText(
-                  onBoardingData[onBoardingIndex]['title'],
-                  color: Colors.white,
-                  fontSize: 22.sp,
-                  fontWeight: FontWeight.w700,
-                  textAlign: TextAlign.center,
+                AnimatedSwitcher(
+                  duration: 500.milliseconds,
+                  key: KeyVal,
+                  child: DMSansText(
+                    onBoardingData[onBoardingIndex]['title'],
+                    color: Colors.white,
+                    fontSize: 22.sp,
+                    fontWeight: FontWeight.w700,
+                    textAlign: TextAlign.center,
+                  ),
                 ),
                 SizedBox(height: 10.h),
                 DMSansText(
