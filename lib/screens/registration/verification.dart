@@ -68,48 +68,23 @@ class _VerificationScreenState extends State<VerificationScreen> {
                   ),
                 ),
                 SizedBox(height: 21.h),
-                DMSansText(
-                  'We’ve sent  a verification code to \nikay@gmail.com',
-                  color: Theme.of(context).colorScheme.secondary,
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.w400,
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: DMSansText(
+                    'We’ve sent  a verification code to \nikay@gmail.com',
+                    color: Theme.of(context).colorScheme.secondary,
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w400,
+                  ),
                 ),
                 SizedBox(height: 40.h),
                 ArrowButton(
-                  text: 'SIGN UP',
+                  text: 'CONTINUE',
                   onPressed: () {
                     // Navigator.pushReplacementNamed(context, '/home');
                   },
                 ),
                 SizedBox(height: 24.h),
-                AirBnBText(
-                  'OR',
-                  color: const Color(0xFF9D9898),
-                  fontSize: 18.sp,
-                  fontWeight: FontWeight.w500,
-                ),
-                SizedBox(height: 5.h),
-                LoginOption(
-                  logo: 'assets/images/logos/google-logo.png',
-                  text: 'Login with Google',
-                  onPressed: () {},
-                ),
-                Opacity(
-                  opacity: /* Platform.isIOS ? 1 : 0 */ 1,
-                  child: Column(
-                    children: [
-                      SizedBox(height: 18.h),
-                      LoginOption(
-                        logo: 'assets/images/logos/apple-logo.png',
-                        text: 'Login with Apple ID',
-                        onPressed: () {
-                          if (Platform.isIOS) {}
-                        },
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: 40.h),
                 GestureDetector(
                   onTap: () {
                     Navigator.pop(context);
@@ -118,7 +93,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                     TextSpan(
                       children: [
                         TextSpan(
-                          text: 'Already have an account?  ',
+                          text: 'Resend code in  ',
                           style: TextStyle(
                             color: Theme.of(context).colorScheme.secondary,
                             fontSize: 16.sp,
@@ -127,7 +102,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                           ),
                         ),
                         TextSpan(
-                          text: 'Sign in',
+                          text: '0:20',
                           style: TextStyle(
                             color: lightOrangeColor,
                             fontSize: 16.sp,
