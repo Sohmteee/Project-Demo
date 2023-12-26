@@ -1,7 +1,7 @@
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:flutter/material.dart';
 
-bool isLightTheme = true;
+bool isLightTheme = false;
 
 List categories = [
   {
