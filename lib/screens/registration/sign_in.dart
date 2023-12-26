@@ -102,9 +102,11 @@ class _SignInScreenState extends State<SignInScreen> {
             SizedBox(height: 24.h),
             AirBnBText(
               'OR',
+              color: const Color(0xFF9D9898),
               fontSize: 18.sp,
               fontWeight: FontWeight.w500,
             ),
+            SizedBox(height: 5.h),
             const Spacer(),
           ],
         ),
