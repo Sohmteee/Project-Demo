@@ -44,6 +44,7 @@ class AirBnBText extends StatelessWidget {
     this.fontWeight,
     this.color,
     this.textAlign,
+    this.height,
   });
 
   final String text;
@@ -51,6 +52,7 @@ class AirBnBText extends StatelessWidget {
   FontWeight? fontWeight;
   Color? color;
   TextAlign? textAlign;
+  double? height;
 
   @override
   Widget build(BuildContext context) {
@@ -62,6 +64,7 @@ class AirBnBText extends StatelessWidget {
         fontWeight: fontWeight,
         color: color,
         fontFamily: 'AirBnB',
+        height: height,
       ),
     );
   }

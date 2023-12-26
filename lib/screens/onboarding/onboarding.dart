@@ -58,7 +58,7 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
                   color: Colors.white,
                   fontSize: 15.sp,
                   textAlign: TextAlign.center,
-                  height: 1.5,
+                  height: 1.8,
                 ),
               ],
             ),
