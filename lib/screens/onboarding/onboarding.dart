@@ -50,13 +50,13 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
                   fontWeight: FontWeight.w700,
                   textAlign: TextAlign.center,
                 ),
+                SizedBox(height: 10),
                 DMSansText(
                   'Your gateway to local adventure! '
                   '\nDiscover exciting happenings right '
                   '\nin your area',
                   color: Colors.white,
                   fontSize: 15.sp,
-                  fontWeight: FontWeight.w700,
                   textAlign: TextAlign.center,
                 ),
               ],
