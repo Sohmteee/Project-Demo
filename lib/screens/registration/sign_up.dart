@@ -135,30 +135,35 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                 ),
                 SizedBox(height: 40.h),
-                Text.rich(
-                  TextSpan(
-                    children: [
-                      TextSpan(
-                        text: 'Already have an account?  ',
-                        style: TextStyle(
-                          color: Theme.of(context).colorScheme.secondary,
-                          fontSize: 16.sp,
-                          fontFamily: 'AirBnB',
-                          fontWeight: FontWeight.w400,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(
+                          text: 'Already have an account?  ',
+                          style: TextStyle(
+                            color: Theme.of(context).colorScheme.secondary,
+                            fontSize: 16.sp,
+                            fontFamily: 'AirBnB',
+                            fontWeight: FontWeight.w400,
+                          ),
                         ),
-                      ),
-                      TextSpan(
-                        text: 'Sign in',
-                        style: TextStyle(
-                          color: lightOrangeColor,
-                          fontSize: 16.sp,
-                          fontFamily: 'AirBnB',
-                          fontWeight: FontWeight.w400,
+                        TextSpan(
+                          text: 'Sign in',
+                          style: TextStyle(
+                            color: lightOrangeColor,
+                            fontSize: 16.sp,
+                            fontFamily: 'AirBnB',
+                            fontWeight: FontWeight.w400,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-                  textAlign: TextAlign.center,
                 ),
                 SizedBox(height: 40.h),
               ],
