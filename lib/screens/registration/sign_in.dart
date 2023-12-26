@@ -21,18 +21,23 @@ class _SignInScreenState extends State<SignInScreen> {
         ),
         child: Column(
           children: [
-            Spacer()
+            const Spacer(),
             Image.asset(
               'assets/images/logos/light-logo.png',
               width: 174.w,
               height: 84.h,
             ),
-            AirBnBText(
-              'Sign In',
-              fontSize: 24.sp,
-              fontWeight: FontWeight.w400,
-              color: themedTextColor,
+            SizedBox(height: 44.h),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: AirBnBText(
+                'Sign In',
+                fontSize: 24.sp,
+                fontWeight: FontWeight.w400,
+                color: themedTextColor,
+              ),
             ),
+            const Spacer(),
           ],
         ),
       ),
