@@ -5,6 +5,7 @@ import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/colors/hex_color.dart';
+import 'package:yeerlo/countries.dart';
 import 'package:yeerlo/models/registration/button.dart';
 import 'package:yeerlo/models/registration/textfield.dart';
 import 'package:yeerlo/models/text.dart';
@@ -76,15 +77,16 @@ class _LocationScreenState extends State<LocationScreen> {
               ),
               SizedBox(height: 30.h),
               TypeAheadField(
-                 
-                itemBuilder: (context, countries) {
-                  return Text(countries.toString());
-
+                itemBuilder: (context, country) {
+                  return Text(country.toString());
                 },
-
-                onSelected: (value) {
-                  
+                suggestionsCallback: (pattern) {
+                  return countries
+                      .where((country) =>
+                          country.toLowerCase().contains(pattern.toLowerCase()))
+                      .toList();
                 },
+                onSelected: (country) {},
               ),
               AppTextField(
                 hintText: 'abc@email.com',
