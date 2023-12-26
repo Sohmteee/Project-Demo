@@ -161,7 +161,12 @@ class _VerificationScreenState extends State<VerificationScreen> {
       pinputAutovalidateMode: PinputAutovalidateMode.onSubmit,
       showCursor: true,
       onCompleted: (pin) => print(pin),
-      preFilledWidget: Ai,
+      preFilledWidget: DMSansText(
+        '-',
+        fontSize: 24.sp,
+        fontWeight: FontWeight.w600,
+        color: HexColor('#DADADA'),
+      ),
     );
   }
 }
