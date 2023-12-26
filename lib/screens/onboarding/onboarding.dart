@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:yeerlo/colors/app_colors.dart';
+import 'package:yeerlo/data.dart';
 import 'package:yeerlo/models/text.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -55,15 +56,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     });
     return Scaffold(
       body: Container(
-        /*
-        decoration:  BoxDecoration(
+        decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.primary,
-          image: if (!isLightTheme) ? DecorationImage(
-            image: AssetImage('assets/images/onboarding/onb-bg.png'),
-            fit: BoxFit.cover,
-          ): null,
-        ) ,
-        */ 
+          image: (!isLightTheme)
+              ? const DecorationImage(
+                  image: AssetImage('assets/images/dark-gradient-background.png'),
+                  fit: BoxFit.cover,
+                )
+              : null,
+        ),
         child: Stack(
           alignment: Alignment.bottomCenter,
           children: [
