@@ -73,69 +73,7 @@ class _LocationScreenState extends State<LocationScreen> {
                 ),
               ),
               SizedBox(height: 30.h),
-              SearchAnchor(
-                builder: (context, controller) {
-                  return Container(
-                    padding: EdgeInsets.symmetric(horizontal: 15.w),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12.r),
-                      border: Border.all(
-                        color: HexColor('#E4DFDF'),
-                        width: 1.w,
-                      ),
-                    ),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: TextField(
-                            controller: controller,
-                            cursorColor: darkOrangeColor,
-                            style: TextStyle(
-                              fontSize: 16.sp,
-                              fontWeight: FontWeight.w400,
-                              color: Theme.of(context).colorScheme.secondary,
-                            ),
-                            decoration: InputDecoration(
-                              hintText: 'Choose country',
-                              hintStyle: TextStyle(
-                                fontSize: 16.sp,
-                                fontWeight: FontWeight.w400,
-                                color: linkTextColor,
-                              ),
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(12.r),
-                                borderSide: BorderSide.none,
-                              ),
-                              contentPadding: EdgeInsets.symmetric(
-                                horizontal: 14.w,
-                                vertical: 20.h,
-                              ),
-                            ),
-                          ),
-                        ),
-                        Icon(
-                          IconlyLight.search,
-                          size: 22.sp,
-                          color: registrationIconColor,
-                        ),
-                      ],
-                    ),
-                  );
-                },
-                suggestionsBuilder: (context, controller) {
-                  return List<ListTile>.generate(5, (int index) {
-                    final String item = 'item $index';
-                    return ListTile(
-                      title: Text(item),
-                      onTap: () {
-                        setState(() {
-                          controller.closeView(item);
-                        });
-                      },
-                    );
-                  });
-                },
-              ),
+              
               
               AppTextField(
                 hintText: 'abc@email.com',
