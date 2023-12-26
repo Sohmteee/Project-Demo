@@ -6,6 +6,7 @@ import 'package:yeerlo/screens/home.dart';
 import 'package:yeerlo/screens/onboarding.dart';
 import 'package:yeerlo/screens/registration/sign_up.dart';
 import 'package:yeerlo/screens/registration/sign_in.dart';
+import 'package:yeerlo/screens/registration/verification.dart';
 import 'package:yeerlo/screens/splash.dart';
 import 'package:flutter/services.dart';
 
@@ -59,6 +60,7 @@ class MyApp extends StatelessWidget {
             '/home': (context) => const HomeScreen(),
             '/sign-in': (context) => const SignInScreen(),
             '/sign-up': (context) => const SignUpScreen(),
+            '/verification':(context) => const VerificationScreen(),
           },
         );
       },
