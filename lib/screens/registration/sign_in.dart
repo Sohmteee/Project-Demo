@@ -120,14 +120,16 @@ class _SignInScreenState extends State<SignInScreen> {
                   onPressed: () {},
                 ),
                 Opacity(
-                  opacity: Platform.isIOS ? 1 : 0,
+                  opacity: /* Platform.isIOS ? 1 : 0 */,
                   child: Column(
                     children: [
                       SizedBox(height: 18.h),
                       LoginOption(
                         logo: 'assets/images/logos/apple-logo.png',
                         text: 'Login with Apple ID',
-                        onPressed: () {},
+                        onPressed: () {
+                          if (Platform.isIOS) {}
+                        },
                       ),
                     ],
                   ),
