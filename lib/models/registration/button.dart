@@ -21,17 +21,17 @@ class ArrowButton extends StatelessWidget {
       height: 58.h,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16.r),
-        gradient: const LinearGradient(
+        gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
           colors: [
             lightOrangeColor,
-            Color(0xFFFF7643),
+            darkOrangeColor,
           ],
         ),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFFFF7643).withOpacity(0.3),
+            color: Colors.grey.withOpacity(0.3),
             blurRadius: 30.r,
             offset: const Offset(0, 10),
           ),
