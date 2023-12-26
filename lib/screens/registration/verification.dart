@@ -40,19 +40,21 @@ class _VerificationScreenState extends State<VerificationScreen> {
           ),
         ),
       ),
-      body: Container(
-        padding: EdgeInsets.only(top: 80.h),
-        decoration: (themeProvider.themeType == ThemeType.dark)
-            ? const BoxDecoration(
-                image: DecorationImage(
-                  image:
-                      AssetImage('assets/images/dark-gradient-background.png'),
-                  fit: BoxFit.cover,
-                ),
-              )
-            : null,
-        child: SingleChildScrollView(
-          physics: const BouncingScrollPhysics(),
+      body: GestureDetector(
+        onTap: () {
+          FocusScope.of(context).unfocus();
+        },
+        child: Container(
+          padding: EdgeInsets.only(top: 80.h),
+          decoration: (themeProvider.themeType == ThemeType.dark)
+              ? const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                        'assets/images/dark-gradient-background.png'),
+                    fit: BoxFit.cover,
+                  ),
+                )
+              : null,
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 30.w),
             child: Column(
@@ -118,7 +120,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                     textAlign: TextAlign.center,
                   ),
                 ),
-                Expanded(child: SizedBox(height: 40.h)),
+                Expanded(child: Container()),
               ],
             ),
           ),
