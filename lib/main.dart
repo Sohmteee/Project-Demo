@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, child) {
+        final 
         return MaterialApp(
           title: 'Yeerlo',
           theme: isLightTheme

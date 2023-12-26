@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 enum ThemeType { light, dark }
 
 class ThemeProvider extends ChangeNotifier {
-  ThemeMode themeMode = ThemeMode.light;
+  ThemeType themeType = ThemeType.light;
 
-  void toggleTheme(bool isLightTheme) {
-    themeMode = isLightTheme ? ThemeMode.light : ThemeMode.dark;
+  void toggleTheme() {
+    themeType = themeType == ThemeType.light ? ThemeType.dark : ThemeType.light;
     notifyListeners();
   }
 }
