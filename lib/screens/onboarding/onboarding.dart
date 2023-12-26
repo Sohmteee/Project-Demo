@@ -21,13 +21,13 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
             children: [
               const Spacer(),
               Image.asset('assets/images/onboarding/onb-1.png'),
-              const Spacer(flex: 3),
+              const Spacer(flex: 2),
             ],
           ),
           Container(
             padding: EdgeInsets.all(40.sp),
             width: double.infinity,
-            height: 270.h,
+            height: 250.h,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.vertical(
                 top: Radius.circular(40.r),
@@ -75,6 +75,7 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
                       ),
                     ),
                     Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: List.generate(
                         3,
                         (index) {
