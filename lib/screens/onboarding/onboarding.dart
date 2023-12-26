@@ -20,15 +20,16 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
     },
     {
       'image': 'assets/images/onboarding/onb-2.png',
-      'title': 'Book Tickets and Check-in \nPasses',
+      'title': 'Spot Engaging Events on \nyour Calendar',
       'description':
-          'Book tickets to your favorite events \nand get check-in passes right on \nyour phone',
+          'Personalized calendar ensuring you never '
+          '\nmiss the perfect event that fits seamlessly into your schedule',
     },
     {
       'image': 'assets/images/onboarding/onb-3.png',
       'title': 'Navigate to Your \nDestination with Ease',
       'description':
-          'Get notified of upcoming events \nand stay up to date with your \nbookings',
+          'Your essential map for smooth and \neffortless journey planning',
     },
   ];
 
