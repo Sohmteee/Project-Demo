@@ -14,7 +14,7 @@ class AppTextField extends StatefulWidget {
   });
 
   final String hintText;
-  final IconData icon;
+  final Widget icon;
   final TextEditingController? controller;
   final bool isPassword;
 
@@ -38,11 +38,8 @@ class _AppTextFieldState extends State<AppTextField> {
       ),
       child: Row(
         children: [
-          Icon(
             widget.icon,
-            size: 22.sp,
-            color: registrationIconColor,
-          ),
+          
           Expanded(
             child: TextField(
               controller: widget.controller,

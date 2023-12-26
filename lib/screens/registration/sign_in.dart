@@ -54,15 +54,21 @@ class _SignInScreenState extends State<SignInScreen> {
                   ),
                 ),
                 SizedBox(height: 21.h),
-                const AppTextField(
+                 AppTextField(
                   hintText: 'abc@email.com',
-                  icon: IconlyLight.message,
+                  icon: Icon(IconlyLight.message, 
+                    size: 22.sp,
+                    color: registrationIconColor,
+                  ),
                 ),
                 SizedBox(height: 19.h),
-                const AppTextField(
+                 AppTextField(
                   isPassword: true,
                   hintText: 'Your Password',
-                  icon: IconlyLight.lock,
+                  icon: Icon(IconlyLight.lock, 
+                    size: 22.sp,
+                    color: registrationIconColor,
+                  ),
                 ),
                 SizedBox(height: 19.h),
                 Row(
