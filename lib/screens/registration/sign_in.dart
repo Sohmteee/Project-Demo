@@ -99,6 +99,12 @@ class _SignInScreenState extends State<SignInScreen> {
                 // Navigator.pushReplacementNamed(context, '/home');
               },
             ),
+            SizedBox(height: 24.h),
+            AirBnBText(
+              'OR',
+              fontSize: 18.sp,
+              fontWeight: FontWeight.w500,
+            ),
             const Spacer(),
           ],
         ),
