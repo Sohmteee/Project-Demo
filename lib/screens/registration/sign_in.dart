@@ -95,6 +95,7 @@ class _SignInScreenState extends State<SignInScreen> {
                           SizedBox(width: 6.w),
                           AirBnBText(
                             'Remember Me',
+                            color: Theme.of(context).colorScheme.secondary,
                             fontSize: 18.sp,
                             fontWeight: FontWeight.w400,
                           ),
