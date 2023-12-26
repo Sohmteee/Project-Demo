@@ -4,8 +4,8 @@ import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/data.dart';
 import 'package:yeerlo/screens/home.dart';
 import 'package:yeerlo/screens/onboarding.dart';
-import 'package:yeerlo/screens/registration/sign-up.dart';
-import 'package:yeerlo/screens/registration/sign-in.dart';
+import 'package:yeerlo/screens/registration/sign_up.dart';
+import 'package:yeerlo/screens/registration/sign_in.dart';
 import 'package:yeerlo/screens/splash.dart';
 import 'package:flutter/services.dart';
 
