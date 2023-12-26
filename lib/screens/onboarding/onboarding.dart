@@ -119,7 +119,7 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
                             width: 8.sp,
                             height: 8.sp,
                             decoration: BoxDecoration(
-                              color: (index == 0)
+                              color: (index == onBoardingIndex)
                                   ? Colors.white
                                   : Colors.white.withOpacity(0.50),
                               borderRadius: BorderRadius.circular(10.r),
@@ -138,13 +138,16 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
                           Navigator.pushReplacementNamed(context, '/home');
                         }
                       },
-                      child: AirBnBText(
-                        'Next',
-                        textAlign: TextAlign.right,
-                        color: Colors.white,
-                        fontSize: 18.sp,
-                        fontWeight: FontWeight.w500,
-                        height: 0.10.h,
+                      child: Padding(
+                        padding: EdgeInsets.all(10.sp),
+                        child: AirBnBText(
+                          'Next',
+                          textAlign: TextAlign.right,
+                          color: Colors.white,
+                          fontSize: 18.sp,
+                          fontWeight: FontWeight.w500,
+                          height: 0.10.h,
+                        ),
                       ),
                     )
                   ],
