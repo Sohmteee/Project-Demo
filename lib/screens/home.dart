@@ -45,9 +45,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           ],
         ),
         child: Scaffold(
-          backgroundColor: themeProvider.themeType == ThemeType.light
-              ? backgroundColor
-              : Vx.gray800,
+          backgroundColor: Theme.of(context).colorScheme.primary,
           appBar: buildAppBar(),
           body: buildBottomNavBar(themeProvider),
         ),
@@ -57,9 +55,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
   Widget buildDrawerItems(ThemeProvider themeProvider) {
     return Scaffold(
-      backgroundColor: themeProvider.themeType == ThemeType.light
-          ? backgroundColor
-          : Vx.gray800,
+      backgroundColor: Theme.of(context).colorScheme.primary,
       body: Padding(
         padding: const EdgeInsets.fromLTRB(20, 40, 20, 10),
         child: Column(
@@ -207,9 +203,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
   BottomNavBar buildBottomNavBar(ThemeProvider themeProvider) {
     return BottomNavBar(
-      bottomNavBarColor: themeProvider.themeType == ThemeType.light
-          ? backgroundColor
-          : Vx.gray800,
+      bottomNavBarColor: Theme.of(context).colorScheme.primary,
       bottomNavItemIconHeight: 20,
       bottomNavItemLabelHeight: 15,
       fabWidth: 50,
@@ -229,9 +223,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         ),
         child: Icon(
           Icons.add_box,
-          color: themeProvider.themeType == ThemeType.light
-              ? backgroundColor
-              : Vx.gray800,
+          color: Theme.of(context).colorScheme.primary,
         ),
       ),
       bottomItems: [
@@ -242,9 +234,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           label: 'Explore',
           bottomItemSelectedColor: darkOrangeColor,
           screen: Container(
-            color: themeProvider.themeType == ThemeType.light
-                ? backgroundColor
-                : Vx.gray800,
+            color: Theme.of(context).colorScheme.primary,
             child: ListView(
               physics: const BouncingScrollPhysics(),
               children: [

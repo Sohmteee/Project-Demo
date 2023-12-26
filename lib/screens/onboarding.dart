@@ -86,7 +86,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               height: 250.h,
               decoration: BoxDecoration(
                 color:  themeProvider.themeType == ThemeType.dark
-                    ? backgroundColor : null,
+                    ? darkBackgroundColor : null,
                 borderRadius: BorderRadius.vertical(
                   top: Radius.circular(40.r),
                 ),
