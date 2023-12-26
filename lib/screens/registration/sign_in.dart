@@ -51,7 +51,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     'Sign in',
                     fontSize: 24.sp,
                     fontWeight: FontWeight.w500,
-                    color: themedTextColor,
+                    color: Theme.of(context).colorScheme.secondary,
                   ),
                 ),
                 SizedBox(height: 21.h),

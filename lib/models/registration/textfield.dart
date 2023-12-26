@@ -38,13 +38,17 @@ class _AppTextFieldState extends State<AppTextField> {
       ),
       child: Row(
         children: [
-            widget.icon,
-          
+          widget.icon,
           Expanded(
             child: TextField(
               controller: widget.controller,
               cursorColor: darkOrangeColor,
               obscureText: widget.isPassword ? !showPassword : false,
+              style: TextStyle(
+                fontSize: 16.sp,
+                fontWeight: FontWeight.w400,
+                color: Theme.of(context).colorScheme.secondary,
+              ),
               decoration: InputDecoration(
                 hintText: widget.hintText,
                 hintStyle: TextStyle(
