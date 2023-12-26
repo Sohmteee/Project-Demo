@@ -109,11 +109,11 @@ class _LocationScreenState extends State<LocationScreen> {
                           ),
                         ),
                         ShaderMask(
+                          blendMode: BlendMode.srcIn,
                           shaderCallback: (Rect bounds) => LinearGradient(
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                             colors: [
-                              lightOrangeColor,
                               lightOrangeColor,
                               darkOrangeColor,
                             ],
@@ -122,7 +122,6 @@ class _LocationScreenState extends State<LocationScreen> {
                           child: Icon(
                             IconlyLight.search,
                             size: 20.sp,
-                            color: darkOrangeColor,
                           ),
                         ),
                       ],
