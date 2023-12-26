@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/models/text.dart';
@@ -40,7 +41,7 @@ class _SignInScreenState extends State<SignInScreen> {
             ),
             SizedBox(height: 21.h),
             const Spacer(),
-            Icon(IconlyLight.user, size: 24.sp, color: themedTextColor),
+            Icon(IconlyLight.message, size: 24.sp, color: themedTextColor),
           ],
         ),
       ),
