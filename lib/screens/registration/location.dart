@@ -72,7 +72,7 @@ class _LocationScreenState extends State<LocationScreen> {
                 ),
               ),
               SizedBox(height: 30.h),
-              SearchAnchor(builder: builder, suggestionsBuilder: suggestionsBuilder)
+              SearchAnchor(builder: ((context, controller) => ), suggestionsBuilder: suggestionsBuilder),
               AppTextField(
                 hintText: 'abc@email.com',
                 icon: Icon(
