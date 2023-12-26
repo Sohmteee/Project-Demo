@@ -39,12 +39,15 @@ class ArrowButton extends StatelessWidget {
               // letterSpacing: 1,
             ),
           ),
-          Container(
-            width: 30,
-            height: 30,
-            decoration: const BoxDecoration(
-              color: Colors.white,
-              shape: BoxShape.circle,
+          Positioned(
+            right: 14.w,
+            child: Container(
+              width: 35.w,
+              height: 35.w,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                shape: BoxShape.circle,
+              ),
             ),
           ),
         ],
