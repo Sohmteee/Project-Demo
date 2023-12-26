@@ -122,8 +122,7 @@ class _LocationScreenState extends State<LocationScreen> {
                     ),
                   );
                 },
-                suggestionsBuilder: (context, controller) {
-                  
+                suggestionsBuilder: (context, controller) {},
               ),
               AppTextField(
                 hintText: 'abc@email.com',
