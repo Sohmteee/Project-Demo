@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -67,7 +65,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
               Align(
                 alignment: Alignment.centerLeft,
                 child: DMSansText(
-                  'Please enter your email address to request a password reset code',
+                  'Please enter your email address \nto request a password reset code',
                   color: Theme.of(context).colorScheme.secondary,
                   fontSize: 16.sp,
                   fontWeight: FontWeight.w400,
@@ -90,7 +88,9 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                   Navigator.pushNamed(context, '/verification');
                 },
               ),
-              Expanded(child: child)
+              Expanded(
+                child: Container(),
+              ),
             ],
           ),
         ),
