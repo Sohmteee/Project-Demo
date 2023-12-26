@@ -21,13 +21,10 @@ class _SignInScreenState extends State<SignInScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.primary,
       body: SafeArea(
-        child: Container(
-          width: double.infinity.w,
+        child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 30.w),
-          decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.primary,
-          ),
           child: SingleChildScrollView(
             child: Column(
               children: [
