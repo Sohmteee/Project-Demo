@@ -123,7 +123,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   text: 'Login with Apple ID',
                   onPressed: () {},
                 ),
-                SizedBox(height: 25.h),
+                SizedBox(height: 35.h),
                 Text.rich(
                   TextSpan(
                     children: [
@@ -149,7 +149,6 @@ class _SignInScreenState extends State<SignInScreen> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 40.h),
               ],
             ),
           ),
