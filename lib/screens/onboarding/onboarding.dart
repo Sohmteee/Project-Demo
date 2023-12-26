@@ -78,22 +78,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ),
             child: Column(
               children: [
-                AnimatedSwitcher(
-                  duration: 500.milliseconds,
-                  transitionBuilder: (child, animation) {
-                    return FadeTransition(
-                      opacity: animation,
-                      child: child,
-                    );
-                  },
-                  child: DMSansText(
-                    // key: ValueKey(onBoardingIndex),
-                    onBoardingData[onBoardingIndex]['title'],
-                    color: Colors.white,
-                    fontSize: 22.sp,
-                    fontWeight: FontWeight.w700,
-                    textAlign: TextAlign.center,
-                  ),
+                DMSansText(
+                  onBoardingData[onBoardingIndex]['title'],
+                  color: Colors.white,
+                  fontSize: 22.sp,
+                  fontWeight: FontWeight.w700,
+                  textAlign: TextAlign.center,
                 ),
                 SizedBox(height: 10.h),
                 DMSansText(
