@@ -86,15 +86,22 @@ class _LocationScreenState extends State<LocationScreen> {
                   );
                 },
                 builder: (context, controller, focusNode) {
-                  return TextField(
-                    controller: controller,
-                    focusNode: focusNode,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide.,
-                        borderRadius: BorderRadius.circular(12.r),
+                  return Container(
+                    padding: EdgeInsets.symmetric(horizontal: 15.w),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12.r),
+                      border: Border.all(
+                        color: HexColor('#E4DFDF'),
+                        width: 1.w,
                       ),
-                      labelText: 'City',
+                    ),
+                    child: TextField(
+                      controller: controller,
+                      focusNode: focusNode,
+                      decoration: const InputDecoration(
+                        border: OutlineInputBorder(borderSide: BorderSide.none),
+                        labelText: 'City',
+                      ),
                     ),
                   );
                 },
