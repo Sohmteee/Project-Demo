@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
+import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/colors/hex_color.dart';
@@ -90,10 +91,7 @@ class _LocationScreenState extends State<LocationScreen> {
                     padding: EdgeInsets.only(left: 5.w, right: 15.w),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12.r),
-                      border: Border.all(
-                        color: HexColor('#E4DFDF'),
-                        width: 1.w,
-                      ),
+                      border: GradientBoxBorder(gradient: gradient),
                     ),
                     child: Row(
                       children: [
