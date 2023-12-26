@@ -119,8 +119,9 @@ class _SignInScreenState extends State<SignInScreen> {
                   text: 'Login with Google',
                   onPressed: () {},
                 ),
-                if (Platform.isIOS)
-                  Column(
+                Opacity(
+                  opacity: Platform.isIOS ? 1 : 0,
+                  child: Column(
                     children: [
                       SizedBox(height: 18.h),
                       LoginOption(
@@ -130,6 +131,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       ),
                     ],
                   ),
+                ),
                 SizedBox(height: 40.h),
                 Text.rich(
                   TextSpan(
