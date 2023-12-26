@@ -80,6 +80,8 @@ flutter:
       fonts:
         - asset: assets/fonts/AirBnB-Cereal/AirbnbCereal-Light.otf
           weight: 300
+        - asset: assets/fonts/AirBnB-Cereal/AirbnbCereal-w400.otf
+          weight: 400
         - asset: assets/fonts/AirBnB-Cereal/AirbnbCereal-Medium.otf
           weight: 500
         - asset: assets/fonts/AirBnB-Cereal/AirbnbCereal-Bold.otf
