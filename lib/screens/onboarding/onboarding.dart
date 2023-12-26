@@ -42,31 +42,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       return Column(
         children: [
           const Spacer(),
-          Stack(
-            alignment: Alignment.center,
-            children: [
-              Image.asset(
-                onBoardingData[index]['image'],
-                width: 271.w,
-                height: 460.h,
-              ),
-              Container(
-                width: 260.w,
-                height: 460.h,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      Colors.transparent,
-                      Colors.transparent,
-                      Theme.of(context).colorScheme.primary.withOpacity(.5),
-                    ],
-                  ),
-                ),
-              )
-            ],
-          ).animate().moveY(
+          Image.asset(onBoardingData[index]['image']).animate().moveY(
                 delay: 400.milliseconds,
                 begin: 450.h,
                 end: 0,
