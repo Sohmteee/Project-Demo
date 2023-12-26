@@ -18,14 +18,13 @@ class AppSwitch extends StatefulWidget {
 }
 
 class _AppSwitchState extends State<AppSwitch> {
-  bool isSwitched = false;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         setState(() {
-          isSwitched = !isSwitched;
+          widget.value = !widget.value;
         });
       },
       child: AnimatedContainer(
@@ -50,7 +49,7 @@ class _AppSwitchState extends State<AppSwitch> {
             AnimatedPositioned(
               duration: 0.2.seconds,
               curve: Curves.easeIn,
-              left: isSwitched ? 12.w : 0,
+              left: widget.value ? 12.w : 0,
               child: Container(
                 width: 16.w,
                 height: 16.h,

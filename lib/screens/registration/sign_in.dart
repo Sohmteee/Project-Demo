@@ -15,6 +15,8 @@ class SignInScreen extends StatefulWidget {
 }
 
 class _SignInScreenState extends State<SignInScreen> {
+  bool rememberMe = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +56,14 @@ class _SignInScreenState extends State<SignInScreen> {
               icon: IconlyLight.lock,
             ),
             SizedBox(height: 19.h),
-            AppSwitch(),
+            AppSwitch(
+              value: rememberMe,
+              onChanged: (value) {
+                setState(() {
+                  rememberMe = value!;
+                });
+              },
+            ),
             const Spacer(),
           ],
         ),
