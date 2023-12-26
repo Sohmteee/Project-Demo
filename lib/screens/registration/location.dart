@@ -111,7 +111,7 @@ class _LocationScreenState extends State<LocationScreen> {
                         Icon(
                           IconlyLight.search,
                           size: 20.sp,
-                          color: registrationIconColor,
+                          color: darkOrangeColor,
                         ),
                       ],
                     ),
