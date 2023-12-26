@@ -118,13 +118,19 @@ class _SignInScreenState extends State<SignInScreen> {
               text: 'Login with Google',
               onPressed: () {},
             ),
-            SizedBox(height: 5.h),
+            SizedBox(height: 18.h),
             LoginOption(
               logo: 'assets/images/logos/apple-logo.png',
               text: 'Login with Apple ID',
               onPressed: () {},
             ),
             const Spacer(),
+            AirBnBText(
+              'Already have an account?',
+              color: Theme.of(context).colorScheme.secondary,
+              fontSize: 18.sp,
+              fontWeight: FontWeight.w500,
+            )
           ],
         ),
       ),
