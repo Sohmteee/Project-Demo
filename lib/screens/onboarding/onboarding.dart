@@ -12,6 +12,7 @@ class OnbaordingScreen extends StatefulWidget {
 }
 
 class _OnbaordingScreenState extends State<OnbaordingScreen> {
+  final pageController = PageController();
   int onBoardingIndex = 0;
   List onBoardingData = [
     {
@@ -51,15 +52,11 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
         alignment: Alignment.bottomCenter,
         children: [
           PageView.builder(
+            controller: pageController,
+            scrollDirection: Axis.vertical,
             itemCount: 3,
             itemBuilder: (context, index) {
-              return Column(
-                children: [
-                  const Spacer(),
-                  Image.asset(onBoardingData[onBoardingIndex]['image']),
-                  const Spacer(flex: 2),
-                ],
-              );
+              return pages[index];
             },
           ),
           Container(
