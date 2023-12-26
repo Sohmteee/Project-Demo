@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
                     primary: Colors.white,
                     secondary: Colors.black,
                   ),
-                  useMaterial3: true,
+                  useMaterial3: false,
                   fontFamily: 'DM Sans',
                 )
               : ThemeData(
@@ -47,7 +47,7 @@ class MyApp extends StatelessWidget {
                     primary: Colors.black,
                     secondary: Colors.white,
                   ),
-                  useMaterial3: true,
+                  useMaterial3: false,
                   fontFamily: 'DM Sans',
                 ),
           home: const SplashScreen(),
