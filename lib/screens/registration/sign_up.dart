@@ -52,32 +52,52 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
               ),
               SizedBox(height: 21.h),
-              const AppTextField(
+              AppTextField(
                 hintText: 'Full name',
-                icon: IconlyLight.profile,
+                icon: Icon(
+                  IconlyLight.profile,
+                  size: 22.sp,
+                  color: registrationIconColor,
+                ),
               ),
               SizedBox(height: 19.h),
-              const AppTextField(
+              AppTextField(
                 hintText: 'abc@email.com',
-                icon: IconlyLight.message,
+                icon: Icon(
+                  IconlyLight.message,
+                  size: 22.sp,
+                  color: registrationIconColor,
+                ),
               ),
               SizedBox(height: 19.h),
-              const AppTextField(
+              AppTextField(
                 isPassword: true,
                 hintText: 'Your Password',
-                icon: IconlyLight.lock,
+                icon: Icon(
+                  IconlyLight.lock,
+                  size: 22.sp,
+                  color: registrationIconColor,
+                ),
               ),
               SizedBox(height: 19.h),
-              const AppTextField(
+              AppTextField(
                 isPassword: true,
                 hintText: 'Confirm Password',
-                icon: IconlyLight.lock,
+                icon: Icon(
+                  IconlyLight.lock,
+                  size: 22.sp,
+                  color: registrationIconColor,
+                ),
               ),
               SizedBox(height: 19.h),
-              const AppTextField(
+              AppTextField(
                 isPassword: true,
                 hintText: 'Referral',
-                icon: IconlyLight.profile,
+                icon: Icon(
+                  IconlyLight.profile,
+                  size: 22.sp,
+                  color: registrationIconColor,
+                ),
               ),
               SizedBox(height: 40.h),
               ArrowButton(
