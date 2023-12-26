@@ -60,7 +60,7 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
                   textAlign: TextAlign.center,
                   height: 1.8,
                 ),
-                Spacer(),
+                const Spacer(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -72,6 +72,24 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
                         fontSize: 18.sp,
                         fontWeight: FontWeight.w500,
                         height: 0.10.h,
+                      ),
+                    ),
+                    Row(
+                      children: List.generate(
+                        3,
+                        (index) {
+                          return Container(
+                            margin: EdgeInsets.only(right: 10.w),
+                            width: 8.sp,
+                            height: 8.sp,
+                            decoration: BoxDecoration(
+                              color: (index == 0)
+                                  ? Colors.white
+                                  : Colors.white.withOpacity(0.50),
+                              borderRadius: BorderRadius.circular(10.r),
+                            ),
+                          );
+                        },
                       ),
                     ),
                     AirBnBText(
