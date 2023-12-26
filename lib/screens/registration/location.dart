@@ -108,10 +108,20 @@ class _LocationScreenState extends State<LocationScreen> {
                             ),
                           ),
                         ),
-                        Icon(
-                          IconlyLight.search,
-                          size: 20.sp,
-                          color: darkOrangeColor,
+                        ShaderMask(
+                          shaderCallback: (Rect bounds) => const RadialGradient(
+                            center: Alignment.center,
+                            radius: 0.5,
+                            colors: [
+                              ligh
+                            ],
+                            tileMode: TileMode.mirror,
+                          ).createShader(bounds),
+                          child: Icon(
+                            IconlyLight.search,
+                            size: 20.sp,
+                            color: darkOrangeColor,
+                          ),
                         ),
                       ],
                     ),
