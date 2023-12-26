@@ -80,8 +80,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               children: [
                 AnimatedSwitcher(
                   duration: 500.milliseconds,
-                  key: KeyVal,
                   child: DMSansText(
+                    key: ValueKey(onBoardingData[onBoardingIndex]['title']),
                     onBoardingData[onBoardingIndex]['title'],
                     color: Colors.white,
                     fontSize: 22.sp,
