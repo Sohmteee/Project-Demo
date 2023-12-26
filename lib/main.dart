@@ -18,7 +18,7 @@ void main() {
     ),
   );
 
-  runApp(const MyApp());
+  runApp(MultiProvider(providers: providers));
 }
 
 class MyApp extends StatelessWidget {
