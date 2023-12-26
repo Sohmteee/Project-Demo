@@ -187,7 +187,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         TextSpan(
                           text: 'Sign in',
                           style: TextStyle(
-                            color: lightOrangeColor,
+                            color: themeProvider.themeType == ThemeType.light
+                                ? lightOrangeColor
+                                : darkOrangeColor,
                             fontSize: 16.sp,
                             fontFamily: 'AirBnB',
                             fontWeight: FontWeight.w400,
