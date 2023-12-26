@@ -62,7 +62,7 @@ class _RegistrationTextFieldState extends State<RegistrationTextField> {
             ),
           ),
           Icon(
-            IconlyLight.vi,
+            IconlyLight.hide,
             size: 22.sp,
             color: registrationIconColor,
           ),
