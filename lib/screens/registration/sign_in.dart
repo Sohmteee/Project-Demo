@@ -68,7 +68,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 ),
                 AirBnBText(
                   'Remember Me',
-                  fontSize: 14.sp,
+                  fontSize: 18.sp,
                   fontWeight: FontWeight.w400,
                 ),
               ],
