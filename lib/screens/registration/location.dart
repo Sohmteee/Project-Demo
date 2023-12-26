@@ -133,15 +133,13 @@ class _LocationScreenState extends State<LocationScreen> {
                     });
                   },
                   buttonStyleData: ButtonStyleData(
-                    height: 50,
-                    width: 160,
-                    padding: const EdgeInsets.only(left: 14, right: 14),
+                    padding: EdgeInsets.symmetric(horizontal: 15.w),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(14),
+                      borderRadius: BorderRadius.circular(12.r),
                       border: Border.all(
-                        color: Colors.black26,
+                        color: HexColor('#E4DFDF'),
+                        width: 1.w,
                       ),
-                      color: Colors.redAccent,
                     ),
                     elevation: 2,
                   ),
