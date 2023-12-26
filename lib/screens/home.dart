@@ -143,9 +143,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      setState(() {
-                        themeProvider.themeType == ThemeType.light = !themeProvider.themeType == ThemeType.light;
-                      });
+                      themeProvider.toggleTheme();
                     },
                     child: RotatedBox(
                       quarterTurns: themeProvider.themeType == ThemeType.light ? 0 : 2,
@@ -198,7 +196,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     );
   }
 
-  BottomNavBar buildBottomNavBar() {
+  BottomNavBar buildBottomNavBar(ThemeProvider themeProvider) {
     return BottomNavBar(
       bottomNavBarColor: themeProvider.themeType == ThemeType.light ? backgroundColor : Vx.gray800,
       bottomNavItemIconHeight: 20,
@@ -236,9 +234,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               physics: const BouncingScrollPhysics(),
               children: [
                 const SizedBox(height: 50),
-                buildUpcomingEvents(),
+                buildUpcomingEvents( themeProvider),
                 SizedBox(height: 20),
-                buildReferral(),
+                buildReferral(themeProvider),
                 SizedBox(height: 20),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -304,7 +302,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     );
   }
 
-  Widget buildReferral() {
+  Widget buildReferral(ThemeProvider themeProvider) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Center(
@@ -402,7 +400,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     );
   }
 
-  Column buildUpcomingEvents() {
+  Column buildUpcomingEvents(ThemeProvider themeProvider) {
     return Column(
       children: [
         Padding(
