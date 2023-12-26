@@ -38,7 +38,7 @@ class _SignInScreenState extends State<SignInScreen> {
             Align(
               alignment: Alignment.centerLeft,
               child: AirBnBText(
-                'Sign In',
+                'Sign in',
                 fontSize: 24.sp,
                 fontWeight: FontWeight.bold,
                 color: themedTextColor,
@@ -73,14 +73,14 @@ class _SignInScreenState extends State<SignInScreen> {
                     AirBnBText(
                       'Remember Me',
                       fontSize: 18.sp,
-                      fontWeight: FontWeight.w400,
+                      fontWeight: FontWeight.w300,
                     ),
                   ],
                 ),
                 AirBnBText(
                   'Forgot Password?',
                   fontSize: 18.sp,
-                  fontWeight: FontWeight.w400,
+                  fontWeight: FontWeight.w300,
                 ),
               ],
             ),
