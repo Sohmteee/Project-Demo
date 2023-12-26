@@ -87,7 +87,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     );
                   },
                   child: DMSansText(
-                    key: ValueKey(onBoardingIndex),
+                    // key: ValueKey(onBoardingIndex),
                     onBoardingData[onBoardingIndex]['title'],
                     color: Colors.white,
                     fontSize: 22.sp,
