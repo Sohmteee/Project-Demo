@@ -40,6 +40,7 @@ class _SignInScreenState extends State<SignInScreen> {
             ),
             SizedBox(height: 21.h),
             const Spacer(),
+            Icon(IconlyLight.user, size: 24.sp, color: themedTextColor),
           ],
         ),
       ),
