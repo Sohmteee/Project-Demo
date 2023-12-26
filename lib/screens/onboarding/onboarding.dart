@@ -44,9 +44,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           const Spacer(),
           Image.asset(onBoardingData[index]['image']).animate().moveY(
                 delay: 0.5.seconds,
-                begin: 200.h,
+                begin: 450.h,
                 end: 0,
-                duration: 1.seconds,
+                duration: 500.milliseconds,
+                curve: Curves.bounceOut,
               ),
           const Spacer(flex: 2),
         ],
