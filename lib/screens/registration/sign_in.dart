@@ -28,9 +28,9 @@ class _SignInScreenState extends State<SignInScreen> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
       body: Consumer<ThemeProvider>(
-        builder: (context) {
+        builder: (context, themeProvider, _) {
           return Container(
-            decoration: (!isLightTheme)
+            decoration: (themeProvider.themeType == ThemeType.dark)
                 ? const BoxDecoration(
                     image: DecorationImage(
                       image:
@@ -180,7 +180,7 @@ class _SignInScreenState extends State<SignInScreen> {
                               TextSpan(
                                 text: 'Sign up',
                                 style: TextStyle(
-                                  color: isLightTheme
+                                  color: themeProvider.themeType == ThemeType.light
                                       ? lightOrangeColor
                                       : darkOrangeColor,
                                   fontSize: 16.sp,
