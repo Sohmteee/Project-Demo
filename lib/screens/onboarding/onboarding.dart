@@ -39,6 +39,11 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
                 ],
               ),
             ),
+            child: Column(
+              children: [
+                
+              ],
+            ),
           ),
         ],
       ),
