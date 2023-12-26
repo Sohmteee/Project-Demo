@@ -15,12 +15,18 @@ class _SignInScreenState extends State<SignInScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        width: double.infinity.w,
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.primary,
         ),
         child: Column(
           children: [
-            Imag
+            Spacer()
+            Image.asset(
+              'assets/images/logos/light-logo.png',
+              width: 174.w,
+              height: 84.h,
+            ),
             AirBnBText(
               'Sign In',
               fontSize: 24.sp,
