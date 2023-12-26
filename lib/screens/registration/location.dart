@@ -95,25 +95,13 @@ class _LocationScreenState extends State<LocationScreen> {
                         width: 1.w,
                       ),
                     ),
-                    child: Row(
-                      children: [
-                        Icon(
-                          IconlyLight.location,
-                          size: 22.sp,
-                          color: registrationIconColor,
-                        ),
-                        Expanded(
-                          child: TextField(
-                            controller: controller,
-                            focusNode: focusNode,
-                            decoration: const InputDecoration(
-                              border: OutlineInputBorder(
-                                  borderSide: BorderSide.none),
-                              labelText: 'City',
-                            ),
-                          ),
-                        ),
-                      ],
+                    child: TextField(
+                      controller: controller,
+                      focusNode: focusNode,
+                      decoration: const InputDecoration(
+                        border: OutlineInputBorder(borderSide: BorderSide.none),
+                        labelText: 'United States',
+                      ),
                     ),
                   );
                 },
@@ -124,14 +112,6 @@ class _LocationScreenState extends State<LocationScreen> {
                       .toList();
                 },
                 onSelected: (country) {},
-              ),
-              AppTextField(
-                hintText: 'abc@email.com',
-                icon: Icon(
-                  IconlyLight.message,
-                  size: 22.sp,
-                  color: registrationIconColor,
-                ),
               ),
               SizedBox(height: 26.h),
               ArrowButton(
