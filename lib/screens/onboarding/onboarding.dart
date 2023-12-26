@@ -82,9 +82,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               width: double.infinity,
               height: 250.h,
               decoration: BoxDecoration(
-                color: !isLightTheme
-                    ? Theme.of(context).colorScheme.primary
-                    : null,
+                color: !isLightTheme ? backgroundColor : null,
                 borderRadius: BorderRadius.vertical(
                   top: Radius.circular(40.r),
                 ),
