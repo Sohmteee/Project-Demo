@@ -23,6 +23,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -38,6 +39,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         ),
       ),
       body: Container(
+        padding: EdgeInsets.only(top: 80.h),
         decoration: (!isLightTheme)
             ? const BoxDecoration(
                 image: DecorationImage(
