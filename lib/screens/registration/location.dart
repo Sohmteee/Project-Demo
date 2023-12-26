@@ -122,7 +122,19 @@ class _LocationScreenState extends State<LocationScreen> {
                     ),
                   );
                 },
-                suggestionsBuilder: (context, controller) {},
+                suggestionsBuilder: (context, controller) {
+                  return List<ListTile>.generate(5, (int index) {
+                    final String item = 'item $index';
+                    return ListTile(
+                      title: Text(item),
+                      onTap: () {
+                        setState(() {
+                          controller.closeView(item);
+                        });
+                      },
+                    );
+                  });
+                },
               ),
               AppTextField(
                 hintText: 'abc@email.com',
