@@ -78,6 +78,7 @@ class _LocationScreenState extends State<LocationScreen> {
               ),
               SizedBox(height: 30.h),
               TypeAheadField(
+                hideOnEmpty: true,
                 itemBuilder: (context, country) {
                   return ListTile(
                     minVerticalPadding: 2,
