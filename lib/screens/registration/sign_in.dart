@@ -57,20 +57,30 @@ class _SignInScreenState extends State<SignInScreen> {
             ),
             SizedBox(height: 19.h),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                AppSwitch(
-                  value: rememberMe,
-                  onChanged: (value) {
-                    setState(() {
-                      rememberMe = value!;
-                    });
-                  },
+                Row(
+                  children: [
+                    AppSwitch(
+                      value: rememberMe,
+                      onChanged: (value) {
+                        setState(() {
+                          rememberMe = value!;
+                        });
+                      },
+                    ),
+                    SizedBox(width: 6.w),
+                    AirBnBText(
+                      'Remember Me',
+                      fontSize: 18.sp,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ],
                 ),
-                SizedBox(width: 4,)
                 AirBnBText(
-                  'Remember Me',
+                  'Forgot Password?',
                   fontSize: 18.sp,
-                  fontWeight: FontWeight.w300,
+                  fontWeight: FontWeight.w400,
                 ),
               ],
             ),
