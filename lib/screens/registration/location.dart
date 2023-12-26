@@ -61,7 +61,7 @@ class _LocationScreenState extends State<LocationScreen> {
                   color: Theme.of(context).colorScheme.secondary,
                 ),
               ),
-              SizedBox(height: 21.h),
+              SizedBox(height: 12.h),
               Align(
                 alignment: Alignment.centerLeft,
                 child: DMSansText(
@@ -69,10 +69,9 @@ class _LocationScreenState extends State<LocationScreen> {
                   color: Theme.of(context).colorScheme.secondary,
                   fontSize: 16.sp,
                   fontWeight: FontWeight.w400,
-                  height: 1.8,
                 ),
               ),
-              SizedBox(height: 26.h),
+              SizedBox(height: 30 .h),
               AppTextField(
                 hintText: 'abc@email.com',
                 icon: Icon(
