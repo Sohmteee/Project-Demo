@@ -11,7 +11,27 @@ class OnbaordingScreen extends StatefulWidget {
 }
 
 class _OnbaordingScreenState extends State<OnbaordingScreen> {
-  
+  List onBoardingData = [
+    {
+      'image': 'assets/images/onboarding/onb-1.png',
+      'title': 'Uncover and Explore Local \nEvents',
+      'description':
+          'Your gateway to local adventure! \nDiscover exciting happenings right \nin your area',
+    },
+    {
+      'image': 'assets/images/onboarding/onb-2.png',
+      'title': 'Book Tickets and Check-in \nPasses',
+      'description':
+          'Book tickets to your favorite events \nand get check-in passes right on \nyour phone',
+    },
+    {
+      'image': 'assets/images/onboarding/onb-3.png',
+      'title': 'Navigate to Your \nDestination with Ease',
+      'description':
+          'Get notified of upcoming events \nand stay up to date with your \nbookings',
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
