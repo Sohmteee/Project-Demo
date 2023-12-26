@@ -43,7 +43,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         children: [
           const Spacer(),
           Image.asset(onBoardingData[index]['image']).animate().moveY(
-                delay: 0.5.seconds,
                 begin: 450.h,
                 end: 0,
                 duration: 500.milliseconds,
@@ -110,7 +109,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             onBoardingIndex--;
                           });
                           pageController.previousPage(
-                            duration: 500.milliseconds,
+                            duration: 300.milliseconds,
                             curve: Curves.easeIn,
                           );
                         }
@@ -158,7 +157,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             onBoardingIndex++;
                           });
                           pageController.nextPage(
-                            duration: 500.milliseconds,
+                            duration: 300.milliseconds,
                             curve: Curves.easeIn,
                           );
                         } else {
