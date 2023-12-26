@@ -93,7 +93,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                   TextSpan(
                     children: [
                       TextSpan(
-                        text: 'Resend code in  ',
+                        text: 'Re-send code in  ',
                         style: TextStyle(
                           color: Theme.of(context).colorScheme.secondary,
                           fontSize: 16.sp,
@@ -154,7 +154,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
         focusedPinTheme: focusedPinTheme,
         // submittedPinTheme: submittedPinTheme,
         validator: (s) {
-          return s == '4444' ? null : 'OTP is incorrect';
+          return s == '4444' ? null : 'OTP is incorrect (Correct OTP is 4444)';
         },
         pinputAutovalidateMode: PinputAutovalidateMode.onSubmit,
         showCursor: false,
