@@ -27,7 +27,9 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
             width: double.infinity,
             height: 270.h,
             decoration: BoxDecoration(
-              b
+              borderRadius: BorderRadius.vertical(
+                top: Radius.circular(40.r),
+              ),
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
