@@ -14,8 +14,10 @@ class ArrowButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: 270.w,
+      height: 58.h,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12.r),
+        borderRadius: BorderRadius.circular(16.r),
         gradient: const LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
