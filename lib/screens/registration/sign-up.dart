@@ -150,7 +150,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 SizedBox(height: 40.h),
                 GestureDetector(
                   onTap: () {
-                    
+                    Navigator.pushNamed(context, '/sign-in');
                   },
                   child: Text.rich(
                     TextSpan(

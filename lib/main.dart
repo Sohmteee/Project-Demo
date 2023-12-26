@@ -4,6 +4,7 @@ import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/data.dart';
 import 'package:yeerlo/screens/home.dart';
 import 'package:yeerlo/screens/onboarding.dart';
+import 'package:yeerlo/screens/registration/sign-up.dart';
 import 'package:yeerlo/screens/registration/sign_in.dart';
 import 'package:yeerlo/screens/splash.dart';
 import 'package:flutter/services.dart';
@@ -55,7 +56,7 @@ class MyApp extends StatelessWidget {
             '/onboarding': (context) => const OnboardingScreen(),
             '/home': (context) => const HomeScreen(),
             '/sign-in': (context) => const SignInScreen(),
-            '/sign-up': (context) => const SignInScreen(),
+            '/sign-up': (context) => const SignUpScreen(),
           },
         );
       },
