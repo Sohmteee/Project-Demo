@@ -125,24 +125,24 @@ class _SignInScreenState extends State<SignInScreen> {
               onPressed: () {},
             ),
             const Spacer(),
-             Text.rich(
+            Text.rich(
               TextSpan(
                 children: [
                   TextSpan(
                     text: 'Already have an account?  ',
                     style: TextStyle(
                       color: Theme.of(context).colorScheme.secondary,
-                      fontSize: 15,
-                      fontFamily: 'Airbnb Cereal App',
+                      fontSize: 16.sp,
+                      fontFamily: 'AirBnB',
                       fontWeight: FontWeight.w400,
                     ),
                   ),
                   TextSpan(
-                    text: 'Signin',
+                    text: 'Sign in',
                     style: TextStyle(
-                      color: Color(0xFFFFB459),
-                      fontSize: 15,
-                      fontFamily: 'Airbnb Cereal App',
+                      color: lightOrangeColor,
+                      fontSize: 16.sp,
+                      fontFamily: 'AirBnB',
                       fontWeight: FontWeight.w400,
                     ),
                   ),
