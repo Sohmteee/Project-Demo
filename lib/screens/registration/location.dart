@@ -95,13 +95,25 @@ class _LocationScreenState extends State<LocationScreen> {
                         width: 1.w,
                       ),
                     ),
-                    child: TextField(
-                      controller: controller,
-                      focusNode: focusNode,
-                      decoration: const InputDecoration(
-                        border: OutlineInputBorder(borderSide: BorderSide.none),
-                        labelText: 'City',
-                      ),
+                    child: Row(
+                      children: [
+                        Icon(
+                          IconlyLight.location,
+                          size: 22.sp,
+                          color: registrationIconColor,
+                        ),
+                        Expanded(
+                          child: TextField(
+                            controller: controller,
+                            focusNode: focusNode,
+                            decoration: const InputDecoration(
+                              border: OutlineInputBorder(
+                                  borderSide: BorderSide.none),
+                              labelText: 'City',
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   );
                 },
