@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/models/text.dart';
 
 class ArrowButton extends StatelessWidget {
@@ -23,10 +25,17 @@ class ArrowButton extends StatelessWidget {
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
           colors: [
-            Color(0xFFFFA451),
+            lightOrangeColor,
             Color(0xFFFF7643),
           ],
         ),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFFFF7643).withOpacity(0.3),
+            blurRadius: 30.r,
+            offset: const Offset(0, 10),
+          ),
+        ],
       ),
       child: Stack(
         alignment: Alignment.center,
@@ -42,14 +51,7 @@ class ArrowButton extends StatelessWidget {
           ),
           Positioned(
             right: 14.w,
-            child: Container(
-              width: 36.w,
-              height: 36.w,
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                shape: BoxShape.circle,
-              ),
-            ),
+            child: SvgPicture.asset('assets/svg/button-arrow.svg'),
           ),
         ],
       ),
