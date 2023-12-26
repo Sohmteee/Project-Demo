@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
+import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/countries.dart';
 import 'package:yeerlo/models/registration/button.dart';
 import 'package:yeerlo/models/registration/textfield.dart';
@@ -86,8 +87,11 @@ class _LocationScreenState extends State<LocationScreen> {
                     autofocus: true,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
-                        color: HexColor('#E4DFDF'),
-                        width: 1.w,
+                        borderSide: BorderSide(
+                          color: HexColor('#E4DFDF'),
+                          width: 1.w,
+                        ),
+                        borderRadius: 
                       ),
                       labelText: 'City',
                     ),
