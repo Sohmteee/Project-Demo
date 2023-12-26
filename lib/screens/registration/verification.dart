@@ -138,24 +138,23 @@ class _VerificationScreenState extends State<VerificationScreen> {
       ),
       decoration: BoxDecoration(
         border: Border.all(color: HexColor('#DADADA')),
-        borderRadius: BorderRadius.circular(20.r),
+        borderRadius: BorderRadius.circular(15.r),
       ),
     );
 
     final focusedPinTheme = defaultPinTheme.copyDecorationWith(
       border: Border.all(color: lightOrangeColor),
-      borderRadius: BorderRadius.circular(8),
     );
 
-    final submittedPinTheme = defaultPinTheme.copyWith(
+    /* final submittedPinTheme = defaultPinTheme.copyWith(
       decoration: defaultPinTheme.decoration?.copyWith(
         color: Color.fromRGBO(234, 239, 243, 1),
       ),
-    );
+    ); */
     return Pinput(
       defaultPinTheme: defaultPinTheme,
       focusedPinTheme: focusedPinTheme,
-      submittedPinTheme: submittedPinTheme,
+      // submittedPinTheme: submittedPinTheme,
       validator: (s) {
         return s == '2222' ? null : 'Pin is incorrect';
       },
