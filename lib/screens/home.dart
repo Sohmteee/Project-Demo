@@ -32,9 +32,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       ),
       child: AdvancedDrawer(
         controller: drawerController,
-        backdropColor: themeProvider.themeType == ThemeType.light
-            ? backgroundColor
-            : Vx.gray800,
+        backdropColor: Theme.of(context).colorScheme.primary,
         drawer: buildDrawerItems(themeProvider),
         childDecoration: BoxDecoration(
           borderRadius: BorderRadius.circular(40),

@@ -87,7 +87,7 @@ class LoginOption extends StatelessWidget {
         width: 270.w,
         height: 58.h,
         decoration: BoxDecoration(
-          color: themeProvider.themeType == ThemeType.light ? Colors.white : Colors.black,
+          color: themeProvider.themeType == ThemeType.light ? lightBackgroundColor : darkBackgroundColor,
           borderRadius: BorderRadius.circular(16.r),
           boxShadow: [
             BoxShadow(
