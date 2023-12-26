@@ -45,6 +45,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
                 SizedBox(height: 21.h),
                 const AppTextField(
+                  hintText: 'Full name',
+                  icon: IconlyLight.profile,
+                ),
+                SizedBox(height: 19.h),
+                const AppTextField(
                   hintText: 'abc@email.com',
                   icon: IconlyLight.message,
                 ),
@@ -52,6 +57,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 const AppTextField(
                   isPassword: true,
                   hintText: 'Your Password',
+                  icon: IconlyLight.lock,
+                ),
+                SizedBox(height: 19.h),
+                const AppTextField(
+                  isPassword: true,
+                  hintText: 'Confirm Password',
                   icon: IconlyLight.lock,
                 ),
                 SizedBox(height: 19.h),
