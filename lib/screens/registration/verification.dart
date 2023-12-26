@@ -68,70 +68,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                   ),
                 ),
                 SizedBox(height: 21.h),
-                AppTextField(
-                  hintText: 'Full name',
-                  icon: Icon(
-                    IconlyLight.profile,
-                    size: 22.sp,
-                    color: registrationIconColor,
-                  ),
-                ),
-                SizedBox(height: 19.h),
-                AppTextField(
-                  hintText: 'abc@email.com',
-                  icon: Icon(
-                    IconlyLight.message,
-                    size: 22.sp,
-                    color: registrationIconColor,
-                  ),
-                ),
-                SizedBox(height: 19.h),
-                AppTextField(
-                  isPassword: true,
-                  hintText: 'Your Password',
-                  icon: Icon(
-                    IconlyLight.lock,
-                    size: 22.sp,
-                    color: registrationIconColor,
-                  ),
-                ),
-                SizedBox(height: 19.h),
-                AppTextField(
-                  isPassword: true,
-                  hintText: 'Confirm Password',
-                  icon: Icon(
-                    IconlyLight.lock,
-                    size: 22.sp,
-                    color: registrationIconColor,
-                  ),
-                ),
-                SizedBox(height: 19.h),
-                AppTextField(
-                  hintText: 'Referral',
-                  icon: Stack(
-                    alignment: Alignment.center,
-                    clipBehavior: Clip.none,
-                    children: [
-                      Container(width: 20.w),
-                      Positioned(
-                        left: -7.w,
-                        child: Icon(
-                          IconlyLight.profile,
-                          size: 22.sp,
-                          color: registrationIconColor,
-                        ),
-                      ),
-                      Positioned(
-                        right: -7.w,
-                        child: Icon(
-                          IconlyLight.profile,
-                          size: 22.sp,
-                          color: registrationIconColor,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                DMSansText(text)
                 SizedBox(height: 40.h),
                 ArrowButton(
                   text: 'SIGN UP',
