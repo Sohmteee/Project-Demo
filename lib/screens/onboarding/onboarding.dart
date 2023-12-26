@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:yeerlo/colors/app_colors.dart';
+import 'package:yeerlo/models/text.dart';
 
 class OnbaordingScreen extends StatefulWidget {
   const OnbaordingScreen({super.key});
@@ -41,7 +42,7 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
             ),
             child: Column(
               children: [
-                
+                DMSansText('Uncover and Explore Local Events')
               ],
             ),
           ),

@@ -3,9 +3,9 @@
 import 'package:flutter/material.dart';
 
 class DMSansText extends StatelessWidget {
-  DMSansText({
+  DMSansText(
+    this.text, {
     super.key,
-    required this.text,
     this.fontSize,
     this.fontWeight,
     this.color,
@@ -34,9 +34,9 @@ class DMSansText extends StatelessWidget {
 }
 
 class AirBnBText extends StatelessWidget {
-  AirBnBText({
+  AirBnBText(
+    this.text, {
     super.key,
-    required this.text,
     this.fontSize,
     this.fontWeight,
     this.color,
