@@ -10,6 +10,7 @@ class AppSwitch extends StatefulWidget {
 }
 
 class _AppSwitchState extends State<AppSwitch> {
+  
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,7 +19,7 @@ class _AppSwitchState extends State<AppSwitch> {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(95.r),
         border: Border.all(
-          color: lightOrangeColor,
+          color: darkOrangeColor,
           width: 1.w,
         ),
       ),
