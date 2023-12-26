@@ -41,7 +41,24 @@ class _SignInScreenState extends State<SignInScreen> {
             ),
             SizedBox(height: 21.h),
             const Spacer(),
-            Icon(IconlyLight.message, size: 24.sp, color: themedTextColor),
+            TextField(
+              decoration: InputDecoration(
+                hintText: 'Email',
+                hintStyle: TextStyle(
+                  fontSize: 16.sp,
+                  fontWeight: FontWeight.w400,
+                  color: themedTextColor,
+                ),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8.r),
+                  borderSide: BorderSide(color: ),
+                ),
+                contentPadding: EdgeInsets.symmetric(
+                  horizontal: 20.w,
+                  vertical: 20.h,
+                ),
+              ),
+            ),
           ],
         ),
       ),
