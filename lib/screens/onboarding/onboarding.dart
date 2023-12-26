@@ -130,7 +130,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       children: List.generate(
                         3,
                         (index) {
-                          return Container(
+                          return AnimatedContainer(
+                            duration: 500.milliseconds,
                             margin: EdgeInsets.only(right: 10.w),
                             width: 8.sp,
                             height: 8.sp,
