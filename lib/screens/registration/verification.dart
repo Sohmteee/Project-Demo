@@ -156,7 +156,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
       focusedPinTheme: focusedPinTheme,
       // submittedPinTheme: submittedPinTheme,
       validator: (s) {
-        return s == '2222' ? null : 'Pin is incorrect';
+        return s == '4444' ? null : 'OTP is incorrect';
       },
       pinputAutovalidateMode: PinputAutovalidateMode.onSubmit,
       showCursor: true,
