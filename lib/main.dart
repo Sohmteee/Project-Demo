@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/data.dart';
 import 'package:yeerlo/screens/home.dart';
+import 'package:yeerlo/screens/onboarding/onboarding.dart';
 import 'package:yeerlo/screens/splash.dart';
 import 'package:flutter/services.dart';
 
@@ -48,7 +49,7 @@ class MyApp extends StatelessWidget {
           home: const SplashScreen(),
           debugShowCheckedModeBanner: false,
           routes: {
-            '/onboarding': (context) => const OnBoardingScreen(),
+            '/onboarding': (context) => const OnboardingScreen(),
             '/home': (context) => const HomeScreen(),
           },
         );

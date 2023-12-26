@@ -4,14 +4,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/models/text.dart';
 
-class OnbaordingScreen extends StatefulWidget {
-  const OnbaordingScreen({super.key});
+class OnboardingScreen extends StatefulWidget {
+  const OnboardingScreen({super.key});
 
   @override
-  State<OnbaordingScreen> createState() => _OnbaordingScreenState();
+  State<OnboardingScreen> createState() => _OnboardingScreenState();
 }
 
-class _OnbaordingScreenState extends State<OnbaordingScreen> {
+class _OnboardingScreenState extends State<OnboardingScreen> {
   final pageController = PageController();
   int onBoardingIndex = 0;
   List onBoardingData = [
@@ -104,7 +104,7 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
                             onBoardingIndex--;
                           });
                           pageController.previousPage(
-                            duration: 1.seconds,
+                            duration: 500.milliseconds,
                             curve: Curves.easeIn,
                           );
                         }
@@ -151,7 +151,7 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
                             onBoardingIndex++;
                           });
                           pageController.nextPage(
-                            duration: 1.seconds,
+                            duration: 500.milliseconds,
                             curve: Curves.easeIn,
                           );
                         } else {
