@@ -10,11 +10,13 @@ class RegistrationTextField extends StatefulWidget {
     required this.hintText,
     required this.icon,
     this.controller,
+    this.isPassword = false,
   });
 
   final String hintText;
   final IconData icon;
   final TextEditingController? controller;
+  final bool isPassword;
 
   @override
   State<RegistrationTextField> createState() => _RegistrationTextFieldState();
