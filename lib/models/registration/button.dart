@@ -28,14 +28,18 @@ class ArrowButton extends StatelessWidget {
           ],
         ),
       ),
-      child: Center(
-        child: AirBnBText(
-          text,
-          color: Colors.white,
-          fontSize: 16.sp,
-          fontWeight: FontWeight.w400,
-          // letterSpacing: 1,
-        ),
+      child: Stack(
+        children: [
+          Center(
+            child: AirBnBText(
+              text,
+              color: Colors.white,
+              fontSize: 18.sp,
+              fontWeight: FontWeight.w500,
+              // letterSpacing: 1,
+            ),
+          ),
+        ],
       ),
     );
   }
