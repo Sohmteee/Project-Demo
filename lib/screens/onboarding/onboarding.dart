@@ -67,15 +67,24 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
                       opacity: 0.50,
                       child: AirBnBText(
                         'Skip',
-                        
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontFamily: 'Airbnb Cereal App',
-                          fontWeight: FontWeight.w500,
-                          height: 0.10,
-                        ),
-                      
-                    )
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500,
+                        height: 0.10,
+                      ),
+                    ),
+
+                    Text(
+'Next',
+textAlign: TextAlign.right,
+
+color: Colors.white,
+fontSize: 18,
+fontFamily: 'Airbnb Cereal App',
+fontWeight: FontWeight.w500,
+height: 0.10,
+  }
+                    
                   ],
                 ),
               ],
