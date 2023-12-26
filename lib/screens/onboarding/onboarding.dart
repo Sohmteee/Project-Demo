@@ -11,6 +11,7 @@ class OnbaordingScreen extends StatefulWidget {
 }
 
 class _OnbaordingScreenState extends State<OnbaordingScreen> {
+  int onBoardingIndex = 0;
   List onBoardingData = [
     {
       'image': 'assets/images/onboarding/onb-1.png',
@@ -23,7 +24,8 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
       'title': 'Spot Engaging Events on \nyour Calendar',
       'description':
           'Personalized calendar ensuring you never '
-          '\nmiss the perfect event that fits seamlessly into your schedule',
+          '\nmiss the perfect event that fits '
+          '\nseamlessly into your schedule',
     },
     {
       'image': 'assets/images/onboarding/onb-3.png',
@@ -42,7 +44,9 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
           Column(
             children: [
               const Spacer(),
-              Image.asset('assets/images/onboarding/onb-1.png'),
+              Image.asset(
+                onBoardingData[onBoardingIndex]['image']
+              ),
               const Spacer(flex: 2),
             ],
           ),
@@ -66,7 +70,7 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
             child: Column(
               children: [
                 DMSansText(
-                  'Uncover and Explore Local \nEvents',
+                  onBoardingData[onBoardingIndex]['title'],
                   color: Colors.white,
                   fontSize: 22.sp,
                   fontWeight: FontWeight.w700,
@@ -74,9 +78,7 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
                 ),
                 SizedBox(height: 10.h),
                 DMSansText(
-                  'Your gateway to local adventure! '
-                  '\nDiscover exciting happenings right '
-                  '\nin your area',
+                  onBoardingData[onBoardingIndex]['description'],
                   color: Colors.white,
                   fontSize: 15.sp,
                   textAlign: TextAlign.center,
