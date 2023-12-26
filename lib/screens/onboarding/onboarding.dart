@@ -44,15 +44,28 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           const Spacer(),
           Stack(
             children: [
-              Image.asset(onBoardingData[index]['image'], ).animate().moveY(
-                    delay: 400.milliseconds,
-                    begin: 450.h,
-                    end: 0,
-                    duration: 600.milliseconds,
-                    curve: Curves.elasticOut,
+              Image.asset(onBoardingData[index]['image']),
+              Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Colors.transparent,
+                      Colors.black.withOpacity(0.75),
+                    ],
                   ),
+                ),
+                ),
+              )
             ],
-          ),
+          ).animate().moveY(
+                delay: 400.milliseconds,
+                begin: 450.h,
+                end: 0,
+                duration: 600.milliseconds,
+                curve: Curves.elasticOut,
+              ),
           const Spacer(flex: 2),
         ],
       );
