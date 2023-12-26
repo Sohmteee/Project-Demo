@@ -16,6 +16,7 @@ class _SignInScreenState extends State<SignInScreen> {
     return Scaffold(
       body: Container(
         width: double.infinity.w,
+        padding: EdgeInsets.symmetric(horizontal: 30.w),
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.primary,
         ),
@@ -37,6 +38,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 color: themedTextColor,
               ),
             ),
+            SizedBox(height: 21.h),
             const Spacer(),
           ],
         ),
