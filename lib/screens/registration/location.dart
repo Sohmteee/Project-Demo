@@ -141,11 +141,10 @@ class _LocationScreenState extends State<LocationScreen> {
                         width: 1.w,
                       ),
                     ),
-                    elevation: 2,
                   ),
                   iconStyleData: const IconStyleData(
                     icon: Icon(
-                      Icons.arrow_forward_ios_outlined,
+                      IconLight
                     ),
                     iconSize: 14,
                     iconEnabledColor: Colors.yellow,
