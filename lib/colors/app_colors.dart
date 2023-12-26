@@ -25,3 +25,4 @@ final backgroundColor = isLightTheme ? Colors.white : HexColor('#191818');
 final lightGreyBackgroundColor = HexColor('#FFB459');
 final darkGreyBackgroundColor = HexColor('#F1573D');
 
+final registrationIconColor = HexColor('#807A7A');

@@ -50,9 +50,11 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
               child: Row(
                 children: [
-                  
-                  Icon(IconlyLight.message,
-                      size: 24.sp, color: themedTextColor),
+                  Icon(
+                    IconlyLight.message,
+                    size: 22.sp,
+                    color: registrationIconColor,
+                  ),
                   Expanded(
                     child: TextField(
                       decoration: InputDecoration(
