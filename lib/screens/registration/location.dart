@@ -91,7 +91,7 @@ class _LocationScreenState extends State<LocationScreen> {
                           color: HexColor('#E4DFDF'),
                           width: 1.w,
                         ),
-                        borderRadius: 
+                        borderRadius: BorderRadius.circular(12.r),
                       ),
                       labelText: 'City',
                     ),
