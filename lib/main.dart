@@ -6,6 +6,7 @@ import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/providers/theme.dart';
 import 'package:yeerlo/screens/home.dart';
 import 'package:yeerlo/screens/onboarding.dart';
+import 'package:yeerlo/screens/registration/location.dart';
 import 'package:yeerlo/screens/registration/reset_password.dart';
 import 'package:yeerlo/screens/registration/sign_in.dart';
 import 'package:yeerlo/screens/registration/sign_up.dart';
