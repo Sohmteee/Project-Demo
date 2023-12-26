@@ -109,7 +109,9 @@ class _LocationScreenState extends State<LocationScreen> {
                           child: TextField(
                             controller: controller,
                             focusNode: focusNode,
-                            decoration: const InputDecoration(
+                            decoration: InputDecoration(
+                              contentPadding:
+                                  EdgeInsets.symmetric(vertical: 2.h),
                               border: OutlineInputBorder(
                                   borderSide: BorderSide.none),
                               labelText: 'United States',
