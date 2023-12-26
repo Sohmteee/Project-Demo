@@ -51,7 +51,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 height: 460.h,
               ),
               Container(
-                width: 267.w,
+                width: 260.w,
                 height: 460.h,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
