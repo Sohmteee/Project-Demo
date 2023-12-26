@@ -78,7 +78,12 @@ class _LocationScreenState extends State<LocationScreen> {
               TypeAheadField(
                  
                 itemBuilder: (context, countries) {
-                  return Text(countries);
+                  return Text(countries.toString());
+
+                },
+
+                onSelected: (value) {
+                  
                 },
               ),
               AppTextField(
