@@ -94,15 +94,20 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 isPassword: true,
                 hintText: 'Referral',
                 icon: Stack(
+                  alignment: Alignment.center,
                   clipBehavior: Clip.none,
                   children: [
-                    Icon(
-                      IconlyLight.profile,
-                      size: 22.sp,
-                      color: registrationIconColor,
+                    Container(width: 20.w),
+                    Positioned(
+                      left: -5.w,
+                      child: Icon(
+                        IconlyLight.profile,
+                        size: 22.sp,
+                        color: registrationIconColor,
+                      ),
                     ),
                     Positioned(
-                      right: -10.w,
+                      right: -5.w,
                       child: Icon(
                         IconlyLight.profile,
                         size: 22.sp,
