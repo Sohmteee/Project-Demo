@@ -41,6 +41,7 @@ class _SignInScreenState extends State<SignInScreen> {
             ),
             SizedBox(height: 21.h),
             Container(
+              padding: EdgeInsets.symmetric(horizontal: 15.w),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12.r),
                 border: Border.all(
@@ -69,7 +70,7 @@ class _SignInScreenState extends State<SignInScreen> {
                           borderSide: BorderSide.none,
                         ),
                         contentPadding: EdgeInsets.symmetric(
-                          horizontal: 20.w,
+                          horizontal: 14.w,
                           vertical: 20.h,
                         ),
                       ),
