@@ -51,7 +51,9 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
                   textAlign: TextAlign.center,
                 ),
                 DMSansText(
-                  'Your gateway to local adventure! Discover exciting happenings right in your area',
+                  'Your gateway to local adventure! '
+                  '\nDiscover exciting happenings right '
+                  '\nin your area',
                   color: Colors.white,
                   fontSize: 15.sp,
                   fontWeight: FontWeight.w700,
