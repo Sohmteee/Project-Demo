@@ -68,7 +68,12 @@ class _VerificationScreenState extends State<VerificationScreen> {
                   ),
                 ),
                 SizedBox(height: 21.h),
-                DMSansText(text)
+                DMSansText(
+                  'We’ve sent  a verification code to \nikay@gmail.com',
+                  color: Theme.of(context).colorScheme.secondary,
+                  fontSize: 16.sp,
+                  fontWeight: FontWeight.w400,
+                ),
                 SizedBox(height: 40.h),
                 ArrowButton(
                   text: 'SIGN UP',
