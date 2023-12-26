@@ -23,31 +23,28 @@ class _VerificationScreenState extends State<VerificationScreen> {
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
 
-    return GestureDetector(
-      onTap: () {
-        FocusScope.of(context).unfocus();
-      },
-      child: Scaffold(
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        extendBodyBehindAppBar: true,
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          leading: GestureDetector(
-            onTap: () {
-              Navigator.pop(context);
-            },
-            child: Icon(
-              IconlyLight.arrowLeft,
-              color: Theme.of(context).colorScheme.secondary,
-              size: 24.sp,
-            ),
+    return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.primary,
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Icon(
+            IconlyLight.arrowLeft,
+            color: Theme.of(context).colorScheme.secondary,
+            size: 24.sp,
           ),
         ),
-        body: GestureDetector(
-          onTap: () {
-            FocusScope.of(context).unfocus();
-          },
+      ),
+      body: GestureDetector(
+        onTap: () {
+          FocusScope.of(context).unfocus();
+        },
+        child: Expanded(
           child: Container(
             padding: EdgeInsets.only(top: 80.h),
             decoration: (themeProvider.themeType == ThemeType.dark)
@@ -130,90 +127,6 @@ class _VerificationScreenState extends State<VerificationScreen> {
                     SizedBox(height: 40.h),
                   ],
                 ),
-              ),
-            ),
-          ),
-        ),
-        child: Container(
-          padding: EdgeInsets.only(top: 80.h),
-          decoration: (themeProvider.themeType == ThemeType.dark)
-              ? const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(
-                        'assets/images/dark-gradient-background.png'),
-                    fit: BoxFit.cover,
-                  ),
-                )
-              : null,
-          child: SingleChildScrollView(
-            physics: const BouncingScrollPhysics(),
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 30.w),
-              child: Column(
-                children: [
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: AirBnBText(
-                      'Verification',
-                      fontSize: 24.sp,
-                      fontWeight: FontWeight.w500,
-                      color: Theme.of(context).colorScheme.secondary,
-                    ),
-                  ),
-                  SizedBox(height: 21.h),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: DMSansText(
-                      'We’ve sent  a verification code to \nikay@gmail.com',
-                      color: Theme.of(context).colorScheme.secondary,
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                  SizedBox(height: 27.h),
-                  buildOTPField(),
-                  SizedBox(height: 40.h),
-                  ArrowButton(
-                    text: 'CONTINUE',
-                    onPressed: () {
-                      // Navigator.pushReplacementNamed(context, '/home');
-                    },
-                  ),
-                  SizedBox(height: 24.h),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: Text.rich(
-                      TextSpan(
-                        children: [
-                          TextSpan(
-                            text: 'Resend code in  ',
-                            style: TextStyle(
-                              color: Theme.of(context).colorScheme.secondary,
-                              fontSize: 16.sp,
-                              fontFamily: 'AirBnB',
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ),
-                          TextSpan(
-                            text: '0:20',
-                            style: TextStyle(
-                              color: themeProvider.themeType == ThemeType.light
-                                  ? lightOrangeColor
-                                  : darkOrangeColor,
-                              fontSize: 16.sp,
-                              fontFamily: 'AirBnB',
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ),
-                        ],
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                  SizedBox(height: 40.h),
-                ],
               ),
             ),
           ),
