@@ -132,17 +132,18 @@ class _VerificationScreenState extends State<VerificationScreen> {
       width: 55,
       height: 55,
       textStyle: TextStyle(
-          fontSize: 24.sp,
-          color: Theme.of(context).colorScheme.secondary,
-          fontWeight: FontWeight.w600),
+        fontSize: 24.sp,
+        color: Theme.of(context).colorScheme.secondary,
+        fontWeight: FontWeight.w600,
+      ),
       decoration: BoxDecoration(
         border: Border.all(color: HexColor('#DADADA')),
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(20.r),
       ),
     );
 
     final focusedPinTheme = defaultPinTheme.copyDecorationWith(
-      border: Border.all(color: Color.fromRGBO(114, 178, 238, 1)),
+      border: Border.all(color: lightOrangeColor),
       borderRadius: BorderRadius.circular(8),
     );
 
