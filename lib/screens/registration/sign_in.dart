@@ -56,13 +56,24 @@ class _SignInScreenState extends State<SignInScreen> {
               icon: IconlyLight.lock,
             ),
             SizedBox(height: 19.h),
-            AppSwitch(
-              value: rememberMe,
-              onChanged: (value) {
-                setState(() {
-                  rememberMe = value!;
-                });
-              },
+            Row(
+              children: [
+                AppSwitch(
+                  value: rememberMe,
+                  onChanged: (value) {
+                    setState(() {
+                      rememberMe = value!;
+                    });
+                  },
+                ),
+                AirBnBText(
+                  'Remember me',
+                  color: Color(0xFF110C26),
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.w400,
+                  height: 0.12,
+                ),
+              ],
             ),
             const Spacer(),
           ],
