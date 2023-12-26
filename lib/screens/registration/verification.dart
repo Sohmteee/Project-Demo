@@ -161,7 +161,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
         return s == '4444' ? null : 'OTP is incorrect';
       },
       pinputAutovalidateMode: PinputAutovalidateMode.onSubmit,
-      showCursor: true,
+      showCursor: false,
       onCompleted: (pin) => print(pin),
       preFilledWidget: DMSansText(
         '-',
