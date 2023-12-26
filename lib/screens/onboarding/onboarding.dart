@@ -42,7 +42,9 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
             ),
             child: Column(
               children: [
-                DMSansText('Uncover and Explore Local Events')
+                DMSansText(
+                  'Uncover and Explore Local Events',
+                )
               ],
             ),
           ),
