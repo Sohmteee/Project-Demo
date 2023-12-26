@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/models/text.dart';
+import 'package:yeerlo/providers/theme.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 class ArrowButton extends StatelessWidget {
@@ -77,13 +79,15 @@ class LoginOption extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context);
+
     return ZoomTapAnimation(
       onTap: onPressed,
       child: Container(
         width: 270.w,
         height: 58.h,
         decoration: BoxDecoration(
-          color: backgroundColor,
+          color: themeProvider.themeType == ThemeType.light ? Colors.white : Colors.black,
           borderRadius: BorderRadius.circular(16.r),
           boxShadow: [
             BoxShadow(

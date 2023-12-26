@@ -18,7 +18,7 @@ final cyanTextColor = HexColor('#00F8FF');
 
 final lightBlueBackgroundColor = HexColor('#D6FEFF');
 final cyanBackgroundColor = HexColor('#E5FEFF');
-final lightBackgroundColor = Colors.white ;
+const lightBackgroundColor = Colors.white;
 final darkBackgroundColor = HexColor('#191818');
 
 final lightGreyBackgroundColor = HexColor('#FFB459');
