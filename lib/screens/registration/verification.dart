@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pinput/pinput.dart';
 import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/models/registration/button.dart';
