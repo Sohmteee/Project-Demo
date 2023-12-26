@@ -29,6 +29,7 @@ class ArrowButton extends StatelessWidget {
         ),
       ),
       child: Stack(
+        alignment: Alignment.center,
         children: [
           Center(
             child: AirBnBText(
@@ -41,7 +42,6 @@ class ArrowButton extends StatelessWidget {
           ),
           Positioned(
             right: 14.w,
-            top: 11,
             child: Container(
               width: 36.w,
               height: 36.w,
@@ -49,7 +49,6 @@ class ArrowButton extends StatelessWidget {
                 color: Colors.white,
                 shape: BoxShape.circle,
               ),
-              child: Icon(Icon),
             ),
           ),
         ],
