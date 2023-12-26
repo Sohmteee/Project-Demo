@@ -36,10 +36,6 @@ class _AppSwitchState extends State<AppSwitch> {
               darkOrangeColor,
             ],
           ),
-          border: Border.all(
-            color: darkOrangeColor,
-            width: 1.w,
-          ),
         ),
         child: Stack(
           clipBehavior: Clip.none,
@@ -52,7 +48,7 @@ class _AppSwitchState extends State<AppSwitch> {
                 width: 14.w,
                 height: 14.h,
                 decoration: BoxDecoration(
-                  color: darkOrangeColor,
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(95.r),
                 ),
               ),
