@@ -16,6 +16,8 @@ final greyTextColor = HexColor('#2B2849');
 final blackTextColor = HexColor('#120D26');
 final cyanTextColor = HexColor('#00F8FF');
 
+final themedTextColor = isLightTheme ? blackTextColor : Colors.white;
+
 final lightBlueBackgroundColor = HexColor('#D6FEFF');
 final cyanBackgroundColor = HexColor('#E5FEFF');
 final backgroundColor = isLightTheme ? Colors.white : HexColor('#191818');

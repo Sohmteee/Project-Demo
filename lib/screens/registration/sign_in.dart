@@ -21,7 +21,7 @@ class _SignInScreenState extends State<SignInScreen> {
             style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.w700,
-              color: Theme.of(context).colorScheme.primary,
+              color: theme,
             ),
           ),
         ),
