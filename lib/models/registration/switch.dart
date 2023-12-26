@@ -4,7 +4,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 
 class AppSwitch extends StatefulWidget {
-  const AppSwitch({super.key});
+  const AppSwitch({
+    super.key,
+    required this.value,
+    required this.onChanged,
+  });
+
+  final bool value;
+  final Function(bool?) onChanged;
 
   @override
   State<AppSwitch> createState() => _AppSwitchState();
