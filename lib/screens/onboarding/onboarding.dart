@@ -51,13 +51,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 height: 460.h,
               ),
               Container(
-                width: 271.w,
+                width: 267.w,
                 height: 460.h,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [
+                      Colors.transparent,
                       Colors.transparent,
                       Theme.of(context).colorScheme.primary.withOpacity(.5),
                     ],
