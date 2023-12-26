@@ -123,25 +123,7 @@ class _LocationScreenState extends State<LocationScreen> {
                   );
                 },
                 suggestionsBuilder: (context, controller) {
-                  return ListView.builder(
-                    itemCount: 5,
-                    itemBuilder: (context, index) {
-                      return ListTile(
-                        title: Text(
-                          'Country $index',
-                          style: TextStyle(
-                            fontSize: 16.sp,
-                            fontWeight: FontWeight.w400,
-                            color: Theme.of(context).colorScheme.secondary,
-                          ),
-                        ),
-                        onTap: () {
-                          controller.text = 'Country $index';
-                          Navigator.pop(context);
-                        },
-                      );
-                    },
-                  ),
+                  
               ),
               AppTextField(
                 hintText: 'abc@email.com',
