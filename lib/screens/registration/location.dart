@@ -112,21 +112,13 @@ class _LocationScreenState extends State<LocationScreen> {
                               ),
                             ),
                           ),
-                          if (widget.isPassword)
-                            GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  showPassword = !showPassword;
-                                });
-                              },
-                              child: Icon(
+                          Icon(
                                 showPassword
                                     ? IconlyLight.show
                                     : IconlyLight.hide,
                                 size: 22.sp,
                                 color: registrationIconColor,
                               ),
-                            ),
                         ],
                       ),
                     );
