@@ -1,16 +1,18 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 
 class AppSwitch extends StatefulWidget {
-  const AppSwitch({
+  AppSwitch({
     super.key,
     required this.value,
     required this.onChanged,
   });
 
-  final bool value;
+  bool value;
   final Function(bool?) onChanged;
 
   @override
@@ -18,13 +20,13 @@ class AppSwitch extends StatefulWidget {
 }
 
 class _AppSwitchState extends State<AppSwitch> {
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         setState(() {
           widget.value = !widget.value;
+          widget.onChanged(widget.value);
         });
       },
       child: AnimatedContainer(
