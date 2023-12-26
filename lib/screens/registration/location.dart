@@ -3,6 +3,7 @@ import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
+import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/models/registration/button.dart';
 import 'package:yeerlo/models/registration/textfield.dart';
 import 'package:yeerlo/models/text.dart';
@@ -84,10 +85,9 @@ class _LocationScreenState extends State<LocationScreen> {
                       ),
                       child: Row(
                         children: [
-                          widget.icon,
                           Expanded(
                             child: TextField(
-                              controller: widget.controller,
+                              controller: controller,
                               cursorColor: darkOrangeColor,
                               obscureText:
                                   widget.isPassword ? !showPassword : false,
