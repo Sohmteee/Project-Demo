@@ -88,7 +88,7 @@ class _LocationScreenState extends State<LocationScreen> {
                 },
                 builder: (context, controller, focusNode) {
                   return Container(
-                    padding: EdgeInsets.only(left: 5.w, right: 15.w),
+                    padding: EdgeInsets.symmetric(horizontal: 15.w),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12.r),
                       border: GradientBoxBorder(
@@ -112,7 +112,7 @@ class _LocationScreenState extends State<LocationScreen> {
                             decoration: InputDecoration(
                               contentPadding:
                                   EdgeInsets.symmetric(vertical: 2.h),
-                              border: OutlineInputBorder(
+                              border: const OutlineInputBorder(
                                   borderSide: BorderSide.none),
                               labelText: 'United States',
                             ),
