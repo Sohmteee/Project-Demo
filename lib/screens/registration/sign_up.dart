@@ -93,10 +93,23 @@ class _SignUpScreenState extends State<SignUpScreen> {
               AppTextField(
                 isPassword: true,
                 hintText: 'Referral',
-                icon: Icon(
-                  IconlyLight.profile,
-                  size: 22.sp,
-                  color: registrationIconColor,
+                icon: Stack(
+                  clipBehavior: Clip.none,
+                  children: [
+                    Icon(
+                      IconlyLight.profile,
+                      size: 22.sp,
+                      color: registrationIconColor,
+                    ),
+                    Positioned(
+                      right: -10.w,
+                      child: Icon(
+                        IconlyLight.profile,
+                        size: 22.sp,
+                        color: registrationIconColor,
+                      ),
+                    ),
+                  ],
                 ),
               ),
               SizedBox(height: 40.h),
