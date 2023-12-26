@@ -9,8 +9,7 @@ class RegistrationTextField extends StatefulWidget {
     required this.hintText,
     required this.icon,
     this.controller,
-
-    });
+  });
 
   final String hintText;
   final IconData icon;
@@ -42,12 +41,13 @@ class _RegistrationTextFieldState extends State<RegistrationTextField> {
           Expanded(
             child: TextField(
               controller: widget.controller,
+              cursorColor: lightOrangeColor,
               decoration: InputDecoration(
                 hintText: widget.hintText,
                 hintStyle: TextStyle(
                   fontSize: 16.sp,
                   fontWeight: FontWeight.w400,
-                  color: themedTextColor,
+                  color: linkTextColor,
                 ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12.r),
