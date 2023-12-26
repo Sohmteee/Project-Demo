@@ -73,7 +73,7 @@ class _LocationScreenState extends State<LocationScreen> {
                 ),
               ),
               SizedBox(height: 30.h),
-              
+              SearchAnchor.bar()
               
               AppTextField(
                 hintText: 'abc@email.com',
