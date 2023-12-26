@@ -149,7 +149,8 @@ class _SignInScreenState extends State<SignInScreen> {
                 ],
               ),
               textAlign: TextAlign.center,
-            )
+            ),
+            SizedBox(height: 40.h),
           ],
         ),
       ),
