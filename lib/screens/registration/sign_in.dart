@@ -60,23 +60,30 @@ class _SignInScreenState extends State<SignInScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
-                  children: [
-                    AppSwitch(
-                      value: rememberMe,
-                      onChanged: (value) {
-                        setState(() {
-                          rememberMe = value!;
-                        });
-                      },
-                    ),
-                    SizedBox(width: 6.w),
-                    AirBnBText(
-                      'Remember Me',
-                      fontSize: 18.sp,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ],
+                GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      rememberMe = !rememberMe;
+                    });
+                  },
+                  child: Row(
+                    children: [
+                      AppSwitch(
+                        value: rememberMe,
+                        onChanged: (value) {
+                          setState(() {
+                            rememberMe = value!;
+                          });
+                        },
+                      ),
+                      SizedBox(width: 6.w),
+                      AirBnBText(
+                        'Remember Me',
+                        fontSize: 18.sp,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ],
+                  ),
                 ),
                 AirBnBText(
                   'Forgot Password?',
