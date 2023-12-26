@@ -5,7 +5,17 @@ import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/colors/hex_color.dart';
 
 class RegistrationTextField extends StatefulWidget {
-  const RegistrationTextField({super.key});
+  const RegistrationTextField({
+    super.key,
+    required this.hintText,
+    required this.icon,
+    this.controller,
+
+    });
+
+  final String hintText;
+  final IconData icon;
+  final TextEditingController? controller;
 
   @override
   State<RegistrationTextField> createState() => _RegistrationTextFieldState();
@@ -32,6 +42,7 @@ class _RegistrationTextFieldState extends State<RegistrationTextField> {
           ),
           Expanded(
             child: TextField(
+              controller: widget.controller,
               decoration: InputDecoration(
                 hintText: 'Email',
                 hintStyle: TextStyle(
