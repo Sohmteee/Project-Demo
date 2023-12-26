@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:yeerlo/models/text.dart';
 
 class ArrowButton extends StatelessWidget {
   const ArrowButton({
@@ -25,6 +26,15 @@ class ArrowButton extends StatelessWidget {
             Color(0xFFFFA451),
             Color(0xFFFF7643),
           ],
+        ),
+      ),
+      child: Center(
+        child: AirBnBText(
+          text,
+          color: Colors.white,
+          fontSize: 16.sp,
+          fontWeight: FontWeight.w400,
+          // letterSpacing: 1,
         ),
       ),
     );
