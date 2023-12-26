@@ -103,6 +103,10 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
                           setState(() {
                             onBoardingIndex--;
                           });
+                          pageController.previousPage(
+                            duration: 0.25.seconds,
+                            curve: Curves.easeIn,
+                          );
                         }
                       },
                       child: Container(
@@ -145,6 +149,10 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
                         if (onBoardingIndex < 2) {
                           setState(() {
                             onBoardingIndex++;
+                            pageController.nextPage(
+                              duration: 0.25.seconds,
+                              curve: Curves.easeIn,
+                            );
                           });
                         } else {
                           Navigator.pushReplacementNamed(context, '/home');
