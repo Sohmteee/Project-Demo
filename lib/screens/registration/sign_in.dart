@@ -125,11 +125,30 @@ class _SignInScreenState extends State<SignInScreen> {
               onPressed: () {},
             ),
             const Spacer(),
-            AirBnBText(
-              'Already have an account?',
-              color: Theme.of(context).colorScheme.secondary,
-              fontSize: 18.sp,
-              fontWeight: FontWeight.w500,
+             Text.rich(
+              TextSpan(
+                children: [
+                  TextSpan(
+                    text: 'Already have an account?  ',
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.secondary,
+                      fontSize: 15,
+                      fontFamily: 'Airbnb Cereal App',
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                  TextSpan(
+                    text: 'Signin',
+                    style: TextStyle(
+                      color: Color(0xFFFFB459),
+                      fontSize: 15,
+                      fontFamily: 'Airbnb Cereal App',
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ],
+              ),
+              textAlign: TextAlign.center,
             )
           ],
         ),
