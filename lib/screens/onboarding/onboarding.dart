@@ -25,6 +25,7 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
             ],
           ),
           Container(
+            padding: EdgeInsets.all(40.sp),
             width: double.infinity,
             height: 270.h,
             decoration: BoxDecoration(
