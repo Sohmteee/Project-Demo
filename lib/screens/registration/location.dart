@@ -87,7 +87,7 @@ class _LocationScreenState extends State<LocationScreen> {
                 },
                 builder: (context, controller, focusNode) {
                   return Container(
-                    padding: EdgeInsets.symmetric(horizontal: 5.w),
+                    padding: EdgeInsets.only(left: 5.w, right: 15.w),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12.r),
                       border: Border.all(
@@ -95,13 +95,25 @@ class _LocationScreenState extends State<LocationScreen> {
                         width: 1.w,
                       ),
                     ),
-                    child: TextField(
-                      controller: controller,
-                      focusNode: focusNode,
-                      decoration: const InputDecoration(
-                        border: OutlineInputBorder(borderSide: BorderSide.none),
-                        labelText: 'United States',
-                      ),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: TextField(
+                            controller: controller,
+                            focusNode: focusNode,
+                            decoration: const InputDecoration(
+                              border: OutlineInputBorder(
+                                  borderSide: BorderSide.none),
+                              labelText: 'United States',
+                            ),
+                          ),
+                        ),
+                        Icon(
+                          IconlyLight.search,
+                          size: 20.sp,
+                          color: registrationIconColor,
+                        ),
+                      ],
                     ),
                   );
                 },
