@@ -85,7 +85,6 @@ class _LocationScreenState extends State<LocationScreen> {
                     ),
                   );
                 },
-                hideOnUnfocus: true,
                 builder: (context, controller, focusNode) {
                   return TextField(
                     controller: controller,
