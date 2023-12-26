@@ -49,7 +49,14 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
                   fontSize: 22.sp,
                   fontWeight: FontWeight.w700,
                   textAlign: TextAlign.center,
-                )
+                ),
+                DMSansText(
+                  'Your gateway to local adventure! Discover exciting happenings right in your area',
+                  color: Colors.white,
+                  fontSize: 15.sp,
+                  fontWeight: FontWeight.w700,
+                  textAlign: TextAlign.center,
+                ),
               ],
             ),
           ),
