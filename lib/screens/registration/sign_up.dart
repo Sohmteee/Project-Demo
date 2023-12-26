@@ -91,7 +91,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
               SizedBox(height: 19.h),
               AppTextField(
-                isPassword: true,
                 hintText: 'Referral',
                 icon: Stack(
                   alignment: Alignment.center,

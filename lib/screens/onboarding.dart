@@ -120,7 +120,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          if (Index)
+                          if (onBoardingIndex > 0) {
+                            Navigator.pushReplacementNamed(context, '/sign-in');
+                          }
                         },
                         child: Container(
                           padding: EdgeInsets.all(10.sp),
