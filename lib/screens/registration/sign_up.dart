@@ -48,7 +48,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   'Sign up',
                   fontSize: 24.sp,
                   fontWeight: FontWeight.w500,
-                  color: themedTextColor,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
               ),
               SizedBox(height: 21.h),
@@ -120,7 +120,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ArrowButton(
                 text: 'SIGN UP',
                 onPressed: () {
-                  // Navigator.pushReplacementNamed(context, '/home');
+                  Navigator.pushReplacementNamed(context, '/verification');
                 },
               ),
               SizedBox(height: 24.h),
