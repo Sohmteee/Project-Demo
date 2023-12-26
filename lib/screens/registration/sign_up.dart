@@ -27,15 +27,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.primary,
         elevation: 0,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: Icon(
-            IconlyLight.arrowLeft2,
-            color: themedTextColor,
-          ),
-        ),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
