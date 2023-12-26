@@ -80,16 +80,19 @@ class _LocationScreenState extends State<LocationScreen> {
                   return Text(country.toString());
                 },
                 builder: (context, controller, focusNode) {
-    return TextField(
-      controller: controller,
-      focusNode: focusNode,
-      autofocus: true,
-      decoration: InputDecoration(
-        border: OutlineInputBorder()
-        labelText: 'City'
-      )
-    );
-  },
+                  return TextField(
+                    controller: controller,
+                    focusNode: focusNode,
+                    autofocus: true,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        color: HexColor('#E4DFDF'),
+                        width: 1.w,
+                      ),
+                      labelText: 'City',
+                    ),
+                  );
+                },
                 suggestionsCallback: (pattern) {
                   return countries
                       .where((country) =>
