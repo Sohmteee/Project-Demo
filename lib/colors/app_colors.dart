@@ -1,7 +1,6 @@
+import 'package:flutter/material.dart';
 import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/data.dart';
-import 'package:flutter/material.dart';
-import 'package:velocity_x/velocity_x.dart';
 
 final blueColorCategory = HexColor('#46CDFB');
 final redColorCategory = HexColor('#F0635A');
@@ -19,7 +18,7 @@ final cyanTextColor = HexColor('#00F8FF');
 
 final lightBlueBackgroundColor = HexColor('#D6FEFF');
 final cyanBackgroundColor = HexColor('#E5FEFF');
-final backgroundColor = isLightTheme ? Colors.white : Vx.gray800;
+final backgroundColor = isLightTheme ? Colors.white : HexColor('#191818');
 
 final lightGreyBackgroundColor = HexColor('#FFB459');
 final darkGreyBackgroundColor = HexColor('#F1573D');
