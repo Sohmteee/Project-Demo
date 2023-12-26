@@ -143,9 +143,7 @@ class _LocationScreenState extends State<LocationScreen> {
                     ),
                   ),
                   iconStyleData: const IconStyleData(
-                    icon: Icon(
-                      IconLight
-                    ),
+                    icon: Icon(IconlyLight.search),
                     iconSize: 14,
                     iconEnabledColor: Colors.yellow,
                     iconDisabledColor: Colors.grey,
