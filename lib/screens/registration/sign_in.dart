@@ -5,6 +5,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:yeerlo/colors/app_colors.dart';
+import 'package:yeerlo/data.dart';
 import 'package:yeerlo/models/registration/button.dart';
 import 'package:yeerlo/models/registration/switch.dart';
 import 'package:yeerlo/models/registration/textfield.dart';
@@ -104,6 +105,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     ),
                     AirBnBText(
                       'Forgot Password?',
+                      color: Theme.of(context).colorScheme.secondary,
                       fontSize: 18.sp,
                       fontWeight: FontWeight.w400,
                     ),
@@ -164,7 +166,9 @@ class _SignInScreenState extends State<SignInScreen> {
                         TextSpan(
                           text: 'Sign up',
                           style: TextStyle(
-                            color: lightOrangeColor,
+                            color: isLightTheme
+                                ? lightOrangeColor
+                                : darkOrangeColor,
                             fontSize: 16.sp,
                             fontFamily: 'AirBnB',
                             fontWeight: FontWeight.w400,
