@@ -79,6 +79,7 @@ class _LocationScreenState extends State<LocationScreen> {
               TypeAheadField(
                 itemBuilder: (context, country) {
                   return ListTile(
+                    // 
                     title: AirBnBText(
                       country.toString(),
                     ),
