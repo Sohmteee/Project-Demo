@@ -42,7 +42,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       return Column(
         children: [
           const Spacer(),
-          Image.asset(onBoardingData[index]['image']),
+          Image.asset(onBoardingData[index]['image']).animate().moveY(
+                delay: 0.5.seconds,
+                begin: 200.h,
+                end: 0,
+                duration: 1.seconds,
+              ),
           const Spacer(flex: 2),
         ],
       );
@@ -53,7 +58,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         children: [
           PageView.builder(
             controller: pageController,
-            scrollDirection: Axis.vertical,
+            scrollDirection: Axis.horizontal,
             itemCount: 3,
             itemBuilder: (context, index) {
               return pages[index];
