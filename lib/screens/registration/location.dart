@@ -155,7 +155,6 @@ class _LocationScreenState extends State<LocationScreen> {
                       borderRadius: BorderRadius.circular(14),
                       color: Colors.redAccent,
                     ),
-                    offset: const Offset(-20, 0),
                     scrollbarTheme: ScrollbarThemeData(
                       radius: const Radius.circular(40),
                       thickness: MaterialStateProperty.all(6),
