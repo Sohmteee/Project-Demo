@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/colors/hex_color.dart';
 
-class RegistrationTextField extends StatefulWidget {
-  const RegistrationTextField({
+class AppTextField extends StatefulWidget {
+  const AppTextField({
     super.key,
     required this.hintText,
     required this.icon,
@@ -19,10 +19,10 @@ class RegistrationTextField extends StatefulWidget {
   final bool isPassword;
 
   @override
-  State<RegistrationTextField> createState() => _RegistrationTextFieldState();
+  State<AppTextField> createState() => _AppTextFieldState();
 }
 
-class _RegistrationTextFieldState extends State<RegistrationTextField> {
+class _AppTextFieldState extends State<AppTextField> {
   bool showPassword = false;
 
   @override
