@@ -18,7 +18,14 @@ void main() {
     ),
   );
 
-  runApp(MultiProvider(providers: providers));
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => ThemeProvider()),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
