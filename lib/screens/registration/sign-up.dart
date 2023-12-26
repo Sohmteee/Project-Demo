@@ -43,6 +43,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
             padding: EdgeInsets.symmetric(horizontal: 30.w),
             child: Column(
               children: [
+                SizedBox(height: 45.h),
+                Image.asset(
+                  'assets/images/logos/light-logo.png',
+                  width: 174.w,
+                  height: 84.h,
+                ).animate(onPlay: (controller) {
+                  controller.repeat();
+                }).shimmer(
+                  delay: 2.seconds,
+                  color: lightOrangeColor,
+                  duration: 2.seconds,
+                ),
+                SizedBox(height: 44.h),
                 Align(
                   alignment: Alignment.centerLeft,
                   child: AirBnBText(
@@ -135,35 +148,30 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                 ),
                 SizedBox(height: 40.h),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pushNamed(context, '/sign-up');
-                  },
-                  child: Text.rich(
-                    TextSpan(
-                      children: [
-                        TextSpan(
-                          text: "Don't have an account?  ",
-                          style: TextStyle(
-                            color: Theme.of(context).colorScheme.secondary,
-                            fontSize: 16.sp,
-                            fontFamily: 'AirBnB',
-                            fontWeight: FontWeight.w400,
-                          ),
+                Text.rich(
+                  TextSpan(
+                    children: [
+                      TextSpan(
+                        text: 'Already have an account?  ',
+                        style: TextStyle(
+                          color: Theme.of(context).colorScheme.secondary,
+                          fontSize: 16.sp,
+                          fontFamily: 'AirBnB',
+                          fontWeight: FontWeight.w400,
                         ),
-                        TextSpan(
-                          text: 'Sign up',
-                          style: TextStyle(
-                            color: lightOrangeColor,
-                            fontSize: 16.sp,
-                            fontFamily: 'AirBnB',
-                            fontWeight: FontWeight.w400,
-                          ),
+                      ),
+                      TextSpan(
+                        text: 'Sign in',
+                        style: TextStyle(
+                          color: lightOrangeColor,
+                          fontSize: 16.sp,
+                          fontFamily: 'AirBnB',
+                          fontWeight: FontWeight.w400,
                         ),
-                      ],
-                    ),
-                    textAlign: TextAlign.center,
+                      ),
+                    ],
                   ),
+                  textAlign: TextAlign.center,
                 ),
                 SizedBox(height: 40.h),
               ],

@@ -139,7 +139,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   TextSpan(
                     children: [
                       TextSpan(
-                        text: 'Already have an account?  ',
+                        text: 'Don\'t have an account?  ',
                         style: TextStyle(
                           color: Theme.of(context).colorScheme.secondary,
                           fontSize: 16.sp,
@@ -148,7 +148,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         ),
                       ),
                       TextSpan(
-                        text: 'Sign in',
+                        text: 'Sign up',
                         style: TextStyle(
                           color: lightOrangeColor,
                           fontSize: 16.sp,
