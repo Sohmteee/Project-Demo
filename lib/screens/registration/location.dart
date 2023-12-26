@@ -78,7 +78,11 @@ class _LocationScreenState extends State<LocationScreen> {
               SizedBox(height: 30.h),
               TypeAheadField(
                 itemBuilder: (context, country) {
-                  return Text(country.toString());
+                  return ListTile(
+                    title: AirBnBText(
+                      country.toString(),
+                    ),
+                  );
                 },
                 builder: (context, controller, focusNode) {
                   return TextField(
