@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pinput/pinput.dart';
 import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
+import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/models/registration/button.dart';
 import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/theme.dart';
@@ -128,14 +129,14 @@ class _VerificationScreenState extends State<VerificationScreen> {
 
   Pinput buildOTPField() {
     final defaultPinTheme = PinTheme(
-      width: 56,
-      height: 56,
+      width: 55,
+      height: 55,
       textStyle: TextStyle(
-          fontSize: 20,
-          color: Color.fromRGBO(30, 60, 87, 1),
+          fontSize: 24.sp,
+          color: Theme.of(context).colorScheme.secondary,
           fontWeight: FontWeight.w600),
       decoration: BoxDecoration(
-        border: Border.all(color: Color.fromRGBO(234, 239, 243, 1)),
+        border: Border.all(color: HexColor('#DADADA')),
         borderRadius: BorderRadius.circular(20),
       ),
     );
