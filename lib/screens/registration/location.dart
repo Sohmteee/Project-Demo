@@ -71,7 +71,7 @@ class _LocationScreenState extends State<LocationScreen> {
                   fontWeight: FontWeight.w400,
                 ),
               ),
-              SizedBox(height: 30 .h),
+              SizedBox(height: 30.h),
               AppTextField(
                 hintText: 'abc@email.com',
                 icon: Icon(
