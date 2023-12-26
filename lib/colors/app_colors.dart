@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:yeerlo/colors/hex_color.dart';
-import 'package:yeerlo/data.dart';
 
 final blueColorCategory = HexColor('#46CDFB');
 final redColorCategory = HexColor('#F0635A');
