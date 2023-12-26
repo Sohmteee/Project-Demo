@@ -81,7 +81,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
               ArrowButton(
                 text: 'CONTINUE',
                 onPressed: () {
-                  // Navigator.pushNamed(context, '/reset-password');
+                  Navigator.pushNamed(context, '/location');
                 },
               ),
               SizedBox(height: 24.h),
