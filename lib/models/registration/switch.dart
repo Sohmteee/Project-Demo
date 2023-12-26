@@ -33,11 +33,13 @@ class _AppSwitchState extends State<AppSwitch> {
           ),
         ),
         child: Stack(
+          clipBehavior: Clip.none,
           children: [
             AnimatedPositioned(
               duration: 0.2.seconds,
               curve: Curves.easeIn,
               left: isSwitched ? 12.w : 0,
+              right: isSwitched ? 0 : 12.w,
               child: Container(
                 width: 14.w,
                 height: 14.h,
