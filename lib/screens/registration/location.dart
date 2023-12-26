@@ -141,7 +141,7 @@ class _LocationScreenState extends State<LocationScreen> {
                         },
                       );
                     },
-                },
+                  ),
               ),
               AppTextField(
                 hintText: 'abc@email.com',
