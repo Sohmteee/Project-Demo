@@ -37,6 +37,15 @@ class _OnbaordingScreenState extends State<OnbaordingScreen> {
 
   @override
   Widget build(BuildContext context) {
+    List pages = List.generate(3, (index) {
+      return Column(
+        children: [
+          const Spacer(),
+          Image.asset(onBoardingData[onBoardingIndex]['image']),
+          const Spacer(flex: 2),
+        ],
+      );
+    });
     return Scaffold(
       body: Stack(
         alignment: Alignment.bottomCenter,
