@@ -35,6 +35,7 @@ class MyApp extends StatelessWidget {
                   colorScheme: ColorScheme.fromSeed(
                     seedColor: lightOrangeColor,
                     primary: Colors.white,
+                    secondary: Colors.black,
                   ),
                   useMaterial3: false,
                   fontFamily: 'DM Sans',
@@ -43,6 +44,7 @@ class MyApp extends StatelessWidget {
                   colorScheme: ColorScheme.fromSeed(
                     seedColor: darkOrangeColor,
                     primary: Colors.black,
+                    secondary: Colors.white,
                   ),
                   useMaterial3: false,
                   fontFamily: 'DM Sans',

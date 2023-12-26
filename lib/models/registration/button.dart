@@ -91,23 +91,14 @@ class LoginOption extends StatelessWidget {
             ),
           ],
         ),
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            Center(
-              child: AirBnBText(
-                text,
-                color: Colors.white,
-                fontSize: 18.sp,
-                fontWeight: FontWeight.w500,
-                // letterSpacing: 1,
-              ),
-            ),
-            Positioned(
-              right: 14.w,
-              child: SvgPicture.asset('assets/svg/button-arrow.svg'),
-            ),
-          ],
+        child: Center(
+          child: AirBnBText(
+            text,
+            color: Theme.of(context).colorScheme.secondary,
+            fontSize: 18.sp,
+            fontWeight: FontWeight.w400,
+            // letterSpacing: 1,
+          ),
         ),
       ),
     );
