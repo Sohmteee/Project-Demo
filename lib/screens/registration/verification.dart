@@ -45,8 +45,8 @@ class _VerificationScreenState extends State<VerificationScreen> {
         decoration: (themeProvider.themeType == ThemeType.dark)
             ? const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(
-                      'assets/images/dark-gradient-background.png'),
+                  image:
+                      AssetImage('assets/images/dark-gradient-background.png'),
                   fit: BoxFit.cover,
                 ),
               )
@@ -60,7 +60,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                 child: AirBnBText(
                   'Verification',
                   fontSize: 24.sp,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.bold,
                   color: Theme.of(context).colorScheme.secondary,
                 ),
               ),
@@ -149,24 +149,24 @@ class _VerificationScreenState extends State<VerificationScreen> {
       ),
     ); */
     return Pinput(
-      defaultPinTheme: defaultPinTheme,
-      focusedPinTheme: focusedPinTheme,
-      // submittedPinTheme: submittedPinTheme,
-      validator: (s) {
-        return s == '4444' ? null : 'OTP is incorrect';
-      },
-      pinputAutovalidateMode: PinputAutovalidateMode.onSubmit,
-      showCursor: false,
-      onCompleted: (pin) => print(pin),
-      onTapOutside: (event) {
-        FocusScope.of(context).unfocus();
-      },
-      preFilledWidget: DMSansText(
-        '-',
-        fontSize: 24.sp,
-        fontWeight: FontWeight.w600,
-        color: HexColor('#DADADA'),
-      ),
-    );
+        defaultPinTheme: defaultPinTheme,
+        focusedPinTheme: focusedPinTheme,
+        // submittedPinTheme: submittedPinTheme,
+        validator: (s) {
+          return s == '4444' ? null : 'OTP is incorrect';
+        },
+        pinputAutovalidateMode: PinputAutovalidateMode.onSubmit,
+        showCursor: false,
+        onCompleted: (pin) => print(pin),
+        onTapOutside: (event) {
+          FocusScope.of(context).unfocus();
+        },
+        preFilledWidget: DMSansText(
+          '-',
+          fontSize: 24.sp,
+          fontWeight: FontWeight.w600,
+          color: HexColor('#DADADA'),
+        ),
+        separatorBuilder: (index) => SizedBox(width: 30.w));
   }
 }
