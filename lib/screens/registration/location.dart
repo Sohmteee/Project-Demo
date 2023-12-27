@@ -43,9 +43,10 @@ class _LocationScreenState extends State<LocationScreen> {
       bottomNavigationBar: BottomAppBar(
         elevation: 0,
         child: Container(
-          height: 58,
+          height: 48,
           margin: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
           decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10.r),
             gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
@@ -58,7 +59,7 @@ class _LocationScreenState extends State<LocationScreen> {
           child: Center(
             child: DMSansText(
               'Select Location',
-              fontSize: 16,
+              fontSize: 18.sp,
               fontWeight: FontWeight.w500,
               color: Theme.of(context).colorScheme.primary,
             ),
