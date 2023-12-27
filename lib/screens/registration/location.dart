@@ -291,7 +291,9 @@ class _LocationScreenState extends State<LocationScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             DMSansText(
-                              selectedCountry['name'],
+                              selectedCountry['name'] == 'United States'
+                                  ? 'United States of America'
+                                  : selectedCountry['name'],
                               fontSize: 18.sp,
                               fontWeight: FontWeight.w500,
                               color: Theme.of(context).colorScheme.secondary,
