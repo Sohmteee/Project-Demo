@@ -41,13 +41,20 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         statusBarColor: Colors.transparent,
       ),
       child: Container(
-        decoration: BDecoration,
+        decoration: BoxDecoration(
+          image: (themeProvider.themeType == ThemeType.dark)
+              ? const DecorationImage(
+                  image:
+                      AssetImage('assets/images/dark-gradient-background.png'),
+                  fit: BoxFit.cover,
+                )
+              : null,
+        ),
         child: AdvancedDrawer(
           controller: drawerController,
           disabledGestures: true,
           animationDuration: 300.milliseconds,
-          backdropColor: Theme.of(context).colorScheme.primary,
-          
+          backdropColor: Colors.transparent,
           drawer: buildDrawerItems(themeProvider),
           childDecoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30.r),
@@ -64,7 +71,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               ), */
             ],
           ),
-        
           child: Scaffold(
             backgroundColor: Theme.of(context).colorScheme.primary,
             body: buildBottomNavBar(themeProvider),
@@ -152,7 +158,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     ];
 
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.primary,
+      backgroundColor: Colors.transparent,
       body: Padding(
         padding: EdgeInsets.fromLTRB(20.w, 40.h, 20.w, 10.h),
         child: Column(
