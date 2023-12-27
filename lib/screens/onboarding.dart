@@ -67,7 +67,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         fontSize: 22.sp,
         fontWeight: FontWeight.w700,
         textAlign: TextAlign.center,
-      );
+      ).animate().moveY(
+            delay: 500.milliseconds,
+            begin: 450.h,
+            end: 0,
+            duration: 800.milliseconds,
+            curve: Curves.easeInCubic,
+          );
     });
 
     List descriptions = List.generate(3, (index) {
@@ -206,14 +212,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               duration: 300.milliseconds,
                               curve: Curves.easeIn,
                             );
-                            titleController.jum(
-                              duration: 300.milliseconds,
-                              curve: Curves.easeIn,
-                            );
-                            descriptionController.nextPage(
-                              duration: 300.milliseconds,
-                              curve: Curves.easeIn,
-                            );
+                            titleController.jumpToPage(onBoardingIndex);
+                            descriptionController.jumpToPage(onBoardingIndex);
                           } else {
                             Navigator.pushReplacementNamed(context, '/sign-in');
                           }
