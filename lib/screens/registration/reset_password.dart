@@ -85,7 +85,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
               ArrowButton(
                 text: 'SEND',
                 onPressed: () {
-                  Navigator.pushNamed(context, '/verification');
+                  // Navigator.pushNamed(context, '/verification');
                 },
               ),
               Expanded(

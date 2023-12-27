@@ -7,7 +7,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/models/registration/button.dart';
-import 'package:yeerlo/models/registration/switch.dart';
 import 'package:yeerlo/models/registration/textfield.dart';
 import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/theme.dart';
@@ -56,7 +55,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       color: lightOrangeColor,
                       duration: 2.seconds,
                     ),
-                    SizedBox(height: 44.h),
+                    SizedBox(height: 40.h),
                     Align(
                       alignment: Alignment.centerLeft,
                       child: AirBnBText(
