@@ -260,6 +260,7 @@ class _LocationScreenState extends State<LocationScreen> {
                   ],
                 ),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
                       children: [
@@ -296,6 +297,23 @@ class _LocationScreenState extends State<LocationScreen> {
                           ],
                         ),
                       ],
+                    ),
+                    ShaderMask(
+                      blendMode: BlendMode.srcIn,
+                      shaderCallback: (Rect bounds) => LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          lightOrangeColor,
+                          darkOrangeColor,
+                        ],
+                        tileMode: TileMode.mirror,
+                      ).createShader(bounds),
+                      child: Icon(
+                        Icons.done,
+                        size: 24.sp,
+                        color: Theme.of(context).colorScheme.secondary,
+                      ),
                     ),
                   ],
                 ),
