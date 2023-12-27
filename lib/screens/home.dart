@@ -555,7 +555,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             tileMode: TileMode.mirror,
                           ).createShader(bounds),
                           child: DMSansText(
-                            'FREE - \$25',
+                            upcomingEvents['price'],
                             textAlign: TextAlign.center,
                             fontSize: 11.sp,
                             fontWeight: FontWeight.w700,
