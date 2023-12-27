@@ -126,26 +126,26 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               ],
                             )
                           : SvgPicture.asset(drawerOptions[index]['icon']),
-                      SizedBox(width: 20),
+                      SizedBox(width: 20.w),
                       Text(
                         drawerOptions[index]['title'],
                         style: TextStyle(
                           color: themeProvider.themeType == ThemeType.light
                               ? blackTextColor
                               : Colors.white,
-                          fontSize: 18,
+                          fontSize: 18.sp,
                         ),
                       ),
                     ],
                   );
                 },
                 separatorBuilder: (BuildContext context, int index) {
-                  return SizedBox(height: 20);
+                  return SizedBox(height: 20.h);
                 },
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10),
+              padding: EdgeInsets.symmetric(horizontal: 10.w),
               child: Row(
                 children: [
                   GestureDetector(
@@ -160,14 +160,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       ),
                     ),
                   ),
-                  SizedBox(width: 15),
+                  SizedBox(width: 15.w),
                   Text(
                     '${themeProvider.themeType == ThemeType.light ? 'Light' : 'Dark'} Mode',
                     style: TextStyle(
                       color: themeProvider.themeType == ThemeType.light
                           ? blackTextColor
                           : Colors.white,
-                      fontSize: 18,
+                      fontSize: 18.sp,
                     ),
                   ),
                 ],
@@ -176,23 +176,23 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             Spacer(flex: 7),
             Container(
               padding: EdgeInsets.symmetric(
-                horizontal: 15,
-                vertical: 10,
+                horizontal: 15.w,
+                vertical: 10.h,
               ),
               decoration: BoxDecoration(
                 color: cyanBackgroundColor,
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(10.r),
               ),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   SvgPicture.asset('assets/svg/drawer/crown.svg'),
-                  SizedBox(width: 10),
+                  SizedBox(width: 10.w),
                   Text(
                     'Upgrade Pro',
                     style: TextStyle(
                       color: cyanTextColor,
-                      fontSize: 18,
+                      fontSize: 18.sp,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -209,12 +209,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   BottomNavBar buildBottomNavBar(ThemeProvider themeProvider) {
     return BottomNavBar(
       bottomNavBarColor: Theme.of(context).colorScheme.primary,
-      bottomNavItemIconHeight: 20,
-      bottomNavItemLabelHeight: 15,
-      fabWidth: 50,
+      bottomNavItemIconHeight: 20.h,
+      bottomNavItemLabelHeight: 15.h,
+      fabWidth: 50.w,
       fabIcon: Container(
-        height: 50,
-        width: 50,
+        height: 50.h,
+        width: 50.h,
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
