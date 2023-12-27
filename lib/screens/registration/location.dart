@@ -116,7 +116,25 @@ class _LocationScreenState extends State<LocationScreen> {
               SizedBox(height: 9.h),
               TypeAheadField(
                 hideOnEmpty: true,
-                decorationBuilder: ,
+                decorationBuilder: (context, child) {
+                  return Container(
+                    padding: EdgeInsets.symmetric(horizontal: 15.w),
+                    decoration: BoxDecoration(
+                        color: Theme.of(context).colorScheme.primary,
+                        borderRadius: BorderRadius.circular(12.r),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Theme.of(context)
+                                .colorScheme
+                                .secondary
+                                .withOpacity(0.1),
+                            blurRadius: 10,
+                            offset: Offset(0, 5),
+                          ),
+                        ]),
+                    child: child,
+                  );
+                },
                 itemBuilder: (context, country) {
                   return Container(
                     padding:
