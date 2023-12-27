@@ -918,8 +918,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     },
                     loadingBuilder: (context, progress) {
                       return Container(
-                        width: 24.w,
-                        height: 24.w,
+                        width: 22.w,
+                        height: 22.w,
                         decoration: const BoxDecoration(
                           color: Colors.grey,
                           shape: BoxShape.circle,
