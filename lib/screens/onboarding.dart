@@ -128,7 +128,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               child: Column(
                 children: [
                   SizedBox(
-                    height: 40.h,
+                    height: 45.h,
                     child: PageView.builder(
                       controller: imageController,
                       scrollDirection: Axis.horizontal,
@@ -140,7 +140,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                   SizedBox(height: 10.h),
                   SizedBox(
-                    height: 20.h,
+                    height: 65.h,
                     child: PageView.builder(
                       controller: imageController,
                       scrollDirection: Axis.horizontal,
@@ -203,6 +203,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               onBoardingIndex++;
                             });
                             imageController.nextPage(
+                              duration: 300.milliseconds,
+                              curve: Curves.easeIn,
+                            );
+                            titleController.nextPage(
+                              duration: 300.milliseconds,
+                              curve: Curves.easeIn,
+                            );
+                            descriptionController.nextPage(
                               duration: 300.milliseconds,
                               curve: Curves.easeIn,
                             );
