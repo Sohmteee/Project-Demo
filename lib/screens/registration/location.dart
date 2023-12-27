@@ -183,7 +183,7 @@ class _LocationScreenState extends State<LocationScreen> {
                             focusNode: focusNode,
                             cursorColor: lightOrangeColor,
                             onTapOutside: (event) {
-                              FocusScope.of(context).unfocus();
+                              controller.clear();
                             },
                             style: TextStyle(
                               fontSize: 16.sp,
@@ -233,12 +233,9 @@ class _LocationScreenState extends State<LocationScreen> {
                 },
                 suggestionsCallback: (pattern) {
                   return countryList
-                      .where((country) =>
-                          (country['name'] == 'United States of America'
-                                  ? 'United States'
-                                  : country['name'])
-                              .toLowerCase()
-                              .contains(pattern.toLowerCase()))
+                      .where((country) => country['name']
+                          .toLowerCase()
+                          .contains(pattern.toLowerCase()))
                       .toList();
                 },
                 onSelected: (country) {
