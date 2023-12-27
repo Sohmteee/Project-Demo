@@ -1,7 +1,9 @@
 // ignore_for_file: prefer_const_constructors, deprecated_member_use
 
+import 'package:countries_flag/countries_flag.dart';
 import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
+import 'package:yeerlo/countries.dart';
 import 'package:yeerlo/data.dart';
 import 'package:yeerlo/models/bottomNavBar.dart';
 import 'package:blur/blur.dart';
@@ -10,6 +12,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:yeerlo/models/flag.dart';
 import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/theme.dart';
 
@@ -809,11 +812,22 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 )
               ],
             ),
-            AirBnBText(
-              'New York, USA',
-              color: Colors.white,
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
+            Row(
+              children: [
+                AirBnBText(
+                  selectedCountry['code'].toString().split('.').last == 'US'
+                      ? 'USA'
+                      : selectedCountry['code'].toString().split('.').last,
+                  color: Colors.white,
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
+                CountriesFlag(
+                  getFlagPath(selectedCountry['name']),
+                  width: 64.w,
+                  height: 64.h,
+                ),
+              ],
             ),
           ],
         ),
