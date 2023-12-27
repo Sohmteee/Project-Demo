@@ -627,8 +627,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         Text(
           '+ 20 Going',
           style: TextStyle(
-            color:  Color(0xFF3F38DD),
-            fontSize: 16.sp,
+            color: const Color(0xFF3F38DD),
+            fontSize: 12.sp,
             fontWeight: FontWeight.bold,
           ),
         ),
