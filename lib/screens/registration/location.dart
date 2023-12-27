@@ -21,7 +21,7 @@ class LocationScreen extends StatefulWidget {
 class _LocationScreenState extends State<LocationScreen> {
   @override
   void initState() {
-    countriesName.forEach((isoCode, name) {
+    countriesFlag.forEach((isoCode, name) {
       print(name);
     });
     super.initState();
