@@ -664,16 +664,16 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
               ),
-              borderRadius:  BorderRadius.vertical(
+              borderRadius: BorderRadius.vertical(
                 bottom: Radius.circular(20.r),
               ),
             ),
             child: Padding(
-              padding:  EdgeInsets.fromLTRB(20.w, 40.h, 20.w, 0),
+              padding: EdgeInsets.fromLTRB(20.w, 40.h, 20.w, 0),
               child: Column(
                 children: [
                   buildTopAppBar(),
-                   SizedBox(height: 10.h),
+                  SizedBox(height: 10.h),
                   buildSearchBar()
                 ],
               ),
@@ -688,10 +688,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 scrollDirection: Axis.horizontal,
                 itemCount: categories.length,
                 physics: const BouncingScrollPhysics(),
-                padding:  EdgeInsets.symmetric(horizontal: 15.w),
+                padding: EdgeInsets.symmetric(horizontal: 15.w),
                 itemBuilder: (context, index) => Container(
-                  margin:  EdgeInsets.symmetric(horizontal: 5.w),
-                  padding:  EdgeInsets.symmetric(horizontal: 15.w),
+                  margin: EdgeInsets.symmetric(horizontal: 5.w),
+                  padding: EdgeInsets.symmetric(horizontal: 15.w),
                   decoration: BoxDecoration(
                     color: categories[index]['color'],
                     borderRadius: BorderRadius.circular(20),
@@ -699,15 +699,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   child: Row(
                     children: [
                       SvgPicture.asset('assets/svg/calendar.svg'),
-                      const SizedBox(width: 5),
-                      Text(
+                      SizedBox(width: 5.w),
+                      DMSansText(
                         categories[index]['title'],
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1,
-                        ),
+                        color: Colors.white,
+                        fontSize: 20.r,
+                        fontWeight: FontWeight.bold,
                       ),
                     ],
                   ),
@@ -729,13 +726,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         //textfield
         const Expanded(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10),
+            padding: EdgeInsets.symmetric(horizontal: 10.w),
             child: TextField(
               decoration: InputDecoration(
                 hintText: 'Search...',
                 hintStyle: TextStyle(
                   color: Vx.gray300,
-                  fontSize: 22,
+                  fontSize: 22.sp,
                 ),
                 border: InputBorder.none,
               ),
@@ -745,15 +742,15 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
         //filter button
         Container(
-          padding: const EdgeInsets.fromLTRB(5, 5, 10, 5),
+          padding:  EdgeInsets.fromLTRB(5.w, 5.h, 10.w, 5.h),
           decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(30),
+            borderRadius: BorderRadius.circular(30.r),
           ),
           child: Row(
             children: [
               SvgPicture.asset('assets/svg/filter-circle.svg'),
-              const SizedBox(width: 5),
+               SizedBox(width: 5),
               Text(
                 'Filter',
                 style: TextStyle(
