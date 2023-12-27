@@ -68,7 +68,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         fontWeight: FontWeight.w700,
         textAlign: TextAlign.center,
       ).animate().moveY(
-            delay: 500.milliseconds,
+            delay: 300.milliseconds,
             begin: 450.h,
             end: 0,
             duration: 800.milliseconds,
@@ -83,7 +83,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         fontSize: 15.sp,
         textAlign: TextAlign.center,
         height: 1.8,
-      );
+      ).animate().moveX(
+            delay: 300.milliseconds,
+            begin: 450.w,
+            end: 0,
+            duration: 800.milliseconds,
+            curve: Curves.easeInCubic,
+          );
     });
 
     return Scaffold(
