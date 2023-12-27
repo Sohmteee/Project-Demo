@@ -26,7 +26,7 @@ List upcomingEvents = [
     'price': 'FREE - \$25',
     'location': '36 Guild Street London, UK',
     'date-color': Colors.white,
-    'time': DateTime(2024, ),
+    'time': DateTime(2024, 06, 10),
   },
   {
     'image':
@@ -35,6 +35,7 @@ List upcomingEvents = [
     'price': '\$5 - \$25',
     'location': 'Radius Gallery • Santa Cruz, CA',
     'date-color': redColorCategory,
+    'time': DateTime(2024, 06, 10),
   },
 ];
 
