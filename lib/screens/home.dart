@@ -41,6 +41,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       ),
       child: AdvancedDrawer(
         controller: drawerController,
+        disabledGestures: true,
+        animationDuration: 300.milliseconds,
         backdropColor: Theme.of(context).colorScheme.primary,
         drawer: buildDrawerItems(themeProvider),
         childDecoration: BoxDecoration(
@@ -49,7 +51,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             BoxShadow(
               offset: Offset(-5, 5),
               color: Colors.grey,
-              blurRadius: 10,
             ),
           ],
         ),
