@@ -331,7 +331,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             'Invite your friends',
                             style: TextStyle(
                               color: Theme.of(context).colorScheme.secondary,
-                              fontSize: 20.sp,
+                              fontSize: 18.sp,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -346,7 +346,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                   .secondary
                                   .withOpacity(.7) */
                                   const Color(0xFF484D70),
-                              fontSize: 14.sp,
+                              fontSize: 12.sp,
                             ),
                           ),
                         ],
@@ -369,7 +369,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           child: AirBnBText(
                             'INVITE',
                             color: Colors.white,
-                            fontSize: 16,
+                            fontSize: 12.sp,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
