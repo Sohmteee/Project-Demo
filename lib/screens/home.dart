@@ -362,13 +362,15 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             ),
                             SizedBox(height: 15.h),
                             Text(
-                              'Earn 0.1 USDT for each friend \nyou refer',
+                              'Refer an event creator and earn '
+                              '\n50% of proceeds from each '
+                              '\nticket sale for 2 years.',
                               style: TextStyle(
                                 color:
                                     themeProvider.themeType == ThemeType.light
                                         ? greyTextColor
                                         : Vx.gray200,
-                                fontSize: 16.sp,
+                                fontSize: 12.sp,
                               ),
                             ),
                           ],
