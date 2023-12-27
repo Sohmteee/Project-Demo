@@ -1168,28 +1168,30 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         ),
 
         //filter button
-        Container(
-          padding: EdgeInsets.fromLTRB(5.w, 5.h, 10.w, 5.h),
-          decoration: BoxDecoration(
-            color: themeProvider.themeType == ThemeType.light
-                ? Colors.white
-                : const Color(0xFF302F2F),
-            borderRadius: BorderRadius.circular(30.r),
-          ),
-          child: Row(
-            children: [
-              SvgPicture.asset('assets/svg/filter-circle.svg'),
-              SizedBox(width: 5.w),
-              Text(
-                'Filter',
-                style: TextStyle(
-                  color: themeProvider.themeType == ThemeType.light
-                      ? darkOrangeColor
-                      : Colors.white,
-                  fontSize: 14.sp,
+        ZoomTapAnimation(
+          child: Container(
+            padding: EdgeInsets.fromLTRB(5.w, 5.h, 10.w, 5.h),
+            decoration: BoxDecoration(
+              color: themeProvider.themeType == ThemeType.light
+                  ? Colors.white
+                  : const Color(0xFF302F2F),
+              borderRadius: BorderRadius.circular(30.r),
+            ),
+            child: Row(
+              children: [
+                SvgPicture.asset('assets/svg/filter-circle.svg'),
+                SizedBox(width: 5.w),
+                Text(
+                  'Filter',
+                  style: TextStyle(
+                    color: themeProvider.themeType == ThemeType.light
+                        ? darkOrangeColor
+                        : Colors.white,
+                    fontSize: 14.sp,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ],
