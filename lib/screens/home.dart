@@ -376,10 +376,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           ],
                         ),
                         Container(
-                          padding: EdgeInsets.symmetric(
-                            horizontal: 20.w,
-                            vertical: 8.h,
-                          ),
+                          width: 72.w,
+                          height: 32.h,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(5.r),
                             gradient: LinearGradient(
@@ -391,11 +389,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               end: Alignment.bottomCenter,
                             ),
                           ),
-                          child: AirBnBText(
-                            'INVITE',
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
+                          child: Center(
+                            child: AirBnBText(
+                              'INVITE',
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                       ],
