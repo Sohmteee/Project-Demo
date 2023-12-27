@@ -250,16 +250,19 @@ class _LocationScreenState extends State<LocationScreen> {
                     ),
                     SizedBox(width: 16.w),
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         DMSansText(
                           selectedCountry['name'],
                           fontSize: 18.sp,
                           fontWeight: FontWeight.w500,
+                          color: Theme.of(context).colorScheme.secondary,
                         ),
                         DMSansText(
-                          selectedCountry['code'].toString().split(pattern),
+                          selectedCountry['code'].toString().split('.').last,
                           fontSize: 16.sp,
                           fontWeight: FontWeight.w500,
+                          color: Theme.of(context).colorScheme.secondary.wi,
                         ),
                       ],
                     ),
