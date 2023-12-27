@@ -221,41 +221,33 @@ class _LocationScreenState extends State<LocationScreen> {
               ),
               SizedBox(height: 17.h),
               Container(
-                  padding: EdgeInsets.fromLTRB(0, 8.sp, 8.sp, 8.sp),
-                  decoration: BoxDecoration(
-                    color: themeProvider.themeType == ThemeType.light
-                        ? lightBackgroundColor
-                        : darkBackgroundColor,
-                    borderRadius: BorderRadius.circular(16.r),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.3),
-                        blurRadius: 30.r,
-                        offset: const Offset(0, 10),
-                      ),
-                    ],
-                  ),
-                  child: ListTile(
-                    leading: Container(
+                padding: EdgeInsets.fromLTRB(0, 8.sp, 8.sp, 8.sp),
+                decoration: BoxDecoration(
+                  color: themeProvider.themeType == ThemeType.light
+                      ? lightBackgroundColor
+                      : darkBackgroundColor,
+                  borderRadius: BorderRadius.circular(16.r),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.3),
+                      blurRadius: 30.r,
+                      offset: const Offset(0, 10),
+                    ),
+                  ],
+                ),
+                child: Row(
+                  children: [
+                    Container(
                       width: 64.w,
                       height: 64.h,
                       decoration: BoxDecoration(
-                        color: lightOrangeColor,
-                        borderRadius: BorderRadius.circular(6.r),
+                        borderRadius: BorderRadius.circular(12.r),
+                        color: linkTextColor.wi,
                       ),
                     ),
-                    title: AirBnBText(
-                      'United States',
-                      color: Theme.of(context).colorScheme.secondary,
-                      fontSize: 18.sp,
-                      fontWeight: FontWeight.w400,
-                    ),
-                    trailing: Icon(
-                      IconlyLight.arrowRight2,
-                      color: Theme.of(context).colorScheme.secondary,
-                      size: 24.sp,
-                    ),
-                  )),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
