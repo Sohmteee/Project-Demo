@@ -274,7 +274,7 @@ class _LocationScreenState extends State<LocationScreen> {
                     Row(
                       children: [
                         CountriesFlag(
-                          getFlag(countryName: selectedCountry['name'])),
+                          getFlagPath(selectedCountry['name']),
                           width: 64.w,
                           height: 64.h,
                         ),
