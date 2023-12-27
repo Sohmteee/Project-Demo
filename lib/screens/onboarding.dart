@@ -103,6 +103,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     : null,
               ),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   DMSansText(
                     onBoardingData[onBoardingIndex]['title'],
