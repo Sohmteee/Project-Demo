@@ -245,8 +245,8 @@ class _LocationScreenState extends State<LocationScreen> {
                           begin: Alignment.centerLeft,
                           end: Alignment.centerRight,
                           colors: [
+                            Colors.black,
                             darkBackgroundColor,
-                            HexColor('#191818')
                           ],
                         )
                       : null,
@@ -261,32 +261,39 @@ class _LocationScreenState extends State<LocationScreen> {
                 ),
                 child: Row(
                   children: [
-                    Container(
-                      width: 64.w,
-                      height: 64.h,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12.r),
-                        color: linkTextColor.withOpacity(.3),
-                      ),
-                    ),
-                    SizedBox(width: 16.w),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    Row(
                       children: [
-                        DMSansText(
-                          selectedCountry['name'],
-                          fontSize: 18.sp,
-                          fontWeight: FontWeight.w500,
-                          color: Theme.of(context).colorScheme.secondary,
+                        Container(
+                          width: 64.w,
+                          height: 64.h,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12.r),
+                            color: linkTextColor.withOpacity(.3),
+                          ),
                         ),
-                        DMSansText(
-                          selectedCountry['code'].toString().split('.').last,
-                          fontSize: 16.sp,
-                          fontWeight: FontWeight.w500,
-                          color: Theme.of(context)
-                              .colorScheme
-                              .secondary
-                              .withOpacity(.5),
+                        SizedBox(width: 16.w),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            DMSansText(
+                              selectedCountry['name'],
+                              fontSize: 18.sp,
+                              fontWeight: FontWeight.w500,
+                              color: Theme.of(context).colorScheme.secondary,
+                            ),
+                            DMSansText(
+                              selectedCountry['code']
+                                  .toString()
+                                  .split('.')
+                                  .last,
+                              fontSize: 16.sp,
+                              fontWeight: FontWeight.w500,
+                              color: Theme.of(context)
+                                  .colorScheme
+                                  .secondary
+                                  .withOpacity(.5),
+                            ),
+                          ],
                         ),
                       ],
                     ),
