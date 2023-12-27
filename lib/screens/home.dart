@@ -438,7 +438,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           height: 270,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
-            padding: EdgeInsets.all(7.sp),
+            padding: EdgeInsets.all(10.sp),
             physics: const BouncingScrollPhysics(),
             itemCount: upcomingEvents.length,
             itemBuilder: (BuildContext context, int index) {
