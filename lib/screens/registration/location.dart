@@ -8,6 +8,7 @@ import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/countries.dart';
 import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/theme.dart';
+import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 class LocationScreen extends StatefulWidget {
   const LocationScreen({super.key});
@@ -47,26 +48,28 @@ class _LocationScreenState extends State<LocationScreen> {
       bottomNavigationBar: BottomAppBar(
         elevation: 0,
         color: Colors.transparent,
-        child: Container(
-          height: 48,
-          margin: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10.r),
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [
-                lightOrangeColor,
-                darkOrangeColor,
-              ],
+        child: ZoomTapAnimation(
+          child: Container(
+            height: 48,
+            margin: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10.r),
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  lightOrangeColor,
+                  darkOrangeColor,
+                ],
+              ),
             ),
-          ),
-          child: Center(
-            child: DMSansText(
-              'Select Location',
-              fontSize: 18.sp,
-              fontWeight: FontWeight.w500,
-              color: Theme.of(context).colorScheme.secondary,
+            child: Center(
+              child: DMSansText(
+                'Select Location',
+                fontSize: 18.sp,
+                fontWeight: FontWeight.w500,
+                color: Theme.of(context).colorScheme.secondary,
+              ),
             ),
           ),
         ),
