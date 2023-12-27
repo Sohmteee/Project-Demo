@@ -103,25 +103,20 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     : null,
               ),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Column(
-                    children: [
-                      DMSansText(
-                        onBoardingData[onBoardingIndex]['title'],
-                        color: Colors.white,
-                        fontSize: 22.spMin,
-                        fontWeight: FontWeight.w700,
-                        textAlign: TextAlign.center,
-                      ),
-                      SizedBox(height: 10.h),
-                      DMSansText(
-                        onBoardingData[onBoardingIndex]['description'],
-                        color: Colors.white,
-                        fontSize: 15.sp,
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
+                  DMSansText(
+                    onBoardingData[onBoardingIndex]['title'],
+                    color: Colors.white,
+                    fontSize: 22.spMin,
+                    fontWeight: FontWeight.w700,
+                    textAlign: TextAlign.center,
+                  ),
+                  DMSansText(
+                    onBoardingData[onBoardingIndex]['description'],
+                    color: Colors.white,
+                    fontSize: 15.sp,
+                    textAlign: TextAlign.center,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
