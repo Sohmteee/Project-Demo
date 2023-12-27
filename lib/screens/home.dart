@@ -563,7 +563,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             height: 0,
                           ),
                         ),
-                        Spacer(),
                         Container(
                           width: 16,
                           height: 16,
