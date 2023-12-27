@@ -14,7 +14,9 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
-  final pageController = PageController();
+  final imageController = PageController();
+  final titleController = PageController();
+  final descriptionController = PageController();
   int onBoardingIndex = 0;
   List onBoardingData = [
     {
@@ -57,6 +59,22 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         ],
       );
     });
+
+    List titles = List.generate(3, (index) {
+      return Column(
+        children: [
+          const Spacer(),
+          Image.asset(onBoardingData[index]['image']).animate().moveY(
+                delay: 500.milliseconds,
+                begin: 450.h,
+                end: 0,
+                duration: 800.milliseconds,
+                curve: Curves.elasticOut,
+              ),
+          const Spacer(flex: 2),
+        ],
+      );
+    });
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
@@ -73,7 +91,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           alignment: Alignment.bottomCenter,
           children: [
             PageView.builder(
-              controller: pageController,
+              controller: imageController,
               scrollDirection: Axis.horizontal,
               itemCount: 3,
               itemBuilder: (context, index) {
@@ -171,7 +189,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             setState(() {
                               onBoardingIndex++;
                             });
-                            pageController.nextPage(
+                            imageController.nextPage(
                               duration: 300.milliseconds,
                               curve: Curves.easeIn,
                             );
