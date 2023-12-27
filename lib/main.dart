@@ -22,6 +22,9 @@ Future<void> main() async {
   );
 
   storageLocation = (await getApplicationDocumentsDirectory()).path;
+  await FastCachedImageConfig.init(
+      subDir: storageLocation, clearCacheAfter: const Duration(days: 15));
+
 
   runApp(
     MultiProvider(
