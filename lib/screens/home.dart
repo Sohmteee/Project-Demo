@@ -891,7 +891,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           Container(
             height: 180.h,
             decoration: BoxDecoration(
-              gradient: LinearGradient(
+              gradient: if () LinearGradient(
                 colors: [
                   lightOrangeColor,
                   darkOrangeColor,
