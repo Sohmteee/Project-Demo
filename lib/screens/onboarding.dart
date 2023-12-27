@@ -130,7 +130,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   SizedBox(
                     height: 45.h,
                     child: PageView.builder(
-                      controller: imageController,
+                      controller: titleController,
                       scrollDirection: Axis.horizontal,
                       itemCount: 3,
                       itemBuilder: (context, index) {
@@ -142,7 +142,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   SizedBox(
                     height: 65.h,
                     child: PageView.builder(
-                      controller: imageController,
+                      controller: descriptionController,
                       scrollDirection: Axis.horizontal,
                       itemCount: 3,
                       itemBuilder: (context, index) {
