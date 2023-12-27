@@ -682,7 +682,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 child: DMSansText(
                                   upcomingEvents[index]['price'],
                                   textAlign: TextAlign.center,
-                                  fontSize: 12.sp,
+                                  fontSize: 11.sp,
                                   fontWeight: FontWeight.w700,
                                   height: 0,
                                 ),
@@ -705,7 +705,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           AirBnBText(
                             upcomingEvents[index]['title'],
                             color: Theme.of(context).colorScheme.secondary,
-                            fontSize: 22.sp,
+                            fontSize: 18.sp,
                             fontWeight: FontWeight.bold,
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
@@ -720,7 +720,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               AirBnBText(
                                 upcomingEvents[index]['location'],
                                 color: linkTextColor,
-                                fontSize: 16.sp,
+                                fontSize: 13.sp,
                               ),
                             ],
                           ),
