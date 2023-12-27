@@ -344,7 +344,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(20.w, 15.h, 20, 15),
+                  padding:  EdgeInsets.fromLTRB(20.w, 15.h, 20.w, 15.h),
                   child: SizedBox(
                     height: 120.h,
                     child: Column(
@@ -362,11 +362,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                     themeProvider.themeType == ThemeType.light
                                         ? blackTextColor
                                         : Colors.white,
-                                fontSize: 20,
+                                fontSize: 20.sp,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            SizedBox(height: 15),
+                            SizedBox(height: 15.h),
                             Text(
                               'Earn 0.1 USDT for each friend \nyou refer',
                               style: TextStyle(
@@ -374,18 +374,18 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                     themeProvider.themeType == ThemeType.light
                                         ? greyTextColor
                                         : Vx.gray200,
-                                fontSize: 16,
+                                fontSize: 16.sp,
                               ),
                             ),
                           ],
                         ),
                         Container(
                           padding: EdgeInsets.symmetric(
-                            horizontal: 20,
-                            vertical: 8,
+                            horizontal: 20.w,
+                            vertical: 8.h,
                           ),
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
+                            borderRadius: BorderRadius.circular(5.r),
                             gradient: LinearGradient(
                               colors: [
                                 lightOrangeColor,
