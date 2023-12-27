@@ -231,6 +231,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   return ListTile(
                     onTap: drawerOptions[index]['onTap'],
                     enableFeedback: true,
+                    splashColor: Colors.transparent,
                     leading: drawerOptions[index]['icon'],
                     title: Text(
                       drawerOptions[index]['title'],
