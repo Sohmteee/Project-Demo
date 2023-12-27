@@ -271,7 +271,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           bottomItemSelectedColor: darkOrangeColor,
           screen: Scaffold(
             backgroundColor: Theme.of(context).colorScheme.primary,
-            appBar: buildAppBar(),
+            appBar: buildAppBar(themeProvider),
             body: Container(
               color: Theme.of(context).colorScheme.primary,
               child: ListView(
@@ -892,14 +892,18 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             height: 180.h,
             decoration: BoxDecoration(
               color: (themeProvider.themeType == ThemeType.dark)
-              gradient:  (themeProvider.themeType == ThemeType.light) ? LinearGradient(
-                colors: [
-                  lightOrangeColor,
-                  darkOrangeColor,
-                ],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-              ) : null,
+                  ? Colors.black
+                  : null,
+              gradient: (themeProvider.themeType == ThemeType.light)
+                  ? LinearGradient(
+                      colors: [
+                        lightOrangeColor,
+                        darkOrangeColor,
+                      ],
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                    )
+                  : null,
               borderRadius: BorderRadius.vertical(
                 bottom: Radius.circular(20.r),
               ),
