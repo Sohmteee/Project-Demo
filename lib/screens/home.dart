@@ -148,8 +148,17 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
-      body: Padding(
+      body: Container(
         padding: EdgeInsets.fromLTRB(20.w, 40.h, 20.w, 10.h),
+        decoration: BoxDecoration(
+          image: (themeProvider.themeType == ThemeType.dark)
+              ? const DecorationImage(
+                  image:
+                      AssetImage('assets/images/dark-gradient-background.png'),
+                  fit: BoxFit.cover,
+                )
+              : null,
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
