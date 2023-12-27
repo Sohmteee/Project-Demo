@@ -898,10 +898,46 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   color: Colors.white,
                   shape: BoxShape.circle,
                 ),
-                child: CircleAvatar(
-                  backgroundColor: Colors.grey,
-                  radius: 12.r,
-                  backgroundImage: Image.network(dp3Path).image,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(1000.r),
+                  child: FastCachedImage(
+                    width: 24.w,
+                    height: 24.w,
+                    url: dp3Path,
+                    fit: BoxFit.cover,
+                    fadeInDuration: const Duration(seconds: 1),
+                    errorBuilder: (context, exception, stacktrace) {
+                      return Container(
+                        width: 24.w,
+                        height: 24.w,
+                        decoration: const BoxDecoration(
+                          color: Colors.grey,
+                          shape: BoxShape.circle,
+                        ),
+                      );
+                    },
+                    loadingBuilder: (context, progress) {
+                      return Container(
+                        color: Colors.yellow,
+                        child: Stack(
+                          alignment: Alignment.center,
+                          children: [
+                            if (progress.isDownloading &&
+                                progress.totalBytes != null)
+                              Text(
+                                  '${progress.downloadedBytes ~/ 1024} / ${progress.totalBytes! ~/ 1024} kb',
+                                  style: const TextStyle(color: Colors.red)),
+                            SizedBox(
+                                width: 120,
+                                height: 120,
+                                child: CircularProgressIndicator(
+                                    color: Colors.red,
+                                    value: progress.progressPercentage.value)),
+                          ],
+                        ),
+                      );
+                    },
+                  ),
                 ),
               ),
             ),
