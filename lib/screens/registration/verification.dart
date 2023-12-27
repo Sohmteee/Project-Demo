@@ -90,7 +90,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                   Navigator.pop(context);
                 },
                 child: Text.rich(
-                  TextSpan(
+                  Row(
                     children: [
                       TextSpan(
                         text: 'Re-send code in  ',
