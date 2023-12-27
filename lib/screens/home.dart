@@ -724,7 +724,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         SvgPicture.asset('assets/svg/search.svg'),
 
         //textfield
-        const Expanded(
+        Expanded(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 10.w),
             child: TextField(
@@ -742,7 +742,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
         //filter button
         Container(
-          padding:  EdgeInsets.fromLTRB(5.w, 5.h, 10.w, 5.h),
+          padding: EdgeInsets.fromLTRB(5.w, 5.h, 10.w, 5.h),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(30.r),
@@ -750,12 +750,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           child: Row(
             children: [
               SvgPicture.asset('assets/svg/filter-circle.svg'),
-               SizedBox(width: 5),
+              SizedBox(width: 5.w),
               Text(
                 'Filter',
                 style: TextStyle(
                   color: darkOrangeColor,
-                  fontSize: 14,
+                  fontSize: 14.sp,
                 ),
               ),
             ],
@@ -776,14 +776,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           },
           child: Container(
             color: Colors.transparent,
-            padding: const EdgeInsets.all(5),
+            padding: EdgeInsets.all(5.sp),
             child: SvgPicture.asset("assets/svg/drawer.svg"),
           ),
         ),
         Column(
           children: [
-            Row(
-              children: const [
+            const Row(
+              children: [
                 Text(
                   'Current Location',
                   style: TextStyle(
@@ -804,7 +804,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       ? 'USA'
                       : selectedCountry['code'].toString().split('.').last,
                   color: Colors.white,
-                  fontSize: 16,
+                  fontSize: 16.sp,
                   fontWeight: FontWeight.bold,
                 ),
                 SizedBox(width: 5.w),
