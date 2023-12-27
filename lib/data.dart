@@ -51,19 +51,35 @@ List drawerOptions = [
     'title': 'My Profile',
   },
   {
-    'icon': 'assets/svg/drawer/calendar.svg',
+    'icon': SvgPicture.asset(
+      'assets/svg/drawer/calendar.svg',
+      width: 23.w,
+      height: 23.h,
+    ),
     'title': 'My Events',
   },
   {
-    'icon': 'assets/svg/drawer/gallery.svg',
+    'icon': SvgPicture.asset(
+      'assets/svg/drawer/gallery.svg',
+      width: 23.w,
+      height: 23.h,
+    ),
     'title': 'Gallery',
   },
   {
-    'icon': 'assets/svg/drawer/user.svg',
+    'icon': SvgPicture.asset(
+      'assets/svg/drawer/user.svg',
+      width: 23.w,
+      height: 23.h,
+    ),
     'title': 'Find Friends',
   },
   {
-    'icon': 'assets/svg/drawer/sign-out.svg',
+    'icon': SvgPicture.asset(
+      'assets/svg/drawer/sign-out.svg',
+      width: 23.w,
+      height: 23.h,
+    ),
     'title': 'Sign Out',
   },
 ];
