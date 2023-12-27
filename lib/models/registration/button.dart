@@ -36,7 +36,7 @@ class ArrowButton extends StatelessWidget {
           ),
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.3),
+              color: Theme.of(context).colorScheme.secondary.withOpacity(0.4),
               blurRadius: 30.r,
               offset: const Offset(0, 10),
             ),
@@ -87,14 +87,17 @@ class LoginOption extends StatelessWidget {
         width: 270.w,
         height: 58.h,
         decoration: BoxDecoration(
-          color: themeProvider.themeType == ThemeType.light ? lightBackgroundColor : darkBackgroundColor,
+          color: themeProvider.themeType == ThemeType.light
+              ? lightBackgroundColor
+              : darkBackgroundColor,
           borderRadius: BorderRadius.circular(16.r),
           boxShadow: [
-            if(themeProvider.themeType == ThType) BoxShadow(
-              color: Colors.grey.withOpacity(0.3),
-              blurRadius: 30.r,
-              offset: const Offset(0, 10),
-            ),
+            if (themeProvider.themeType == ThemeType.light)
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.3),
+                blurRadius: 30.r,
+                offset: const Offset(0, 10),
+              ),
           ],
         ),
         child: Row(
