@@ -50,11 +50,11 @@ class _LocationScreenState extends State<LocationScreen> {
       ),
       bottomNavigationBar: BottomAppBar(
         elevation: 0,
+        color: Colors.transparent,
         child: Container(
           height: 48,
           margin: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
           decoration: BoxDecoration(
-            color: Colors.transparent,
             borderRadius: BorderRadius.circular(10.r),
             gradient: LinearGradient(
               begin: Alignment.topCenter,
@@ -70,7 +70,7 @@ class _LocationScreenState extends State<LocationScreen> {
               'Select Location',
               fontSize: 18.sp,
               fontWeight: FontWeight.w500,
-              color: Theme.of(context).colorScheme.primary,
+              color: Theme.of(context).colorScheme.secondary,
             ),
           ),
         ),
