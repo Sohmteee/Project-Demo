@@ -113,6 +113,7 @@ class _LocationScreenState extends State<LocationScreen> {
                               fontWeight: FontWeight.w400,
                               color: Theme.of(context).colorScheme.secondary,
                             ),
+                            textCapitalization: TextCapitalization.words,
                             decoration: InputDecoration(
                               contentPadding:
                                   EdgeInsets.symmetric(vertical: 2.h),
