@@ -40,30 +40,35 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       value: const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
       ),
-      child: AdvancedDrawer(
-        controller: drawerController,
-        disabledGestures: true,
-        animationDuration: 300.milliseconds,
-        backdropColor: Theme.of(context).colorScheme.primary,
-        drawer: buildDrawerItems(themeProvider),
-        childDecoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30.r),
-          boxShadow: const [
-            BoxShadow(
-              offset: Offset(-15, 0),
-              color: Color(0x3FBCBCBC),
-              blurRadius: 10,
-            ),
-            /* BoxShadow(
-              offset: Offset(-30, 0),
-              color: Color(0x3FBCBCBC),
-              blurRadius: 10,
-            ), */
-          ],
-        ),
-        child: Scaffold(
-          backgroundColor: Theme.of(context).colorScheme.primary,
-          body: buildBottomNavBar(themeProvider),
+      child: Container(
+        decoration: BDecoration,
+        child: AdvancedDrawer(
+          controller: drawerController,
+          disabledGestures: true,
+          animationDuration: 300.milliseconds,
+          backdropColor: Theme.of(context).colorScheme.primary,
+          
+          drawer: buildDrawerItems(themeProvider),
+          childDecoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(30.r),
+            boxShadow: const [
+              BoxShadow(
+                offset: Offset(-15, 0),
+                color: Color(0x3FBCBCBC),
+                blurRadius: 10,
+              ),
+              /* BoxShadow(
+                offset: Offset(-30, 0),
+                color: Color(0x3FBCBCBC),
+                blurRadius: 10,
+              ), */
+            ],
+          ),
+        
+          child: Scaffold(
+            backgroundColor: Theme.of(context).colorScheme.primary,
+            body: buildBottomNavBar(themeProvider),
+          ),
         ),
       ),
     );
@@ -148,17 +153,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
-      body: Container(
+      body: Padding(
         padding: EdgeInsets.fromLTRB(20.w, 40.h, 20.w, 10.h),
-        decoration: BoxDecoration(
-          image: (themeProvider.themeType == ThemeType.dark)
-              ? const DecorationImage(
-                  image:
-                      AssetImage('assets/images/dark-gradient-background.png'),
-                  fit: BoxFit.cover,
-                )
-              : null,
-        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
