@@ -557,65 +557,73 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         ),
                       ],
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        ShaderMask(
-                          blendMode: BlendMode.srcIn,
-                          shaderCallback: (Rect bounds) => LinearGradient(
-                            begin: Alignment.topCenter,
-                            end: Alignment.bottomCenter,
-                            colors: [
-                              lightOrangeColor,
-                              darkOrangeColor,
-                            ],
-                            tileMode: TileMode.mirror,
-                          ).createShader(bounds),
-                          child: DMSansText(
-                            upcomingEvents[index]['price'],
-                            textAlign: TextAlign.center,
-                            fontSize: 12.sp,
-                            fontWeight: FontWeight.w700,
-                            height: 0,
-                          ),
-                        ),
-                        SizedBox(width: 10.w),
-                        Container(
-                          width: 16.w,
-                          height: 16.h,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                              image: NetworkImage(
-                                'https://s3-alpha-sig.figma.com/img/97f5/05ab/d278e5c296cdbb95d942b33c18332f34?Expires=1704672000&Signature=Nc2wblPsEmgF4FWrzkE-MaN1-a1Ua5NNfSMsERFWUMM3sv0dCXq1HXcKk9F2rOuB3~p6nMzVJRXC3NP66Le24mwaRj9TikqAigv9D2vevt6yvLbzEZQAMMvZGXTqYg4fXpzQA8kSanEjNPklPMzgZ3GY4qX8HcNOF7bYI5~NAGbxYPgi0B1IJKVPh~sHcw8Ht69rQJfACwPDtf~TT2LCcao86VNAx5RZqr3TzcWyG8cQz-uEsP0jqvKcWFs8wUMo4lStnqFWyTgTB2ZgJ6kcL72sX2epje~RwGZaI5XGj3r1MxU8faqEz5AyYogHBZpVTBsh~N74Ee~oW5KzjEjeyw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+                    Padding(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 6.w, vertical: 10.h),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              ShaderMask(
+                                blendMode: BlendMode.srcIn,
+                                shaderCallback: (Rect bounds) => LinearGradient(
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter,
+                                  colors: [
+                                    lightOrangeColor,
+                                    darkOrangeColor,
+                                  ],
+                                  tileMode: TileMode.mirror,
+                                ).createShader(bounds),
+                                child: DMSansText(
+                                  upcomingEvents[index]['price'],
+                                  textAlign: TextAlign.center,
+                                  fontSize: 12.sp,
+                                  fontWeight: FontWeight.w700,
+                                  height: 0,
+                                ),
                               ),
-                              fit: BoxFit.contain,
-                            ),
+                              SizedBox(width: 10.w),
+                              Container(
+                                width: 16.w,
+                                height: 16.h,
+                                decoration: const BoxDecoration(
+                                  image: DecorationImage(
+                                    image: NetworkImage(
+                                      'https://s3-alpha-sig.figma.com/img/97f5/05ab/d278e5c296cdbb95d942b33c18332f34?Expires=1704672000&Signature=Nc2wblPsEmgF4FWrzkE-MaN1-a1Ua5NNfSMsERFWUMM3sv0dCXq1HXcKk9F2rOuB3~p6nMzVJRXC3NP66Le24mwaRj9TikqAigv9D2vevt6yvLbzEZQAMMvZGXTqYg4fXpzQA8kSanEjNPklPMzgZ3GY4qX8HcNOF7bYI5~NAGbxYPgi0B1IJKVPh~sHcw8Ht69rQJfACwPDtf~TT2LCcao86VNAx5RZqr3TzcWyG8cQz-uEsP0jqvKcWFs8wUMo4lStnqFWyTgTB2ZgJ6kcL72sX2epje~RwGZaI5XGj3r1MxU8faqEz5AyYogHBZpVTBsh~N74Ee~oW5KzjEjeyw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+                                    ),
+                                    fit: BoxFit.contain,
+                                  ),
+                                ),
+                              )
+                            ],
                           ),
-                        )
-                      ],
-                    ),
-                    AirBnBText(
-                      upcomingEvents[index]['title'],
-                      color: Theme.of(context).colorScheme.secondary,
-                      fontSize: 22.sp,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    SizedBox(height: 10.h),
-                    buildGoingRow(),
-                    SizedBox(height: 10.h),
-                    Row(
-                      children: [
-                        SvgPicture.asset('assets/svg/map-pin.svg'),
-                        SizedBox(width: 5.w),
-                        Text(
-                          upcomingEvents[index]['location'],
-                          style: const TextStyle(
-                            color: linkTextColor,
-                            fontSize: 16,
-                            letterSpacing: .5,
+                          AirBnBText(
+                            upcomingEvents[index]['title'],
+                            color: Theme.of(context).colorScheme.secondary,
+                            fontSize: 22.sp,
+                            fontWeight: FontWeight.bold,
                           ),
-                        ),
-                      ],
+                          SizedBox(height: 10.h),
+                          buildGoingRow(),
+                          SizedBox(height: 10.h),
+                          Row(
+                            children: [
+                              SvgPicture.asset('assets/svg/map-pin.svg'),
+                              SizedBox(width: 5.w),
+                              Text(
+                                upcomingEvents[index]['location'],
+                                style: const TextStyle(
+                                  color: linkTextColor,
+                                  fontSize: 16,
+                                  letterSpacing: .5,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
