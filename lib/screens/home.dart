@@ -208,7 +208,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 vertical: 10.h,
               ),
               decoration: BoxDecoration(
-                color: cyanBackgroundColor,
+                color: themeProvider.themeType == ThemeType.light
+                    ? cyanBackgroundColor
+                    : const Color(0x3300F8FF),
                 borderRadius: BorderRadius.circular(10.r),
               ),
               child: Row(
