@@ -447,6 +447,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             itemBuilder: (BuildContext context, int index) {
               DateTime eventDate = upcomingEvents[index]['time'];
               Duration timeRemaining = eventDate.difference(DateTime.now());
+
+              int daysDifference = timeRemaining.inDays;
+              int hoursDifference = timeRemaining.inHours % 24;
+              int minutesDifference = timeRemaining.inMinutes % 60;
+              int secondsDifference = timeRemaining.inSeconds % 60;
               return Container(
                 width: 240,
                 margin: EdgeInsets.symmetric(horizontal: 5.w),
@@ -604,21 +609,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                         ),
                                       ),
                                       Text(
-                                        switch (eventDate.month) {
-                                          1 => 'JAN',
-                                          2 => 'FEB',
-                                          3 => 'MAR',
-                                          4 => 'APR',
-                                          5 => 'MAY',
-                                          6 => 'JUNE',
-                                          7 => 'JUL',
-                                          8 => 'AUG',
-                                          9 => 'SEP',
-                                          10 => 'OCT',
-                                          11 => 'NOV',
-                                          12 => 'DEC',
-                                          _ => ''
-                                        },
+                                        second.toString(),
                                         style: TextStyle(
                                           color: upcomingEvents[index]
                                               ['date-color'],
