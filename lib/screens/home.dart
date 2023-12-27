@@ -23,6 +23,7 @@ import 'package:yeerlo/models/flag.dart';
 import 'package:yeerlo/models/registration/switch.dart';
 import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/theme.dart';
+import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -1200,7 +1201,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        GestureDetector(
+        ZoomTapAnimation(
           onTap: () {
             drawerController.toggleDrawer();
             setState(() {
@@ -1255,7 +1256,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             ),
           ],
         ),
-        SvgPicture.asset("assets/svg/notification-bell.svg"),
+        ZoomTapAnimation(
+          child: SvgPicture.asset("assets/svg/notification-bell.svg"),
+        ),
       ],
     );
   }
