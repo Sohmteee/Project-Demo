@@ -14,6 +14,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:yeerlo/colors/app_colors.dart';
+import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/countries.dart';
 import 'package:yeerlo/data.dart';
 import 'package:yeerlo/models/bottomNavBar.dart';
@@ -69,6 +70,82 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   }
 
   Widget buildDrawerItems(ThemeProvider themeProvider) {
+    
+List drawerOptions = [
+  {
+    'icon': SvgPicture.asset(
+      'assets/svg/drawer/user.svg',
+      width: 23.w,
+      height: 23.h,
+    ),
+    'title': 'My Profile',
+  },
+  {
+    'icon': SvgPicture.asset(
+      'assets/svg/drawer/calendar.svg',
+      width: 23.w,
+      height: 23.h,
+      color: HexColor('#767676'),
+    ),
+    'title': 'My Events',
+  },
+  {
+    'icon': SvgPicture.asset(
+      'assets/svg/drawer/gallery.svg',
+      width: 23.w,
+      height: 23.h,
+      color: HexColor('#767676'),
+    ),
+    'title': 'Gallery',
+  },
+  {
+    'icon': Stack(
+      alignment: Alignment.topRight,
+      clipBehavior: Clip.none,
+      children: [
+        SvgPicture.asset(
+          'assets/svg/drawer/user.svg',
+          width: 23.w,
+          height: 23.h,
+        ),
+        Positioned(
+          top: 0,
+          right: -4,
+          child: SvgPicture.asset(
+            'assets/svg/drawer/user-small.svg',
+            width: 18.w,
+            height: 18.h,
+          ),
+        ),
+      ],
+    ),
+    'title': 'Find Friends',
+  },
+  {
+    'icon': GestureDetector(
+      onTap: () {
+        themeProvider.toggleTheme();
+      },
+      child: RotatedBox(
+        quarterTurns: themeProvider.themeType == ThemeType.light ? 0 : 2,
+        child: SvgPicture.asset(
+          'assets/svg/drawer/theme-switch.svg',
+        ),
+      ),
+    ),
+    'title': 'Theme Mode',
+  },
+  {
+    'icon': SvgPicture.asset(
+      'assets/svg/drawer/sign-out.svg',
+      width: 23.w,
+      height: 23.h,
+    ),
+    'title': 'Sign Out',
+  },
+];
+
+
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
       body: Padding(
