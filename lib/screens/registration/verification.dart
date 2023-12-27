@@ -24,10 +24,20 @@ class _VerificationScreenState extends State<VerificationScreen> {
   late Timer timer;
   int time = 59;
 
-  void resetTimer() {
+  void restartTimer() {
     setState(() {
       time = 59;
-      
+      timer = Timer.periodic(1.seconds, (timer) {
+        if (mounted) {
+          if (time > 0) {
+            setState(() {
+              time--;
+            });
+          } else {
+            timer.cancel();
+          }
+        }
+      });
     });
   }
 
@@ -39,6 +49,8 @@ class _VerificationScreenState extends State<VerificationScreen> {
           setState(() {
             time--;
           });
+        } else {
+          timer.cancel();
         }
       }
     });
