@@ -95,7 +95,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
                 SizedBox(height: 19.h),
                 AppTextField(
-                  hintText: 'Referral ID(Optional)',
+                  hintText: 'Referral ID (Optional)',
                   icon: Stack(
                     alignment: Alignment.center,
                     clipBehavior: Clip.none,
