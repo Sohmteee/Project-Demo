@@ -592,54 +592,54 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           clipBehavior: Clip.none,
           children: [
             Positioned(
-              left: 40,
+              left: 40.w,
               child: Container(
-                padding: EdgeInsets.all(2),
-                decoration: BoxDecoration(
+                padding: EdgeInsets.all(2.sp),
+                decoration: const BoxDecoration(
                   color: Colors.white,
                   shape: BoxShape.circle,
                 ),
                 child: CircleAvatar(
-                  radius: 12,
+                  radius: 12.r,
                   backgroundImage: Image.asset('assets/images/dp-3.png').image,
                 ),
               ),
             ),
             Positioned(
-              left: 20,
+              left: 20.w,
               child: Container(
-                padding: EdgeInsets.all(2),
-                decoration: BoxDecoration(
+                padding: EdgeInsets.all(2.sp),
+                decoration: const BoxDecoration(
                   color: Colors.white,
                   shape: BoxShape.circle,
                 ),
                 child: CircleAvatar(
-                  radius: 12,
+                  radius: 12.r,
                   backgroundImage: Image.asset('assets/images/dp-2.png').image,
                 ),
               ),
             ),
             Positioned(
               child: Container(
-                padding: EdgeInsets.all(2),
-                decoration: BoxDecoration(
+                padding: EdgeInsets.all(2.sp),
+                decoration: const BoxDecoration(
                   color: Colors.white,
                   shape: BoxShape.circle,
                 ),
                 child: CircleAvatar(
-                  radius: 12,
+                  radius: 12.r,
                   backgroundImage: Image.asset('assets/images/dp-1.png').image,
                 ),
               ),
             ),
           ],
         ),
-        SizedBox(width: 50),
+        SizedBox(width: 50.w),
         Text(
           '+ 20 Going',
           style: TextStyle(
             color: Colors.blue[600],
-            fontSize: 16,
+            fontSize: 16.sp,
             fontWeight: FontWeight.bold,
           ),
         ),
