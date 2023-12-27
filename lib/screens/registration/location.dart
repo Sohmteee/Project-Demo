@@ -112,7 +112,7 @@ class _LocationScreenState extends State<LocationScreen> {
                                   EdgeInsets.symmetric(vertical: 2.h),
                               border: const OutlineInputBorder(
                                   borderSide: BorderSide.none),
-                              labelText: 'United States',
+                              hintText: 'United States',
                             ),
                           ),
                         ),
