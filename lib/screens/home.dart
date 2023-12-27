@@ -947,6 +947,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   }
 
   Row buildTopAppBar() {
+    bool isOpenDrawer = false;
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -954,6 +956,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         GestureDetector(
           onTap: () {
             drawerController.toggleDrawer();
+            setState(() {
+              isOpenDrawer = !isOpenDrawer;
+            });
           },
           child: Container(
             color: Colors.transparent,
