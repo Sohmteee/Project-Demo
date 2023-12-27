@@ -139,24 +139,14 @@ class _VerificationScreenState extends State<VerificationScreen> {
         fontWeight: FontWeight.w600,
       ),
       decoration: BoxDecoration(
-        // border: Border.all(color: HexColor('#DADADA')),
-        border: GradientBoxBorder(
-          gradient: LinearGradient(
-            colors: [
-              lightOrangeColor,
-              darkOrangeColor,
-            ],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-          ),
-        ),
+        border: Border.all(color: HexColor('#DADADA')),
         borderRadius: BorderRadius.circular(15.r),
       ),
     );
 
     final focusedPinTheme = defaultPinTheme.copyDecorationWith(
-      // border: Border.all(color: lightOrangeColor),
-      border: GradientBoxBorder(
+      border: Border.all(color: lightOrangeColor),
+      
         gradient: LinearGradient(
           colors: [
             lightOrangeColor,
