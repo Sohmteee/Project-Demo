@@ -214,20 +214,24 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               ],
             ),
             const Spacer(),
-            ListView.builder(
-              itemCount: drawerOptions.length,
-              itemBuilder: (BuildContext context, int index) {
-                return ListTile(
-                  leading: drawerOptions[index]['icon'],
-                  title: Text(
-                    drawerOptions[index]['title'],
-                    style: TextStyle(
-                      color: Theme.of(context).colorScheme.secondary,
-                      fontSize: 18.sp,
+            Container(
+              height: drawerOptions.length * 60.h,
+              color: Colors.grey,
+              child: ListView.builder(
+                itemCount: drawerOptions.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return ListTile(
+                    leading: drawerOptions[index]['icon'],
+                    title: Text(
+                      drawerOptions[index]['title'],
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.secondary,
+                        fontSize: 18.sp,
+                      ),
                     ),
-                  ),
-                );
-              },
+                  );
+                },
+              ),
             ),
             const Spacer(flex: 7),
             Container(
