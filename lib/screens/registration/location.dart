@@ -23,7 +23,6 @@ class _LocationScreenState extends State<LocationScreen> {
   @override
   void initState() {
     countryList.sort((a, b) => a['name'].compareTo(b['name']));
-    Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
     super.initState();
   }
 
