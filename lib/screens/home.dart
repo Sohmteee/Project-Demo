@@ -19,6 +19,7 @@ import 'package:yeerlo/countries.dart';
 import 'package:yeerlo/data.dart';
 import 'package:yeerlo/models/bottomNavBar.dart';
 import 'package:yeerlo/models/flag.dart';
+import 'package:yeerlo/models/registration/switch.dart';
 import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/theme.dart';
 
@@ -137,7 +138,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         'title': 'Find Friends',
       },
       {
-        'icon': GestureDetector(
+        'icon': /* GestureDetector(
           onTap: () {
             themeProvider.toggleTheme();
           },
@@ -147,6 +148,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               'assets/svg/drawer/theme-switch.svg',
             ),
           ),
+        ), */
+            ThemeSwitch(
+          value: false,
+          onChanged: (value) {},
         ),
         'title': 'Theme Mode',
       },
