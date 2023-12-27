@@ -425,7 +425,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     fontSize: 18.sp,
                     fontWeight: FontWeight.bold,
                   ),
-                  Icon(
+                  const Icon(
                     Icons.arrow_right,
                     color: linkTextColor,
                   )
@@ -467,7 +467,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           borderRadius: BorderRadius.circular(20.r),
                           child: Image.asset(
                             upcomingEvents[index]['image'],
-                            width: 240.w,
+                            width: 220.w,
                             height: 120.h,
                             fit: BoxFit.cover,
                           ),
@@ -556,7 +556,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         SizedBox(width: 5.w),
                         Text(
                           upcomingEvents[index]['location'],
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: linkTextColor,
                             fontSize: 16,
                             letterSpacing: .5,
