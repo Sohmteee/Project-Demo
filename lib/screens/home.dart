@@ -615,8 +615,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                       children: [
                                         DMSansText(
                                           daysDifference.toString(),
-                                          color: upcomingEvents[index]
-                                              ['date-color'],
+                                          color: ,
                                           fontSize: 12.sp,
                                           fontWeight: FontWeight.w600,
                                         ),
@@ -624,7 +623,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                           "Days",
                                           color: upcomingEvents[index]
                                               ['date-color'],
-                                          fontSize: 12.sp,
+                                          fontSize: 10.sp,
                                           fontWeight: FontWeight.w400,
                                         ),
                                       ],
@@ -642,7 +641,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                           "Hours",
                                           color: upcomingEvents[index]
                                               ['date-color'],
-                                          fontSize: 12.sp,
+                                          fontSize: 10.sp,
                                           fontWeight: FontWeight.w400,
                                         ),
                                       ],
@@ -660,7 +659,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                           "Minutes",
                                           color: upcomingEvents[index]
                                               ['date-color'],
-                                          fontSize: 12.sp,
+                                          fontSize: 10.sp,
                                           fontWeight: FontWeight.w400,
                                         ),
                                       ],
@@ -678,7 +677,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                           "Seconds",
                                           color: upcomingEvents[index]
                                               ['date-color'],
-                                          fontSize: 12.sp,
+                                          fontSize: 10.sp,
                                           fontWeight: FontWeight.w400,
                                         ),
                                       ],
