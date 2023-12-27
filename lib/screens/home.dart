@@ -160,6 +160,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           'assets/svg/drawer/sign-out.svg',
           width: 23.w,
           height: 23.h,
+          color: HexColor('#767676'),
         ),
         'title': 'Sign Out',
       },

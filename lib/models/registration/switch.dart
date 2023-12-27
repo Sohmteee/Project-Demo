@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:yeerlo/colors/app_colors.dart';
+import 'package:yeerlo/colors/hex_color.dart';
 
 class AppSwitch extends StatefulWidget {
   AppSwitch({
@@ -99,13 +100,9 @@ class _ThemeSwitchState extends State<ThemeSwitch> {
         padding: EdgeInsets.all(2.w),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(95.r),
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              lightOrangeColor,
-              darkOrangeColor,
-            ],
+          border: Border.all(
+            color: HexColor('#767676'),
+            width: 2.w,
           ),
         ),
         child: Stack(
@@ -130,4 +127,3 @@ class _ThemeSwitchState extends State<ThemeSwitch> {
     );
   }
 }
-
