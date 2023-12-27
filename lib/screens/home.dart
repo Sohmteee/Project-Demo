@@ -184,13 +184,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   backgroundColor: Colors.grey,
                   radius: 30.r,
                   backgroundImage: CachedNetworkImage(
-                    imageUrl: "http://via.placeholder.com/350x150",
+                    imageUrl:
+                        'https://s3-alpha-sig.figma.com/img/33a1/6235/683e964c0fac3a1028da033d96e5dd5d?Expires=1704672000&Signature=JQ0~OKDWlMmTbGlNiyaxKq6TXJs6auZT7Aj4mDom4MvCaN3maT0qzKlE6L3UFRhrBhojvuQ~2UQbv6~G7TBZMe3-BXqH-VDnDT2aBp3HEdqsRM-G6MppsNIOdI~bY40JIoizNg7o-hwy0uRkBrfxSGGU0z-BGOdgeqFdSVRvKKFwIiW1VzJaQSDURks8sI3QU1ZsMzTb-KNiMXUFR4u9AJtUePaduJE-LgblwJxnE9VCSyf1r0Ichq~JsLBClMtwBokWbuwI5mgeEwdhGAx4SP1TQAa05AAOF6UBJlZNYoz0rCXkg~9HwFs3XDC0qXJL0TAVg2e86fAzws1L8d8lxg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
                     placeholder: (context, url) => CircularProgressIndicator(),
                     errorWidget: (context, url, error) => Icon(Icons.error),
                   ),
-                  Image.network(
-                    'https://s3-alpha-sig.figma.com/img/33a1/6235/683e964c0fac3a1028da033d96e5dd5d?Expires=1704672000&Signature=JQ0~OKDWlMmTbGlNiyaxKq6TXJs6auZT7Aj4mDom4MvCaN3maT0qzKlE6L3UFRhrBhojvuQ~2UQbv6~G7TBZMe3-BXqH-VDnDT2aBp3HEdqsRM-G6MppsNIOdI~bY40JIoizNg7o-hwy0uRkBrfxSGGU0z-BGOdgeqFdSVRvKKFwIiW1VzJaQSDURks8sI3QU1ZsMzTb-KNiMXUFR4u9AJtUePaduJE-LgblwJxnE9VCSyf1r0Ichq~JsLBClMtwBokWbuwI5mgeEwdhGAx4SP1TQAa05AAOF6UBJlZNYoz0rCXkg~9HwFs3XDC0qXJL0TAVg2e86fAzws1L8d8lxg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
-                  ).image,
                 ),
                 SizedBox(height: 10.h),
                 Text(
