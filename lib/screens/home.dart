@@ -49,12 +49,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           borderRadius: BorderRadius.circular(30.r),
           boxShadow: const [
             BoxShadow(
-              offset: Offset(-10, 0),
+              offset: Offset(-15, 0),
               color: Color(0x3FBCBCBC),
+              blurRadius: 10,
             ),
             BoxShadow(
-              offset: Offset(-15, 5),
+              offset: Offset(-30, 5),
               color: Color(0x3FBCBCBC),
+              blurRadius: 10,
             ),
           ],
         ),
