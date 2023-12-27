@@ -8,3 +8,6 @@ List<Map<String, dynamic>> countryList = countries
       },
     )
     .toList();
+
+Map<String, dynamic> selectedCountry =
+    countryList.singleWhere((c) => c['name'] == 'United States');

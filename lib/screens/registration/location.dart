@@ -5,7 +5,6 @@ import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
-import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/countries.dart';
 import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/theme.dart';
@@ -18,9 +17,6 @@ class LocationScreen extends StatefulWidget {
 }
 
 class _LocationScreenState extends State<LocationScreen> {
-  Map<String, dynamic> selectedCountry =
-      countryList.singleWhere((c) => c['name'] == 'United States');
-
   @override
   void initState() {
     countryList.sort((a, b) => a['name'].compareTo(b['name']));
