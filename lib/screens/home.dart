@@ -100,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             ),
             const Spacer(),
             Container(
-              height: drawerOptions.length * 47.h,
+              height: drawerOptions.length * 55.h,
               padding: EdgeInsets.symmetric(horizontal: 10.w),
               child: ListView.separated(
                 itemCount: drawerOptions.length,

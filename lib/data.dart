@@ -102,4 +102,12 @@ List drawerOptions = [
     ),
     'title': 'Sign Out',
   },
+  {
+    'icon': SvgPicture.asset(
+      'assets/svg/drawer/sign-out.svg',
+      width: 23.w,
+      height: 23.h,
+    ),
+    'title': 'Sign Out',
+  },
 ];
