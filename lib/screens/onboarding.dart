@@ -108,6 +108,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             PageView.builder(
               controller: imageController,
               scrollDirection: Axis.horizontal,
+              physics: const NeverScrollableScrollPhysics(),
               itemCount: 3,
               itemBuilder: (context, index) {
                 return images[index];
@@ -142,6 +143,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     child: PageView.builder(
                       controller: titleController,
                       scrollDirection: Axis.horizontal,
+                      physics: const NeverScrollableScrollPhysics(),
                       itemCount: 3,
                       itemBuilder: (context, index) {
                         return titles[index];
@@ -154,6 +156,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     child: PageView.builder(
                       controller: descriptionController,
                       scrollDirection: Axis.horizontal,
+                      physics: const NeverScrollableScrollPhysics(),
                       itemCount: 3,
                       itemBuilder: (context, index) {
                         return descriptions[index];
