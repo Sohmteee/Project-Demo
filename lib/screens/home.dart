@@ -10,6 +10,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/theme.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -791,10 +792,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             child: SvgPicture.asset("assets/svg/drawer.svg"),
           ),
         ),
-        const Column(
+        Column(
           children: [
             Row(
-              children: [
+              children: const [
                 Text(
                   'Current Location',
                   style: TextStyle(
@@ -808,13 +809,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 )
               ],
             ),
-            Text(
+            AirBnBText(
               'New York, USA',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-              ),
+              color: Colors.white,
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
             ),
           ],
         ),
