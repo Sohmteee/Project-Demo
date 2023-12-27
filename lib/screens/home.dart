@@ -334,10 +334,15 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 Positioned(
                   right: -50.w,
                   bottom: -30.h,
-                  child: Image.asset(
-                    'assets/images/invite.png',
-                    height: 160.h,
-                    width: 260.w,
+                  child: Transform(
+                    transform: Matrix4.identity()
+                      ..translate(0.0, 0.0)
+                      ..rotateZ(-0.18),
+                    child: Image.asset(
+                      'assets/images/invite.png',
+                      height: 160.h,
+                      width: 260.w,
+                    ),
                   ),
                 ),
                 Padding(
@@ -366,10 +371,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               '\n50% of proceeds from each '
                               '\nticket sale for 2 years.',
                               style: TextStyle(
-                                color: Theme.of(context)
+                                color: /* Theme.of(context)
                                     .colorScheme
                                     .secondary
-                                    .withOpacity(.7),
+                                    .withOpacity(.7) */
+                                    const Color(0xFF484D70),
                                 fontSize: 14.sp,
                               ),
                             ),
