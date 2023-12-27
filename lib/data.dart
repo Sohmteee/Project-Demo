@@ -45,16 +45,16 @@ List drawerOptions = [
     'title': 'My Profile',
   },
   {
-    'icon': 'assets/svg/drawer/wallet.svg',
-    'title': 'Wallet',
+    'icon': 'assets/svg/drawer/calendar.svg',
+    'title': 'My Events',
   },
   {
-    'icon': 'assets/svg/drawer/check-in-pass.svg',
-    'title': 'Check-in Pass',
+    'icon': 'assets/svg/drawer/gallery.svg',
+    'title': 'Gallery',
   },
   {
-    'icon': 'assets/svg/drawer/bookmark.svg',
-    'title': 'Event Status',
+    'icon': 'assets/svg/drawer/user.svg',
+    'title': 'Find Friends',
   },
   {
     'icon': 'assets/svg/drawer/settings.svg',
