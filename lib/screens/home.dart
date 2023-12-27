@@ -1,5 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
+import 'dart:async';
+
 import 'package:countries_flag/countries_flag.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -453,7 +455,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               int minutesDifference = timeRemaining.inMinutes % 60;
               int secondsDifference = timeRemaining.inSeconds % 60;
 
-              
+              Timer timer;
+
+              Timer.periodic(1.seconds, (timer) {
+                setState(() {
+                  Duration timeRemaining = eventDate.difference(DateTime.now());
+                });
+              });
               return Container(
                 width: 240,
                 margin: EdgeInsets.symmetric(horizontal: 5.w),
