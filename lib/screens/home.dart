@@ -274,8 +274,26 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           screen: Scaffold(
             backgroundColor: Theme.of(context).colorScheme.primary,
             appBar: buildAppBar(themeProvider),
+            extendBodyBehindAppBar: true,
             body: Container(
-              color: Theme.of(context).colorScheme.primary,
+              decoration: BoxDecoration(
+                color: (themeProvider.themeType == ThemeType.dark)
+                    ? Colors.black
+                    : null,
+                gradient: (themeProvider.themeType == ThemeType.light)
+                    ? LinearGradient(
+                        colors: [
+                          lightOrangeColor,
+                          darkOrangeColor,
+                        ],
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                      )
+                    : null,
+                borderRadius: BorderRadius.vertical(
+                  bottom: Radius.circular(20.r),
+                ),
+              ),
               child: ListView(
                 physics: const BouncingScrollPhysics(),
                 children: [
