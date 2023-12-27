@@ -579,65 +579,104 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         Positioned(
                           bottom: 10.h,
                           left: 10.w,
-                          child: Stack(
-                            alignment: Alignment.center,
-                            children: [
-                              Blur(
-                                blur: 3,
-                                borderRadius: BorderRadius.circular(10.r),
-                                child: Container(
-                                  height: 35.h,
-                                  width: 196.w,
-                                  padding: EdgeInsets.all(5.sp),
-                                  decoration: BoxDecoration(
-                                    color: Colors.grey.withOpacity(.1),
-                                    borderRadius: BorderRadius.circular(10.r),
+                          child: SizedBox(
+                            width: 196.w,
+                            child: Stack(
+                              alignment: Alignment.center,
+                              children: [
+                                Blur(
+                                  blur: 3,
+                                  borderRadius: BorderRadius.circular(10.r),
+                                  child: Container(
+                                    height: 35.h,
+                                    width: 196.w,
+                                    padding: EdgeInsets.all(5.sp),
+                                    decoration: BoxDecoration(
+                                      color: Colors.grey.withOpacity(.1),
+                                      borderRadius: BorderRadius.circular(10.r),
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                children: [
-                                  Column(
-                                    children: [
-                                      DMSansText(
-                                        daysDifference.toString(),
-                                        color: upcomingEvents[index]
-                                            ['date-color'],
-                                        fontSize: 10.sp,
-                                        fontWeight: FontWeight.w600,
-                                      ),
-                                      DMSansText(
-                                        "Days",
-                                        color: upcomingEvents[index]
-                                            ['date-color'],
-                                        fontSize: 10.sp,
-                                        fontWeight: FontWeight.w400,
-                                      ),
-                                    ],
-                                  ),
-                                  Column(
-                                    children: [
-                                      DMSansText(
-                                        hoursDifference.toString(),
-                                        color: upcomingEvents[index]
-                                            ['date-color'],
-                                        fontSize: 10.sp,
-                                        fontWeight: FontWeight.w600,
-                                      ),
-                                      DMSansText(
-                                        "Hours",
-                                        color: upcomingEvents[index]
-                                            ['date-color'],
-                                        fontSize: 10.sp,
-                                        fontWeight: FontWeight.w400,
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ],
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: [
+                                    Column(
+                                      children: [
+                                        DMSansText(
+                                          daysDifference.toString(),
+                                          color: upcomingEvents[index]
+                                              ['date-color'],
+                                          fontSize: 10.sp,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                        DMSansText(
+                                          "Days",
+                                          color: upcomingEvents[index]
+                                              ['date-color'],
+                                          fontSize: 10.sp,
+                                          fontWeight: FontWeight.w400,
+                                        ),
+                                      ],
+                                    ),
+                                    Column(
+                                      children: [
+                                        DMSansText(
+                                          hoursDifference.toString(),
+                                          color: upcomingEvents[index]
+                                              ['date-color'],
+                                          fontSize: 10.sp,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                        DMSansText(
+                                          "Hours",
+                                          color: upcomingEvents[index]
+                                              ['date-color'],
+                                          fontSize: 10.sp,
+                                          fontWeight: FontWeight.w400,
+                                        ),
+                                      ],
+                                    ),
+                                    Column(
+                                      children: [
+                                        DMSansText(
+                                          minutesDifference.toString(),
+                                          color: upcomingEvents[index]
+                                              ['date-color'],
+                                          fontSize: 10.sp,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                        DMSansText(
+                                          "Minutes",
+                                          color: upcomingEvents[index]
+                                              ['date-color'],
+                                          fontSize: 10.sp,
+                                          fontWeight: FontWeight.w400,
+                                        ),
+                                      ],
+                                    ),
+                                    Column(
+                                      children: [
+                                        DMSansText(
+                                          secondsDifference.toString(),
+                                          color: upcomingEvents[index]
+                                              ['date-color'],
+                                          fontSize: 10.sp,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                        DMSansText(
+                                          "Seconds",
+                                          color: upcomingEvents[index]
+                                              ['date-color'],
+                                          fontSize: 10.sp,
+                                          fontWeight: FontWeight.w400,
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ],
