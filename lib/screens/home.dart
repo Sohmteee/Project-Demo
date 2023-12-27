@@ -14,7 +14,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:yeerlo/colors/app_colors.dart';
-import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/countries.dart';
 import 'package:yeerlo/data.dart';
 import 'package:yeerlo/models/bottomNavBar.dart';
@@ -260,9 +259,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           ),
         ),
         BottomBarItem(
-          icon: Icon(
+          icon: const Icon(
             IconlyBold.calendar,
-            color: HexColor('#767676'),
+            color: Vx.gray400,
           ),
           label: 'Calendar',
           screen: Container(),
@@ -270,7 +269,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         BottomBarItem(
           icon: SvgPicture.asset(
             'assets/svg/bookmark.svg',
-            color: HexColor('#767676'),
+            color: Vx.gray400,
           ),
           label: 'Bookmarks',
           screen: Container(),
@@ -278,7 +277,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         BottomBarItem(
           icon: SvgPicture.asset(
             'assets/svg/ticket.svg',
-            color: HexColor('#767676'),
+            color: Vx.gray400,
           ),
           label: 'My Tickets',
           screen: Container(),
