@@ -542,6 +542,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     ),
                     SizedBox(height: 10.h),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         ShaderMask(
                           blendMode: BlendMode.srcIn,
@@ -562,10 +563,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             height: 0,
                           ),
                         ),
+                        Spacer(),
                         Container(
                           width: 16,
                           height: 16,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             image: DecorationImage(
                               image: NetworkImage(
                                   'https://s3-alpha-sig.figma.com/img/97f5/05ab/d278e5c296cdbb95d942b33c18332f34?Expires=1704672000&Signature=Nc2wblPsEmgF4FWrzkE-MaN1-a1Ua5NNfSMsERFWUMM3sv0dCXq1HXcKk9F2rOuB3~p6nMzVJRXC3NP66Le24mwaRj9TikqAigv9D2vevt6yvLbzEZQAMMvZGXTqYg4fXpzQA8kSanEjNPklPMzgZ3GY4qX8HcNOF7bYI5~NAGbxYPgi0B1IJKVPh~sHcw8Ht69rQJfACwPDtf~TT2LCcao86VNAx5RZqr3TzcWyG8cQz-uEsP0jqvKcWFs8wUMo4lStnqFWyTgTB2ZgJ6kcL72sX2epje~RwGZaI5XGj3r1MxU8faqEz5AyYogHBZpVTBsh~N74Ee~oW5KzjEjeyw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'),
