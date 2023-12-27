@@ -317,63 +317,66 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.w),
-                child: SizedBox(
-                  height: 130.h,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          SizedBox(height: 5.h),
-                          Text(
-                            'Invite your friends',
-                            style: TextStyle(
-                              color: Theme.of(context).colorScheme.secondary,
-                              fontSize: 18.sp,
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: SizedBox(
+                    height: 130.h,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(height: 5.h),
+                            Text(
+                              'Invite your friends',
+                              style: TextStyle(
+                                color: Theme.of(context).colorScheme.secondary,
+                                fontSize: 18.sp,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              'Refer an event creator and earn '
+                              '\n50% of proceeds from each '
+                              '\nticket sale for 2 years.',
+                              style: TextStyle(
+                                color: /* Theme.of(context)
+                                    .colorScheme
+                                    .secondary
+                                    .withOpacity(.7) */
+                                    const Color(0xFF484D70),
+                                fontSize: 12.sp,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Container(
+                          width: 72.w,
+                          height: 32.h,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5.r),
+                            gradient: LinearGradient(
+                              colors: [
+                                lightOrangeColor,
+                                darkOrangeColor,
+                              ],
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                            ),
+                          ),
+                          child: Center(
+                            child: AirBnBText(
+                              'INVITE',
+                              color: Colors.white,
+                              fontSize: 12.sp,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Text(
-                            'Refer an event creator and earn '
-                            '\n50% of proceeds from each '
-                            '\nticket sale for 2 years.',
-                            style: TextStyle(
-                              color: /* Theme.of(context)
-                                  .colorScheme
-                                  .secondary
-                                  .withOpacity(.7) */
-                                  const Color(0xFF484D70),
-                              fontSize: 12.sp,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Container(
-                        width: 72.w,
-                        height: 32.h,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(5.r),
-                          gradient: LinearGradient(
-                            colors: [
-                              lightOrangeColor,
-                              darkOrangeColor,
-                            ],
-                            begin: Alignment.topCenter,
-                            end: Alignment.bottomCenter,
-                          ),
                         ),
-                        child: Center(
-                          child: AirBnBText(
-                            'INVITE',
-                            color: Colors.white,
-                            fontSize: 12.sp,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
