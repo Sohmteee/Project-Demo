@@ -604,6 +604,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             color: Theme.of(context).colorScheme.secondary,
                             fontSize: 22.sp,
                             fontWeight: FontWeight.bold,
+                            maxLines: 1,
+                            overflow: Te,
                           ),
                           SizedBox(height: 10.h),
                           buildGoingRow(),
@@ -612,13 +614,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             children: [
                               SvgPicture.asset('assets/svg/map-pin.svg'),
                               SizedBox(width: 5.w),
-                              Text(
+                              AirBnBText(
                                 upcomingEvents[index]['location'],
-                                style: const TextStyle(
-                                  color: linkTextColor,
-                                  fontSize: 16,
-                                  letterSpacing: .5,
-                                ),
+                                color: linkTextColor,
+                                fontSize: 16.sp,
                               ),
                             ],
                           ),
