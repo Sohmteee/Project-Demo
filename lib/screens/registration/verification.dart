@@ -129,37 +129,56 @@ class _VerificationScreenState extends State<VerificationScreen> {
                     restartTimer();
                   }
                 },
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    AirBnBText(
-                      'Re-send code in  ',
-                      color: Theme.of(context).colorScheme.secondary,
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w400,
-                    ),
-                    ShaderMask(
-                      blendMode: BlendMode.srcIn,
-                      shaderCallback: (Rect bounds) => LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [
-                          lightOrangeColor,
-                          darkOrangeColor,
+                child: time == 0
+                    ? ShaderMask(
+                        blendMode: BlendMode.srcIn,
+                        shaderCallback: (Rect bounds) => LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [
+                            lightOrangeColor,
+                            darkOrangeColor,
+                          ],
+                          tileMode: TileMode.mirror,
+                        ).createShader(bounds),
+                        child: AirBnBText(
+                          'Re-send code',
+                          color: Theme.of(context).colorScheme.secondary,
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      )
+                    : Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          AirBnBText(
+                            'Re-send code in  ',
+                            color: Theme.of(context).colorScheme.secondary,
+                            fontSize: 16.sp,
+                            fontWeight: FontWeight.w400,
+                          ),
+                          ShaderMask(
+                            blendMode: BlendMode.srcIn,
+                            shaderCallback: (Rect bounds) => LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [
+                                lightOrangeColor,
+                                darkOrangeColor,
+                              ],
+                              tileMode: TileMode.mirror,
+                            ).createShader(bounds),
+                            child: AirBnBText(
+                              '0:${time.toString().length < 2 ? '0' : ''}$time',
+                              color: themeProvider.themeType == ThemeType.light
+                                  ? lightOrangeColor
+                                  : darkOrangeColor,
+                              fontSize: 16.sp,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
                         ],
-                        tileMode: TileMode.mirror,
-                      ).createShader(bounds),
-                      child: AirBnBText(
-                        '0:${time.toString().length < 2 ? '0' : ''}$time',
-                        color: themeProvider.themeType == ThemeType.light
-                            ? lightOrangeColor
-                            : darkOrangeColor,
-                        fontSize: 16.sp,
-                        fontWeight: FontWeight.w400,
                       ),
-                    ),
-                  ],
-                ),
               ),
             ],
           ),
