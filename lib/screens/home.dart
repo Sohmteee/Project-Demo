@@ -280,9 +280,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 color: (themeProvider.themeType == ThemeType.light)
                     ? lightBackgroundColor
                     : null,
-                image: DecorationImage(
-                  image: AssetImage('assets/images/bg.png'),
-                ),
+                image: (themeProvider.themeType == ThemeType.dark)
+                    ? const DecorationImage(
+                        image: AssetImage(
+                            'assets/images/dark-gradient-background.png'),
+                        fit: BoxFit.cover,
+                      )
+                    : null,
               ),
               child: ListView(
                 physics: const BouncingScrollPhysics(),
