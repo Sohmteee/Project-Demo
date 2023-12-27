@@ -885,9 +885,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 child: CircleAvatar(
                   backgroundColor: Colors.grey,
                   radius: 12.r,
-                  backgroundImage: Image.network(
-                    'https://s3-alpha-sig.figma.com/img/2902/8b47/6eedca800bd259b5877f98458c1ec66a?Expires=1704672000&Signature=WJ3oY48md8MaDmsbbtjMA58LNkLMbz~EpHsSjDKfgeDCcUubBt1WhRctqWRSzGf0oJ6Koo1wlMMviGMQmxsRoss1OG8dMqA1tGBdHqge3ESQOwHahqg6K1ztJN6o8LpTU8bnPnjOC8JReyXyA3mF0eTBf22a7NxAUomvhMhIbrRUvycmI3BSRetUJR1iQuTckwR7YmoqNdlfPNz28xAzRrT0iE0hccnSwPef1Nkx9MqBXfqREtumY~BIuYIq1~e0TfZ5Mk660suy6wwF9KkLnUgwhrlw8sJfyxfPUz9QOP0KXRIFA1~XjAkG10TmT9qPwSXs6i7qRHF65-41~xqydg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
-                  ).image,
+                  backgroundImage: Image.network(dp1Path).image,
                 ),
               ),
             ),
