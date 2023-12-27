@@ -2,21 +2,21 @@
 
 import 'dart:async';
 
+import 'package:blur/blur.dart';
 import 'package:countries_flag/countries_flag.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
+import 'package:velocity_x/velocity_x.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/countries.dart';
 import 'package:yeerlo/data.dart';
 import 'package:yeerlo/models/bottomNavBar.dart';
-import 'package:blur/blur.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:velocity_x/velocity_x.dart';
 import 'package:yeerlo/models/flag.dart';
 import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/theme.dart';
