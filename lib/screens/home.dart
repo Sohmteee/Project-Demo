@@ -640,7 +640,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 ),
                 child: CircleAvatar(
                   radius: 12.r,
-                  backgroundImage: Image.asset('assets/images/dp-3.png').image,
+                  backgroundImage: Image.network('assets/images/dp-3.png').image,
                 ),
               ),
             ),
