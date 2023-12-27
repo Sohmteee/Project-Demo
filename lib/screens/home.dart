@@ -95,6 +95,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           height: 23.h,
         ),
         'title': 'My Profile',
+        'onTap': () {},
       },
       {
         'icon': SvgPicture.asset(
@@ -104,6 +105,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           color: HexColor('#767676'),
         ),
         'title': 'My Events',
+        'onTap': () {},
       },
       {
         'icon': SvgPicture.asset(
@@ -113,6 +115,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           color: HexColor('#767676'),
         ),
         'title': 'Gallery',
+        'onTap': () {},
       },
       {
         'icon': Stack(
@@ -138,6 +141,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           ],
         ),
         'title': 'Find Friends',
+        'onTap': () {},
       },
       {
         'icon': ThemeSwitch(
@@ -147,6 +151,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           },
         ),
         'title': 'Theme Mode',
+        'onTap': () {
+          themeProvider.toggleTheme();
+        },
       },
       {
         'icon': SvgPicture.asset(
@@ -156,6 +163,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           color: HexColor('#767676'),
         ),
         'title': 'Sign Out',
+        'onTap': () {},
       },
     ];
 
