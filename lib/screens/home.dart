@@ -848,7 +848,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(1000.r),
                                 child: FastCachedImage(
-                                 
                                   width: 16.w,
                                   height: 16.h,
                                   url: dp3Path,
@@ -859,9 +858,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                     return Container(
                                       width: 16.w,
                                       height: 16.h,
-                                      decoration: const BoxDecoration(
+                                      decoration:  BoxDecoration(
                                         color: Colors.grey,
-                                        shape: BoxShape.circle,
+                                        borderRadius: BorderRadius.circular(
+                                          10.r,
+                                        ),
+                                        child: 
                                       ),
                                     );
                                   },
@@ -869,9 +871,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                     return Container(
                                       width: 16.w,
                                       height: 16.h,
-                                      decoration: const BoxDecoration(
+                                      decoration: BoxDecoration(
                                         color: Colors.grey,
-                                        shape: BoxShape.circle,
+                                        borderRadius: BorderRadius.circular(
+                                          10.r,
+                                        ),
                                       ),
                                     ).animate().shimmer(
                                           delay: 1.seconds,
