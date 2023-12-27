@@ -219,7 +219,42 @@ class _LocationScreenState extends State<LocationScreen> {
                 },
                 onSelected: (country) {},
               ),
-              
+              SizedBox(height: 17.h),
+              Container(
+                width: 270.w,
+                height: 58.h,
+                decoration: BoxDecoration(
+                  color: themeProvider.themeType == ThemeType.light
+                      ? lightBackgroundColor
+                      : darkBackgroundColor,
+                  borderRadius: BorderRadius.circular(16.r),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.3),
+                      blurRadius: 30.r,
+                      offset: const Offset(0, 10),
+                    ),
+                  ],
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      logo,
+                      width: 24.w,
+                      height: 24.h,
+                    ),
+                    SizedBox(width: 10.w),
+                    AirBnBText(
+                      text,
+                      color: Theme.of(context).colorScheme.secondary,
+                      fontSize: 18.sp,
+                      fontWeight: FontWeight.w400,
+                      // letterSpacing: 1,
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
