@@ -206,7 +206,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               duration: 300.milliseconds,
                               curve: Curves.easeIn,
                             );
-                            titleController.nextPage(
+                            titleController.jum(
                               duration: 300.milliseconds,
                               curve: Curves.easeIn,
                             );
