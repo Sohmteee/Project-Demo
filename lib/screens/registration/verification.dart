@@ -28,9 +28,11 @@ class _VerificationScreenState extends State<VerificationScreen> {
   void initState() {
     timer = Timer.periodic(1.seconds, (timer) {
       if (mounted) {
-        setState(() {
-          time--;
-        });
+        if(time > 0) {
+          setState(() {
+            time--;
+          });
+        }
       }
     });
     super.initState();
@@ -127,7 +129,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                         tileMode: TileMode.mirror,
                       ).createShader(bounds),
                       child: AirBnBText(
-                        '0:$time',
+                        '0:${time.toString().length < 2 ? '0' : ''}$time',
                         color: themeProvider.themeType == ThemeType.light
                             ? lightOrangeColor
                             : darkOrangeColor,
