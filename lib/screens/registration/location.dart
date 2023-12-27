@@ -196,7 +196,10 @@ class _LocationScreenState extends State<LocationScreen> {
                                   EdgeInsets.symmetric(vertical: 2.h),
                               border: const OutlineInputBorder(
                                   borderSide: BorderSide.none),
-                              hintText: selectedCountry['name'],
+                              hintText: selectedCountry['name'] ==
+                                      'United States of America'
+                                  ? 'United States'
+                                  : selectedCountry['name'],
                               hintStyle: TextStyle(
                                 fontSize: 16.sp,
                                 fontWeight: FontWeight.w400,
@@ -291,9 +294,16 @@ class _LocationScreenState extends State<LocationScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             DMSansText(
-                              selectedCountry['name'] == 'United States'
-                                  ? 'United States of America'
-                                  : selectedCountry['name'],
+                              selectedCountry['name'] ==
+                                      'United States of America'
+                                  ? 'United States'
+                                  : selectedCountry['name'] ==
+                                          'United States of America'
+                                      ? 'United States'
+                                      : selectedCountry['name'] ==
+                                              'United States of America'
+                                          ? 'United States'
+                                          : selectedCountry['name'],
                               fontSize: 18.sp,
                               fontWeight: FontWeight.w500,
                               color: Theme.of(context).colorScheme.secondary,
