@@ -495,10 +495,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 child: Container(
                                   height: 50.h,
                                   width: 50.w,
-                                  padding: EdgeInsets.all(5),
+                                  padding: EdgeInsets.all(5.sp),
                                   decoration: BoxDecoration(
                                     color: Colors.grey.withOpacity(.1),
-                                    borderRadius: BorderRadius.circular(10),
+                                    borderRadius: BorderRadius.circular(10.r),
                                   ),
                                 ),
                               ),
@@ -509,7 +509,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                     style: TextStyle(
                                       color: upcomingEvents[index]
                                           ['date-color'],
-                                      fontSize: 20,
+                                      fontSize: 20.sp,
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
@@ -527,21 +527,21 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           ),
                         ),
                         Positioned(
-                          top: 10,
-                          right: 10,
+                          top: 10.h,
+                          right: 10.w,
                           child: Stack(
                             alignment: Alignment.center,
                             children: [
                               Blur(
                                 blur: 3,
-                                borderRadius: BorderRadius.circular(10),
+                                borderRadius: BorderRadius.circular(10.r),
                                 child: Container(
-                                  height: 30,
-                                  width: 30,
-                                  padding: EdgeInsets.all(5),
+                                  height: 30.h,
+                                  width: 30.w,
+                                  padding: EdgeInsets.all(5.sp),
                                   decoration: BoxDecoration(
                                     color: Colors.grey.withOpacity(.1),
-                                    borderRadius: BorderRadius.circular(10),
+                                    borderRadius: BorderRadius.circular(10.r),
                                   ),
                                 ),
                               ),
@@ -551,7 +551,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         ),
                       ],
                     ),
-                    SizedBox(height: 10),
+                    SizedBox(height: 10.h),
                     Text(
                       upcomingEvents[index]['title'],
                       style: TextStyle(
