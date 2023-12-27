@@ -1051,7 +1051,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   }
 
   Row buildTopAppBar() {
-
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -1066,7 +1065,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           child: Container(
             color: Colors.transparent,
             padding: EdgeInsets.all(5.sp),
-            child: isOpenDrawer ? Icon(Icons.close): SvgPicture.asset("assets/svg/drawer.svg"),
+            child: isOpenDrawer
+                ? Icon(
+                    Icons.close,
+                    color: Theme.of(context).colorScheme.secondary,
+                  )
+                : SvgPicture.asset("assets/svg/drawer.svg"),
           ),
         ),
         Column(
