@@ -722,12 +722,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 width: 16.w,
                               ),
                               SizedBox(width: 5.w),
-                              AirBnBText(
-                                upcomingEvents[index]['location'],
-                                color: linkTextColor,
-                                fontSize: 13.sp,
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
+                              Expanded(
+                                child: AirBnBText(
+                                  upcomingEvents[index]['location'],
+                                  color: linkTextColor,
+                                  fontSize: 13.sp,
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
                               ),
                             ],
                           ),
