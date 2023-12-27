@@ -541,6 +541,18 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       ],
                     ),
                     SizedBox(height: 10.h),
+                    Row(
+                      children: [
+                        DMSansText(
+                          'FREE - \$25',
+                          textAlign: TextAlign.center,
+                          color: const Color(0xFFFFB459),
+                          fontSize: 11.sp,
+                          fontWeight: FontWeight.w700,
+                          height: 0,
+                        )
+                      ],
+                    ),
                     AirBnBText(
                       upcomingEvents[index]['title'],
                       color: Theme.of(context).colorScheme.secondary,
@@ -548,22 +560,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       fontWeight: FontWeight.bold,
                     ),
                     SizedBox(height: 10.h),
-                    Row(
-                      children: [
-                        DMS(
-                          'FREE - \$25',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Color(0xFFFFB459),
-                            fontSize: 11,
-                            fontFamily: 'DM Sans',
-                            fontWeight: FontWeight.w700,
-                            height: 0,
-                            letterSpacing: 1,
-                          ),
-                        )
-                      ],
-                    ),
                     buildGoingRow(),
                     SizedBox(height: 10.h),
                     Row(
