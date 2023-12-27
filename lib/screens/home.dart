@@ -580,7 +580,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 blur: 3,
                                 borderRadius: BorderRadius.circular(10.r),
                                 child: Container(
-                                  height: 30.h,
+                                  height: 35.h,
                                   width: 196.w,
                                   padding: EdgeInsets.all(5.sp),
                                   decoration: BoxDecoration(
@@ -589,38 +589,42 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                   ),
                                 ),
                               ),
-                              Column(
+                              Row(
                                 children: [
-                                  Text(
-                                    eventDate.day.toString(),
-                                    style: TextStyle(
-                                      color: upcomingEvents[index]
-                                          ['date-color'],
-                                      fontSize: 20.sp,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  Text(
-                                    switch (eventDate.month) {
-                                      1 => 'JAN',
-                                      2 => 'FEB',
-                                      3 => 'MAR',
-                                      4 => 'APR',
-                                      5 => 'MAY',
-                                      6 => 'JUNE',
-                                      7 => 'JUL',
-                                      8 => 'AUG',
-                                      9 => 'SEP',
-                                      10 => 'OCT',
-                                      11 => 'NOV',
-                                      12 => 'DEC',
-                                      _ => ''
-                                    },
-                                    style: TextStyle(
-                                      color: upcomingEvents[index]
-                                          ['date-color'],
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                                  Column(
+                                    children: [
+                                      Text(
+                                        eventDate.day.toString(),
+                                        style: TextStyle(
+                                          color: upcomingEvents[index]
+                                              ['date-color'],
+                                          fontSize: 20.sp,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      Text(
+                                        switch (eventDate.month) {
+                                          1 => 'JAN',
+                                          2 => 'FEB',
+                                          3 => 'MAR',
+                                          4 => 'APR',
+                                          5 => 'MAY',
+                                          6 => 'JUNE',
+                                          7 => 'JUL',
+                                          8 => 'AUG',
+                                          9 => 'SEP',
+                                          10 => 'OCT',
+                                          11 => 'NOV',
+                                          12 => 'DEC',
+                                          _ => ''
+                                        },
+                                        style: TextStyle(
+                                          color: upcomingEvents[index]
+                                              ['date-color'],
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ],
                               ),
