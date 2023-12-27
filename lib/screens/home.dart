@@ -544,7 +544,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     AirBnBText(
                       upcomingEvents[index]['title'],
                       color: Theme.of(context).colorScheme.secondary,
-                      fontSize: 20.sp,
+                      fontSize: 13.sp,
                       fontWeight: FontWeight.bold,
                     ),
                     SizedBox(height: 10.h),
@@ -627,7 +627,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         Text(
           '+ 20 Going',
           style: TextStyle(
-            color: Colors.blue[600],
+            color:  Color(0xFF3F38DD),
             fontSize: 16.sp,
             fontWeight: FontWeight.bold,
           ),
