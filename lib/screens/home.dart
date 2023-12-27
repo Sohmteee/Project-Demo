@@ -53,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               color: Color(0x3FBCBCBC),
             ),
             BoxShadow(
-              offset: Offset(-10, 0),
+              offset: Offset(-15, 5),
               color: Color(0x3FBCBCBC),
             ),
           ],
