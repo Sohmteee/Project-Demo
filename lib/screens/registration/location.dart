@@ -1,3 +1,4 @@
+import 'package:countries_flag/countries_flag.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -271,6 +272,9 @@ class _LocationScreenState extends State<LocationScreen> {
                   children: [
                     Row(
                       children: [
+                        CountriesFlag(
+                          selectedCountry['name'].toLowerCase(),
+                        ),
                         Container(
                           width: 64.w,
                           height: 64.h,
