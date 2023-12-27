@@ -716,12 +716,18 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           SizedBox(height: 10.h),
                           Row(
                             children: [
-                              SvgPicture.asset('assets/svg/map-pin.svg'),
+                              SvgPicture.asset(
+                                'assets/svg/map-pin.svg',
+                                height: 16.h,
+                                width: 16.w,
+                              ),
                               SizedBox(width: 5.w),
                               AirBnBText(
                                 upcomingEvents[index]['location'],
                                 color: linkTextColor,
                                 fontSize: 13.sp,
+                                maxLines: 1,
+                                
                               ),
                             ],
                           ),
