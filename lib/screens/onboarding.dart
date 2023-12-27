@@ -108,7 +108,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             PageView.builder(
               controller: imageController,
               scrollDirection: Axis.horizontal,
-              physics: const NeverScrollableScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
+              onPageChanged: (index) {
+                setState(() {
+                  onBoardingIndex = index;
+                });
+                // 
+              },
               itemCount: 3,
               itemBuilder: (context, index) {
                 return images[index];
