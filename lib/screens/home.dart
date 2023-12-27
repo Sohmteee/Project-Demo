@@ -445,7 +445,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             physics: const BouncingScrollPhysics(),
             itemCount: upcomingEvents.length,
             itemBuilder: (BuildContext context, int index) {
-              DA
+              DateTime eventDate = upcomingEvents[index]['time'];
               return Container(
                 width: 240,
                 margin: EdgeInsets.symmetric(horizontal: 5.w),
@@ -512,9 +512,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               Column(
                                 children: [
                                   Text(
-                                    upcomingEvents[index]['time']
-                                        .day
-                                        .toString(),
+                                    eventDate.day.toString(),
                                     style: TextStyle(
                                       color: upcomingEvents[index]
                                           ['date-color'],
@@ -523,9 +521,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                     ),
                                   ),
                                   Text(
-                                    upcomingEvents[index]['time']
-                                        .month
-                                        .toString(),
+                                    eventDate.month.,
                                     style: TextStyle(
                                       color: upcomingEvents[index]
                                           ['date-color'],
