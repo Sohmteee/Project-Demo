@@ -521,7 +521,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                     ),
                                   ),
                                   Text(
-                                    eventDate.month.,
+                                    switch(eventDate.month) {
+                                      1 => 'January'
+                                      -=>
+                                    },
                                     style: TextStyle(
                                       color: upcomingEvents[index]
                                           ['date-color'],
