@@ -142,7 +142,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       fontSize: 18.sp,
                       fontWeight: FontWeight.w500,
                     ),
-                    SizedBox(height: 5.h),
+                    SizedBox(height: 10.h),
                     LoginOption(
                       logo: 'assets/images/logos/google-logo.png',
                       text: 'Login with Google',

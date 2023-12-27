@@ -18,7 +18,6 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
-
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
@@ -145,7 +144,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   fontSize: 18.sp,
                   fontWeight: FontWeight.w500,
                 ),
-                SizedBox(height: 5.h),
+                SizedBox(height: 10.h),
                 LoginOption(
                   logo: 'assets/images/logos/google-logo.png',
                   text: 'Login with Google',
