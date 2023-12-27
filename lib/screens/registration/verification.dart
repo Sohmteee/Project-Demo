@@ -125,7 +125,10 @@ class _VerificationScreenState extends State<VerificationScreen> {
               ArrowButton(
                 text: 'CONTINUE',
                 onPressed: () {
-                  restartTimer();
+                  timer.cancel();
+                  setState(() {
+                    time = 0;
+                  });
                   Navigator.pushNamed(context, '/location');
                 },
               ),
