@@ -144,7 +144,9 @@ class _LocationScreenState extends State<LocationScreen> {
                             controller: controller,
                             focusNode: focusNode,
                             cursorColor: lightOrangeColor,
-                            
+                            onTapOutside: (event) {
+                              FocusScope.of(context).unfocus();
+                            },
                             style: TextStyle(
                               fontSize: 16.sp,
                               fontWeight: FontWeight.w400,
