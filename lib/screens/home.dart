@@ -597,12 +597,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 Blur(
                                   blur: 3,
                                   borderRadius: BorderRadius.circular(10.r),
+                                  blurColor: ,
                                   child: Container(
                                     height: 35.h,
                                     width: 196.w,
                                     padding: EdgeInsets.all(5.sp),
                                     decoration: BoxDecoration(
-                                      color: Colors.grey.withOpacity(.1),
+                                      color: Colors.black.withOpacity(.3),
                                       borderRadius: BorderRadius.circular(10.r),
                                     ),
                                   ),
