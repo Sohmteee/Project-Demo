@@ -140,18 +140,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         'title': 'Find Friends',
       },
       {
-        'icon': /* GestureDetector(
-          onTap: () {
-            themeProvider.toggleTheme();
-          },
-          child: RotatedBox(
-            quarterTurns: themeProvider.themeType == ThemeType.light ? 0 : 2,
-            child: SvgPicture.asset(
-              'assets/svg/drawer/theme-switch.svg',
-            ),
-          ),
-        ), */
-            ThemeSwitch(
+        'icon': ThemeSwitch(
           value: themeProvider.themeType == ThemeType.dark,
           onChanged: (value) {
             themeProvider.toggleTheme();
