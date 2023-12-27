@@ -335,7 +335,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          SizedBox(height: 5.h),
                           Text(
                             'Refer an event creator and earn '
                             '\n50% of proceeds from each '
