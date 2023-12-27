@@ -138,7 +138,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   ),
                   SizedBox(width: 15.w),
                   Text(
-                    '${themeProvider.themeType == ThemeType.light ? 'Light' : 'Dark'} Mode',
+                    'Theme Mode',
                     style: TextStyle(
                       color: Theme.of(context).colorScheme.secondary,
                       fontSize: 18.sp,
