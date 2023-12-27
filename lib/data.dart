@@ -73,11 +73,17 @@ List drawerOptions = [
   },
   {
     'icon': Stack(
+      alignment: Alignment.topRight,
       children: [
         SvgPicture.asset(
           'assets/svg/drawer/user.svg',
           width: 23.w,
           height: 23.h,
+        ),
+        SvgPicture.asset(
+          'assets/svg/drawer/user.svg',
+          width: 18.w,
+          height: 18.h,
         ),
       ],
     ),
