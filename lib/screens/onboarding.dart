@@ -72,11 +72,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
     List descriptions = List.generate(3, (index) {
       return DMSansText(
-        onBoardingData[index]['title'],
+        onBoardingData[index]['description'],
         color: Colors.white,
-        fontSize: 22.sp,
-        fontWeight: FontWeight.w700,
+        fontSize: 15.sp,
         textAlign: TextAlign.center,
+        height: 1.8,
       );
     });
 
@@ -127,20 +127,22 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               ),
               child: Column(
                 children: [
-                  DMSansText(
-                    onBoardingData[onBoardingIndex]['title'],
-                    color: Colors.white,
-                    fontSize: 22.sp,
-                    fontWeight: FontWeight.w700,
-                    textAlign: TextAlign.center,
+                  PageView.builder(
+                    controller: imageController,
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 3,
+                    itemBuilder: (context, index) {
+                      return titles[index];
+                    },
                   ),
                   SizedBox(height: 10.h),
-                  DMSansText(
-                    onBoardingData[onBoardingIndex]['description'],
-                    color: Colors.white,
-                    fontSize: 15.sp,
-                    textAlign: TextAlign.center,
-                    height: 1.8,
+                  PageView.builder(
+                    controller: imageController,
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 3,
+                    itemBuilder: (context, index) {
+                      return descriptions[index];
+                    },
                   ),
                   const Spacer(),
                   Row(
