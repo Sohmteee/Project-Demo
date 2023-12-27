@@ -70,81 +70,81 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   }
 
   Widget buildDrawerItems(ThemeProvider themeProvider) {
-    
-List drawerOptions = [
-  {
-    'icon': SvgPicture.asset(
-      'assets/svg/drawer/user.svg',
-      width: 23.w,
-      height: 23.h,
-    ),
-    'title': 'My Profile',
-  },
-  {
-    'icon': SvgPicture.asset(
-      'assets/svg/drawer/calendar.svg',
-      width: 23.w,
-      height: 23.h,
-      color: HexColor('#767676'),
-    ),
-    'title': 'My Events',
-  },
-  {
-    'icon': SvgPicture.asset(
-      'assets/svg/drawer/gallery.svg',
-      width: 23.w,
-      height: 23.h,
-      color: HexColor('#767676'),
-    ),
-    'title': 'Gallery',
-  },
-  {
-    'icon': Stack(
-      alignment: Alignment.topRight,
-      clipBehavior: Clip.none,
-      children: [
-        SvgPicture.asset(
+    List drawerOptions = [
+      {
+        'icon': SvgPicture.asset(
           'assets/svg/drawer/user.svg',
           width: 23.w,
           height: 23.h,
         ),
-        Positioned(
-          top: 0,
-          right: -4,
-          child: SvgPicture.asset(
-            'assets/svg/drawer/user-small.svg',
-            width: 18.w,
-            height: 18.h,
+        'title': 'My Profile',
+      },
+      {
+        'icon': SvgPicture.asset(
+          'assets/svg/drawer/calendar.svg',
+          width: 23.w,
+          height: 23.h,
+          color: HexColor('#767676'),
+        ),
+        'title': 'My Events',
+      },
+      {
+        'icon': SvgPicture.asset(
+          'assets/svg/drawer/gallery.svg',
+          width: 23.w,
+          height: 23.h,
+          color: HexColor('#767676'),
+        ),
+        'title': 'Gallery',
+      },
+      {
+        'icon': Stack(
+          alignment: Alignment.topRight,
+          clipBehavior: Clip.none,
+          children: [
+            SvgPicture.asset(
+              'assets/svg/drawer/user.svg',
+              width: 23.w,
+              height: 23.h,
+              color: HexColor('#767676'),
+            ),
+            Positioned(
+              top: 0,
+              right: -4,
+              child: SvgPicture.asset(
+                'assets/svg/drawer/user-small.svg',
+                width: 18.w,
+                height: 18.h,
+                color: HexColor('#767676'),
+              ),
+            ),
+          ],
+        ),
+        'title': 'Find Friends',
+      },
+      {
+        'icon': GestureDetector(
+          onTap: () {
+            themeProvider.toggleTheme();
+          },
+          child: RotatedBox(
+            quarterTurns: themeProvider.themeType == ThemeType.light ? 0 : 2,
+            child: SvgPicture.asset(
+              'assets/svg/drawer/theme-switch.svg',
+            ),
           ),
         ),
-      ],
-    ),
-    'title': 'Find Friends',
-  },
-  {
-    'icon': GestureDetector(
-      onTap: () {
-        themeProvider.toggleTheme();
+        'title': 'Theme Mode',
       },
-      child: RotatedBox(
-        quarterTurns: themeProvider.themeType == ThemeType.light ? 0 : 2,
-        child: SvgPicture.asset(
-          'assets/svg/drawer/theme-switch.svg',
+      {
+        'icon': SvgPicture.asset(
+          'assets/svg/drawer/sign-out.svg',
+          width: 23.w,
+          height: 23.h,
         ),
-      ),
-    ),
-    'title': 'Theme Mode',
-  },
-  {
-    'icon': SvgPicture.asset(
-      'assets/svg/drawer/sign-out.svg',
-      width: 23.w,
-      height: 23.h,
-    ),
-    'title': 'Sign Out',
-  },
-];
-
+        'title': 'Sign Out',
+      },
+    ];
 
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
@@ -184,9 +184,7 @@ List drawerOptions = [
                 itemBuilder: (BuildContext context, int index) {
                   return Row(
                     children: [
-                      (index == 1)
-                          ? drawerOptions[index]['icon']
-                          : drawerOptions[index]['icon'],
+                      drawerOptions[index]['icon'],
                       SizedBox(width: 20.w),
                       Text(
                         drawerOptions[index]['title'],
@@ -201,33 +199,6 @@ List drawerOptions = [
                 separatorBuilder: (BuildContext context, int index) {
                   return SizedBox(height: 30.h);
                 },
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10.w),
-              child: Row(
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      themeProvider.toggleTheme();
-                    },
-                    child: RotatedBox(
-                      quarterTurns:
-                          themeProvider.themeType == ThemeType.light ? 0 : 2,
-                      child: SvgPicture.asset(
-                        'assets/svg/drawer/theme-switch.svg',
-                      ),
-                    ),
-                  ),
-                  SizedBox(width: 15.w),
-                  Text(
-                    'Theme Mode',
-                    style: TextStyle(
-                      color: Theme.of(context).colorScheme.secondary,
-                      fontSize: 18.sp,
-                    ),
-                  ),
-                ],
               ),
             ),
             const Spacer(flex: 7),
