@@ -602,11 +602,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     Stack(
                       children: [
                         ClipRRect(
-                          borderRadius: BorderRadius.circular(1000.r),
+                          borderRadius: BorderRadius.circular(20.r),
                           child: FastCachedImage(
-                            width: 24.w,
-                            height: 24.w,
-                            url: dp3Path,
+                            url: upcomingEvents[index]['image'],
+                            width: 218.w,
+                            height: 131.h,
                             fit: BoxFit.cover,
                             fadeInDuration: const Duration(seconds: 1),
                             errorBuilder: (context, exception, stacktrace) {
@@ -621,11 +621,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             },
                             loadingBuilder: (context, progress) {
                               return Container(
-                                width: 22.w,
-                                height: 22.w,
-                                decoration: const BoxDecoration(
+                                width: 218.w,
+                                height: 131.h,
+                                decoration: BoxDecoration(
                                   color: Colors.grey,
-                                  shape: BoxShape.circle,
+                                  borderRadius: BorderRadius.circular(20.r),
                                 ),
                               ).animate().shimmer(
                                     delay: 1.seconds,
