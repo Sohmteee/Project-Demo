@@ -22,13 +22,15 @@ class VerificationScreen extends StatefulWidget {
 class _VerificationScreenState extends State<VerificationScreen> {
   bool rememberMe = true;
   late Timer timer;
-  
+  int time = 59;
 
   @override
   void initState() {
     timer = Timer.periodic(1.seconds, (timer) {
       if (mounted) {
-        setState(() {});
+        setState(() {
+          time--;
+        });
       }
     });
     super.initState();
@@ -125,7 +127,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                         tileMode: TileMode.mirror,
                       ).createShader(bounds),
                       child: AirBnBText(
-                        '0:20',
+                        '0:$time',
                         color: themeProvider.themeType == ThemeType.light
                             ? lightOrangeColor
                             : darkOrangeColor,
