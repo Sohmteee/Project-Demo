@@ -49,6 +49,9 @@ class _LocationScreenState extends State<LocationScreen> {
         elevation: 0,
         color: Colors.transparent,
         child: ZoomTapAnimation(
+          onTap: () {
+            
+          },
           child: Container(
             height: 48,
             margin: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
