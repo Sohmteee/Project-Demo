@@ -148,8 +148,8 @@ class _VerificationScreenState extends State<VerificationScreen> {
             lightOrangeColor,
             darkOrangeColor,
           ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
         ),
       ),
     );
