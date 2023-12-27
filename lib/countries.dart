@@ -2,15 +2,14 @@ import 'package:dart_countries/dart_countries.dart';
 
 List<Map<String, dynamic>> countryList = countries
     .map(
-      (country) {
-        
-        return {
-        'name': country.name,
+      (country) => {
+        'name': country.name == 'United States'
+            ? 'United States of America'
+            : country.name,
         'code': country.isoCode,
-      };
       },
     )
     .toList();
 
 Map<String, dynamic> selectedCountry =
-    countryList.singleWhere((c) => c['name'] == 'United States');
+    countryList.singleWhere((c) => c['name'] == 'United States of America');
