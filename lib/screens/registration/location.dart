@@ -144,6 +144,7 @@ class _LocationScreenState extends State<LocationScreen> {
                             controller: controller,
                             focusNode: focusNode,
                             cursorColor: lightOrangeColor,
+                            
                             style: TextStyle(
                               fontSize: 16.sp,
                               fontWeight: FontWeight.w400,
@@ -186,16 +187,6 @@ class _LocationScreenState extends State<LocationScreen> {
                       .toList();
                 },
                 onSelected: (country) {},
-              ),
-              SizedBox(height: 26.h),
-              ArrowButton(
-                text: 'SEND',
-                onPressed: () {
-                  Navigator.pushNamed(context, '/verification');
-                },
-              ),
-              Expanded(
-                child: Container(),
               ),
             ],
           ),
