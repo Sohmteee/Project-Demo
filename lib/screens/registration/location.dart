@@ -17,7 +17,7 @@ class LocationScreen extends StatefulWidget {
 }
 
 class _LocationScreenState extends State<LocationScreen> {
-  Map<String, dynamic> selectedCountry = countryList[0];
+  Map<String, dynamic> selectedCountry = countryList.singleWhere((c) => c['name'] == 'United States');
 
   @override
   void initState() {
