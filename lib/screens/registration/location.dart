@@ -43,8 +43,8 @@ class _LocationScreenState extends State<LocationScreen> {
       bottomNavigationBar: BottomAppBar(
         elevation: 0,
         child: Container(
-          height: 48,
-          margin: EdgeInsets.symmetric(horizontal: 16.w, vertical: 20.h),
+          height: 58,
+          margin: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
           decoration: BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topCenter,
