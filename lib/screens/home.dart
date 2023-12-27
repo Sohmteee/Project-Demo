@@ -639,8 +639,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   shape: BoxShape.circle,
                 ),
                 child: CircleAvatar(
+                  backgroundColor: Colors.grey,
                   radius: 12.r,
-                  backgroundImage: Image.network('assets/images/dp-3.png').image,
+                  backgroundImage: Image.network(
+                    'https://s3-alpha-sig.figma.com/img/e6e0/802c/b43aceb267d24e6c72e464bbc8fa5f13?Expires=1704672000&Signature=kQjSDvPxiZSZcbRKp-T6Lty1fua7vGtBVQi5lTyEmtbMj~-6JR7TfO8y3Sa~5TLt1uPxa30ZEe6pJeCDyNX5tnqWn65s8uOwheBlANQbB9Du8zkGehJ8HdTGXT3L6T0Z9oGkpr8QbMHW-mBKsdyERxVNqyVwXmBx7p~AFfACNb0TWtbp26PKenfewx1yFu1Y1cQZ2fAfpf3aWIsfhDgZzEOfY~1l2B3Zt9Pf3ZxsELXPiyotp089fLnvfQBt7eNqgGUEwqN3J509d3QCNq6Ogqme962M1ofHik7MdbaCw88K95nfTCt0NnQIIyyoNh2xkZzJxBsfyBWn3WzK2RTCWA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+                  ).image,
                 ),
               ),
             ),
@@ -653,8 +656,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   shape: BoxShape.circle,
                 ),
                 child: CircleAvatar(
+                  backgroundColor: Colors.grey,
                   radius: 12.r,
-                  backgroundImage: Image.asset('assets/images/dp-2.png').image,
+                  backgroundImage: Image.network(
+                    'https://s3-alpha-sig.figma.com/img/2902/8b47/6eedca800bd259b5877f98458c1ec66a?Expires=1704672000&Signature=WJ3oY48md8MaDmsbbtjMA58LNkLMbz~EpHsSjDKfgeDCcUubBt1WhRctqWRSzGf0oJ6Koo1wlMMviGMQmxsRoss1OG8dMqA1tGBdHqge3ESQOwHahqg6K1ztJN6o8LpTU8bnPnjOC8JReyXyA3mF0eTBf22a7NxAUomvhMhIbrRUvycmI3BSRetUJR1iQuTckwR7YmoqNdlfPNz28xAzRrT0iE0hccnSwPef1Nkx9MqBXfqREtumY~BIuYIq1~e0TfZ5Mk660suy6wwF9KkLnUgwhrlw8sJfyxfPUz9QOP0KXRIFA1~XjAkG10TmT9qPwSXs6i7qRHF65-41~xqydg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+                  ).image,
                 ),
               ),
             ),
