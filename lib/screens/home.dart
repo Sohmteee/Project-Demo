@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, deprecated_member_use
+// ignore_for_file: deprecated_member_use
 
 import 'package:countries_flag/countries_flag.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -32,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     final themeProvider = Provider.of<ThemeProvider>(context);
 
     return AnnotatedRegion<SystemUiOverlayStyle>(
-      value: SystemUiOverlayStyle(
+      value: const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
       ),
       child: AdvancedDrawer(
@@ -66,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Spacer(),
+            const Spacer(),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -88,7 +88,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 ),
               ],
             ),
-            Spacer(),
+            const Spacer(),
             Container(
               height: drawerOptions.length * 47.h,
               padding: EdgeInsets.symmetric(horizontal: 10.w),
@@ -243,13 +243,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             child: ListView(
               physics: const BouncingScrollPhysics(),
               children: [
-                const SizedBox(height: 50),
+                 SizedBox(height: 50.h),
                 buildUpcomingEvents(themeProvider),
-                SizedBox(height: 20),
+                SizedBox(height: 20.h),
                 buildReferral(themeProvider),
-                SizedBox(height: 20),
+                SizedBox(height: 20.h),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  padding:  EdgeInsets.symmetric(horizontal: 20.w),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -259,7 +259,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           color: themeProvider.themeType == ThemeType.light
                               ? blackTextColor
                               : Colors.white,
-                          fontSize: 20,
+                          fontSize: 20.sp
                           fontWeight: FontWeight.bold,
                         ),
                       ),
