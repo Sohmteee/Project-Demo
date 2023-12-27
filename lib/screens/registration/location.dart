@@ -273,7 +273,7 @@ class _LocationScreenState extends State<LocationScreen> {
                     Row(
                       children: [
                         CountriesFlag(
-                          selectedCountry['name'].l,
+                          selectedCountry['name'].split('.').toString(),
                           width: 64.w,
                           height: 64.h,
                         ),
