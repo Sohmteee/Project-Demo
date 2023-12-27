@@ -1,7 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:pinput/pinput.dart';
 import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
@@ -19,6 +21,18 @@ class VerificationScreen extends StatefulWidget {
 
 class _VerificationScreenState extends State<VerificationScreen> {
   bool rememberMe = true;
+  late Timer timer;
+  
+
+  @override
+  void initState() {
+    timer = Timer.periodic(1.seconds, (timer) {
+      if (mounted) {
+        setState(() {});
+      }
+    });
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -159,7 +173,6 @@ class _VerificationScreenState extends State<VerificationScreen> {
     return Pinput(
       defaultPinTheme: defaultPinTheme,
       focusedPinTheme: focusedPinTheme,
-      
       validator: (s) {
         return s == '4444' ? null : 'OTP is incorrect (Correct OTP is 4444)';
       },
