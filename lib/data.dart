@@ -52,17 +52,17 @@ List drawerOptions = [
     'title': 'My Profile',
   },
   {
-    'icon': SvgPicture.asset(
-      'assets/svg/drawer/calendar.svg',
-      width: 23.w,
-      height: 23.h,
+    'icon': Icon(
+      ILigh.calendar,
+      size: 23.w,
     ),
     'title': 'My Events',
   },
   {
-    'icon': Icon(
-      IconlyBold.calendar,
-      size: 23.w,
+    'icon': SvgPicture.asset(
+      'assets/svg/drawer/gallery.svg',
+      width: 23.w,
+      height: 23.h,
     ),
     'title': 'Gallery',
   },
