@@ -4,6 +4,7 @@ import 'dart:async';
 
 import 'package:blur/blur.dart';
 import 'package:countries_flag/countries_flag.dart';
+import 'package:fast_cached_network_image/fast_cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
@@ -183,11 +184,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 CircleAvatar(
                   backgroundColor: Colors.grey,
                   radius: 30.r,
-                  backgroundImage: CachedNetworkImage(
-                    imageUrl: profilePath,
-                    placeholder: (context, url) => CircularProgressIndicator(),
-                    errorWidget: (context, url, error) => Icon(Icons.error),
-                  ),
+                  backgroundImage: FastCachedImage(url: profilePath),
                 ),
                 SizedBox(height: 10.h),
                 Text(
