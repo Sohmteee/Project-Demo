@@ -85,7 +85,7 @@ class _LocationScreenState extends State<LocationScreen> {
                     ),
                   );
                 },
-                builder: (context, textController, focusNode) {
+                builder: (context, controller, focusNode) {
                   return Container(
                     padding: EdgeInsets.symmetric(horizontal: 15.w),
                     decoration: BoxDecoration(
@@ -106,7 +106,7 @@ class _LocationScreenState extends State<LocationScreen> {
                       children: [
                         Expanded(
                           child: TextField(
-                            controller: textController,
+                            controller: controller,
                             focusNode: focusNode,
                             cursorColor: lightOrangeColor,
                             style: TextStyle(
@@ -150,11 +150,7 @@ class _LocationScreenState extends State<LocationScreen> {
                           country.toLowerCase().contains(pattern.toLowerCase()))
                       .toList();
                 },
-                onSelected: (country) {
-                  setState(() {
-                    textController.text = country;
-                  });
-                },
+                onSelected: (country) {},
               ),
               SizedBox(height: 26.h),
               ArrowButton(
