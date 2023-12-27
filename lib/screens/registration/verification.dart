@@ -142,7 +142,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
     );
 
     final focusedPinTheme = defaultPinTheme.copyDecorationWith(
-      border: GradientBoxBorder.(
+      border: GradientBoxBorder(
         gradient: LinearGradient(
           colors: [
             lightOrangeColor,
