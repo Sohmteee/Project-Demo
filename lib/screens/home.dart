@@ -727,7 +727,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 color: linkTextColor,
                                 fontSize: 13.sp,
                                 maxLines: 1,
-                                
+                                overflow: TextOverflow.ellipsis,
                               ),
                             ],
                           ),
