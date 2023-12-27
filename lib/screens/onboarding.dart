@@ -81,7 +81,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               },
             ),
             Container(
-              padding: EdgeInsets.all(40.sp),
+              padding: EdgeInsets.symmetric(horizontal: 40.sp),
               width: double.infinity,
               height: 250.h,
               decoration: BoxDecoration(
@@ -103,23 +103,26 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     : null,
               ),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  DMSansText(
-                    onBoardingData[onBoardingIndex]['title'],
-                    color: Colors.white,
-                    fontSize: 22.spMin,
-                    fontWeight: FontWeight.w700,
-                    textAlign: TextAlign.center,
+                  Column(
+                    children: [
+                      DMSansText(
+                        onBoardingData[onBoardingIndex]['title'],
+                        color: Colors.white,
+                        fontSize: 22.spMin,
+                        fontWeight: FontWeight.w700,
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(height: 10.h),
+                      DMSansText(
+                        onBoardingData[onBoardingIndex]['description'],
+                        color: Colors.white,
+                        fontSize: 15.sp,
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
                   ),
-                  SizedBox(height: 10.h),
-                  DMSansText(
-                    onBoardingData[onBoardingIndex]['description'],
-                    color: Colors.white,
-                    fontSize: 15.sp,
-                    textAlign: TextAlign.center,
-                  ),
-                  const Spacer(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
