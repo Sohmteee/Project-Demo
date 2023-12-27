@@ -62,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
       body: Padding(
-        padding:  EdgeInsets.fromLTRB(20.w, 40.h, 20.w, 10.h),
+        padding: EdgeInsets.fromLTRB(20.w, 40.h, 20.w, 10.h),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -243,13 +243,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             child: ListView(
               physics: const BouncingScrollPhysics(),
               children: [
-                 SizedBox(height: 50.h),
+                SizedBox(height: 50.h),
                 buildUpcomingEvents(themeProvider),
                 SizedBox(height: 20.h),
                 buildReferral(themeProvider),
                 SizedBox(height: 20.h),
                 Padding(
-                  padding:  EdgeInsets.symmetric(horizontal: 20.w),
+                  padding: EdgeInsets.symmetric(horizontal: 20.w),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -316,7 +316,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
   Widget buildReferral(ThemeProvider themeProvider) {
     return Padding(
-      padding:  EdgeInsets.symmetric(horizontal: 20.w),
+      padding: EdgeInsets.symmetric(horizontal: 20.w),
       child: Center(
         child: Card(
           color: lightBlueBackgroundColor,
@@ -344,7 +344,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   ),
                 ),
                 Padding(
-                  padding:  EdgeInsets.fromLTRB(20.w, 15.h, 20.w, 15.h),
+                  padding: EdgeInsets.fromLTRB(20.w, 15.h, 20.w, 15.h),
                   child: SizedBox(
                     height: 120.h,
                     child: Column(
@@ -395,13 +395,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               end: Alignment.bottomCenter,
                             ),
                           ),
-                          child: Text(
+                          child: AirBnBText(
                             'INVITE',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                            ),
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ],
@@ -420,13 +418,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding:  EdgeInsets.symmetric(horizontal: 20.w),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
+              AirBnBText(
                 'Upcoming Events',
-                style: TextStyle(
                   color: themeProvider.themeType == ThemeType.light
                       ? blackTextColor
                       : Colors.white,
