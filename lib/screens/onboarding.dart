@@ -107,7 +107,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   DMSansText(
                     onBoardingData[onBoardingIndex]['title'],
                     color: Colors.white,
-                    fontSize: 22.sp,
+                    fontSize: 22.spMin,
                     fontWeight: FontWeight.w700,
                     textAlign: TextAlign.center,
                   ),
