@@ -23,7 +23,7 @@ Future<void> main() async {
       statusBarColor: Colors.transparent,
     ),
   );
-
+WidgetsFlutterBinding.ensureInitialized();
   storageLocation = (await getApplicationDocumentsDirectory()).path;
   await FastCachedImageConfig.init(
     subDir: storageLocation,
