@@ -95,17 +95,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
                 SizedBox(height: 19.h),
                 AppTextField(
-                  isPassword: true,
-                  hintText: 'Confirm Password',
-                  icon: Icon(
-                    IconlyLight.lock,
-                    size: 22.sp,
-                    color: registrationIconColor,
-                  ),
-                ),
-                SizedBox(height: 19.h),
-                AppTextField(
-                  hintText: 'Referral (Optional)',
+                  hintText: 'Referral ID(Optional)',
                   icon: Stack(
                     alignment: Alignment.center,
                     clipBehavior: Clip.none,
