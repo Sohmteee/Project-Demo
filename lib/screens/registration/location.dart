@@ -50,7 +50,7 @@ class _LocationScreenState extends State<LocationScreen> {
         color: Colors.transparent,
         child: ZoomTapAnimation(
           onTap: () {
-            
+            Navigator.pushReplacementNamed(context, '/home');
           },
           child: Container(
             height: 48,

@@ -132,7 +132,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     ArrowButton(
                       text: 'SIGN IN',
                       onPressed: () {
-                        Navigator.pushNamed(context, '/home');
+                        Navigator.pushReplacementNamed(context, '/home');
                       },
                     ),
                     SizedBox(height: 24.h),
