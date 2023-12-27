@@ -288,7 +288,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             'assets/svg/calendar.svg',
             color: Vx.gray400,
           ),
-          label: 'Events',
+          label: 'Calendar',
           screen: Container(),
         ),
         BottomBarItem(
@@ -304,7 +304,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             'assets/svg/profile.svg',
             color: Vx.gray400,
           ),
-          label: 'My Ticket',
+          label: 'My Tickets',
           screen: Container(),
         ),
       ],
