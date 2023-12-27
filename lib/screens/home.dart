@@ -32,6 +32,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   final drawerController = AdvancedDrawerController();
+  bool isOpenDrawer = false;
 
   @override
   Widget build(BuildContext context) {
@@ -1050,7 +1051,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   }
 
   Row buildTopAppBar() {
-    bool isOpenDrawer = false;
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -1066,7 +1066,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           child: Container(
             color: Colors.transparent,
             padding: EdgeInsets.all(5.sp),
-            child: SvgPicture.asset("assets/svg/drawer.svg"),
+            child: isOpenDrawer ? Icon(Icons.close): SvgPicture.asset("assets/svg/drawer.svg"),
           ),
         ),
         Column(
