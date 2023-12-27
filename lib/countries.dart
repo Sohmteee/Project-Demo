@@ -1,6 +1,6 @@
 import 'package:dart_countries/dart_countries.dart';
 
-List countryList = countries
+List<Map<>> countryList = countries
     .map(
       (country) => {
         'name': country.name,

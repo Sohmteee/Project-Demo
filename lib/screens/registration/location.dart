@@ -17,6 +17,7 @@ class LocationScreen extends StatefulWidget {
 }
 
 class _LocationScreenState extends State<LocationScreen> {
+  var selectedCountry = countryList[0];
   @override
   void initState() {
     countryList.sort((a, b) => a['name'].compareTo(b['name']));
@@ -248,7 +249,12 @@ class _LocationScreenState extends State<LocationScreen> {
                     SizedBox(width: 16.w),
                     Column(
                       children: [
-                        
+                        DMSansText(
+                          'United States',
+                          fontSize: 18.sp,
+                          fontWeight: FontWeight.w500,
+                        ),
+
                       ],
                     ),
                   ],
