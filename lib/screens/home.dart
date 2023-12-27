@@ -101,8 +101,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   return Row(
                     children: [
                       (index == 1)
-                          ? SvgPicture.asset(drawerOptions[index]['icon'])
-                          : SvgPicture.asset(drawerOptions[index]['icon']),
+                          ? drawerOptions[index]['icon']
+                          : drawerOptions[index]['icon'],
                       SizedBox(width: 20.w),
                       Text(
                         drawerOptions[index]['title'],

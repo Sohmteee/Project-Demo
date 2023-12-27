@@ -1,3 +1,5 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -41,7 +43,11 @@ List upcomingEvents = [
 
 List drawerOptions = [
   {
-    'icon': 'assets/svg/drawer/user.svg',
+    'icon': SvgPicture.asset(
+      'assets/svg/drawer/user.svg',
+      width: 23.w,
+      height: 23.h,
+    ),
     'title': 'My Profile',
   },
   {
