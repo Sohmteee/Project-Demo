@@ -128,9 +128,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       Text(
                         drawerOptions[index]['title'],
                         style: TextStyle(
-                          color: themeProvider.themeType == ThemeType.light
-                              ? blackTextColor
-                              : Colors.white,
+                          color: Theme.of(context).colorScheme.secondary,
                           fontSize: 18.sp,
                         ),
                       ),
@@ -162,9 +160,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   Text(
                     '${themeProvider.themeType == ThemeType.light ? 'Light' : 'Dark'} Mode',
                     style: TextStyle(
-                      color: themeProvider.themeType == ThemeType.light
-                          ? blackTextColor
-                          : Colors.white,
+                      color: Theme.of(context).colorScheme.secondary,
                       fontSize: 18.sp,
                     ),
                   ),
@@ -254,9 +250,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       Text(
                         'Near You',
                         style: TextStyle(
-                          color: themeProvider.themeType == ThemeType.light
-                              ? blackTextColor
-                              : Colors.white,
+                          color: Theme.of(context).colorScheme.secondary,
                           fontSize: 20.sp,
                           fontWeight: FontWeight.bold,
                         ),
@@ -356,10 +350,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             Text(
                               'Invite your friends',
                               style: TextStyle(
-                                color:
-                                    themeProvider.themeType == ThemeType.light
-                                        ? blackTextColor
-                                        : Colors.white,
+                                color: Theme.of(context).colorScheme.secondary,
                                 fontSize: 20.sp,
                                 fontWeight: FontWeight.bold,
                               ),
