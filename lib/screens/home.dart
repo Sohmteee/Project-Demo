@@ -193,9 +193,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       return Container(
                         width: 60.w,
                         height: 60.w,
-                        decoration: const BoxDecoration(
-                          color: Colors.grey,
+                        decoration: BoxDecoration(
+                          color: Colors.grey[300],
                           shape: BoxShape.circle,
+                        ),
+                        child: const Icon(
+                          Icons.error,
                         ),
                       );
                     },
@@ -968,7 +971,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       return Container(
                         width: 24.w,
                         height: 24.w,
-                        decoration:  BoxDecoration(
+                        decoration: BoxDecoration(
                           color: Colors.grey[300],
                           shape: BoxShape.circle,
                         ),
@@ -1012,8 +1015,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       return Container(
                         width: 24.w,
                         height: 24.w,
-                        decoration:  BoxDecoration(
-                          color: Colors.grey,
+                        decoration: BoxDecoration(
+                          color: Colors.grey[300],
                           shape: BoxShape.circle,
                         ),
                         child: const Icon(
