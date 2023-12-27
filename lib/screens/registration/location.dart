@@ -113,6 +113,7 @@ class _LocationScreenState extends State<LocationScreen> {
                 child: DMSansText(
                   'Country or city',
                   fontSize: 18.sp,
+                  color: Theme.of(context).colorScheme.secondary,
                   fontWeight: FontWeight.w500,
                 ),
               ),
