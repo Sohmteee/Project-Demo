@@ -197,9 +197,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           color: Colors.grey,
                           shape: BoxShape.circle,
                         ),
-                      ).animate().shimmer(
-                            delay: 1.seconds,
-                          );
+                      );
                     },
                     loadingBuilder: (context, progress) {
                       return Container(
