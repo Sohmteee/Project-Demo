@@ -231,7 +231,11 @@ class _LocationScreenState extends State<LocationScreen> {
                           .contains(pattern.toLowerCase()))
                       .toList();
                 },
-                onSelected: (country) {},
+                onSelected: (country) {
+                  setState(() {
+                    selectedCountry = country;
+                  });
+                },
               ),
               SizedBox(height: 17.h),
               Container(
