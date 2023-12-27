@@ -617,14 +617,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                           daysDifference.toString(),
                                           color: upcomingEvents[index]
                                               ['date-color'],
-                                          fontSize: 10.sp,
+                                          fontSize: 12.sp,
                                           fontWeight: FontWeight.w600,
                                         ),
                                         DMSansText(
                                           "Days",
                                           color: upcomingEvents[index]
                                               ['date-color'],
-                                          fontSize: 10.sp,
+                                          fontSize: 12.sp,
                                           fontWeight: FontWeight.w400,
                                         ),
                                       ],
@@ -635,14 +635,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                           hoursDifference.toString(),
                                           color: upcomingEvents[index]
                                               ['date-color'],
-                                          fontSize: 10.sp,
+                                          fontSize: 12.sp,
                                           fontWeight: FontWeight.w600,
                                         ),
                                         DMSansText(
                                           "Hours",
                                           color: upcomingEvents[index]
                                               ['date-color'],
-                                          fontSize: 10.sp,
+                                          fontSize: 12.sp,
                                           fontWeight: FontWeight.w400,
                                         ),
                                       ],
@@ -653,14 +653,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                           minutesDifference.toString(),
                                           color: upcomingEvents[index]
                                               ['date-color'],
-                                          fontSize: 10.sp,
+                                          fontSize: 12.sp,
                                           fontWeight: FontWeight.w600,
                                         ),
                                         DMSansText(
                                           "Minutes",
                                           color: upcomingEvents[index]
                                               ['date-color'],
-                                          fontSize: 10.sp,
+                                          fontSize: 12.sp,
                                           fontWeight: FontWeight.w400,
                                         ),
                                       ],
@@ -671,14 +671,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                           secondsDifference.toString(),
                                           color: upcomingEvents[index]
                                               ['date-color'],
-                                          fontSize: 10.sp,
+                                          fontSize: 12.sp,
                                           fontWeight: FontWeight.w600,
                                         ),
                                         DMSansText(
                                           "Seconds",
                                           color: upcomingEvents[index]
                                               ['date-color'],
-                                          fontSize: 10.sp,
+                                          fontSize: 12.sp,
                                           fontWeight: FontWeight.w400,
                                         ),
                                       ],
