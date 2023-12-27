@@ -316,9 +316,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(20.w, 15.h, 20.w, 15.h),
+                padding: EdgeInsets.symmetric(horizontal: 20.w),
                 child: SizedBox(
-                  height: 150.h,
+                  height: 130.h,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
