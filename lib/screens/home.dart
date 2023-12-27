@@ -220,18 +220,15 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               child: ListView.separated(
                 itemCount: drawerOptions.length,
                 itemBuilder: (BuildContext context, int index) {
-                  return Row(
-                    children: [
-                      drawerOptions[index]['icon'],
-                      SizedBox(width: 20.w),
-                      Text(
-                        drawerOptions[index]['title'],
-                        style: TextStyle(
-                          color: Theme.of(context).colorScheme.secondary,
-                          fontSize: 18.sp,
-                        ),
+                  return ListTile(
+                    leading: drawerOptions[index]['icon'],
+                    title: Text(
+                      drawerOptions[index]['title'],
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.secondary,
+                        fontSize: 18.sp,
                       ),
-                    ],
+                    ),
                   );
                 },
                 separatorBuilder: (BuildContext context, int index) {
