@@ -119,11 +119,23 @@ class _SignInScreenState extends State<SignInScreen> {
                           onTap: () {
                             Navigator.pushNamed(context, '/reset-password');
                           },
-                          child: AirBnBText(
-                            'Forgot Password?',
-                            color: Theme.of(context).colorScheme.secondary,
-                            fontSize: 18.sp,
-                            fontWeight: FontWeight.w400,
+                          child: ShaderMask(
+                            blendMode: BlendMode.srcIn,
+                            shaderCallback: (Rect bounds) => LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [
+                                lightOrangeColor,
+                                darkOrangeColor,
+                              ],
+                              tileMode: TileMode.mirror,
+                            ).createShader(bounds),
+                            child: AirBnBText(
+                              'Forgot Password?',
+                              color: Theme.of(context).colorScheme.secondary,
+                              fontSize: 18.sp,
+                              fontWeight: FontWeight.w400,
+                            ),
                           ),
                         ),
                       ],
