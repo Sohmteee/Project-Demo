@@ -54,6 +54,7 @@ class _LocationScreenState extends State<LocationScreen> {
           height: 48,
           margin: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
           decoration: BoxDecoration(
+            color: Colors.transparent,
             borderRadius: BorderRadius.circular(10.r),
             gradient: LinearGradient(
               begin: Alignment.topCenter,
