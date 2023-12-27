@@ -552,24 +552,19 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       ],
                     ),
                     SizedBox(height: 10.h),
-                    Text(
+                    AirBnBText(
                       upcomingEvents[index]['title'],
-                      style: TextStyle(
-                        color: themeProvider.themeType == ThemeType.light
-                            ? blackTextColor
-                            : Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: .5,
-                      ),
+                      color: Theme.of(context).colorScheme.secondary,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
                     ),
-                    SizedBox(height: 10),
+                    SizedBox(height: 10.h),
                     buildGoingRow(),
-                    SizedBox(height: 10),
+                    SizedBox(height: 10.h),
                     Row(
                       children: [
                         SvgPicture.asset('assets/svg/map-pin.svg'),
-                        SizedBox(width: 5),
+                        SizedBox(width: 5.w),
                         Text(
                           upcomingEvents[index]['location'],
                           style: TextStyle(
