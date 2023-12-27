@@ -67,11 +67,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         fontSize: 22.sp,
         fontWeight: FontWeight.w700,
         textAlign: TextAlign.center,
-      ).animate().moveY(
-            delay: 300.milliseconds,
-            begin: 450.h,
-            end: 0,
-            duration: 800.milliseconds,
+      ).animate().fadeIn(
+            delay: 200.milliseconds,
+            duration: 300.milliseconds,
             curve: Curves.easeInCubic,
           );
     });
@@ -85,9 +83,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         height: 1.8,
       ).animate().moveX(
             delay: 300.milliseconds,
-            begin: 450.w,
+            begin: 300.w,
             end: 0,
-            duration: 800.milliseconds,
+            duration: 200.milliseconds,
             curve: Curves.easeInCubic,
           );
     });
