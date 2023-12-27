@@ -230,6 +230,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 itemBuilder: (BuildContext context, int index) {
                   return ListTile(
                     onTap: drawerOptions[index]['onTap'],
+                    enableFeedback: true,
                     leading: drawerOptions[index]['icon'],
                     title: Text(
                       drawerOptions[index]['title'],
