@@ -192,7 +192,7 @@ class _LocationScreenState extends State<LocationScreen> {
                   );
                 },
                 suggestionsCallback: (pattern) {
-                  return countries
+                  return countryList
                       .where((country) =>
                           country.toLowerCase().contains(pattern.toLowerCase()))
                       .toList();
