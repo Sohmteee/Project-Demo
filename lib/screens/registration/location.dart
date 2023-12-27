@@ -120,7 +120,7 @@ class _LocationScreenState extends State<LocationScreen> {
                   return ListTile(
                     minVerticalPadding: 2,
                     title: AirBnBText(
-                      country.toString(),
+                      country['name'],
                     ),
                   );
                 },
