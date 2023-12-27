@@ -526,8 +526,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 padding: EdgeInsets.all(10.sp),
                 decoration: BoxDecoration(
                   color: themeProvider.themeType == ThemeType.light
-                      ? Colors.white
-                      : Vx.gray600,
+                      ? lightBackgroundColor
+                      : darkBackgroundColor,
                   borderRadius: BorderRadius.circular(20.r),
                   boxShadow: [
                     BoxShadow(
