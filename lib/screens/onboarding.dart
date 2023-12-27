@@ -127,22 +127,28 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               ),
               child: Column(
                 children: [
-                  PageView.builder(
-                    controller: imageController,
-                    scrollDirection: Axis.horizontal,
-                    itemCount: 3,
-                    itemBuilder: (context, index) {
-                      return titles[index];
-                    },
+                  SizedBox(
+                    height: 40.h,
+                    child: PageView.builder(
+                      controller: imageController,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: 3,
+                      itemBuilder: (context, index) {
+                        return titles[index];
+                      },
+                    ),
                   ),
                   SizedBox(height: 10.h),
-                  PageView.builder(
-                    controller: imageController,
-                    scrollDirection: Axis.horizontal,
-                    itemCount: 3,
-                    itemBuilder: (context, index) {
-                      return descriptions[index];
-                    },
+                  SizedBox(
+                    height: 20.h,
+                    child: PageView.builder(
+                      controller: imageController,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: 3,
+                      itemBuilder: (context, index) {
+                        return descriptions[index];
+                      },
+                    ),
                   ),
                   const Spacer(),
                   Row(
