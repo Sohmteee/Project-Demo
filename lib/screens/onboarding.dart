@@ -15,8 +15,6 @@ class OnboardingScreen extends StatefulWidget {
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
   final imageController = PageController();
-  final titleController = PageController();
-  final descriptionController = PageController();
   int onBoardingIndex = 0;
   List onBoardingData = [
     {
@@ -59,37 +57,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         ],
       );
     });
-
-    List titles = List.generate(3, (index) {
-      return DMSansText(
-        onBoardingData[index]['title'],
-        color: Colors.white,
-        fontSize: 22.sp,
-        fontWeight: FontWeight.w700,
-        textAlign: TextAlign.center,
-      ).animate().fadeIn(
-            delay: 200.milliseconds,
-            duration: 300.milliseconds,
-            curve: Curves.easeInCubic,
-          );
-    });
-
-    List descriptions = List.generate(3, (index) {
-      return DMSansText(
-        onBoardingData[index]['description'],
-        color: Colors.white,
-        fontSize: 15.sp,
-        textAlign: TextAlign.center,
-        height: 1.8,
-      ).animate().moveX(
-            delay: 300.milliseconds,
-            begin: 300.w,
-            end: 0,
-            duration: 200.milliseconds,
-            curve: Curves.easeInCubic,
-          );
-    });
-
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
@@ -108,14 +75,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             PageView.builder(
               controller: imageController,
               scrollDirection: Axis.horizontal,
-              physics: const BouncingScrollPhysics(),
-              onPageChanged: (index) {
-                setState(() {
-                  onBoardingIndex = index;
-                });
-                titleController.jumpToPage(index);
-                descriptionController.jumpToPage(index);
-              },
               itemCount: 3,
               itemBuilder: (context, index) {
                 return images[index];
@@ -145,30 +104,20 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               ),
               child: Column(
                 children: [
-                  SizedBox(
-                    height: 60.h,
-                    child: PageView.builder(
-                      controller: titleController,
-                      scrollDirection: Axis.horizontal,
-                      physics: const NeverScrollableScrollPhysics(),
-                      itemCount: 3,
-                      itemBuilder: (context, index) {
-                        return titles[index];
-                      },
-                    ),
+                  DMSansText(
+                    onBoardingData[onBoardingIndex]['title'],
+                    color: Colors.white,
+                    fontSize: 22.sp,
+                    fontWeight: FontWeight.w700,
+                    textAlign: TextAlign.center,
                   ),
                   SizedBox(height: 10.h),
-                  SizedBox(
-                    height: 65.h,
-                    child: PageView.builder(
-                      controller: descriptionController,
-                      scrollDirection: Axis.horizontal,
-                      physics: const NeverScrollableScrollPhysics(),
-                      itemCount: 3,
-                      itemBuilder: (context, index) {
-                        return descriptions[index];
-                      },
-                    ),
+                  DMSansText(
+                    onBoardingData[onBoardingIndex]['description'],
+                    color: Colors.white,
+                    fontSize: 15.sp,
+                    textAlign: TextAlign.center,
+                    height: 1.8,
                   ),
                   const Spacer(),
                   Row(
@@ -226,8 +175,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               duration: 300.milliseconds,
                               curve: Curves.easeIn,
                             );
-                            titleController.jumpToPage(onBoardingIndex);
-                            descriptionController.jumpToPage(onBoardingIndex);
                           } else {
                             Navigator.pushReplacementNamed(context, '/sign-in');
                           }
