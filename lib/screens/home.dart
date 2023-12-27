@@ -1066,9 +1066,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             color: Colors.transparent,
             padding: EdgeInsets.all(5.sp),
             child: isOpenDrawer
-                ? Icon(
+                ? const Icon(
                     Icons.close,
-                    color: Theme.of(context).colorScheme.secondary,
+                    color: lightBackgroundColor,
                   )
                 : SvgPicture.asset("assets/svg/drawer.svg"),
           ),
