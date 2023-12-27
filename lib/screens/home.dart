@@ -596,6 +596,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 ),
                               ),
                               Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
                                 children: [
                                   Column(
                                     children: [
@@ -608,6 +610,24 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                       ),
                                       DMSansText(
                                         "Days",
+                                        color: upcomingEvents[index]
+                                            ['date-color'],
+                                        fontSize: 10.sp,
+                                        fontWeight: FontWeight.w400,
+                                      ),
+                                    ],
+                                  ),
+                                  Column(
+                                    children: [
+                                      DMSansText(
+                                        hoursDifference.toString(),
+                                        color: upcomingEvents[index]
+                                            ['date-color'],
+                                        fontSize: 10.sp,
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                                      DMSansText(
+                                        "Hours",
                                         color: upcomingEvents[index]
                                             ['date-color'],
                                         fontSize: 10.sp,
