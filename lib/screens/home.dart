@@ -332,8 +332,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             child: Stack(
               children: [
                 Positioned(
-                  right: -40.w,
-                  bottom: -60.h,
+                  right: -30.w,
+                  bottom: -70.h,
                   child: Transform(
                     transform: Matrix4.identity()
                       ..translate(0.0, 0.0)
