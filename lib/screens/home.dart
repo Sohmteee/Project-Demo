@@ -199,6 +199,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         ),
                         child: const Icon(
                           Icons.error,
+                          color: Colors.red,
                         ),
                       );
                     },
@@ -622,6 +623,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 ),
                                 child: const Icon(
                                   Icons.error,
+                                  color: Colors.red,
                                 ),
                               );
                             },
@@ -932,6 +934,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         ),
                         child: const Icon(
                           Icons.error,
+                          color: Colors.red,
                         ),
                       );
                     },
@@ -977,6 +980,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         ),
                         child: const Icon(
                           Icons.error,
+                          color: Colors.red,
                         ),
                       );
                     },
@@ -1021,6 +1025,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         ),
                         child: const Icon(
                           Icons.error,
+                          color: Colors.red,
                         ),
                       );
                     },
