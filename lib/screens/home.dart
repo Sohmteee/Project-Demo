@@ -599,14 +599,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 children: [
                                   Column(
                                     children: [
-                                      Text(
-                                        eventDate.day.toString(),
-                                        style: TextStyle(
-                                          color: upcomingEvents[index]
-                                              ['date-color'],
-                                          fontSize: 20.sp,
-                                          fontWeight: FontWeight.bold,
-                                        ),
+                                      DMSansText(
+                                        day.toString(),
+                                        color: upcomingEvents[index]
+                                            ['date-color'],
+                                        fontSize: 9.sp,
+                                        fontWeight: FontWeight.w600,
                                       ),
                                       Text(
                                         secondsDifference.toString(),
