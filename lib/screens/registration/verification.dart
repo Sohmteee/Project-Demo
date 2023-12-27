@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:pinput/pinput.dart';
 import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
@@ -90,6 +91,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                   Navigator.pop(context);
                 },
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     AirBnBText(
                       'Re-send code in  ',
@@ -97,18 +99,29 @@ class _VerificationScreenState extends State<VerificationScreen> {
                       fontSize: 16.sp,
                       fontWeight: FontWeight.w400,
                     ),
-                    AirBnBText(
-                      '0:20',
-                      color: themeProvider.themeType == ThemeType.light
-                          ? lightOrangeColor
-                          : darkOrangeColor,
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w400,
+                    ShaderMask(
+                      blendMode: BlendMode.srcIn,
+                      shaderCallback: (Rect bounds) => LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          lightOrangeColor,
+                          darkOrangeColor,
+                        ],
+                        tileMode: TileMode.mirror,
+                      ).createShader(bounds),
+                      child: AirBnBText(
+                        '0:20',
+                        color: themeProvider.themeType == ThemeType.light
+                            ? lightOrangeColor
+                            : darkOrangeColor,
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.w400,
+                      ),
                     ),
                   ],
                 ),
               ),
-              Expanded(child: Container()),
             ],
           ),
         ),
@@ -132,7 +145,8 @@ class _VerificationScreenState extends State<VerificationScreen> {
     );
 
     final focusedPinTheme = defaultPinTheme.copyDecorationWith(
-      border: Border.all(color: lightOrangeColor),
+      // border: Border.all(color: lightOrangeColor),
+      border: GradientBoxBorder(gradient: LinearGradient(colors: )),
     );
 
     return Pinput(
