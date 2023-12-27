@@ -226,6 +226,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               height: drawerOptions.length * 60.h,
               child: ListView.builder(
                 itemCount: drawerOptions.length,
+                physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (BuildContext context, int index) {
                   return ListTile(
                     onTap: drawerOptions[index]['onTap'],
