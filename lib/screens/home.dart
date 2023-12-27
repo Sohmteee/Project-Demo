@@ -446,7 +446,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             itemCount: upcomingEvents.length,
             itemBuilder: (BuildContext context, int index) {
               DateTime eventDate = upcomingEvents[index]['time'];
-              DateTime timeRemaining = eventDate.t);
+              DateTime timeRemaining = DateTime.now().difference(eventDate);
               return Container(
                 width: 240,
                 margin: EdgeInsets.symmetric(horizontal: 5.w),
