@@ -72,10 +72,14 @@ List drawerOptions = [
     'title': 'Gallery',
   },
   {
-    'icon': SvgPicture.asset(
-      'assets/svg/drawer/user.svg',
-      width: 23.w,
-      height: 23.h,
+    'icon': Stack(
+      children: [
+        SvgPicture.asset(
+          'assets/svg/drawer/user.svg',
+          width: 23.w,
+          height: 23.h,
+        ),
+      ],
     ),
     'title': 'Find Friends',
   },
