@@ -18,6 +18,12 @@ class LocationScreen extends StatefulWidget {
 
 class _LocationScreenState extends State<LocationScreen> {
   @override
+  void initState() {
+    countryList.sort((a, b) => a['name'].compareTo(b['name']));
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
 
@@ -182,8 +188,9 @@ class _LocationScreenState extends State<LocationScreen> {
                 },
                 suggestionsCallback: (pattern) {
                   return countryList
-                      .where((country) =>
-                          country['name'].toLowerCase().contains(pattern.toLowerCase()))
+                      .where((country) => country['name']
+                          .toLowerCase()
+                          .contains(pattern.toLowerCase()))
                       .toList();
                 },
                 onSelected: (country) {},
