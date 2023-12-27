@@ -125,7 +125,9 @@ class _VerificationScreenState extends State<VerificationScreen> {
               SizedBox(height: 24.h),
               GestureDetector(
                 onTap: () {
-                  if ()
+                  if (time == 0) {
+                    restartTimer();
+                  }
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
