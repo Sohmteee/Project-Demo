@@ -850,7 +850,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 child: FastCachedImage(
                                   width: 16.w,
                                   height: 16.h,
-                                  url: dp3Path,
+                                  url: googleMeetPath,
                                   fit: BoxFit.cover,
                                   fadeInDuration: const Duration(seconds: 1),
                                   errorBuilder:
@@ -858,12 +858,15 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                     return Container(
                                       width: 16.w,
                                       height: 16.h,
-                                      decoration:  BoxDecoration(
+                                      decoration: BoxDecoration(
                                         color: Colors.grey,
                                         borderRadius: BorderRadius.circular(
                                           10.r,
                                         ),
-                                        child: 
+                                      ),
+                                      child: const Icon(
+                                        Icons.error,
+                                        color: Colors.red,
                                       ),
                                     );
                                   },
