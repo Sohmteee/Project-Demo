@@ -1,3 +1,4 @@
+import 'package:dart_countries/dart_countries.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -20,7 +21,9 @@ class LocationScreen extends StatefulWidget {
 class _LocationScreenState extends State<LocationScreen> {
   @override
   void initState() {
-    countries
+    countriesName.forEach((country) {
+      print(country);
+    });
     super.initState();
   }
   @override
