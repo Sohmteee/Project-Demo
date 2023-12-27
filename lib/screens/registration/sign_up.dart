@@ -144,7 +144,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   fontSize: 18.sp,
                   fontWeight: FontWeight.w500,
                 ),
-                SizedBox(height: 10.h),
+                SizedBox(height: 15.h),
                 LoginOption(
                   logo: 'assets/images/logos/google-logo.png',
                   text: 'Login with Google',
