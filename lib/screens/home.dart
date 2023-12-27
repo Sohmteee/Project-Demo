@@ -212,8 +212,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       bottomNavItemLabelHeight: 15.h,
       fabWidth: 50.w,
       fabIcon: Container(
-        height: 50.h,
-        width: 50.h,
+        height: 54.h,
+        width: 54.w,
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
