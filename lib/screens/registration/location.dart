@@ -233,9 +233,12 @@ class _LocationScreenState extends State<LocationScreen> {
                 },
                 suggestionsCallback: (pattern) {
                   return countryList
-                      .where((country) => country['name']
-                          .toLowerCase()
-                          .contains(pattern.toLowerCase()))
+                      .where((country) =>
+                          (country['name'] == 'United States of America'
+                                  ? 'United States'
+                                  : country['name'])
+                              .toLowerCase()
+                              .contains(pattern.toLowerCase()))
                       .toList();
                 },
                 onSelected: (country) {
