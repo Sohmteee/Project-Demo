@@ -75,11 +75,15 @@ class _LocationScreenState extends State<LocationScreen> {
                 ),
               ),
               SizedBox(height: 30.h),
-              DMSansText(
-                'Country or city',
-                fontSize: 16.sp,
-                fontWeight: FontWeight.w400,
+              Align(
+                alignment: Alignment.centerLeft,
+                child: DMSansText(
+                  'Country or city',
+                  fontSize: 18.sp,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
+              SizedBox(height: 9.h),
               TypeAheadField(
                 hideOnEmpty: true,
                 itemBuilder: (context, country) {
