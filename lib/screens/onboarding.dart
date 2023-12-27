@@ -117,7 +117,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     color: Colors.white,
                     fontSize: 15.sp,
                     textAlign: TextAlign.center,
-                    height: 1.8,
                   ),
                   const Spacer(),
                   Row(
