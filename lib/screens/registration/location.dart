@@ -85,7 +85,7 @@ class _LocationScreenState extends State<LocationScreen> {
                     ),
                   );
                 },
-                builder: (context, controller, focusNode) {
+                builder: (context, textController, focusNode) {
                   return Container(
                     padding: EdgeInsets.symmetric(horizontal: 15.w),
                     decoration: BoxDecoration(
