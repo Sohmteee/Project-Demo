@@ -882,7 +882,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     );
   }
 
-  buildAppBar() {
+  buildAppBar(ThemeProvider themeProvider) {
     return PreferredSize(
       preferredSize: Size.fromHeight(200.h),
       child: Stack(
@@ -891,14 +891,15 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           Container(
             height: 180.h,
             decoration: BoxDecoration(
-              gradient: if () LinearGradient(
+              color: (themeProvider.themeType == ThemeType.dark)
+              gradient:  (themeProvider.themeType == ThemeType.light) ? LinearGradient(
                 colors: [
                   lightOrangeColor,
                   darkOrangeColor,
                 ],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-              ),
+              ) : null,
               borderRadius: BorderRadius.vertical(
                 bottom: Radius.circular(20.r),
               ),
