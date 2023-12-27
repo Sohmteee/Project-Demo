@@ -184,12 +184,20 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(1000.r),
                   child: FastCachedImage(
-                    width: ,
+                    width: 60.w,
+                    height: 60.w,
                     url: profilePath,
                     fit: BoxFit.cover,
                     fadeInDuration: const Duration(seconds: 1),
                     errorBuilder: (context, exception, stacktrace) {
-                      return Text(stacktrace.toString());
+                      return Container(
+                        width: 60.w,
+                        height: 60.w,
+                        decoration: const BoxDecoration(
+                          color: Colors.grey,
+                          shape: BoxShape.circle,
+                        ),
+                      );
                     },
                   ),
                 ),
