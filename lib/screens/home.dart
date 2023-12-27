@@ -432,11 +432,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               int minutesDifference = timeRemaining.inMinutes % 60;
               int secondsDifference = timeRemaining.inSeconds % 60;
 
-              Timer timer;
+              // Timer timer;
 
               Timer.periodic(1.seconds, (timer) {
                 setState(() {
-                  Duration timeRemaining = eventDate.difference(DateTime.now());
+                   timeRemaining = eventDate.difference(DateTime.now());
                 });
               });
               return Container(
