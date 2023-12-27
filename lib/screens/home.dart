@@ -4,6 +4,7 @@ import 'dart:async';
 
 import 'package:countries_flag/countries_flag.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
@@ -858,7 +859,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   ),
                   child: Row(
                     children: [
-                      SvgPicture.asset('assets/svg/calendar.svg'),
+                      Icon(
+                        IconlyBold.calendar,
+                        color: ,
+                      ),
                       SizedBox(width: 5.w),
                       DMSansText(
                         categories[index]['title'],
