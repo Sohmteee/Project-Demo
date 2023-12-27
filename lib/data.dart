@@ -85,7 +85,7 @@ List drawerOptions = [
           top: -3,
           right: -4,
           child: SvgPicture.asset(
-            'assets/svg/drawer/user.svg',
+            'assets/svg/drawer/user-small.svg',
             width: 18.w,
             height: 18.h,
           ),
