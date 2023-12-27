@@ -112,8 +112,8 @@ class _ThemeSwitchState extends State<ThemeSwitch> {
               curve: Curves.easeIn,
               left: widget.value ? 12.w : 0,
               child: Container(
-                width: 16.w,
-                height: 16.h,
+                width: 14.w,
+                height: 14.h,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(95.r),
