@@ -181,11 +181,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                CircleAvatar(
-                  backgroundColor: Colors.grey,
-                  radius: 30.r,
-                  backgroundImage: FastCachedImage(url: profilePath),
-                ),
+                ClipRRect(child: FastCachedImage(url: profilePath),),
+                
                 SizedBox(height: 10.h),
                 Text(
                   'Ashfak Sayem',
