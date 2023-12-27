@@ -68,7 +68,7 @@ class _LocationScreenState extends State<LocationScreen> {
                 'Select Location',
                 fontSize: 18.sp,
                 fontWeight: FontWeight.w500,
-                color: Theme.of(context).colorScheme.secondary,
+                color: Colors.white,
               ),
             ),
           ),
