@@ -221,7 +221,7 @@ class _LocationScreenState extends State<LocationScreen> {
               ),
               SizedBox(height: 17.h),
               Container(
-                  padding: EdgeInsets.all(8.sp),
+                  padding: EdgeInsets.fromLTRB(0, 8.sp, 8.sp, 8.sp),
                   decoration: BoxDecoration(
                     color: themeProvider.themeType == ThemeType.light
                         ? lightBackgroundColor
