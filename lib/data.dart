@@ -74,6 +74,7 @@ List drawerOptions = [
   {
     'icon': Stack(
       alignment: Alignment.topRight,
+      clipBehavior: Clip.none,
       children: [
         SvgPicture.asset(
           'assets/svg/drawer/user.svg',
@@ -81,8 +82,8 @@ List drawerOptions = [
           height: 23.h,
         ),
         Positioned(
-          top: -5,
-          right: -5,
+          top: -3,
+          right: -4,
           child: SvgPicture.asset(
             'assets/svg/drawer/user.svg',
             width: 18.w,
