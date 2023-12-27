@@ -611,37 +611,15 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             fadeInDuration: const Duration(seconds: 1),
                             errorBuilder: (context, exception, stacktrace) {
                               return Container(
-                                width: 24.w,
-                                height: 24.w,
-                                decoration: const BoxDecoration(
-                                  color: Colors.grey,
-                                  shape: BoxShape.circle,
+                                width: 218.w,
+                                height: 131.h,
+                                decoration: BoxDecoration(
+                                  color: Colors.grey[300],
+                                  borderRadius: BorderRadius.circular(20.r),
                                 ),
                               );
                             },
                             loadingBuilder: (context, progress) {
-                              return Container(
-                                width: 218.w,
-                                height: 131.h,
-                                decoration: BoxDecoration(
-                                  color: Colors.grey,
-                                  borderRadius: BorderRadius.circular(20.r),
-                                ),
-                              ).animate().shimmer(
-                                    delay: 1.seconds,
-                                  );
-                            },
-                          ),
-                        ),
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(20.r),
-                          child: Image.network(
-                            upcomingEvents[index]['image'],
-                            width: 218.w,
-                            height: 131.h,
-                            fit: BoxFit.cover,
-                            loadingBuilder: (context, child, loadingProgress) {
-                              if (loadingProgress == null) return child;
                               return Container(
                                 width: 218.w,
                                 height: 131.h,
