@@ -918,24 +918,15 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     },
                     loadingBuilder: (context, progress) {
                       return Container(
-                        color: Colors.yellow,
-                        child: Stack(
-                          alignment: Alignment.center,
-                          children: [
-                            if (progress.isDownloading &&
-                                progress.totalBytes != null)
-                              Text(
-                                  '${progress.downloadedBytes ~/ 1024} / ${progress.totalBytes! ~/ 1024} kb',
-                                  style: const TextStyle(color: Colors.red)),
-                            SizedBox(
-                                width: 120,
-                                height: 120,
-                                child: CircularProgressIndicator(
-                                    color: Colors.red,
-                                    value: progress.progressPercentage.value)),
-                          ],
+                        width: 24.w,
+                        height: 24.w,
+                        decoration: const BoxDecoration(
+                          color: Colors.grey,
+                          shape: BoxShape.circle,
                         ),
-                      );
+                      ).animate().shimmer(
+                            delay: 1.seconds,
+                          );
                     },
                   ),
                 ),
