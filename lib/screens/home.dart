@@ -449,18 +449,18 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           height: 270,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
-            padding: EdgeInsets.all(10),
+            padding: EdgeInsets.all(10.sp),
             physics: const BouncingScrollPhysics(),
             itemCount: upcomingEvents.length,
             itemBuilder: (BuildContext context, int index) {
               return Container(
-                margin: EdgeInsets.symmetric(horizontal: 5),
-                padding: EdgeInsets.all(10),
+                margin: EdgeInsets.symmetric(horizontal: 5.w),
+                padding: EdgeInsets.all(10.sp),
                 decoration: BoxDecoration(
                   color: themeProvider.themeType == ThemeType.light
                       ? Colors.white
                       : Vx.gray600,
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(20.r),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.grey.withOpacity(.1),
@@ -475,26 +475,26 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     Stack(
                       children: [
                         ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
+                          borderRadius: BorderRadius.circular(20.r),
                           child: Image.asset(
                             upcomingEvents[index]['image'],
-                            width: 240,
-                            height: 120,
+                            width: 240.w,
+                            height: 120.h,
                             fit: BoxFit.cover,
                           ),
                         ),
                         Positioned(
-                          top: 10,
-                          left: 10,
+                          top: 10.h,
+                          left: 10.w,
                           child: Stack(
                             alignment: Alignment.center,
                             children: [
                               Blur(
                                 blur: 3,
-                                borderRadius: BorderRadius.circular(10),
+                                borderRadius: BorderRadius.circular(10.r),
                                 child: Container(
-                                  height: 50,
-                                  width: 50,
+                                  height: 50.h,
+                                  width: 50.w,
                                   padding: EdgeInsets.all(5),
                                   decoration: BoxDecoration(
                                     color: Colors.grey.withOpacity(.1),
