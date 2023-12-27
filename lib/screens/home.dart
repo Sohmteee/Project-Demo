@@ -53,11 +53,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               color: Color(0x3FBCBCBC),
               blurRadius: 10,
             ),
-            BoxShadow(
-              offset: Offset(-30, 5),
+            /* BoxShadow(
+              offset: Offset(-30, 0),
               color: Color(0x3FBCBCBC),
               blurRadius: 10,
-            ),
+            ), */
           ],
         ),
         child: Scaffold(
@@ -122,7 +122,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   );
                 },
                 separatorBuilder: (BuildContext context, int index) {
-                  return SizedBox(height: 20.h);
+                  return SizedBox(height: 30.h);
                 },
               ),
             ),
