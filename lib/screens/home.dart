@@ -46,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         backdropColor: Theme.of(context).colorScheme.primary,
         drawer: buildDrawerItems(themeProvider),
         childDecoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(40.r),
+          borderRadius: BorderRadius.circular(30.r),
           boxShadow: const [
             BoxShadow(
               offset: Offset(-10, 0),
