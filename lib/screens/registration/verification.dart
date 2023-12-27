@@ -159,6 +159,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
     return Pinput(
       defaultPinTheme: defaultPinTheme,
       focusedPinTheme: focusedPinTheme,
+      
       validator: (s) {
         return s == '4444' ? null : 'OTP is incorrect (Correct OTP is 4444)';
       },
