@@ -139,7 +139,17 @@ class _VerificationScreenState extends State<VerificationScreen> {
         fontWeight: FontWeight.w600,
       ),
       decoration: BoxDecoration(
-        border: Border.all(color: HexColor('#DADADA')),
+        // border: Border.all(color: HexColor('#DADADA')),
+        border: GradientBoxBorder(
+          gradient: LinearGradient(
+            colors: [
+              lightOrangeColor,
+              darkOrangeColor,
+            ],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          ),
+        ),
         borderRadius: BorderRadius.circular(15.r),
       ),
     );
