@@ -29,15 +29,16 @@ class _AppTextFieldState extends State<AppTextField> {
 
   @override
   Widget build(BuildContext context) {
-  final themeProvider = Provider.of<ThemeProvider>(context);
+    final themeProvider = Provider.of<ThemeProvider>(context);
 
-  
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 15.w),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12.r),
         border: Border.all(
-          color:  HexColor('#E4DFDF') : Color(0x21E4DEDE),
+          color: themeProvider.themeType == ThemeType.light
+              ? HexColor('#E4DFDF')
+              : const Color(0x21E4DEDE),
           width: 1.w,
         ),
       ),
