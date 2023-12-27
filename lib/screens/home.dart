@@ -868,9 +868,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 child: CircleAvatar(
                   backgroundColor: Colors.grey,
                   radius: 12.r,
-                  backgroundImage: Image.network(
-                    'https://s3-alpha-sig.figma.com/img/e6e0/802c/b43aceb267d24e6c72e464bbc8fa5f13?Expires=1704672000&Signature=kQjSDvPxiZSZcbRKp-T6Lty1fua7vGtBVQi5lTyEmtbMj~-6JR7TfO8y3Sa~5TLt1uPxa30ZEe6pJeCDyNX5tnqWn65s8uOwheBlANQbB9Du8zkGehJ8HdTGXT3L6T0Z9oGkpr8QbMHW-mBKsdyERxVNqyVwXmBx7p~AFfACNb0TWtbp26PKenfewx1yFu1Y1cQZ2fAfpf3aWIsfhDgZzEOfY~1l2B3Zt9Pf3ZxsELXPiyotp089fLnvfQBt7eNqgGUEwqN3J509d3QCNq6Ogqme962M1ofHik7MdbaCw88K95nfTCt0NnQIIyyoNh2xkZzJxBsfyBWn3WzK2RTCWA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
-                  ).image,
+                  backgroundImage: Image.network(dp3Path).image,
                 ),
               ),
             ),
@@ -885,7 +883,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 child: CircleAvatar(
                   backgroundColor: Colors.grey,
                   radius: 12.r,
-                  backgroundImage: Image.network(dp1Path).image,
+                  backgroundImage: Image.network(dp2Path).image,
                 ),
               ),
             ),
@@ -900,8 +898,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   backgroundColor: Colors.grey,
                   radius: 12.r,
                   backgroundImage: Image.network(
-                    'https://s3-alpha-sig.figma.com/img/a511/6394/d8c24efab59533add110ee8338355c42?Expires=1704672000&Signature=o~qNynJCmFvYNkx15~TmNH1LLOny9v75d517ooC8zY3ks5jXXifGClCErqwnrP5a-U7OO9rxZU6uAiwiwJrEosGrqsG4ENSFs7YXL-2mOgklE80DuhGivy0Sq~mDpovVNU3kAeCC3XR5~e-IAGJLG~TsSI0BLhl0C5xNVzV~W7NLFpb6Nnt~NSNB7qp3OUCu7~eHcdnxRDJ6CLmsOyacWo0bV00yYP5C5QYf8AoxEtshedO~fIgtfl1w1saQYCz3wdHl8V8iYoFEYD4XMPuNAc-PJWT2NblbAsSFBIDWztYdO5Ovs0QFmuc16HT2WHYq7TxgpWHeO6YaBBnuzS8T4w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
-                  ).image,
+dp1Path,                  ).image,
                 ),
               ),
             ),
