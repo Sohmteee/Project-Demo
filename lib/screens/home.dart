@@ -150,8 +150,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           ),
         ), */
             ThemeSwitch(
-          value: false,
-          onChanged: (value) {},
+          value: themeProvider.themeType == ThemeType.dark,
+          onChanged: (value) {
+            themeProvider.toggleTheme();
+          },
         ),
         'title': 'Theme Mode',
       },
