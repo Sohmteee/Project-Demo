@@ -1,8 +1,11 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:yeerlo/colors/hex_color.dart';
 
 // bool isLightTheme = true;
 
@@ -53,8 +56,9 @@ List drawerOptions = [
   },
   {
     'icon': Icon(
-      ILigh.calendar,
+      IconlyLight.calendar,
       size: 23.w,
+      color: HexColor('#767676'),
     ),
     'title': 'My Events',
   },
@@ -63,6 +67,7 @@ List drawerOptions = [
       'assets/svg/drawer/gallery.svg',
       width: 23.w,
       height: 23.h,
+      color: HexColor('#767676'),
     ),
     'title': 'Gallery',
   },
