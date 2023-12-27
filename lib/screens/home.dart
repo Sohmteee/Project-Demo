@@ -418,28 +418,23 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     return Column(
       children: [
         Padding(
-          padding:  EdgeInsets.symmetric(horizontal: 20.w),
+          padding: EdgeInsets.symmetric(horizontal: 20.w),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               AirBnBText(
                 'Upcoming Events',
-                  color: themeProvider.themeType == ThemeType.light
-                      ? blackTextColor
-                      : Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
+                color: Theme.of(context).colorScheme.secondary,
+                fontSize: 20.sp,
+                fontWeight: FontWeight.bold,
               ),
               Row(
                 children: [
-                  Text(
+                  AirBnBText(
                     'See All',
-                    style: TextStyle(
-                      color: linkTextColor,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    color: linkTextColor,
+                    fontSize: 18.sp,
+                    fontWeight: FontWeight.bold,
                   ),
                   Icon(
                     Icons.arrow_right,
