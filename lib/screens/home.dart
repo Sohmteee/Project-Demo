@@ -467,8 +467,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           borderRadius: BorderRadius.circular(20.r),
                           child: Image.asset(
                             upcomingEvents[index]['image'],
-                            width: 220.w,
-                            height: 120.h,
+                            width: 218.w,
+                            height: 131.h,
                             fit: BoxFit.cover,
                           ),
                         ),
