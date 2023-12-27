@@ -1,3 +1,4 @@
+import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:yeerlo/colors/app_colors.dart';
@@ -59,10 +60,9 @@ List drawerOptions = [
     'title': 'My Events',
   },
   {
-    'icon': SvgPicture.asset(
-      'assets/svg/drawer/gallery.svg',
-      width: 23.w,
-      height: 23.h,
+    'icon': Icon(
+      IconlyBold.calendar,
+      size: 23.w,
     ),
     'title': 'Gallery',
   },
