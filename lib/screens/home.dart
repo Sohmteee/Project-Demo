@@ -435,7 +435,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           ),
         ),
         SizedBox(
-          height: 270,
+          height: 300,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             padding: EdgeInsets.all(10.sp),
@@ -544,7 +544,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     AirBnBText(
                       upcomingEvents[index]['title'],
                       color: Theme.of(context).colorScheme.secondary,
-                      fontSize: 13.sp,
+                      fontSize: 22.sp,
                       fontWeight: FontWeight.bold,
                     ),
                     SizedBox(height: 10.h),
