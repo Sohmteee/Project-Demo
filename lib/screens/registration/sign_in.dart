@@ -87,9 +87,9 @@ class _SignInScreenState extends State<SignInScreen> {
                     ),
                     SizedBox(height: 19.h),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        GestureDetector(
+                        /* GestureDetector(
                           onTap: () {
                             setState(() {
                               rememberMe = !rememberMe;
@@ -114,7 +114,7 @@ class _SignInScreenState extends State<SignInScreen> {
                               ),
                             ],
                           ),
-                        ),
+                        ), */
                         GestureDetector(
                           onTap: () {
                             Navigator.pushNamed(context, '/reset-password');
