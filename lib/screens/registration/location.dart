@@ -221,7 +221,7 @@ class _LocationScreenState extends State<LocationScreen> {
               ),
               SizedBox(height: 17.h),
               Container(
-                  height: 58.h,
+                  padding: EdgeInsets.all(8.sp),
                   decoration: BoxDecoration(
                     color: themeProvider.themeType == ThemeType.light
                         ? lightBackgroundColor
@@ -236,10 +236,14 @@ class _LocationScreenState extends State<LocationScreen> {
                     ],
                   ),
                   child: ListTile(
-                    leading: Image.asset(
-                    'assets/images/flag.png',
-                    
-                  ),
+                    leading: Container(
+                      width: 64.w,
+                      height: 64.h,
+                      decoration: BoxDecoration(
+                        color: lightOrangeColor,
+                        borderRadius: BorderRadius.circular(6.r),
+                      ),
+                    ),
                     title: AirBnBText(
                       'United States',
                       color: Theme.of(context).colorScheme.secondary,
