@@ -1,5 +1,6 @@
 import 'package:countries_flag/countries_flag.dart';
 
 getFlag(String countryName) {
-  return CountriesFlag(countryName.toLowerCase());
+  return CountriesFlag(
+      'assets/flags/${countryName.toLowerCase().replaceAll(' ', '_')}.svg');
 }

@@ -7,6 +7,7 @@ import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/countries.dart';
+import 'package:yeerlo/models/flag.dart';
 import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/theme.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
@@ -273,7 +274,7 @@ class _LocationScreenState extends State<LocationScreen> {
                     Row(
                       children: [
                         CountriesFlag(
-                          'assets/flags/${selectedCountry['name'].toLowerCase().replaceAll(' ', '_')}.svg',
+                          getFlag(countryName: selectedCountry['name'])),
                           width: 64.w,
                           height: 64.h,
                         ),
