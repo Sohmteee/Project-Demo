@@ -504,16 +504,15 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               ),
                               Column(
                                 children: [
-                                  Text(
+                                  DMSansText(
                                     eventDate.day.toString(),
-                                    style: TextStyle(
                                       color: upcomingEvents[index]
                                           ['date-color'],
                                       fontSize: 20.sp,
                                       fontWeight: FontWeight.bold,
-                                    ),
+                                    
                                   ),
-                                  Text(
+                                  DMSansText(
                                     switch (eventDate.month) {
                                       1 => 'JAN',
                                       2 => 'FEB',
@@ -529,11 +528,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                       12 => 'DEC',
                                       _ => ''
                                     },
-                                    style: TextStyle(
                                       color: upcomingEvents[index]
                                           ['date-color'],
                                       fontWeight: FontWeight.bold,
-                                    ),
+                                      fontSize: 10.sp,
                                   ),
                                 ],
                               ),
