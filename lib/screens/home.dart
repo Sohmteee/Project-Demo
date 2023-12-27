@@ -376,7 +376,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           decoration: BoxDecoration(
             color: themeProvider.themeType == ThemeType.light
                 ? lightBlueBackgroundColor
-                : blueColorCategory,
+                : darkBackgroundColor,
             borderRadius: BorderRadius.circular(20.r),
           ),
           child: Stack(
@@ -421,11 +421,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               '\n50% of proceeds from each '
                               '\nticket sale for 2 years.',
                               style: TextStyle(
-                                color: /* Theme.of(context)
+                                color: Theme.of(context)
                                     .colorScheme
                                     .secondary
-                                    .withOpacity(.7) */
-                                    const Color(0xFF484D70),
+                                    .withOpacity(.7),
                                 fontSize: 12.sp,
                               ),
                             ),
