@@ -147,7 +147,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         'icon': ThemeSwitch(
           value: themeProvider.themeType == ThemeType.dark,
           onChanged: (value) {
-            themeProvider.toggleTheme();
+            // themeProvider.toggleTheme();
           },
         ),
         'title': 'Theme Mode',
@@ -228,6 +228,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 itemCount: drawerOptions.length,
                 itemBuilder: (BuildContext context, int index) {
                   return ListTile(
+                    onTap: drawerOptions[index]['onTap'],
                     leading: drawerOptions[index]['icon'],
                     title: Text(
                       drawerOptions[index]['title'],
