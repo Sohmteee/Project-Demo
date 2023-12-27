@@ -10,7 +10,7 @@ final darkOrangeColor = HexColor('#F1573D');
 
 final blueTextColor = HexColor('#46CDFB');
 final redTextColor = HexColor('#F0635A');
-final linkTextColor = HexColor('#747688');
+const linkTextColor = Color(0xFF747688);
 final greyTextColor = HexColor('#2B2849');
 // final blackTextColor = HexColor('#120D26');
 final cyanTextColor = HexColor('#00F8FF');

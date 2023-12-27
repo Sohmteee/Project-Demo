@@ -255,7 +255,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      Row(
+                      const Row(
                         children: [
                           Text(
                             'See All',
