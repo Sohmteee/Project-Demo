@@ -21,6 +21,7 @@ class _LocationScreenState extends State<LocationScreen> {
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
+    final textController = TextEditingController();
 
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
@@ -105,7 +106,7 @@ class _LocationScreenState extends State<LocationScreen> {
                       children: [
                         Expanded(
                           child: TextField(
-                            controller: controller,
+                            controller: textController,
                             focusNode: focusNode,
                             cursorColor: lightOrangeColor,
                             style: TextStyle(
@@ -149,7 +150,11 @@ class _LocationScreenState extends State<LocationScreen> {
                           country.toLowerCase().contains(pattern.toLowerCase()))
                       .toList();
                 },
-                onSelected: (country) {},
+                onSelected: (country) {
+                  setState(() {
+                    textController.text = country;
+                  });
+                },
               ),
               SizedBox(height: 26.h),
               ArrowButton(
