@@ -649,12 +649,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
   buildAppBar() {
     return PreferredSize(
-      preferredSize: const Size.fromHeight(200),
+      preferredSize: Size.fromHeight(200.h),
       child: Stack(
         clipBehavior: Clip.none,
         children: [
           Container(
-            height: 180,
+            height: 180.h,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
@@ -664,34 +664,34 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
               ),
-              borderRadius: const BorderRadius.vertical(
-                bottom: Radius.circular(20),
+              borderRadius:  BorderRadius.vertical(
+                bottom: Radius.circular(20.r),
               ),
             ),
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(20, 40, 20, 0),
+              padding:  EdgeInsets.fromLTRB(20.w, 40.h, 20.w, 0),
               child: Column(
                 children: [
                   buildTopAppBar(),
-                  const SizedBox(height: 10),
+                   SizedBox(height: 10.h),
                   buildSearchBar()
                 ],
               ),
             ),
           ),
           Positioned(
-            bottom: -20,
+            bottom: -20.h,
             child: SizedBox(
-              height: 40,
+              height: 40.h,
               width: MediaQuery.of(context).size.width,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: categories.length,
                 physics: const BouncingScrollPhysics(),
-                padding: const EdgeInsets.symmetric(horizontal: 15),
+                padding:  EdgeInsets.symmetric(horizontal: 15.w),
                 itemBuilder: (context, index) => Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 5),
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  margin:  EdgeInsets.symmetric(horizontal: 5.w),
+                  padding:  EdgeInsets.symmetric(horizontal: 15.w),
                   decoration: BoxDecoration(
                     color: categories[index]['color'],
                     borderRadius: BorderRadius.circular(20),
