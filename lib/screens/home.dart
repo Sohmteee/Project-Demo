@@ -1001,8 +1001,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         Container(
           padding: EdgeInsets.fromLTRB(5.w, 5.h, 10.w, 5.h),
           decoration: BoxDecoration(
-            color: themeProvider.themeType ==
-                ThemeType.light ? Colors.white : const Color(0xFF302F2F),
+            color: themeProvider.themeType == ThemeType.light
+                ? Colors.white
+                : const Color(0xFF302F2F),
             borderRadius: BorderRadius.circular(30.r),
           ),
           child: Row(
@@ -1012,7 +1013,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               Text(
                 'Filter',
                 style: TextStyle(
-                  color: darkOrangeColor,
+                  color: themeProvider.themeType == ThemeType.light
+                      ? darkOrangeColor
+                      : Colors.white,
                   fontSize: 14.sp,
                 ),
               ),
