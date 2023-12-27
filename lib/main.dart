@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
+import 'package:yeerlo/data.dart';
 import 'package:yeerlo/providers/theme.dart';
 import 'package:yeerlo/screens/home.dart';
 import 'package:yeerlo/screens/onboarding.dart';
@@ -13,12 +14,14 @@ import 'package:yeerlo/screens/registration/sign_up.dart';
 import 'package:yeerlo/screens/registration/verification.dart';
 import 'package:yeerlo/screens/splash.dart';
 
-void main() {
+Future<void> main() async {
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
     ),
   );
+
+  storageLocation = (await getApplicationDocumentsDirectory()).path;
 
   runApp(
     MultiProvider(

@@ -3,8 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 
-String storageLocation = (await getApplicationDocumentsDirectory()).path;
-
+late String storageLocation;
 
 List categories = [
   {
