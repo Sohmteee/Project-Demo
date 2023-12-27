@@ -3,7 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 
-// bool isLightTheme = true;
+String storageLocation = (await getApplicationDocumentsDirectory()).path;
+
 
 List categories = [
   {
