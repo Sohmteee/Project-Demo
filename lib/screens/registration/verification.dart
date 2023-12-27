@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:pinput/pinput.dart';
 import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
@@ -141,7 +142,16 @@ class _VerificationScreenState extends State<VerificationScreen> {
     );
 
     final focusedPinTheme = defaultPinTheme.copyDecorationWith(
-      border: Border.all(color: lightOrangeColor),
+      border: GradientBoxBorder(
+        gradient: LinearGradient(
+          colors: [
+            lightOrangeColor,
+            darkOrangeColor,
+          ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+      ),
     );
 
     return Pinput(
