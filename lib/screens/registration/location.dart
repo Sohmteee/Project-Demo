@@ -5,10 +5,8 @@ import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
-import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/countries.dart';
 import 'package:yeerlo/models/registration/button.dart';
-import 'package:yeerlo/models/registration/textfield.dart';
 import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/theme.dart';
 
@@ -22,7 +20,6 @@ class LocationScreen extends StatefulWidget {
 class _LocationScreenState extends State<LocationScreen> {
   @override
   Widget build(BuildContext context) {
-    final TextEditingController searchController = TextEditingController();
     final themeProvider = Provider.of<ThemeProvider>(context);
 
     return Scaffold(
