@@ -75,6 +75,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             PageView.builder(
               controller: imageController,
               scrollDirection: Axis.horizontal,
+              onPageChanged: (index) {
+                setState(() {
+                  onBoardingIndex = index;
+                });
+              },
               itemCount: 3,
               itemBuilder: (context, index) {
                 return images[index];
@@ -117,6 +122,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     color: Colors.white,
                     fontSize: 15.sp,
                     textAlign: TextAlign.center,
+                    height: 1.8.h,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
