@@ -113,7 +113,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 setState(() {
                   onBoardingIndex = index;
                 });
-                // 
+                titleController.jumpToPage(index);
+                descriptionController.jumpToPage(index);
               },
               itemCount: 3,
               itemBuilder: (context, index) {
