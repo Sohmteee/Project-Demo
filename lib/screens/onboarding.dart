@@ -50,7 +50,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 delay: 400.milliseconds,
                 begin: 450.h,
                 end: 0,
-                duration: 600.milliseconds,
+                duration: 700.milliseconds,
                 curve: Curves.elasticOut,
               ),
           const Spacer(flex: 2),
@@ -85,8 +85,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               width: double.infinity,
               height: 250.h,
               decoration: BoxDecoration(
-                color:  themeProvider.themeType == ThemeType.dark
-                    ? darkBackgroundColor : null,
+                color: themeProvider.themeType == ThemeType.dark
+                    ? darkBackgroundColor
+                    : null,
                 borderRadius: BorderRadius.vertical(
                   top: Radius.circular(40.r),
                 ),
