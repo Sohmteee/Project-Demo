@@ -214,9 +214,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               ],
             ),
             const Spacer(),
-            Container(
+            SizedBox(
               height: drawerOptions.length * 60.h,
-              color: Colors.grey,
               child: ListView.builder(
                 itemCount: drawerOptions.length,
                 itemBuilder: (BuildContext context, int index) {
