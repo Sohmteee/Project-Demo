@@ -239,6 +239,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       bottomNavBarColor: Theme.of(context).colorScheme.primary,
       bottomNavItemIconHeight: 20.h,
       bottomNavItemLabelHeight: 15.h,
+      
       fabWidth: 50.w,
       fabIcon: Container(
         height: 54.h,
@@ -269,6 +270,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           label: 'Explore',
           bottomItemSelectedColor: darkOrangeColor,
           screen: Scaffold(
+            backgroundColor: Theme.of(context).colorScheme.primary,
             appBar: buildAppBar(),
             body: Container(
               color: Theme.of(context).colorScheme.primary,
