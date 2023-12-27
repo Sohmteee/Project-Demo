@@ -277,21 +277,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             extendBodyBehindAppBar: true,
             body: Container(
               decoration: BoxDecoration(
-                color: (themeProvider.themeType == ThemeType.dark)
-                    ? Colors.black
+                color: (themeProvider.themeType == ThemeType.light)
+                    ? lightBackgroundColor
                     : null,
-                gradient: (themeProvider.themeType == ThemeType.light)
-                    ? LinearGradient(
-                        colors: [
-                          lightOrangeColor,
-                          darkOrangeColor,
-                        ],
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                      )
-                    : null,
-                borderRadius: BorderRadius.vertical(
-                  bottom: Radius.circular(20.r),
+                image: DecorationImage(
+                  image: AssetImage('assets/images/bg.png'),
                 ),
               ),
               child: ListView(
