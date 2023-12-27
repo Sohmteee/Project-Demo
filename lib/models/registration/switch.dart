@@ -102,7 +102,6 @@ class _ThemeSwitchState extends State<ThemeSwitch> {
           borderRadius: BorderRadius.circular(95.r),
           border: Border.all(
             color: HexColor('#767676'),
-            width: 2.w,
           ),
         ),
         child: Stack(
@@ -118,6 +117,14 @@ class _ThemeSwitchState extends State<ThemeSwitch> {
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(95.r),
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      lightOrangeColor,
+                      darkOrangeColor,
+                    ],
+                  ),
                 ),
               ),
             ),
