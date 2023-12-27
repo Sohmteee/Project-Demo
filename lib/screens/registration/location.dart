@@ -5,6 +5,7 @@ import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
+import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/countries.dart';
 import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/theme.dart';
@@ -239,15 +240,16 @@ class _LocationScreenState extends State<LocationScreen> {
                       ? lightBackgroundColor
                       : darkBackgroundColor,
                   borderRadius: BorderRadius.circular(16.r),
-                  gradient: if (themeProvider.themeType == ThemeType.dark)
-                    LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [
-                        lightBackgroundColor,
-                        darkBackgroundColor,
-                      ],
-                    ),
+                  gradient: (themeProvider.themeType == ThemeType.dark)
+                      ? LinearGradient(
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
+                          colors: [
+                            darkBackgroundColor,
+                            HexColor('#191818')
+                          ],
+                        )
+                      : null,
                   boxShadow: [
                     if (themeProvider.themeType == ThemeType.light)
                       BoxShadow(
