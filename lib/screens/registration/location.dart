@@ -282,14 +282,6 @@ class _LocationScreenState extends State<LocationScreen> {
                           width: 64.w,
                           height: 64.h,
                         ),
-                        /* Container(
-                          width: 64.w,
-                          height: 64.h,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(12.r),
-                            color: linkTextColor.withOpacity(.3),
-                          ),
-                        ), */
                         SizedBox(width: 16.w),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -298,13 +290,7 @@ class _LocationScreenState extends State<LocationScreen> {
                               selectedCountry['name'] ==
                                       'United States of America'
                                   ? 'United States'
-                                  : selectedCountry['name'] ==
-                                          'United States of America'
-                                      ? 'United States'
-                                      : selectedCountry['name'] ==
-                                              'United States of America'
-                                          ? 'United States'
-                                          : selectedCountry['name'],
+                                  : selectedCountry['name'],
                               fontSize: 18.sp,
                               fontWeight: FontWeight.w500,
                               color: Theme.of(context).colorScheme.secondary,
