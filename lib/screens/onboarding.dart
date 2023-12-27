@@ -146,7 +146,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               child: Column(
                 children: [
                   SizedBox(
-                    height: 45.h,
+                    height: 60.h,
                     child: PageView.builder(
                       controller: titleController,
                       scrollDirection: Axis.horizontal,
