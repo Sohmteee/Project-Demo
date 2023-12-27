@@ -236,7 +236,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
   BottomNavBar buildBottomNavBar(ThemeProvider themeProvider) {
     return BottomNavBar(
-      bottomNavBarColor: Theme.of(context).colorScheme.primary,
+      bottomNavBarColor: themeProvider.themeType == ThemeType.light
+          ? Colors.white
+          : darkBackgroundColor,
       bottomNavItemIconHeight: 20.h,
       bottomNavItemLabelHeight: 15.h,
       bottomNavItemHeight: 50.h,
