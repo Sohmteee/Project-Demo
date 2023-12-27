@@ -928,7 +928,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 children: [
                   buildTopAppBar(),
                   SizedBox(height: 10.h),
-                  buildSearchBar()
+                  buildSearchBar(themeProvider),
                 ],
               ),
             ),
@@ -1001,7 +1001,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         Container(
           padding: EdgeInsets.fromLTRB(5.w, 5.h, 10.w, 5.h),
           decoration: BoxDecoration(
-            color: themeProvider.themeType == ThemeType.light ?  Colors.white : const Color(0xFF302F2F),
+            color: themeProvider.themeType ==
+                ThemeType.light ? Colors.white : const Color(0xFF302F2F),
             borderRadius: BorderRadius.circular(30.r),
           ),
           child: Row(
