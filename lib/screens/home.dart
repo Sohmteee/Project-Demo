@@ -219,7 +219,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             child: ListView(
               physics: const BouncingScrollPhysics(),
               children: [
-                SizedBox(height: 50.h),
+                SizedBox(height: 40.h),
                 buildUpcomingEvents(themeProvider),
                 SizedBox(height: 20.h),
                 buildReferral(themeProvider),
