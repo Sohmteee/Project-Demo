@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:pinput/pinput.dart';
 import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
@@ -136,32 +135,13 @@ class _VerificationScreenState extends State<VerificationScreen> {
         fontWeight: FontWeight.w600,
       ),
       decoration: BoxDecoration(
-        border: GradientBoxBorder(
-          gradient: LinearGradient(
-            colors: [
-              lightOrangeColor,
-              darkOrangeColor,
-            ],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-          ),
-        ),
         border: Border.all(color: HexColor('#DADADA')),
         borderRadius: BorderRadius.circular(15.r),
       ),
     );
 
     final focusedPinTheme = defaultPinTheme.copyDecorationWith(
-      border: GradientBoxBorder(
-        gradient: LinearGradient(
-          colors: [
-            lightOrangeColor,
-            darkOrangeColor,
-          ],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-        ),
-      ),
+      border: Border.all(color: lightOrangeColor),
     );
 
     return Pinput(
