@@ -22,7 +22,7 @@ List upcomingEvents = [
   {
     'image': 'assets/images/event-cover-1.png',
     'title': 'International Band Mu...',
-    'price': 'Free - \$25',
+    'price': 'FREE - \$25',
     'location': '36 Guild Street London, UK',
     'date-color': Colors.white,
   },

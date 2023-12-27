@@ -555,11 +555,22 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             tileMode: TileMode.mirror,
                           ).createShader(bounds),
                           child: DMSansText(
-                            upcomingEvents['price'],
+                            upcomingEvents[index]['price'],
                             textAlign: TextAlign.center,
-                            fontSize: 11.sp,
+                            fontSize: 12.sp,
                             fontWeight: FontWeight.w700,
                             height: 0,
+                          ),
+                        ),
+                        Container(
+                          width: 16,
+                          height: 16,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: NetworkImage(
+                                  "https://via.placeholder.com/16x16"),
+                              fit: BoxFit.contain,
+                            ),
                           ),
                         )
                       ],
