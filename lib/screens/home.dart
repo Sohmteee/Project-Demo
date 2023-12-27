@@ -845,59 +845,42 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 ),
                               ),
                               SizedBox(width: 10.w),
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(1000.r),
-                                child: FastCachedImage(
-                                  width: 16.w,
-                                  height: 16.h,
-                                  url: googleMeetPath,
-                                  fit: BoxFit.cover,
-                                  fadeInDuration: const Duration(seconds: 1),
-                                  errorBuilder:
-                                      (context, exception, stacktrace) {
-                                    return Container(
-                                      width: 16.w,
-                                      height: 16.h,
-                                      decoration: BoxDecoration(
-                                        color: Colors.grey,
-                                        borderRadius: BorderRadius.circular(
-                                          10.r,
-                                        ),
-                                      ),
-                                      child: const Icon(
-                                        Icons.error,
-                                        color: Colors.red,
-                                      ),
-                                    );
-                                  },
-                                  loadingBuilder: (context, progress) {
-                                    return Container(
-                                      width: 16.w,
-                                      height: 16.h,
-                                      decoration: BoxDecoration(
-                                        color: Colors.grey,
-                                        borderRadius: BorderRadius.circular(
-                                          10.r,
-                                        ),
-                                      ),
-                                    ).animate().shimmer(
-                                          delay: 1.seconds,
-                                        );
-                                  },
-                                ),
-                              ),
-                              Container(
+                              FastCachedImage(
                                 width: 16.w,
                                 height: 16.h,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: NetworkImage(
-                                      googleMeetPath,
+                                url: googleMeetPath,
+                                fadeInDuration: const Duration(seconds: 1),
+                                errorBuilder: (context, exception, stacktrace) {
+                                  return Container(
+                                    width: 16.w,
+                                    height: 16.h,
+                                    decoration: BoxDecoration(
+                                      color: Colors.grey,
+                                      borderRadius: BorderRadius.circular(
+                                        10.r,
+                                      ),
                                     ),
-                                    fit: BoxFit.contain,
-                                  ),
-                                ),
-                              )
+                                    child: const Icon(
+                                      Icons.error,
+                                      color: Colors.red,
+                                    ),
+                                  );
+                                },
+                                loadingBuilder: (context, progress) {
+                                  return Container(
+                                    width: 16.w,
+                                    height: 16.h,
+                                    decoration: BoxDecoration(
+                                      color: Colors.grey,
+                                      borderRadius: BorderRadius.circular(
+                                        10.r,
+                                      ),
+                                    ),
+                                  ).animate().shimmer(
+                                        delay: 1.seconds,
+                                      );
+                                },
+                              ),
                             ],
                           ),
                           AirBnBText(
