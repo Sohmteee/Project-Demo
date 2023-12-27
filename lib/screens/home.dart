@@ -615,14 +615,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                       children: [
                                         DMSansText(
                                           daysDifference.toString(),
-                                          color: ,
+                                          color: Colors.white,
                                           fontSize: 12.sp,
                                           fontWeight: FontWeight.w600,
                                         ),
                                         DMSansText(
                                           "Days",
-                                          color: upcomingEvents[index]
-                                              ['date-color'],
+                                          color: Colors.white,
                                           fontSize: 10.sp,
                                           fontWeight: FontWeight.w400,
                                         ),
@@ -632,15 +631,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                       children: [
                                         DMSansText(
                                           hoursDifference.toString(),
-                                          color: upcomingEvents[index]
-                                              ['date-color'],
+                                          color: Colors.white,
                                           fontSize: 12.sp,
                                           fontWeight: FontWeight.w600,
                                         ),
                                         DMSansText(
                                           "Hours",
-                                          color: upcomingEvents[index]
-                                              ['date-color'],
+                                          color: Colors.white,
                                           fontSize: 10.sp,
                                           fontWeight: FontWeight.w400,
                                         ),
@@ -650,15 +647,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                       children: [
                                         DMSansText(
                                           minutesDifference.toString(),
-                                          color: upcomingEvents[index]
-                                              ['date-color'],
+                                          color: Colors.white,
                                           fontSize: 12.sp,
                                           fontWeight: FontWeight.w600,
                                         ),
                                         DMSansText(
                                           "Minutes",
-                                          color: upcomingEvents[index]
-                                              ['date-color'],
+                                          color: Colors.white,
                                           fontSize: 10.sp,
                                           fontWeight: FontWeight.w400,
                                         ),
@@ -668,15 +663,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                       children: [
                                         DMSansText(
                                           secondsDifference.toString(),
-                                          color: upcomingEvents[index]
-                                              ['date-color'],
+                                          color: Colors.white,
                                           fontSize: 12.sp,
                                           fontWeight: FontWeight.w600,
                                         ),
                                         DMSansText(
                                           "Seconds",
-                                          color: upcomingEvents[index]
-                                              ['date-color'],
+                                          color: Colors.white,
                                           fontSize: 10.sp,
                                           fontWeight: FontWeight.w400,
                                         ),
