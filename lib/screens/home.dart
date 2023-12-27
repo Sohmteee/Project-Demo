@@ -32,6 +32,414 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
 
+    BottomNavBar buildBottomNavBar(ThemeProvider themeProvider) {
+      Column buildUpcomingEvents(ThemeProvider themeProvider) {
+        return Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.w),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  AirBnBText(
+                    'Upcoming Events',
+                    color: Theme.of(context).colorScheme.secondary,
+                    fontSize: 20.sp,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  Row(
+                    children: [
+                      AirBnBText(
+                        'See All',
+                        color: linkTextColor,
+                        fontSize: 18.sp,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      const Icon(
+                        Icons.arrow_right,
+                        color: linkTextColor,
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 300.h,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                padding: EdgeInsets.all(10.sp),
+                physics: const BouncingScrollPhysics(),
+                itemCount: upcomingEvents.length,
+                itemBuilder: (BuildContext context, int index) {
+                  DateTime eventDate = upcomingEvents[index]['time'];
+                  Duration timeRemaining = eventDate.difference(DateTime.now());
+
+                  int daysDifference = timeRemaining.inDays;
+                  int hoursDifference = timeRemaining.inHours % 24;
+                  int minutesDifference = timeRemaining.inMinutes % 60;
+                  int secondsDifference = timeRemaining.inSeconds % 60;
+                  return Container(
+                    width: 240,
+                    margin: EdgeInsets.symmetric(horizontal: 5.w),
+                    padding: EdgeInsets.all(10.sp),
+                    decoration: BoxDecoration(
+                      color: themeProvider.themeType == ThemeType.light
+                          ? Colors.white
+                          : Vx.gray600,
+                      borderRadius: BorderRadius.circular(20.r),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(.1),
+                          blurRadius: 10,
+                          spreadRadius: 5,
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Stack(
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(20.r),
+                              child: Image.network(
+                                upcomingEvents[index]['image'],
+                                width: 218.w,
+                                height: 131.h,
+                                fit: BoxFit.cover,
+                                loadingBuilder:
+                                    (context, child, loadingProgress) {
+                                  if (loadingProgress == null) return child;
+                                  return Container(
+                                    width: 218.w,
+                                    height: 131.h,
+                                    decoration: BoxDecoration(
+                                      color: Colors.grey,
+                                      borderRadius: BorderRadius.circular(20.r),
+                                    ),
+                                  ).animate().shimmer(
+                                        delay: 1.seconds,
+                                      );
+                                },
+                              ),
+                            ),
+                            Positioned(
+                              top: 10.h,
+                              left: 10.w,
+                              child: Stack(
+                                alignment: Alignment.center,
+                                children: [
+                                  Blur(
+                                    blur: 3,
+                                    borderRadius: BorderRadius.circular(10.r),
+                                    child: Container(
+                                      height: 50.h,
+                                      width: 50.w,
+                                      padding: EdgeInsets.all(5.sp),
+                                      decoration: BoxDecoration(
+                                        color: Colors.grey.withOpacity(.1),
+                                        borderRadius:
+                                            BorderRadius.circular(10.r),
+                                      ),
+                                    ),
+                                  ),
+                                  Column(
+                                    children: [
+                                      Text(
+                                        eventDate.day.toString(),
+                                        style: TextStyle(
+                                          color: upcomingEvents[index]
+                                              ['date-color'],
+                                          fontSize: 20.sp,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      Text(
+                                        switch (eventDate.month) {
+                                          1 => 'JAN',
+                                          2 => 'FEB',
+                                          3 => 'MAR',
+                                          4 => 'APR',
+                                          5 => 'MAY',
+                                          6 => 'JUNE',
+                                          7 => 'JUL',
+                                          8 => 'AUG',
+                                          9 => 'SEP',
+                                          10 => 'OCT',
+                                          11 => 'NOV',
+                                          12 => 'DEC',
+                                          _ => ''
+                                        },
+                                        style: TextStyle(
+                                          color: upcomingEvents[index]
+                                              ['date-color'],
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Positioned(
+                              top: 10.h,
+                              right: 10.w,
+                              child: Stack(
+                                alignment: Alignment.center,
+                                children: [
+                                  Blur(
+                                    blur: 3,
+                                    borderRadius: BorderRadius.circular(10.r),
+                                    child: Container(
+                                      height: 30.h,
+                                      width: 30.w,
+                                      padding: EdgeInsets.all(5.sp),
+                                      decoration: BoxDecoration(
+                                        color: Colors.grey.withOpacity(.1),
+                                        borderRadius:
+                                            BorderRadius.circular(10.r),
+                                      ),
+                                    ),
+                                  ),
+                                  SvgPicture.asset('assets/svg/bookmark.svg')
+                                ],
+                              ),
+                            ),
+                            Positioned(
+                              bottom: 10.h,
+                              left: 10.w,
+                              child: Stack(
+                                alignment: Alignment.center,
+                                children: [
+                                  Blur(
+                                    blur: 3,
+                                    borderRadius: BorderRadius.circular(10.r),
+                                    child: Container(
+                                      height: 35.h,
+                                      width: 196.w,
+                                      padding: EdgeInsets.all(5.sp),
+                                      decoration: BoxDecoration(
+                                        color: Colors.grey.withOpacity(.1),
+                                        borderRadius:
+                                            BorderRadius.circular(10.r),
+                                      ),
+                                    ),
+                                  ),
+                                  Row(
+                                    children: [
+                                      Column(
+                                        children: [
+                                          Text(
+                                            eventDate.day.toString(),
+                                            style: TextStyle(
+                                              color: upcomingEvents[index]
+                                                  ['date-color'],
+                                              fontSize: 20.sp,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          Text(
+                                            secondsDifference.toString(),
+                                            style: TextStyle(
+                                              color: upcomingEvents[index]
+                                                  ['date-color'],
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                        Padding(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 6.w, vertical: 10.h),
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  ShaderMask(
+                                    blendMode: BlendMode.srcIn,
+                                    shaderCallback: (Rect bounds) =>
+                                        LinearGradient(
+                                      begin: Alignment.topCenter,
+                                      end: Alignment.bottomCenter,
+                                      colors: [
+                                        lightOrangeColor,
+                                        darkOrangeColor,
+                                      ],
+                                      tileMode: TileMode.mirror,
+                                    ).createShader(bounds),
+                                    child: DMSansText(
+                                      upcomingEvents[index]['price'],
+                                      textAlign: TextAlign.center,
+                                      fontSize: 12.sp,
+                                      fontWeight: FontWeight.w700,
+                                      height: 0,
+                                    ),
+                                  ),
+                                  SizedBox(width: 10.w),
+                                  Container(
+                                    width: 16.w,
+                                    height: 16.h,
+                                    decoration: const BoxDecoration(
+                                      image: DecorationImage(
+                                        image: NetworkImage(
+                                          'https://s3-alpha-sig.figma.com/img/97f5/05ab/d278e5c296cdbb95d942b33c18332f34?Expires=1704672000&Signature=Nc2wblPsEmgF4FWrzkE-MaN1-a1Ua5NNfSMsERFWUMM3sv0dCXq1HXcKk9F2rOuB3~p6nMzVJRXC3NP66Le24mwaRj9TikqAigv9D2vevt6yvLbzEZQAMMvZGXTqYg4fXpzQA8kSanEjNPklPMzgZ3GY4qX8HcNOF7bYI5~NAGbxYPgi0B1IJKVPh~sHcw8Ht69rQJfACwPDtf~TT2LCcao86VNAx5RZqr3TzcWyG8cQz-uEsP0jqvKcWFs8wUMo4lStnqFWyTgTB2ZgJ6kcL72sX2epje~RwGZaI5XGj3r1MxU8faqEz5AyYogHBZpVTBsh~N74Ee~oW5KzjEjeyw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+                                        ),
+                                        fit: BoxFit.contain,
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                              AirBnBText(
+                                upcomingEvents[index]['title'],
+                                color: Theme.of(context).colorScheme.secondary,
+                                fontSize: 22.sp,
+                                fontWeight: FontWeight.bold,
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                              SizedBox(height: 10.h),
+                              buildGoingRow(),
+                              SizedBox(height: 10.h),
+                              Row(
+                                children: [
+                                  SvgPicture.asset('assets/svg/map-pin.svg'),
+                                  SizedBox(width: 5.w),
+                                  AirBnBText(
+                                    upcomingEvents[index]['location'],
+                                    color: linkTextColor,
+                                    fontSize: 16.sp,
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
+        );
+      }
+
+      return BottomNavBar(
+        bottomNavBarColor: Theme.of(context).colorScheme.primary,
+        bottomNavItemIconHeight: 20.h,
+        bottomNavItemLabelHeight: 15.h,
+        fabWidth: 50.w,
+        fabIcon: Container(
+          height: 50.h,
+          width: 50.h,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                lightOrangeColor,
+                darkOrangeColor,
+              ],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+            ),
+            shape: BoxShape.circle,
+          ),
+          child: Icon(
+            Icons.add_box,
+            color: Theme.of(context).colorScheme.primary,
+          ),
+        ),
+        bottomItems: [
+          BottomBarItem(
+            icon: SvgPicture.asset(
+              'assets/svg/compass.svg',
+            ),
+            label: 'Explore',
+            bottomItemSelectedColor: darkOrangeColor,
+            screen: Container(
+              color: Theme.of(context).colorScheme.primary,
+              child: ListView(
+                physics: const BouncingScrollPhysics(),
+                children: [
+                  SizedBox(height: 50.h),
+                  buildUpcomingEvents(themeProvider),
+                  SizedBox(height: 20.h),
+                  buildReferral(themeProvider),
+                  SizedBox(height: 20.h),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20.w),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Near You',
+                          style: TextStyle(
+                            color: Theme.of(context).colorScheme.secondary,
+                            fontSize: 20.sp,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const Row(
+                          children: [
+                            Text(
+                              'See All',
+                              style: TextStyle(
+                                color: linkTextColor,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Icon(
+                              Icons.arrow_right,
+                              color: linkTextColor,
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          BottomBarItem(
+            icon: SvgPicture.asset(
+              'assets/svg/calendar.svg',
+              color: Vx.gray400,
+            ),
+            label: 'Events',
+            screen: Container(),
+          ),
+          BottomBarItem(
+            icon: SvgPicture.asset(
+              'assets/svg/bookmark.svg',
+              color: Vx.gray400,
+            ),
+            label: 'Bookmarks',
+            screen: Container(),
+          ),
+          BottomBarItem(
+            icon: SvgPicture.asset(
+              'assets/svg/profile.svg',
+              color: Vx.gray400,
+            ),
+            label: 'My Ticket',
+            screen: Container(),
+          ),
+        ],
+      );
+    }
+
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
@@ -203,112 +611,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     );
   }
 
-  BottomNavBar buildBottomNavBar(ThemeProvider themeProvider) {
-    return BottomNavBar(
-      bottomNavBarColor: Theme.of(context).colorScheme.primary,
-      bottomNavItemIconHeight: 20.h,
-      bottomNavItemLabelHeight: 15.h,
-      fabWidth: 50.w,
-      fabIcon: Container(
-        height: 50.h,
-        width: 50.h,
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              lightOrangeColor,
-              darkOrangeColor,
-            ],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-          ),
-          shape: BoxShape.circle,
-        ),
-        child: Icon(
-          Icons.add_box,
-          color: Theme.of(context).colorScheme.primary,
-        ),
-      ),
-      bottomItems: [
-        BottomBarItem(
-          icon: SvgPicture.asset(
-            'assets/svg/compass.svg',
-          ),
-          label: 'Explore',
-          bottomItemSelectedColor: darkOrangeColor,
-          screen: Container(
-            color: Theme.of(context).colorScheme.primary,
-            child: ListView(
-              physics: const BouncingScrollPhysics(),
-              children: [
-                SizedBox(height: 50.h),
-                buildUpcomingEvents(themeProvider),
-                SizedBox(height: 20.h),
-                buildReferral(themeProvider),
-                SizedBox(height: 20.h),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20.w),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Near You',
-                        style: TextStyle(
-                          color: Theme.of(context).colorScheme.secondary,
-                          fontSize: 20.sp,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const Row(
-                        children: [
-                          Text(
-                            'See All',
-                            style: TextStyle(
-                              color: linkTextColor,
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Icon(
-                            Icons.arrow_right,
-                            color: linkTextColor,
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-        BottomBarItem(
-          icon: SvgPicture.asset(
-            'assets/svg/calendar.svg',
-            color: Vx.gray400,
-          ),
-          label: 'Events',
-          screen: Container(),
-        ),
-        BottomBarItem(
-          icon: SvgPicture.asset(
-            'assets/svg/bookmark.svg',
-            color: Vx.gray400,
-          ),
-          label: 'Bookmarks',
-          screen: Container(),
-        ),
-        BottomBarItem(
-          icon: SvgPicture.asset(
-            'assets/svg/profile.svg',
-            color: Vx.gray400,
-          ),
-          label: 'My Ticket',
-          screen: Container(),
-        ),
-      ],
-    );
-  }
-
   Widget buildReferral(ThemeProvider themeProvider) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 20.w),
@@ -406,7 +708,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     );
   }
 
-  
   Row buildGoingRow() {
     return Row(
       children: [
