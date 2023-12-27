@@ -79,9 +79,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 Text(
                   'Ashfak Sayem',
                   style: TextStyle(
-                    color: themeProvider.themeType == ThemeType.light
-                        ? blackTextColor
-                        : Colors.white,
+                    color: Theme.of(context).colorScheme.secondary,
                     fontSize: 20.sp,
                     fontWeight: FontWeight.bold,
                   ),
