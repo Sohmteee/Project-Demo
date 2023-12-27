@@ -919,7 +919,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     )
                   : null,
               borderRadius: BorderRadius.vertical(
-                bottom: Radius.circular(20.r),
+                bottom: Radius.circular(33.r),
               ),
             ),
             child: Padding(
