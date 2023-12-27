@@ -20,14 +20,6 @@ class LocationScreen extends StatefulWidget {
 
 class _LocationScreenState extends State<LocationScreen> {
   @override
-  void initState() {
-    countriesName.forEach((isoCode, name) {
-      print(name);
-    });
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
     final textController = TextEditingController();
