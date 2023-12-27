@@ -181,8 +181,18 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                ClipRRect(child: FastCachedImage(url: profilePath),),
-                
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(1000.r),
+                  child: FastCachedImage(
+                    width: ,
+                    url: profilePath,
+                    fit: BoxFit.cover,
+                    fadeInDuration: const Duration(seconds: 1),
+                    errorBuilder: (context, exception, stacktrace) {
+                      return Text(stacktrace.toString());
+                    },
+                  ),
+                ),
                 SizedBox(height: 10.h),
                 Text(
                   'Ashfak Sayem',
@@ -892,7 +902,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   backgroundColor: Colors.grey,
                   radius: 12.r,
                   backgroundImage: Image.network(
-dp1Path,                  ).image,
+                    dp1Path,
+                  ).image,
                 ),
               ),
             ),
