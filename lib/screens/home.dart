@@ -328,7 +328,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SizedBox(height: 5.h),
                             Text(
                               'Invite your friends',
                               style: TextStyle(
