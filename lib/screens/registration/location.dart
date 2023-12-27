@@ -1,4 +1,3 @@
-import 'package:dart_countries/dart_countries.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,7 +6,6 @@ import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/countries.dart';
-import 'package:yeerlo/models/registration/button.dart';
 import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/theme.dart';
 
@@ -22,7 +20,6 @@ class _LocationScreenState extends State<LocationScreen> {
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
-    final textController = TextEditingController();
 
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
@@ -186,7 +183,7 @@ class _LocationScreenState extends State<LocationScreen> {
                 suggestionsCallback: (pattern) {
                   return countryList
                       .where((country) =>
-                          country.toLowerCase().contains(pattern.toLowerCase()))
+                          country['name'].toLowerCase().contains(pattern.toLowerCase()))
                       .toList();
                 },
                 onSelected: (country) {},
