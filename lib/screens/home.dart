@@ -55,7 +55,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         ),
         child: Scaffold(
           backgroundColor: Theme.of(context).colorScheme.primary,
-          appBar: buildAppBar(),
           body: buildBottomNavBar(themeProvider),
         ),
       ),
@@ -214,49 +213,52 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           ),
           label: 'Explore',
           bottomItemSelectedColor: darkOrangeColor,
-          screen: Container(
-            color: Theme.of(context).colorScheme.primary,
-            child: ListView(
-              physics: const BouncingScrollPhysics(),
-              children: [
-                SizedBox(height: 40.h),
-                buildUpcomingEvents(themeProvider),
-                SizedBox(height: 20.h),
-                buildReferral(themeProvider),
-                SizedBox(height: 20.h),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20.w),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Near You',
-                        style: TextStyle(
-                          color: Theme.of(context).colorScheme.secondary,
-                          fontSize: 20.sp,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const Row(
-                        children: [
-                          Text(
-                            'See All',
-                            style: TextStyle(
-                              color: linkTextColor,
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                            ),
+          screen: Scaffold(
+            appBar: buildAppBar(),
+            body: Container(
+              color: Theme.of(context).colorScheme.primary,
+              child: ListView(
+                physics: const BouncingScrollPhysics(),
+                children: [
+                  SizedBox(height: 40.h),
+                  buildUpcomingEvents(themeProvider),
+                  SizedBox(height: 20.h),
+                  buildReferral(themeProvider),
+                  SizedBox(height: 20.h),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20.w),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Near You',
+                          style: TextStyle(
+                            color: Theme.of(context).colorScheme.secondary,
+                            fontSize: 20.sp,
+                            fontWeight: FontWeight.bold,
                           ),
-                          Icon(
-                            Icons.arrow_right,
-                            color: linkTextColor,
-                          )
-                        ],
-                      ),
-                    ],
+                        ),
+                        const Row(
+                          children: [
+                            Text(
+                              'See All',
+                              style: TextStyle(
+                                color: linkTextColor,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Icon(
+                              Icons.arrow_right,
+                              color: linkTextColor,
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),
