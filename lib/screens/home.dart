@@ -239,7 +239,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       bottomNavBarColor: Theme.of(context).colorScheme.primary,
       bottomNavItemIconHeight: 20.h,
       bottomNavItemLabelHeight: 15.h,
-      
+      bottomNavItemHeight: 50.h,
       fabWidth: 50.w,
       fabIcon: Container(
         height: 54.h,
