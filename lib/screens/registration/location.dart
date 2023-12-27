@@ -117,10 +117,13 @@ class _LocationScreenState extends State<LocationScreen> {
               TypeAheadField(
                 hideOnEmpty: true,
                 itemBuilder: (context, country) {
-                  return ListTile(
-                    minVerticalPadding: 2,
-                    title: AirBnBText(
+                  return Container(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 10.w, vertical: 5.h),
+                    child: AirBnBText(
                       country['name'],
+                      fontSize: 16.sp,
+                      
                     ),
                   );
                 },
