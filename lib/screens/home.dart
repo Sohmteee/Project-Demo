@@ -845,6 +845,40 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 ),
                               ),
                               SizedBox(width: 10.w),
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(1000.r),
+                                child: FastCachedImage(
+                                 
+                                  width: 16.w,
+                                  height: 16.h,
+                                  url: dp3Path,
+                                  fit: BoxFit.cover,
+                                  fadeInDuration: const Duration(seconds: 1),
+                                  errorBuilder:
+                                      (context, exception, stacktrace) {
+                                    return Container(
+                                      width: 16.w,
+                                      height: 16.h,
+                                      decoration: const BoxDecoration(
+                                        color: Colors.grey,
+                                        shape: BoxShape.circle,
+                                      ),
+                                    );
+                                  },
+                                  loadingBuilder: (context, progress) {
+                                    return Container(
+                                      width: 16.w,
+                                      height: 16.h,
+                                      decoration: const BoxDecoration(
+                                        color: Colors.grey,
+                                        shape: BoxShape.circle,
+                                      ),
+                                    ).animate().shimmer(
+                                          delay: 1.seconds,
+                                        );
+                                  },
+                                ),
+                              ),
                               Container(
                                 width: 16.w,
                                 height: 16.h,
