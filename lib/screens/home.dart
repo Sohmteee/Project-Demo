@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, deprecated_member_use
 
 import 'package:countries_flag/countries_flag.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/countries.dart';
@@ -822,10 +823,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                 ),
+                SizedBox(width: 5.w),
                 CountriesFlag(
                   getFlagPath(selectedCountry['name']),
-                  width: 64.w,
-                  height: 64.h,
+                  width: 25.w,
+                  height: 18.h,
                 ),
               ],
             ),
