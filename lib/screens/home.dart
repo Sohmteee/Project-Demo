@@ -580,8 +580,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           ),
                         ),
                         Container(
-                          width: 16,
-                          height: 16,
+                          width: 16.w,
+                          height: 16.h,
                           decoration: const BoxDecoration(
                             image: DecorationImage(
                               image: NetworkImage(
