@@ -360,17 +360,17 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            SizedBox(height: 15.h),
+                            SizedBox(height: 5.h),
                             Text(
                               'Refer an event creator and earn '
                               '\n50% of proceeds from each '
                               '\nticket sale for 2 years.',
                               style: TextStyle(
-                                color:
-                                    themeProvider.themeType == ThemeType.light
-                                        ? greyTextColor
-                                        : Vx.gray200,
-                                fontSize: 12.sp,
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .secondary
+                                    .withOpacity(.7),
+                                fontSize: 14.sp,
                               ),
                             ),
                           ],
