@@ -43,8 +43,12 @@ class _LocationScreenState extends State<LocationScreen> {
       bottomNavigationBar: BottomAppBar(
         elevation: 0,
         child: Container(
-          margin: EdgeInsets.symmetric(horizontal: 16.w, vertical: 20.h),
           height: 10,
+          margin: EdgeInsets.symmetric(horizontal: 16.w, vertical: 20.h),
+          child: DMSansText('Select Location',
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+          ),
         ),
       ),
       body: Container(
