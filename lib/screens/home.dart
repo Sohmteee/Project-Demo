@@ -471,7 +471,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             height: 131.h,
                             fit: BoxFit.cover,
                             loadingBuilder: (context, child, loadingProgress) {
-                              return 
+                              if (loadingProgress == null) return child;
+                              return Container(
+                                width: 218.w,
+                                height: 131.h,
+                                
+                              );
                             },
                           ),
                         ),
