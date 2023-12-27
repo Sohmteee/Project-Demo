@@ -14,6 +14,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:yeerlo/colors/app_colors.dart';
+import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/countries.dart';
 import 'package:yeerlo/data.dart';
 import 'package:yeerlo/models/bottomNavBar.dart';
@@ -259,9 +260,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           ),
         ),
         BottomBarItem(
-          icon: SvgPicture.asset(
-            'assets/svg/calendar.svg',
-            color: Vx.gray400,
+          icon: Icon(
+            IconlyBold.calendar,
+            color: HexColor('#767676'),
           ),
           label: 'Calendar',
           screen: Container(),
@@ -269,7 +270,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         BottomBarItem(
           icon: SvgPicture.asset(
             'assets/svg/bookmark.svg',
-            color: Vx.gray400,
+            color: HexColor('#767676'),
           ),
           label: 'Bookmarks',
           screen: Container(),
@@ -277,7 +278,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         BottomBarItem(
           icon: SvgPicture.asset(
             'assets/svg/ticket.svg',
-            color: Vx.gray400,
+            color: HexColor('#767676'),
           ),
           label: 'My Tickets',
           screen: Container(),
@@ -436,7 +437,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
               Timer.periodic(1.seconds, (timer) {
                 setState(() {
-                   timeRemaining = eventDate.difference(DateTime.now());
+                  timeRemaining = eventDate.difference(DateTime.now());
                 });
               });
               return Container(
