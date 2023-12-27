@@ -17,7 +17,8 @@ class LocationScreen extends StatefulWidget {
 }
 
 class _LocationScreenState extends State<LocationScreen> {
-  Map<String, dynamic> selectedCountry = countryList.singleWhere((c) => c['name'] == 'United States');
+  Map<String, dynamic> selectedCountry =
+      countryList.singleWhere((c) => c['name'] == 'United States');
 
   @override
   void initState() {
@@ -251,8 +252,13 @@ class _LocationScreenState extends State<LocationScreen> {
                     Column(
                       children: [
                         DMSansText(
-                          'United States',
+                          selectedCountry['name'],
                           fontSize: 18.sp,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        DMSansText(
+                          selectedCountry['code'].toString().split(pattern),
+                          fontSize: 16.sp,
                           fontWeight: FontWeight.w500,
                         ),
                       ],
