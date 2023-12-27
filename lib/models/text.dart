@@ -11,6 +11,7 @@ class DMSansText extends StatelessWidget {
     this.color,
     this.textAlign,
     this.height,
+    
   });
 
   final String text;
@@ -19,6 +20,7 @@ class DMSansText extends StatelessWidget {
   Color? color;
   TextAlign? textAlign;
   double? height;
+  TOv
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +33,10 @@ class DMSansText extends StatelessWidget {
         color: color,
         fontFamily: 'DM Sans',
         height: height,
+
       ),
+      overflow: overflow,
+      maxLines: maxLines,
     );
   }
 }
