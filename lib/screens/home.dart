@@ -544,11 +544,19 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     Row(
                       children: [
                         ShaderMask(
-                          
+                          blendMode: BlendMode.srcIn,
+                          shaderCallback: (Rect bounds) => LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [
+                              lightOrangeColor,
+                              darkOrangeColor,
+                            ],
+                            tileMode: TileMode.mirror,
+                          ).createShader(bounds),
                           child: DMSansText(
                             'FREE - \$25',
                             textAlign: TextAlign.center,
-                            color: const Color(0xFFFFB459),
                             fontSize: 11.sp,
                             fontWeight: FontWeight.w700,
                             height: 0,
