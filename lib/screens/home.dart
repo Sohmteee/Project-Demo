@@ -173,7 +173,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 ],
               ),
             ),
-            Spacer(flex: 7),
+            const Spacer(flex: 7),
             Container(
               padding: EdgeInsets.symmetric(
                 horizontal: 15.w,
@@ -199,7 +199,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 ],
               ),
             ),
-            Spacer(),
+            const Spacer(),
           ],
         ),
       ),
@@ -259,7 +259,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           color: themeProvider.themeType == ThemeType.light
                               ? blackTextColor
                               : Colors.white,
-                          fontSize: 20.sp
+                          fontSize: 20.sp,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -316,37 +316,37 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
   Widget buildReferral(ThemeProvider themeProvider) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      padding:  EdgeInsets.symmetric(horizontal: 20.w),
       child: Center(
         child: Card(
           color: lightBlueBackgroundColor,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(20.r),
           ),
           child: Container(
             width: double.infinity,
-            height: 150,
+            height: 150.h,
             decoration: BoxDecoration(
               color: themeProvider.themeType == ThemeType.light
                   ? lightBlueBackgroundColor
                   : blueColorCategory,
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(20.r),
             ),
             child: Stack(
               children: [
                 Positioned(
-                  right: -50,
-                  bottom: -30,
+                  right: -50.w,
+                  bottom: -30.h,
                   child: Image.asset(
                     'assets/images/invite.png',
-                    height: 160,
-                    width: 260,
+                    height: 160.h,
+                    width: 260.w,
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
+                  padding: const EdgeInsets.fromLTRB(20.w, 15.h, 20, 15),
                   child: SizedBox(
-                    height: 120,
+                    height: 120.h,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -354,7 +354,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SizedBox(height: 5),
+                            SizedBox(height: 5.h),
                             Text(
                               'Invite your friends',
                               style: TextStyle(
