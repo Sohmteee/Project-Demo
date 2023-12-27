@@ -859,9 +859,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   ),
                   child: Row(
                     children: [
-                      Icon(
+                      const Icon(
                         IconlyBold.calendar,
-                        color: ,
+                        color: Colors.white,
                       ),
                       SizedBox(width: 5.w),
                       DMSansText(

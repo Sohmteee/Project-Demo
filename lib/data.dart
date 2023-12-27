@@ -65,7 +65,7 @@ List drawerOptions = [
   },
   {
     'icon': SvgPicture.asset(
-      'assets/svg/gallery.svg',
+      'assets/svg/drawer/gallery.svg',
       width: 23.w,
       height: 23.h,
       color: HexColor('#767676'),
