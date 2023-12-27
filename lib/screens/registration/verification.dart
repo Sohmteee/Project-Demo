@@ -89,32 +89,23 @@ class _VerificationScreenState extends State<VerificationScreen> {
                 onTap: () {
                   Navigator.pop(context);
                 },
-                child: Text.rich(
-                  Row(
-                    children: [
-                      TextSpan(
-                        text: 'Re-send code in  ',
-                        style: TextStyle(
-                          color: Theme.of(context).colorScheme.secondary,
-                          fontSize: 16.sp,
-                          fontFamily: 'AirBnB',
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                      TextSpan(
-                        text: '0:20',
-                        style: TextStyle(
-                          color: themeProvider.themeType == ThemeType.light
-                              ? lightOrangeColor
-                              : darkOrangeColor,
-                          fontSize: 16.sp,
-                          fontFamily: 'AirBnB',
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                    ],
-                  ),
-                  textAlign: TextAlign.center,
+                child: Row(
+                  children: [
+                    AirBnBText(
+                      'Re-send code in  ',
+                      color: Theme.of(context).colorScheme.secondary,
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.w400,
+                    ),
+                    AirBnBText(
+                      '0:20',
+                      color: themeProvider.themeType == ThemeType.light
+                          ? lightOrangeColor
+                          : darkOrangeColor,
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ],
                 ),
               ),
               Expanded(child: Container()),
