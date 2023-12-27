@@ -602,6 +602,38 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     Stack(
                       children: [
                         ClipRRect(
+                          borderRadius: BorderRadius.circular(1000.r),
+                          child: FastCachedImage(
+                            width: 24.w,
+                            height: 24.w,
+                            url: dp3Path,
+                            fit: BoxFit.cover,
+                            fadeInDuration: const Duration(seconds: 1),
+                            errorBuilder: (context, exception, stacktrace) {
+                              return Container(
+                                width: 24.w,
+                                height: 24.w,
+                                decoration: const BoxDecoration(
+                                  color: Colors.grey,
+                                  shape: BoxShape.circle,
+                                ),
+                              );
+                            },
+                            loadingBuilder: (context, progress) {
+                              return Container(
+                                width: 22.w,
+                                height: 22.w,
+                                decoration: const BoxDecoration(
+                                  color: Colors.grey,
+                                  shape: BoxShape.circle,
+                                ),
+                              ).animate().shimmer(
+                                    delay: 1.seconds,
+                                  );
+                            },
+                          ),
+                        ),
+                        ClipRRect(
                           borderRadius: BorderRadius.circular(20.r),
                           child: Image.network(
                             upcomingEvents[index]['image'],
@@ -981,12 +1013,37 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   color: Colors.white,
                   shape: BoxShape.circle,
                 ),
-                child: CircleAvatar(
-                  backgroundColor: Colors.grey,
-                  radius: 12.r,
-                  backgroundImage: Image.network(
-                    dp1Path,
-                  ).image,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(1000.r),
+                  child: FastCachedImage(
+                    width: 24.w,
+                    height: 24.w,
+                    url: dp1Path,
+                    fit: BoxFit.cover,
+                    fadeInDuration: const Duration(seconds: 1),
+                    errorBuilder: (context, exception, stacktrace) {
+                      return Container(
+                        width: 24.w,
+                        height: 24.w,
+                        decoration: const BoxDecoration(
+                          color: Colors.grey,
+                          shape: BoxShape.circle,
+                        ),
+                      );
+                    },
+                    loadingBuilder: (context, progress) {
+                      return Container(
+                        width: 22.w,
+                        height: 22.w,
+                        decoration: const BoxDecoration(
+                          color: Colors.grey,
+                          shape: BoxShape.circle,
+                        ),
+                      ).animate().shimmer(
+                            delay: 1.seconds,
+                          );
+                    },
+                  ),
                 ),
               ),
             ),
