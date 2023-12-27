@@ -40,6 +40,60 @@ class _LocationScreenState extends State<LocationScreen> {
           ),
         ),
       ),
+      bottomNavigationBar: BottomAppBar(
+        color: Theme.of(context).colorScheme.primary,
+        elevation: 0,
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 20.h),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Row(
+                  children: [
+                    Icon(
+                      IconlyLight.arrowLeft,
+                      color: Theme.of(context).colorScheme.secondary,
+                      size: 24.sp,
+                    ),
+                    SizedBox(width: 10.w),
+                    DMSansText(
+                      'Back',
+                      color: Theme.of(context).colorScheme.secondary,
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ],
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/verification');
+                },
+                child: Row(
+                  children: [
+                    DMSansText(
+                      'Skip',
+                      color: Theme.of(context).colorScheme.secondary,
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.w400,
+                    ),
+                    SizedBox(width: 10.w),
+                    Icon(
+                      IconlyLight.arrowRight,
+                      color: Theme.of(context).colorScheme.secondary,
+                      size: 24.sp,
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
       body: Container(
         padding: EdgeInsets.only(top: 80.h),
         decoration: (themeProvider.themeType == ThemeType.dark)
