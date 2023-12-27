@@ -506,11 +506,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 children: [
                                   DMSansText(
                                     eventDate.day.toString(),
-                                      color: upcomingEvents[index]
-                                          ['date-color'],
-                                      fontSize: 20.sp,
-                                      fontWeight: FontWeight.bold,
-                                    
+                                    color: upcomingEvents[index]['date-color'],
+                                    fontSize: 18.sp,
+                                    fontWeight: FontWeight.bold,
                                   ),
                                   DMSansText(
                                     switch (eventDate.month) {
@@ -528,10 +526,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                       12 => 'DEC',
                                       _ => ''
                                     },
-                                      color: upcomingEvents[index]
-                                          ['date-color'],
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 10.sp,
+                                    color: upcomingEvents[index]['date-color'],
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 10.sp,
                                   ),
                                 ],
                               ),
@@ -557,7 +554,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                   ),
                                 ),
                               ),
-                              SvgPicture.asset('assets/svg/bookmark.svg')
+                              SvgPicture.asset(
+                                'assets/svg/bookmark.svg',
+                                width: 14.w,
+                                height: 14.h,
+                              )
                             ],
                           ),
                         ),
