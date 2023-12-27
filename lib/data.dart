@@ -55,16 +55,17 @@ List drawerOptions = [
     'title': 'My Profile',
   },
   {
-    'icon': Icon(
-      IconlyBroken.calendar,
-      size: 23.w,
+    'icon': SvgPicture.asset(
+      'assets/svg/drawer/calendar.svg',
+      width: 23.w,
+      height: 23.h,
       color: HexColor('#767676'),
     ),
     'title': 'My Events',
   },
   {
     'icon': SvgPicture.asset(
-      'assets/svg/drawer/gallery.svg',
+      'assets/svg/gallery.svg',
       width: 23.w,
       height: 23.h,
       color: HexColor('#767676'),
