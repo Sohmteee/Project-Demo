@@ -57,10 +57,6 @@ List drawerOptions = [
     'title': 'Find Friends',
   },
   {
-    'icon': 'assets/svg/drawer/settings.svg',
-    'title': 'Settings',
-  },
-  {
     'icon': 'assets/svg/drawer/sign-out.svg',
     'title': 'Sign Out',
   },
