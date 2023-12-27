@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         backdropColor: Theme.of(context).colorScheme.primary,
         drawer: buildDrawerItems(themeProvider),
         childDecoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(40),
+          borderRadius: BorderRadius.circular(40.r),
           boxShadow: const [
             BoxShadow(
               offset: Offset(-5, 5),
@@ -62,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(20, 40, 20, 10),
+        padding:  EdgeInsets.fromLTRB(20.w, 40.h, 20, 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
