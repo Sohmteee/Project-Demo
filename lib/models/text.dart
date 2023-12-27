@@ -11,7 +11,8 @@ class DMSansText extends StatelessWidget {
     this.color,
     this.textAlign,
     this.height,
-    
+    this.overflow,
+    this.maxLines,
   });
 
   final String text;
@@ -20,7 +21,8 @@ class DMSansText extends StatelessWidget {
   Color? color;
   TextAlign? textAlign;
   double? height;
-  TOv
+  TextOverflow? overflow;
+  int? maxLines;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +35,6 @@ class DMSansText extends StatelessWidget {
         color: color,
         fontFamily: 'DM Sans',
         height: height,
-
       ),
       overflow: overflow,
       maxLines: maxLines,
@@ -50,6 +51,8 @@ class AirBnBText extends StatelessWidget {
     this.color,
     this.textAlign,
     this.height,
+    this.overflow,
+    this.maxLines,
   });
 
   final String text;
@@ -58,6 +61,8 @@ class AirBnBText extends StatelessWidget {
   Color? color;
   TextAlign? textAlign;
   double? height;
+  TextOverflow? overflow;
+  int? maxLines;
 
   @override
   Widget build(BuildContext context) {
@@ -71,6 +76,8 @@ class AirBnBText extends StatelessWidget {
         fontFamily: 'AirBnB',
         height: height,
       ),
+      overflow: overflow,
+      maxLines: maxLines,
     );
   }
 }
