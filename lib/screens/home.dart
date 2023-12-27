@@ -617,6 +617,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                   color: Colors.grey[300],
                                   borderRadius: BorderRadius.circular(20.r),
                                 ),
+                                child: const Icon(
+                                  Icons.error,
+                                ),
                               );
                             },
                             loadingBuilder: (context, progress) {
@@ -920,9 +923,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       return Container(
                         width: 24.w,
                         height: 24.w,
-                        decoration: const BoxDecoration(
-                          color: Colors.grey,
+                        decoration: BoxDecoration(
+                          color: Colors.grey[300],
                           shape: BoxShape.circle,
+                        ),
+                        child: const Icon(
+                          Icons.error,
                         ),
                       );
                     },
@@ -962,9 +968,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       return Container(
                         width: 24.w,
                         height: 24.w,
-                        decoration: const BoxDecoration(
-                          color: Colors.grey,
+                        decoration:  BoxDecoration(
+                          color: Colors.grey[300],
                           shape: BoxShape.circle,
+                        ),
+                        child: const Icon(
+                          Icons.error,
                         ),
                       );
                     },
@@ -1003,9 +1012,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       return Container(
                         width: 24.w,
                         height: 24.w,
-                        decoration: const BoxDecoration(
+                        decoration:  BoxDecoration(
                           color: Colors.grey,
                           shape: BoxShape.circle,
+                        ),
+                        child: const Icon(
+                          Icons.error,
                         ),
                       );
                     },
