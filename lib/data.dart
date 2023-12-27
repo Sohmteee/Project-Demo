@@ -26,6 +26,7 @@ List upcomingEvents = [
     'price': 'FREE - \$25',
     'location': '36 Guild Street London, UK',
     'date-color': Colors.white,
+    'time': DateTime
   },
   {
     'image':
