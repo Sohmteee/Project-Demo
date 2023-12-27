@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:countries_flag/countries_flag.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
@@ -475,8 +476,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               return Container(
                                 width: 218.w,
                                 height: 131.h,
-                                
-                              );
+                                decoration: BoxDecoration(
+                                  color: Colors.grey,
+                                  borderRadius: BorderRadius.circular(20.r),
+                                ),
+                              ).animate().shimmer(
+                                    delay: 1.seconds,
+                                  );
                             },
                           ),
                         ),
