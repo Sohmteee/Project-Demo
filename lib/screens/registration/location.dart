@@ -23,6 +23,7 @@ class _LocationScreenState extends State<LocationScreen> {
   @override
   void initState() {
     countryList.sort((a, b) => a['name'].compareTo(b['name']));
+    Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
     super.initState();
   }
 
@@ -262,7 +263,10 @@ class _LocationScreenState extends State<LocationScreen> {
                           selectedCountry['code'].toString().split('.').last,
                           fontSize: 16.sp,
                           fontWeight: FontWeight.w500,
-                          color: Theme.of(context).colorScheme.secondary.wi,
+                          color: Theme.of(context)
+                              .colorScheme
+                              .secondary
+                              .withOpacity(.5),
                         ),
                       ],
                     ),
