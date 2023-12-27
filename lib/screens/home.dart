@@ -62,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
       body: Padding(
-        padding:  EdgeInsets.fromLTRB(20.w, 40.h, 20, 10),
+        padding:  EdgeInsets.fromLTRB(20.w, 40.h, 20.w, 10.h),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -71,18 +71,18 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CircleAvatar(
-                  radius: 30,
+                  radius: 30.r,
                   backgroundImage:
                       Image.asset('assets/images/profile-avatar.png').image,
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 10.h),
                 Text(
                   'Ashfak Sayem',
                   style: TextStyle(
                     color: themeProvider.themeType == ThemeType.light
                         ? blackTextColor
                         : Colors.white,
-                    fontSize: 20,
+                    fontSize: 20.sp,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -90,8 +90,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             ),
             Spacer(),
             Container(
-              height: drawerOptions.length * 47.0,
-              padding: EdgeInsets.symmetric(horizontal: 10),
+              height: drawerOptions.length * 47.h,
+              padding: EdgeInsets.symmetric(horizontal: 10.w),
               child: ListView.separated(
                 itemCount: drawerOptions.length,
                 itemBuilder: (BuildContext context, int index) {
@@ -103,21 +103,21 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               children: [
                                 SvgPicture.asset(drawerOptions[index]['icon']),
                                 Positioned(
-                                  top: -5,
-                                  right: -5,
+                                  top: -5.h,
+                                  right: -5.w,
                                   child: Container(
-                                    height: 15,
-                                    width: 15,
+                                    height: 15.h,
+                                    width: 15.w,
                                     decoration: BoxDecoration(
                                       color: lightOrangeColor,
-                                      borderRadius: BorderRadius.circular(5),
+                                      borderRadius: BorderRadius.circular(5.r),
                                     ),
                                     child: Center(
                                       child: Text(
                                         '3',
                                         style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: 12,
+                                          fontSize: 12.sp,
                                         ),
                                       ),
                                     ),
