@@ -273,7 +273,7 @@ class _LocationScreenState extends State<LocationScreen> {
                     Row(
                       children: [
                         CountriesFlag(
-                          'assets/flags/${selectedCountry['name'].toLowerCase().replaceAll(' ', '_')}',
+                          'assets/flags/${selectedCountry['name'].toLowerCase().replaceAll(' ', '_')}.svg',
                           width: 64.w,
                           height: 64.h,
                         ),
