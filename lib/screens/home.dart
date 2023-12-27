@@ -42,6 +42,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       ),
       child: Container(
         decoration: BoxDecoration(
+          color: (themeProvider.themeType == ThemeType.light)
+              ? lightBackgroundColor
+              : null,
           image: (themeProvider.themeType == ThemeType.dark)
               ? const DecorationImage(
                   image:
