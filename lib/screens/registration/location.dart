@@ -274,15 +274,17 @@ class _LocationScreenState extends State<LocationScreen> {
                       children: [
                         CountriesFlag(
                           selectedCountry['name'].toLowerCase(),
+                          width: 64.w,
+                          height: 64.h,
                         ),
-                        Container(
+                        /* Container(
                           width: 64.w,
                           height: 64.h,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(12.r),
                             color: linkTextColor.withOpacity(.3),
                           ),
-                        ),
+                        ), */
                         SizedBox(width: 16.w),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
