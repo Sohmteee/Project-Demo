@@ -297,9 +297,15 @@ class _LocationScreenState extends State<LocationScreen> {
                             ),
                             DMSansText(
                               selectedCountry['code']
-                                  .toString()
-                                  .split('.')
-                                  .last,
+                                          .toString()
+                                          .split('.')
+                                          .last ==
+                                      'US'
+                                  ? 'USA'
+                                  : selectedCountry['code']
+                                      .toString()
+                                      .split('.')
+                                      .last,
                               fontSize: 16.sp,
                               fontWeight: FontWeight.w500,
                               color: Theme.of(context)
