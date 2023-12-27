@@ -974,7 +974,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     );
   }
 
-  Row buildSearchBar() {
+  Row buildSearchBar(ThemeProvider themeProvider) {
     return Row(
       children: [
         //search button
@@ -1001,7 +1001,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         Container(
           padding: EdgeInsets.fromLTRB(5.w, 5.h, 10.w, 5.h),
           decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.secondary.withOpacity(.1),
+            color: themeProvider.themeType == ThemeType.light ?  Colors.white : const Color(0xFF302F2F),
             borderRadius: BorderRadius.circular(30.r),
           ),
           child: Row(
