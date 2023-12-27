@@ -61,20 +61,25 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     });
 
     List titles = List.generate(3, (index) {
-      return Column(
-        children: [
-          const Spacer(),
-          Image.asset(onBoardingData[index]['image']).animate().moveY(
-                delay: 500.milliseconds,
-                begin: 450.h,
-                end: 0,
-                duration: 800.milliseconds,
-                curve: Curves.elasticOut,
-              ),
-          const Spacer(flex: 2),
-        ],
+      return DMSansText(
+        onBoardingData[index]['title'],
+        color: Colors.white,
+        fontSize: 22.sp,
+        fontWeight: FontWeight.w700,
+        textAlign: TextAlign.center,
       );
     });
+
+    List descriptions = List.generate(3, (index) {
+      return DMSansText(
+        onBoardingData[index]['title'],
+        color: Colors.white,
+        fontSize: 22.sp,
+        fontWeight: FontWeight.w700,
+        textAlign: TextAlign.center,
+      );
+    });
+
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
