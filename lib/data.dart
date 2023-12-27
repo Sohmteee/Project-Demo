@@ -22,12 +22,14 @@ List upcomingEvents = [
   {
     'image': 'assets/images/event-cover-1.png',
     'title': 'International Band Mu...',
+    'price': 'Free - \$25',
     'location': '36 Guild Street London, UK',
     'date-color': Colors.white,
   },
   {
     'image': 'assets/images/event-cover-2.png',
     'title': 'Jo Malone London’s Mo..',
+    'price': '\$5 - \$25',
     'location': 'Radius Gallery • Santa Cruz, CA',
     'date-color': redColorCategory,
   },
