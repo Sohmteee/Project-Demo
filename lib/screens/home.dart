@@ -332,16 +332,16 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             child: Stack(
               children: [
                 Positioned(
-                  right: -50.w,
-                  bottom: -30.h,
+                  right: -40.w,
+                  bottom: -60.h,
                   child: Transform(
                     transform: Matrix4.identity()
                       ..translate(0.0, 0.0)
                       ..rotateZ(-0.18),
                     child: Image.asset(
                       'assets/images/invite.png',
-                      height: 160.h,
-                      width: 260.w,
+                      width: 245.34.w,
+                      height: 203.h,
                     ),
                   ),
                 ),
