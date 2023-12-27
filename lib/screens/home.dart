@@ -209,6 +209,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         BottomBarItem(
           icon: SvgPicture.asset(
             'assets/svg/compass.svg',
+            height: 23.h,
+            width: 23.w,
           ),
           label: 'Explore',
           bottomItemSelectedColor: darkOrangeColor,
@@ -259,9 +261,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           ),
         ),
         BottomBarItem(
-          icon: const Icon(
+          icon: Icon(
             IconlyBold.calendar,
             color: Vx.gray400,
+            size: 23.w,
           ),
           label: 'Calendar',
           screen: Container(),
@@ -270,6 +273,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           icon: SvgPicture.asset(
             'assets/svg/bookmark.svg',
             color: Vx.gray400,
+            height: 23.h,
+            width: 23.w,
           ),
           label: 'Bookmarks',
           screen: Container(),
@@ -278,6 +283,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           icon: SvgPicture.asset(
             'assets/svg/ticket.svg',
             color: Vx.gray400,
+            height: 23.h,
+            width: 23.w,
           ),
           label: 'My Tickets',
           screen: Container(),
