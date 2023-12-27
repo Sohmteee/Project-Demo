@@ -605,7 +605,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             fontSize: 22.sp,
                             fontWeight: FontWeight.bold,
                             maxLines: 1,
-                            overflow: Te,
+                            overflow: TextOverflow.ellipsis,
                           ),
                           SizedBox(height: 10.h),
                           buildGoingRow(),
