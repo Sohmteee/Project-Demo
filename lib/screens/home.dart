@@ -101,33 +101,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   return Row(
                     children: [
                       (index == 1)
-                          ? Stack(
-                              clipBehavior: Clip.none,
-                              children: [
-                                SvgPicture.asset(drawerOptions[index]['icon']),
-                                Positioned(
-                                  top: -5.h,
-                                  right: -5.w,
-                                  child: Container(
-                                    height: 15.h,
-                                    width: 15.w,
-                                    decoration: BoxDecoration(
-                                      color: lightOrangeColor,
-                                      borderRadius: BorderRadius.circular(5.r),
-                                    ),
-                                    child: Center(
-                                      child: Text(
-                                        '3',
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 12.sp,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            )
+                          ? SvgPicture.asset(drawerOptions[index]['icon'])
                           : SvgPicture.asset(drawerOptions[index]['icon']),
                       SizedBox(width: 20.w),
                       Text(
