@@ -42,7 +42,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
 
-    List pages = List.generate(3, (index) {
+    List images = List.generate(3, (index) {
       return Column(
         children: [
           const Spacer(),
@@ -77,7 +77,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               scrollDirection: Axis.horizontal,
               itemCount: 3,
               itemBuilder: (context, index) {
-                return pages[index];
+                return images[index];
               },
             ),
             Container(
