@@ -119,11 +119,12 @@ class _LocationScreenState extends State<LocationScreen> {
                 itemBuilder: (context, country) {
                   return Container(
                     padding:
-                        EdgeInsets.symmetric(horizontal: 10.w, vertical: 5.h),
+                        EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
                     child: AirBnBText(
                       country['name'],
-                      fontSize: 16.sp,
-                      
+                      fontSize: 18.sp,
+                      fontWeight: FontWeight.w300,
+                      color: Theme.of(context).colorScheme.secondary,
                     ),
                   );
                 },
