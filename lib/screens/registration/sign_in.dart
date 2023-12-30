@@ -73,18 +73,21 @@ class _SignInScreenState extends State<SignInScreen> {
                         size: 22.sp,
                         color: registrationIconColor,
                       ),
+                      keyboardType: TextInputType.emailAddress,
                     ),
                     SizedBox(height: 19.h),
                     AppTextField(
                       isPassword: true,
-                      hintText: 'Your Password',
+                      hintText: 'Your password',
                       icon: Icon(
                         IconlyLight.lock,
                         size: 22.sp,
                         color: registrationIconColor,
                       ),
+                      keyboardType: TextInputType.visiblePassword,
+                      textInputAction: TextInputAction.done,
                     ),
-                    SizedBox(height: 19.h),
+                    SizedBox(height: 20.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
@@ -132,7 +135,7 @@ class _SignInScreenState extends State<SignInScreen> {
                             child: AirBnBText(
                               'Forgot Password?',
                               color: Theme.of(context).colorScheme.secondary,
-                              fontSize: 18.sp,
+                              fontSize: 14.sp,
                               fontWeight: FontWeight.w400,
                             ),
                           ),
@@ -150,7 +153,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     AirBnBText(
                       'OR',
                       color: const Color(0xFF9D9898),
-                      fontSize: 18.sp,
+                      fontSize: 16.sp,
                       fontWeight: FontWeight.w500,
                     ),
                     SizedBox(height: 15.h),

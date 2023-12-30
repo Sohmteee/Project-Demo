@@ -73,6 +73,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     size: 22.sp,
                     color: registrationIconColor,
                   ),
+                  keyboardType: TextInputType.name,
+                  textCapitalization: TextCapitalization.words,
                 ),
                 SizedBox(height: 19.h),
                 AppTextField(
@@ -82,16 +84,18 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     size: 22.sp,
                     color: registrationIconColor,
                   ),
+                  keyboardType: TextInputType.emailAddress,
                 ),
                 SizedBox(height: 19.h),
                 AppTextField(
                   isPassword: true,
-                  hintText: 'Your Password',
+                  hintText: 'Your password',
                   icon: Icon(
                     IconlyLight.lock,
                     size: 22.sp,
                     color: registrationIconColor,
                   ),
+                  keyboardType: TextInputType.visiblePassword,
                 ),
                 SizedBox(height: 19.h),
                 AppTextField(
@@ -119,6 +123,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ),
                     ],
                   ),
+                  textInputAction: TextInputAction.done,
+                  textCapitalization: TextCapitalization.characters,
                 ),
                 SizedBox(height: 40.h),
                 ArrowButton(

@@ -18,23 +18,29 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   int onBoardingIndex = 0;
   List onBoardingData = [
     {
-      'image': 'assets/images/onboarding/onb-1.png',
-      'title': 'Uncover and Explore Local \nEvents',
+      'image': 'assets/svg/onboarding/onb-1.svg',
+      'title': 'Uncover and Explore Local'
+      '\nEvents',
       'description':
-          'Your gateway to local adventure! \nDiscover exciting happenings right \nin your area',
+          'Your gateway to local adventure!'
+          '\nDiscover exciting happenings right'
+          '\nin your area',
     },
     {
-      'image': 'assets/images/onboarding/onb-2.png',
-      'title': 'Spot Engaging Events on \nyour Calendar',
-      'description': 'Personalized calendar ensuring you never '
-          '\nmiss the perfect event that fits '
+      'image': 'assets/svg/onboarding/onb-2.svg',
+      'title': 'Spot Engaging Events on'
+      '\nyour Calendar',
+      'description': 'Personalized calendar ensuring you never'
+          '\nmiss the perfect event that fits'
           '\nseamlessly into your schedule',
     },
     {
-      'image': 'assets/images/onboarding/onb-3.png',
-      'title': 'Navigate to Your \nDestination with Ease',
+      'image': 'assets/svg/onboarding/onb-3.svg',
+      'title': 'Navigate to Your'
+      '\nDestination with Ease',
       'description':
-          'Your essential map for smooth and \neffortless journey planning',
+          'Your essential map for smooth and'
+          '\neffortless journey planning',
     },
   ];
 
@@ -75,6 +81,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             PageView.builder(
               controller: imageController,
               scrollDirection: Axis.horizontal,
+              physics: const BouncingScrollPhysics(),
               onPageChanged: (index) {
                 setState(() {
                   onBoardingIndex = index;

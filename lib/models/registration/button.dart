@@ -49,7 +49,7 @@ class ArrowButton extends StatelessWidget {
               child: AirBnBText(
                 text,
                 color: Colors.white,
-                fontSize: 18.sp,
+                fontSize: 16.sp,
                 fontWeight: FontWeight.w500,
                 // letterSpacing: 1,
               ),
@@ -108,11 +108,11 @@ class LoginOption extends StatelessWidget {
               width: 24.w,
               height: 24.h,
             ),
-            SizedBox(width: 10.w),
+            SizedBox(width: 20.w),
             AirBnBText(
               text,
               color: Theme.of(context).colorScheme.secondary,
-              fontSize: 18.sp,
+              fontSize: 16.sp,
               fontWeight: FontWeight.w400,
               // letterSpacing: 1,
             ),

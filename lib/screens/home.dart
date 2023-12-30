@@ -35,6 +35,28 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   final drawerController = AdvancedDrawerController();
   bool isOpenDrawer = false;
+  final timer = Timer;
+  late Duration timeRemaining;
+
+  DateTime eventDate = upcomingEvents[0]['time'];
+
+  @override
+  void initState() {
+    super.initState();
+    Timer.periodic(1.seconds, (timer) {
+      setState(() {
+        timeRemaining = eventDate.difference(DateTime.now());
+      });
+    });
+    drawerController.addListener(() {
+      if (mounted) {
+        setState(() {
+          isOpenDrawer =
+              drawerController.value == AdvancedDrawerValue.visible();
+        });
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -303,9 +325,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           ),
           shape: BoxShape.circle,
         ),
-        child: Icon(
+        child: const Icon(
           Icons.add_box,
-          color: Theme.of(context).colorScheme.primary,
+          color: Colors.white,
         ),
       ),
       bottomItems: [
@@ -551,20 +573,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             itemCount: upcomingEvents.length,
             itemBuilder: (BuildContext context, int index) {
               DateTime eventDate = upcomingEvents[index]['time'];
-              Duration timeRemaining = eventDate.difference(DateTime.now());
+              timeRemaining = eventDate.difference(DateTime.now());
 
               int daysDifference = timeRemaining.inDays;
               int hoursDifference = timeRemaining.inHours % 24;
               int minutesDifference = timeRemaining.inMinutes % 60;
               int secondsDifference = timeRemaining.inSeconds % 60;
 
-              // Timer timer;
-
-              Timer.periodic(1.seconds, (timer) {
-                setState(() {
-                  timeRemaining = eventDate.difference(DateTime.now());
-                });
-              });
               return Container(
                 width: 240,
                 margin: EdgeInsets.symmetric(horizontal: 5.w),
@@ -1155,11 +1170,15 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 10.w),
             child: TextField(
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20.sp,
+              ),
               decoration: InputDecoration(
                 hintText: 'Search...',
                 hintStyle: TextStyle(
                   color: Vx.gray300,
-                  fontSize: 22.sp,
+                  fontSize: 20.sp,
                 ),
                 border: InputBorder.none,
               ),
@@ -1205,38 +1224,89 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       children: [
         ZoomTapAnimation(
           onTap: () {
+            FocusScope.of(context).unfocus();
             drawerController.toggleDrawer();
-            setState(() {
-              isOpenDrawer = !isOpenDrawer;
-            });
           },
           child: Container(
             color: Colors.transparent,
             padding: EdgeInsets.all(5.sp),
             child: isOpenDrawer
-                ? const Icon(
+                ? Icon(
                     Icons.close,
                     color: lightBackgroundColor,
+                    size: 25.sp,
                   )
                 : SvgPicture.asset("assets/svg/drawer.svg"),
           ),
         ),
         Column(
           children: [
-            const Row(
-              children: [
-                Text(
-                  'Current Location',
-                  style: TextStyle(
-                    color: Vx.gray200,
-                    fontSize: 14,
+            SizedBox(
+              width: 200,
+              child: DropdownButton(
+                isExpanded: true,
+                isDense: true,
+                dropdownColor: Theme.of(context).colorScheme.primary,
+                borderRadius: BorderRadius.circular(10.r),
+                menuMaxHeight: 400.h,
+                icon: Container(),
+                hint: const Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Current Location',
+                        style: TextStyle(
+                          color: Vx.gray200,
+                          fontSize: 14,
+                        ),
+                      ),
+                      Icon(
+                        Icons.arrow_drop_down,
+                        color: Vx.white,
+                      )
+                    ],
                   ),
                 ),
-                Icon(
-                  Icons.arrow_drop_down,
-                  color: Vx.white,
-                )
-              ],
+                items: countryList
+                    .map(
+                      (country) => DropdownMenuItem(
+                        value: country,
+                        child: Row(
+                          children: [
+                            CountriesFlag(
+                              getFlagPath(country['name']),
+                              width: 25.w,
+                              height: 18.h,
+                              placeholderBuilder: (context) {
+                                return Container(
+                                  width: 25.w,
+                                  height: 18.h,
+                                  color: Colors.grey,
+                                );
+                              },
+                            ),
+                            SizedBox(width: 5.w),
+                            Expanded(
+                              child: AirBnBText(
+                                country['name'].toString().split('.').last,
+                                color: Theme.of(context).colorScheme.secondary,
+                                fontSize: 16.sp,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    )
+                    .toList(),
+                onChanged: (country) {
+                  setState(() {
+                    selectedCountry = country!;
+                  });
+                },
+                underline: Container(),
+              ),
             ),
             Row(
               children: [

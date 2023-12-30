@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Future.delayed(5.seconds, () {
-      Navigator.pushReplacementNamed(context, '/onboarding');
+      // Navigator.pushReplacementNamed(context, '/onboarding');
     });
 
     super.initState();
@@ -28,44 +28,71 @@ class _SplashScreenState extends State<SplashScreen> {
 
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
-      body: Container(
-        decoration: (themeProvider.themeType == ThemeType.dark)
-            ? const BoxDecoration(
-                image: DecorationImage(
-                  image:
-                      AssetImage('assets/images/dark-gradient-background.png'),
-                  fit: BoxFit.cover,
+      body: Stack(
+        children: [
+          Container(
+            decoration: (themeProvider.themeType == ThemeType.dark)
+                ? const BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(
+                          'assets/images/dark-gradient-background.png'),
+                      fit: BoxFit.cover,
+                    ),
+                  )
+                : null,
+            child: Center(
+              child: SizedBox(
+                width: 224.w,
+                height: 155.h,
+                child: Image.asset('assets/images/logos/light-logo.png'),
+              )
+                  .animate(onPlay: (controller) {
+                    controller.repeat();
+                  })
+                  .shimmer(
+                    delay: 2.5.seconds,
+                    color: lightOrangeColor,
+                    duration: 1.seconds,
+                  )
+                  .scaleXY(
+                    delay: 2.seconds,
+                    begin: 1,
+                    end: 1.1,
+                    duration: 1.seconds,
+                  )
+                  .then()
+                  .scaleXY(
+                    begin: 1,
+                    end: .91,
+                    duration: .5.seconds,
+                    curve: Curves.bounceOut,
+                  ),
+            ),
+          ),
+          Positioned(
+            child: Opacity(
+              opacity: 0.70,
+              child: Container(
+                width: 227.w,
+                height: 209.h,
+                decoration: const ShapeDecoration(
+                  gradient: SweepGradient(
+                    center: Alignment(0.21, 0.79),
+                    startAngle: -0,
+                    endAngle: -0.57,
+                    colors: [
+                      Color(0xFFB9DAFB),
+                      Color(0xFF9895EE),
+                      Color(0xFFC55492),
+                      Color(0xFFECACAD)
+                    ],
+                  ),
+                  shape: OvalBorder(),
                 ),
-              )
-            : null,
-        child: Center(
-          child: SizedBox(
-            width: 224.w,
-            height: 155.h,
-            child: Image.asset('assets/images/logos/light-logo.png'),
-          )
-              .animate(onPlay: (controller) {
-                controller.repeat();
-              })
-              .shimmer(
-                delay: 2.5.seconds,
-                color: lightOrangeColor,
-                duration: 1.seconds,
-              )
-              .scaleXY(
-                delay: 2.seconds,
-                begin: 1,
-                end: 1.1,
-                duration: 1.seconds,
-              )
-              .then()
-              .scaleXY(
-                begin: 1,
-                end: .91,
-                duration: .5.seconds,
-                curve: Curves.bounceOut,
               ),
-        ),
+            ),
+          ),
+        ],
       ),
     );
   }

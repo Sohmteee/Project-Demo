@@ -6,19 +6,26 @@ import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/providers/theme.dart';
 
+// ignore: must_be_immutable
 class AppTextField extends StatefulWidget {
-  const AppTextField({
+  AppTextField({
     super.key,
     required this.hintText,
     required this.icon,
     this.controller,
     this.isPassword = false,
+    this.keyboardType = TextInputType.text,
+    this.textInputAction = TextInputAction.next,
+    this.textCapitalization = TextCapitalization.none,
   });
 
   final String hintText;
   final Widget icon;
-  final TextEditingController? controller;
+  TextEditingController? controller;
   final bool isPassword;
+  final TextInputType keyboardType;
+  final TextInputAction textInputAction;
+  final TextCapitalization textCapitalization;
 
   @override
   State<AppTextField> createState() => _AppTextFieldState();
@@ -26,6 +33,12 @@ class AppTextField extends StatefulWidget {
 
 class _AppTextFieldState extends State<AppTextField> {
   bool showPassword = false;
+
+  @override
+  void initState() {
+    super.initState();
+    widget.controller = widget.controller ?? TextEditingController();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -50,6 +63,9 @@ class _AppTextFieldState extends State<AppTextField> {
               controller: widget.controller,
               cursorColor: darkOrangeColor,
               obscureText: widget.isPassword ? !showPassword : false,
+              keyboardType: widget.keyboardType,
+              textInputAction: widget.textInputAction,
+              textCapitalization: widget.textCapitalization,
               style: TextStyle(
                 fontSize: 16.sp,
                 fontWeight: FontWeight.w400,
