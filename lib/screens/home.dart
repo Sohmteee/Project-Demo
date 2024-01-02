@@ -560,7 +560,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                   ? IconlyBold.bookmark
                                   : IconlyLight.bookmark,
                               size: 16.sp,
-                              color: isFavourite ? HexColor('#EB5757') : null,
+                              color: isFavourite
+                                  ? HexColor('#EB5757')
+                                  : Theme.of(context).colorScheme.secondary,
                             ),
                           ),
                         )
