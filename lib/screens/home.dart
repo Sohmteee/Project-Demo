@@ -364,38 +364,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   SizedBox(height: 20.h),
                   buildReferral(themeProvider),
                   SizedBox(height: 20.h),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20.w),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Near You',
-                          style: TextStyle(
-                            color: Theme.of(context).colorScheme.secondary,
-                            fontSize: 20.sp,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        const Row(
-                          children: [
-                            Text(
-                              'See All',
-                              style: TextStyle(
-                                color: linkTextColor,
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            Icon(
-                              Icons.arrow_right,
-                              color: linkTextColor,
-                            )
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
+                  buildNearYou(),
                 ],
               ),
             ),
@@ -429,6 +398,177 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           ),
           label: 'My Tickets',
           screen: Container(),
+        ),
+      ],
+    );
+  }
+
+  Column buildNearYou() {
+    return Column(
+      children: [
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20.w),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Near You',
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.secondary,
+                      fontSize: 20.sp,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const Row(
+                    children: [
+                      Text(
+                        'See All',
+                        style: TextStyle(
+                          color: linkTextColor,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Icon(
+                        Icons.arrow_right,
+                        color: linkTextColor,
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+        SizedBox(height: 16.h),
+        SizedBox(
+          height: (145 * 3).h,
+          child: ListView.builder(
+            itemCount: 3,
+            physics: const NeverScrollableScrollPhysics(),
+            padding: EdgeInsets.symmetric(horizontal: 24.w),
+            itemBuilder: (context, index) {
+              bool isFavourite = index == 0 ? true : false;
+              return Container(
+                height: 128.h,
+                padding: EdgeInsets.all(10.sp),
+                margin: EdgeInsets.symmetric(vertical: 7.h),
+                decoration: BoxDecoration(
+                  color: lightBackgroundColor,
+                  borderRadius: BorderRadius.circular(18.r),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Color(0x0F4F5588),
+                      blurRadius: 30,
+                      offset: Offset(0, 8),
+                      spreadRadius: 0,
+                    )
+                  ],
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10.r),
+                      child: Image.asset(
+                        'assets/images/home/near-you-${index + 1}.png',
+                        width: 79.w,
+                        height: 108.h,
+                      ),
+                    ),
+                    SizedBox(width: 18.w),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              AirBnBText(
+                                '1ST MAY- SAT -2:00 PM',
+                                color: const Color(0xFFFFB459),
+                                fontSize: 12.sp,
+                                fontWeight: FontWeight.w400,
+                              ),
+                              SizedBox(height: 3.h),
+                              AirBnBText(
+                                'Women\'s leadership conference',
+                                color: Color(0xFF110C26),
+                                fontSize: 15.sp,
+                                fontWeight: FontWeight.w500,
+                              ),
+                              SizedBox(height: 5.h),
+                              DMSansText(
+                                'FREE - \$25',
+                                textAlign: TextAlign.center,
+                                color: Color(0xFFFFB459),
+                                fontSize: 11.sp,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              SvgPicture.asset(
+                                'assets/svg/map-pin.svg',
+                                height: 12.h,
+                                width: 12.w,
+                              ),
+                              SizedBox(width: 5.w),
+                              DMSansText(
+                                'Radius Gallery • Santa Cruz',
+                                color: Color(0xFF747688),
+                                fontSize: 11,
+                                fontWeight: FontWeight.w400,
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        (index == 1)
+                            ? Image.asset(
+                                'assets/images/home/google-meet-icon.png',
+                                height: 16.h,
+                                width: 16.w,
+                              )
+                            : Image.asset(
+                                'assets/images/home/zoom-icon.png',
+                                height: 16.h,
+                                width: 16.w,
+                                fit: BoxFit.contain,
+                              ),
+                        ZoomTapAnimation(
+                          onTap: () {
+                            setState(() {
+                              isFavourite = !isFavourite;
+                            });
+                          },
+                          child: Padding(
+                            padding: EdgeInsets.only(
+                              left: 8.w,
+                            ),
+                            child: Icon(
+                              isFavourite
+                                  ? IconlyBold.bookmark
+                                  : IconlyLight.bookmark,
+                              size: 16.sp,
+                              color: isFavourite ? HexColor('#EB5757') : null,
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+              );
+            },
+          ),
         ),
       ],
     );
@@ -1174,6 +1314,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 color: Colors.white,
                 fontSize: 20.sp,
               ),
+              textCapitalization: TextCapitalization.words,
               decoration: InputDecoration(
                 hintText: 'Search...',
                 hintStyle: TextStyle(
@@ -1280,8 +1421,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               height: 18.h,
                               placeholderBuilder: (context) {
                                 return Container(
-                                  width: 25.w,
-                                  height: 18.h,
+                                  width: 20.w,
+                                  height: 15.h,
                                   color: Colors.grey,
                                 );
                               },

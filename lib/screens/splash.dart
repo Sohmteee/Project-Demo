@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Future.delayed(5.seconds, () {
-      // Navigator.pushReplacementNamed(context, '/onboarding');
+      Navigator.pushReplacementNamed(context, '/onboarding');
     });
 
     super.initState();
@@ -29,6 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
       body: Stack(
+        clipBehavior: Clip.none,
         children: [
           Container(
             decoration: (themeProvider.themeType == ThemeType.dark)
@@ -69,29 +70,36 @@ class _SplashScreenState extends State<SplashScreen> {
                   ),
             ),
           ),
-          Positioned(
-            child: Opacity(
-              opacity: 0.70,
-              child: Container(
+          if (themeProvider.themeType == ThemeType.light)
+            Positioned(
+              top: -20.h,
+              right: 0,
+              child: Image.asset(
+                'assets/images/onboarding/blur-1.png',
                 width: 227.w,
                 height: 209.h,
-                decoration: const ShapeDecoration(
-                  gradient: SweepGradient(
-                    center: Alignment(0.21, 0.79),
-                    startAngle: -0,
-                    endAngle: -0.57,
-                    colors: [
-                      Color(0xFFB9DAFB),
-                      Color(0xFF9895EE),
-                      Color(0xFFC55492),
-                      Color(0xFFECACAD)
-                    ],
-                  ),
-                  shape: OvalBorder(),
-                ),
               ),
             ),
-          ),
+          if (themeProvider.themeType == ThemeType.light)
+            Positioned(
+              bottom: 0,
+              right: -110.w,
+              child: Image.asset(
+                'assets/images/onboarding/blur-2.png',
+                width: 349.w,
+                height: 322.h,
+              ),
+            ),
+          if (themeProvider.themeType == ThemeType.light)
+            Positioned(
+              bottom: 0,
+              left: -20.w,
+              child: Image.asset(
+                'assets/images/onboarding/blur-3.png',
+                width: 166.w,
+                height: 153.h,
+              ),
+            ),
         ],
       ),
     );

@@ -18,28 +18,26 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   int onBoardingIndex = 0;
   List onBoardingData = [
     {
-      'image': 'assets/svg/onboarding/onb-1.svg',
+      'image': 'assets/images/onboarding/onb-1.png',
       'title': 'Uncover and Explore Local'
-      '\nEvents',
-      'description':
-          'Your gateway to local adventure!'
+          '\nEvents',
+      'description': 'Your gateway to local adventure!'
           '\nDiscover exciting happenings right'
           '\nin your area',
     },
     {
-      'image': 'assets/svg/onboarding/onb-2.svg',
+      'image': 'assets/images/onboarding/onb-2.png',
       'title': 'Spot Engaging Events on'
-      '\nyour Calendar',
+          '\nyour Calendar',
       'description': 'Personalized calendar ensuring you never'
           '\nmiss the perfect event that fits'
           '\nseamlessly into your schedule',
     },
     {
-      'image': 'assets/svg/onboarding/onb-3.svg',
+      'image': 'assets/images/onboarding/onb-3.png',
       'title': 'Navigate to Your'
-      '\nDestination with Ease',
-      'description':
-          'Your essential map for smooth and'
+          '\nDestination with Ease',
+      'description': 'Your essential map for smooth and'
           '\neffortless journey planning',
     },
   ];
