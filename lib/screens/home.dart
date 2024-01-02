@@ -349,6 +349,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         horizontal: 13.w,
                         vertical: 16.h,
                       ),
+                      margin: EdgeInsets.symmetric(
+                        vertical: 7.h,
+                      ),
                       decoration: BoxDecoration(
                         color: newPopUpItems[index]['color'],
                         borderRadius: BorderRadius.circular(3.r),
