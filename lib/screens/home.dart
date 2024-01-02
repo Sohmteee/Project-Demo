@@ -403,7 +403,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     );
   }
 
-  Column buildNearYou() {
+  Column buildNearYou(ThemeProvider themeProvider) {
     return Column(
       children: [
         Padding(
@@ -456,7 +456,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 padding: EdgeInsets.all(10.sp),
                 margin: EdgeInsets.symmetric(vertical: 7.h),
                 decoration: BoxDecoration(
-                  color: Them. lightBackgroundColor,
+                  color: themeProvider.themeType == ThemeType.light ? lightBackgroundColor : darkBackgroundColor,
                   borderRadius: BorderRadius.circular(18.r),
                   boxShadow: const [
                     BoxShadow(
