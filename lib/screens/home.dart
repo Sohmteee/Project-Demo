@@ -456,7 +456,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 padding: EdgeInsets.all(10.sp),
                 margin: EdgeInsets.symmetric(vertical: 7.h),
                 decoration: BoxDecoration(
-                  color: lightBackgroundColor,
+                  color: Them. lightBackgroundColor,
                   borderRadius: BorderRadius.circular(18.r),
                   boxShadow: const [
                     BoxShadow(
@@ -496,7 +496,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               SizedBox(height: 3.h),
                               AirBnBText(
                                 'Women\'s leadership conference',
-                                color: Theme.of(context).colorScheme.primary,
+                                color: Theme.of(context).colorScheme.secondary,
                                 fontSize: 15.sp,
                                 fontWeight: FontWeight.w500,
                               ),
