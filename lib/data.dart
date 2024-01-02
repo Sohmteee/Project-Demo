@@ -21,7 +21,11 @@ List categories = [
 ];
 
 List newPopUpItems = [
-  
+  {
+    'title': 'New Outdoor Event',
+    'subtitle': 'For general purpose concerts or
+events.'
+  }
 ];
 
 List upcomingEvents = [
