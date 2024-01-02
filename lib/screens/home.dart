@@ -343,9 +343,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     padding: EdgeInsets.symmetric(
                       horizontal: 9.w,
                     ),
-                    color: themeProvider.themeType == ThemeType.light
-                        ? lightBackgroundColor
-                        : darkBackgroundColor,
+                    // color: themeProvider.themeType == ThemeType.light
+                    //     ? lightBackgroundColor
+                    //     : darkBackgroundColor,
                     child: Column(
                       children: List.generate(newPopUpItems.length, (index) {
                         return Container(
