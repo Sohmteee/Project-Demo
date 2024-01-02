@@ -21,27 +21,31 @@ List categories = [
   },
 ];
 
-List newPopUpItems = const [
+List newPopUpItems = [
   {
     'title': 'New Outdoor Event',
     'subtitle': 'For general purpose concerts or events.',
-    'icon-color':HexColor(),'background-color': Color(0x1C3C4FDF),
-
+    'icon-color': HexColor('#3D50DF'),
+    'background-color': const Color(0x1C3C4FDF),
   },
   {
     'title': 'New Movie Show',
     'subtitle': 'For Cinemas',
-    'icon-color':HexColor(),'background-color': Color(0x1CF1573D),
+    'icon-color': HexColor(),
+    'background-color': const Color(0x1CF1573D),
   },
   {
     'title': 'New Virtual Event',
     'subtitle': 'For online tutoring sessions',
-    'icon-color':HexColor(),'background-color': Color(0x59F6EF97),
+    'icon-color': HexColor(),
+    'background-color': const Color(0x59F6EF97),
   },
   {
     'title': 'New Appointment Booking',
-    'subtitle': 'For paid one-on-one virtual or physical meetings, consultation, etc',
-    'icon-color':HexColor(),'background-color': Color(0x3300B6AA),
+    'subtitle':
+        'For paid one-on-one virtual or physical meetings, consultation, etc',
+    'icon-color': HexColor(),
+    'background-color': const Color(0x3300B6AA),
   },
 ];
 
