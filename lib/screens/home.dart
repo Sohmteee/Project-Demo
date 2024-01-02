@@ -364,22 +364,24 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             color: newPopUpItems[index]['icon-color'],
                           ),
                           SizedBox(width: 18.w),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              DMSansText(
-                                'New Outdoor Event',
-                                color: Color(0xFF171766),
-                                fontSize: 15.sp,
-                                fontWeight: FontWeight.w700,
-                              ),
-                              DMSansText(
-                                'For general purpose concerts or\nevents.',
-                                color: Color(0xFF757575),
-                                fontSize: 15.sp,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ],
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                DMSansText(
+                                  newPopUpItems[index]['title'],
+                                  color: Color(0xFF171766),
+                                  fontSize: 15.sp,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                                DMSansText(
+                                  newPopUpItems[index]['subtitle'],
+                                  color: Color(0xFF757575),
+                                  fontSize: 15.sp,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
