@@ -20,7 +20,9 @@ List categories = [
   },
 ];
 
-List newPopUpItems
+List newPopUpItems = [
+  
+];
 
 List upcomingEvents = [
   {
