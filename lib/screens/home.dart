@@ -337,10 +337,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             return Dialog(
               alignment: Alignment.bottomCenter,
               child: Column(
-                mainAxisSize: M,
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   Container(
-                    // height: (94.h) * newPopUpItems.length,
+                    height: (94.h) * newPopUpItems.length,
                     padding: EdgeInsets.symmetric(
                       horizontal: 9.w,
                     ),
