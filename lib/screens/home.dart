@@ -342,7 +342,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   vertical: 8.h,
                 ),
                 child: ListView.builder(
-                  shrinkWrap: ,
                   itemCount: newPopUpItems.length,
                   itemBuilder: (BuildContext context, int index) {
                     return Container(
