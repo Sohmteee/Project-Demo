@@ -340,12 +340,55 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Container(
-                    height: (94.h) * newPopUpItems.length,
+                    // height: (94.h) * newPopUpItems.length,
                     padding: EdgeInsets.symmetric(
                       horizontal: 9.w,
                     ),
                     child: Column(
-                      children: List.generate(newPopUpItems.length, (index) {}),
+                      children: List.generate(newPopUpItems.length, (index) {
+                        return Container(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 13.w,
+                            vertical: 16.h,
+                          ),
+                          margin: EdgeInsets.symmetric(
+                            vertical: 7.h,
+                          ),
+                          decoration: BoxDecoration(
+                            color: newPopUpItems[index]['background-color'],
+                            borderRadius: BorderRadius.circular(3.r),
+                          ),
+                          child: Row(
+                            children: [
+                              Icon(
+                                IconlyBroken.calendar,
+                                size: 38.sp,
+                                color: newPopUpItems[index]['icon-color'],
+                              ),
+                              SizedBox(width: 18.w),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    DMSansText(
+                                      newPopUpItems[index]['title'],
+                                      color: const Color(0xFF171766),
+                                      fontSize: 15.sp,
+                                      fontWeight: FontWeight.w700,
+                                    ),
+                                    DMSansText(
+                                      newPopUpItems[index]['subtitle'],
+                                      color: const Color(0xFF757575),
+                                      fontSize: 15.sp,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        );
+                      }),
                     ),
                   ),
                 ],
