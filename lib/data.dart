@@ -20,7 +20,7 @@ List categories = [
   },
 ];
 
-List newPopUpItems = [
+List newPopUpItems = const [
   {
     'title': 'New Outdoor Event',
     'subtitle': 'For general purpose concerts or events.',
@@ -39,7 +39,7 @@ List newPopUpItems = [
   {
     'title': 'New Appointment Booking',
     'subtitle': 'For paid one-on-one virtual or physical meetings, consultation, etc',
-    'color': Color(),
+    'color': Color(0x3300B6AA),
   },
 ];
 
