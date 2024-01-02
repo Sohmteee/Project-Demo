@@ -363,7 +363,16 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             size: 38.sp,
                             color: newPopUpItems[index]['icon-color'],
                           ),
-                          Column(children:)
+                          Column(
+                            children: [
+                              DMSansText(
+                                'New Outdoor Event',
+                                color: Color(0xFF171766),
+                                fontSize: 15.sp,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ],
+                          ),
                         ],
                       ),
                     );
