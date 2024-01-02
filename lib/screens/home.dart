@@ -345,8 +345,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   itemCount: newPopUpItems.length,
                   itemBuilder: (BuildContext context, int index) {
                     return Container(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 13.w,
+                        vertical: 16.h,
+                      ),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(radius)
+                        color: 
+                        borderRadius: BorderRadius.circular(3.r),
                       ),
                     );
                   },
