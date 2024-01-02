@@ -23,9 +23,24 @@ List categories = [
 List newPopUpItems = [
   {
     'title': 'New Outdoor Event',
-    'subtitle': 'For general purpose concerts or
-events.'
-  }
+    'subtitle': 'For general purpose concerts or events.',
+    'color': Color(0x1C3C4FDF),
+  },
+  {
+    'title': '',
+    'subtitle': '',
+    'color': Color(),
+  },
+  {
+    'title': '',
+    'subtitle': '',
+    'color': Color(),
+  },
+  {
+    'title': '',
+    'subtitle': '',
+    'color': Color(),
+  },
 ];
 
 List upcomingEvents = [
