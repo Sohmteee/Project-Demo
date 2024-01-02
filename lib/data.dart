@@ -31,20 +31,20 @@ List newPopUpItems = [
   {
     'title': 'New Movie Show',
     'subtitle': 'For Cinemas',
-    'icon-color': HexColor(),
+    'icon-color': HexColor('#F1573D'),
     'background-color': const Color(0x1CF1573D),
   },
   {
     'title': 'New Virtual Event',
     'subtitle': 'For online tutoring sessions',
-    'icon-color': HexColor(),
+    'icon-color': HexColor('#767676'),
     'background-color': const Color(0x59F6EF97),
   },
   {
     'title': 'New Appointment Booking',
     'subtitle':
         'For paid one-on-one virtual or physical meetings, consultation, etc',
-    'icon-color': HexColor(),
+    'icon-color': HexColor('#767676'),
     'background-color': const Color(0x3300B6AA),
   },
 ];
