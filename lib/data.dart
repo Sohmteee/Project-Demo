@@ -29,7 +29,7 @@ List newPopUpItems = const [
   {
     'title': 'New Movie Show',
     'subtitle': 'For Cinemas',
-    'color': Color(0xFF757575),
+    'color': Color(0x1CF1573D),
   },
   {
     'title': 'New Virtual Event',
