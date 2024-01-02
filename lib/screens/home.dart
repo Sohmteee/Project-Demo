@@ -337,7 +337,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             return Dialog(
               alignment: Alignment.bottomCenter,
               child: Container(
-                child: Column
+                padding: EdgeInsets.symmetric(vertical: 10.w, ),
+                child: ListView.builder(
+                  itemCount: 1,
+                  itemBuilder: (BuildContext context, int index) {
+                    return ;
+                  },
+                ),
               ),
             );
           },
