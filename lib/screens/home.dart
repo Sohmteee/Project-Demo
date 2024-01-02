@@ -364,7 +364,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   SizedBox(height: 20.h),
                   buildReferral(themeProvider),
                   SizedBox(height: 20.h),
-                  buildNearYou(),
+                  buildNearYou(themeProvider),
                 ],
               ),
             ),
@@ -456,7 +456,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 padding: EdgeInsets.all(10.sp),
                 margin: EdgeInsets.symmetric(vertical: 7.h),
                 decoration: BoxDecoration(
-                  color: themeProvider.themeType == ThemeType.light ? lightBackgroundColor : darkBackgroundColor,
+                  color: themeProvider.themeType == ThemeType.light
+                      ? lightBackgroundColor
+                      : darkBackgroundColor,
                   borderRadius: BorderRadius.circular(18.r),
                   boxShadow: const [
                     BoxShadow(
