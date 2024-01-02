@@ -496,7 +496,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               SizedBox(height: 3.h),
                               AirBnBText(
                                 'Women\'s leadership conference',
-                                color: Color(0xFF110C26),
+                                color: Theme.of(context).colorScheme.primary,
                                 fontSize: 15.sp,
                                 fontWeight: FontWeight.w500,
                               ),
