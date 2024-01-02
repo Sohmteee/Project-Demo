@@ -363,6 +363,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             size: 38.sp,
                             color: newPopUpItems[index]['icon-color'],
                           ),
+                          Column(children:)
                         ],
                       ),
                     );
