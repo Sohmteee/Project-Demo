@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:yeerlo/colors/app_colors.dart';
+import 'package:yeerlo/colors/hex_color.dart';
 
 late String storageLocation;
 
@@ -24,22 +25,23 @@ List newPopUpItems = const [
   {
     'title': 'New Outdoor Event',
     'subtitle': 'For general purpose concerts or events.',
-    'color': Color(0x1C3C4FDF),
+    'icon-color':HexColor(),'background-color': Color(0x1C3C4FDF),
+
   },
   {
     'title': 'New Movie Show',
     'subtitle': 'For Cinemas',
-    'color': Color(0x1CF1573D),
+    'icon-color':HexColor(),'background-color': Color(0x1CF1573D),
   },
   {
     'title': 'New Virtual Event',
     'subtitle': 'For online tutoring sessions',
-    'color': Color(0x59F6EF97),
+    'icon-color':HexColor(),'background-color': Color(0x59F6EF97),
   },
   {
     'title': 'New Appointment Booking',
     'subtitle': 'For paid one-on-one virtual or physical meetings, consultation, etc',
-    'color': Color(0x3300B6AA),
+    'icon-color':HexColor(),'background-color': Color(0x3300B6AA),
   },
 ];
 
