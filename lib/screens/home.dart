@@ -365,6 +365,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           ),
                           SizedBox(width: 18.w),
                           Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               DMSansText(
                                 'New Outdoor Event',
@@ -372,16 +373,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 fontSize: 15.sp,
                                 fontWeight: FontWeight.w700,
                               ),
-                              Text(
+                              DMSansText(
                                 'For general purpose concerts or\nevents.',
-                                style: TextStyle(
-                                  color: Color(0xFF757575),
-                                  fontSize: 15,
-                                  fontFamily: 'Inter',
-                                  fontWeight: FontWeight.w500,
-                                  height: 0,
-                                ),
-                              )
+                                color: Color(0xFF757575),
+                                fontSize: 15.sp,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ],
                           ),
                         ],
