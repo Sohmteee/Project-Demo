@@ -331,7 +331,17 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         ),
       ),
       onPressFAB: () {
-        showDialog(context: context, builder: (context) {},)
+        showDialog(
+          context: context,
+          builder: (context) {
+            return Dialog(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                child: Column
+              ),
+            );
+          },
+        );
       },
       bottomItems: [
         BottomBarItem(
