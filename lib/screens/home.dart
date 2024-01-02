@@ -370,13 +370,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               children: [
                                 DMSansText(
                                   newPopUpItems[index]['title'],
-                                  color: Color(0xFF171766),
+                                  color: const Color(0xFF171766),
                                   fontSize: 15.sp,
                                   fontWeight: FontWeight.w700,
                                 ),
                                 DMSansText(
                                   newPopUpItems[index]['subtitle'],
-                                  color: Color(0xFF757575),
+                                  color: const Color(0xFF757575),
                                   fontSize: 15.sp,
                                   fontWeight: FontWeight.w500,
                                 ),
@@ -569,7 +569,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               DMSansText(
                                 'FREE - \$25',
                                 textAlign: TextAlign.center,
-                                color: Color(0xFFFFB459),
+                                color: const Color(0xFFFFB459),
                                 fontSize: 11.sp,
                                 fontWeight: FontWeight.w700,
                               ),
@@ -585,7 +585,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               SizedBox(width: 5.w),
                               DMSansText(
                                 'Radius Gallery • Santa Cruz',
-                                color: Color(0xFF747688),
+                                color: const Color(0xFF747688),
                                 fontSize: 11,
                                 fontWeight: FontWeight.w400,
                               )
