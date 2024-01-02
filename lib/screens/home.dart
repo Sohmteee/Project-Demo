@@ -344,11 +344,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     padding: EdgeInsets.symmetric(
                       horizontal: 9.w,
                     ),
-                    child: ListView.builder(
-                      itemCount: newPopUpItems.length,
-                      itemBuilder: (BuildContext context, int index) {
-                        
-                      },
+                    child: Column(
+                      children: List.generate(newPopUpItems.length, (index) {}),
                     ),
                   ),
                 ],
