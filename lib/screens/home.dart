@@ -357,7 +357,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         borderRadius: BorderRadius.circular(3.r),
                       ),
                       child: Row(
-                        children: [],
+                        children: [
+                          
+                        ],
                       ),
                     );
                   },
