@@ -20,6 +20,8 @@ List categories = [
   },
 ];
 
+List newPopUpItems
+
 List upcomingEvents = [
   {
     'image':
