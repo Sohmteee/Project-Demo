@@ -363,6 +363,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             size: 38.sp,
                             color: newPopUpItems[index]['icon-color'],
                           ),
+                          SizedBox(width: 18.w),
                           Column(
                             children: [
                               DMSansText(
@@ -371,6 +372,16 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 fontSize: 15.sp,
                                 fontWeight: FontWeight.w700,
                               ),
+                              Text(
+                                'For general purpose concerts or\nevents.',
+                                style: TextStyle(
+                                  color: Color(0xFF757575),
+                                  fontSize: 15,
+                                  fontFamily: 'Inter',
+                                  fontWeight: FontWeight.w500,
+                                  height: 0,
+                                ),
+                              )
                             ],
                           ),
                         ],
