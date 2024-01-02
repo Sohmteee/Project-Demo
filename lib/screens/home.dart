@@ -330,6 +330,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           color: Colors.white,
         ),
       ),
+      onPressFAB: () {
+        showDialog(context: context, builder: (context) {},)
+      },
       bottomItems: [
         BottomBarItem(
           icon: SvgPicture.asset(
