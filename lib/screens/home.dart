@@ -359,7 +359,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       child: Row(
                         children: [
                           Icon(
-                            IconlyLight.calendar,
+                            IconlyBroken.calendar,
+                            size: 38.sp,
+                            color: newPopUpItems[index]['icon-color'],
                           ),
                         ],
                       ),
