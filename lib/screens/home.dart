@@ -228,9 +228,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                         '\$20-\$120',
                                         color: HexColor('#3F38DD'),
                                         fontSize: 18.sp,
-                                        fontWeight: FontWeight.w500,
+                                        fontWeight: FontWeight.w400,
                                       )
                                     ],
+                                  ),
+                                  Slider(
+                                    value:
                                   ),
                                 ],
                               ),
