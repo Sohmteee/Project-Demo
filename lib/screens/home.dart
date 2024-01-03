@@ -111,7 +111,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               SlidingUpPanelWidget(
                 panelController: panelController,
                 controlHeight: 0,
-                
                 child: Container(
                   decoration: BoxDecoration(
                     color: (themeProvider.themeType == ThemeType.dark)
