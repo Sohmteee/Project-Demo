@@ -37,6 +37,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   final drawerController = AdvancedDrawerController();
   final panelController = SlidingUpPanelController();
   int selectedFilterCategoryIndex = 0;
+  int selectedTimeCategoryIndex = 0;
   bool isOpenDrawer = false;
   final timer = Timer;
   late Duration timeRemaining;
@@ -268,9 +269,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     );
   }
 
-SizedBox buildTime(BuildContext context) {
+SizedBox buildTimeCategories(BuildContext context) {
     return SizedBox(
-      height: (40 + 36).h,
+      height: (40).h,
       width: MediaQuery.of(context).size.width,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
@@ -280,7 +281,7 @@ SizedBox buildTime(BuildContext context) {
         itemBuilder: (context, index) => ZoomTapAnimation(
           onTap: () {
             setState(() {
-              selectedFilterCategoryIndex = index;
+              selectedTimeCategoryIndex = index;
             });
           },
           child: Container(
@@ -290,11 +291,11 @@ SizedBox buildTime(BuildContext context) {
             ),
             padding: EdgeInsets.symmetric(horizontal: 15.w),
             decoration: BoxDecoration(
-              color: index == selectedFilterCategoryIndex
+              color: index == selectedTimeCategoryIndex
                   ? null
                   : const Color(0xFFE7E7E7),
               borderRadius: BorderRadius.circular(20),
-              gradient: index == selectedFilterCategoryIndex
+              gradient: index == selectedTimeCategoryIndex
                   ? LinearGradient(
                       colors: [
                         lightOrangeColor,
@@ -317,14 +318,14 @@ SizedBox buildTime(BuildContext context) {
               children: [
                 Icon(
                   IconlyBold.calendar,
-                  color: index == selectedFilterCategoryIndex
+                  color: index == selectedTimeCategoryIndex
                       ? Colors.white
                       : HexColor('#979797'),
                 ),
                 SizedBox(width: 5.w),
                 DMSansText(
                   categories[index]['title'],
-                  color: index == selectedFilterCategoryIndex
+                  color: index == selectedTimeCategoryIndex
                       ? Colors.white
                       : HexColor('#979797'),
                   fontSize: 20.sp,
