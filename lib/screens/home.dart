@@ -213,6 +213,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                   ),
                                   SizedBox(height: 12.h),
                                   buildChooseLocation(),
+                                  SizedBox(height: 24.h),
                                 ],
                               ),
                             ),
@@ -291,8 +292,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   Container buildChooseLocation() {
     return Container(
       padding: EdgeInsets.symmetric(
-        horizontal: 18.w,
-        vertical: 10.h,
+        horizontal: 8.w,
+        vertical: 8.h,
       ),
       decoration: BoxDecoration(
         border: Border.all(
