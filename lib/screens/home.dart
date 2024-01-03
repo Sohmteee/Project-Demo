@@ -116,8 +116,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 ),
               ),
               if (panelController.status != SlidingUpPanelStatus.collapsed)
-                Container(
-                  color: Colors.black38,
+                GestureDetector(
+                  onTap: () {
+                    panelController.collapse();
+                  },
+                  child: Container(
+                    color: Colors.black38,
+                  ),
                 ),
               SlidingUpPanelWidget(
                 elevation: 50.h,
