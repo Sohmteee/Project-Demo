@@ -229,7 +229,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                         color: HexColor('#3F38DD'),
                                         fontSize: 18.sp,
                                         fontWeight: FontWeight.w400,
-                                      )
+                                      ),
+                                      buildPriceRange(),
                                     ],
                                   ),
                                   
@@ -246,6 +247,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       ),
     );
   }
+
+  Container buildPriceRange() => Container();
 
   Container buildChooseCalender() {
     return Container(
