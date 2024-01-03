@@ -1627,10 +1627,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         //filter button
         ZoomTapAnimation(
           onTap: () {
-            panelController.expand();
             setState(() {
               isOpenFilter = true;
             });
+            panelController.expand();
           },
           child: Container(
             padding: EdgeInsets.fromLTRB(5.w, 5.h, 10.w, 5.h),
