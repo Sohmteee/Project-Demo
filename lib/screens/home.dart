@@ -196,14 +196,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             SizedBox(height: 12.h),
                             buildTimeCategories(context),
                             SizedBox(height: 14.h),
-                            Column(
-                              children: [
-                                Padding(
-                                  padding:
-                                      EdgeInsets.symmetric(horizontal: 20.w),
-                                  child: buildChooseLocation(),
-                                ),
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                children: [
+                                  buildChooseLocation(),
+                                ],
+                              ),
                             ),
                           ],
                         ),
