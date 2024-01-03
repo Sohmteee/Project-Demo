@@ -226,9 +226,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                       ),
                                       AirBnBText(
                                         '\$20-\$120',
-                                        color: const Color(0xFF3F38DD),
+                                        color: HexColor('#3F38DD'),
                                         fontSize: 18.sp,
-                                        fontWeight: FontWeight.w400,
+                                        fontWeight: FontWeight.w500,
                                       )
                                     ],
                                   ),
