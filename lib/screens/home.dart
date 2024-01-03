@@ -110,7 +110,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               ),
               SlidingUpPanelWidget(
                 panelController: panelController,
-                controlHeight: 100.h,
+                controlHeight: 0.h,
                 upperBound: .8.h,
                 minimumBound: 0.h,
                 child: Container(
@@ -1431,7 +1431,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         //filter button
         ZoomTapAnimation(
           onTap: () {
-            panelController.anchor();
+            panelController.expand();
           },
           child: Container(
             padding: EdgeInsets.fromLTRB(5.w, 5.h, 10.w, 5.h),
