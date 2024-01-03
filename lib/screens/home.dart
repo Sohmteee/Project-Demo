@@ -232,6 +232,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       end: Alignment.bottomCenter,
                     )
                   : null,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(.1),
+                  blurRadius: 10,
+                  spreadRadius: 5,
+                ),
+              ],
             ),
             child: Row(
               children: [
