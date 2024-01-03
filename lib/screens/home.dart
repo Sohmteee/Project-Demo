@@ -296,7 +296,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             padding: EdgeInsets.symmetric(horizontal: 20.w),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              border: index == selectedTimeCategoryIndex
+              border: index != selectedTimeCategoryIndex
                   ? Border.all(
                       width: 1,
                       color: const Color(0xFFE6E6E6),
