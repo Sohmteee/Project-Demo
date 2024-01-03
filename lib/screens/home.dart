@@ -197,6 +197,16 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           decoration: BoxDecoration(
             color: index == selectedIndex ? null : Color(0xFFE7E7E7),
             borderRadius: BorderRadius.circular(20),
+            gradient: index == selectedIndex ? LinearGradient(
+              colors: 
+                   [
+                      lightOrangeColor,
+                      darkOrangeColor,
+                    ]
+                ,
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+            ) : null,
           ),
           child: Row(
             children: [
