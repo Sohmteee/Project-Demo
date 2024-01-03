@@ -111,6 +111,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               SlidingUpPanelWidget(
                 panelController: panelController,
                 controlHeight: 100.h,
+                upperBound: .8.h,
                 child: Container(
                   height: 100.h,
                   width: double.maxFinite,
