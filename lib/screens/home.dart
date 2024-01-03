@@ -319,8 +319,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 color: index == selectedTimeCategoryIndex
                     ? Colors.white
                     : HexColor('#979797'),
-                fontSize: 20.sp,
-                fontWeight: FontWeight.bold,
+                fontSize: 15.sp,
+                fontWeight: FontWeight.w400,
               ),
             ),
           ),
