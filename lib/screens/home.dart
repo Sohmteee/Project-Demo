@@ -183,7 +183,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   SizedBox buildFilterCategories(BuildContext context) {
     int selectedIndex = 0;
 
-    
     return SizedBox(
       height: 40.h,
       width: MediaQuery.of(context).size.width,
@@ -196,7 +195,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           margin: EdgeInsets.symmetric(horizontal: 5.w),
           padding: EdgeInsets.symmetric(horizontal: 15.w),
           decoration: BoxDecoration(
-            color: categories[index]['color'],
+            color: index == selectedIndex ? null : Color(0xFFE7E7E7),
             borderRadius: BorderRadius.circular(20),
           ),
           child: Row(
