@@ -104,9 +104,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           ),
           child: Stack(
             children: [
-              Scaffold(
-                backgroundColor: Theme.of(context).colorScheme.primary,
-                body: buildBottomNavBar(themeProvider),
+              GestureDetector(
+                onTap: () {
+                  
+                },
+                child: Scaffold(
+                  backgroundColor: Theme.of(context).colorScheme.primary,
+                  body: buildBottomNavBar(themeProvider),
+                ),
               ),
               SlidingUpPanelWidget(
                 elevation: 50.h,
