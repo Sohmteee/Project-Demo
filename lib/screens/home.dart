@@ -112,6 +112,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 panelController: panelController,
                 controlHeight: 0,
                 child: Container(
+                  height: 100.h,
                   decoration: BoxDecoration(
                     color: (themeProvider.themeType == ThemeType.dark)
                         ? darkBackgroundColor
