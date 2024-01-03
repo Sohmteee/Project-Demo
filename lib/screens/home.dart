@@ -47,6 +47,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
+    panelController.collapse();
     Timer.periodic(1.seconds, (timer) {
       setState(() {
         timeRemaining = eventDate.difference(DateTime.now());
