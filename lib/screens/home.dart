@@ -223,13 +223,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       ? Colors.white
                       : HexColor('#979797'),
                 ),
-                SizedBox(width: 14.w),
+                SizedBox(width: 5.w),
                 DMSansText(
                   categories[index]['title'],
                   color: index == selectedFilterCategoryIndex
                       ? Colors.white
                       : HexColor('#979797'),
-                  fontSize: 18.sp,
+                  fontSize: 20.sp,
                   fontWeight: FontWeight.bold,
                 ),
               ],
