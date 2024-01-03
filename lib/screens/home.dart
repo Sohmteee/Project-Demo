@@ -107,7 +107,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 backgroundColor: Theme.of(context).colorScheme.primary,
                 body: buildBottomNavBar(themeProvider),
               ),
-              SlidingUpPanelWidget(),
+              SlidingUpPanelWidget(
+                con
+                child: Container(),
+              ),
             ],
           ),
         ),
