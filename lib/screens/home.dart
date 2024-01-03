@@ -265,7 +265,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     showTicks: true,
                     showLabels: true,
                     child: Container(
-                      child: SfCartesianChart(
+                      child: Sf(
                         margin: const EdgeInsets.all(0),
                         primaryXAxis: DateTimeAxis(
                           minimum: dateMin,
