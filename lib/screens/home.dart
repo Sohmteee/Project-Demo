@@ -141,40 +141,38 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       top: Radius.circular(38.r),
                     ),
                   ),
-                  child: StatefulBuilder(
-                    builder: (context, updateState) {
-                      return Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Container(
-                            width: 26.w,
-                            height: 5.h,
-                            margin: EdgeInsets.symmetric(vertical: 11.h),
-                            decoration: ShapeDecoration(
-                              color: const Color(0x7FB2B2B2),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(2.50),
-                              ),
+                  child: StatefulBuilder(builder: (context, updateState) {
+                    return Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Container(
+                          width: 26.w,
+                          height: 5.h,
+                          margin: EdgeInsets.symmetric(vertical: 11.h),
+                          decoration: ShapeDecoration(
+                            color: const Color(0x7FB2B2B2),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(2.50),
                             ),
                           ),
-                          Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 20.w),
-                            child: Align(
-                              alignment: Alignment.topLeft,
-                              child: AirBnBText(
-                                'Filter',
-                                color: Colors.black,
-                                fontSize: 25.sp,
-                                fontWeight: FontWeight.w400,
-                              ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 20.w),
+                          child: Align(
+                            alignment: Alignment.topLeft,
+                            child: AirBnBText(
+                              'Filter',
+                              color: Colors.black,
+                              fontSize: 25.sp,
+                              fontWeight: FontWeight.w400,
                             ),
                           ),
-                          SizedBox(height: 18.h),
-                          buildFilterCategories(context, updateState),
-                        ],
-                      );
-                    }
-                  ),
+                        ),
+                        SizedBox(height: 18.h),
+                        buildFilterCategories(context, updateState),
+                      ],
+                    );
+                  }),
                 ),
               ),
             ],
@@ -184,7 +182,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     );
   }
 
-  SizedBox buildFilterCategories(BuildContext context) {
+  SizedBox buildFilterCategories(BuildContext context, var updateState) {
     int selectedIndex = 0;
 
     return SizedBox(
@@ -200,6 +198,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             updateState(() {
               selectedIndex = index;
             });
+            setState(() {});
           },
           child: Container(
             margin: EdgeInsets.symmetric(horizontal: 5.w),
