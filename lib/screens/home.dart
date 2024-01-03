@@ -234,7 +234,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                       buildPriceRange(),
                                     ],
                                   ),
-                                  
                                 ],
                               ),
                             ),
@@ -254,35 +253,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     final DateTime dateMax = DateTime(2010, 01, 01);
     final SfRangeValues dateValues =
         SfRangeValues(DateTime(2005, 01, 01), DateTime(2008, 01, 01));
-    return SfRangeSelector(
-                    min: dateMin,
-                    max: dateMax,
-                    initialValues: dateValues,
-                    labelPlacement: LabelPlacement.betweenTicks,
-                    interval: 1,
-                    dateIntervalType: DateIntervalType.years,
-                    dateFormat: DateFormat.y(),
-                    showTicks: true,
-                    showLabels: true,
-                    child: Container(
-                      child: SfCartesianChart(
-                        margin: const EdgeInsets.all(0),
-                        primaryXAxis: DateTimeAxis(
-                          minimum: dateMin,
-                          maximum: dateMax,
-                          isVisible: false,
-                        ),
-                        primaryYAxis: NumericAxis(isVisible: false, maximum: 4),
-                        series: <SplineAreaSeries<Data, DateTime>>[
-                          SplineAreaSeries<Data, DateTime>(
-                              dataSource: chartData,
-                              xValueMapper: (Data sales, int index) => sales.x,
-                              yValueMapper: (Data sales, int index) => sales.y)
-                        ],
-                      ),
-                      height: 200,
-                    ),
-                  );
+    return Container();
   }
 
   Container buildChooseCalender() {
