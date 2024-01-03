@@ -214,14 +214,15 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                   SizedBox(height: 12.h),
                                   buildChooseLocation(),
                                   SizedBox(height: 24.h),
-                                  Align(
-                                    alignment: Alignment.topLeft,
-                                    child: AirBnBText(
-                                      'Select price range',
-                                      color: HexColor('#120D26'),
-                                      fontSize: 16.sp,
-                                      fontWeight: FontWeight.w500,
-                                    ),
+                                  Row(
+                                    children: [
+                                      AirBnBText(
+                                        'Select Price Range',
+                                        color: HexColor('#120D26'),
+                                        fontSize: 16.sp,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ],
                                   ),
                                 ],
                               ),
