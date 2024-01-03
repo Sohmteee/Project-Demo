@@ -299,7 +299,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               border: index == selectedTimeCategoryIndex
                   ? Border.all(
                       width: 1,
-                      color: Color(0xFFE6E6E6),
+                      color: const Color(0xFFE6E6E6),
                     )
                   : null,
               gradient: index == selectedTimeCategoryIndex
@@ -308,8 +308,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         lightOrangeColor,
                         darkOrangeColor,
                       ],
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
+                      begin: const Alignment(0, -1),
+                      end: const Alignment(0, 1),
                     )
                   : null,
             ),
