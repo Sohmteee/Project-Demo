@@ -109,7 +109,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 body: buildBottomNavBar(themeProvider),
               ),
               SlidingUpPanelWidget(
-                elevation: 10.h,
+                elevation: 50.h,
                 panelController: panelController,
                 controlHeight: 0.h,
                 upperBound: .8.h,
