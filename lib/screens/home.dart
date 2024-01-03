@@ -112,6 +112,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 panelController: panelController,
                 controlHeight: 100.h,
                 upperBound: .8.h,
+                minimumBound: 0.h,
                 child: Container(
                   height: 100.h,
                   width: double.maxFinite,
