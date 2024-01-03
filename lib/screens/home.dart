@@ -217,15 +217,17 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                       child: Row(
                                         children: [
                                           ShaderMask(
-                                             blendMode: BlendMode.srcIn,
-                                shaderCallback: (Rect bounds) => LinearGradient(
-                                  begin: Alignment.topCenter,
-                                  end: Alignment.bottomCenter,
-                                  colors: [
-                                    lightOrangeColor,
-                                    darkOrangeColor,
-                                  ],
-                                  tileMode: TileMode.mirror,
+                                            blendMode: BlendMode.srcIn,
+                                            shaderCallback: (Rect bounds) =>
+                                                LinearGradient(
+                                              begin: Alignment.topCenter,
+                                              end: Alignment.bottomCenter,
+                                              colors: [
+                                                lightOrangeColor,
+                                                darkOrangeColor,
+                                              ],
+                                              tileMode: TileMode.mirror,
+                                            ).createShader(bounds),
                                             child: Icon(
                                               IconlyBold.calendar,
                                             ),
