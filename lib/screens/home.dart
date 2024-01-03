@@ -192,6 +192,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         physics: const BouncingScrollPhysics(),
         padding: EdgeInsets.symmetric(horizontal: 15.w),
         itemBuilder: (context, index) => ZoomTapAnimation(
+          onTap: () {
+            updateState(() {
+              selectedIndex = index;
+            });
+          },
           child: Container(
             margin: EdgeInsets.symmetric(horizontal: 5.w),
             padding: EdgeInsets.symmetric(horizontal: 15.w),
