@@ -203,7 +203,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                       EdgeInsets.symmetric(horizontal: 20.w),
                                   child: Container(
                                     padding:
-                                        EdgeInsets.symmetric(horizontal: 18.w),
+                                        EdgeInsets.symmetric(horizontal: 18.w, vertical: 10.h,),
                                     height: 52,
                                     decoration: BoxDecoration(
                                       border: Border.all(
@@ -212,7 +212,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                       ),
                                       borderRadius: BorderRadius.circular(10),
                                     ),
-                                    child: Center(child: Row(c)),
+                                    child: Center(
+                                      child: Row(
+                                        children: [
+Icon(IconlyLight.calendar)
+                                        ],
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ],
