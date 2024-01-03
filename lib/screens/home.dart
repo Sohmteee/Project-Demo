@@ -123,7 +123,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 minimumBound: 0.h,
                 enableOnTap: false,
                 child: Container(
-                  height: 100.h,
                   width: double.maxFinite,
                   decoration: BoxDecoration(
                     color: (themeProvider.themeType == ThemeType.dark)
@@ -141,7 +140,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         height: 5.h,
                         margin: EdgeInsets.symmetric(vertical: 11.h),
                         decoration: ShapeDecoration(
-                          color: Color(0x7FB2B2B2),
+                          color: const Color(0x7FB2B2B2),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(2.50),
                           ),
