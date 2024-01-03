@@ -304,28 +304,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       child: Center(
         child: Row(
           children: [
-            ShaderMask(
-              blendMode: BlendMode.srcIn,
-              shaderCallback: (Rect bounds) => LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  lightOrangeColor,
-                  darkOrangeColor,
-                ],
-                tileMode: TileMode.mirror,
-              ).createShader(bounds),
-              child: const Icon(
-                IconlyBold.calendar,
-              ),
-            ),
+            Image.asset('assets/images/home/filter-location.png'),
             const Spacer(),
             AirBnBText(
-              'Choose from calender',
-              textAlign: TextAlign.center,
-              color: const Color(0xFF7F7979),
-              fontSize: 15.sp,
+              'New York, USA',
+              color: Color(0xFF141736),
+              fontSize: 16,
               fontWeight: FontWeight.w400,
+              height: 0.10,
             ),
             const Spacer(flex: 4),
             ShaderMask(
