@@ -168,9 +168,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           ),
                         ),
                       ),
-                      SizedBox(height: 18.h),
                       buildFilterCategories(context),
-                      SizedBox(height: 30.h),
+                      SizedBox(height: 12.h),
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 20.w),
                         child: Column(
@@ -201,7 +200,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
   SizedBox buildFilterCategories(BuildContext context) {
     return SizedBox(
-      height: 40.h,
+      height: (40 + 36).h,
       width: MediaQuery.of(context).size.width,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
@@ -215,7 +214,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             });
           },
           child: Container(
-            margin: EdgeInsets.symmetric(horizontal: 5.w),
+            margin: EdgeInsets.symmetric(
+              horizontal: 5.w,
+              vertical: 18.h,
+            ),
             padding: EdgeInsets.symmetric(horizontal: 15.w),
             decoration: BoxDecoration(
               color: index == selectedFilterCategoryIndex
