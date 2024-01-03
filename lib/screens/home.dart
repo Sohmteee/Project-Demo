@@ -184,11 +184,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
-                            SizedBox(height: 12.h),
-                            buildTimeCategories(context),
                           ],
                         ),
                       ),
+                      SizedBox(height: 12.h),
+                      buildTimeCategories(context),
                     ],
                   ),
                 ),
@@ -278,7 +278,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         scrollDirection: Axis.horizontal,
         itemCount: categories.length,
         physics: const BouncingScrollPhysics(),
-        padding: EdgeInsets.symmetric(horizontal: 15.w),
+        // padding: EdgeInsets.symmetric(horizontal: 15.w),
         itemBuilder: (context, index) => ZoomTapAnimation(
           onTap: () {
             setState(() {
@@ -304,13 +304,15 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     )
                   : null,
             ),
-            child: DMSansText(
-              categories[index]['title'],
-              color: index == selectedTimeCategoryIndex
-                  ? Colors.white
-                  : HexColor('#979797'),
-              fontSize: 20.sp,
-              fontWeight: FontWeight.bold,
+            child: Center(
+              child: DMSansText(
+                categories[index]['title'],
+                color: index == selectedTimeCategoryIndex
+                    ? Colors.white
+                    : HexColor('#979797'),
+                fontSize: 20.sp,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ),
