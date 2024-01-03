@@ -181,7 +181,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 'Time & Date',
                                 color: HexColor('#120D26'),
                                 fontSize: 16.sp,
-                                fontWeight: FontWeight.w400,
+                                fontWeight: FontWeight.w500,
                               ),
                             ),
                             SizedBox(height: 12.h),
