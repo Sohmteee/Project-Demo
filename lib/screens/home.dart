@@ -11,6 +11,7 @@ import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_sliding_up_panel/sliding_up_panel_widget.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -100,9 +101,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               ), */
             ],
           ),
-          child: Scaffold(
-            backgroundColor: Theme.of(context).colorScheme.primary,
-            body: buildBottomNavBar(themeProvider),
+          child: Stack(
+            children: [
+              Scaffold(
+                backgroundColor: Theme.of(context).colorScheme.primary,
+                body: buildBottomNavBar(themeProvider),
+              ),
+              SlidingUpPanelWidget(),
+            ],
           ),
         ),
       ),
