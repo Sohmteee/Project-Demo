@@ -145,7 +145,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             borderRadius: BorderRadius.circular(2.50),
                           ),
                         ),
-                      )
+                      ),
+                      AirBnBText(
+                        'Filter',
+                        color: Colors.black,
+                        fontSize: 25.sp,
+                        fontWeight: FontWeight.w400,
+                      ),
                     ],
                   ),
                 ),
