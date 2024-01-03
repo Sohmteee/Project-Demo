@@ -35,7 +35,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   final drawerController = AdvancedDrawerController();
-  final panelController = SlidingUpPanelController ();
+  final panelController = SlidingUpPanelController();
   bool isOpenDrawer = false;
   final timer = Timer;
   late Duration timeRemaining;
@@ -112,7 +112,24 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 panelController: panelController,
                 controlHeight: 0,
                 child: Container(
-                  
+                  decoration: BoxDecoration(
+                    color: (themeProvider.themeType == ThemeType.dark)
+                        ? darkBackgroundColor
+                        : lightBackgroundColor,
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(38.r),
+                    ),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(20.w, 40.h, 20.w, 0),
+                    child: Column(
+                      children: [
+                        buildTopAppBar(),
+                        SizedBox(height: 10.h),
+                        buildSearchBar(themeProvider),
+                      ],
+                    ),
+                  ),
                 ),
               ),
             ],
