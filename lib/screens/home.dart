@@ -110,7 +110,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               ),
               SlidingUpPanelWidget(
                 panelController: panelController,
-                controlHeight: 0,
+                controlHeight: 100.h,
                 child: Container(
                   height: 100.h,
                   width: double.maxFinite,
@@ -123,6 +123,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     ),
                   ),
                   child: Column(
+                    mainAxisSize: MainAxisSize.min,
                     children: [],
                   ),
                 ),
