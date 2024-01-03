@@ -138,7 +138,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 upperBound: .8.h,
                 enableOnTap: false,
                 child: !isOpenFilter
-                    ? Container()
+                    ? const SizedBox(height: 1)
                     : Container(
                         width: double.maxFinite,
                         decoration: BoxDecoration(
