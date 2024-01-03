@@ -272,14 +272,17 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
   SizedBox buildTimeCategories(BuildContext context) {
     List times = [
-      ""
+      "Today",
+      "Tomorrow",
+      "This week",
     ];
+
     return SizedBox(
       height: 40.h,
       width: MediaQuery.of(context).size.width,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemCount: categories.length,
+        itemCount: times.length,
         physics: const BouncingScrollPhysics(),
         padding: EdgeInsets.symmetric(horizontal: 15.w),
         itemBuilder: (context, index) => ZoomTapAnimation(
@@ -309,7 +312,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             ),
             child: Center(
               child: DMSansText(
-                categories[index]['title'],
+                times[index],
                 color: index == selectedTimeCategoryIndex
                     ? Colors.white
                     : HexColor('#979797'),
