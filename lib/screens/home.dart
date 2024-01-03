@@ -215,6 +215,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                   buildChooseLocation(),
                                   SizedBox(height: 24.h),
                                   Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
                                       AirBnBText(
                                         'Select Price Range',
@@ -222,6 +224,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                         fontSize: 16.sp,
                                         fontWeight: FontWeight.w500,
                                       ),
+                                      AirBnBText(
+                                        '\$20-\$120',
+                                        color: const Color(0xFF3F38DD),
+                                        fontSize: 18.sp,
+                                        fontWeight: FontWeight.w400,
+                                      )
                                     ],
                                   ),
                                 ],
