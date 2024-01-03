@@ -232,6 +232,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                               IconlyBold.calendar,
                                             ),
                                           ),
+                                          Spacer(),
                                           AirBnBText(
                                             'Choose from calender',
                                             textAlign: TextAlign.center,
@@ -239,6 +240,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                             fontSize: 15.sp,
                                             fontWeight: FontWeight.w400,
                                           ),
+                                          Spacer(flex: 2),
                                           ShaderMask(
                                             blendMode: BlendMode.srcIn,
                                             shaderCallback: (Rect bounds) =>
