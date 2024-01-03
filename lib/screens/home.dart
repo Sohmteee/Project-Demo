@@ -239,6 +239,22 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                             fontSize: 15.sp,
                                             fontWeight: FontWeight.w400,
                                           ),
+                                          ShaderMask(
+                                            blendMode: BlendMode.srcIn,
+                                            shaderCallback: (Rect bounds) =>
+                                                LinearGradient(
+                                              begin: Alignment.topCenter,
+                                              end: Alignment.bottomCenter,
+                                              colors: [
+                                                lightOrangeColor,
+                                                darkOrangeColor,
+                                              ],
+                                              tileMode: TileMode.mirror,
+                                            ).createShader(bounds),
+                                            child: Icon(
+                                              Icons.chevron_right,
+                                            ),
+                                          ),
                                         ],
                                       ),
                                     ),
