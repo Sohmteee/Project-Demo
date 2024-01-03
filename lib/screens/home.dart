@@ -167,7 +167,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      SizedBox(height: 18.h),
+                      SizebudBox(
                         height: 40.h,
                         width: MediaQuery.of(context).size.width,
                         child: ListView.builder(
