@@ -228,19 +228,19 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                               ],
                                               tileMode: TileMode.mirror,
                                             ).createShader(bounds),
-                                            child: Icon(
+                                            child: const Icon(
                                               IconlyBold.calendar,
                                             ),
                                           ),
-                                          Spacer(),
+                                          const Spacer(),
                                           AirBnBText(
                                             'Choose from calender',
                                             textAlign: TextAlign.center,
-                                            color: Color(0xFF7F7979),
+                                            color: const Color(0xFF7F7979),
                                             fontSize: 15.sp,
                                             fontWeight: FontWeight.w400,
                                           ),
-                                          Spacer(flex: 2),
+                                          const Spacer(flex: 4),
                                           ShaderMask(
                                             blendMode: BlendMode.srcIn,
                                             shaderCallback: (Rect bounds) =>
@@ -253,7 +253,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                               ],
                                               tileMode: TileMode.mirror,
                                             ).createShader(bounds),
-                                            child: Icon(
+                                            child: const Icon(
                                               Icons.chevron_right,
                                             ),
                                           ),
