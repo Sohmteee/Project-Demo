@@ -168,42 +168,49 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         ),
                       ),
                       SizedBox(height: 18.h),
-                      SizebudBox(
-                        height: 40.h,
-                        width: MediaQuery.of(context).size.width,
-                        child: ListView.builder(
-                          scrollDirection: Axis.horizontal,
-                          itemCount: categories.length,
-                          physics: const BouncingScrollPhysics(),
-                          padding: EdgeInsets.symmetric(horizontal: 15.w),
-                          itemBuilder: (context, index) => Container(
-                            margin: EdgeInsets.symmetric(horizontal: 5.w),
-                            padding: EdgeInsets.symmetric(horizontal: 15.w),
-                            decoration: BoxDecoration(
-                              color: categories[index]['color'],
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            child: Row(
-                              children: [
-                                const Icon(
-                                  IconlyBold.calendar,
-                                  color: Colors.white,
-                                ),
-                                SizedBox(width: 5.w),
-                                DMSansText(
-                                  categories[index]['title'],
-                                  color: Colors.white,
-                                  fontSize: 20.r,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
+                      buildFilterCategories(context),
                     ],
                   ),
                 ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  SizedBox buildFilterCategories(BuildContext context) {
+    int selectedIndex = 0;
+
+    
+    return SizedBox(
+      height: 40.h,
+      width: MediaQuery.of(context).size.width,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: categories.length,
+        physics: const BouncingScrollPhysics(),
+        padding: EdgeInsets.symmetric(horizontal: 15.w),
+        itemBuilder: (context, index) => Container(
+          margin: EdgeInsets.symmetric(horizontal: 5.w),
+          padding: EdgeInsets.symmetric(horizontal: 15.w),
+          decoration: BoxDecoration(
+            color: categories[index]['color'],
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Row(
+            children: [
+              const Icon(
+                IconlyBold.calendar,
+                color: Colors.white,
+              ),
+              SizedBox(width: 5.w),
+              DMSansText(
+                categories[index]['title'],
+                color: Colors.white,
+                fontSize: 20.r,
+                fontWeight: FontWeight.bold,
               ),
             ],
           ),
