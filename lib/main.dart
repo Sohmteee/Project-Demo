@@ -72,7 +72,7 @@ class MyApp extends StatelessWidget {
                   useMaterial3: false,
                   fontFamily: 'DM Sans',
                 ),
-          home: const HomeScreen(),
+          home: const SplashScreen(),
           debugShowCheckedModeBanner: false,
           initialRoute: '/splash',
           routes: {
