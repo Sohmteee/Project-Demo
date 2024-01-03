@@ -291,7 +291,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   Container buildChooseLocation() {
     return Container(
       padding: EdgeInsets.symmetric(
-        horizontal: 8.w,
+        horizontal: 18.w,
         vertical: 10.h,
       ),
       decoration: BoxDecoration(
