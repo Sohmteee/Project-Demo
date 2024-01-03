@@ -109,13 +109,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           ),
           child: Stack(
             children: [
-              GestureDetector(
-                onTap: () {
-                },
-                child: Scaffold(
+              Scaffold(
                   backgroundColor: Theme.of(context).colorScheme.primary,
                   body: buildBottomNavBar(themeProvider),
-                ),
+                
               ),
               if (panelController.status != SlidingUpPanelStatus.collapsed)
                 GestureDetector(
