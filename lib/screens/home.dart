@@ -232,6 +232,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                               IconlyBold.calendar,
                                             ),
                                           ),
+                                           AirBnBText(
+                                            'Choose from calender',
+                                            textAlign: TextAlign.center,
+                                              color: Color(0xFF7F7979),
+                                              fontSize: 15.sp,
+                                              fontWeight: FontWeight.w400,
+                                          ),
                                         ],
                                       ),
                                     ),
