@@ -115,11 +115,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   body: buildBottomNavBar(themeProvider),
                 ),
               ),
-              Expanded(
-                child: Container(
+              if (panelController.status != SlidingUpPanelStatus.collapsed)
+                Container(
                   color: Colors.black38,
                 ),
-              ),
               SlidingUpPanelWidget(
                 elevation: 50.h,
                 panelController: panelController,
