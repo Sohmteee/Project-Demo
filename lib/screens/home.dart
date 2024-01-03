@@ -191,37 +191,39 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         itemCount: categories.length,
         physics: const BouncingScrollPhysics(),
         padding: EdgeInsets.symmetric(horizontal: 15.w),
-        itemBuilder: (context, index) => Container(
-          margin: EdgeInsets.symmetric(horizontal: 5.w),
-          padding: EdgeInsets.symmetric(horizontal: 15.w),
-          decoration: BoxDecoration(
-            color: index == selectedIndex ? null : Color(0xFFE7E7E7),
-            borderRadius: BorderRadius.circular(20),
-            gradient: index == selectedIndex ? LinearGradient(
-              colors: 
-                   [
-                      lightOrangeColor,
-                      darkOrangeColor,
-                    ]
-                ,
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-            ) : null,
-          ),
-          child: Row(
-            children: [
-              const Icon(
-                IconlyBold.calendar,
-                color: Colors.white,
-              ),
-              SizedBox(width: 5.w),
-              DMSansText(
-                categories[index]['title'],
-                color: Colors.white,
-                fontSize: 20.r,
-                fontWeight: FontWeight.bold,
-              ),
-            ],
+        itemBuilder: (context, index) => ZoomTapAnimation(
+          child: Container(
+            margin: EdgeInsets.symmetric(horizontal: 5.w),
+            padding: EdgeInsets.symmetric(horizontal: 15.w),
+            decoration: BoxDecoration(
+              color: index == selectedIndex ? null : const Color(0xFFE7E7E7),
+              borderRadius: BorderRadius.circular(20),
+              gradient: index == selectedIndex
+                  ? LinearGradient(
+                      colors: [
+                        lightOrangeColor,
+                        darkOrangeColor,
+                      ],
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                    )
+                  : null,
+            ),
+            child: Row(
+              children: [
+                const Icon(
+                  IconlyBold.calendar,
+                  color: Colors.white,
+                ),
+                SizedBox(width: 5.w),
+                DMSansText(
+                  categories[index]['title'],
+                  color: Colors.white,
+                  fontSize: 20.r,
+                  fontWeight: FontWeight.bold,
+                ),
+              ],
+            ),
           ),
         ),
       ),
