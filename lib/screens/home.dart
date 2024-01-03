@@ -120,15 +120,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       top: Radius.circular(38.r),
                     ),
                   ),
-                  child: Padding(
-                    padding: EdgeInsets.fromLTRB(20.w, 40.h, 20.w, 0),
-                    child: Column(
-                      children: [
-                        buildTopAppBar(),
-                        SizedBox(height: 10.h),
-                        buildSearchBar(themeProvider),
-                      ],
-                    ),
+                  child: Column(
+                    children: [],
                   ),
                 ),
               ),
