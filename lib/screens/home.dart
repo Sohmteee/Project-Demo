@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   final drawerController = AdvancedDrawerController();
   final panelController = SlidingUpPanelController();
   int selectedFilterCategoryIndex = 0;
-  int selectedTimeCategoryIndex = 0;
+  int selectedTimeCategoryIndex = 1;
   bool isOpenDrawer = false;
   final timer = Timer;
   late Duration timeRemaining;
@@ -271,6 +271,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   }
 
   SizedBox buildTimeCategories(BuildContext context) {
+    List times = [
+      ""
+    ];
     return SizedBox(
       height: 40.h,
       width: MediaQuery.of(context).size.width,
@@ -278,7 +281,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         scrollDirection: Axis.horizontal,
         itemCount: categories.length,
         physics: const BouncingScrollPhysics(),
-        // padding: EdgeInsets.symmetric(horizontal: 15.w),
+        padding: EdgeInsets.symmetric(horizontal: 15.w),
         itemBuilder: (context, index) => ZoomTapAnimation(
           onTap: () {
             setState(() {
