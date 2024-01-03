@@ -128,71 +128,72 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     color: Colors.black38,
                   ),
                 ),
-             if(isOpenFilter) SlidingUpPanelWidget(
-                panelController: panelController,
-                controlHeight: 0.h,
-                upperBound: .8.h,
-                enableOnTap: false,
-                child: Container(
-                  width: double.maxFinite,
-                  decoration: BoxDecoration(
-                    color: (themeProvider.themeType == ThemeType.dark)
-                        ? darkBackgroundColor
-                        : lightBackgroundColor,
-                    borderRadius: BorderRadius.vertical(
-                      top: Radius.circular(38.r),
+              if (isOpenFilter)
+                SlidingUpPanelWidget(
+                  panelController: panelController,
+                  controlHeight: 0.h,
+                  upperBound: .8.h,
+                  enableOnTap: false,
+                  child: Container(
+                    width: double.maxFinite,
+                    decoration: BoxDecoration(
+                      color: (themeProvider.themeType == ThemeType.dark)
+                          ? darkBackgroundColor
+                          : lightBackgroundColor,
+                      borderRadius: BorderRadius.vertical(
+                        top: Radius.circular(38.r),
+                      ),
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Container(
+                          width: 26.w,
+                          height: 5.h,
+                          margin: EdgeInsets.symmetric(vertical: 11.h),
+                          decoration: ShapeDecoration(
+                            color: const Color(0x7FB2B2B2),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(2.50),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 20.w),
+                          child: Align(
+                            alignment: Alignment.topLeft,
+                            child: AirBnBText(
+                              'Filter',
+                              color: Colors.black,
+                              fontSize: 25.sp,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        ),
+                        buildFilterCategories(context),
+                        SizedBox(height: 12.h),
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 20.w),
+                          child: Column(
+                            children: [
+                              Align(
+                                alignment: Alignment.topLeft,
+                                child: AirBnBText(
+                                  'Time & Date',
+                                  color: HexColor('#120D26'),
+                                  fontSize: 16.sp,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(height: 12.h),
+                        buildTimeCategories(context),
+                      ],
                     ),
                   ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Container(
-                        width: 26.w,
-                        height: 5.h,
-                        margin: EdgeInsets.symmetric(vertical: 11.h),
-                        decoration: ShapeDecoration(
-                          color: const Color(0x7FB2B2B2),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(2.50),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 20.w),
-                        child: Align(
-                          alignment: Alignment.topLeft,
-                          child: AirBnBText(
-                            'Filter',
-                            color: Colors.black,
-                            fontSize: 25.sp,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                      ),
-                      buildFilterCategories(context),
-                      SizedBox(height: 12.h),
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 20.w),
-                        child: Column(
-                          children: [
-                            Align(
-                              alignment: Alignment.topLeft,
-                              child: AirBnBText(
-                                'Time & Date',
-                                color: HexColor('#120D26'),
-                                fontSize: 16.sp,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      SizedBox(height: 12.h),
-                      buildTimeCategories(context),
-                    ],
-                  ),
                 ),
-              ),
             ],
           ),
         ),
@@ -1624,6 +1625,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         ZoomTapAnimation(
           onTap: () {
             panelController.expand();
+            setState(() {
+              isOpenFilter = true;
+            });
           },
           child: Container(
             padding: EdgeInsets.fromLTRB(5.w, 5.h, 10.w, 5.h),
