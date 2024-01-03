@@ -36,6 +36,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   final drawerController = AdvancedDrawerController();
   final panelController = SlidingUpPanelController();
+  int selectedFilterCategoryIndex = 0;
   bool isOpenDrawer = false;
   final timer = Timer;
   late Duration timeRemaining;
@@ -169,10 +170,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           ),
                         ),
                         SizedBox(height: 18.h),
-                        buildFilterCategories(context, updateState),
+                        buildFilterCategories(context),
                       ],
                     );
-                  }),
                 ),
               ),
             ],
@@ -182,9 +182,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     );
   }
 
-  SizedBox buildFilterCategories(BuildContext context, var updateState) {
-    int selectedIndex = 0;
-
+  SizedBox buildFilterCategories(BuildContext context) {
     return SizedBox(
       height: 40.h,
       width: MediaQuery.of(context).size.width,
@@ -195,18 +193,19 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         padding: EdgeInsets.symmetric(horizontal: 15.w),
         itemBuilder: (context, index) => ZoomTapAnimation(
           onTap: () {
-            updateState(() {
-              selectedIndex = index;
+            setState(() {
+              selectedFilterCategoryIndex = index;
             });
-            setState(() {});
           },
           child: Container(
             margin: EdgeInsets.symmetric(horizontal: 5.w),
             padding: EdgeInsets.symmetric(horizontal: 15.w),
             decoration: BoxDecoration(
-              color: index == selectedIndex ? null : const Color(0xFFE7E7E7),
+              color: index == selectedFilterCategoryIndex
+                  ? null
+                  : const Color(0xFFE7E7E7),
               borderRadius: BorderRadius.circular(20),
-              gradient: index == selectedIndex
+              gradient: index == selectedFilterCategoryIndex
                   ? LinearGradient(
                       colors: [
                         lightOrangeColor,
@@ -221,14 +220,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               children: [
                 Icon(
                   IconlyBold.calendar,
-                  color: index == selectedIndex
+                  color: index == selectedFilterCategoryIndex
                       ? Colors.white
                       : HexColor('#979797'),
                 ),
                 SizedBox(width: 5.w),
                 DMSansText(
                   categories[index]['title'],
-                  color: index == selectedIndex
+                  color: index == selectedFilterCategoryIndex
                       ? Colors.white
                       : HexColor('#979797'),
                   fontSize: 20.r,
