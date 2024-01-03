@@ -39,6 +39,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   int selectedFilterCategoryIndex = 0;
   int selectedTimeCategoryIndex = 1;
   bool isOpenDrawer = false;
+  bool isOpenFilter = false;
   final timer = Timer;
   late Duration timeRemaining;
 
@@ -127,7 +128,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     color: Colors.black38,
                   ),
                 ),
-              SlidingUpPanelWidget(
+             if(isOpenFilter) SlidingUpPanelWidget(
                 panelController: panelController,
                 controlHeight: 0.h,
                 upperBound: .8.h,
