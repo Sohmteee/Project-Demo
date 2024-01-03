@@ -123,6 +123,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 GestureDetector(
                   onTap: () {
                     panelController.collapse();
+                    setState(() {
+                      isOpenFilter = false;
+                    });
                   },
                   child: Container(
                     color: Colors.black38,
