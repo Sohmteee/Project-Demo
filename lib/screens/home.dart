@@ -236,7 +236,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   : null,
               boxShadow: [
                 BoxShadow(
-                  color: Colors.grey.withOpacity(.1),
+                  color: Color(0x1E2E2E4E),
                   blurRadius: 10,
                   spreadRadius: 5,
                 ),
