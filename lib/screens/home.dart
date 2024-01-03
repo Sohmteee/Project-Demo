@@ -288,7 +288,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     );
   }
 
-    Container buildChooseLocation() {
+  Container buildChooseLocation() {
     return Container(
       padding: EdgeInsets.symmetric(
         horizontal: 18.w,
@@ -306,12 +306,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           children: [
             Image.asset('assets/images/home/filter-location.png'),
             const Spacer(),
-            AirBnBText(
+            DMSansText(
               'New York, USA',
-              color: Color(0xFF141736),
-              fontSize: 16,
+              color: const Color(0xFF141736),
+              fontSize: 16.sp,
               fontWeight: FontWeight.w400,
-              height: 0.10,
             ),
             const Spacer(flex: 4),
             ShaderMask(
