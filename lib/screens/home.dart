@@ -211,14 +211,18 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             ),
             child: Row(
               children: [
-                const Icon(
+                Icon(
                   IconlyBold.calendar,
-                  color: Colors.white,
+                  color: index == selectedIndex
+                      ? Colors.white
+                      : HexColor('#979797'),
                 ),
                 SizedBox(width: 5.w),
                 DMSansText(
                   categories[index]['title'],
-                  color: Colors.white,
+                  color: index == selectedIndex
+                      ? Colors.white
+                      : HexColor('#979797'),
                   fontSize: 20.r,
                   fontWeight: FontWeight.bold,
                 ),
