@@ -170,6 +170,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       ),
                       SizedBox(height: 18.h),
                       buildFilterCategories(context),
+                      SizedBox(height: 30.h),
+                      Padding(
+                        
+                      ),
+
                     ],
                   ),
                 ),
