@@ -160,7 +160,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         child: Align(
                           alignment: Alignment.topLeft,
                           child: AirBnBText(
-                            'Filter',
+                            'Filter'
                             color: Colors.black,
                             fontSize: 25.sp,
                             fontWeight: FontWeight.w400,
