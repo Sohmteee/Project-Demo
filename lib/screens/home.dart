@@ -14,6 +14,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_sliding_up_panel/sliding_up_panel_widget.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/colors/hex_color.dart';
@@ -248,7 +249,41 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     );
   }
 
-  Container buildPriceRange() => Container();
+  Widget buildPriceRange() {
+    final DateTime dateMin = DateTime(2003, 01, 01);
+    final DateTime dateMax = DateTime(2010, 01, 01);
+    final SfRangeValues dateValues =
+        SfRangeValues(DateTime(2005, 01, 01), DateTime(2008, 01, 01));
+    return SfRangeSelector(
+                    min: dateMin,
+                    max: dateMax,
+                    initialValues: dateValues,
+                    labelPlacement: LabelPlacement.betweenTicks,
+                    interval: 1,
+                    dateIntervalType: DateIntervalType.years,
+                    dateFormat: DateFormat.y(),
+                    showTicks: true,
+                    showLabels: true,
+                    child: Container(
+                      child: SfCartesianChart(
+                        margin: const EdgeInsets.all(0),
+                        primaryXAxis: DateTimeAxis(
+                          minimum: dateMin,
+                          maximum: dateMax,
+                          isVisible: false,
+                        ),
+                        primaryYAxis: NumericAxis(isVisible: false, maximum: 4),
+                        series: <SplineAreaSeries<Data, DateTime>>[
+                          SplineAreaSeries<Data, DateTime>(
+                              dataSource: chartData,
+                              xValueMapper: (Data sales, int index) => sales.x,
+                              yValueMapper: (Data sales, int index) => sales.y)
+                        ],
+                      ),
+                      height: 200,
+                    ),
+                  );
+  }
 
   Container buildChooseCalender() {
     return Container(
