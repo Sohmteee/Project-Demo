@@ -485,18 +485,23 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  Container buildChooseLocation() {
+  Container buildChooseLocation(ThemeProvider themeProvider) {
     return Container(
       padding: EdgeInsets.symmetric(
         horizontal: 8.w,
         vertical: 8.h,
       ),
       decoration: BoxDecoration(
-        border: Border.all(
-          width: 1,
-          color: const Color(0xFFE6E6E6),
-        ),
+        border: themeProvider.themeType == ThemeType.light
+            ? Border.all(
+                width: 1,
+                color: const Color(0xFFE6E6E6),
+              )
+            : null,
         borderRadius: BorderRadius.circular(10),
+        color: themeProvider.themeType == ThemeType.light
+            ? null
+            : HexColor('#191818'),
       ),
       child: Center(
         child: Row(
