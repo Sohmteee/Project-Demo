@@ -2061,7 +2061,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         ),
         ZoomTapAnimation(
           onTap: () {
-            Navigator.pushNamed(context, /'notifications')
+            Navigator.pushNamed(context, '/notifications');
           },
           child: SvgPicture.asset("assets/svg/notification-bell.svg"),
         ),

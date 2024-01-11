@@ -18,7 +18,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
         elevation: 0,
         leading: BackButton(color: Theme.of(context).colorScheme.secondary),
         title: AirBnBText(
-          'Notifications',
+          'Notification',
           color: HexColor('#120D26'),
           fontSize: 24.sp,
           fontWeight: FontWeight.w400,
