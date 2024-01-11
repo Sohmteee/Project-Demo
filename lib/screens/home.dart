@@ -297,12 +297,18 @@ class _HomeScreenState extends State<HomeScreen> {
                                   height: 58.h,
                                   width: 130.w,
                                   decoration: BoxDecoration(
-                                    themeProvider.themeType == ThemeType.light ? border: Border.all(
-                                      width: 1,
-                                      color: HexColor('#E5E5E5'),
-                                    ) : null,
-                                    borderRadius: BorderRadius.circular(14.r),
-                                  ),
+                                      border: themeProvider.themeType ==
+                                              ThemeType.light
+                                          ? Border.all(
+                                              width: 1,
+                                              color: HexColor('#E5E5E5'),
+                                            )
+                                          : null,
+                                      borderRadius: BorderRadius.circular(14.r),
+                                      color: themeProvider.themeType ==
+                                              ThemeType.light
+                                          ? null
+                                          : Colors.white),
                                   child: Center(
                                     child: AirBnBText(
                                       'RESET',
