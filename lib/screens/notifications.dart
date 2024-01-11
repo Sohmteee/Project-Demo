@@ -88,61 +88,64 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                       ? "Just now"
                       : "${DateTime.now().difference(time).inMinutes} min ago";
 
-                  return Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SvgPicture.asset(
-                        'assets/svg/notification-profile.svg',
-                        width: 45.w,
-                        height: 45.h,
-                      ),
-                      SizedBox(width: 18.w),
-                      Expanded(
-                        child: Text.rich(
-                          TextSpan(
-                            children: [
-                              TextSpan(
-                                text: 'David Silbia ',
-                                style: TextStyle(
-                                  color:
-                                      Theme.of(context).colorScheme.secondary,
-                                  fontSize: 14.sp,
-                                  fontFamily: 'DM Sans',
-                                  fontWeight: FontWeight.w600,
+                  return Padding(
+                    padding: EdgeInsets.symmetric(vertical: 10.h),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SvgPicture.asset(
+                          'assets/svg/notification-profile.svg',
+                          width: 45.w,
+                          height: 45.h,
+                        ),
+                        SizedBox(width: 18.w),
+                        Expanded(
+                          child: Text.rich(
+                            TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: 'David Silbia ',
+                                  style: TextStyle(
+                                    color:
+                                        Theme.of(context).colorScheme.secondary,
+                                    fontSize: 14.sp,
+                                    fontFamily: 'DM Sans',
+                                    fontWeight: FontWeight.w600,
+                                  ),
                                 ),
-                              ),
-                              TextSpan(
-                                text: 'commented on your post ',
-                                style: TextStyle(
-                                  color:
-                                      Theme.of(context).colorScheme.secondary,
-                                  fontSize: 14.sp,
-                                  fontFamily: 'DM Sans',
-                                  fontWeight: FontWeight.w400,
+                                TextSpan(
+                                  text: 'commented on your post ',
+                                  style: TextStyle(
+                                    color:
+                                        Theme.of(context).colorScheme.secondary,
+                                    fontSize: 14.sp,
+                                    fontFamily: 'DM Sans',
+                                    fontWeight: FontWeight.w400,
+                                  ),
                                 ),
-                              ),
-                              TextSpan(
-                                text:
-                                    '<<${provider.notificatons[index]['comment']}>>',
-                                style: TextStyle(
-                                  color: const Color(0xFFFFB459),
-                                  fontSize: 14.sp,
-                                  fontFamily: 'DM Sans',
-                                  fontWeight: FontWeight.w400,
+                                TextSpan(
+                                  text:
+                                      '<<${provider.notificatons[index]['comment']}>>',
+                                  style: TextStyle(
+                                    color: const Color(0xFFFFB459),
+                                    fontSize: 14.sp,
+                                    fontFamily: 'DM Sans',
+                                    fontWeight: FontWeight.w400,
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                      DMSansText(
-                        timeToString,
-                        textAlign: TextAlign.right,
-                        color: HexColor('#3C3E56'),
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w400,
-                      )
-                    ],
+                        DMSansText(
+                          timeToString,
+                          textAlign: TextAlign.right,
+                          color: HexColor('#3C3E56'),
+                          fontSize: 12.sp,
+                          fontWeight: FontWeight.w400,
+                        )
+                      ],
+                    ),
                   );
                 },
               ),
