@@ -1,18 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
-class NotificationProvider extends ChangeNotifier{
-  List notificatons = [
-    {
-      'comment': 'Nice Event',
-      'time': DateTime.now(),
-    },
-    {
-      'comment': 'Nice Event',
-      'time': DateTime.now(),
-    },
-    {
-      'comment': 'Nice Event',
-      'time': DateTime.now(),
-    },
-  ];
+class NotificationProvider extends ChangeNotifier {
+  List notificatons = [];
+
+  showNoNotification() {
+    notificatons.clear();
+  }
 }
