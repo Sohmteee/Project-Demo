@@ -130,6 +130,17 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 controlHeight: 0.h,
                 upperBound: .8.h,
                 enableOnTap: false,
+                onStatusChanged: (status) {
+                  if (status == SlidingUpPanelStatus.collapsed) {
+                    setState(() {
+                      isOpenFilter = false;
+                    });
+                  } else {
+                    setState(() {
+                      isOpenFilter = true;
+                    });
+                  }
+                },
                 child: !isOpenFilter
                     ? const SizedBox(height: 1)
                     : Container(
@@ -145,91 +156,154 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Container(
-                              width: 26.w,
-                              height: 5.h,
-                              margin: EdgeInsets.symmetric(vertical: 11.h),
-                              decoration: ShapeDecoration(
-                                color: const Color(0x7FB2B2B2),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(2.50),
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 20.w),
-                              child: Align(
-                                alignment: Alignment.topLeft,
-                                child: AirBnBText(
-                                  'Filter',
-                                  color:
-                                      Theme.of(context).colorScheme.secondary,
-                                  fontSize: 25.sp,
-                                  fontWeight: FontWeight.w400,
-                                ),
-                              ),
-                            ),
-                            buildFilterCategories(context),
-                            SizedBox(height: 12.h),
-                            Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 20.w),
-                              child: Column(
-                                children: [
-                                  Align(
-                                    alignment: Alignment.topLeft,
-                                    child: AirBnBText(
-                                      'Time & Date',
-                                      color: HexColor('#120D26'),
-                                      fontSize: 16.sp,
-                                      fontWeight: FontWeight.w500,
+                            Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Container(
+                                  width: 26.w,
+                                  height: 5.h,
+                                  margin: EdgeInsets.symmetric(vertical: 11.h),
+                                  decoration: ShapeDecoration(
+                                    color: const Color(0x7FB2B2B2),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(2.50),
                                     ),
                                   ),
-                                ],
-                              ),
-                            ),
-                            SizedBox(height: 12.h),
-                            buildTimeCategories(context),
-                            SizedBox(height: 14.h),
-                            Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 20.w),
-                              child: Column(
-                                children: [
-                                  buildChooseCalender(),
-                                  SizedBox(height: 16.h),
-                                  Align(
+                                ),
+                                Padding(
+                                  padding:
+                                      EdgeInsets.symmetric(horizontal: 20.w),
+                                  child: Align(
                                     alignment: Alignment.topLeft,
                                     child: AirBnBText(
-                                      'Location',
-                                      color: HexColor('#120D26'),
-                                      fontSize: 16.sp,
-                                      fontWeight: FontWeight.w500,
+                                      'Filter',
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .secondary,
+                                      fontSize: 25.sp,
+                                      fontWeight: FontWeight.w400,
                                     ),
                                   ),
-                                  SizedBox(height: 12.h),
-                                  buildChooseLocation(),
-                                  SizedBox(height: 24.h),
-                                  Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                ),
+                                buildFilterCategories(context),
+                                SizedBox(height: 12.h),
+                                Padding(
+                                  padding:
+                                      EdgeInsets.symmetric(horizontal: 20.w),
+                                  child: Column(
                                     children: [
-                                      AirBnBText(
-                                        'Select Price Range',
-                                        color: HexColor('#120D26'),
-                                        fontSize: 16.sp,
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                      AirBnBText(
-                                        '\$20-\$120',
-                                        color: HexColor('#3F38DD'),
-                                        fontSize: 18.sp,
-                                        fontWeight: FontWeight.w400,
+                                      Align(
+                                        alignment: Alignment.topLeft,
+                                        child: AirBnBText(
+                                          'Time & Date',
+                                          color: HexColor('#120D26'),
+                                          fontSize: 16.sp,
+                                          fontWeight: FontWeight.w500,
+                                        ),
                                       ),
                                     ],
                                   ),
-                                  buildPriceRange(),
-                                ],
-                              ),
+                                ),
+                                SizedBox(height: 12.h),
+                                buildTimeCategories(context),
+                                SizedBox(height: 14.h),
+                                Padding(
+                                  padding:
+                                      EdgeInsets.symmetric(horizontal: 20.w),
+                                  child: Column(
+                                    children: [
+                                      buildChooseCalendar(),
+                                      SizedBox(height: 16.h),
+                                      Align(
+                                        alignment: Alignment.topLeft,
+                                        child: AirBnBText(
+                                          'Location',
+                                          color: HexColor('#120D26'),
+                                          fontSize: 16.sp,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
+                                      SizedBox(height: 12.h),
+                                      buildChooseLocation(),
+                                      SizedBox(height: 24.h),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          AirBnBText(
+                                            'Select Price Range',
+                                            color: HexColor('#120D26'),
+                                            fontSize: 16.sp,
+                                            fontWeight: FontWeight.w500,
+                                          ),
+                                          AirBnBText(
+                                            '\$20-\$120',
+                                            color: HexColor('#3F38DD'),
+                                            fontSize: 18.sp,
+                                            fontWeight: FontWeight.w400,
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(height: 15.h),
+                                      buildPriceRange(),
+                                    ],
+                                  ),
+                                ),
+                              ],
                             ),
+                            Spacer(),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Container(
+                                  height: 58.h,
+                                  width: 130.w,
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                      width: 1,
+                                      color: HexColor('#E5E5E5'),
+                                    ),
+                                    borderRadius: BorderRadius.circular(14.r),
+                                  ),
+                                  child: Center(
+                                    child: AirBnBText(
+                                      'RESET',
+                                      textAlign: TextAlign.center,
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .secondary,
+                                      fontSize: 16.sp,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  height: 58.h,
+                                  width: 185.w,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(14.r),
+                                    gradient: LinearGradient(
+                                      colors: [
+                                        lightOrangeColor,
+                                        darkOrangeColor,
+                                      ],
+                                      begin: Alignment.topCenter,
+                                      end: Alignment.bottomCenter,
+                                    ),
+                                  ),
+                                  child: Center(
+                                    child: AirBnBText(
+                                      'APPLY',
+                                      textAlign: TextAlign.center,
+                                      color: Colors.white,
+                                      fontSize: 16.sp,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Spacer(flex: 2),
                           ],
                         ),
                       ),
@@ -242,14 +316,97 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   }
 
   Widget buildPriceRange() {
-    final DateTime dateMin = DateTime(2003, 01, 01);
-    final DateTime dateMax = DateTime(2010, 01, 01);
-    final SfRangeValues dateValues =
-        SfRangeValues(DateTime(2005, 01, 01), DateTime(2008, 01, 01));
-    return Container();
+    double width = 200.w;
+    const SfRangeValues values = SfRangeValues(4, 7);
+    return Stack(
+      alignment: Alignment.bottomCenter,
+      children: [
+        SfRangeSelector(
+          min: 1,
+          max: 10,
+          initialValues: values,
+          // labelPlacement: LabelPlacement.betweenTicks,
+          interval: 1,
+          // inactiveColor: Theme.of(context).colorScheme.primary,
+          startThumbIcon: Container(
+            // width: 35.w,
+            // height: 35.h,
+            decoration: ShapeDecoration(
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                side: BorderSide(
+                  width: 1.w,
+                  color: lightOrangeColor,
+                ),
+                borderRadius: BorderRadius.circular(10.r),
+              ),
+            ),
+            child: Icon(
+              Icons.compare_arrows,
+              color: Theme.of(context).colorScheme.secondary,
+              size: 1.sp,
+            ),
+          ),
+
+          endThumbIcon: Container(
+            // width: 35.w,
+            // height: 35.h,
+            decoration: ShapeDecoration(
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                side: BorderSide(
+                  width: 1.w,
+                  color: lightOrangeColor,
+                ),
+                borderRadius: BorderRadius.circular(10.r),
+              ),
+            ),
+            child: Icon(
+              Icons.compare_arrows,
+              color: Theme.of(context).colorScheme.secondary,
+              size: 1.sp,
+            ),
+          ),
+          child: SizedBox(
+            height: 50.h,
+            width: width,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: List.generate(
+                20,
+                (index) => Container(
+                  height: ((index / 20 * 45) + 5).h,
+                  width: (width / 22).w,
+                  decoration: BoxDecoration(
+                    color: HexColor('#E7E7E7'),
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(10.r),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+        /* Container(
+          width: double.maxFinite,
+          height: 2.h,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                lightOrangeColor,
+                darkOrangeColor,
+              ],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+            ),
+          ),
+        ), */
+      ],
+    );
   }
 
-  Container buildChooseCalender() {
+  Container buildChooseCalendar() {
     return Container(
       padding: EdgeInsets.symmetric(
         horizontal: 18.w,
@@ -282,9 +439,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             ),
             const Spacer(),
             AirBnBText(
-              'Choose from calender',
+              'Choose from calendar',
               textAlign: TextAlign.center,
-              color: const Color(0xFF7F7979),
+              color: HexColor('#807A7A'),
               fontSize: 15.sp,
               fontWeight: FontWeight.w400,
             ),
@@ -365,63 +522,65 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         itemCount: categories.length,
         physics: const BouncingScrollPhysics(),
         padding: EdgeInsets.symmetric(horizontal: 15.w),
-        itemBuilder: (context, index) => ZoomTapAnimation(
-          onTap: () {
-            setState(() {
-              selectedFilterCategoryIndex = index;
-            });
-          },
-          child: Container(
-            margin: EdgeInsets.symmetric(
-              horizontal: 5.w,
-              vertical: 18.h,
+        itemBuilder: (context, index) {
+          return ZoomTapAnimation(
+            onTap: () {
+              setState(() {
+                selectedFilterCategoryIndex = index;
+              });
+            },
+            child: Container(
+              margin: EdgeInsets.symmetric(
+                horizontal: 5.w,
+                vertical: 18.h,
+              ),
+              padding: EdgeInsets.symmetric(horizontal: 15.w),
+              decoration: BoxDecoration(
+                color: index == selectedFilterCategoryIndex
+                    ? null
+                    : const Color(0xFFE7E7E7),
+                borderRadius: BorderRadius.circular(20),
+                gradient: index == selectedFilterCategoryIndex
+                    ? LinearGradient(
+                        colors: [
+                          lightOrangeColor,
+                          darkOrangeColor,
+                        ],
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                      )
+                    : null,
+                boxShadow: [
+                  BoxShadow(
+                    color: const Color(0x1E2E2E4E),
+                    blurRadius: 20,
+                    offset: Offset(0, 4.h),
+                    spreadRadius: 0,
+                  ),
+                ],
+              ),
+              child: Row(
+                children: [
+                  Icon(
+                    IconlyBold.calendar,
+                    color: index == selectedFilterCategoryIndex
+                        ? Colors.white
+                        : HexColor('#979797'),
+                  ),
+                  SizedBox(width: 5.w),
+                  DMSansText(
+                    categories[index]['title'],
+                    color: index == selectedFilterCategoryIndex
+                        ? Colors.white
+                        : HexColor('#979797'),
+                    fontSize: 20.sp,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ],
+              ),
             ),
-            padding: EdgeInsets.symmetric(horizontal: 15.w),
-            decoration: BoxDecoration(
-              color: index == selectedFilterCategoryIndex
-                  ? null
-                  : const Color(0xFFE7E7E7),
-              borderRadius: BorderRadius.circular(20),
-              gradient: index == selectedFilterCategoryIndex
-                  ? LinearGradient(
-                      colors: [
-                        lightOrangeColor,
-                        darkOrangeColor,
-                      ],
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                    )
-                  : null,
-              boxShadow: [
-                BoxShadow(
-                  color: const Color(0x1E2E2E4E),
-                  blurRadius: 20,
-                  offset: Offset(0, 4.h),
-                  spreadRadius: 0,
-                ),
-              ],
-            ),
-            child: Row(
-              children: [
-                Icon(
-                  IconlyBold.calendar,
-                  color: index == selectedFilterCategoryIndex
-                      ? Colors.white
-                      : HexColor('#979797'),
-                ),
-                SizedBox(width: 5.w),
-                DMSansText(
-                  categories[index]['title'],
-                  color: index == selectedFilterCategoryIndex
-                      ? Colors.white
-                      : HexColor('#979797'),
-                  fontSize: 20.sp,
-                  fontWeight: FontWeight.bold,
-                ),
-              ],
-            ),
-          ),
-        ),
+          );
+        },
       ),
     );
   }
@@ -1431,41 +1590,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 ),
                               ),
                               SizedBox(width: 10.w),
-                              FastCachedImage(
+                              Image.asset(
                                 width: 16.w,
                                 height: 16.h,
-                                url: googleMeetPath,
-                                fadeInDuration: const Duration(seconds: 1),
-                                errorBuilder: (context, exception, stacktrace) {
-                                  return Container(
-                                    width: 16.w,
-                                    height: 16.h,
-                                    decoration: BoxDecoration(
-                                      color: Colors.grey,
-                                      borderRadius: BorderRadius.circular(
-                                        10.r,
-                                      ),
-                                    ),
-                                    child: const Icon(
-                                      Icons.error,
-                                      color: Colors.red,
-                                    ),
-                                  );
-                                },
-                                loadingBuilder: (context, progress) {
-                                  return Container(
-                                    width: 16.w,
-                                    height: 16.h,
-                                    decoration: BoxDecoration(
-                                      color: Colors.grey,
-                                      borderRadius: BorderRadius.circular(
-                                        10.r,
-                                      ),
-                                    ),
-                                  ).animate().shimmer(
-                                        delay: 1.seconds,
-                                      );
-                                },
+                                'assets/images/home/google-meet-icon.png',
                               ),
                             ],
                           ),
@@ -1752,7 +1880,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     return Row(
       children: [
         //search button
-        SvgPicture.asset('assets/svg/search.svg'),
+        GestureDetector(
+          onTap: () {
+            Navigator.pushNamed(context, '/search');
+          },
+          child: SvgPicture.asset(
+            'assets/svg/search.svg',
+          ),
+        ),
 
         //textfield
         Expanded(

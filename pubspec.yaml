@@ -43,6 +43,7 @@ dependencies:
   flutter_sliding_up_panel: ^2.1.1
   flutter_svg: ^2.0.9
   flutter_typeahead: ^5.0.1
+  gap: ^3.0.1
   gradient_borders: ^1.0.0
   path_provider: ^2.1.1
   pinput: ^3.0.1

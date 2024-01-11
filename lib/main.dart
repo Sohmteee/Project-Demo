@@ -15,6 +15,7 @@ import 'package:yeerlo/screens/registration/reset_password.dart';
 import 'package:yeerlo/screens/registration/sign_in.dart';
 import 'package:yeerlo/screens/registration/sign_up.dart';
 import 'package:yeerlo/screens/registration/verification.dart';
+import 'package:yeerlo/screens/search.dart';
 import 'package:yeerlo/screens/splash.dart';
 
 Future<void> main() async {
@@ -84,6 +85,7 @@ class MyApp extends StatelessWidget {
             '/verification': (context) => const VerificationScreen(),
             '/reset-password': (context) => const ResetPasswordScreen(),
             '/location': (context) => const LocationScreen(),
+            '/search': (context) => const SearchScreen(),
           },
         );
       },
