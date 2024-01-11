@@ -9,7 +9,6 @@ import 'package:velocity_x/velocity_x.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/models/text.dart';
-import 'package:yeerlo/providers/notifications.dart';
 import 'package:yeerlo/providers/theme.dart';
 
 class UpcomingEventsScreen extends StatefulWidget {
@@ -22,7 +21,6 @@ class UpcomingEventsScreen extends StatefulWidget {
 class _UpcomingEventsScreenState extends State<UpcomingEventsScreen> {
   @override
   Widget build(BuildContext context) {
-    final provider = Provider.of<NotificationProvider>(context);
     final themeProvider = Provider.of<ThemeProvider>(context);
 
     return Scaffold(
