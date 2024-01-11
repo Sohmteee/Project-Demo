@@ -35,7 +35,7 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
+class _HomeScreenState extends State<HomeScreen> {
   final drawerController = AdvancedDrawerController();
   final panelController = SlidingUpPanelController();
   int selectedFilterCategoryIndex = 0;
