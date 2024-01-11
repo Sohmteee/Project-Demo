@@ -972,9 +972,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   SizedBox(height: 20.h),
                   buildNearYou(themeProvider),
                   SizedBox(height: 50.h),
-                  ArrowButton(
-                    text: 'EXPLOR MORE EVENTS',
-                    onPressed: () {},
+                  Padding(
+                    padding:  EdgeInsets.symmetric(8.0),
+                    child: ArrowButton(
+                      text: 'EXPLOR MORE EVENTS',
+                      onPressed: () {},
+                    ),
                   ),
                 ],
               ),
