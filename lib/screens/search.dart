@@ -24,6 +24,7 @@ class _SearchScreenState extends State<SearchScreen> {
   final panelController = SlidingUpPanelController();
   int selectedFilterCategoryIndex = 0;
   int selectedTimeCategoryIndex = 1;
+  bool isOpenFilter = false;
 
   @override
   void initState() {
