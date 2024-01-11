@@ -80,6 +80,8 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                 itemCount: 3,
                 physics: const BouncingScrollPhysics(),
                 itemBuilder: (context, index) {
+                  DateTime time = provider.notificatons[index]['time'];
+
                   return Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -128,7 +130,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                         ),
                       ),
                       DMSansText(
-                        '${provider.notificatons[index]['time']}',
+                        '${switch (provider.notificatons[index]['time']) {}}',
                         textAlign: TextAlign.right,
                         color: HexColor('#3C3E56'),
                         fontSize: 12.sp,
