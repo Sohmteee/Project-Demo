@@ -7,7 +7,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:yeerlo/colors/app_colors.dart';
-import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/theme.dart';
 
@@ -26,6 +25,7 @@ class _UpcomingEventsScreenState extends State<UpcomingEventsScreen> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
+        toolbarHeight: 60.h,
         leading: BackButton(color: Theme.of(context).colorScheme.secondary),
         titleSpacing: 0.w,
         // backgroundColor: Colors.transparent,
