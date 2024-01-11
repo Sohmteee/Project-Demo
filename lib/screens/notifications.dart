@@ -115,10 +115,9 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                               ),
                               TextSpan(
                                 text:
-                                    '${provider.notificatons[index]['comment']}',
+                                    '<<${provider.notificatons[index]['comment']}>>',
                                 style: TextStyle(
-                                  color:
-                                      Theme.of(context).colorScheme.secondary,
+                                  color: const Color(0xFFFFB459),
                                   fontSize: 14.sp,
                                   fontFamily: 'DM Sans',
                                   fontWeight: FontWeight.w400,
@@ -128,22 +127,13 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                           ),
                         ),
                       ),
-                      Row(
-                        children: [
-                          (index == 1)
-                              ? Image.asset(
-                                  'assets/images/home/google-meet-icon.png',
-                                  height: 16.h,
-                                  width: 16.w,
-                                )
-                              : Image.asset(
-                                  'assets/images/home/zoom-icon.png',
-                                  height: 16.h,
-                                  width: 16.w,
-                                  fit: BoxFit.contain,
-                                ),
-                        ],
-                      ),
+                      DMSansText(
+                        '${provider.notificatons[index]['time']}',
+                        textAlign: TextAlign.right,
+                        color: HexColor('#3C3E56'),
+                        fontSize: 12.sp,
+                        fontWeight: FontWeight.w400,
+                      )
                     ],
                   );
                 },
