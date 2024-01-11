@@ -6,6 +6,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/colors/hex_color.dart';
 
+/// AppSwitch is a custom StatefulWidget that implements a toggle switch UI component.
+///
+/// It contains a [value] bool property to represent the state of the switch,
+/// and an [onChanged] callback that is invoked when the switch is toggled.
+///
+/// AppSwitch manages its own state internally via [State] to handle animations
+/// and updating the UI when the switch is toggled.
 class AppSwitch extends StatefulWidget {
   AppSwitch({
     super.key,
@@ -69,6 +76,8 @@ class _AppSwitchState extends State<AppSwitch> {
   }
 }
 
+/// ThemeSwitch widget to switch between light and dark themes.
+/// Extends [StatefulWidget] and manages state to toggle between themes.
 class ThemeSwitch extends StatefulWidget {
   ThemeSwitch({
     super.key,
@@ -87,11 +96,6 @@ class ThemeSwitch extends StatefulWidget {
 class _ThemeSwitchState extends State<ThemeSwitch> {
   @override
 
-  /// Builds the UI for the switch widget.
-  ///
-  /// Uses a [GestureDetector] to handle tap events and animate the switch between on/off states.
-  /// The switch lever is positioned with [AnimatedPositioned] to slide between left and right.
-  /// [AnimatedContainer] handles animating the background color change.
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
