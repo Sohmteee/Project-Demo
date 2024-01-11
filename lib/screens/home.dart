@@ -667,8 +667,12 @@ class _HomeScreenState extends State<HomeScreen> {
               child: DMSansText(
                 times[index],
                 color: index == selectedTimeCategoryIndex
-                    ? Colors.white
-                    : HexColor('#979797'),
+                    ? themeProvider.themeType == ThemeType.light
+                        ? Colors.white
+                        : Colors.black
+                    : themeProvider.themeType == ThemeType.light
+                        ? HexColor('#979797')
+                        : Colors.white,
                 fontSize: 15.sp,
                 fontWeight: FontWeight.w400,
               ),
