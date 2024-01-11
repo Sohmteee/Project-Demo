@@ -32,82 +32,90 @@ class _SearchScreenState extends State<SearchScreen> {
           fontWeight: FontWeight.w400,
         ),
       ),
+      backgroundColor: Colors.white,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w),
         child: Column(
           children: [
-            Row(
+            buildSearchRow(context),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Row buildSearchRow(BuildContext context) {
+    return Row(
+      children: [
+        //search button
+        GestureDetector(
+          onTap: () {
+            Navigator.pushNamed(context, '/search');
+          },
+          child: SvgPicture.asset(
+            'assets/svg/search-orange.svg',
+          ),
+        ),
+
+        //textfield
+        Expanded(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10.w),
+            child: TextField(
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20.sp,
+              ),
+              textCapitalization: TextCapitalization.words,
+              decoration: InputDecoration(
+                hintText: 'Search...',
+                hintStyle: TextStyle(
+                  color: Vx.gray300,
+                  fontSize: 20.sp,
+                ),
+                border: InputBorder.none,
+              ),
+            ),
+          ),
+        ),
+
+        //filter button
+        ZoomTapAnimation(
+          onTap: () {
+            /* setState(() {
+                    isOpenFilter = true; 
+                  }); 
+                  panelController.expand(); */
+          },
+          child: Container(
+            padding: EdgeInsets.fromLTRB(5.w, 5.h, 10.w, 5.h),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30.r),
+              gradient: LinearGradient(
+                colors: [
+                  lightOrangeColor,
+                  darkOrangeColor,
+                ],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              ),
+            ),
+            child: Row(
               children: [
-                //search button
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pushNamed(context, '/search');
-                  },
-                  child: SvgPicture.asset(
-                    'assets/svg/search-orange.svg',
-                  ),
-                ),
-
-                //textfield
-                Expanded(
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10.w),
-                    child: TextField(
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20.sp,
-                      ),
-                      textCapitalization: TextCapitalization.words,
-                      decoration: InputDecoration(
-                        hintText: 'Search...',
-                        hintStyle: TextStyle(
-                          color: Vx.gray300,
-                          fontSize: 20.sp,
-                        ),
-                        border: InputBorder.none,
-                      ),
-                    ),
-                  ),
-                ),
-
-                //filter button
-                ZoomTapAnimation(
-                  onTap: () {
-                    /*  setState(() {
-                isOpenFilter = true;
-              });
-              panelController.expand(); */
-                  },
-                  child: Container(
-                    padding: EdgeInsets.fromLTRB(5.w, 5.h, 10.w, 5.h),
-                    decoration: BoxDecoration(
-                      color: themeProvider.themeType == ThemeType.light
-                          ? Colors.white
-                          : const Color(0xFF302F2F),
-                      borderRadius: BorderRadius.circular(30.r),
-                    ),
-                    child: Row(
-                      children: [
-                        SvgPicture.asset('assets/svg/filter-circle-1.svg'),
-                        SizedBox(width: 5.w),
-                        Text(
-                          'Filter',
-                          style: TextStyle(
-                            color: themeProvider.themeType == ThemeType.light
-                                ? darkOrangeColor
-                                : Colors.white,
-                            fontSize: 14.sp,
-                          ),
-                        ),
-                      ],
-                    ),
+                SvgPicture.asset('assets/svg/filter-circle-1.svg'),
+                SizedBox(width: 5.w),
+                Text(
+                  'Filter',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 14.sp,
                   ),
                 ),
               ],
             ),
-          ],
+          ),
         ),
-      ),
+      ],
     );
   }
 }
