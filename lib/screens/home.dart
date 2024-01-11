@@ -313,9 +313,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     child: AirBnBText(
                                       'RESET',
                                       textAlign: TextAlign.center,
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .secondary,
+                                      color: Colors.black,
                                       fontSize: 16.sp,
                                       fontWeight: FontWeight.w500,
                                     ),
