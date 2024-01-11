@@ -979,7 +979,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       onPressed: () {},
                     ),
                   ),
-                  SizedBox(height: 20.h),
+                  SizedBox(height: 30.h),
                 ],
               ),
             ),
