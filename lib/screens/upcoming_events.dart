@@ -26,12 +26,16 @@ class _UpcomingEventsScreenState extends State<UpcomingEventsScreen> {
         titleSpacing: 0.w,
         backgroundColor: Vx.gray100,
         title: AirBnBText(
-          'Up',
+          'Upcoming Events',
           color: HexColor('#120D26'),
           fontSize: 24.sp,
           fontWeight: FontWeight.w500,
         ),
         actions: [
+          SvgPicture.asset(
+            'assets/svg/search-orange.svg',
+            color: Colors.black,
+          ),
           IconButton(
             onPressed: () {},
             icon: Icon(

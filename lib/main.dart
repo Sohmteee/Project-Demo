@@ -19,6 +19,7 @@ import 'package:yeerlo/screens/registration/sign_up.dart';
 import 'package:yeerlo/screens/registration/verification.dart';
 import 'package:yeerlo/screens/search.dart';
 import 'package:yeerlo/screens/splash.dart';
+import 'package:yeerlo/screens/upcoming_events.dart';
 
 Future<void> main() async {
   SystemChrome.setSystemUIOverlayStyle(
@@ -90,6 +91,7 @@ class MyApp extends StatelessWidget {
             '/location': (context) => const LocationScreen(),
             '/search': (context) => const SearchScreen(),
             '/notifications': (context) => const NotificationsScreen(),
+            '/upcoming-events': (context) => const UpcomingEventsScreen(),
           },
         );
       },
