@@ -26,19 +26,22 @@ class _NearbyEventsScreenState extends State<NearbyEventsScreen> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
+        toolbarHeight: 60.h,
         leading: BackButton(color: Theme.of(context).colorScheme.secondary),
         titleSpacing: 0.w,
-        backgroundColor: Vx.gray100,
+        // backgroundColor: Vx.gray100,
         title: AirBnBText(
           'Nearby Events',
-          color: HexColor('#120D26'),
+          color: Theme.of(context).colorScheme.secondary,
           fontSize: 24.sp,
           fontWeight: FontWeight.w500,
         ),
         actions: [
           SvgPicture.asset(
-            'assets/svg/search-orange.svg',
-            color: Colors.black,
+            'assets/svg/search.svg',
+            color: themeProvider.themeType == ThemeType.light
+                ? Colors.black
+                : Colors.white,
             width: 24.w,
             height: 24.h,
           ),
@@ -52,8 +55,19 @@ class _NearbyEventsScreenState extends State<NearbyEventsScreen> {
         ],
       ),
       backgroundColor: Vx.gray100,
-      body: Padding(
+      body: Container(
         padding: EdgeInsets.symmetric(horizontal: 24.w),
+        decoration: BoxDecoration(
+          color:
+              (themeProvider.themeType == ThemeType.light) ? Vx.gray100 : null,
+          image: (themeProvider.themeType == ThemeType.dark)
+              ? const DecorationImage(
+                  image:
+                      AssetImage('assets/images/dark-gradient-background.png'),
+                  fit: BoxFit.cover,
+                )
+              : null,
+        ),
         child: ListView.builder(
           itemCount: 10,
           physics: const BouncingScrollPhysics(),
