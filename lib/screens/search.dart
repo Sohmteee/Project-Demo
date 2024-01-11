@@ -40,11 +40,10 @@ class _SearchScreenState extends State<SearchScreen> {
           children: [
             buildSearchRow(context),
             ListView.builder(
-              itemCount: 3,
+              itemCount: 10,
               physics: const NeverScrollableScrollPhysics(),
               padding: EdgeInsets.symmetric(horizontal: 24.w),
               itemBuilder: (context, index) {
-                bool isFavourite = index == 0 ? true : false;
                 return Container(
                   height: 128.h,
                   padding: EdgeInsets.all(10.sp),
@@ -69,7 +68,7 @@ class _SearchScreenState extends State<SearchScreen> {
                       ClipRRect(
                         borderRadius: BorderRadius.circular(10.r),
                         child: Image.asset(
-                          'assets/images/home/near-you-${index + 1}.png',
+                          'assets/images/home/near-you-1.png',
                           width: 79.w,
                           height: 108.h,
                         ),
@@ -91,7 +90,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                 ),
                                 SizedBox(height: 3.h),
                                 AirBnBText(
-                                  'Women\'s leadership conference',
+                                  'International kids safe parents night out',
                                   color:
                                       Theme.of(context).colorScheme.secondary,
                                   fontSize: 15.sp,
