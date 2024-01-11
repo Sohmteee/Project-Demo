@@ -351,6 +351,128 @@ void initState() {
     );
   }
 
+  SizedBox buildTimeCategories(BuildContext context) {
+    List times = [
+      "Today",
+      "Tomorrow",
+      "This week",
+    ];
+
+    return SizedBox(
+      height: 40.h,
+      width: MediaQuery.of(context).size.width,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: times.length,
+        physics: const BouncingScrollPhysics(),
+        padding: EdgeInsets.symmetric(horizontal: 15.w),
+        itemBuilder: (context, index) => ZoomTapAnimation(
+          onTap: () {
+            setState(() {
+              selectedTimeCategoryIndex = index;
+            });
+          },
+          child: Container(
+            margin: EdgeInsets.symmetric(horizontal: 5.w),
+            padding: EdgeInsets.symmetric(horizontal: 20.w),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              border: index != selectedTimeCategoryIndex
+                  ? Border.all(
+                      width: 1,
+                      color: const Color(0xFFE6E6E6),
+                    )
+                  : null,
+              gradient: index == selectedTimeCategoryIndex
+                  ? LinearGradient(
+                      colors: [
+                        lightOrangeColor,
+                        darkOrangeColor,
+                      ],
+                      begin: const Alignment(0, -1),
+                      end: const Alignment(0, 1),
+                    )
+                  : null,
+            ),
+            child: Center(
+              child: DMSansText(
+                times[index],
+                color: index == selectedTimeCategoryIndex
+                    ? Colors.white
+                    : HexColor('#979797'),
+                fontSize: 15.sp,
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+
+  Container buildChooseCalendar() {
+    return Container(
+      padding: EdgeInsets.symmetric(
+        horizontal: 18.w,
+        vertical: 10.h,
+      ),
+      decoration: BoxDecoration(
+        border: Border.all(
+          width: 1,
+          color: const Color(0xFFE6E6E6),
+        ),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Center(
+        child: Row(
+          children: [
+            ShaderMask(
+              blendMode: BlendMode.srcIn,
+              shaderCallback: (Rect bounds) => LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  lightOrangeColor,
+                  darkOrangeColor,
+                ],
+                tileMode: TileMode.mirror,
+              ).createShader(bounds),
+              child: const Icon(
+                IconlyBold.calendar,
+              ),
+            ),
+            const Spacer(),
+            AirBnBText(
+              'Choose from calendar',
+              textAlign: TextAlign.center,
+              color: HexColor('#807A7A'),
+              fontSize: 15.sp,
+              fontWeight: FontWeight.w400,
+            ),
+            const Spacer(flex: 4),
+            ShaderMask(
+              blendMode: BlendMode.srcIn,
+              shaderCallback: (Rect bounds) => LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  lightOrangeColor,
+                  darkOrangeColor,
+                ],
+                tileMode: TileMode.mirror,
+              ).createShader(bounds),
+              child: const Icon(
+                Icons.chevron_right,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+
   Container buildChooseLocation() {
     return Container(
       padding: EdgeInsets.symmetric(
