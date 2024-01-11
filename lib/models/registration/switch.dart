@@ -76,6 +76,7 @@ class ThemeSwitch extends StatefulWidget {
     required this.onChanged,
   });
 
+  /// Indicates if the switch is on or off.
   bool value;
   final Function(bool?) onChanged;
 
@@ -85,6 +86,12 @@ class ThemeSwitch extends StatefulWidget {
 
 class _ThemeSwitchState extends State<ThemeSwitch> {
   @override
+
+  /// Builds the UI for the switch widget.
+  ///
+  /// Uses a [GestureDetector] to handle tap events and animate the switch between on/off states.
+  /// The switch lever is positioned with [AnimatedPositioned] to slide between left and right.
+  /// [AnimatedContainer] handles animating the background color change.
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
