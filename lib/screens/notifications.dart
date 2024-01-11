@@ -153,7 +153,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                         DMSansText(
                           timeToString,
                           textAlign: TextAlign.right,
-                          color: HexColor('#3C3E56'),
+                          color: Vx.gray400,
                           fontSize: 12.sp,
                           fontWeight: FontWeight.w400,
                         )
