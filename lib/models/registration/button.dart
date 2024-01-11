@@ -7,6 +7,9 @@ import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/theme.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
+/// ArrowButton widget that extends [StatelessWidget] to render a button
+/// with an arrow icon and zoom tap animation. Contains properties for
+/// button [text], tap [onPressed] callback, and builds the button UI.
 class ArrowButton extends StatelessWidget {
   const ArrowButton({
     super.key,
@@ -14,7 +17,10 @@ class ArrowButton extends StatelessWidget {
     required this.onPressed,
   });
 
+  /// The text to display on the button.
   final String text;
+
+  /// Callback for when the button is pressed.
   final Function() onPressed;
 
   @override
@@ -65,6 +71,7 @@ class ArrowButton extends StatelessWidget {
   }
 }
 
+/// LoginOption widget to display a login button with a logo and text label.
 class LoginOption extends StatelessWidget {
   const LoginOption({
     super.key,
