@@ -21,6 +21,8 @@ class SearchScreen extends StatefulWidget {
 
 class _SearchScreenState extends State<SearchScreen> {
   final panelController = SlidingUpPanelController();
+    int selectedFilterCategoryIndex = 0;
+    int selectedTimeCategoryIndex = 1;
 
 @override
 void initState() {
@@ -350,6 +352,79 @@ void initState() {
       ],
     );
   }
+
+  SizedBox buildFilterCategories(BuildContext context) {
+    return SizedBox(
+      height: (40 + 36).h,
+      width: MediaQuery.of(context).size.width,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: categories.length,
+        physics: const BouncingScrollPhysics(),
+        padding: EdgeInsets.symmetric(horizontal: 15.w),
+        itemBuilder: (context, index) {
+          return ZoomTapAnimation(
+            onTap: () {
+              setState(() {
+                selectedFilterCategoryIndex = index;
+              });
+            },
+            child: Container(
+              margin: EdgeInsets.symmetric(
+                horizontal: 5.w,
+                vertical: 18.h,
+              ),
+              padding: EdgeInsets.symmetric(horizontal: 15.w),
+              decoration: BoxDecoration(
+                color: index == selectedFilterCategoryIndex
+                    ? null
+                    : const Color(0xFFE7E7E7),
+                borderRadius: BorderRadius.circular(20),
+                gradient: index == selectedFilterCategoryIndex
+                    ? LinearGradient(
+                        colors: [
+                          lightOrangeColor,
+                          darkOrangeColor,
+                        ],
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                      )
+                    : null,
+                boxShadow: [
+                  BoxShadow(
+                    color: const Color(0x1E2E2E4E),
+                    blurRadius: 20,
+                    offset: Offset(0, 4.h),
+                    spreadRadius: 0,
+                  ),
+                ],
+              ),
+              child: Row(
+                children: [
+                  Icon(
+                    IconlyBold.calendar,
+                    color: index == selectedFilterCategoryIndex
+                        ? Colors.white
+                        : HexColor('#979797'),
+                  ),
+                  SizedBox(width: 5.w),
+                  DMSansText(
+                    categories[index]['title'],
+                    color: index == selectedFilterCategoryIndex
+                        ? Colors.white
+                        : HexColor('#979797'),
+                    fontSize: 20.sp,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ],
+              ),
+            ),
+          );
+        },
+      ),
+    );
+  }
+
 
   SizedBox buildTimeCategories(BuildContext context) {
     List times = [
