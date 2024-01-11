@@ -24,6 +24,7 @@ import 'package:yeerlo/models/bottomNavBar.dart';
 import 'package:yeerlo/models/flag.dart';
 import 'package:yeerlo/models/registration/switch.dart';
 import 'package:yeerlo/models/text.dart';
+import 'package:yeerlo/providers/notifications.dart';
 import 'package:yeerlo/providers/theme.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
@@ -2061,6 +2062,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         ),
         ZoomTapAnimation(
           onTap: () {
+            
+            final provider = Provider.of<NotificationProvider>(context);
             Navigator.pushNamed(context, '/notifications');
           },
           child: SvgPicture.asset("assets/svg/notification-bell.svg"),
