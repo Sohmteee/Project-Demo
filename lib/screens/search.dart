@@ -88,7 +88,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     ),
                     child: Row(
                       children: [
-                        SvgPicture.asset('assets/svg/filter-circle.svg'),
+                        SvgPicture.asset('assets/svg/filter-circle-1.svg'),
                         SizedBox(width: 5.w),
                         Text(
                           'Filter',
