@@ -36,28 +36,34 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
         ],
       ),
       // backgroundColor: Colors.white,
-      body: Column(
-        children: [
-          SvgPicture.asset(
-            'assets/svg/no-notification.svg',
-            width: 136.w,
-            height: 168.5.h,
-          ),
-          AirBnBText(
-            'No Notifications!',
-            textAlign: TextAlign.center,
-            color: Theme.of(context).colorScheme.secondary,
-            fontSize: 18.sp,
-            fontWeight: FontWeight.w500,
-          ),
-          AirBnBText(
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor',
-            textAlign: TextAlign.center,
-            color: Theme.of(context).colorScheme.secondary.withOpacity(0.7),
-            fontSize: 16.sp,
-            fontWeight: FontWeight.w400,
-          ),
-        ],
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 24.w),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SvgPicture.asset(
+              'assets/svg/no-notification.svg',
+              width: 136.w,
+              height: 168.5.h,
+            ),
+            SizedBox(height: 40.h),
+            AirBnBText(
+              'No Notifications!',
+              textAlign: TextAlign.center,
+              color: Theme.of(context).colorScheme.secondary,
+              fontSize: 18.sp,
+              fontWeight: FontWeight.w500,
+            ),
+            SizedBox(height: 7.h),
+            AirBnBText(
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor',
+              textAlign: TextAlign.center,
+              color: Theme.of(context).colorScheme.secondary.withOpacity(0.7),
+              fontSize: 16.sp,
+              fontWeight: FontWeight.w400,
+            ),
+          ],
+        ),
       ),
     );
   }
