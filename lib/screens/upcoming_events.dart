@@ -27,12 +27,13 @@ class _UpcomingEventsScreenState extends State<UpcomingEventsScreen> {
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         elevation: 0,
+        
         leading: BackButton(color: Theme.of(context).colorScheme.secondary),
         titleSpacing: 0.w,
-        backgroundColor: Vx.gray100,
+        backgroundColor: COlors.,
         title: AirBnBText(
           'Upcoming Events',
-          color: HexColor('#120D26'),
+          color: Theme.of(context).colorScheme.secondary,
           fontSize: 24.sp,
           fontWeight: FontWeight.w500,
         ),
@@ -58,7 +59,7 @@ class _UpcomingEventsScreenState extends State<UpcomingEventsScreen> {
         child: ListView.builder(
           itemCount: 10,
           physics: const BouncingScrollPhysics(),
-          padding: EdgeInsets.only(top: 100.h),
+          padding: EdgeInsets.only(top: 80.h),
           itemBuilder: (context, index) {
             return Container(
               height: 112.h,
