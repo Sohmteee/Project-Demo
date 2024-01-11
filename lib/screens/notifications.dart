@@ -91,7 +91,13 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                       SizedBox(width: 18.w),
                       Expanded(
                         child: Text.rich(
-                          children: []
+                          TextSpan(
+                            children: [
+                              TextSpan(
+                                
+                              )
+                            ]
+                          )
                         )
                       ),
                       Row(
