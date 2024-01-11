@@ -297,10 +297,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                   height: 58.h,
                                   width: 130.w,
                                   decoration: BoxDecoration(
-                                    border: Border.all(
+                                    themeProvider.themeType == ThemeType.light ? border: Border.all(
                                       width: 1,
                                       color: HexColor('#E5E5E5'),
-                                    ),
+                                    ) : null,
                                     borderRadius: BorderRadius.circular(14.r),
                                   ),
                                   child: Center(
