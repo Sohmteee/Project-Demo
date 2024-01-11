@@ -148,12 +148,16 @@ class _HomeScreenState extends State<HomeScreen> {
                     : Container(
                         width: double.maxFinite,
                         decoration: BoxDecoration(
-                          color: (themeProvider.themeType == ThemeType.dark)
-                              ? darkBackgroundColor
-                              : lightBackgroundColor,
-                          borderRadius: BorderRadius.vertical(
-                            top: Radius.circular(38.r),
-                          ),
+                          color: (themeProvider.themeType == ThemeType.light)
+                              ? lightBackgroundColor
+                              : darkBackgroundColor,
+                          image: (themeProvider.themeType == ThemeType.dark)
+                              ? const DecorationImage(
+                                  image: AssetImage(
+                                      'assets/images/dark-gradient-background.png'),
+                                  fit: BoxFit.cover,
+                                )
+                              : null,
                         ),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
