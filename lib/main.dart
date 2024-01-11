@@ -9,6 +9,7 @@ import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/data.dart';
 import 'package:yeerlo/providers/theme.dart';
 import 'package:yeerlo/screens/home.dart';
+import 'package:yeerlo/screens/notifications.dart';
 import 'package:yeerlo/screens/onboarding.dart';
 import 'package:yeerlo/screens/registration/location.dart';
 import 'package:yeerlo/screens/registration/reset_password.dart';
@@ -86,6 +87,7 @@ class MyApp extends StatelessWidget {
             '/reset-password': (context) => const ResetPasswordScreen(),
             '/location': (context) => const LocationScreen(),
             '/search': (context) => const SearchScreen(),
+            '/notifications': (context) => const NotificationsScreen(),
           },
         );
       },
