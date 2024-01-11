@@ -81,13 +81,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                 physics: const BouncingScrollPhysics(),
                 itemBuilder: (context, index) {
                   DateTime time = provider.notificatons[index]['time'];
-                  String timeToString = "Just now";
-
-                  switch (time) {
-                    case time.minute < 1:
-                      
-                      break;
-                    default:
+                  String timeToString = time.minute < 1 ? "Just now" : ""
                   }
 
                   return Row(
