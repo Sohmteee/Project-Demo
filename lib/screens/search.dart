@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_sliding_up_panel/sliding_up_panel_widget.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/colors/hex_color.dart';
@@ -346,6 +347,144 @@ void initState() {
                   ),
                 ),
         ),
+      ],
+    );
+  }
+
+  Container buildChooseLocation() {
+    return Container(
+      padding: EdgeInsets.symmetric(
+        horizontal: 8.w,
+        vertical: 8.h,
+      ),
+      decoration: BoxDecoration(
+        border: Border.all(
+          width: 1,
+          color: const Color(0xFFE6E6E6),
+        ),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Center(
+        child: Row(
+          children: [
+            Image.asset('assets/images/home/filter-location.png'),
+            const Spacer(),
+            DMSansText(
+              'New York, USA',
+              color: const Color(0xFF141736),
+              fontSize: 16.sp,
+              fontWeight: FontWeight.w400,
+            ),
+            const Spacer(flex: 4),
+            ShaderMask(
+              blendMode: BlendMode.srcIn,
+              shaderCallback: (Rect bounds) => LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  lightOrangeColor,
+                  darkOrangeColor,
+                ],
+                tileMode: TileMode.mirror,
+              ).createShader(bounds),
+              child: const Icon(
+                Icons.chevron_right,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+
+  Widget buildPriceRange() {
+    double width = 200.w;
+    const SfRangeValues values = SfRangeValues(4, 7);
+    return Stack(
+      alignment: Alignment.bottomCenter,
+      children: [
+        SfRangeSelector(
+          min: 1,
+          max: 10,
+          initialValues: values,
+          // labelPlacement: LabelPlacement.betweenTicks,
+          interval: 1,
+          // inactiveColor: Theme.of(context).colorScheme.primary,
+          startThumbIcon: Container(
+            // width: 35.w,
+            // height: 35.h,
+            decoration: ShapeDecoration(
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                side: BorderSide(
+                  width: 1.w,
+                  color: lightOrangeColor,
+                ),
+                borderRadius: BorderRadius.circular(10.r),
+              ),
+            ),
+            child: Icon(
+              Icons.compare_arrows,
+              color: Theme.of(context).colorScheme.secondary,
+              size: 1.sp,
+            ),
+          ),
+
+          endThumbIcon: Container(
+            // width: 35.w,
+            // height: 35.h,
+            decoration: ShapeDecoration(
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                side: BorderSide(
+                  width: 1.w,
+                  color: lightOrangeColor,
+                ),
+                borderRadius: BorderRadius.circular(10.r),
+              ),
+            ),
+            child: Icon(
+              Icons.compare_arrows,
+              color: Theme.of(context).colorScheme.secondary,
+              size: 1.sp,
+            ),
+          ),
+          child: SizedBox(
+            height: 50.h,
+            width: width,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: List.generate(
+                20,
+                (index) => Container(
+                  height: ((index / 20 * 45) + 5).h,
+                  width: (width / 22).w,
+                  decoration: BoxDecoration(
+                    color: HexColor('#E7E7E7'),
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(10.r),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+        /* Container(
+          width: double.maxFinite,
+          height: 2.h,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                lightOrangeColor,
+                darkOrangeColor,
+              ],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+            ),
+          ),
+        ), */
       ],
     );
   }
