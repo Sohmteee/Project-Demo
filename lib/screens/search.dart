@@ -8,6 +8,7 @@ import 'package:syncfusion_flutter_sliders/sliders.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/colors/hex_color.dart';
+import 'package:yeerlo/data.dart';
 import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/theme.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
@@ -21,15 +22,15 @@ class SearchScreen extends StatefulWidget {
 
 class _SearchScreenState extends State<SearchScreen> {
   final panelController = SlidingUpPanelController();
-    int selectedFilterCategoryIndex = 0;
-    int selectedTimeCategoryIndex = 1;
+  int selectedFilterCategoryIndex = 0;
+  int selectedTimeCategoryIndex = 1;
 
-@override
-void initState() {
-  super.initState();
-  
+  @override
+  void initState() {
+    super.initState();
+
     panelController.collapse();
-}
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -93,10 +94,12 @@ void initState() {
                             Expanded(
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       AirBnBText(
                                         '1ST MAY- SAT -2:00 PM',
@@ -107,8 +110,9 @@ void initState() {
                                       SizedBox(height: 3.h),
                                       AirBnBText(
                                         'International kids safe parents night out',
-                                        color:
-                                            Theme.of(context).colorScheme.secondary,
+                                        color: Theme.of(context)
+                                            .colorScheme
+                                            .secondary,
                                         fontSize: 15.sp,
                                         fontWeight: FontWeight.w500,
                                       ),
@@ -425,7 +429,6 @@ void initState() {
     );
   }
 
-
   SizedBox buildTimeCategories(BuildContext context) {
     List times = [
       "Today",
@@ -484,7 +487,6 @@ void initState() {
       ),
     );
   }
-
 
   Container buildChooseCalendar() {
     return Container(
@@ -547,7 +549,6 @@ void initState() {
     );
   }
 
-
   Container buildChooseLocation() {
     return Container(
       padding: EdgeInsets.symmetric(
@@ -593,7 +594,6 @@ void initState() {
       ),
     );
   }
-
 
   Widget buildPriceRange() {
     double width = 200.w;
