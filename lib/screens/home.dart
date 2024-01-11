@@ -971,14 +971,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   buildReferral(themeProvider),
                   SizedBox(height: 20.h),
                   buildNearYou(themeProvider),
-                  SizedBox(height: 50.h),
+                  SizedBox(height: 20.h),
                   Padding(
-                    padding:  EdgeInsets.symmetric(8.0),
+                    padding: EdgeInsets.symmetric(horizontal: 50.w),
                     child: ArrowButton(
                       text: 'EXPLOR MORE EVENTS',
                       onPressed: () {},
                     ),
                   ),
+                  SizedBox(height: 20.h),
                 ],
               ),
             ),
