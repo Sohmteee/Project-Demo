@@ -223,7 +223,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       EdgeInsets.symmetric(horizontal: 20.w),
                                   child: Column(
                                     children: [
-                                      buildChooseCalendar(),
+                                      buildChooseCalendar(themeProvider),
                                       SizedBox(height: 16.h),
                                       Align(
                                         alignment: Alignment.topLeft,
@@ -237,7 +237,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         ),
                                       ),
                                       SizedBox(height: 12.h),
-                                      buildChooseLocation(),
+                                      buildChooseLocation(themeProvider),
                                       SizedBox(height: 24.h),
                                       Row(
                                         mainAxisAlignment:
@@ -426,11 +426,16 @@ class _HomeScreenState extends State<HomeScreen> {
         vertical: 10.h,
       ),
       decoration: BoxDecoration(
-        border: Border.all(
-          width: 1,
-          color: const Color(0xFFE6E6E6),
-        ),
+        border: themeProvider.themeType == ThemeType.light
+            ? Border.all(
+                width: 1,
+                color: const Color(0xFFE6E6E6),
+              )
+            : null,
         borderRadius: BorderRadius.circular(10),
+        color: themeProvider.themeType == ThemeType.light
+            ? null
+            : HexColor('#191818'),
       ),
       child: Center(
         child: Row(
