@@ -41,7 +41,14 @@ class AppTextField extends StatefulWidget {
   /// The keyboard type to use for the text field.
   /// This determines what kind of input keyboard is shown to the user.
   final TextInputType keyboardType;
+
+  /// The text input action for the text field.
+  /// This determines what action to take when the input is submitted,
+  /// e.g. moving focus to next field, sending the input, etc.
   final TextInputAction textInputAction;
+
+  /// The text capitalization to use for the text field input.
+  /// This determines how the text input is capitalized, e.g. none, sentences, words, etc.
   final TextCapitalization textCapitalization;
 
   @override

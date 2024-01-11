@@ -2,6 +2,11 @@
 
 import 'package:flutter/material.dart';
 
+/// A [StatelessWidget] that displays text using the DM Sans font family.
+///
+/// This widget allows configuring text properties like [fontSize],
+/// [fontWeight], [color], etc. It is intended for displaying text content
+/// in the app using the DM Sans font.
 class DMSansText extends StatelessWidget {
   DMSansText(
     this.text, {
