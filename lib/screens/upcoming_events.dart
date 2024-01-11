@@ -40,7 +40,7 @@ class _UpcomingEventsScreenState extends State<UpcomingEventsScreen> {
           SvgPicture.asset(
             'assets/svg/search.svg',
             color: themeProvider.themeType == ThemeType.light
-                ? Colors.white
+                ? Colors.black
                 : Colors.white,
             width: 24.w,
             height: 24.h,
@@ -55,8 +55,19 @@ class _UpcomingEventsScreenState extends State<UpcomingEventsScreen> {
         ],
       ),
       backgroundColor: Vx.gray100,
-      body: Padding(
+      body: Container(
         padding: EdgeInsets.symmetric(horizontal: 24.w),
+        decoration: BoxDecoration(
+          color:
+              (themeProvider.themeType == ThemeType.light) ? Vx.gray100 : null,
+          image: (themeProvider.themeType == ThemeType.dark)
+              ? const DecorationImage(
+                  image:
+                      AssetImage('assets/images/dark-gradient-background.png'),
+                  fit: BoxFit.cover,
+                )
+              : null,
+        ),
         child: ListView.builder(
           itemCount: 10,
           physics: const BouncingScrollPhysics(),
