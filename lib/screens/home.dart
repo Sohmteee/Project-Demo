@@ -158,6 +158,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                   fit: BoxFit.cover,
                                 )
                               : null,
+                          borderRadius: BorderRadius.vertical(
+                            top: Radius.circular(38.r),
+                          ),
                         ),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
@@ -202,7 +205,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                         alignment: Alignment.topLeft,
                                         child: AirBnBText(
                                           'Time & Date',
-                                          color: HexColor('#120D26'),
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .secondary,
                                           fontSize: 16.sp,
                                           fontWeight: FontWeight.w500,
                                         ),
