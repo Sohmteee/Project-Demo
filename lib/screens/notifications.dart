@@ -83,7 +83,11 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                   return Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SvgPicture.asset('assets/svg/notification-profile.svg'),
+                      SvgPicture.asset(
+                        'assets/svg/notification-profile.svg',
+                        width: 45.w,
+                        height: 45.h,
+                      ),
                       SizedBox(width: 18.w),
                       Expanded(
                         child: Column(
@@ -150,27 +154,6 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                                   width: 16.w,
                                   fit: BoxFit.contain,
                                 ),
-                          ZoomTapAnimation(
-                            onTap: () {
-                              setState(() {
-                                isFavourite = !isFavourite;
-                              });
-                            },
-                            child: Padding(
-                              padding: EdgeInsets.only(
-                                left: 8.w,
-                              ),
-                              child: Icon(
-                                isFavourite
-                                    ? IconlyBold.bookmark
-                                    : IconlyLight.bookmark,
-                                size: 16.sp,
-                                color: isFavourite
-                                    ? HexColor('#EB5757')
-                                    : Theme.of(context).colorScheme.secondary,
-                              ),
-                            ),
-                          )
                         ],
                       ),
                     ],
