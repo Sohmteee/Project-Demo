@@ -33,7 +33,7 @@ class _SearchScreenState extends State<SearchScreen> {
         ),
       ),
       body: Padding(
-        padding:  EdgeInsets.symmetric(horizontal: 24.w),
+        padding: EdgeInsets.symmetric(horizontal: 24.w),
         child: Column(
           children: [
             Row(
@@ -44,10 +44,10 @@ class _SearchScreenState extends State<SearchScreen> {
                     Navigator.pushNamed(context, '/search');
                   },
                   child: SvgPicture.asset(
-                    'assets/svg/search.svg',
+                    'assets/svg/search-orange.svg',
                   ),
                 ),
-        
+
                 //textfield
                 Expanded(
                   child: Padding(
@@ -69,7 +69,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     ),
                   ),
                 ),
-        
+
                 //filter button
                 ZoomTapAnimation(
                   onTap: () {
