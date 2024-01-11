@@ -31,7 +31,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
         backgroundColor: Colors.transparent,
         title: AirBnBText(
           'Notification',
-          color: HexColor('#120D26'),
+          color: Theme.of(context).colorScheme.secondary,
           fontSize: 24.sp,
           fontWeight: FontWeight.w500,
         ),
@@ -49,9 +49,8 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 24.w),
         decoration: BoxDecoration(
-          color: (themeProvider.themeType == ThemeType.light)
-              ? lightBackgroundColor
-              : null,
+          color:
+              (themeProvider.themeType == ThemeType.light) ? Vx.gray100 : null,
           image: (themeProvider.themeType == ThemeType.dark)
               ? const DecorationImage(
                   image:
@@ -64,7 +63,6 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
             ? Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Spacer(),
                   SvgPicture.asset(
                     'assets/svg/no-notification.svg',
                     width: 136.w,
@@ -89,7 +87,6 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                     fontSize: 16.sp,
                     fontWeight: FontWeight.w400,
                   ),
-                  const Spacer(flex: 2),
                 ],
               )
             : ListView.builder(
