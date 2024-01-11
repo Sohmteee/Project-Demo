@@ -187,7 +187,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                   ),
                                 ),
-                                buildFilterCategories(context),
+                                buildFilterCategories(context, themeProvider),
                                 SizedBox(height: 12.h),
                                 Padding(
                                   padding:
@@ -515,7 +515,8 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  SizedBox buildFilterCategories(BuildContext context, ThemeProvider themeProvider) {
+  SizedBox buildFilterCategories(
+      BuildContext context, ThemeProvider themeProvider) {
     return SizedBox(
       height: (40 + 36).h,
       width: MediaQuery.of(context).size.width,
@@ -540,7 +541,9 @@ class _HomeScreenState extends State<HomeScreen> {
               decoration: BoxDecoration(
                 color: index == selectedFilterCategoryIndex
                     ? null
-                    : themeProvider.themeType == ThemeType.light ?  HexColor('#E7E7E7') : HexColor('#191818'),
+                    : themeProvider.themeType == ThemeType.light
+                        ? HexColor('#E7E7E7')
+                        : HexColor('#191818'),
                 borderRadius: BorderRadius.circular(20),
                 gradient: index == selectedFilterCategoryIndex
                     ? LinearGradient(
