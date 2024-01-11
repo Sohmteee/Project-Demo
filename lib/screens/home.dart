@@ -216,7 +216,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                 ),
                                 SizedBox(height: 12.h),
-                                buildTimeCategories(context),
+                                buildTimeCategories(context, themeProvider),
                                 SizedBox(height: 14.h),
                                 Padding(
                                   padding:
@@ -601,7 +601,8 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  SizedBox buildTimeCategories(BuildContext context, ThemeProvider themeProvider) {
+  SizedBox buildTimeCategories(
+      BuildContext context, ThemeProvider themeProvider) {
     List times = [
       "Today",
       "Tomorrow",
@@ -627,7 +628,8 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: EdgeInsets.symmetric(horizontal: 20.w),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              border: index != selectedTimeCategoryIndex && themeProvider.themeType== The
+              border: index != selectedTimeCategoryIndex &&
+                      themeProvider.themeType == ThemeType.light
                   ? Border.all(
                       width: 1,
                       color: const Color(0xFFE6E6E6),
@@ -643,6 +645,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       end: const Alignment(0, 1),
                     )
                   : null,
+              color: themeProvider.themeType == ThemeType.light
+                  ? null
+                  : HexColor('#191818'),
             ),
             child: Center(
               child: DMSansText(
