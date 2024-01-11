@@ -27,10 +27,9 @@ class _UpcomingEventsScreenState extends State<UpcomingEventsScreen> {
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         elevation: 0,
-        
         leading: BackButton(color: Theme.of(context).colorScheme.secondary),
         titleSpacing: 0.w,
-        backgroundColor: COlors.,
+        backgroundColor: Colors.transparent,
         title: AirBnBText(
           'Upcoming Events',
           color: Theme.of(context).colorScheme.secondary,
@@ -39,8 +38,10 @@ class _UpcomingEventsScreenState extends State<UpcomingEventsScreen> {
         ),
         actions: [
           SvgPicture.asset(
-            'assets/svg/search-orange.svg',
-            color: Colors.black,
+            'assets/svg/search.svg',
+            color: themeProvider.themeType == ThemeType.light
+                ? Colors.white
+                : Colors.white,
             width: 24.w,
             height: 24.h,
           ),
