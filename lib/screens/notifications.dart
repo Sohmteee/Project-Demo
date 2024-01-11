@@ -3,9 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/notifications.dart';
+import 'package:yeerlo/providers/theme.dart';
 
 class NotificationsScreen extends StatefulWidget {
   const NotificationsScreen({super.key});
@@ -17,6 +19,7 @@ class NotificationsScreen extends StatefulWidget {
 class _NotificationsScreenState extends State<NotificationsScreen> {
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context);
     final provider = Provider.of<NotificationProvider>(context);
 
     return Scaffold(
@@ -42,8 +45,20 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
         ],
       ),
       backgroundColor: Vx.gray100,
-      body: Padding(
+      body: Container(
         padding: EdgeInsets.symmetric(horizontal: 24.w),
+        decoration: BoxDecoration(
+          color: (themeProvider.themeType == ThemeType.light)
+              ? lightBackgroundColor
+              : null,
+          image: (themeProvider.themeType == ThemeType.dark)
+              ? const DecorationImage(
+                  image:
+                      AssetImage('assets/images/dark-gradient-background.png'),
+                  fit: BoxFit.cover,
+                )
+              : null,
+        ),
         child: provider.notificatons.isEmpty
             ? Column(
                 mainAxisAlignment: MainAxisAlignment.center,
