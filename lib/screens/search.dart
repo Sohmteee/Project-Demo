@@ -42,11 +42,10 @@ class _SearchScreenState extends State<SearchScreen> {
             Expanded(
               child: ListView.builder(
                 itemCount: 10,
-                physics: const NeverScrollableScrollPhysics(),
-                // padding: EdgeInsets.symmetric(horizontal: 24.w),
+                physics: const BouncingScrollPhysics(),
                 itemBuilder: (context, index) {
                   return Container(
-                    height: 128.h,
+                    height: 112.h,
                     padding: EdgeInsets.all(10.sp),
                     margin: EdgeInsets.symmetric(vertical: 7.h),
                     decoration: BoxDecoration(
