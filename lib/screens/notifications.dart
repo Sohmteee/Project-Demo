@@ -82,7 +82,9 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                 itemBuilder: (context, index) {
                   DateTime time = provider.notificatons[index]['time'];
                   String timeToString =
-                      DateTime.now()time.minute < 1 ? "Just now" : "${time.minute} min ago";
+                      DateTime.now().difference(time).inMinutes < 1
+                          ? "Just now"
+                          : "${time.minute} min ago";
 
                   return Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
