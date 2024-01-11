@@ -81,10 +81,12 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                 physics: const BouncingScrollPhysics(),
                 itemBuilder: (context, index) {
                   DateTime time = provider.notificatons[index]['time'];
-                  String timeToString =
-                      DateTime.now().difference(time).inMinutes < 1
-                          ? "Just now"
-                          : "${time.minute} min ago";
+                  String timeToString = DateTime.now()
+                              .difference(time)
+                              .inMinutes <
+                          1
+                      ? "Just now"
+                      : "${DateTime.now().difference(time).inMinutes} min ago";
 
                   return Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
