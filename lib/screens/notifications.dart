@@ -46,9 +46,17 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
           AirBnBText(
             'No Notifications!',
             textAlign: TextAlign.center,
-              color: Color(0xFF334A66),
-              fontSize: 18.sp,
-          )
+            color: Theme.of(context).colorScheme.secondary,
+            fontSize: 18.sp,
+            fontWeight: FontWeight.w500,
+          ),
+          AirBnBText(
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor',
+            textAlign: TextAlign.center,
+            color: Theme.of(context).colorScheme.secondary,
+            fontSize: 18.sp,
+            fontWeight: FontWeight.w500,
+          ),
         ],
       ),
     );
