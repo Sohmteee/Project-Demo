@@ -83,12 +83,6 @@ class LoginOption extends StatelessWidget {
   final Function() onPressed;
 
   @override
-
-  /// Builds the login button widget.
-  ///
-  /// Uses [ZoomTapAnimation] for the tap animation effect. Renders the button
-  /// with the provided [logo] image, [text] label, and calls [onPressed] callback
-  /// on tap. Styles the button based on the current [ThemeProvider] theme.
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
 

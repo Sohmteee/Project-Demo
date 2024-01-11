@@ -77,7 +77,7 @@ class _AppSwitchState extends State<AppSwitch> {
 }
 
 /// ThemeSwitch widget to switch between light and dark themes.
-/// Extends [StatefulWidget] and manages state to toggle between themes.
+/// Extends [StatefulWidget] and manages state to handle theme changes.
 class ThemeSwitch extends StatefulWidget {
   ThemeSwitch({
     super.key,
