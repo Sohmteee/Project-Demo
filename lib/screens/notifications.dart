@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:velocity_x/velocity_x.dart';
 import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/models/text.dart';
 
@@ -19,7 +20,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
         elevation: 0,
         leading: BackButton(color: Theme.of(context).colorScheme.secondary),
         titleSpacing: 0.w,
-        backgroundColor: kColo,
+        backgroundColor: Vx.gray100,
         title: AirBnBText(
           'Notification',
           color: HexColor('#120D26'),
