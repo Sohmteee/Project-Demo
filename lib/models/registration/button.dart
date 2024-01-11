@@ -66,10 +66,6 @@ class ArrowButton extends StatelessWidget {
 }
 
 class LoginOption extends StatelessWidget {
-  /// Constructs a [LoginOption] widget.
-  ///
-  /// The login button with a logo, text label, and callback. Used for social
-  /// login buttons.
   const LoginOption({
     super.key,
     required this.logo,
@@ -77,8 +73,13 @@ class LoginOption extends StatelessWidget {
     required this.onPressed,
   });
 
+  /// The path to the logo image asset displayed in the button.
   final String logo;
+
+  /// The text label displayed in the button.
   final String text;
+
+  /// Callback invoked when the button is tapped.
   final Function() onPressed;
 
   @override
