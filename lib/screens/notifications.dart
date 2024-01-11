@@ -23,11 +23,12 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
     final provider = Provider.of<NotificationProvider>(context);
 
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
         elevation: 0,
         leading: BackButton(color: Theme.of(context).colorScheme.secondary),
         titleSpacing: 0.w,
-        backgroundColor: Vx.gray100,
+        backgroundColor: Colors.transparent,
         title: AirBnBText(
           'Notification',
           color: HexColor('#120D26'),
