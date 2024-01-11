@@ -260,11 +260,25 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   fontSize: 18.sp,
                                                   fontWeight: FontWeight.w400,
                                                 )
-                                              : AirBnBText(
-                                                  '\$20-\$120',
-                                                  color: HexColor('#3F38DD'),
-                                                  fontSize: 18.sp,
-                                                  fontWeight: FontWeight.w400,
+                                              : ShaderMask(
+                                                  blendMode: BlendMode.srcIn,
+                                                  shaderCallback:
+                                                      (Rect bounds) =>
+                                                          LinearGradient(
+                                                    begin: Alignment.topCenter,
+                                                    end: Alignment.bottomCenter,
+                                                    colors: [
+                                                      lightOrangeColor,
+                                                      darkOrangeColor,
+                                                    ],
+                                                    tileMode: TileMode.mirror,
+                                                  ).createShader(bounds),
+                                                  child: AirBnBText(
+                                                    '\$20-\$120',
+                                                    color: HexColor('#3F38DD'),
+                                                    fontSize: 18.sp,
+                                                    fontWeight: FontWeight.w400,
+                                                  ),
                                                 ),
                                         ],
                                       ),
