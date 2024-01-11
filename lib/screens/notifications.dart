@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/models/text.dart';
 
@@ -34,10 +35,12 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
           ),
         ],
       ),
-      backgroundColor: Colors.white,
+      // backgroundColor: Colors.white,
       body: Column(
         children: [
-          
+          SvgPicture.asset(
+            'assets/svg/no-notification.svg',
+          ),
         ],
       ),
     );
