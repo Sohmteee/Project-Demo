@@ -10,6 +10,7 @@ import 'package:yeerlo/data.dart';
 import 'package:yeerlo/providers/notifications.dart';
 import 'package:yeerlo/providers/theme.dart';
 import 'package:yeerlo/screens/home.dart';
+import 'package:yeerlo/screens/nearby_events.dart';
 import 'package:yeerlo/screens/notifications.dart';
 import 'package:yeerlo/screens/onboarding.dart';
 import 'package:yeerlo/screens/registration/location.dart';
@@ -92,6 +93,7 @@ class MyApp extends StatelessWidget {
             '/search': (context) => const SearchScreen(),
             '/notifications': (context) => const NotificationsScreen(),
             '/upcoming-events': (context) => const UpcomingEventsScreen(),
+            '/nearby-events': (context) => const NearbyEventsScreen(),
           },
         );
       },
