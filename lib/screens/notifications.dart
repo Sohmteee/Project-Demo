@@ -41,6 +41,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Spacer()
             SvgPicture.asset(
               'assets/svg/no-notification.svg',
               width: 136.w,
