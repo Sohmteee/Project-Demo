@@ -30,7 +30,7 @@ class _SearchScreenState extends State<SearchScreen> {
           'Search',
           color: HexColor('#120D26'),
           fontSize: 24.sp,
-          fontWeight: FontWeight.w400,
+          fontWeight: FontWeight.w500,
         ),
       ),
       backgroundColor: Colors.white,
