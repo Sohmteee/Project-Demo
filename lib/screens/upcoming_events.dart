@@ -24,6 +24,7 @@ class _UpcomingEventsScreenState extends State<UpcomingEventsScreen> {
     final themeProvider = Provider.of<ThemeProvider>(context);
 
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
         elevation: 0,
         leading: BackButton(color: Theme.of(context).colorScheme.secondary),
@@ -57,6 +58,7 @@ class _UpcomingEventsScreenState extends State<UpcomingEventsScreen> {
         child: ListView.builder(
           itemCount: 10,
           physics: const BouncingScrollPhysics(),
+          padding: EdgeInsets.only(top: 100.h),
           itemBuilder: (context, index) {
             return Container(
               height: 112.h,
