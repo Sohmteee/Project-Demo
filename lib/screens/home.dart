@@ -1296,19 +1296,24 @@ class _HomeScreenState extends State<HomeScreen> {
                 fontSize: 20.sp,
                 fontWeight: FontWeight.bold,
               ),
-              Row(
-                children: [
-                  AirBnBText(
-                    'See All',
-                    color: linkTextColor,
-                    fontSize: 18.sp,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  const Icon(
-                    Icons.arrow_right,
-                    color: linkTextColor,
-                  )
-                ],
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/upcoming-events');
+                },
+                child: Row(
+                  children: [
+                    AirBnBText(
+                      'See All',
+                      color: linkTextColor,
+                      fontSize: 18.sp,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    const Icon(
+                      Icons.arrow_right,
+                      color: linkTextColor,
+                    )
+                  ],
+                ),
               ),
             ],
           ),
