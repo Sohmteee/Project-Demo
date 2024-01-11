@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:provider/provider.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/models/text.dart';
+import 'package:yeerlo/providers/notifications.dart';
 
 class NotificationsScreen extends StatefulWidget {
   const NotificationsScreen({super.key});
@@ -15,6 +17,8 @@ class NotificationsScreen extends StatefulWidget {
 class _NotificationsScreenState extends State<NotificationsScreen> {
   @override
   Widget build(BuildContext context) {
+    final provider = Provider.of<NotificationProvider>(context);
+
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -40,7 +44,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
       backgroundColor: Vx.gray100,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w),
-        child: Column(
+        child:  Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Spacer(),
