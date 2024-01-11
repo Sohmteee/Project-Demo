@@ -2062,12 +2062,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         ),
         ZoomTapAnimation(
           onTap: () {
-            final provider = Provider.of<NotificationProvider>(context);
+            final provider =
+                Provider.of<NotificationProvider>(context, listen: false);
             provider.showNoNotification();
             Navigator.pushNamed(context, '/notifications');
           },
           onLongTap: () {
-            final provider = Provider.of<NotificationProvider>(context);
+            final provider =
+                Provider.of<NotificationProvider>(context, listen: false);
             provider.showNotifications();
             Navigator.pushNamed(context, '/notifications');
           },
