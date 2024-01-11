@@ -77,7 +77,9 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                 ],
               )
             : ListView.builder(
-                itemBuilder: (context, index) {},
+                itemBuilder: (context, index) {
+                  return 
+                },
               ),
       ),
     );
