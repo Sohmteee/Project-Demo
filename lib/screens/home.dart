@@ -245,7 +245,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                         children: [
                                           AirBnBText(
                                             'Select Price Range',
-                                            color: HexColor('#120D26'),
+                                            color: themeProvider.themeType ==
+                                                    ThemeType.light
+                                                ? HexColor('#120D26')
+                                                : Colors.white,
                                             fontSize: 16.sp,
                                             fontWeight: FontWeight.w500,
                                           ),
@@ -264,7 +267,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ],
                             ),
-                            Spacer(),
+                            const Spacer(),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
@@ -316,7 +319,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ],
                             ),
-                            Spacer(flex: 2),
+                            const Spacer(flex: 2),
                           ],
                         ),
                       ),
