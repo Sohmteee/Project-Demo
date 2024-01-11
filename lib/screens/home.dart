@@ -594,7 +594,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   Icon(
                     IconlyBold.calendar,
                     color: index == selectedFilterCategoryIndex
-                        ? Colors.white
+                        ? themeProvider.themeType == ThemeType.light
+                            ? Colors.white
+                            : Colors.black
                         : themeProvider.themeType == ThemeType.light
                             ? HexColor('#979797')
                             : Colors.white,
@@ -603,7 +605,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   DMSansText(
                     categories[index]['title'],
                     color: index == selectedFilterCategoryIndex
-                        ? Colors.white
+                        ? themeProvider.themeType == ThemeType.light
+                            ? Colors.white
+                            : Colors.black
                         : themeProvider.themeType == ThemeType.light
                             ? HexColor('#979797')
                             : Colors.white,
