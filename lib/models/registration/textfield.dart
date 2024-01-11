@@ -25,17 +25,21 @@ class AppTextField extends StatefulWidget {
   });
 
   /// The hint text to display in the text field.
-  /// The hint text to display in the text field.
-  /// The icon widget to display in the text field.
-  /// The text editing controller for controlling the text.
-  /// Whether the text field should obscure input.
-  /// The keyboard type for the text field.
-  /// The text input action for the text field.
-  /// The text capitalization behavior for the text field.
+  /// This indicates the expected input for the text field.
   final String hintText;
+
+  /// The icon widget to display in the text field.
   final Widget icon;
+
+  /// The text editing controller for controlling the text being edited.
+  /// Can be null to create a new controller internally.
   TextEditingController? controller;
+
+  /// Indicates whether this text field should obscure input like a password field.
   final bool isPassword;
+
+  /// The keyboard type to use for the text field.
+  /// This determines what kind of input keyboard is shown to the user.
   final TextInputType keyboardType;
   final TextInputAction textInputAction;
   final TextCapitalization textCapitalization;
