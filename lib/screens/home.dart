@@ -11,7 +11,6 @@ import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_sliding_up_panel/sliding_up_panel_widget.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:syncfusion_flutter_sliders/sliders.dart';
@@ -1472,36 +1471,28 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
 
         //filter button
-        ZoomTapAnimation(
-          onTap: () {
-            setState(() {
-              isOpenFilter = true;
-            });
-            panelController.expand();
-          },
-          child: Container(
-            padding: EdgeInsets.fromLTRB(5.w, 5.h, 10.w, 5.h),
-            decoration: BoxDecoration(
-              color: themeProvider.themeType == ThemeType.light
-                  ? Colors.white
-                  : const Color(0xFF302F2F),
-              borderRadius: BorderRadius.circular(30.r),
-            ),
-            child: Row(
-              children: [
-                SvgPicture.asset('assets/svg/filter-circle.svg'),
-                SizedBox(width: 5.w),
-                Text(
-                  'Filter',
-                  style: TextStyle(
-                    color: themeProvider.themeType == ThemeType.light
-                        ? darkOrangeColor
-                        : Colors.white,
-                    fontSize: 14.sp,
-                  ),
+        Container(
+          padding: EdgeInsets.fromLTRB(5.w, 5.h, 10.w, 5.h),
+          decoration: BoxDecoration(
+            color: themeProvider.themeType == ThemeType.light
+                ? Colors.white
+                : const Color(0xFF302F2F),
+            borderRadius: BorderRadius.circular(30.r),
+          ),
+          child: Row(
+            children: [
+              SvgPicture.asset('assets/svg/filter-circle.svg'),
+              SizedBox(width: 5.w),
+              Text(
+                'Filter',
+                style: TextStyle(
+                  color: themeProvider.themeType == ThemeType.light
+                      ? darkOrangeColor
+                      : Colors.white,
+                  fontSize: 14.sp,
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ],
