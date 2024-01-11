@@ -7,7 +7,7 @@ enum ThemeType { light, dark }
 /// ThemeProvider is a [ChangeNotifier] that manages the app theme state.
 /// It contains the current [ThemeType] and a [toggleTheme] method to switch between light and dark mode.
 class ThemeProvider extends ChangeNotifier {
-  /// Sets the initial theme type to light mode.
+  /// The current theme type for the app. Defaults to light theme.
   ThemeType themeType = ThemeType.light;
 
   /// Toggles the theme between light and dark mode.
