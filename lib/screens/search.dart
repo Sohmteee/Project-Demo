@@ -299,7 +299,7 @@ class _SearchScreenState extends State<SearchScreen> {
                           ),
                         ],
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
@@ -349,7 +349,7 @@ class _SearchScreenState extends State<SearchScreen> {
                           ),
                         ],
                       ),
-                      Spacer(flex: 2),
+                      const Spacer(flex: 2),
                     ],
                   ),
                 ),
