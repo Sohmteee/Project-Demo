@@ -37,7 +37,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final drawerController = AdvancedDrawerController();
   bool isOpenDrawer = false;
-  bool isOpenFilter = false;
   final timer = Timer;
   late Duration timeRemaining;
 

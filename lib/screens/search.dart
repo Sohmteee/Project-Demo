@@ -724,10 +724,10 @@ class _SearchScreenState extends State<SearchScreen> {
         //filter button
         ZoomTapAnimation(
           onTap: () {
-            /* setState(() {
-                    isOpenFilter = true; 
-                  }); 
-                  panelController.expand(); */
+            setState(() {
+              isOpenFilter = true;
+            });
+            panelController.expand();
           },
           child: Container(
             padding: EdgeInsets.fromLTRB(5.w, 5.h, 10.w, 5.h),
