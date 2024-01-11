@@ -25,9 +25,12 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
           fontWeight: FontWeight.w500,
         ),
         actions: [
-          Icon(
-            Icons.more_vert,
-            color: Theme.of(context).colorScheme.secondary,
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.more_vert,
+              color: Theme.of(context).colorScheme.secondary,
+            ),
           ),
         ],
       ),
