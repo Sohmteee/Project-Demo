@@ -71,7 +71,7 @@ List upcomingEvents = [
 ];
 
 String profilePath =
-    'https://s3-alpha-sig.figma.com/img/33a1/6235/683e964c0fac3a1028da033d96e5dd5d?Expires=1704672000&Signature=JQ0~OKDWlMmTbGlNiyaxKq6TXJs6auZT7Aj4mDom4MvCaN3maT0qzKlE6L3UFRhrBhojvuQ~2UQbv6~G7TBZMe3-BXqH-VDnDT2aBp3HEdqsRM-G6MppsNIOdI~bY40JIoizNg7o-hwy0uRkBrfxSGGU0z-BGOdgeqFdSVRvKKFwIiW1VzJaQSDURks8sI3QU1ZsMzTb-KNiMXUFR4u9AJtUePaduJE-LgblwJxnE9VCSyf1r0Ichq~JsLBClMtwBokWbuwI5mgeEwdhGAx4SP1TQAa05AAOF6UBJlZNYoz0rCXkg~9HwFs3XDC0qXJL0TAVg2e86fAzws1L8d8lxg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4';
+    'https://s3-alpha-sig.figma.com/img/33a1/6235/683e964c0fac3a1028da033d96e5dd5d?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ha3sjm64LwXQhz1HE13CuNNQHr-cFmU4Qft8jZE3uVZIe6FNtab0IOYqOWPiQIn3YE8BYYUa9deE8E47SKNskdBypeeAbhhNFwPwCLrrFLyM7lV2WxwxBsD6rzvTTZ~hSbmT891I8pjlPI9pkVOYMQMtSscV~z5lUx-HnJaMSpgcxjwBIfpQkrXY-tO8qnbZlyhZnkE6rnSzHYoJO~0VDS8XGQtjqQpvx~jkw57LQGSdteGkYf1v~xKeMbqphQGRVILZt67inDa-RxLOGf0fAc2OMPRXRPRipcCSjOX-80zbGmKV~fXaDE8evly9TBVIELQZuhX~KtBd~7i0UGdPUw__';
 String dp1Path =
     'https://s3-alpha-sig.figma.com/img/a511/6394/d8c24efab59533add110ee8338355c42?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=E4OTaGoqXnK1IhSR-NE0zXSZcUOZQYip9zwTPSJHIJJdut387aniq6Gl-edufUpe5WfmSAMnauN-oiROqGalslATdHMF5T43S9SVNKfyqcW0DD1yfzILtZQ~ktKLSDn8hlwgAbY3fnvpwA9VQYGhvsyoxBN~Kmd0u1jkCjzL3vBAzWweM6B1LPlZViIeI4~mDlR3Pwivwno-NsG9riGSb8lbPo5UpsXFMC9U7B0l8ob06qtn99l1kp~cOKlteO5cLc5CbXt2oKWxW6BdspA-59ql7zZvkJe7-YvrJwFC~hXPh1f403ct79mM6GFaD6SLdBEWVFneVOxhBDjI7Un8PA__';
 String dp2Path =
