@@ -1026,21 +1026,26 @@ class _HomeScreenState extends State<HomeScreen> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const Row(
-                    children: [
-                      Text(
-                        'See All',
-                        style: TextStyle(
-                          color: linkTextColor,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/nearby-events');
+                    },
+                    child: const Row(
+                      children: [
+                        Text(
+                          'See All',
+                          style: TextStyle(
+                            color: linkTextColor,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                      Icon(
-                        Icons.arrow_right,
-                        color: linkTextColor,
-                      )
-                    ],
+                        Icon(
+                          Icons.arrow_right,
+                          color: linkTextColor,
+                        )
+                      ],
+                    ),
                   ),
                 ],
               ),
