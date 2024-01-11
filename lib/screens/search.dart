@@ -21,6 +21,7 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
+    bool isOpenFilter = false;
 
     return Scaffold(
       appBar: AppBar(
