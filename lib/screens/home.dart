@@ -595,14 +595,18 @@ class _HomeScreenState extends State<HomeScreen> {
                     IconlyBold.calendar,
                     color: index == selectedFilterCategoryIndex
                         ? Colors.white
-                        : HexColor('#979797'),
+                        : themeProvider.themeType == ThemeType.light
+                            ? HexColor('#979797')
+                            : Colors.white,
                   ),
                   SizedBox(width: 5.w),
                   DMSansText(
                     categories[index]['title'],
                     color: index == selectedFilterCategoryIndex
                         ? Colors.white
-                        : HexColor('#979797'),
+                        : themeProvider.themeType == ThemeType.light
+                            ? HexColor('#979797')
+                            : Colors.white,
                     fontSize: 20.sp,
                     fontWeight: FontWeight.bold,
                   ),
