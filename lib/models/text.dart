@@ -40,6 +40,9 @@ class DMSansText extends StatelessWidget {
 
   /// The optional text overflow behavior for the text.
   TextOverflow? overflow;
+
+  /// The optional maximum number of lines for the text.
+  /// If null, there is no limit to the number of lines.
   int? maxLines;
 
   @override
@@ -60,6 +63,12 @@ class DMSansText extends StatelessWidget {
   }
 }
 
+/// A custom [Text] widget that uses the AirBnB font and style.
+///
+/// This widget extends [StatelessWidget] and configures a [Text] widget with
+/// the AirBnB font and default text styles. It takes in a [String] for the text
+/// content and allows customizing properties like [fontSize], [fontWeight],
+/// [color], etc.
 class AirBnBText extends StatelessWidget {
   AirBnBText(
     this.text, {
@@ -73,14 +82,31 @@ class AirBnBText extends StatelessWidget {
     this.maxLines,
   });
 
+  /// The text to display.
   final String text;
+
+  /// The optional font size for the text.
   double? fontSize;
+
+  /// The optional font weight for the text.
   FontWeight? fontWeight;
+
+  /// The optional text color.
   Color? color;
+
+  /// The optional text alignment for the text.
   TextAlign? textAlign;
+
+  /// The optional height for the text.
   double? height;
+
+  /// The optional text overflow behavior for the text.
   TextOverflow? overflow;
+
+  /// The optional maximum number of lines for the text.
+  /// If null, there is no limit to the number of lines.
   int? maxLines;
+
 
   @override
   Widget build(BuildContext context) {

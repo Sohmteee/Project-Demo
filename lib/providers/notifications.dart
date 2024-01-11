@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
+/// Notification provider class that extends [ChangeNotifier] to manage
+/// notifications state and notify listeners.
 class NotificationProvider extends ChangeNotifier {
   List notificatons = [];
 
