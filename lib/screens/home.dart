@@ -252,12 +252,20 @@ class _HomeScreenState extends State<HomeScreen> {
                                             fontSize: 16.sp,
                                             fontWeight: FontWeight.w500,
                                           ),
-                                          AirBnBText(
-                                            '\$20-\$120',
-                                            color: HexColor('#3F38DD'),
-                                            fontSize: 18.sp,
-                                            fontWeight: FontWeight.w400,
-                                          ),
+                                          themeProvider.themeType ==
+                                                  ThemeType.light
+                                              ? AirBnBText(
+                                                  '\$20-\$120',
+                                                  color: HexColor('#3F38DD'),
+                                                  fontSize: 18.sp,
+                                                  fontWeight: FontWeight.w400,
+                                                )
+                                              : AirBnBText(
+                                                  '\$20-\$120',
+                                                  color: HexColor('#3F38DD'),
+                                                  fontSize: 18.sp,
+                                                  fontWeight: FontWeight.w400,
+                                                ),
                                         ],
                                       ),
                                       SizedBox(height: 15.h),
