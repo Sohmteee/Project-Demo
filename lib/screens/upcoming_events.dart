@@ -61,7 +61,7 @@ class _UpcomingEventsScreenState extends State<UpcomingEventsScreen> {
             itemBuilder: (context, index) {
               return Container(
                 height: 112.h,
-                padding: EdgeInsets.all(14.sp),
+                padding: EdgeInsets.fromLTRB(10, 14, 14,14.sp),
                 margin: EdgeInsets.symmetric(vertical: 7.h),
                 decoration: BoxDecoration(
                   color: themeProvider.themeType == ThemeType.light
