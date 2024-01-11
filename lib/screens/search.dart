@@ -691,13 +691,8 @@ class _SearchScreenState extends State<SearchScreen> {
     return Row(
       children: [
         //search button
-        GestureDetector(
-          onTap: () {
-            Navigator.pushNamed(context, '/search');
-          },
-          child: SvgPicture.asset(
-            'assets/svg/search-orange.svg',
-          ),
+        SvgPicture.asset(
+          'assets/svg/search-orange.svg',
         ),
 
         //textfield
