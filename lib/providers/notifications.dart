@@ -6,11 +6,14 @@ import 'package:flutter_animate/flutter_animate.dart';
 class NotificationProvider extends ChangeNotifier {
   List notificatons = [];
 
+  /// Clears the notifications list and notifies listeners.
   showNoNotification() {
     notificatons.clear();
     notifyListeners();
   }
 
+  /// Populates the notifications list with sample data and notifies listeners.
+  /// This simulates new notifications being received from a server.
   showNotifications() {
     notificatons = [
       {
