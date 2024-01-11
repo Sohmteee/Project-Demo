@@ -601,7 +601,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  SizedBox buildTimeCategories(BuildContext context) {
+  SizedBox buildTimeCategories(BuildContext context, ThemeProvider themeProvider) {
     List times = [
       "Today",
       "Tomorrow",
@@ -627,7 +627,7 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: EdgeInsets.symmetric(horizontal: 20.w),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              border: index != selectedTimeCategoryIndex
+              border: index != selectedTimeCategoryIndex && themeProvider.themeType== The
                   ? Border.all(
                       width: 1,
                       color: const Color(0xFFE6E6E6),
