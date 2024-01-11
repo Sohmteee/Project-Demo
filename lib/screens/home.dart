@@ -510,7 +510,7 @@ class _HomeScreenState extends State<HomeScreen> {
             const Spacer(),
             DMSansText(
               'New York, USA',
-              color: const Color(0xFF141736),
+              color: themeProvider.themeType == ThemeType.light ? const Color(0xFF141736),
               fontSize: 16.sp,
               fontWeight: FontWeight.w400,
             ),
