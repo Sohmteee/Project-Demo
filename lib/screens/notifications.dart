@@ -90,16 +90,26 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                       ),
                       SizedBox(width: 18.w),
                       Expanded(
-                        child: Text.rich(
-                          TextSpan(
-                            children: [
-                              TextSpan(
-                                
-                              )
-                            ]
-                          )
-                        )
-                      ),
+                          child: Text.rich(TextSpan(children: [
+                        TextSpan(
+                          text: 'David Silbia ',
+                          style: TextStyle(
+                            color: Theme.of(context).colorScheme.secondary,
+                            fontSize: 14.sp,
+                            fontFamily: 'DM Sans',
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'Sign up',
+                          style: TextStyle(
+                            color: Theme.of(context).colorScheme.secondary,
+                            fontSize: 14.sp,
+                            fontFamily: 'DM Sans',
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ]))),
                       Row(
                         children: [
                           (index == 1)
