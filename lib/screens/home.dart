@@ -459,7 +459,9 @@ class _HomeScreenState extends State<HomeScreen> {
             AirBnBText(
               'Choose from calendar',
               textAlign: TextAlign.center,
-              color: HexColor('#807A7A'),
+              color: themeProvider.themeType == ThemeType.light
+                  ? HexColor('#807A7A')
+                  : Colors.white,
               fontSize: 15.sp,
               fontWeight: FontWeight.w400,
             ),
@@ -510,7 +512,9 @@ class _HomeScreenState extends State<HomeScreen> {
             const Spacer(),
             DMSansText(
               'New York, USA',
-              color: themeProvider.themeType == ThemeType.light ? const Color(0xFF141736),
+              color: themeProvider.themeType == ThemeType.light
+                  ? const Color(0xFF141736)
+                  : Colors.white,
               fontSize: 16.sp,
               fontWeight: FontWeight.w400,
             ),
