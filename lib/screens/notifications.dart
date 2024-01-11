@@ -40,7 +40,15 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
         children: [
           SvgPicture.asset(
             'assets/svg/no-notification.svg',
+            width: 136.w,
+            height: 168.5.h,
           ),
+          AirBnBText(
+            'No Notifications!',
+            textAlign: TextAlign.center,
+              color: Color(0xFF334A66),
+              fontSize: 18.sp,
+          )
         ],
       ),
     );
