@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -6,7 +8,10 @@ import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/providers/theme.dart';
 
-// ignore: must_be_immutable
+/// AppTextField is a custom StatefulWidget that represents a text field with additional styling and functionality.
+///
+/// It has properties like hintText, icon, isPassword etc. to customize the text field.
+/// The State class _AppTextFieldState manages internal state like showPassword.
 class AppTextField extends StatefulWidget {
   AppTextField({
     super.key,
@@ -19,6 +24,14 @@ class AppTextField extends StatefulWidget {
     this.textCapitalization = TextCapitalization.none,
   });
 
+  /// The hint text to display in the text field.
+  /// The hint text to display in the text field.
+  /// The icon widget to display in the text field.
+  /// The text editing controller for controlling the text.
+  /// Whether the text field should obscure input.
+  /// The keyboard type for the text field.
+  /// The text input action for the text field.
+  /// The text capitalization behavior for the text field.
   final String hintText;
   final Widget icon;
   TextEditingController? controller;
