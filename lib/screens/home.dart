@@ -419,7 +419,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  Container buildChooseCalendar() {
+  Container buildChooseCalendar(ThemeProvider themeProvider) {
     return Container(
       padding: EdgeInsets.symmetric(
         horizontal: 18.w,
