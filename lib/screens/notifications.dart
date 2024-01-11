@@ -37,13 +37,13 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
           ),
         ],
       ),
-      // backgroundColor: Colors.white,
+      backgroundColor: Vx.gray100,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Spacer(),
+            const Spacer(),
             SvgPicture.asset(
               'assets/svg/no-notification.svg',
               width: 136.w,
@@ -65,7 +65,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
               fontSize: 16.sp,
               fontWeight: FontWeight.w400,
             ),
-            Spacer(flex: 2),
+            const Spacer(flex: 2),
           ],
         ),
       ),
