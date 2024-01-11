@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -35,6 +37,8 @@ class _UpcomingEventsScreenState extends State<UpcomingEventsScreen> {
           SvgPicture.asset(
             'assets/svg/search-orange.svg',
             color: Colors.black,
+            width: 24.w,
+            height: 24.h,
           ),
           IconButton(
             onPressed: () {},
