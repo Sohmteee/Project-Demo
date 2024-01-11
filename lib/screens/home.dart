@@ -229,7 +229,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                         alignment: Alignment.topLeft,
                                         child: AirBnBText(
                                           'Location',
-                                          color: HexColor('#120D26'),
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .secondary,
                                           fontSize: 16.sp,
                                           fontWeight: FontWeight.w500,
                                         ),
