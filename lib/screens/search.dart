@@ -43,17 +43,30 @@ class _SearchScreenState extends State<SearchScreen> {
         Scaffold(
           appBar: AppBar(
             elevation: 0,
+            toolbarHeight: 60.h,
             leading: BackButton(color: Theme.of(context).colorScheme.secondary),
             title: AirBnBText(
               'Search',
-              color: HexColor('#120D26'),
+              color: Theme.of(context).colorScheme.secondary,
               fontSize: 24.sp,
               fontWeight: FontWeight.w500,
             ),
           ),
           backgroundColor: Colors.white,
-          body: Padding(
+          body: Container(
             padding: EdgeInsets.symmetric(horizontal: 24.w),
+            decoration: BoxDecoration(
+              color: (themeProvider.themeType == ThemeType.light)
+                  ? Vx.gray100
+                  : null,
+              image: (themeProvider.themeType == ThemeType.dark)
+                  ? const DecorationImage(
+                      image: AssetImage(
+                          'assets/images/dark-gradient-background.png'),
+                      fit: BoxFit.cover,
+                    )
+                  : null,
+            ),
             child: Column(
               children: [
                 buildSearchRow(context),
