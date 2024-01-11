@@ -81,8 +81,8 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                 physics: const BouncingScrollPhysics(),
                 itemBuilder: (context, index) {
                   DateTime time = provider.notificatons[index]['time'];
-                  String timeToString = time.minute < 1 ? "Just now" : ""
-                  }
+                  String timeToString =
+                      time.minute < 1 ? "Just now" : "${time.minute} min ago";
 
                   return Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -132,7 +132,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                         ),
                       ),
                       DMSansText(
-                        '${provider.notificatons[index]['time']) {}}',
+                        timeToString,
                         textAlign: TextAlign.right,
                         color: HexColor('#3C3E56'),
                         fontSize: 12.sp,
