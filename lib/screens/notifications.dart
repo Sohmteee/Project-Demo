@@ -112,7 +112,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                                 ),
                               ),
                               TextSpan(
-                                text: 'commented on your post',
+                                text: 'commented on your post ',
                                 style: TextStyle(
                                   color:
                                       Theme.of(context).colorScheme.secondary,
