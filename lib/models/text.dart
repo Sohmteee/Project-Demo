@@ -20,12 +20,25 @@ class DMSansText extends StatelessWidget {
     this.maxLines,
   });
 
+  /// The text to display.
   final String text;
+
+  /// The optional font size for the text.
   double? fontSize;
+
+  /// The optional font weight for the text.
   FontWeight? fontWeight;
+
+  /// The optional text color.
   Color? color;
+
+  /// The optional text alignment for the text.
   TextAlign? textAlign;
+
+  /// The optional height for the text.
   double? height;
+
+  /// The optional text overflow behavior for the text.
   TextOverflow? overflow;
   int? maxLines;
 
