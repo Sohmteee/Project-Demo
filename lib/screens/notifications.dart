@@ -17,14 +17,19 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
       appBar: AppBar(
         elevation: 0,
         leading: BackButton(color: Theme.of(context).colorScheme.secondary),
-        // leadingWidth: 20.w,
-        titleSpacing: 30.w,
+        titleSpacing: 0.w,
         title: AirBnBText(
           'Notification',
           color: HexColor('#120D26'),
           fontSize: 24.sp,
           fontWeight: FontWeight.w500,
         ),
+        actions: [
+          Icon(
+            Icons.more_vert,
+            color: Theme.of(context).colorScheme.secondary,
+          ),
+        ],
       ),
       backgroundColor: Colors.white,
     );
