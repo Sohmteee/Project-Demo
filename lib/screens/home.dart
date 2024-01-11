@@ -540,7 +540,7 @@ class _HomeScreenState extends State<HomeScreen> {
               decoration: BoxDecoration(
                 color: index == selectedFilterCategoryIndex
                     ? null
-                    : const Color(0xFFE7E7E7),
+                    : themeProvider const Color(0xFFE7E7E7),
                 borderRadius: BorderRadius.circular(20),
                 gradient: index == selectedFilterCategoryIndex
                     ? LinearGradient(
