@@ -22,6 +22,7 @@ import 'package:yeerlo/countries.dart';
 import 'package:yeerlo/data.dart';
 import 'package:yeerlo/models/bottomNavBar.dart';
 import 'package:yeerlo/models/flag.dart';
+import 'package:yeerlo/models/registration/button.dart';
 import 'package:yeerlo/models/registration/switch.dart';
 import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/notifications.dart';
@@ -970,6 +971,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   buildReferral(themeProvider),
                   SizedBox(height: 20.h),
                   buildNearYou(themeProvider),
+                  SizedBox(height: 50.h),
+                  ArrowButton(
+                    text: 'EXPLOR MORE EVENTS',
+                    onPressed: () {},
+                  ),
                 ],
               ),
             ),
