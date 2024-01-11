@@ -43,7 +43,7 @@ class _SearchScreenState extends State<SearchScreen> {
               child: ListView.builder(
                 itemCount: 10,
                 physics: const NeverScrollableScrollPhysics(),
-                // padding: EdgeInsets.symmetric(horizontal: 24.w), 
+                // padding: EdgeInsets.symmetric(horizontal: 24.w),
                 itemBuilder: (context, index) {
                   return Container(
                     height: 128.h,
@@ -71,7 +71,7 @@ class _SearchScreenState extends State<SearchScreen> {
                           child: Image.asset(
                             'assets/images/home/near-you-2.png',
                             width: 79.w,
-                            height: 108.h,
+                            height: 92.h,
                           ),
                         ),
                         SizedBox(width: 18.w),
@@ -126,31 +126,15 @@ class _SearchScreenState extends State<SearchScreen> {
                             ],
                           ),
                         ),
-                        Row(
-                          children: [
-                            (index == 1)
-                                ? Image.asset(
-                                    'assets/images/home/google-meet-icon.png',
-                                    height: 16.h,
-                                    width: 16.w,
-                                  )
-                                : Image.asset(
-                                    'assets/images/home/zoom-icon.png',
-                                    height: 16.h,
-                                    width: 16.w,
-                                    fit: BoxFit.contain,
-                                  ),
-                            Padding(
-                              padding: EdgeInsets.only(
-                                left: 8.w,
-                              ),
-                              child: Icon(
-                                IconlyLight.bookmark,
-                                size: 16.sp,
-                                color: Theme.of(context).colorScheme.secondary,
-                              ),
-                            )
-                          ],
+                        Padding(
+                          padding: EdgeInsets.only(
+                            left: 8.w,
+                          ),
+                          child: Icon(
+                            IconlyLight.bookmark,
+                            size: 16.sp,
+                            color: Theme.of(context).colorScheme.secondary,
+                          ),
                         ),
                       ],
                     ),
