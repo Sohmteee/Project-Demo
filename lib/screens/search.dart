@@ -43,7 +43,7 @@ class _SearchScreenState extends State<SearchScreen> {
         Scaffold(
           appBar: AppBar(
             elevation: 0,
-            toolbarHeight: 60.h,
+            height
             leading: BackButton(color: Theme.of(context).colorScheme.secondary),
             title: AirBnBText(
               'Search',
