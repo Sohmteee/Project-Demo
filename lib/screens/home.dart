@@ -607,7 +607,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         : themeProvider.themeType == ThemeType.light
                             ? HexColor('#979797')
                             : Colors.white,
-                    fontSize: 20.sp,
+                    fontSize: 17.sp,
                     fontWeight: FontWeight.bold,
                   ),
                 ],

@@ -8,15 +8,15 @@ late String storageLocation;
 
 List categories = [
   {
-    'title': 'Music',
+    'title': 'MUSIC',
     'color': blueColorCategory,
   },
   {
-    'title': 'Comedy',
+    'title': 'COMEDY',
     'color': redColorCategory,
   },
   {
-    'title': 'Movie Event',
+    'title': 'MOVIE EVENT',
     'color': greenColorCategory,
   },
 ];
