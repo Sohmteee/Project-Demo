@@ -86,7 +86,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
             toolbarHeight: 80.h,
             leading: BackButton(color: Theme.of(context).colorScheme.primary),
             titleSpacing: 0.w,
-            backgroundColor: darkOrangeColor,
+            backgroundColor: Colors.black38,
             title: AirBnBText(
               'Event Details',
               color: Theme.of(context).colorScheme.primary,
