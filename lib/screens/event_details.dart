@@ -282,7 +282,14 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                                     (index) => SvgPicture.asset(
                                         'assets/svg/event/star.svg'),
                                   ),
-                                )
+                                ),
+                                DMSansText(
+                                  'Cinemas is the ultimate experience to see new movies in Gold Class or Vmax. Find a cinema near you.',
+                                  color:
+                                      Theme.of(context).colorScheme.secondary,
+                                  fontSize: 15.sp,
+                                  fontWeight: FontWeight.w400,
+                                ),
                               ],
                             ),
                           ),
