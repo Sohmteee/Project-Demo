@@ -242,68 +242,66 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       ListView.builder(
                         itemCount: 3,
                         itemBuilder: (BuildContext context, int index) {
-                          return SizedBox(
-                            width: MediaQuery.of(context),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                CircleAvatar(
-                                  radius: 17.r,
-                                  backgroundColor: Colors.white,
-                                  backgroundImage: Image.asset(
-                                    'assets/images/event/comment-image.png',
-                                    height: 34.h,
-                                    width: 34.w,
-                                    fit: BoxFit.fitWidth,
-                                  ).image,
-                                ),
-                                SizedBox(width: 16.w),
-                                Expanded(
-                                  child: Column(
-                                    children: [
-                                      Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          AirBnBText(
-                                            'Rocks Velkeinjen',
-                                            color: Theme.of(context)
-                                                .colorScheme
-                                                .secondary,
-                                            fontSize: 18.sp,
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                          AirBnBText(
-                                            '10 Feb',
-                                            textAlign: TextAlign.right,
-                                            color: Vx.gray400,
-                                            fontSize: 15.sp,
-                                            fontWeight: FontWeight.w400,
-                                          ),
-                                        ],
-                                      ),
-                                      Row(
-                                        children: List.generate(
-                                          4,
-                                          (index) => SvgPicture.asset(
-                                              'assets/svg/event/star.svg'),
+                          return Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              CircleAvatar(
+                                radius: 17.r,
+                                backgroundColor: Colors.white,
+                                backgroundImage: Image.asset(
+                                  'assets/images/event/comment-image.png',
+                                  height: 34.h,
+                                  width: 34.w,
+                                  fit: BoxFit.fitWidth,
+                                ).image,
+                              ),
+                              SizedBox(width: 16.w),
+                              Expanded(
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        AirBnBText(
+                                          'Rocks Velkeinjen',
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .secondary,
+                                          fontSize: 18.sp,
+                                          fontWeight: FontWeight.w500,
                                         ),
+                                        AirBnBText(
+                                          '10 Feb',
+                                          textAlign: TextAlign.right,
+                                          color: Vx.gray400,
+                                          fontSize: 15.sp,
+                                          fontWeight: FontWeight.w400,
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: List.generate(
+                                        4,
+                                        (index) => SvgPicture.asset(
+                                            'assets/svg/event/star.svg'),
                                       ),
-                                      SizedBox(height: 7.h),
-                                      DMSansText(
-                                        'Cinemas is the ultimate experience to see new movies in Gold Class or Vmax. Find a cinema near you.',
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .secondary,
-                                        fontSize: 15.sp,
-                                        fontWeight: FontWeight.w400,
-                                      ),
-                                    ],
-                                  ),
+                                    ),
+                                    SizedBox(height: 7.h),
+                                    DMSansText(
+                                      'Cinemas is the ultimate experience to see new movies in Gold Class or Vmax. Find a cinema near you.',
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .secondary,
+                                      fontSize: 15.sp,
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                                  ],
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           );
+                          
                         },
                       ),
                     ],
@@ -317,6 +315,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
       ),
     );
   }
+
 
   Padding buildAboutEvent(BuildContext context) {
     return Padding(
