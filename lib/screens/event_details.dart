@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:yeerlo/colors/app_colors.dart';
+import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/models/text.dart';
 
 class EventDetailsScreen extends StatefulWidget {
@@ -93,7 +94,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
               children: [
                 Opacity(
                   opacity: 0.84,
-                  child: Row(
+                  child: Column(
                     children: [
                       AirBnBText(
                         'About Event',
@@ -102,34 +103,29 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                         fontWeight: FontWeight.w500,
                         textAlign: TextAlign.left,
                       ),
-                      SizedBox(
-                        width: 323,
-                        child: Text.rich(
-                          TextSpan(
-                            children: [
-                              TextSpan(
-                                text:
-                                    'Enjoy your favorite comedy show with lovely  friends and family and have a great time. ',
-                                style: TextStyle(
-                                  color: Color(0xFF3C3E56),
-                                  fontSize: 16,
-                                  fontFamily: 'DM Sans',
-                                  fontWeight: FontWeight.w400,
-                                  height: 0.10,
-                                ),
+                      Text.rich(
+                        TextSpan(
+                          children: [
+                            TextSpan(
+                              text:
+                                  'Enjoy your favorite comedy show with lovely  friends and family and have a great time. ',
+                              style: TextStyle(
+                                color: HexColor('#3C3E56'),
+                                fontSize: 16.sp,
+                                fontFamily: 'DM Sans',
+                                fontWeight: FontWeight.w400,
                               ),
-                              TextSpan(
-                                text: 'Read More',
-                                style: TextStyle(
-                                  color: Color(0xFFFFB459),
-                                  fontSize: 16,
-                                  fontFamily: 'DM Sans',
-                                  fontWeight: FontWeight.w400,
-                                  height: 0.10,
-                                ),
+                            ),
+                            TextSpan(
+                              text: 'Read More',
+                              style: TextStyle(
+                                color: lightOrangeColor,
+                                fontSize: 16.sp,
+                                fontFamily: 'DM Sans',
+                                fontWeight: FontWeight.w400,
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
                       ),
                     ],
