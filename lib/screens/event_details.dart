@@ -425,6 +425,45 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                 fontSize: 24.sp,
                 fontWeight: FontWeight.w500,
               ),
+              IconButton(
+                onPressed: () {},
+                icon: Container(
+                  height: 36.h,
+                  decoration: ShapeDecoration(
+                    color: Colors.white.withOpacity(0.2),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.r),
+                    ),
+                  ),
+                  child: Center(
+                    child: SvgPicture.asset(
+                      'assets/svg/send.svg',
+                      height: 18.h,
+                      width: 18.w,
+                    ),
+                  ),
+                ),
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: Container(
+                  height: 36.h,
+                  decoration: ShapeDecoration(
+                    color: Colors.white.withOpacity(0.2),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.r),
+                    ),
+                  ),
+                  child: Center(
+                    child: SvgPicture.asset(
+                      'assets/svg/bookmark-outline.svg',
+                      height: 15.h,
+                      width: 15.w,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(width: 12.w),
             ],
           ),
         ),
