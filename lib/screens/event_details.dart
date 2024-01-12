@@ -415,6 +415,11 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
           fit: BoxFit.fitWidth,
         ),
         Positioned(
+          child: Row(
+            children: [],
+          ),
+        ),
+        Positioned(
           bottom: 18.h,
           child: Container(
             width: 290.w,
