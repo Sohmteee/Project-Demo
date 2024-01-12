@@ -78,6 +78,19 @@ class _EventsScreenState extends State<EventsScreen> {
                       )
                     ],
                   ),
+                  child: Center(
+                    child: Text(
+                      'ALL EVENTS',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Color(0xFFFFB459),
+                        fontSize: 15,
+                        fontFamily: 'DM Sans',
+                        fontWeight: FontWeight.w400,
+                        height: 0.11,
+                      ),
+                    ),
+                  ),
                 )
               ],
             ),
