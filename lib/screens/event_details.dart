@@ -19,7 +19,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
-      appBar: AppBar(
+      /* appBar: AppBar(
         elevation: 0,
         toolbarHeight: 140.h,
         leading: BackButton(color: Theme.of(context).colorScheme.primary),
@@ -72,7 +72,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
           ),
           SizedBox(width: 12.w),
         ],
-      ),
+      ), */
       backgroundColor: Theme.of(context).colorScheme.primary,
       body: CustomScrollView(
         physics: const BouncingScrollPhysics(),
@@ -131,6 +131,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
               SizedBox(width: 12.w),
             ],
             flexibleSpace: FlexibleSpaceBar(
+              
               background: buildImageStack(),
             ),
           ),
