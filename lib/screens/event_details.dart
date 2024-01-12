@@ -415,8 +415,17 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
           fit: BoxFit.fitWidth,
         ),
         Positioned(
+          top: 100.h,
           child: Row(
-            children: [],
+            children: [
+              BackButton(color: Theme.of(context).colorScheme.primary),
+              AirBnBText(
+                'Event Details',
+                color: Theme.of(context).colorScheme.primary,
+                fontSize: 24.sp,
+                fontWeight: FontWeight.w500,
+              ),
+            ],
           ),
         ),
         Positioned(
