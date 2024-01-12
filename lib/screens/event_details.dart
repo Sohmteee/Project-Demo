@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/models/text.dart';
 
 class EventDetailsScreen extends StatefulWidget {
@@ -100,11 +101,25 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                   ),
                   child: Row(
                     children: [
-                      DMSansText(
-                        '+20 people going',
+                      ShaderMask(
+                        blendMode: BlendMode.srcIn,
+                        shaderCallback: (Rect bounds) => LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [
+                            lightOrangeColor,
+                            darkOrangeColor,
+                          ],
+                          tileMode: TileMode.mirror,
+                        ).createShader(bounds),
+                        child: DMSansText(
+                          '+20 people going',
                           fontSize: 15.sp,
                           fontWeight: FontWeight.w700,
-                      )
+                        ),
+                      ),
+                      SizedBox(width: 70.w),
+                      
                     ],
                   ),
                 ),
