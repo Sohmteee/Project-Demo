@@ -89,6 +89,8 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
             buildDetailTilesColumn(context),
             SizedBox(height: 35.h),
             buildAboutEvent(context),
+            SizedBox(height: 50.h),
+
           ],
         ),
       ),
