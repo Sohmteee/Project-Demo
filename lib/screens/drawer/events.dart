@@ -43,14 +43,15 @@ class _EventsScreenState extends State<EventsScreen> {
       ),
       backgroundColor: Theme.of(context).colorScheme.primary,
       body: Column(
-        mainAxisAlignment: ,
         children: [
           Container(
-            width: MediaQuery.of(context).size.width - 80,
+            width: double.maxFinite,
             height: 45.h,
             margin: EdgeInsets.symmetric(
+              horizontal: 40.w,
               vertical: 10.h,
             ),
+            padding: EdgeInsets.all(5.sp),
             decoration: ShapeDecoration(
               color: Colors.black.withOpacity(0.02),
               shape: RoundedRectangleBorder(
