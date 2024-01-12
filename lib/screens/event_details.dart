@@ -96,7 +96,13 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                 children: [
                   Column(
                     children: [
-                      
+                      AirBnBText(
+                        'REVIEWS',
+                        textAlign: TextAlign.center,
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.w400,
+                        height: 0,
+                      ),
                     ],
                   ),
                 ],
