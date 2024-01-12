@@ -93,11 +93,46 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
               children: [
                 Opacity(
                   opacity: 0.84,
-                  child: AirBnBText(
-                    'About Event',
-                    color: Theme.of(context).colorScheme.secondary,
-                    fontSize: 18.sp,
-                    fontWeight: FontWeight.w500,
+                  child: Row(
+                    children: [
+                      AirBnBText(
+                        'About Event',
+                        color: Theme.of(context).colorScheme.secondary,
+                        fontSize: 18.sp,
+                        fontWeight: FontWeight.w500,
+                        textAlign: TextAlign.left,
+                      ),
+                      SizedBox(
+                        width: 323,
+                        child: Text.rich(
+                          TextSpan(
+                            children: [
+                              TextSpan(
+                                text:
+                                    'Enjoy your favorite comedy show with lovely  friends and family and have a great time. ',
+                                style: TextStyle(
+                                  color: Color(0xFF3C3E56),
+                                  fontSize: 16,
+                                  fontFamily: 'DM Sans',
+                                  fontWeight: FontWeight.w400,
+                                  height: 0.10,
+                                ),
+                              ),
+                              TextSpan(
+                                text: 'Read More',
+                                style: TextStyle(
+                                  color: Color(0xFFFFB459),
+                                  fontSize: 16,
+                                  fontFamily: 'DM Sans',
+                                  fontWeight: FontWeight.w400,
+                                  height: 0.10,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 )
               ],
