@@ -84,7 +84,26 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
           SizedBox(height: 30.h),
           Row(
             children: [
-              
+              Opacity(
+                opacity: 0.10,
+                child: Container(
+                  width: 48,
+                  height: 48,
+                  decoration: ShapeDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment(0, -1),
+                      end: Alignment(0, 1),
+                      colors: [
+                        lightOrangeColor,
+                        darkOrangeColor,
+                      ],
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                ),
+              )
             ],
           ),
         ],
