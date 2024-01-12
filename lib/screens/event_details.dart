@@ -29,17 +29,19 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
         ),
         actions: [
           IconButton(
-              onPressed: () {},
-              icon: Container(
-                width: 36.w,
-                height: 36.h,
-                decoration: ShapeDecoration(
-                  color: Colors.white.withOpacity(0.2),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
+            onPressed: () {},
+            icon: Container(
+              width: 36.w,
+              height: 36.h,
+              decoration: ShapeDecoration(
+                color: Colors.white.withOpacity(0.2),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.r),
                 ),
-              )),
+              ),
+              child
+            ),
+          ),
         ],
       ),
       backgroundColor: Theme.of(context).colorScheme.primary,
