@@ -118,9 +118,12 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                         ).createShader(bounds),
                         child: Icon(
                           IconlyBold.calendar,
+                          size: 30.sp,
                         ),
                       ),
-                    )
+                    ),
+                    SizedBox(height: 14.w),
+                    
                   ],
                 ),
               ],
