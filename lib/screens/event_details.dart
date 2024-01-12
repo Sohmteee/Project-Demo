@@ -96,12 +96,24 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                 children: [
                   Column(
                     children: [
-                      AirBnBText(
-                        'REVIEWS',
-                        textAlign: TextAlign.center,
-                        fontSize: 16.sp,
-                        fontWeight: FontWeight.w400,
-                        height: 0,
+                      ShaderMask(
+                         blendMode: BlendMode.srcIn,
+                        shaderCallback: (Rect bounds) => LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [
+                            lightOrangeColor,
+                            darkOrangeColor,
+                          ],
+                          tileMode: TileMode.mirror,
+                        ).createShader(bounds),
+                        child: AirBnBText(
+                          'REVIEWS',
+                          textAlign: TextAlign.center,
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w400,
+                          height: 0,
+                        ),
                       ),
                     ],
                   ),
