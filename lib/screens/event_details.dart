@@ -17,7 +17,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         elevation: 0,
-        toolbarHeight: 60.h,
+        toolbarHeight: 140.h,
         leading: BackButton(color: Theme.of(context).colorScheme.primary),
         titleSpacing: 0.w,
         backgroundColor: Colors.transparent,
