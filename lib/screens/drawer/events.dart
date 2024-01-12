@@ -63,141 +63,8 @@ class _EventsScreenState extends State<EventsScreen> {
         ),
         child: Column(
           children: [
-            Container(
-              width: double.maxFinite,
-              height: 45.h,
-              margin: EdgeInsets.symmetric(
-                horizontal: 40.w,
-                vertical: 10.h,
-              ),
-              padding: EdgeInsets.all(5.sp),
-              decoration: ShapeDecoration(
-                color: themeProvider.themeType == ThemeType.light
-                    ? Colors.black.withOpacity(0.02)
-                    : const Color(0xED191818),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(100),
-                ),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  (pageIndex == 0)
-                      ? Container(
-                          width: 145.w,
-                          height: double.maxFinite,
-                          decoration: ShapeDecoration(
-                            color: themeProvider.themeType == ThemeType.light
-                                ? Colors.white
-                                : HexColor('#2C2A27'),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(100),
-                            ),
-                            shadows: const [
-                              BoxShadow(
-                                color: Color(0x19000000),
-                                blurRadius: 20,
-                                offset: Offset(0, 5),
-                                spreadRadius: 0,
-                              )
-                            ],
-                          ),
-                          child: Center(
-                            child: ShaderMask(
-                              blendMode: BlendMode.srcIn,
-                              shaderCallback: (Rect bounds) => LinearGradient(
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter,
-                                colors: [
-                                  lightOrangeColor,
-                                  darkOrangeColor,
-                                ],
-                                tileMode: TileMode.mirror,
-                              ).createShader(bounds),
-                              child: DMSansText(
-                                'ALL EVENTS',
-                                textAlign: TextAlign.center,
-                                fontSize: 15.sp,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                          ),
-                        )
-                      : GestureDetector(
-                          onTap: () => setState(() {
-                            pageIndex = 0;
-                          }),
-                          child: Padding(
-                            padding: EdgeInsets.only(left: 30.w),
-                            child: DMSansText(
-                              'ALL EVENTS',
-                              textAlign: TextAlign.center,
-                              color: HexColor('#9B9B9B'),
-                              fontSize: 15.sp,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ),
-                  (pageIndex == 1)
-                      ? Container(
-                          width: 145.w,
-                          height: double.maxFinite,
-                          decoration: ShapeDecoration(
-                            color: themeProvider.themeType == ThemeType.light
-                                ? Colors.white
-                                : HexColor('#2C2A27'),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(100),
-                            ),
-                            shadows: const [
-                              BoxShadow(
-                                color: Color(0x19000000),
-                                blurRadius: 20,
-                                offset: Offset(0, 5),
-                                spreadRadius: 0,
-                              )
-                            ],
-                          ),
-                          child: Center(
-                            child: ShaderMask(
-                              blendMode: BlendMode.srcIn,
-                              shaderCallback: (Rect bounds) => LinearGradient(
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter,
-                                colors: [
-                                  lightOrangeColor,
-                                  darkOrangeColor,
-                                ],
-                                tileMode: TileMode.mirror,
-                              ).createShader(bounds),
-                              child: DMSansText(
-                                'PAST EVENTS',
-                                textAlign: TextAlign.center,
-                                fontSize: 15.sp,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                          ),
-                        )
-                      : GestureDetector(
-                          onTap: () => setState(() {
-                            pageIndex = 1;
-                          }),
-                          child: Padding(
-                            padding: EdgeInsets.only(right: 30.w),
-                            child: DMSansText(
-                              'PAST EVENTS',
-                              textAlign: TextAlign.center,
-                              color: HexColor('#9B9B9B'),
-                              fontSize: 15.sp,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ),
-                ],
-              ),
-            ),
-            const Spacer(),
+            buildEventsTab(themeProvider),
+            /* const Spacer(),
             Image.asset(
               'assets/images/no-event${themeProvider.themeType == ThemeType.light ? '' : '-dark'}.png',
               width: 180.w,
@@ -219,10 +86,147 @@ class _EventsScreenState extends State<EventsScreen> {
               fontSize: 16.sp,
               fontWeight: FontWeight.w400,
             ),
-            const Spacer(flex: 2),
+            const Spacer(flex: 2), */
           ],
         ),
       ),
     );
+  }
+
+  Container buildEventsTab(ThemeProvider themeProvider) {
+    return Container(
+            width: double.maxFinite,
+            height: 45.h,
+            margin: EdgeInsets.symmetric(
+              horizontal: 40.w,
+              vertical: 10.h,
+            ),
+            padding: EdgeInsets.all(5.sp),
+            decoration: ShapeDecoration(
+              color: themeProvider.themeType == ThemeType.light
+                  ? Colors.black.withOpacity(0.02)
+                  : const Color(0xED191818),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(100),
+              ),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                (pageIndex == 0)
+                    ? Container(
+                        width: 145.w,
+                        height: double.maxFinite,
+                        decoration: ShapeDecoration(
+                          color: themeProvider.themeType == ThemeType.light
+                              ? Colors.white
+                              : HexColor('#2C2A27'),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(100),
+                          ),
+                          shadows: const [
+                            BoxShadow(
+                              color: Color(0x19000000),
+                              blurRadius: 20,
+                              offset: Offset(0, 5),
+                              spreadRadius: 0,
+                            )
+                          ],
+                        ),
+                        child: Center(
+                          child: ShaderMask(
+                            blendMode: BlendMode.srcIn,
+                            shaderCallback: (Rect bounds) => LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [
+                                lightOrangeColor,
+                                darkOrangeColor,
+                              ],
+                              tileMode: TileMode.mirror,
+                            ).createShader(bounds),
+                            child: DMSansText(
+                              'ALL EVENTS',
+                              textAlign: TextAlign.center,
+                              fontSize: 15.sp,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                      )
+                    : GestureDetector(
+                        onTap: () => setState(() {
+                          pageIndex = 0;
+                        }),
+                        child: Padding(
+                          padding: EdgeInsets.only(left: 30.w),
+                          child: DMSansText(
+                            'ALL EVENTS',
+                            textAlign: TextAlign.center,
+                            color: HexColor('#9B9B9B'),
+                            fontSize: 15.sp,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+                (pageIndex == 1)
+                    ? Container(
+                        width: 145.w,
+                        height: double.maxFinite,
+                        decoration: ShapeDecoration(
+                          color: themeProvider.themeType == ThemeType.light
+                              ? Colors.white
+                              : HexColor('#2C2A27'),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(100),
+                          ),
+                          shadows: const [
+                            BoxShadow(
+                              color: Color(0x19000000),
+                              blurRadius: 20,
+                              offset: Offset(0, 5),
+                              spreadRadius: 0,
+                            )
+                          ],
+                        ),
+                        child: Center(
+                          child: ShaderMask(
+                            blendMode: BlendMode.srcIn,
+                            shaderCallback: (Rect bounds) => LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [
+                                lightOrangeColor,
+                                darkOrangeColor,
+                              ],
+                              tileMode: TileMode.mirror,
+                            ).createShader(bounds),
+                            child: DMSansText(
+                              'PAST EVENTS',
+                              textAlign: TextAlign.center,
+                              fontSize: 15.sp,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                      )
+                    : GestureDetector(
+                        onTap: () => setState(() {
+                          pageIndex = 1;
+                        }),
+                        child: Padding(
+                          padding: EdgeInsets.only(right: 30.w),
+                          child: DMSansText(
+                            'PAST EVENTS',
+                            textAlign: TextAlign.center,
+                            color: HexColor('#9B9B9B'),
+                            fontSize: 15.sp,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+              ],
+            ),
+          );
   }
 }
