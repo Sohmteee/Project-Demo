@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
+import 'package:velocity_x/velocity_x.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/models/text.dart';
@@ -169,8 +170,8 @@ class _EventsScreenState extends State<EventsScreen> {
           Spacer(),
           Image.asset(
             'assets/images/no-event.png',
-            width: 200.w,
-            height: 200.h,
+            width: 180.w,
+            height: 180.h,
           ),
           SizedBox(height: 20.h),
           DMSansText(
@@ -184,7 +185,7 @@ class _EventsScreenState extends State<EventsScreen> {
           DMSansText(
             'We couldn’t find any active\nevent in your current location',
             textAlign: TextAlign.center,
-            color: HexColor('#747688'),
+            color: Vx.gray400,
             fontSize: 16.sp,
             fontWeight: FontWeight.w400,
           ),
