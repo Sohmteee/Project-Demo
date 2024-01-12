@@ -39,6 +39,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 22.w),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
                     children: [
@@ -76,9 +77,33 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                           ),
                           borderRadius: BorderRadius.circular(10.r),
                         ),
-                      )
+                      ),
                     ],
                   ),
+                  ShaderMask(
+                    blendMode: BlendMode.srcIn,
+                    shaderCallback: (Rect bounds) => LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        lightOrangeColor,
+                        darkOrangeColor,
+                      ],
+                      tileMode: TileMode.mirror,
+                    ).createShader(bounds),
+                    child: Container(
+                      width: 93,
+                      height: 31,
+                      decoration: ShapeDecoration(
+                        shape: RoundedRectangleBorder(
+                          side: const BorderSide(
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.circular(7),
+                        ),
+                      ),
+                    ),
+                  )
                 ],
               ),
             ),
