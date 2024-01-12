@@ -184,6 +184,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
               ),
             ),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
                   padding: EdgeInsets.only(bottom: 36.h, left: 26.w),
@@ -196,10 +197,13 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(bottom: 20.h, left: 20.w),
-                  child: ArrowButton(
-                    onPressed: () {},
-                    text: 'GET TICKETS',
+                  padding: EdgeInsets.only(bottom: 20.h, right: 20.w),
+                  child: SizedBox(
+                    width: 200.w,
+                    child: ArrowButton(
+                      onPressed: () {},
+                      text: 'GET TICKETS',
+                    ),
                   ),
                 ),
               ],
