@@ -96,6 +96,7 @@ class MyApp extends StatelessWidget {
             '/upcoming-events': (context) => const UpcomingEventsScreen(),
             '/nearby-events': (context) => const NearbyEventsScreen(),
             '/events': (context) => const EventsScreen(),
+            '/event-details': (context) => const EventDetailsScreen(),
           },
         );
       },
