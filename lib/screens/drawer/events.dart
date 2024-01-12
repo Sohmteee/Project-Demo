@@ -61,7 +61,24 @@ class _EventsScreenState extends State<EventsScreen> {
             ),
             child: Row(
               children: [
-                
+                Container(
+                  width: 145,
+                  height: double.maxFinite,
+                  decoration: ShapeDecoration(
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(100),
+                    ),
+                    shadows: [
+                      BoxShadow(
+                        color: Colors.white,
+                        blurRadius: 20,
+                        offset: Offset(0, 5),
+                        spreadRadius: 0,
+                      )
+                    ],
+                  ),
+                )
               ],
             ),
           ),
