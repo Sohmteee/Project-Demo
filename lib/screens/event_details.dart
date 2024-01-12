@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/models/text.dart';
 
 class EventDetailsScreen extends StatefulWidget {
@@ -38,7 +39,13 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
       ),
       backgroundColor: Theme.of(context).colorScheme.primary,
       body: Column(
-        children: [],
+        children: [
+          Image.asset(
+            'assets/images/event/event-pic.png',
+            width: double.maxFinite,
+            fit: BoxFit.fitWidth,
+          ),
+        ],
       ),
     );
   }
