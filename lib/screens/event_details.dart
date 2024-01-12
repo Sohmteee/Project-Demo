@@ -78,7 +78,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
         children: [
           buildImageStack(),
           SizedBox(height: 20.h),
-          Expand(
+          Expanded(
             child: SingleChildScrollView(
               child: Column(
                 children: [
