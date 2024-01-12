@@ -126,6 +126,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                     SizedBox(width: 14.w),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         AirBnBText(
                           '14 December, 2021',
@@ -136,7 +137,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                         AirBnBText(
                           'Tuesday, 4:00PM - 9:00PM',
                           color: Vx.gray400,
-                          fontSize: 16.sp,
+                          fontSize: 12.sp,
                           fontWeight: FontWeight.w400,
                         ),
                       ],
