@@ -89,8 +89,17 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.w),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                
+                Opacity(
+                  opacity: 0.84,
+                  child: AirBnBText(
+                    'About Event',
+                    color: Theme.of(context).colorScheme.secondary,
+                    fontSize: 18.sp,
+                    fontWeight: FontWeight.w500,
+                  ),
+                )
               ],
             ),
           ),
