@@ -70,6 +70,7 @@ class _EventsScreenState extends State<EventsScreen> {
               child: ListView.builder(
                 itemCount: 10,
                 physics: const BouncingScrollPhysics(),
+                padding: EdgeInsets.only(top: 0),
                 itemBuilder: (context, index) {
                   return Container(
                     height: 112.h,
