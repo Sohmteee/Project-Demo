@@ -122,8 +122,17 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 14.w),
-                    
+                    SizedBox(width: 14.w),
+                    Column(
+                      children: [
+                        AirBnBText(
+                          '14 December, 2021',
+                          color: Theme.of(context).colorScheme.secondary,
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w400,
+                        )
+                      ],
+                    ),
                   ],
                 ),
               ],
