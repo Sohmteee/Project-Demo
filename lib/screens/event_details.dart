@@ -163,7 +163,11 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
           )
         ],
       ),
-      bottomSheet: ,
+      bottomNavigationBar: Container(
+        
+width: 375,
+        height: 181,
+      ),
     );
   }
 
