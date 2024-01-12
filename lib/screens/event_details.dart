@@ -83,8 +83,6 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
               Positioned(
                 bottom: 18.h,
                 child: Container(
-                  width: 295,
-                  height: 60,
                   padding: EdgeInsets.fromLTRB(18.w, 16.h, 14.w, 16.h),
                   decoration: ShapeDecoration(
                     color: Colors.white,
@@ -97,6 +95,15 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                         blurRadius: 20,
                         offset: Offset(0, 20),
                         spreadRadius: 0,
+                      )
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      DMSansText(
+                        '+20 people going',
+                          fontSize: 15.sp,
+                          fontWeight: FontWeight.w700,
                       )
                     ],
                   ),
