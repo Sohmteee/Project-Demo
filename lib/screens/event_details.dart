@@ -92,6 +92,15 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
             SizedBox(height: 50.h),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 22.w),
+              child: Row(
+                children: [
+                  Column(
+                    children: [
+                      
+                    ],
+                  ),
+                ],
+              ),
             )
           ],
         ),
