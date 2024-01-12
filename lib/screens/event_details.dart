@@ -239,7 +239,11 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                         ],
                       ),
                       SizedBox(height: 24.h),
-                      
+                      Row(children:[
+                        ClipRRect(
+                          child: Image.asset(''),
+                        ),
+                      ],),
                     ],
                   ),
                 ),
