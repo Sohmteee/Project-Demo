@@ -32,7 +32,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
             onPressed: () {},
             icon: Container(
               height: 36.h,
-              // padding: EdgeInsets.all(10.5.sp),
+              margin: EdgeInsets.only(right: 12.sp),
               decoration: ShapeDecoration(
                 color: Colors.white.withOpacity(0.2),
                 shape: RoundedRectangleBorder(
@@ -52,7 +52,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
             onPressed: () {},
             icon: Container(
               height: 36.h,
-              // padding: EdgeInsets.all(10.5.sp),
+              margin: EdgeInsets.only(right: 12.sp),
               decoration: ShapeDecoration(
                 color: Colors.white.withOpacity(0.2),
                 shape: RoundedRectangleBorder(
