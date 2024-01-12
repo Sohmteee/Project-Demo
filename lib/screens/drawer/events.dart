@@ -153,16 +153,21 @@ class _EventsScreenState extends State<EventsScreen> {
                           ),
                         ),
                       )
-                    : Padding(
-                        padding: EdgeInsets.only(right: 30.w),
-                        child: DMSansText(
-                          'PAST EVENTS',
-                          textAlign: TextAlign.center,
-                          color: HexColor('#9B9B9B'),
-                          fontSize: 15.sp,
-                          fontWeight: FontWeight.w500,
+                    : GestureDetector(
+                      onTap: () => setState(() {
+                        pageIndex = 1;
+                      }),
+                      child: Padding(
+                          padding: EdgeInsets.only(right: 30.w),
+                          child: DMSansText(
+                            'PAST EVENTS',
+                            textAlign: TextAlign.center,
+                            color: HexColor('#9B9B9B'),
+                            fontSize: 15.sp,
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
-                      ),
+                    ),
               ],
             ),
           ),
