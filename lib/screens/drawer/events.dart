@@ -85,7 +85,9 @@ class _EventsScreenState extends State<EventsScreen> {
                           width: 145.w,
                           height: double.maxFinite,
                           decoration: ShapeDecoration(
-                            color:  themeProvider.themeType == ThemeType.light ?Colors.white,
+                            color: themeProvider.themeType == ThemeType.light
+                                ? Colors.white
+                                : HexColor('#2C2A27'),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(100),
                             ),
@@ -139,7 +141,9 @@ class _EventsScreenState extends State<EventsScreen> {
                           width: 145.w,
                           height: double.maxFinite,
                           decoration: ShapeDecoration(
-                            color: Colors.white,
+                            color: themeProvider.themeType == ThemeType.light
+                                ? Colors.white
+                                : HexColor('#2C2A27'),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(100),
                             ),
@@ -193,7 +197,9 @@ class _EventsScreenState extends State<EventsScreen> {
             ),
             const Spacer(),
             Image.asset(
-              'assets/images/no-event.png',
+              'assets/images/no-event${if (themeProvider.themeType == ThemeType.light)
+                                ? Colors.white
+                                : HexColor('#2C2A27')}.png',
               width: 180.w,
               height: 180.h,
             ),
