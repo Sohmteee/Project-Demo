@@ -72,10 +72,33 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
       backgroundColor: Theme.of(context).colorScheme.primary,
       body: Column(
         children: [
-          Image.asset(
-            'assets/images/event/event-pic.png',
-            width: double.maxFinite,
-            fit: BoxFit.fitWidth,
+          Stack(
+            alignment: Alignment.bottomCenter,
+            children: [
+              Image.asset(
+                'assets/images/event/event-pic.png',
+                width: double.maxFinite,
+                fit: BoxFit.fitWidth,
+              ),
+              Container(
+                width: 295,
+                height: 60,
+                decoration: ShapeDecoration(
+                  color: Color(0xFFFEFEFF),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  shadows: [
+                    BoxShadow(
+                      color: Color(0x19595959),
+                      blurRadius: 20,
+                      offset: Offset(0, 20),
+                      spreadRadius: 0,
+                    )
+                  ],
+                ),
+              )
+            ],
           ),
         ],
       ),
