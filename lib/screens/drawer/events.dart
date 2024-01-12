@@ -197,9 +197,7 @@ class _EventsScreenState extends State<EventsScreen> {
             ),
             const Spacer(),
             Image.asset(
-              'assets/images/no-event${if (themeProvider.themeType == ThemeType.light)
-                                ? Colors.white
-                                : HexColor('#2C2A27')}.png',
+              'assets/images/no-event${themeProvider.themeType == ThemeType.light ? '' : '-dark'}.png',
               width: 180.w,
               height: 180.h,
             ),
