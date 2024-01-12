@@ -90,7 +90,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
               children: [
                 buildDetailTile(
                   context,
-leading: Container(
+                  leading: Container(
                     width: 48.w,
                     height: 48.h,
                     decoration: ShapeDecoration(
@@ -124,7 +124,7 @@ leading: Container(
                     ),
                   ),
                   title: '14 December, 2021',
-                  description: 'Tuesday, 4:00PM - 9:00PM',
+                  subtitle: 'Tuesday, 4:00PM - 9:00PM',
                 ),
               ],
             ),
@@ -138,7 +138,7 @@ leading: Container(
     BuildContext context, {
     required Widget leading,
     required String title,
-    required String description,
+    required String subtitle,
     Widget? trailing,
   }) {
     return SizedBox(
@@ -159,7 +159,7 @@ leading: Container(
                   fontWeight: FontWeight.w500,
                 ),
                 AirBnBText(
-                  description,
+                  subtitle,
                   color: Vx.gray400,
                   fontSize: 12.sp,
                   fontWeight: FontWeight.w400,
@@ -167,7 +167,7 @@ leading: Container(
               ],
             ),
           ),
-          if(trailing != null)trailing!,
+          if (trailing != null) trailing,
         ],
       ),
     );
