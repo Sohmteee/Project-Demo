@@ -119,7 +119,29 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                         ),
                       ),
                       SizedBox(width: 70.w),
-                      
+                      Container(
+                        padding: EdgeInsets.symmetric(horizontal: 18.w, vertical: 6.h)
+                        decoration: ShapeDecoration(
+                          gradient: LinearGradient(
+                            begin: const Alignment(0.00, -1.00),
+                            end: const Alignment(0, 1),
+                            colors: [
+                              lightOrangeColor,
+                              darkOrangeColor,
+                            ],
+                          ),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(7)),
+                          shadows: const [
+                            BoxShadow(
+                              color: Color(0x144AD2E4),
+                              blurRadius: 20,
+                              offset: Offset(0, 8),
+                              spreadRadius: 0,
+                            )
+                          ],
+                        ),
+                      )
                     ],
                   ),
                 ),
