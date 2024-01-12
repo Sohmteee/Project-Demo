@@ -41,8 +41,8 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
               child: Center(
                 child: SvgPicture.asset(
                   'assets/svg/send.svg',
-                  height: 15.h,
-                  width: 15.w,
+                  height: 18.h,
+                  width: 18.w,
                 ),
               ),
             ),
