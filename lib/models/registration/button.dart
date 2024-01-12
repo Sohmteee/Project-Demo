@@ -42,7 +42,7 @@ class ArrowButton extends StatelessWidget {
           ),
           boxShadow: [
             BoxShadow(
-              color: Theme.of(context).colorScheme.secondary.withOpacity(0.3),
+              color: Colors.black.withOpacity(0.3),
               blurRadius: 30.r,
               offset: const Offset(0, 10),
             ),

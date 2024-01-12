@@ -192,7 +192,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                   DMSansText(
                     'FREE - \$25',
                     textAlign: TextAlign.center,
-                    color: Colors.black,
+                    color: Theme.of(context).colorScheme.secondary,
                     fontSize: 19.sp,
                     fontWeight: FontWeight.w700,
                   ),
