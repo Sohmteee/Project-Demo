@@ -94,7 +94,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
               children: [
                 Opacity(
                   opacity: 0.84,
-                  child: Column(
+                  child: Row(
                     children: [
                       AirBnBText(
                         'About Event',
@@ -103,34 +103,35 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                         fontWeight: FontWeight.w500,
                         textAlign: TextAlign.left,
                       ),
-                      Text.rich(
-                        TextSpan(
-                          children: [
-                            TextSpan(
-                              text:
-                                  'Enjoy your favorite comedy show with lovely  friends and family and have a great time. ',
-                              style: TextStyle(
-                                color: HexColor('#3C3E56'),
-                                fontSize: 16.sp,
-                                fontFamily: 'DM Sans',
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                            TextSpan(
-                              text: 'Read More',
-                              style: TextStyle(
-                                color: lightOrangeColor,
-                                fontSize: 16.sp,
-                                fontFamily: 'DM Sans',
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                          ],
+                    ],
+                  ),
+                ),
+                SizedBox(height: 8.h),
+                Text.rich(
+                  TextSpan(
+                    children: [
+                      TextSpan(
+                        text:
+                            'Enjoy your favorite comedy show with lovely friends and family and have a great time. ',
+                        style: TextStyle(
+                          color: HexColor('#3C3E56'),
+                          fontSize: 16.sp,
+                          fontFamily: 'DM Sans',
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      TextSpan(
+                        text: ' Read More',
+                        style: TextStyle(
+                          color: lightOrangeColor,
+                          fontSize: 16.sp,
+                          fontFamily: 'DM Sans',
+                          fontWeight: FontWeight.w400,
                         ),
                       ),
                     ],
                   ),
-                )
+                ),
               ],
             ),
           ),
