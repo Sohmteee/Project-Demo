@@ -373,6 +373,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
 
   Padding buildAboutEvent(BuildContext context) {
     final themeProvider = context.watch<ThemeProvider>();
+
     return Padding(
       padding: EdgeInsets.only(left: 20.w, right: 32.w),
       child: Column(
@@ -409,7 +410,9 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                 TextSpan(
                   text: ' Read More',
                   style: TextStyle(
-                    color: lightOrangeColor,
+                    color: themeProvider.themeType == ThemeType.light
+                        ? lightOrangeColor
+                        : darkOrangeColor,
                     fontSize: 16.sp,
                     fontFamily: 'DM Sans',
                     fontWeight: FontWeight.w400,
