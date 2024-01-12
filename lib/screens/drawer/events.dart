@@ -41,6 +41,8 @@ class _EventsScreenState extends State<EventsScreen> {
           ),
         ],
       ),
+      backgroundColor: Theme.of(context).colorScheme.primary,
+      
     );
   }
 }
