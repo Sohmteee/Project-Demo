@@ -20,6 +20,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
       body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: Column(
           children: [
             buildImageStack(),
