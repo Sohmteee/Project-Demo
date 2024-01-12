@@ -84,6 +84,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
               Positioned(
                 bottom: 18.h,
                 child: Container(
+                  width: 295.w,
                   padding: EdgeInsets.fromLTRB(18.w, 16.h, 14.w, 16.h),
                   decoration: ShapeDecoration(
                     color: Colors.white,
@@ -100,6 +101,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                     ],
                   ),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       ShaderMask(
                         blendMode: BlendMode.srcIn,
@@ -118,7 +120,6 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                           fontWeight: FontWeight.w700,
                         ),
                       ),
-                      SizedBox(width: 70.w),
                       Container(
                         padding: EdgeInsets.symmetric(
                             horizontal: 18.w, vertical: 6.h),
