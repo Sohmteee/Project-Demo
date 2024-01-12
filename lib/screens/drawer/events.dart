@@ -24,12 +24,13 @@ class _EventsScreenState extends State<EventsScreen> {
     final themeProvider = Provider.of<ThemeProvider>(context);
 
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
         elevation: 0,
         toolbarHeight: 60.h,
         leading: BackButton(color: Theme.of(context).colorScheme.secondary),
         titleSpacing: 0.w,
-        // backgroundColor: Colors.transparent,
+        backgroundColor: Colors.transparent,
         title: AirBnBText(
           'Events',
           color: Theme.of(context).colorScheme.secondary,
@@ -48,6 +49,7 @@ class _EventsScreenState extends State<EventsScreen> {
       ),
       backgroundColor: Theme.of(context).colorScheme.primary,
       body: Container(
+        padding: EdgeInsets.only(top: 90.h),
         decoration: BoxDecoration(
           color:
               (themeProvider.themeType == ThemeType.light) ? Vx.gray100 : null,
