@@ -240,6 +240,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       ),
                       SizedBox(height: 24.h),
                       Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           CircleAvatar(
                             radius: 17.r,
@@ -283,6 +284,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                                         'assets/svg/event/star.svg'),
                                   ),
                                 ),
+                                SizedBox(height: 7.h),
                                 DMSansText(
                                   'Cinemas is the ultimate experience to see new movies in Gold Class or Vmax. Find a cinema near you.',
                                   color:
