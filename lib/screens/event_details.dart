@@ -169,8 +169,8 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
           ),
         ),
         Container(
-          width: 375,
-          height: 181,
+          width: double.maxFinite,
+          height: 150.h,
           decoration: BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topCenter,
