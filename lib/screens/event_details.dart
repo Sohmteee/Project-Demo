@@ -28,43 +28,37 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
           fontWeight: FontWeight.w500,
         ),
         actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Container(
-              height: 36.h,
-              margin: EdgeInsets.only(right: 12.sp),
-              decoration: ShapeDecoration(
-                color: Colors.white.withOpacity(0.2),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.r),
-                ),
+          Container(
+            height: 36.h,
+            margin: EdgeInsets.only(right: 12.sp),
+            decoration: ShapeDecoration(
+              color: Colors.white.withOpacity(0.2),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.r),
               ),
-              child: Center(
-                child: SvgPicture.asset(
-                  'assets/svg/send.svg',
-                  height: 15.h,
-                  width: 15.w,
-                ),
+            ),
+            child: Center(
+              child: SvgPicture.asset(
+                'assets/svg/send.svg',
+                height: 15.h,
+                width: 15.w,
               ),
             ),
           ),
-          IconButton(
-            onPressed: () {},
-            icon: Container(
-              height: 36.h,
-              margin: EdgeInsets.only(right: 12.sp),
-              decoration: ShapeDecoration(
-                color: Colors.white.withOpacity(0.2),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.r),
-                ),
+          Container(
+            height: 36.h,
+            // padding: EdgeInsets.all(10.5.sp),
+            decoration: ShapeDecoration(
+              color: Colors.white.withOpacity(0.2),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.r),
               ),
-              child: Center(
-                child: SvgPicture.asset(
-                  'assets/svg/bookmark-outline.svg',
-                  height: 15.h,
-                  width: 15.w,
-                ),
+            ),
+            child: Center(
+              child: SvgPicture.asset(
+                'assets/svg/bookmark-outline.svg',
+                height: 15.h,
+                width: 15.w,
               ),
             ),
           ),
