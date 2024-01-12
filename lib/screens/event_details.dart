@@ -102,6 +102,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                           borderRadius: BorderRadius.circular(7),
                         ),
                       ),
+                      child: Row(children: [],),
                     ),
                   )
                 ],
