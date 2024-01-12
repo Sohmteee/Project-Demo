@@ -167,8 +167,8 @@ class _EventsScreenState extends State<EventsScreen> {
             ),
           ),
           Spacer(),
-          Image.asset(
-            'assets/images/no-event.png',
+          SvgPicture.asset(
+            'assets/svg/no-event.svg',
             width: 200.w,
             height: 200.h,
           ),
