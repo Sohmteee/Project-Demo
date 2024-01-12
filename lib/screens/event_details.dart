@@ -90,6 +90,40 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
               children: [
                 buildDetailTile(
                   context,
+leading: Container(
+                    width: 48.w,
+                    height: 48.h,
+                    decoration: ShapeDecoration(
+                      gradient: LinearGradient(
+                        begin: const Alignment(0, -1),
+                        end: const Alignment(0, 1),
+                        colors: [
+                          lightOrangeColor.withOpacity(.1),
+                          darkOrangeColor.withOpacity(.1),
+                        ],
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12.r),
+                      ),
+                    ),
+                    child: ShaderMask(
+                      blendMode: BlendMode.srcIn,
+                      shaderCallback: (Rect bounds) => LinearGradient(
+                        begin: Alignment.topRight,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          lightOrangeColor,
+                          darkOrangeColor,
+                        ],
+                        tileMode: TileMode.mirror,
+                      ).createShader(bounds),
+                      child: Icon(
+                        IconlyBold.calendar,
+                        size: 30.sp,
+                      ),
+                    ),
+                  ),
+                  title: '14 December, 2021',
                 ),
               ],
             ),
@@ -110,39 +144,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
       height: 48.h,
       child: Row(
         children: [
-          Container(
-            width: 48.w,
-            height: 48.h,
-            decoration: ShapeDecoration(
-              gradient: LinearGradient(
-                begin: const Alignment(0, -1),
-                end: const Alignment(0, 1),
-                colors: [
-                  lightOrangeColor.withOpacity(.1),
-                  darkOrangeColor.withOpacity(.1),
-                ],
-              ),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12.r),
-              ),
-            ),
-            child: ShaderMask(
-              blendMode: BlendMode.srcIn,
-              shaderCallback: (Rect bounds) => LinearGradient(
-                begin: Alignment.topRight,
-                end: Alignment.bottomRight,
-                colors: [
-                  lightOrangeColor,
-                  darkOrangeColor,
-                ],
-                tileMode: TileMode.mirror,
-              ).createShader(bounds),
-              child: Icon(
-                IconlyBold.calendar,
-                size: 30.sp,
-              ),
-            ),
-          ),
+          leading,
           SizedBox(width: 14.w),
           Expanded(
             child: Column(
@@ -150,7 +152,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 AirBnBText(
-                  '14 December, 2021',
+                  title,
                   color: Theme.of(context).colorScheme.secondary,
                   fontSize: 16.sp,
                   fontWeight: FontWeight.w500,
