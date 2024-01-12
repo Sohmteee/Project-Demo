@@ -88,8 +88,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                 expandedHeight: 350.h,
                 elevation: 0,
                 toolbarHeight: 80.h,
-                leading:
-                    BackButton(color: Colors.white),
+                leading: const BackButton(color: Colors.white),
                 titleSpacing: 0.w,
                 backgroundColor: darkOrangeColor,
                 title: AirBnBText(
@@ -177,9 +176,9 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-                  Colors.white.withOpacity(.1),
-                  Colors.white,
-                  Colors.white,
+                  Theme.of(context).colorScheme.primary.withOpacity(.1),
+                  Theme.of(context).colorScheme.primary,
+                  Theme.of(context).colorScheme.primary,
                 ],
               ),
             ),
