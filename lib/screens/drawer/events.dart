@@ -17,10 +17,11 @@ class EventsScreen extends StatefulWidget {
 }
 
 class _EventsScreenState extends State<EventsScreen> {
+  int pageIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
-    int pageIndex = 0;
 
     return Scaffold(
       appBar: AppBar(
