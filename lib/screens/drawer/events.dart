@@ -62,14 +62,14 @@ class _EventsScreenState extends State<EventsScreen> {
             child: Row(
               children: [
                 Container(
-                  width: 145,
+                  width: 145.w,
                   height: double.maxFinite,
                   decoration: ShapeDecoration(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(100),
                     ),
-                    shadows: [
+                    shadows: const [
                       BoxShadow(
                         color: Colors.white,
                         blurRadius: 20,
@@ -79,16 +79,12 @@ class _EventsScreenState extends State<EventsScreen> {
                     ],
                   ),
                   child: Center(
-                    child: Text(
+                    child:  DMSansText(
                       'ALL EVENTS',
                       textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Color(0xFFFFB459),
-                        fontSize: 15,
-                        fontFamily: 'DM Sans',
-                        fontWeight: FontWeight.w400,
-                        height: 0.11,
-                      ),
+                      color: Color(0xFFFFB459),
+                      fontSize: 15.sp,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 )
