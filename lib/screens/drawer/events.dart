@@ -17,6 +17,7 @@ class _EventsScreenState extends State<EventsScreen> {
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
+    int pageIndex = 0;
 
     return Scaffold(
       appBar: AppBar(
@@ -57,6 +58,11 @@ class _EventsScreenState extends State<EventsScreen> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(100),
               ),
+            ),
+            child: Row(
+              children: [
+                
+              ],
             ),
           ),
         ],
