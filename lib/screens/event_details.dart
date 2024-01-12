@@ -126,6 +126,44 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                   title: '14 December, 2021',
                   subtitle: 'Tuesday, 4:00PM - 9:00PM',
                 ),
+                buildDetailTile(
+                  context,
+                  leading: Container(
+                    width: 48.w,
+                    height: 48.h,
+                    decoration: ShapeDecoration(
+                      gradient: LinearGradient(
+                        begin: const Alignment(0, -1),
+                        end: const Alignment(0, 1),
+                        colors: [
+                          lightOrangeColor.withOpacity(.1),
+                          darkOrangeColor.withOpacity(.1),
+                        ],
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12.r),
+                      ),
+                    ),
+                    child: ShaderMask(
+                      blendMode: BlendMode.srcIn,
+                      shaderCallback: (Rect bounds) => LinearGradient(
+                        begin: Alignment.topRight,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          lightOrangeColor,
+                          darkOrangeColor,
+                        ],
+                        tileMode: TileMode.mirror,
+                      ).createShader(bounds),
+                      child: Icon(
+                        IconlyBold.location,
+                        size: 30.sp,
+                      ),
+                    ),
+                  ),
+                  title: 'Gala Convention Center',
+                  subtitle: '36 Guild Street London, UK ',
+                ),
               ],
             ),
           ),
