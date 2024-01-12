@@ -419,54 +419,62 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
           child: SizedBox(
             width: double.maxFinite,
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                BackButton(color: Theme.of(context).colorScheme.primary),
-                AirBnBText(
-                  'Event Details',
-                  color: Theme.of(context).colorScheme.primary,
-                  fontSize: 24.sp,
-                  fontWeight: FontWeight.w500,
+                Row(
+                  children: [
+                    BackButton(color: Theme.of(context).colorScheme.primary),
+                    AirBnBText(
+                      'Event Details',
+                      color: Theme.of(context).colorScheme.primary,
+                      fontSize: 24.sp,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ],
                 ),
-                Spacer(),
-                IconButton(
-                  onPressed: () {},
-                  icon: Container(
-                    height: 36.h,
-                    decoration: ShapeDecoration(
-                      color: Colors.white.withOpacity(0.2),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.r),
+                Row(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: Container(
+                        height: 36.h,
+                        decoration: ShapeDecoration(
+                          color: Colors.white.withOpacity(0.2),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.r),
+                          ),
+                        ),
+                        child: Center(
+                          child: SvgPicture.asset(
+                            'assets/svg/send.svg',
+                            height: 18.h,
+                            width: 18.w,
+                          ),
+                        ),
                       ),
                     ),
-                    child: Center(
-                      child: SvgPicture.asset(
-                        'assets/svg/send.svg',
-                        height: 18.h,
-                        width: 18.w,
+                    IconButton(
+                      onPressed: () {},
+                      icon: Container(
+                        height: 36.h,
+                        decoration: ShapeDecoration(
+                          color: Colors.white.withOpacity(0.2),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.r),
+                          ),
+                        ),
+                        child: Center(
+                          child: SvgPicture.asset(
+                            'assets/svg/bookmark-outline.svg',
+                            height: 15.h,
+                            width: 15.w,
+                          ),
+                        ),
                       ),
                     ),
-                  ),
+                    SizedBox(width: 12.w),
+                  ],
                 ),
-                IconButton(
-                  onPressed: () {},
-                  icon: Container(
-                    height: 36.h,
-                    decoration: ShapeDecoration(
-                      color: Colors.white.withOpacity(0.2),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.r),
-                      ),
-                    ),
-                    child: Center(
-                      child: SvgPicture.asset(
-                        'assets/svg/bookmark-outline.svg',
-                        height: 15.h,
-                        width: 15.w,
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(width: 12.w),
               ],
             ),
           ),
