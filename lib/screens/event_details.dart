@@ -94,6 +94,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                     child: Container(
                       width: 93,
                       height: 31,
+                      padding: EdgeInsets.all(5.sp),
                       decoration: ShapeDecoration(
                         shape: RoundedRectangleBorder(
                           side: const BorderSide(
@@ -102,7 +103,13 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                           borderRadius: BorderRadius.circular(7),
                         ),
                       ),
-                      child: Row(children: [],),
+                      child: Row(
+                        children: [
+                          SvgPicture.asset(
+                            'assets/svg/event/message-outline.svg',
+                          ),
+                        ],
+                      ),
                     ),
                   )
                 ],
