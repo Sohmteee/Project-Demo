@@ -401,7 +401,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                   text:
                       'Enjoy your favorite comedy show with lovely friends and family and have a great time. ',
                   style: TextStyle(
-                    color: HexColor('#3C3E56'),
+                    color: Vx.gray400,
                     fontSize: 16.sp,
                     fontFamily: 'DM Sans',
                     fontWeight: FontWeight.w400,
