@@ -92,9 +92,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       tileMode: TileMode.mirror,
                     ).createShader(bounds),
                     child: Container(
-                      width: 93,
-                      height: 31,
-                      padding: EdgeInsets.all(5.sp),
+                      padding: EdgeInsets.fromLTRB(5.sp),
                       decoration: ShapeDecoration(
                         shape: RoundedRectangleBorder(
                           side: const BorderSide(
@@ -104,11 +102,11 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                         ),
                       ),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           SvgPicture.asset(
                             'assets/svg/event/message-outline.svg',
                           ),
+                          SizedBox(width: 5.w),
                           DMSansText(
                             'Comment',
                             textAlign: TextAlign.center,
