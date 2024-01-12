@@ -66,14 +66,16 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                         height: 3.h,
                         width: 72.w,
                         decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: [
-                            lightOrangeColor,
-                            darkOrangeColor,
-                          ],
-                        )),
+                          gradient: LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [
+                              lightOrangeColor,
+                              darkOrangeColor,
+                            ],
+                          ),
+                          borderRadius: BorderRadius.circular(10.r),
+                        ),
                       )
                     ],
                   ),
