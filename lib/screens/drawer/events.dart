@@ -166,7 +166,7 @@ class _EventsScreenState extends State<EventsScreen> {
               ],
             ),
           ),
-          Spacer(),
+          const Spacer(),
           Image.asset(
             'assets/images/no-event.png',
             width: 180.w,
@@ -188,7 +188,7 @@ class _EventsScreenState extends State<EventsScreen> {
             fontSize: 16.sp,
             fontWeight: FontWeight.w400,
           ),
-          Spacer(),
+          const Spacer(flex: 2),
         ],
       ),
     );
