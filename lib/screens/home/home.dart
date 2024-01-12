@@ -1419,7 +1419,7 @@ class _HomeScreenState extends State<HomeScreen> {
               if (eventDate.difference(DateTime.now()).inSeconds > 1) {
                 timeRemaining = eventDate.difference(DateTime.now());
               } else {
-                timeRemaining = 
+                timeRemaining = 0.seconds;
               }
 
               int daysDifference = timeRemaining.inDays;
