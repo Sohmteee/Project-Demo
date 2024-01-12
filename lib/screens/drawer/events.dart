@@ -75,7 +75,7 @@ class _EventsScreenState extends State<EventsScreen> {
                           ),
                           shadows: const [
                             BoxShadow(
-                              blurRadius: 20,
+                              blurRadius: 5,
                               offset: Offset(0, 5),
                               spreadRadius: 0,
                             )
