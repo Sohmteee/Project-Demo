@@ -74,62 +74,68 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
         ],
       ),
       backgroundColor: Theme.of(context).colorScheme.primary,
-      body: ListView(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            buildImageStack(),
+            SizedBox(height: 20.h),
+            DMSansText(
+              'SAMUEL MEET & GREET PARTY',
+              color: Theme.of(context).colorScheme.secondary,
+              fontSize: 28.sp,
+              fontWeight: FontWeight.w400,
+            ),
+            SizedBox(height: 18.h),
+            buildDetailTilesColumn(context),
+            SizedBox(height: 35.h),
+            buildAboutEvent(context),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Padding buildAboutEvent(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(left: 20.w, right: 32.w),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          buildImageStack(),
-          SizedBox(height: 20.h),
-          DMSansText(
-            'SAMUEL MEET & GREET PARTY',
-            color: Theme.of(context).colorScheme.secondary,
-            fontSize: 28.sp,
-            fontWeight: FontWeight.w400,
-          ),
-          SizedBox(height: 18.h),
-          buildDetailTilesColumn(context),
-          SizedBox(height: 35.h),
-          Padding(
-            padding: EdgeInsets.only(left: 20.w, right: 32.w),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+          Opacity(
+            opacity: 0.84,
+            child: Row(
               children: [
-                Opacity(
-                  opacity: 0.84,
-                  child: Row(
-                    children: [
-                      AirBnBText(
-                        'About Event',
-                        color: Theme.of(context).colorScheme.secondary,
-                        fontSize: 18.sp,
-                        fontWeight: FontWeight.w500,
-                        textAlign: TextAlign.left,
-                      ),
-                    ],
+                AirBnBText(
+                  'About Event',
+                  color: Theme.of(context).colorScheme.secondary,
+                  fontSize: 18.sp,
+                  fontWeight: FontWeight.w500,
+                  textAlign: TextAlign.left,
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 8.h),
+          Text.rich(
+            TextSpan(
+              children: [
+                TextSpan(
+                  text:
+                      'Enjoy your favorite comedy show with lovely friends and family and have a great time. ',
+                  style: TextStyle(
+                    color: HexColor('#3C3E56'),
+                    fontSize: 16.sp,
+                    fontFamily: 'DM Sans',
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
-                SizedBox(height: 8.h),
-                Text.rich(
-                  TextSpan(
-                    children: [
-                      TextSpan(
-                        text:
-                            'Enjoy your favorite comedy show with lovely friends and family and have a great time. ',
-                        style: TextStyle(
-                          color: HexColor('#3C3E56'),
-                          fontSize: 16.sp,
-                          fontFamily: 'DM Sans',
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                      TextSpan(
-                        text: ' Read More',
-                        style: TextStyle(
-                          color: lightOrangeColor,
-                          fontSize: 16.sp,
-                          fontFamily: 'DM Sans',
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                    ],
+                TextSpan(
+                  text: ' Read More',
+                  style: TextStyle(
+                    color: lightOrangeColor,
+                    fontSize: 16.sp,
+                    fontFamily: 'DM Sans',
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
               ],
