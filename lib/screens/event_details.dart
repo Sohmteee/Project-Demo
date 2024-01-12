@@ -164,112 +164,123 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
         ],
       ),
       bottomNavigationBar: Container(
-        
-width: 375,
+        width: 375,
         height: 181,
+        decoration: BoxDecoration(
+          
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            lightOrangeColor,
+            darkOrangeColor,
+          ],
+          
+        ),
+        ),
       ),
     );
   }
 
   Padding buildCommentSection(BuildContext context) {
     return Padding(
-                padding: EdgeInsets.symmetric(horizontal: 22.w),
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          children: [
-                            ShaderMask(
-                              blendMode: BlendMode.srcIn,
-                              shaderCallback: (Rect bounds) => LinearGradient(
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter,
-                                colors: [
-                                  lightOrangeColor,
-                                  darkOrangeColor,
-                                ],
-                                tileMode: TileMode.mirror,
-                              ).createShader(bounds),
-                              child: AirBnBText(
-                                'REVIEWS',
-                                textAlign: TextAlign.center,
-                                fontSize: 16.sp,
-                                fontWeight: FontWeight.w500,
-                                height: 0,
-                              ),
-                            ),
-                            SizedBox(height: 10.h),
-                            Container(
-                              height: 3.h,
-                              width: 72.w,
-                              decoration: BoxDecoration(
-                                gradient: LinearGradient(
-                                  begin: Alignment.topCenter,
-                                  end: Alignment.bottomCenter,
-                                  colors: [
-                                    lightOrangeColor,
-                                    darkOrangeColor,
-                                  ],
-                                ),
-                                borderRadius: BorderRadius.circular(10.r),
-                              ),
-                            ),
-                          ],
-                        ),
-                        ShaderMask(
-                          blendMode: BlendMode.srcIn,
-                          shaderCallback: (Rect bounds) => LinearGradient(
-                            begin: Alignment.topCenter,
-                            end: Alignment.bottomCenter,
-                            colors: [
-                              lightOrangeColor,
-                              darkOrangeColor,
-                            ],
-                            tileMode: TileMode.mirror,
-                          ).createShader(bounds),
-                          child: Container(
-                            padding: EdgeInsets.fromLTRB(5.w, 5.h, 6.w, 5.h),
-                            decoration: ShapeDecoration(
-                              shape: RoundedRectangleBorder(
-                                side: BorderSide(
-                                  width: 1.sp,
-                                ),
-                                borderRadius: BorderRadius.circular(7),
-                              ),
-                            ),
-                            child: Row(
-                              children: [
-                                SvgPicture.asset(
-                                  'assets/svg/event/message-outline.svg',
-                                ),
-                                SizedBox(width: 5.w),
-                                DMSansText(
-                                  'Comment',
-                                  textAlign: TextAlign.center,
-                                  fontSize: 12.sp,
-                                  fontWeight: FontWeight.w400,
-                                )
-                              ],
-                            ),
-                          ),
-                        )
+      padding: EdgeInsets.symmetric(horizontal: 22.w),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                children: [
+                  ShaderMask(
+                    blendMode: BlendMode.srcIn,
+                    shaderCallback: (Rect bounds) => LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        lightOrangeColor,
+                        darkOrangeColor,
                       ],
+                      tileMode: TileMode.mirror,
+                    ).createShader(bounds),
+                    child: AirBnBText(
+                      'REVIEWS',
+                      textAlign: TextAlign.center,
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.w500,
+                      height: 0,
                     ),
-                    SizedBox(height: 24.h),
-                    Column(
-                      children: List.generate(
-                        6,
-                        (index) => Padding(
-                          padding: EdgeInsets.symmetric(vertical: 10.h),
-                          child: buildComment(context),
-                        ),
+                  ),
+                  SizedBox(height: 10.h),
+                  Container(
+                    height: 3.h,
+                    width: 72.w,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          lightOrangeColor,
+                          darkOrangeColor,
+                        ],
                       ),
+                      borderRadius: BorderRadius.circular(10.r),
                     ),
+                  ),
+                ],
+              ),
+              ShaderMask(
+                blendMode: BlendMode.srcIn,
+                shaderCallback: (Rect bounds) => LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    lightOrangeColor,
+                    darkOrangeColor,
                   ],
+                  tileMode: TileMode.mirror,
+                ).createShader(bounds),
+                child: Container(
+                  padding: EdgeInsets.fromLTRB(5.w, 5.h, 6.w, 5.h),
+                  decoration: ShapeDecoration(
+                    shape: RoundedRectangleBorder(
+                      side: BorderSide(
+                        width: 1.sp,
+                      ),
+                      borderRadius: BorderRadius.circular(7),
+                    ),
+                  ),
+                  child: Row(
+                    children: [
+                      SvgPicture.asset(
+                        'assets/svg/event/message-outline.svg',
+                      ),
+                      SizedBox(width: 5.w),
+                      DMSansText(
+                        'Comment',
+                        textAlign: TextAlign.center,
+                        fontSize: 12.sp,
+                        fontWeight: FontWeight.w400,
+                      )
+                    ],
+                  ),
                 ),
-              );
+              )
+            ],
+          ),
+          SizedBox(height: 24.h),
+          Column(
+            children: List.generate(
+              6,
+              (index) => Padding(
+                padding: EdgeInsets.symmetric(vertical: 10.h),
+                child: buildComment(context),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 
   Row buildComment(BuildContext context) {
