@@ -74,110 +74,69 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
         ],
       ),
       backgroundColor: Theme.of(context).colorScheme.primary,
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            buildImageStack(),
-            SizedBox(height: 20.h),
-            DMSansText(
-              'SAMUEL MEET & GREET PARTY',
-              color: Theme.of(context).colorScheme.secondary,
-              fontSize: 28.sp,
-              fontWeight: FontWeight.w400,
+      body: CustomScrollView(
+        physics: const BouncingScrollPhysics(),
+        slivers: [
+          SliverAppBar(
+            elevation: 0,
+            toolbarHeight: 140.h,
+            leading: BackButton(color: Theme.of(context).colorScheme.primary),
+            titleSpacing: 0.w,
+            backgroundColor: Colors.transparent,
+            title: AirBnBText(
+              'Event Details',
+              color: Theme.of(context).colorScheme.primary,
+              fontSize: 24.sp,
+              fontWeight: FontWeight.w500,
             ),
-            SizedBox(height: 18.h),
-            buildDetailTilesColumn(context),
-            SizedBox(height: 35.h),
-            buildAboutEvent(context),
-            SizedBox(height: 50.h),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 22.w),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    children: [
-                      ShaderMask(
-                        blendMode: BlendMode.srcIn,
-                        shaderCallback: (Rect bounds) => LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: [
-                            lightOrangeColor,
-                            darkOrangeColor,
-                          ],
-                          tileMode: TileMode.mirror,
-                        ).createShader(bounds),
-                        child: AirBnBText(
-                          'REVIEWS',
-                          textAlign: TextAlign.center,
-                          fontSize: 16.sp,
-                          fontWeight: FontWeight.w500,
-                          height: 0,
-                        ),
-                      ),
-                      SizedBox(height: 10.h),
-                      Container(
-                        height: 3.h,
-                        width: 72.w,
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            begin: Alignment.topCenter,
-                            end: Alignment.bottomCenter,
-                            colors: [
-                              lightOrangeColor,
-                              darkOrangeColor,
-                            ],
-                          ),
-                          borderRadius: BorderRadius.circular(10.r),
-                        ),
-                      ),
-                    ],
-                  ),
-                  ShaderMask(
-                    blendMode: BlendMode.srcIn,
-                    shaderCallback: (Rect bounds) => LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [
-                        lightOrangeColor,
-                        darkOrangeColor,
-                      ],
-                      tileMode: TileMode.mirror,
-                    ).createShader(bounds),
-                    child: Container(
-                      padding: EdgeInsets.fromLTRB(5.w, 5.h, 6.w, 5.h),
-                      decoration: ShapeDecoration(
-                        shape: RoundedRectangleBorder(
-                          side: BorderSide(
-                            width: 1.sp,
-                          ),
-                          borderRadius: BorderRadius.circular(7),
-                        ),
-                      ),
-                      child: Row(
-                        children: [
-                          SvgPicture.asset(
-                            'assets/svg/event/message-outline.svg',
-                          ),
-                          SizedBox(width: 5.w),
-                          DMSansText(
-                            'Comment',
-                            textAlign: TextAlign.center,
-                            fontSize: 12.sp,
-                            fontWeight: FontWeight.w400,
-                          )
-                        ],
-                      ),
+            actions: [
+              IconButton(
+                onPressed: () {},
+                icon: Container(
+                  height: 36.h,
+                  decoration: ShapeDecoration(
+                    color: Colors.white.withOpacity(0.2),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.r),
                     ),
-                  )
-                ],
+                  ),
+                  child: Center(
+                    child: SvgPicture.asset(
+                      'assets/svg/send.svg',
+                      height: 18.h,
+                      width: 18.w,
+                    ),
+                  ),
+                ),
               ),
+              IconButton(
+                onPressed: () {},
+                icon: Container(
+                  height: 36.h,
+                  decoration: ShapeDecoration(
+                    color: Colors.white.withOpacity(0.2),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.r),
+                    ),
+                  ),
+                  child: Center(
+                    child: SvgPicture.asset(
+                      'assets/svg/bookmark-outline.svg',
+                      height: 15.h,
+                      width: 15.w,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(width: 12.w),
+            ],
+            flexibleSpace: FlexibleSpaceBar(
+              background: buildImageStack(),
             ),
-            SizedBox(height: 50.h),
-          ],
+            
+          ),
+        ],
         ),
-      ),
     );
   }
 
