@@ -739,7 +739,9 @@ class _HomeScreenState extends State<HomeScreen> {
           color: HexColor('#767676'),
         ),
         'title': 'My Events',
-        'onTap': () {},
+        'onTap': () {
+          Navigator.pushNamed(context, '/events');
+        },
       },
       {
         'icon': SvgPicture.asset(

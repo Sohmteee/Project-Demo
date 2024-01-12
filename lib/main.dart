@@ -9,6 +9,7 @@ import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/data.dart';
 import 'package:yeerlo/providers/notifications.dart';
 import 'package:yeerlo/providers/theme.dart';
+import 'package:yeerlo/screens/drawer/events.dart';
 import 'package:yeerlo/screens/home/home.dart';
 import 'package:yeerlo/screens/home/nearby_events.dart';
 import 'package:yeerlo/screens/home/notifications.dart';
@@ -94,6 +95,7 @@ class MyApp extends StatelessWidget {
             '/notifications': (context) => const NotificationsScreen(),
             '/upcoming-events': (context) => const UpcomingEventsScreen(),
             '/nearby-events': (context) => const NearbyEventsScreen(),
+            '/events': (context) => const EventsScreen(),
           },
         );
       },
