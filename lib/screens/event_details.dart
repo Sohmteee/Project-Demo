@@ -80,22 +80,25 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                 width: double.maxFinite,
                 fit: BoxFit.fitWidth,
               ),
-              Container(
-                width: 295,
-                height: 60,
-                decoration: ShapeDecoration(
-                  color: Color(0xFFFEFEFF),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30),
+              Positioned(
+                bottom: 18.h,
+                child: Container(
+                  width: 295,
+                  height: 60,
+                  decoration: ShapeDecoration(
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    shadows: const [
+                      BoxShadow(
+                        color: Color(0x19595959),
+                        blurRadius: 20,
+                        offset: Offset(0, 20),
+                        spreadRadius: 0,
+                      )
+                    ],
                   ),
-                  shadows: [
-                    BoxShadow(
-                      color: Color(0x19595959),
-                      blurRadius: 20,
-                      offset: Offset(0, 20),
-                      spreadRadius: 0,
-                    )
-                  ],
                 ),
               )
             ],
