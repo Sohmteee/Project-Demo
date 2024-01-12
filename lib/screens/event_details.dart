@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/models/text.dart';
@@ -39,7 +40,9 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                   borderRadius: BorderRadius.circular(10.r),
                 ),
               ),
-              child
+              child: Center(
+                child: Icon(IconlyLight.bookmark),
+              ),
             ),
           ),
         ],
