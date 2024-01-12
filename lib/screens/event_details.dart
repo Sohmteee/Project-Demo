@@ -73,92 +73,97 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
       backgroundColor: Theme.of(context).colorScheme.primary,
       body: Column(
         children: [
-          Stack(
-            alignment: Alignment.bottomCenter,
-            children: [
-              Image.asset(
-                'assets/images/event/event-pic.png',
-                width: double.maxFinite,
-                fit: BoxFit.fitWidth,
-              ),
-              Positioned(
-                bottom: 18.h,
-                child: Container(
-                  width: 295.w,
-                  padding: EdgeInsets.fromLTRB(18.w, 16.h, 14.w, 16.h),
-                  decoration: ShapeDecoration(
-                    color: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                    shadows: const [
-                      BoxShadow(
-                        color: Color(0x19595959),
-                        blurRadius: 20,
-                        offset: Offset(0, 20),
-                        spreadRadius: 0,
-                      )
-                    ],
+          buildImageStack(),
+          
+        ],
+      ),
+    );
+  }
+
+  Stack buildImageStack() {
+    return Stack(
+          alignment: Alignment.bottomCenter,
+          children: [
+            Image.asset(
+              'assets/images/event/event-pic.png',
+              width: double.maxFinite,
+              fit: BoxFit.fitWidth,
+            ),
+            Positioned(
+              bottom: 18.h,
+              child: Container(
+                width: 290.w,
+                padding: EdgeInsets.fromLTRB(18.w, 16.h, 14.w, 16.h),
+                decoration: ShapeDecoration(
+                  color: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      ShaderMask(
-                        blendMode: BlendMode.srcIn,
-                        shaderCallback: (Rect bounds) => LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
+                  shadows: const [
+                    BoxShadow(
+                      color: Color(0x19595959),
+                      blurRadius: 20,
+                      offset: Offset(0, 20),
+                      spreadRadius: 0,
+                    )
+                  ],
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ShaderMask(
+                      blendMode: BlendMode.srcIn,
+                      shaderCallback: (Rect bounds) => LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          lightOrangeColor,
+                          darkOrangeColor,
+                        ],
+                        tileMode: TileMode.mirror,
+                      ).createShader(bounds),
+                      child: DMSansText(
+                        '+20 people going',
+                        fontSize: 15.sp,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.symmetric(
+                          horizontal: 18.w, vertical: 6.h),
+                      decoration: ShapeDecoration(
+                        gradient: LinearGradient(
+                          begin: const Alignment(0.00, -1.00),
+                          end: const Alignment(0, 1),
                           colors: [
                             lightOrangeColor,
                             darkOrangeColor,
                           ],
-                          tileMode: TileMode.mirror,
-                        ).createShader(bounds),
-                        child: DMSansText(
-                          '+20 people going',
-                          fontSize: 15.sp,
-                          fontWeight: FontWeight.w700,
                         ),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(7)),
+                        shadows: const [
+                          BoxShadow(
+                            color: Color(0x144AD2E4),
+                            blurRadius: 20,
+                            offset: Offset(0, 8),
+                            spreadRadius: 0,
+                          )
+                        ],
                       ),
-                      Container(
-                        padding: EdgeInsets.symmetric(
-                            horizontal: 18.w, vertical: 6.h),
-                        decoration: ShapeDecoration(
-                          gradient: LinearGradient(
-                            begin: const Alignment(0.00, -1.00),
-                            end: const Alignment(0, 1),
-                            colors: [
-                              lightOrangeColor,
-                              darkOrangeColor,
-                            ],
-                          ),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(7)),
-                          shadows: const [
-                            BoxShadow(
-                              color: Color(0x144AD2E4),
-                              blurRadius: 20,
-                              offset: Offset(0, 8),
-                              spreadRadius: 0,
-                            )
-                          ],
-                        ),
-                        child: AirBnBText(
-                          'Invite',
-                          textAlign: TextAlign.center,
-                          color: Colors.white,
-                          fontSize: 12.sp,
-                          fontWeight: FontWeight.w400,
-                        ),
-                      )
-                    ],
-                  ),
+                      child: AirBnBText(
+                        'Invite',
+                        textAlign: TextAlign.center,
+                        color: Colors.white,
+                        fontSize: 12.sp,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    )
+                  ],
                 ),
-              )
-            ],
-          ),
-        ],
-      ),
-    );
+              ),
+            )
+          ],
+        );
   }
 }
