@@ -185,7 +185,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
             ),
             child: Container(
               height: 60.h,
-              padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: ),
+              margin: EdgeInsets.all(20.sp),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
