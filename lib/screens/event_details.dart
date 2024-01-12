@@ -88,61 +88,64 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
             padding: EdgeInsets.only(left: 21.w, right: 18.w),
             child: Column(
               children: [
-                Row(
-                  children: [
-                    Container(
-                      width: 48.w,
-                      height: 48.h,
-                      decoration: ShapeDecoration(
-                        gradient: LinearGradient(
-                          begin: const Alignment(0, -1),
-                          end: const Alignment(0, 1),
-                          colors: [
-                            lightOrangeColor.withOpacity(.1),
-                            darkOrangeColor.withOpacity(.1),
-                          ],
+                SizedBox(
+                  height: 48.h,
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 48.w,
+                        height: 48.h,
+                        decoration: ShapeDecoration(
+                          gradient: LinearGradient(
+                            begin: const Alignment(0, -1),
+                            end: const Alignment(0, 1),
+                            colors: [
+                              lightOrangeColor.withOpacity(.1),
+                              darkOrangeColor.withOpacity(.1),
+                            ],
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12.r),
+                          ),
                         ),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12.r),
+                        child: ShaderMask(
+                          blendMode: BlendMode.srcIn,
+                          shaderCallback: (Rect bounds) => LinearGradient(
+                            begin: Alignment.topRight,
+                            end: Alignment.bottomRight,
+                            colors: [
+                              lightOrangeColor,
+                              darkOrangeColor,
+                            ],
+                            tileMode: TileMode.mirror,
+                          ).createShader(bounds),
+                          child: Icon(
+                            IconlyBold.calendar,
+                            size: 30.sp,
+                          ),
                         ),
                       ),
-                      child: ShaderMask(
-                        blendMode: BlendMode.srcIn,
-                        shaderCallback: (Rect bounds) => LinearGradient(
-                          begin: Alignment.topRight,
-                          end: Alignment.bottomRight,
-                          colors: [
-                            lightOrangeColor,
-                            darkOrangeColor,
-                          ],
-                          tileMode: TileMode.mirror,
-                        ).createShader(bounds),
-                        child: Icon(
-                          IconlyBold.calendar,
-                          size: 30.sp,
-                        ),
+                      SizedBox(width: 14.w),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          AirBnBText(
+                            '14 December, 2021',
+                            color: Theme.of(context).colorScheme.secondary,
+                            fontSize: 16.sp,
+                            fontWeight: FontWeight.w500,
+                          ),
+                          AirBnBText(
+                            'Tuesday, 4:00PM - 9:00PM',
+                            color: Vx.gray400,
+                            fontSize: 12.sp,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ],
                       ),
-                    ),
-                    SizedBox(width: 14.w),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        AirBnBText(
-                          '14 December, 2021',
-                          color: Theme.of(context).colorScheme.secondary,
-                          fontSize: 16.sp,
-                          fontWeight: FontWeight.w500,
-                        ),
-                        AirBnBText(
-                          'Tuesday, 4:00PM - 9:00PM',
-                          color: Vx.gray400,
-                          fontSize: 12.sp,
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ],
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ],
             ),
