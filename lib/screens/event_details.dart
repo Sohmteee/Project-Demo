@@ -240,11 +240,14 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       ),
                       SizedBox(height: 24.h),
                       SizedBox(
-                        height: 200.h,
-                        child: ListView.builder(
+                        height: 500.h,
+                        child: ListView.separated(
                           itemCount: 3,
                           itemBuilder: (BuildContext context, int index) {
                             return buildComment(context);
+                          },
+                          separatorBuilder: (BuildContext context, int index) {
+                            return SizedBox(height: 20.h);
                           },
                         ),
                       ),
