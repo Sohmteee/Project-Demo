@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:yeerlo/colors/app_colors.dart';
@@ -106,8 +107,20 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                             borderRadius: BorderRadius.circular(12.r),
                           ),
                         ),
-                        child: SvgPicture.asset(
-                          'assets/svg/event/calendar.svg',
+                        child: ShaderMask(
+                          blendMode: BlendMode.srcIn,
+                          shaderCallback: (Rect bounds) => LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [
+                              lightOrangeColor,
+                              darkOrangeColor,
+                            ],
+                            tileMode: TileMode.mirror,
+                          ).createShader(bounds),
+                          child: Icon(
+                            IconlyBold.calendar,
+                          ),
                         ),
                       ),
                     )
