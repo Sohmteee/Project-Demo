@@ -9,18 +9,18 @@ import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/data.dart';
 import 'package:yeerlo/providers/notifications.dart';
 import 'package:yeerlo/providers/theme.dart';
-import 'package:yeerlo/screens/home.dart';
-import 'package:yeerlo/screens/nearby_events.dart';
-import 'package:yeerlo/screens/notifications.dart';
+import 'package:yeerlo/screens/home/home.dart';
+import 'package:yeerlo/screens/home/nearby_events.dart';
+import 'package:yeerlo/screens/home/notifications.dart';
 import 'package:yeerlo/screens/onboarding.dart';
 import 'package:yeerlo/screens/registration/location.dart';
 import 'package:yeerlo/screens/registration/reset_password.dart';
 import 'package:yeerlo/screens/registration/sign_in.dart';
 import 'package:yeerlo/screens/registration/sign_up.dart';
 import 'package:yeerlo/screens/registration/verification.dart';
-import 'package:yeerlo/screens/search.dart';
+import 'package:yeerlo/screens/home/search.dart';
 import 'package:yeerlo/screens/splash.dart';
-import 'package:yeerlo/screens/upcoming_events.dart';
+import 'package:yeerlo/screens/home/upcoming_events.dart';
 
 Future<void> main() async {
   SystemChrome.setSystemUIOverlayStyle(
