@@ -163,13 +163,18 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                     title: 'Gala Convention Center',
                     subtitle: '36 Guild Street London, UK ',
                     trailing: Container(
-                      width: 71,
-                      height: 28,
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 7.w,
+                        vertical: 6.h,
+                      ),
                       decoration: ShapeDecoration(
                         gradient: LinearGradient(
                           begin: const Alignment(0, -1),
                           end: const Alignment(0, 1),
-                          colors: [lightOrangeColor.with, darkOrangeColor.with],
+                          colors: [
+                            lightOrangeColor.withOpacity(.12),
+                            darkOrangeColor.withOpacity(.12),
+                          ],
                         ),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(7.r)),
@@ -182,7 +187,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                           )
                         ],
                       ),
-                    )),
+                    ),),
               ],
             ),
           ),
