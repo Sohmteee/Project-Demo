@@ -83,7 +83,7 @@ class _EventsScreenState extends State<EventsScreen> {
                           width: 145.w,
                           height: double.maxFinite,
                           decoration: ShapeDecoration(
-                            color: Colors.white,
+                            color: themeProvider.themeType ==  Colors.white,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(100),
                             ),
