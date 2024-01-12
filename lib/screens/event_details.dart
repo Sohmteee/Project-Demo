@@ -89,38 +89,35 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
               children: [
                 Row(
                   children: [
-                    Opacity(
-                      opacity: 0.1,
-                      child: Container(
-                        width: 48.w,
-                        height: 48.h,
-                        decoration: ShapeDecoration(
-                          gradient: LinearGradient(
-                            begin: const Alignment(0, -1),
-                            end: const Alignment(0, 1),
-                            colors: [
-                              lightOrangeColor,
-                              darkOrangeColor,
-                            ],
-                          ),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12.r),
-                          ),
+                    Container(
+                      width: 48.w,
+                      height: 48.h,
+                      decoration: ShapeDecoration(
+                        gradient: LinearGradient(
+                          begin: const Alignment(0, -1),
+                          end: const Alignment(0, 1),
+                          colors: [
+                            lightOrangeColor.withOpacity(.1),
+                            darkOrangeColor.withOpacity(.1),
+                          ],
                         ),
-                        child: ShaderMask(
-                          blendMode: BlendMode.srcIn,
-                          shaderCallback: (Rect bounds) => LinearGradient(
-                            begin: Alignment.topCenter,
-                            end: Alignment.bottomCenter,
-                            colors: [
-                              lightOrangeColor,
-                              darkOrangeColor,
-                            ],
-                            tileMode: TileMode.mirror,
-                          ).createShader(bounds),
-                          child: Icon(
-                            IconlyBold.calendar,
-                          ),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12.r),
+                        ),
+                      ),
+                      child: ShaderMask(
+                        blendMode: BlendMode.srcIn,
+                        shaderCallback: (Rect bounds) => LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [
+                            lightOrangeColor,
+                            darkOrangeColor,
+                          ],
+                          tileMode: TileMode.mirror,
+                        ).createShader(bounds),
+                        child: Icon(
+                          IconlyBold.calendar,
                         ),
                       ),
                     )
