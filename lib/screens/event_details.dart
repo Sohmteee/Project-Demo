@@ -225,7 +225,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       horizontal: 7.w,
                       vertical: 6.h,
                     ),
-                    margin: EdgeInsets.only(),
+                    margin: EdgeInsets.only(right: 10.w),
                     decoration: ShapeDecoration(
                       gradient: LinearGradient(
                         begin: const Alignment(0, -1),
