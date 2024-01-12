@@ -276,6 +276,13 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                                     ),
                                   ],
                                 ),
+                                Row(
+                                  children: List.generate(
+                                    4,
+                                    (index) => SvgPicture.asset(
+                                        'assets/svg/event/star.svg'),
+                                  ),
+                                )
                               ],
                             ),
                           ),
