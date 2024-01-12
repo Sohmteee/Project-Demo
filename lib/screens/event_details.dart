@@ -17,76 +17,17 @@ class EventDetailsScreen extends StatefulWidget {
 class _EventDetailsScreenState extends State<EventDetailsScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      extendBodyBehindAppBar: true,
-      /* appBar: AppBar(
-        elevation: 0,
-        toolbarHeight: 140.h,
-        leading: BackButton(color: Theme.of(context).colorScheme.primary),
-        titleSpacing: 0.w,
-        backgroundColor: Colors.transparent,
-        title: AirBnBText(
-          'Event Details',
-          color: Theme.of(context).colorScheme.primary,
-          fontSize: 24.sp,
-          fontWeight: FontWeight.w500,
-        ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Container(
-              height: 36.h,
-              decoration: ShapeDecoration(
-                color: Colors.white.withOpacity(0.2),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.r),
-                ),
-              ),
-              child: Center(
-                child: SvgPicture.asset(
-                  'assets/svg/send.svg',
-                  height: 18.h,
-                  width: 18.w,
-                ),
-              ),
-            ),
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: Container(
-              height: 36.h,
-              decoration: ShapeDecoration(
-                color: Colors.white.withOpacity(0.2),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.r),
-                ),
-              ),
-              child: Center(
-                child: SvgPicture.asset(
-                  'assets/svg/bookmark-outline.svg',
-                  height: 15.h,
-                  width: 15.w,
-                ),
-              ),
-            ),
-          ),
-          SizedBox(width: 12.w),
-        ],
-      ), */
-      backgroundColor: Theme.of(context).colorScheme.primary,
-      body: CustomScrollView(
-        physics: const BouncingScrollPhysics(),
-        slivers: [
-          SliverAppBar(
-            pinned: true,
-            snap: false,
-            floating: false,
-            expandedHeight: 350.h,
+    return Stack(
+      alignment: Alignment.bottomCenter,
+      children: [
+        Scaffold(
+          extendBodyBehindAppBar: true,
+          /* appBar: AppBar(
             elevation: 0,
-            toolbarHeight: 80.h,
+            toolbarHeight: 140.h,
             leading: BackButton(color: Theme.of(context).colorScheme.primary),
             titleSpacing: 0.w,
-            backgroundColor: darkOrangeColor,
+            backgroundColor: Colors.transparent,
             title: AirBnBText(
               'Event Details',
               color: Theme.of(context).colorScheme.primary,
@@ -134,35 +75,115 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
               ),
               SizedBox(width: 12.w),
             ],
-            flexibleSpace: FlexibleSpaceBar(
-              background: buildImageStack(),
-            ),
-          ),
-          SliverList(
-            delegate: SliverChildListDelegate(
-              [
-                SizedBox(height: 20.h),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 24.w),
-                  child: DMSansText(
-                    'SAMUEL MEET & GREET PARTY',
-                    color: Theme.of(context).colorScheme.secondary,
-                    fontSize: 28.sp,
-                    fontWeight: FontWeight.w400,
-                  ),
+          ), */
+          backgroundColor: Theme.of(context).colorScheme.primary,
+          body: CustomScrollView(
+            physics: const BouncingScrollPhysics(),
+            slivers: [
+              SliverAppBar(
+                pinned: true,
+                snap: false,
+                floating: false,
+                expandedHeight: 350.h,
+                elevation: 0,
+                toolbarHeight: 80.h,
+                leading:
+                    BackButton(color: Theme.of(context).colorScheme.primary),
+                titleSpacing: 0.w,
+                backgroundColor: darkOrangeColor,
+                title: AirBnBText(
+                  'Event Details',
+                  color: Theme.of(context).colorScheme.primary,
+                  fontSize: 24.sp,
+                  fontWeight: FontWeight.w500,
                 ),
-                SizedBox(height: 18.h),
-                buildDetailTilesColumn(context),
-                SizedBox(height: 35.h),
-                buildAboutEvent(context),
-                SizedBox(height: 50.h),
-                buildCommentSection(context),
-                SizedBox(height: 50.h),
+                actions: [
+                  IconButton(
+                    onPressed: () {},
+                    icon: Container(
+                      height: 36.h,
+                      decoration: ShapeDecoration(
+                        color: Colors.white.withOpacity(0.2),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.r),
+                        ),
+                      ),
+                      child: Center(
+                        child: SvgPicture.asset(
+                          'assets/svg/send.svg',
+                          height: 18.h,
+                          width: 18.w,
+                        ),
+                      ),
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Container(
+                      height: 36.h,
+                      decoration: ShapeDecoration(
+                        color: Colors.white.withOpacity(0.2),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.r),
+                        ),
+                      ),
+                      child: Center(
+                        child: SvgPicture.asset(
+                          'assets/svg/bookmark-outline.svg',
+                          height: 15.h,
+                          width: 15.w,
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 12.w),
+                ],
+                flexibleSpace: FlexibleSpaceBar(
+                  background: buildImageStack(),
+                ),
+              ),
+              SliverList(
+                delegate: SliverChildListDelegate(
+                  [
+                    SizedBox(height: 20.h),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 24.w),
+                      child: DMSansText(
+                        'SAMUEL MEET & GREET PARTY',
+                        color: Theme.of(context).colorScheme.secondary,
+                        fontSize: 28.sp,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                    SizedBox(height: 18.h),
+                    buildDetailTilesColumn(context),
+                    SizedBox(height: 35.h),
+                    buildAboutEvent(context),
+                    SizedBox(height: 50.h),
+                    buildCommentSection(context),
+                    SizedBox(height: 50.h),
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
+        Container(
+          width: 375,
+          height: 181,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                Colors.white.withOpacity(.1),
+                Colors.white,
+                Colors.white,
               ],
             ),
-          )
-        ],
-      ),
+          ),
+        ),
+      ],
     );
   }
 
