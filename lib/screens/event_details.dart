@@ -83,7 +83,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
             fontSize: 28.sp,
             fontWeight: FontWeight.w400,
           ),
-          SizedBox(height: 30.h),
+          SizedBox(height: 18.h),
           Padding(
             padding: EdgeInsets.only(left: 21.w, right: 18.w),
             child: Column(
@@ -172,15 +172,16 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
     );
   }
 
-  SizedBox buildDetailTile(
+  Widget buildDetailTile(
     BuildContext context, {
     required Widget leading,
     required String title,
     required String subtitle,
     Widget? trailing,
   }) {
-    return SizedBox(
+    return Container(
       height: 48.h,
+      margin: EdgeInsets.symmetric(vertical: 12.h),
       child: Row(
         children: [
           leading,
