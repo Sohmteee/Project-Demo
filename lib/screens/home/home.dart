@@ -53,6 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
     super.initState();
     panelController.collapse();
     Timer.periodic(1.seconds, (timer) {
+      if (eventDate.difference(DateTime.now()).in)
       setState(() {
         timeRemaining = eventDate.difference(DateTime.now());
       });
