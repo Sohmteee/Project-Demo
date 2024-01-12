@@ -181,6 +181,13 @@ class _EventsScreenState extends State<EventsScreen> {
             fontWeight: FontWeight.w700,
           ),
           SizedBox(height: 12.h),
+          DMSansText(
+            'We couldn’t find any active\nevent in your current location',
+            textAlign: TextAlign.center,
+            color: HexColor('#747688'),
+            fontSize: 16.sp,
+            fontWeight: FontWeight.w400,
+          ),
           Spacer(),
         ],
       ),
