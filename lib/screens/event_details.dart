@@ -78,51 +78,53 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
         children: [
           buildImageStack(),
           SizedBox(height: 20.h),
-          SingleChildScrollView(
-            child: Column(
-              children: [
-                DMSansText(
-                  'SAMUEL MEET & GREET PARTY',
-                  color: Theme.of(context).colorScheme.secondary,
-                  fontSize: 28.sp,
-                  fontWeight: FontWeight.w400,
-                ),
-                SizedBox(height: 18.h),
-                buildDetailTilesColumn(context),
-                SizedBox(height: 35.h),
-                buildAboutEvent(context),
-                SizedBox(height: 50.h),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 22.w),
-                  child: Row(
-                    children: [
-                      Column(
-                        children: [
-                          ShaderMask(
-                            blendMode: BlendMode.srcIn,
-                            shaderCallback: (Rect bounds) => LinearGradient(
-                              begin: Alignment.topCenter,
-                              end: Alignment.bottomCenter,
-                              colors: [
-                                lightOrangeColor,
-                                darkOrangeColor,
-                              ],
-                              tileMode: TileMode.mirror,
-                            ).createShader(bounds),
-                            child: AirBnBText(
-                              'REVIEWS',
-                              textAlign: TextAlign.center,
-                              fontSize: 16.sp,
-                              fontWeight: FontWeight.w400,
-                              height: 0,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
+          Expand(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  DMSansText(
+                    'SAMUEL MEET & GREET PARTY',
+                    color: Theme.of(context).colorScheme.secondary,
+                    fontSize: 28.sp,
+                    fontWeight: FontWeight.w400,
                   ),
-                ),
-              ],
+                  SizedBox(height: 18.h),
+                  buildDetailTilesColumn(context),
+                  SizedBox(height: 35.h),
+                  buildAboutEvent(context),
+                  SizedBox(height: 50.h),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 22.w),
+                    child: Row(
+                      children: [
+                        Column(
+                          children: [
+                            ShaderMask(
+                              blendMode: BlendMode.srcIn,
+                              shaderCallback: (Rect bounds) => LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  lightOrangeColor,
+                                  darkOrangeColor,
+                                ],
+                                tileMode: TileMode.mirror,
+                              ).createShader(bounds),
+                              child: AirBnBText(
+                                'REVIEWS',
+                                textAlign: TextAlign.center,
+                                fontSize: 16.sp,
+                                fontWeight: FontWeight.w400,
+                                height: 0,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
