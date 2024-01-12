@@ -42,7 +42,14 @@ class _EventsScreenState extends State<EventsScreen> {
         ],
       ),
       backgroundColor: Theme.of(context).colorScheme.primary,
-      
+      body: Column(
+        children: [
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 40.w, vertical: 20.h,),
+            
+          ),
+        ],
+      ),
     );
   }
 }
