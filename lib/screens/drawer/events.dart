@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
+import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/theme.dart';
 
@@ -79,13 +80,33 @@ class _EventsScreenState extends State<EventsScreen> {
                     ],
                   ),
                   child: Center(
-                    child:  DMSansText(
-                      'ALL EVENTS',
-                      textAlign: TextAlign.center,
-                      color: Color(0xFFFFB459),
-                      fontSize: 15.sp,
-                      fontWeight: FontWeight.w500,
-                    ),
+                    child: pageIndex == 0
+                        ? ShaderMask(
+                            blendMode: BlendMode.srcIn,
+                            shaderCallback: (Rect bounds) => LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [
+                                lightOrangeColor,
+                                darkOrangeColor,
+                              ],
+                              tileMode: TileMode.mirror,
+                            ).createShader(bounds),
+                            child: DMSansText(
+                              'ALL EVENTS',
+                              textAlign: TextAlign.center,
+                              color: Color(0xFFFFB459),
+                              fontSize: 15.sp,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          )
+                        : DMSansText(
+                            'ALL EVENTS',
+                            textAlign: TextAlign.center,
+                            color: Color(0xFFFFB459),
+                            fontSize: 15.sp,
+                            fontWeight: FontWeight.w500,
+                          ),
                   ),
                 )
               ],
