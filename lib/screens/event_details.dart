@@ -120,7 +120,8 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       ),
                       SizedBox(width: 70.w),
                       Container(
-                        padding: EdgeInsets.symmetric(horizontal: 18.w, vertical: 6.h)
+                        padding: EdgeInsets.symmetric(
+                            horizontal: 18.w, vertical: 6.h),
                         decoration: ShapeDecoration(
                           gradient: LinearGradient(
                             begin: const Alignment(0.00, -1.00),
@@ -140,6 +141,13 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                               spreadRadius: 0,
                             )
                           ],
+                        ),
+                        child: AirBnBText(
+                          'Invite',
+                          textAlign: TextAlign.center,
+                          color: Colors.white,
+                          fontSize: 12.sp,
+                          fontWeight: FontWeight.w400,
                         ),
                       )
                     ],
