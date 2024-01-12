@@ -74,7 +74,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
         ],
       ),
       backgroundColor: Theme.of(context).colorScheme.primary,
-      body: Column(
+      body: ListView(
         children: [
           buildImageStack(),
           SizedBox(height: 20.h),
@@ -88,7 +88,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
           buildDetailTilesColumn(context),
           SizedBox(height: 35.h),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20.w),
+            padding: EdgeInsets.only(left: 20.w, right: 32.w),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
