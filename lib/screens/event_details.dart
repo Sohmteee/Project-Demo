@@ -251,6 +251,24 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                               fit: BoxFit.fitWidth,
                             ).image,
                           ),
+                          SizedBox(width: 16.w),
+                          Column(
+                            children: [
+                              Row(
+                                children: [
+                                  Text(
+                                    'Rocks Velkeinjen',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w400,
+                                      height: 0.10,
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ],
+                          ),
                         ],
                       ),
                     ],
