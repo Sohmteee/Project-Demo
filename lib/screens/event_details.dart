@@ -82,29 +82,36 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
             fontWeight: FontWeight.w400,
           ),
           SizedBox(height: 30.h),
-          Row(
-            children: [
-              Opacity(
-                opacity: 0.10,
-                child: Container(
-                  width: 48,
-                  height: 48,
-                  decoration: ShapeDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment(0, -1),
-                      end: Alignment(0, 1),
-                      colors: [
-                        lightOrangeColor,
-                        darkOrangeColor,
-                      ],
-                    ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                  ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Opacity(
+                      opacity: 0.1,
+                      child: Container(
+                        width: 48.w,
+                        height: 48.h,
+                        decoration: ShapeDecoration(
+                          gradient: LinearGradient(
+                            begin: const Alignment(0, -1),
+                            end: const Alignment(0, 1),
+                            colors: [
+                              lightOrangeColor,
+                              darkOrangeColor,
+                            ],
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12.r),
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
                 ),
-              )
-            ],
+              ],
+            ),
           ),
         ],
       ),
