@@ -256,15 +256,19 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                             children: [
                               Row(
                                 children: [
-                                  Text(
+                                  AirBnBText(
                                     'Rocks Velkeinjen',
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 18,
+                                    color: Theme.of(context).colorScheme.secondary,
+                                    fontSize: 18.sp,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                  AirBnBText(
+                                    '10 Feb',
+                                    textAlign: TextAlign.right,
+                                      color: Vx.,
+                                      fontSize: 15.sp,
                                       fontWeight: FontWeight.w400,
-                                      height: 0.10,
-                                    ),
-                                  )
+                                  ),
                                 ],
                               ),
                             ],
