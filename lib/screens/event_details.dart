@@ -126,23 +126,25 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                         ),
                       ),
                       SizedBox(width: 14.w),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          AirBnBText(
-                            '14 December, 2021',
-                            color: Theme.of(context).colorScheme.secondary,
-                            fontSize: 16.sp,
-                            fontWeight: FontWeight.w500,
-                          ),
-                          AirBnBText(
-                            'Tuesday, 4:00PM - 9:00PM',
-                            color: Vx.gray400,
-                            fontSize: 12.sp,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ],
+                      Expanded(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            AirBnBText(
+                              '14 December, 2021',
+                              color: Theme.of(context).colorScheme.secondary,
+                              fontSize: 16.sp,
+                              fontWeight: FontWeight.w500,
+                            ),
+                            AirBnBText(
+                              'Tuesday, 4:00PM - 9:00PM',
+                              color: Vx.gray400,
+                              fontSize: 12.sp,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
