@@ -238,6 +238,8 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                           )
                         ],
                       ),
+                      SizedBox(height: 24.h),
+                      
                     ],
                   ),
                 ),
