@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
+import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/theme.dart';
 
@@ -95,7 +96,6 @@ class _EventsScreenState extends State<EventsScreen> {
                             child: DMSansText(
                               'ALL EVENTS',
                               textAlign: TextAlign.center,
-                              color: Color(0xFFFFB459),
                               fontSize: 15.sp,
                               fontWeight: FontWeight.w500,
                             ),
@@ -103,7 +103,53 @@ class _EventsScreenState extends State<EventsScreen> {
                         : DMSansText(
                             'ALL EVENTS',
                             textAlign: TextAlign.center,
-                            color: Color(0xFFFFB459),
+                            color: HexColor('#9B9B9B'),
+                            fontSize: 15.sp,
+                            fontWeight: FontWeight.w500,
+                          ),
+                  ),
+                ),
+                Container(
+                  width: 145.w,
+                  height: double.maxFinite,
+                  decoration: ShapeDecoration(
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(100),
+                    ),
+                    shadows: const [
+                      BoxShadow(
+                        color: Colors.white,
+                        blurRadius: 20,
+                        offset: Offset(0, 5),
+                        spreadRadius: 0,
+                      )
+                    ],
+                  ),
+                  child: Center(
+                    child: pageIndex == 0
+                        ? ShaderMask(
+                            blendMode: BlendMode.srcIn,
+                            shaderCallback: (Rect bounds) => LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [
+                                lightOrangeColor,
+                                darkOrangeColor,
+                              ],
+                              tileMode: TileMode.mirror,
+                            ).createShader(bounds),
+                            child: DMSansText(
+                              'ALL EVENTS',
+                              textAlign: TextAlign.center,
+                              fontSize: 15.sp,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          )
+                        : DMSansText(
+                            'ALL EVENTS',
+                            textAlign: TextAlign.center,
+                            color: HexColor('#9B9B9B'),
                             fontSize: 15.sp,
                             fontWeight: FontWeight.w500,
                           ),
