@@ -108,8 +108,8 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       child: ShaderMask(
                         blendMode: BlendMode.srcIn,
                         shaderCallback: (Rect bounds) => LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
+                          begin: Alignment.topRight,
+                          end: Alignment.bottomRight,
                           colors: [
                             lightOrangeColor,
                             darkOrangeColor,
