@@ -167,7 +167,11 @@ class _EventsScreenState extends State<EventsScreen> {
             ),
           ),
           Spacer(),
-          Image.asset('assets/images/no-event.png'),
+          Image.asset(
+            'assets/images/no-event.png',
+            width: 200.w,
+            height: 200.h,
+          ),
           Spacer(),
         ],
       ),
