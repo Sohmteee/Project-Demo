@@ -106,6 +106,9 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                             borderRadius: BorderRadius.circular(12.r),
                           ),
                         ),
+                        child: SvgPicture.asset(
+                          'assets/svg/event/calendar.svg',
+                        ),
                       ),
                     )
                   ],
