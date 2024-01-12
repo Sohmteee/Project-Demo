@@ -1418,6 +1418,8 @@ class _HomeScreenState extends State<HomeScreen> {
               DateTime eventDate = upcomingEvents[index]['time'];
               if (eventDate.difference(DateTime.now()).inSeconds > 1) {
                 timeRemaining = eventDate.difference(DateTime.now());
+              } else {
+                timeRemaining = 
               }
 
               int daysDifference = timeRemaining.inDays;
