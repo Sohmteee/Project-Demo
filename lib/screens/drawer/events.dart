@@ -47,160 +47,173 @@ class _EventsScreenState extends State<EventsScreen> {
         ],
       ),
       backgroundColor: Theme.of(context).colorScheme.primary,
-      body: Column(
-        children: [
-          Container(
-            width: double.maxFinite,
-            height: 45.h,
-            margin: EdgeInsets.symmetric(
-              horizontal: 40.w,
-              vertical: 10.h,
-            ),
-            padding: EdgeInsets.all(5.sp),
-            decoration: ShapeDecoration(
-              color: Colors.black.withOpacity(0.02),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(100),
+      body: Container(
+        decoration: BoxDecoration(
+          color:
+              (themeProvider.themeType == ThemeType.light) ? Vx.gray100 : null,
+          image: (themeProvider.themeType == ThemeType.dark)
+              ? const DecorationImage(
+                  image:
+                      AssetImage('assets/images/dark-gradient-background.png'),
+                  fit: BoxFit.cover,
+                )
+              : null,
+        ),
+        child: Column(
+          children: [
+            Container(
+              width: double.maxFinite,
+              height: 45.h,
+              margin: EdgeInsets.symmetric(
+                horizontal: 40.w,
+                vertical: 10.h,
               ),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                (pageIndex == 0)
-                    ? Container(
-                        width: 145.w,
-                        height: double.maxFinite,
-                        decoration: ShapeDecoration(
-                          color: Colors.white,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(100),
+              padding: EdgeInsets.all(5.sp),
+              decoration: ShapeDecoration(
+                color: Colors.black.withOpacity(0.02),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(100),
+                ),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  (pageIndex == 0)
+                      ? Container(
+                          width: 145.w,
+                          height: double.maxFinite,
+                          decoration: ShapeDecoration(
+                            color: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(100),
+                            ),
+                            shadows: const [
+                              BoxShadow(
+                                color: Color(0x19000000),
+                                blurRadius: 20,
+                                offset: Offset(0, 5),
+                                spreadRadius: 0,
+                              )
+                            ],
                           ),
-                          shadows: const [
-                            BoxShadow(
-                              color: Color(0x19000000),
-                              blurRadius: 20,
-                              offset: Offset(0, 5),
-                              spreadRadius: 0,
-                            )
-                          ],
-                        ),
-                        child: Center(
-                          child: ShaderMask(
-                            blendMode: BlendMode.srcIn,
-                            shaderCallback: (Rect bounds) => LinearGradient(
-                              begin: Alignment.topCenter,
-                              end: Alignment.bottomCenter,
-                              colors: [
-                                lightOrangeColor,
-                                darkOrangeColor,
-                              ],
-                              tileMode: TileMode.mirror,
-                            ).createShader(bounds),
+                          child: Center(
+                            child: ShaderMask(
+                              blendMode: BlendMode.srcIn,
+                              shaderCallback: (Rect bounds) => LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  lightOrangeColor,
+                                  darkOrangeColor,
+                                ],
+                                tileMode: TileMode.mirror,
+                              ).createShader(bounds),
+                              child: DMSansText(
+                                'ALL EVENTS',
+                                textAlign: TextAlign.center,
+                                fontSize: 15.sp,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ),
+                        )
+                      : GestureDetector(
+                          onTap: () => setState(() {
+                            pageIndex = 0;
+                          }),
+                          child: Padding(
+                            padding: EdgeInsets.only(left: 30.w),
                             child: DMSansText(
                               'ALL EVENTS',
                               textAlign: TextAlign.center,
+                              color: HexColor('#9B9B9B'),
                               fontSize: 15.sp,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
                         ),
-                      )
-                    : GestureDetector(
-                        onTap: () => setState(() {
-                          pageIndex = 0;
-                        }),
-                        child: Padding(
-                          padding: EdgeInsets.only(left: 30.w),
-                          child: DMSansText(
-                            'ALL EVENTS',
-                            textAlign: TextAlign.center,
-                            color: HexColor('#9B9B9B'),
-                            fontSize: 15.sp,
-                            fontWeight: FontWeight.w500,
+                  (pageIndex == 1)
+                      ? Container(
+                          width: 145.w,
+                          height: double.maxFinite,
+                          decoration: ShapeDecoration(
+                            color: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(100),
+                            ),
+                            shadows: const [
+                              BoxShadow(
+                                color: Color(0x19000000),
+                                blurRadius: 20,
+                                offset: Offset(0, 5),
+                                spreadRadius: 0,
+                              )
+                            ],
                           ),
-                        ),
-                      ),
-                (pageIndex == 1)
-                    ? Container(
-                        width: 145.w,
-                        height: double.maxFinite,
-                        decoration: ShapeDecoration(
-                          color: Colors.white,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(100),
+                          child: Center(
+                            child: ShaderMask(
+                              blendMode: BlendMode.srcIn,
+                              shaderCallback: (Rect bounds) => LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  lightOrangeColor,
+                                  darkOrangeColor,
+                                ],
+                                tileMode: TileMode.mirror,
+                              ).createShader(bounds),
+                              child: DMSansText(
+                                'PAST EVENTS',
+                                textAlign: TextAlign.center,
+                                fontSize: 15.sp,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
                           ),
-                          shadows: const [
-                            BoxShadow(
-                              color: Color(0x19000000),
-                              blurRadius: 20,
-                              offset: Offset(0, 5),
-                              spreadRadius: 0,
-                            )
-                          ],
-                        ),
-                        child: Center(
-                          child: ShaderMask(
-                            blendMode: BlendMode.srcIn,
-                            shaderCallback: (Rect bounds) => LinearGradient(
-                              begin: Alignment.topCenter,
-                              end: Alignment.bottomCenter,
-                              colors: [
-                                lightOrangeColor,
-                                darkOrangeColor,
-                              ],
-                              tileMode: TileMode.mirror,
-                            ).createShader(bounds),
+                        )
+                      : GestureDetector(
+                          onTap: () => setState(() {
+                            pageIndex = 1;
+                          }),
+                          child: Padding(
+                            padding: EdgeInsets.only(right: 30.w),
                             child: DMSansText(
                               'PAST EVENTS',
                               textAlign: TextAlign.center,
+                              color: HexColor('#9B9B9B'),
                               fontSize: 15.sp,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
                         ),
-                      )
-                    : GestureDetector(
-                        onTap: () => setState(() {
-                          pageIndex = 1;
-                        }),
-                        child: Padding(
-                          padding: EdgeInsets.only(right: 30.w),
-                          child: DMSansText(
-                            'PAST EVENTS',
-                            textAlign: TextAlign.center,
-                            color: HexColor('#9B9B9B'),
-                            fontSize: 15.sp,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                      ),
-              ],
+                ],
+              ),
             ),
-          ),
-          const Spacer(),
-          Image.asset(
-            'assets/images/no-event.png',
-            width: 180.w,
-            height: 180.h,
-          ),
-          SizedBox(height: 20.h),
-          DMSansText(
-            'No  Event',
-            textAlign: TextAlign.center,
-            color: Theme.of(context).colorScheme.secondary,
-            fontSize: 24.sp,
-            fontWeight: FontWeight.w700,
-          ),
-          SizedBox(height: 12.h),
-          DMSansText(
-            'We couldn’t find any active\nevent in your current location',
-            textAlign: TextAlign.center,
-            color: Vx.gray400,
-            fontSize: 16.sp,
-            fontWeight: FontWeight.w400,
-          ),
-          const Spacer(flex: 2),
-        ],
+            const Spacer(),
+            Image.asset(
+              'assets/images/no-event.png',
+              width: 180.w,
+              height: 180.h,
+            ),
+            SizedBox(height: 20.h),
+            DMSansText(
+              'No  Event',
+              textAlign: TextAlign.center,
+              color: Theme.of(context).colorScheme.secondary,
+              fontSize: 24.sp,
+              fontWeight: FontWeight.w700,
+            ),
+            SizedBox(height: 12.h),
+            DMSansText(
+              'We couldn’t find any active\nevent in your current location',
+              textAlign: TextAlign.center,
+              color: Vx.gray400,
+              fontSize: 16.sp,
+              fontWeight: FontWeight.w400,
+            ),
+            const Spacer(flex: 2),
+          ],
+        ),
       ),
     );
   }
