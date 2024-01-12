@@ -163,22 +163,6 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
           )
         ],
       ),
-      bottomNavigationBar: Container(
-        width: 375,
-        height: 181,
-        decoration: BoxDecoration(
-          
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [
-            lightOrangeColor,
-            darkOrangeColor,
-          ],
-          
-        ),
-        ),
-      ),
     );
   }
 
