@@ -77,10 +77,11 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
           SizedBox(height: 20.h),
           DMSansText(
             'SAMUEL MEET & GREET PARTY',
-            color: Theme,
+            color: Theme.of(context).colorScheme.secondary,
             fontSize: 28.sp,
             fontWeight: FontWeight.w400,
-          )
+          ),
+          SizedBox(height: 30.h),
         ],
       ),
     );
