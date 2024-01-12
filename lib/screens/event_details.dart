@@ -104,10 +104,17 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                         ),
                       ),
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           SvgPicture.asset(
                             'assets/svg/event/message-outline.svg',
                           ),
+                          DMSansText(
+                            'Comment',
+                            textAlign: TextAlign.center,
+                            fontSize: 12.sp,
+                            fontWeight: FontWeight.w400,
+                          )
                         ],
                       ),
                     ),
