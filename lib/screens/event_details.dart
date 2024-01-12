@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:velocity_x/velocity_x.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/models/text.dart';
 
@@ -124,13 +125,20 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                     ),
                     SizedBox(width: 14.w),
                     Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         AirBnBText(
                           '14 December, 2021',
                           color: Theme.of(context).colorScheme.secondary,
                           fontSize: 16.sp,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        AirBnBText(
+                          'Tuesday, 4:00PM - 9:00PM',
+                          color: Vx.gray400,
+                          fontSize: 16.sp,
                           fontWeight: FontWeight.w400,
-                        )
+                        ),
                       ],
                     ),
                   ],
