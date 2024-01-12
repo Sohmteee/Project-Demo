@@ -104,14 +104,19 @@ class _EventsScreenState extends State<EventsScreen> {
                           ),
                         ),
                       )
-                    : Padding(
-                        padding: EdgeInsets.only(left: 30.w),
-                        child: DMSansText(
-                          'ALL EVENTS',
-                          textAlign: TextAlign.center,
-                          color: HexColor('#9B9B9B'),
-                          fontSize: 15.sp,
-                          fontWeight: FontWeight.w500,
+                    : GestureDetector(
+                        onTap: () => setState(() {
+                          pageIndex = 0;
+                        }),
+                        child: Padding(
+                          padding: EdgeInsets.only(left: 30.w),
+                          child: DMSansText(
+                            'ALL EVENTS',
+                            textAlign: TextAlign.center,
+                            color: HexColor('#9B9B9B'),
+                            fontSize: 15.sp,
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
                       ),
                 (pageIndex == 1)
@@ -154,10 +159,10 @@ class _EventsScreenState extends State<EventsScreen> {
                         ),
                       )
                     : GestureDetector(
-                      onTap: () => setState(() {
-                        pageIndex = 1;
-                      }),
-                      child: Padding(
+                        onTap: () => setState(() {
+                          pageIndex = 1;
+                        }),
+                        child: Padding(
                           padding: EdgeInsets.only(right: 30.w),
                           child: DMSansText(
                             'PAST EVENTS',
@@ -167,7 +172,7 @@ class _EventsScreenState extends State<EventsScreen> {
                             fontWeight: FontWeight.w500,
                           ),
                         ),
-                    ),
+                      ),
               ],
             ),
           ),
