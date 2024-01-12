@@ -78,12 +78,15 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
         physics: const BouncingScrollPhysics(),
         slivers: [
           SliverAppBar(
+            pinned: true,
+            snap: false,
+            floating: false,
             expandedHeight: 350.h,
             elevation: 0,
             toolbarHeight: 140.h,
             leading: BackButton(color: Theme.of(context).colorScheme.primary),
             titleSpacing: 0.w,
-            backgroundColor: Colors.transparent,
+            backgroundColor: Colors.black38,
             title: AirBnBText(
               'Event Details',
               color: Theme.of(context).colorScheme.primary,
