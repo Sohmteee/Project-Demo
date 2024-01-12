@@ -70,7 +70,9 @@ class _EventsScreenState extends State<EventsScreen> {
               ),
               padding: EdgeInsets.all(5.sp),
               decoration: ShapeDecoration(
-                color: Colors.black.withOpacity(0.02),
+                color: themeProvider.themeType == ThemeType.light
+                    ? Colors.black.withOpacity(0.02)
+                    : HexColor('#'),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(100),
                 ),
@@ -83,7 +85,7 @@ class _EventsScreenState extends State<EventsScreen> {
                           width: 145.w,
                           height: double.maxFinite,
                           decoration: ShapeDecoration(
-                            color: themeProvider.themeType ==  Colors.white,
+                            color: Colors.white,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(100),
                             ),
