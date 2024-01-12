@@ -182,12 +182,19 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                 ],
               ),
             ),
-            child: DMSansText(
-              'FREE - \$25',
-              textAlign: TextAlign.center,
-              color: Colors.black,
-              fontSize: 19.sp,
-              fontWeight: FontWeight.w700,
+            child: Row(
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(bottom: 36.h, left: 26.w),
+                  child: DMSansText(
+                    'FREE - \$25',
+                    textAlign: TextAlign.center,
+                    color: Colors.black,
+                    fontSize: 19.sp,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ],
             ),
           ),
         ],
