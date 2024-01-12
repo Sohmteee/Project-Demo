@@ -78,7 +78,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
         physics: const BouncingScrollPhysics(),
         slivers: [
           SliverAppBar(
-            expandedHeight: 300.h,
+            expandedHeight: 350.h,
             elevation: 0,
             toolbarHeight: 140.h,
             leading: BackButton(color: Theme.of(context).colorScheme.primary),
