@@ -43,7 +43,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
               ),
               child: Center(
                 child: SvgPicture.asset(
-                  'assets/svg/bookmark.svg',
+                  'assets/svg/bookmark-outline.svg',
                   height: 15.h,
                   width: 15.w,
                 ),
