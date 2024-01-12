@@ -208,40 +208,14 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                     ),
                   ),
                 ),
-              
                 buildDetailTile(
                   context,
-                  leading: Container(
-                    width: 48.w,
-                    height: 48.h,
-                    decoration: ShapeDecoration(
-                      gradient: LinearGradient(
-                        begin: const Alignment(0, -1),
-                        end: const Alignment(0, 1),
-                        colors: [
-                          lightOrangeColor.withOpacity(.1),
-                          darkOrangeColor.withOpacity(.1),
-                        ],
-                      ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12.r),
-                      ),
-                    ),
-                    child: ShaderMask(
-                      blendMode: BlendMode.srcIn,
-                      shaderCallback: (Rect bounds) => LinearGradient(
-                        begin: Alignment.topRight,
-                        end: Alignment.bottomRight,
-                        colors: [
-                          lightOrangeColor,
-                          darkOrangeColor,
-                        ],
-                        tileMode: TileMode.mirror,
-                      ).createShader(bounds),
-                      child: Icon(
-                        IconlyBold.location,
-                        size: 30.sp,
-                      ),
+                  leading: ClipRRect(
+                    borderRadius: BorderRadius.circular(12.r),
+                    child: Image.asset(
+                      'assets/images/event/organizer.png',
+                      width: 48.w,
+                      height: 48.h,
                     ),
                   ),
                   title: 'Ashfak Sayem',
@@ -291,7 +265,6 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                     ),
                   ),
                 ),
-              
               ],
             ),
           ),
