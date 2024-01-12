@@ -138,11 +138,14 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
             delegate: SliverChildListDelegate(
               [
                 SizedBox(height: 20.h),
-                DMSansText(
-                  'SAMUEL MEET & GREET PARTY',
-                  color: Theme.of(context).colorScheme.secondary,
-                  fontSize: 28.sp,
-                  fontWeight: FontWeight.w400,
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 24.w),
+                  child: DMSansText(
+                    'SAMUEL MEET & GREET PARTY',
+                    color: Theme.of(context).colorScheme.secondary,
+                    fontSize: 28.sp,
+                    fontWeight: FontWeight.w400,
+                  ),
                 ),
                 SizedBox(height: 18.h),
                 buildDetailTilesColumn(context),
