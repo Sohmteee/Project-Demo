@@ -92,11 +92,11 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       tileMode: TileMode.mirror,
                     ).createShader(bounds),
                     child: Container(
-                      padding: EdgeInsets.fromLTRB(5.sp),
+                      padding: EdgeInsets.fromLTRB(5.w, 5.h, 6.w, 5.h),
                       decoration: ShapeDecoration(
                         shape: RoundedRectangleBorder(
-                          side: const BorderSide(
-                            width: 1,
+                          side: BorderSide(
+                            width: 1.sp,
                           ),
                           borderRadius: BorderRadius.circular(7),
                         ),
