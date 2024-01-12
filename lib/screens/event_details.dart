@@ -82,6 +82,11 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
             fontWeight: FontWeight.w400,
           ),
           SizedBox(height: 30.h),
+          Row(
+            children: [
+              
+            ],
+          ),
         ],
       ),
     );
