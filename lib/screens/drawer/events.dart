@@ -81,8 +81,7 @@ class _EventsScreenState extends State<EventsScreen> {
                     ],
                   ),
                   child: Center(
-                    child: pageIndex == 0
-                        ? ShaderMask(
+                         ShaderMask(
                             blendMode: BlendMode.srcIn,
                             shaderCallback: (Rect bounds) => LinearGradient(
                               begin: Alignment.topCenter,
@@ -99,62 +98,10 @@ class _EventsScreenState extends State<EventsScreen> {
                               fontSize: 15.sp,
                               fontWeight: FontWeight.w500,
                             ),
-                          )
-                        : DMSansText(
-                            'ALL EVENTS',
-                            textAlign: TextAlign.center,
-                            color: HexColor('#9B9B9B'),
-                            fontSize: 15.sp,
-                            fontWeight: FontWeight.w500,
-                          ),
+                          ))
+                        
                   ),
-                ),
-                Container(
-                  width: 145.w,
-                  height: double.maxFinite,
-                  decoration: ShapeDecoration(
-                    color: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(100),
-                    ),
-                    shadows: const [
-                      BoxShadow(
-                        color: Colors.white,
-                        blurRadius: 20,
-                        offset: Offset(0, 5),
-                        spreadRadius: 0,
-                      )
-                    ],
-                  ),
-                  child: Center(
-                    child: pageIndex == 0
-                        ? ShaderMask(
-                            blendMode: BlendMode.srcIn,
-                            shaderCallback: (Rect bounds) => LinearGradient(
-                              begin: Alignment.topCenter,
-                              end: Alignment.bottomCenter,
-                              colors: [
-                                lightOrangeColor,
-                                darkOrangeColor,
-                              ],
-                              tileMode: TileMode.mirror,
-                            ).createShader(bounds),
-                            child: DMSansText(
-                              'ALL EVENTS',
-                              textAlign: TextAlign.center,
-                              fontSize: 15.sp,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          )
-                        : DMSansText(
-                            'ALL EVENTS',
-                            textAlign: TextAlign.center,
-                            color: HexColor('#9B9B9B'),
-                            fontSize: 15.sp,
-                            fontWeight: FontWeight.w500,
-                          ),
-                  ),
-                )
+                ), 
               ],
             ),
           ),
