@@ -222,10 +222,10 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                   subtitle: 'Organizer',
                   trailing: Container(
                     padding: EdgeInsets.symmetric(
-                      horizontal: 7.w,
+                      horizontal: 12.w,
                       vertical: 6.h,
                     ),
-                    margin: EdgeInsets.only(right: 10.w),
+                    margin: EdgeInsets.only(right: 6.w),
                     decoration: ShapeDecoration(
                       gradient: LinearGradient(
                         begin: const Alignment(0, -1),
