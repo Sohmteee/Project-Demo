@@ -97,7 +97,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                   Column(
                     children: [
                       ShaderMask(
-                         blendMode: BlendMode.srcIn,
+                        blendMode: BlendMode.srcIn,
                         shaderCallback: (Rect bounds) => LinearGradient(
                           begin: Alignment.topCenter,
                           end: Alignment.bottomCenter,
