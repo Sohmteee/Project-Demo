@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:provider/provider.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/models/registration/button.dart';
 import 'package:yeerlo/models/text.dart';
+import 'package:yeerlo/providers/theme.dart';
 
 class EventDetailsScreen extends StatefulWidget {
   const EventDetailsScreen({super.key});
@@ -370,6 +372,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
   }
 
   Padding buildAboutEvent(BuildContext context) {
+    final themeProvider = context.watch<ThemeProvider>();
     return Padding(
       padding: EdgeInsets.only(left: 20.w, right: 32.w),
       child: Column(
