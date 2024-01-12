@@ -241,7 +241,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       SizedBox(height: 24.h),
                       Column(
                         children: List.generate(
-                          3,
+                          6,
                           (index) => Padding(
                             padding: EdgeInsets.symmetric(vertical: 10.h),
                             child: buildComment(context),
