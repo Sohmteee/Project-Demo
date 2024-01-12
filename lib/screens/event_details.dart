@@ -183,29 +183,25 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                 ],
               ),
             ),
-            child: SizedBox(
-              height: ,
+            child: Container(
+              height: 60.h,
+              padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Padding(
-                    padding: EdgeInsets.only(bottom: 36.h, left: 26.w),
-                    child: DMSansText(
-                      'FREE - \$25',
-                      textAlign: TextAlign.center,
-                      color: Colors.black,
-                      fontSize: 19.sp,
-                      fontWeight: FontWeight.w700,
-                    ),
+                  DMSansText(
+                    'FREE - \$25',
+                    textAlign: TextAlign.center,
+                    color: Colors.black,
+                    fontSize: 19.sp,
+                    fontWeight: FontWeight.w700,
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(bottom: 20.h, right: 20.w),
-                    child: SizedBox(
-                      width: 200.w,
-                      child: ArrowButton(
-                        onPressed: () {},
-                        text: 'GET TICKETS',
-                      ),
+                  SizedBox(
+                    width: 200.w,
+                    child: ArrowButton(
+                      onPressed: () {},
+                      text: 'GET TICKETS',
                     ),
                   ),
                 ],
