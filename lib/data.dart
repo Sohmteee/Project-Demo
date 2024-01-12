@@ -66,7 +66,7 @@ List upcomingEvents = [
     'price': '\$5 - \$25',
     'location': 'Radius Gallery • Santa Cruz, CA',
     'date-color': redColorCategory,
-    'time': DateTime(2024, 06, 10),
+    'time': DateTime(2024, 02, 10),
   },
 ];
 

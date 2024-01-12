@@ -53,11 +53,9 @@ class _HomeScreenState extends State<HomeScreen> {
     super.initState();
     panelController.collapse();
     Timer.periodic(1.seconds, (timer) {
-       
-        setState(() {
+      setState(() {
         timeRemaining = eventDate.difference(DateTime.now());
       });
-      
     });
     drawerController.addListener(() {
       if (mounted) {
@@ -1418,7 +1416,9 @@ class _HomeScreenState extends State<HomeScreen> {
             itemCount: upcomingEvents.length,
             itemBuilder: (BuildContext context, int index) {
               DateTime eventDate = upcomingEvents[index]['time'];
-              timeRemaining = eventDate.difference(DateTime.now());
+              if (eventDate.difference(DateTime.now()).inSeconds > 1) {
+                timeRemaining = eventDate.difference(DateTime.now());
+              }
 
               int daysDifference = timeRemaining.inDays;
               int hoursDifference = timeRemaining.inHours % 24;
