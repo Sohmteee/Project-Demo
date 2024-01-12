@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/models/text.dart';
 
@@ -41,9 +42,10 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                 ),
               ),
               child: Center(
-                child: Icon(
-                  IconlyLight.bookmark,
-                  size: 15.sp,
+                child: SvgPicture.asset(
+                  'assets/svg/bookmark.svg',
+                  height: 15.h,
+                  width: 15.w,
                 ),
               ),
             ),
