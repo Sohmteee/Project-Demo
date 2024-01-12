@@ -32,8 +32,8 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
           IconButton(
             onPressed: () {},
             icon: Container(
-              width: 36.w,
               height: 36.h,
+              padding: EdgeInsets.all(10.5.sp),
               decoration: ShapeDecoration(
                 color: Colors.white.withOpacity(0.2),
                 shape: RoundedRectangleBorder(
@@ -41,7 +41,10 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                 ),
               ),
               child: Center(
-                child: Icon(IconlyLight.bookmark),
+                child: Icon(
+                  IconlyLight.bookmark,
+                  size: 15.sp,
+                ),
               ),
             ),
           ),
