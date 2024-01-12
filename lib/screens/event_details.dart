@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/models/text.dart';
 
 class EventDetailsScreen extends StatefulWidget {
@@ -30,6 +28,26 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
           fontWeight: FontWeight.w500,
         ),
         actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Container(
+              height: 36.h,
+              // padding: EdgeInsets.all(10.5.sp),
+              decoration: ShapeDecoration(
+                color: Colors.white.withOpacity(0.2),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.r),
+                ),
+              ),
+              child: Center(
+                child: SvgPicture.asset(
+                  'assets/svg/bookmark-outline.svg',
+                  height: 15.h,
+                  width: 15.w,
+                ),
+              ),
+            ),
+          ),
           IconButton(
             onPressed: () {},
             icon: Container(
