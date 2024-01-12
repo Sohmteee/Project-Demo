@@ -45,8 +45,18 @@ class _EventsScreenState extends State<EventsScreen> {
       body: Column(
         children: [
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 40.w, vertical: 20.h,),
-            
+            width: double.maxFinite,
+            height: 45.h,
+            margin: EdgeInsets.symmetric(
+              horizontal: 40.w,
+              vertical: 20.h,
+            ),
+            decoration: ShapeDecoration(
+              color: Colors.black.withOpacity(0.02),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(100),
+              ),
+            ),
           ),
         ],
       ),
