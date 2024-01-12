@@ -124,6 +124,7 @@ leading: Container(
                     ),
                   ),
                   title: '14 December, 2021',
+                  description: 'Tuesday, 4:00PM - 9:00PM',
                 ),
               ],
             ),
@@ -158,7 +159,7 @@ leading: Container(
                   fontWeight: FontWeight.w500,
                 ),
                 AirBnBText(
-                  'Tuesday, 4:00PM - 9:00PM',
+                  description,
                   color: Vx.gray400,
                   fontSize: 12.sp,
                   fontWeight: FontWeight.w400,
@@ -166,6 +167,7 @@ leading: Container(
               ],
             ),
           ),
+          if(trailing != null)trailing!,
         ],
       ),
     );
