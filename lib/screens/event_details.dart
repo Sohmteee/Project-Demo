@@ -137,65 +137,25 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
           SliverList(
             delegate: SliverChildListDelegate(
               [
-                Column(
-                  children: [
-                    buildImageStack(),
-                    SizedBox(height: 20.h),
-                    DMSansText(
-                      'SAMUEL MEET & GREET PARTY',
-                      color: Theme.of(context).colorScheme.secondary,
-                      fontSize: 28.sp,
-                      fontWeight: FontWeight.w400,
-                    ),
-                    SizedBox(height: 18.h),
-                    buildDetailTilesColumn(context),
-                    SizedBox(height: 35.h),
-                    buildAboutEvent(context),
-                    SizedBox(height: 50.h),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 22.w),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                SizedBox(height: 20.h),
+                DMSansText(
+                  'SAMUEL MEET & GREET PARTY',
+                  color: Theme.of(context).colorScheme.secondary,
+                  fontSize: 28.sp,
+                  fontWeight: FontWeight.w400,
+                ),
+                SizedBox(height: 18.h),
+                buildDetailTilesColumn(context),
+                SizedBox(height: 35.h),
+                buildAboutEvent(context),
+                SizedBox(height: 50.h),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 22.w),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
                         children: [
-                          Column(
-                            children: [
-                              ShaderMask(
-                                blendMode: BlendMode.srcIn,
-                                shaderCallback: (Rect bounds) => LinearGradient(
-                                  begin: Alignment.topCenter,
-                                  end: Alignment.bottomCenter,
-                                  colors: [
-                                    lightOrangeColor,
-                                    darkOrangeColor,
-                                  ],
-                                  tileMode: TileMode.mirror,
-                                ).createShader(bounds),
-                                child: AirBnBText(
-                                  'REVIEWS',
-                                  textAlign: TextAlign.center,
-                                  fontSize: 16.sp,
-                                  fontWeight: FontWeight.w500,
-                                  height: 0,
-                                ),
-                              ),
-                              SizedBox(height: 10.h),
-                              Container(
-                                height: 3.h,
-                                width: 72.w,
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(
-                                    begin: Alignment.topCenter,
-                                    end: Alignment.bottomCenter,
-                                    colors: [
-                                      lightOrangeColor,
-                                      darkOrangeColor,
-                                    ],
-                                  ),
-                                  borderRadius: BorderRadius.circular(10.r),
-                                ),
-                              ),
-                            ],
-                          ),
                           ShaderMask(
                             blendMode: BlendMode.srcIn,
                             shaderCallback: (Rect bounds) => LinearGradient(
@@ -207,39 +167,73 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                               ],
                               tileMode: TileMode.mirror,
                             ).createShader(bounds),
-                            child: Container(
-                              padding: EdgeInsets.fromLTRB(5.w, 5.h, 6.w, 5.h),
-                              decoration: ShapeDecoration(
-                                shape: RoundedRectangleBorder(
-                                  side: BorderSide(
-                                    width: 1.sp,
-                                  ),
-                                  borderRadius: BorderRadius.circular(7),
-                                ),
-                              ),
-                              child: Row(
-                                children: [
-                                  SvgPicture.asset(
-                                    'assets/svg/event/message-outline.svg',
-                                  ),
-                                  SizedBox(width: 5.w),
-                                  DMSansText(
-                                    'Comment',
-                                    textAlign: TextAlign.center,
-                                    fontSize: 12.sp,
-                                    fontWeight: FontWeight.w400,
-                                  )
+                            child: AirBnBText(
+                              'REVIEWS',
+                              textAlign: TextAlign.center,
+                              fontSize: 16.sp,
+                              fontWeight: FontWeight.w500,
+                              height: 0,
+                            ),
+                          ),
+                          SizedBox(height: 10.h),
+                          Container(
+                            height: 3.h,
+                            width: 72.w,
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  lightOrangeColor,
+                                  darkOrangeColor,
                                 ],
                               ),
+                              borderRadius: BorderRadius.circular(10.r),
                             ),
-                          )
+                          ),
                         ],
                       ),
-                    ),
-                    SizedBox(height: 50.h),
-                  ],
+                      ShaderMask(
+                        blendMode: BlendMode.srcIn,
+                        shaderCallback: (Rect bounds) => LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [
+                            lightOrangeColor,
+                            darkOrangeColor,
+                          ],
+                          tileMode: TileMode.mirror,
+                        ).createShader(bounds),
+                        child: Container(
+                          padding: EdgeInsets.fromLTRB(5.w, 5.h, 6.w, 5.h),
+                          decoration: ShapeDecoration(
+                            shape: RoundedRectangleBorder(
+                              side: BorderSide(
+                                width: 1.sp,
+                              ),
+                              borderRadius: BorderRadius.circular(7),
+                            ),
+                          ),
+                          child: Row(
+                            children: [
+                              SvgPicture.asset(
+                                'assets/svg/event/message-outline.svg',
+                              ),
+                              SizedBox(width: 5.w),
+                              DMSansText(
+                                'Comment',
+                                textAlign: TextAlign.center,
+                                fontSize: 12.sp,
+                                fontWeight: FontWeight.w400,
+                              )
+                            ],
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
                 ),
-      
+                SizedBox(height: 50.h),
               ],
             ),
           )
