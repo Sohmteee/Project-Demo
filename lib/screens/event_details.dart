@@ -133,10 +133,14 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
             flexibleSpace: FlexibleSpaceBar(
               background: buildImageStack(),
             ),
-            
           ),
+          SliverList(
+            delegate: SliverChildListDelegate(
+              [],
+            ),
+          )
         ],
-        ),
+      ),
     );
   }
 
