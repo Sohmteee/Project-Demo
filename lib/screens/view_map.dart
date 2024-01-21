@@ -24,7 +24,7 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
         title: Container(
           width: 262.w,
           height: 51.h,
-          margin: EdgeInsets.all(20.sp),
+          margin: EdgeInsets.only(left: 20.sp),
           decoration: ShapeDecoration(
             color: Colors.white,
             shape: RoundedRectangleBorder(
@@ -44,6 +44,9 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
             ],
           ),
         ),
+        actions: [
+          
+        ],
       ),
       body: Container(
         decoration: const BoxDecoration(
