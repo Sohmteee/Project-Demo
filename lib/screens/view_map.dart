@@ -45,9 +45,12 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
           ),
         ),
         actions: [
-          Image.asset(
-            'assets/images/view-map/locate.png',
-            width: 51.w,
+          Padding(
+            padding: EdgeInsets.all(12.sp),
+            child: Image.asset(
+              'assets/images/view-map/locate.png',
+              width: 51.w,
+            ),
           ),
         ],
       ),
@@ -57,38 +60,6 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
             image: AssetImage('assets/images/view-map/map.png'),
             fit: BoxFit.fill,
           ),
-        ),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Container(
-                  width: 262.w,
-                  height: 51.h,
-                  margin: EdgeInsets.only(left: 20.sp),
-                  decoration: ShapeDecoration(
-                    color: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      side: const BorderSide(
-                        width: 1,
-                        color: Color(0xFFEEEEEE),
-                      ),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    shadows: const [
-                      BoxShadow(
-                        color: Color(0x7FD3D1D8),
-                        blurRadius: 60,
-                        offset: Offset(0, 40),
-                        spreadRadius: 0,
-                      )
-                    ],
-                  ),
-                ),
-                
-              ],
-            ),
-          ],
         ),
       ),
     );
