@@ -24,8 +24,8 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
         toolbarHeight: 70.h,
         title: Container(
           width: 262.w,
-          height: 51.h,
-          margin: EdgeInsets.only(top: 15.h, left: 20.sp),
+          height: 50.h,
+          margin: EdgeInsets.only(top: 15.h, bottom: 10.h, left: 20.sp),
           decoration: ShapeDecoration(
             color: Colors.white,
             shape: RoundedRectangleBorder(
@@ -47,7 +47,7 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
         ),
         actions: [
           Container(
-            margin: EdgeInsets.only(top: 15.h, right: 25.sp),
+            margin: EdgeInsets.only(top: 15.h, bottom: 10.h, right: 25.sp),
             padding: EdgeInsets.all(12.sp),
             width: 50.w,
             height: 50.h,
