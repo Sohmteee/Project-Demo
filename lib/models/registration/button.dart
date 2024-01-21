@@ -91,7 +91,7 @@ class LoginOption extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final themeProvider = Provider.of<ThemeProvider>(context);
+    final themeProvider = context.watch<ThemeProvider>();
 
     return ZoomTapAnimation(
       onTap: onPressed,

@@ -20,7 +20,7 @@ class NearbyEventsScreen extends StatefulWidget {
 class _NearbyEventsScreenState extends State<NearbyEventsScreen> {
   @override
   Widget build(BuildContext context) {
-    final themeProvider = Provider.of<ThemeProvider>(context);
+    final themeProvider = context.watch<ThemeProvider>();
 
     return Scaffold(
       appBar: AppBar(

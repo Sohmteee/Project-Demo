@@ -17,8 +17,8 @@ class NotificationsScreen extends StatefulWidget {
 class _NotificationsScreenState extends State<NotificationsScreen> {
   @override
   Widget build(BuildContext context) {
-    final themeProvider = Provider.of<ThemeProvider>(context);
-    final provider = Provider.of<NotificationProvider>(context);
+    final themeProvider = context.watch<ThemeProvider>();
+    final notificationProvider = context.watch<NotificationProvider>();
 
     return Scaffold(
       extendBodyBehindAppBar: true,
@@ -57,41 +57,33 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                 )
               : null,
         ),
-        child: provider.notificatons.isEmpty
-            ? Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SvgPicture.asset(
-                    'assets/svg/no-notification.svg',
-                    width: 136.w,
-                    height: 168.5.h,
-                  ),
-                  SizedBox(height: 40.h),
-                  AirBnBText(
-                    'No Notifications!',
-                    textAlign: TextAlign.center,
-                    color: Theme.of(context).colorScheme.secondary,
-                    fontSize: 18.sp,
-                    fontWeight: FontWeight.w500,
-                  ),
-                  SizedBox(height: 7.h),
-                  AirBnBText(
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor',
-                    textAlign: TextAlign.center,
-                    color: Theme.of(context)
-                        .colorScheme
-                        .secondary
-                        .withOpacity(0.7),
-                    fontSize: 16.sp,
-                    fontWeight: FontWeight.w400,
-                  ),
-                ],
+        child: notificationProvider.notificatons.isEmpty
+            ? Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SvgPicture.asset(
+                      'assets/svg/no-notification.svg',
+                      width: 136.w,
+                      height: 168.5.h,
+                    ),
+                    SizedBox(height: 40.h),
+                    AirBnBText(
+                      'No notifications, you\'re all caught up!',
+                      textAlign: TextAlign.center,
+                      color: Theme.of(context).colorScheme.secondary,
+                      fontSize: 18.sp,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ],
+                ),
               )
             : ListView.builder(
                 itemCount: 3,
                 physics: const BouncingScrollPhysics(),
                 itemBuilder: (context, index) {
-                  DateTime time = provider.notificatons[index]['time'];
+                  DateTime time = notificationProvider.notificatons[index]['time'];
                   String timeToString = DateTime.now()
                               .difference(time)
                               .inMinutes <
@@ -136,7 +128,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                                 ),
                                 TextSpan(
                                   text:
-                                      '<<${provider.notificatons[index]['comment']}>>',
+                                      '<<${notificationProvider.notificatons[index]['comment']}>>',
                                   style: TextStyle(
                                     color: const Color(0xFFFFB459),
                                     fontSize: 14.sp,

@@ -4,11 +4,9 @@ import 'dart:async';
 
 import 'package:blur/blur.dart';
 import 'package:countries_flag/countries_flag.dart';
-import 'package:fast_cached_network_image/fast_cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_sliding_up_panel/sliding_up_panel_widget.dart';
@@ -69,7 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final themeProvider = Provider.of<ThemeProvider>(context);
+    final themeProvider = context.watch<ThemeProvider>();
 
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: const SystemUiOverlayStyle(
@@ -740,7 +738,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         'title': 'My Events',
         'onTap': () {
-          Navigator.pushNamed(context, '/events');
+          // Navigator.pushNamed(context, '/events');
         },
       },
       {
@@ -816,34 +814,11 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(1000.r),
-                  child: FastCachedImage(
+                  child: Image.asset(
+                    profilePath,
                     width: 60.w,
                     height: 60.w,
-                    url: profilePath,
                     fit: BoxFit.cover,
-                    fadeInDuration: const Duration(seconds: 1),
-                    errorBuilder: (context, exception, stacktrace) {
-                      return Container(
-                        width: 60.w,
-                        height: 60.w,
-                        decoration: const BoxDecoration(
-                          color: Colors.grey,
-                          shape: BoxShape.circle,
-                        ),
-                      );
-                    },
-                    loadingBuilder: (context, progress) {
-                      return Container(
-                        width: 60.w,
-                        height: 60.w,
-                        decoration: const BoxDecoration(
-                          color: Colors.grey,
-                          shape: BoxShape.circle,
-                        ),
-                      ).animate().shimmer(
-                            delay: 1.seconds,
-                          );
-                    },
                   ),
                 ),
                 SizedBox(height: 10.h),
@@ -949,16 +924,25 @@ class _HomeScreenState extends State<HomeScreen> {
           builder: (context) {
             return Dialog(
               alignment: Alignment.bottomCenter,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.vertical(
+                  top: Radius.circular(20.r),
+                ),
+              ),
+              insetPadding: const EdgeInsets.all(0),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Container(
                     padding: EdgeInsets.symmetric(
-                      horizontal: 9.w,
+                      horizontal: 15.w,
+                      vertical: 10.h,
                     ),
                     // color: themeProvider.themeType == ThemeType.light
                     //     ? lightBackgroundColor
                     //     : darkBackgroundColor,
+
+                    width: double.maxFinite,
                     child: Column(
                       children: List.generate(newPopUpItems.length, (index) {
                         return Container(
@@ -971,7 +955,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           decoration: BoxDecoration(
                             color: newPopUpItems[index]['background-color'],
-                            borderRadius: BorderRadius.circular(3.r),
+                            borderRadius: BorderRadius.circular(8.r),
                           ),
                           child: Row(
                             children: [
@@ -1051,8 +1035,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 50.w),
                     child: ArrowButton(
-                      text: 'EXPLOR MORE EVENTS',
-                      onPressed: () {},
+                      text: 'EXPLORE MORE EVENTS',
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/events');
+                      },
                     ),
                   ),
                   SizedBox(height: 30.h),
@@ -1453,38 +1439,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         ClipRRect(
                           borderRadius: BorderRadius.circular(20.r),
-                          child: FastCachedImage(
-                            url: upcomingEvents[index]['image'],
+                          child: Image.asset(
+                            upcomingEvents[index]['image'],
                             width: 218.w,
                             height: 131.h,
                             fit: BoxFit.cover,
-                            fadeInDuration: const Duration(seconds: 1),
-                            errorBuilder: (context, exception, stacktrace) {
-                              return Container(
-                                width: 218.w,
-                                height: 131.h,
-                                decoration: BoxDecoration(
-                                  color: Colors.grey[300],
-                                  borderRadius: BorderRadius.circular(20.r),
-                                ),
-                                child: const Icon(
-                                  Icons.error,
-                                  color: Colors.red,
-                                ),
-                              );
-                            },
-                            loadingBuilder: (context, progress) {
-                              return Container(
-                                width: 218.w,
-                                height: 131.h,
-                                decoration: BoxDecoration(
-                                  color: Colors.grey,
-                                  borderRadius: BorderRadius.circular(20.r),
-                                ),
-                              ).animate().shimmer(
-                                    delay: 1.seconds,
-                                  );
-                            },
                           ),
                         ),
                         Positioned(
@@ -1707,7 +1666,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             overflow: TextOverflow.ellipsis,
                           ),
                           SizedBox(height: 10.h),
-                          buildGoingRow(),
+                          buildGoingRow(themeProvider),
                           SizedBox(height: 10.h),
                           Row(
                             children: [
@@ -1741,7 +1700,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  Row buildGoingRow() {
+  Row buildGoingRow(ThemeProvider themeProvider) {
     return Row(
       children: [
         Stack(
@@ -1751,44 +1710,19 @@ class _HomeScreenState extends State<HomeScreen> {
               left: 40.w,
               child: Container(
                 padding: EdgeInsets.all(2.sp),
-                decoration: const BoxDecoration(
-                  color: Colors.white,
+                decoration: BoxDecoration(
+                  color: themeProvider.themeType == ThemeType.light
+                      ? lightBackgroundColor
+                      : darkBackgroundColor,
                   shape: BoxShape.circle,
                 ),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(1000.r),
-                  child: FastCachedImage(
+                  child: Image.asset(
+                    dp3Path,
                     width: 24.w,
                     height: 24.w,
-                    url: dp3Path,
                     fit: BoxFit.cover,
-                    fadeInDuration: const Duration(seconds: 1),
-                    errorBuilder: (context, exception, stacktrace) {
-                      return Container(
-                        width: 24.w,
-                        height: 24.w,
-                        decoration: BoxDecoration(
-                          color: Colors.grey[300],
-                          shape: BoxShape.circle,
-                        ),
-                        child: const Icon(
-                          Icons.error,
-                          color: Colors.red,
-                        ),
-                      );
-                    },
-                    loadingBuilder: (context, progress) {
-                      return Container(
-                        width: 22.w,
-                        height: 22.w,
-                        decoration: const BoxDecoration(
-                          color: Colors.grey,
-                          shape: BoxShape.circle,
-                        ),
-                      ).animate().shimmer(
-                            delay: 1.seconds,
-                          );
-                    },
                   ),
                 ),
               ),
@@ -1797,44 +1731,19 @@ class _HomeScreenState extends State<HomeScreen> {
               left: 20.w,
               child: Container(
                 padding: EdgeInsets.all(2.sp),
-                decoration: const BoxDecoration(
-                  color: Colors.white,
+                decoration: BoxDecoration(
+                  color: themeProvider.themeType == ThemeType.light
+                      ? lightBackgroundColor
+                      : darkBackgroundColor,
                   shape: BoxShape.circle,
                 ),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(1000.r),
-                  child: FastCachedImage(
+                  child: Image.asset(
+                    dp2Path,
                     width: 24.w,
                     height: 24.w,
-                    url: dp2Path,
                     fit: BoxFit.cover,
-                    fadeInDuration: const Duration(seconds: 1),
-                    errorBuilder: (context, exception, stacktrace) {
-                      return Container(
-                        width: 24.w,
-                        height: 24.w,
-                        decoration: BoxDecoration(
-                          color: Colors.grey[300],
-                          shape: BoxShape.circle,
-                        ),
-                        child: const Icon(
-                          Icons.error,
-                          color: Colors.red,
-                        ),
-                      );
-                    },
-                    loadingBuilder: (context, progress) {
-                      return Container(
-                        width: 22.w,
-                        height: 22.w,
-                        decoration: const BoxDecoration(
-                          color: Colors.grey,
-                          shape: BoxShape.circle,
-                        ),
-                      ).animate().shimmer(
-                            delay: 1.seconds,
-                          );
-                    },
                   ),
                 ),
               ),
@@ -1842,44 +1751,19 @@ class _HomeScreenState extends State<HomeScreen> {
             Positioned(
               child: Container(
                 padding: EdgeInsets.all(2.sp),
-                decoration: const BoxDecoration(
-                  color: Colors.white,
+                decoration: BoxDecoration(
+                  color: themeProvider.themeType == ThemeType.light
+                      ? lightBackgroundColor
+                      : darkBackgroundColor,
                   shape: BoxShape.circle,
                 ),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(1000.r),
-                  child: FastCachedImage(
+                  child: Image.asset(
+                    dp1Path,
                     width: 24.w,
                     height: 24.w,
-                    url: dp1Path,
                     fit: BoxFit.cover,
-                    fadeInDuration: const Duration(seconds: 1),
-                    errorBuilder: (context, exception, stacktrace) {
-                      return Container(
-                        width: 24.w,
-                        height: 24.w,
-                        decoration: BoxDecoration(
-                          color: Colors.grey[300],
-                          shape: BoxShape.circle,
-                        ),
-                        child: const Icon(
-                          Icons.error,
-                          color: Colors.red,
-                        ),
-                      );
-                    },
-                    loadingBuilder: (context, progress) {
-                      return Container(
-                        width: 22.w,
-                        height: 22.w,
-                        decoration: const BoxDecoration(
-                          color: Colors.grey,
-                          shape: BoxShape.circle,
-                        ),
-                      ).animate().shimmer(
-                            delay: 1.seconds,
-                          );
-                    },
                   ),
                 ),
               ),
@@ -2163,13 +2047,13 @@ class _HomeScreenState extends State<HomeScreen> {
         ZoomTapAnimation(
           onTap: () {
             final provider =
-                Provider.of<NotificationProvider>(context, listen: false);
+                context.read<NotificationProvider>();
             provider.showNoNotification();
             Navigator.pushNamed(context, '/notifications');
           },
           onLongTap: () {
             final provider =
-                Provider.of<NotificationProvider>(context, listen: false);
+                context.read<NotificationProvider>();
             provider.showNotifications();
             Navigator.pushNamed(context, '/notifications');
           },

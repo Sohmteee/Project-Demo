@@ -29,13 +29,12 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   void initState() {
     super.initState();
-
     panelController.collapse();
   }
 
   @override
   Widget build(BuildContext context) {
-    final themeProvider = Provider.of<ThemeProvider>(context);
+    final themeProvider = context.watch<ThemeProvider>();
     bool isOpenFilter = false;
 
     return Stack(
@@ -43,7 +42,7 @@ class _SearchScreenState extends State<SearchScreen> {
         Scaffold(
           appBar: AppBar(
             elevation: 0,
-            toolbarHeight: 60.h,
+            toolbarHeight: 40.h,
             leading: BackButton(color: Theme.of(context).colorScheme.secondary),
             title: AirBnBText(
               'Search',
@@ -52,132 +51,9 @@ class _SearchScreenState extends State<SearchScreen> {
               fontWeight: FontWeight.w500,
             ),
           ),
-          backgroundColor: Colors.white,
-          body: Container(
-            padding: EdgeInsets.symmetric(horizontal: 24.w),
-            decoration: BoxDecoration(
-              color: (themeProvider.themeType == ThemeType.light)
-                  ? Vx.gray100
-                  : null,
-              image: (themeProvider.themeType == ThemeType.dark)
-                  ? const DecorationImage(
-                      image: AssetImage(
-                          'assets/images/dark-gradient-background.png'),
-                      fit: BoxFit.cover,
-                    )
-                  : null,
-            ),
-            child: Column(
-              children: [
-                buildSearchRow(context),
-                Expanded(
-                  child: ListView.builder(
-                    itemCount: 10,
-                    physics: const BouncingScrollPhysics(),
-                    itemBuilder: (context, index) {
-                      return Container(
-                        height: 112.h,
-                        padding: EdgeInsets.all(10.sp),
-                        margin: EdgeInsets.symmetric(vertical: 7.h),
-                        decoration: BoxDecoration(
-                          color: themeProvider.themeType == ThemeType.light
-                              ? lightBackgroundColor
-                              : darkBackgroundColor,
-                          borderRadius: BorderRadius.circular(18.r),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Color(0x0F4F5588),
-                              blurRadius: 30,
-                              offset: Offset(0, 8),
-                              spreadRadius: 0,
-                            )
-                          ],
-                        ),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(10.r),
-                              child: Image.asset(
-                                'assets/images/home/near-you-2.png',
-                                width: 79.w,
-                                height: 92.h,
-                              ),
-                            ),
-                            SizedBox(width: 18.w),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      AirBnBText(
-                                        '1ST MAY- SAT -2:00 PM',
-                                        color: const Color(0xFFFFB459),
-                                        fontSize: 12.sp,
-                                        fontWeight: FontWeight.w400,
-                                      ),
-                                      SizedBox(height: 3.h),
-                                      AirBnBText(
-                                        'International kids safe parents night out',
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .secondary,
-                                        fontSize: 15.sp,
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                      SizedBox(height: 5.h),
-                                      DMSansText(
-                                        'FREE - \$25',
-                                        textAlign: TextAlign.center,
-                                        color: const Color(0xFFFFB459),
-                                        fontSize: 11.sp,
-                                        fontWeight: FontWeight.w700,
-                                      ),
-                                    ],
-                                  ),
-                                  Row(
-                                    children: [
-                                      SvgPicture.asset(
-                                        'assets/svg/map-pin.svg',
-                                        height: 12.h,
-                                        width: 12.w,
-                                      ),
-                                      SizedBox(width: 5.w),
-                                      DMSansText(
-                                        'Radius Gallery • Santa Cruz',
-                                        color: const Color(0xFF747688),
-                                        fontSize: 11,
-                                        fontWeight: FontWeight.w400,
-                                      )
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(
-                                left: 8.w,
-                              ),
-                              child: Icon(
-                                IconlyLight.bookmark,
-                                size: 16.sp,
-                                color: Theme.of(context).colorScheme.secondary,
-                              ),
-                            ),
-                          ],
-                        ),
-                      );
-                    },
-                  ),
-                ),
-              ],
-            ),
-          ),
+          backgroundColor:
+              (themeProvider.themeType == ThemeType.light) ? Vx.gray100 : null,
+          body: buildSearchBody(themeProvider, context),
         ),
         if (panelController.status != SlidingUpPanelStatus.collapsed)
           GestureDetector(
@@ -368,6 +244,136 @@ class _SearchScreenState extends State<SearchScreen> {
                 ),
         ),
       ],
+    );
+  }
+
+  Container buildSearchBody(ThemeProvider themeProvider, BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: (themeProvider.themeType == ThemeType.light) ? Vx.gray100 : null,
+        image: (themeProvider.themeType == ThemeType.dark)
+            ? const DecorationImage(
+                image: AssetImage('assets/images/dark-gradient-background.png'),
+                fit: BoxFit.cover,
+              )
+            : null,
+      ),
+      child: Column(
+        children: [
+          Container(
+            color: Colors.white,
+            padding: EdgeInsets.only(
+              left: 24.w,
+              right: 24.w,
+              bottom: 10.h,
+            ),
+            child: buildSearchRow(context),
+          ),
+          Expanded(
+            child: ListView.builder(
+              itemCount: 10,
+              physics: const BouncingScrollPhysics(),
+              padding: EdgeInsets.symmetric(horizontal: 24.w),
+              itemBuilder: (context, index) {
+                return Container(
+                  height: 112.h,
+                  padding: EdgeInsets.all(10.sp),
+                  margin: EdgeInsets.symmetric(vertical: 7.h),
+                  decoration: BoxDecoration(
+                    color: themeProvider.themeType == ThemeType.light
+                        ? lightBackgroundColor
+                        : darkBackgroundColor,
+                    borderRadius: BorderRadius.circular(18.r),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Color(0x0F4F5588),
+                        blurRadius: 30,
+                        offset: Offset(0, 8),
+                        spreadRadius: 0,
+                      )
+                    ],
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(10.r),
+                        child: Image.asset(
+                          'assets/images/home/near-you-2.png',
+                          width: 79.w,
+                          height: 92.h,
+                        ),
+                      ),
+                      SizedBox(width: 18.w),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                AirBnBText(
+                                  '1ST MAY- SAT -2:00 PM',
+                                  color: const Color(0xFFFFB459),
+                                  fontSize: 12.sp,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                                SizedBox(height: 3.h),
+                                AirBnBText(
+                                  'International kids safe parents night out',
+                                  color:
+                                      Theme.of(context).colorScheme.secondary,
+                                  fontSize: 15.sp,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                                SizedBox(height: 5.h),
+                                DMSansText(
+                                  'FREE - \$25',
+                                  textAlign: TextAlign.center,
+                                  color: const Color(0xFFFFB459),
+                                  fontSize: 11.sp,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                SvgPicture.asset(
+                                  'assets/svg/map-pin.svg',
+                                  height: 12.h,
+                                  width: 12.w,
+                                ),
+                                SizedBox(width: 5.w),
+                                DMSansText(
+                                  'Radius Gallery • Santa Cruz',
+                                  color: const Color(0xFF747688),
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.w400,
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(
+                          left: 8.w,
+                        ),
+                        child: Icon(
+                          IconlyLight.bookmark,
+                          size: 16.sp,
+                          color: Theme.of(context).colorScheme.secondary,
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ),
+          ),
+        ],
+      ),
     );
   }
 
