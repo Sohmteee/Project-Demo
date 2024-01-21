@@ -74,6 +74,7 @@ flutter:
     - assets/images/onboarding/
     - assets/images/home/
     - assets/images/event/
+    - assets/images/view-map/
     - assets/svg/
     - assets/svg/drawer/
     - assets/svg/onboarding/
