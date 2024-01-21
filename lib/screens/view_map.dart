@@ -13,9 +13,7 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
-      const SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent,
-      ),
+      const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
     );
     return Scaffold(
       extendBodyBehindAppBar: true,
