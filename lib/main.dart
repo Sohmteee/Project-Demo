@@ -90,6 +90,7 @@ class MyApp extends StatelessWidget {
             '/nearby-events': (context) => const NearbyEventsScreen(),
             '/events': (context) => const EventsScreen(),
             '/event-details': (context) => const EventDetailsScreen(),
+            '/view-map'
           },
         );
       },

@@ -12,7 +12,12 @@ class _ViewMapState extends State<ViewMap> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(),
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: Image.asset('assets/images/view-map/map.png').image,
+            fit: BoxFit.contain,
+          ),
+        ),
       ),
     );
   }
