@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ViewMapScreen extends StatefulWidget {
@@ -11,6 +12,13 @@ class ViewMapScreen extends StatefulWidget {
 class _ViewMapScreenState extends State<ViewMapScreen> {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarBrightness: Brightness.dark,
+        
+      ),
+    );
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
