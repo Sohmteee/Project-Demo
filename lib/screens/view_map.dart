@@ -10,6 +10,10 @@ class ViewMap extends StatefulWidget {
 class _ViewMapState extends State<ViewMap> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(),
+      ),
+    );
   }
 }
