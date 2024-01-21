@@ -17,7 +17,7 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
     );
     return Scaffold(
       extendBodyBehindAppBar: true,
-      /* appBar: AppBar(
+      appBar: AppBar(
         elevation: 0,
         automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
@@ -50,7 +50,7 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
             width: 51.w,
           ),
         ],
-      ), */
+      ),
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
@@ -60,41 +60,33 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
         ),
         child: Column(
           children: [
-            Padding(
-              padding: EdgeInsets.symmetric(
-                vertical: 30.h,
-              ),
-              child: Row(
-                children: [
-                  Container(
-                    width: 262.w,
-                    height: 51.h,
-                    margin: EdgeInsets.only(left: 20.sp),
-                    decoration: ShapeDecoration(
-                      color: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        side: const BorderSide(
-                          width: 1,
-                          color: Color(0xFFEEEEEE),
-                        ),
-                        borderRadius: BorderRadius.circular(12),
+            Row(
+              children: [
+                Container(
+                  width: 262.w,
+                  height: 51.h,
+                  margin: EdgeInsets.only(left: 20.sp),
+                  decoration: ShapeDecoration(
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      side: const BorderSide(
+                        width: 1,
+                        color: Color(0xFFEEEEEE),
                       ),
-                      shadows: const [
-                        BoxShadow(
-                          color: Color(0x7FD3D1D8),
-                          blurRadius: 60,
-                          offset: Offset(0, 40),
-                          spreadRadius: 0,
-                        )
-                      ],
+                      borderRadius: BorderRadius.circular(12),
                     ),
+                    shadows: const [
+                      BoxShadow(
+                        color: Color(0x7FD3D1D8),
+                        blurRadius: 60,
+                        offset: Offset(0, 40),
+                        spreadRadius: 0,
+                      )
+                    ],
                   ),
-                  Image.asset(
-                    'assets/images/view-map/locate.png',
-                    width: 51.w,
-                  ),
-                ],
-              ),
+                ),
+                
+              ],
             ),
           ],
         ),
