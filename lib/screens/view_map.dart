@@ -15,7 +15,7 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: Image.asset('assets/images/view-map/map.png').image,
-            fit: BoxFit.contain,
+            fit: BoxFit.fill,
           ),
         ),
       ),
