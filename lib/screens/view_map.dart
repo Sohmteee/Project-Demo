@@ -45,7 +45,10 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
           ),
         ),
         actions: [
-          
+          Image.asset(
+            'assets/images/view-map/locate.png',
+            width: 51.w,
+          ),
         ],
       ),
       body: Container(
