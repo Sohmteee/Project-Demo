@@ -44,13 +44,12 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
             ],
           ),
         ),
-        
         actions: [
           Padding(
-            padding: EdgeInsets.all(12.sp),
+            padding: EdgeInsets.only(right: 12.sp),
             child: Image.asset(
               'assets/images/view-map/locate.png',
-              width: 51.w,
+              width: 40.w,
             ),
           ),
         ],
