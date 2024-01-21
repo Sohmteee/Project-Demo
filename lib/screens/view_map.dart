@@ -21,7 +21,7 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
         elevation: 0,
         automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
-        toolbarHeight: 60.h,
+        toolbarHeight: 70.h,
         title: Container(
           width: 262.w,
           height: 51.h,
@@ -47,7 +47,7 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
         ),
         actions: [
           Container(
-            margin: EdgeInsets.only(right: 25.sp),
+            margin: EdgeInsets.only(top: 20.h, right: 25.sp),
             padding: EdgeInsets.all(12.sp),
             width: 50.w,
             height: 50.h,
@@ -71,7 +71,6 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
             ),
             child: Image.asset(
               'assets/images/view-map/locate.png',
-              width: 38.w,
             ),
           ),
         ],
