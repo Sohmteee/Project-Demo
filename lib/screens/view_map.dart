@@ -61,7 +61,9 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: EdgeInsets.symmetric(
+                vertical: 30.h,
+              ),
               child: Row(
                 children: [
                   Container(
