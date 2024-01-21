@@ -58,6 +58,11 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
             fit: BoxFit.fill,
           ),
         ),
+        child: Column(
+          children: [
+            Row
+          ],
+        ),
       ),
     );
   }
