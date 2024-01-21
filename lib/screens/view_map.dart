@@ -12,9 +12,9 @@ class ViewMapScreen extends StatefulWidget {
 class _ViewMapScreenState extends State<ViewMapScreen> {
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(
+    /* SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
-    );
+    ); */
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -33,13 +33,13 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
                 width: 1,
                 color: Color(0xFFEEEEEE),
               ),
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(12.r),
             ),
-            shadows: const [
+            shadows: [
               BoxShadow(
-                color: Color(0x7FD3D1D8),
-                blurRadius: 60,
-                offset: Offset(0, 40),
+                color: const Color(0x7FD3D1D8),
+                blurRadius: 60.r,
+                offset: const Offset(0, 40),
                 spreadRadius: 0,
               )
             ],
@@ -58,13 +58,13 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
                   width: 1,
                   color: Color(0xFFEEEEEE),
                 ),
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(12.r),
               ),
-              shadows: const [
+              shadows: [
                 BoxShadow(
-                  color: Color(0x7FD3D1D8),
-                  blurRadius: 60,
-                  offset: Offset(0, 40),
+                  color: const Color(0x7FD3D1D8),
+                  blurRadius: 60.r,
+                  offset: const Offset(0, 40),
                   spreadRadius: 0,
                 )
               ],
