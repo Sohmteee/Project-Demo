@@ -8,6 +8,7 @@ import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/models/registration/button.dart';
 import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/theme.dart';
+import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 class EventDetailsScreen extends StatefulWidget {
   const EventDetailsScreen({super.key});
@@ -505,47 +506,49 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
             ),
             title: 'Gala Convention Center',
             subtitle: '36 Guild Street London, UK ',
-            trailing: Container(
-              padding: EdgeInsets.symmetric(
-                horizontal: 7.w,
-                vertical: 6.h,
-              ),
-              decoration: ShapeDecoration(
-                gradient: LinearGradient(
-                  begin: const Alignment(0, -1),
-                  end: const Alignment(0, 1),
-                  colors: [
-                    lightOrangeColor.withOpacity(.12),
-                    darkOrangeColor.withOpacity(.12),
+            trailing: ZoomTapAnimation(
+              child: Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 7.w,
+                  vertical: 6.h,
+                ),
+                decoration: ShapeDecoration(
+                  gradient: LinearGradient(
+                    begin: const Alignment(0, -1),
+                    end: const Alignment(0, 1),
+                    colors: [
+                      lightOrangeColor.withOpacity(.12),
+                      darkOrangeColor.withOpacity(.12),
+                    ],
+                  ),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(7.r)),
+                  shadows: const [
+                    BoxShadow(
+                      color: Color(0x144AD2E4),
+                      blurRadius: 20,
+                      offset: Offset(0, 8),
+                      spreadRadius: 0,
+                    )
                   ],
                 ),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(7.r)),
-                shadows: const [
-                  BoxShadow(
-                    color: Color(0x144AD2E4),
-                    blurRadius: 20,
-                    offset: Offset(0, 8),
-                    spreadRadius: 0,
-                  )
-                ],
-              ),
-              child: ShaderMask(
-                blendMode: BlendMode.srcIn,
-                shaderCallback: (Rect bounds) => LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    lightOrangeColor,
-                    darkOrangeColor,
-                  ],
-                  tileMode: TileMode.mirror,
-                ).createShader(bounds),
-                child: DMSansText(
-                  'View Map',
-                  textAlign: TextAlign.center,
-                  fontSize: 12.sp,
-                  fontWeight: FontWeight.w700,
+                child: ShaderMask(
+                  blendMode: BlendMode.srcIn,
+                  shaderCallback: (Rect bounds) => LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      lightOrangeColor,
+                      darkOrangeColor,
+                    ],
+                    tileMode: TileMode.mirror,
+                  ).createShader(bounds),
+                  child: DMSansText(
+                    'View Map',
+                    textAlign: TextAlign.center,
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
               ),
             ),
