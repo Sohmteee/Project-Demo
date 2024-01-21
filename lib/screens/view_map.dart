@@ -15,8 +15,6 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
     SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
-        statusBarBrightness: Brightness.dark,
-        
       ),
     );
     return Scaffold(
