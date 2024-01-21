@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ViewMap extends StatefulWidget {
-  const ViewMap({super.key});
+class ViewMapScreen extends StatefulWidget {
+  const ViewMapScreen({super.key});
 
   @override
-  State<ViewMap> createState() => _ViewMapState();
+  State<ViewMapScreen> createState() => _ViewMapScreenState();
 }
 
-class _ViewMapState extends State<ViewMap> {
+class _ViewMapScreenState extends State<ViewMapScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

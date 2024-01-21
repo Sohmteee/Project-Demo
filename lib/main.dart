@@ -19,6 +19,7 @@ import 'package:yeerlo/screens/registration/sign_in.dart';
 import 'package:yeerlo/screens/registration/sign_up.dart';
 import 'package:yeerlo/screens/registration/verification.dart';
 import 'package:yeerlo/screens/splash.dart';
+import 'package:yeerlo/screens/view_map.dart';
 
 Future<void> main() async {
   SystemChrome.setSystemUIOverlayStyle(
@@ -90,7 +91,7 @@ class MyApp extends StatelessWidget {
             '/nearby-events': (context) => const NearbyEventsScreen(),
             '/events': (context) => const EventsScreen(),
             '/event-details': (context) => const EventDetailsScreen(),
-            '/view-map'
+            '/view-map': (context) => const ViewMapScreen(),
           },
         );
       },
