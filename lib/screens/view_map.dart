@@ -11,10 +11,15 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        title: ,
+      ),
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
-            image: Image.asset('assets/images/view-map/map.png').image,
+            image: AssetImage('assets/images/view-map/map.png'),
             fit: BoxFit.fill,
           ),
         ),
