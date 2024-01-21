@@ -14,7 +14,25 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        title: ,
+        title: Container(
+            width: 262,
+            height: 51,
+            decoration: ShapeDecoration(
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                side: const BorderSide(width: 1, color: Color(0xFFEEEEEE),),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              shadows: const [
+                BoxShadow(
+                  color: Color(0x7FD3D1D8),
+                  blurRadius: 60,
+                  offset: Offset(0, 40),
+                  spreadRadius: 0,
+                )
+              ],
+            ),
+          ),
       ),
       body: Container(
         decoration: const BoxDecoration(
