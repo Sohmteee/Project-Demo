@@ -507,6 +507,9 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
             title: 'Gala Convention Center',
             subtitle: '36 Guild Street London, UK ',
             trailing: ZoomTapAnimation(
+              onTap: () {
+                Navigator.pushNamed(context, '/view-map');
+              },
               child: Container(
                 padding: EdgeInsets.symmetric(
                   horizontal: 7.w,
