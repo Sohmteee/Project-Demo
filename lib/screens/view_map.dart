@@ -119,7 +119,7 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(10.r),
                     child: Image.asset(
-                      'assets/images/home/near-you-2.png',
+                      'assets/images/view-map/map-pic-cover.png',
                       width: 79.w,
                       height: 92.h,
                     ),
