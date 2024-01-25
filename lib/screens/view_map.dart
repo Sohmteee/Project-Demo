@@ -15,6 +15,8 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
     /* SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
     ); */
+    final themeProvider = context.watch<ThemeProvider>();
+
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
