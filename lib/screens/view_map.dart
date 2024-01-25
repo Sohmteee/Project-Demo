@@ -98,7 +98,7 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
             Container(
               height: 112.h,
               padding: EdgeInsets.fromLTRB(10.w, 14.h, 14.w, 14.h),
-              margin: EdgeInsets.symmetric(vertical: 7.h),
+              margin: EdgeInsets.symmetric(vertical: 40.h, horizontal: 24.w),
               decoration: BoxDecoration(
                 color: themeProvider.themeType == ThemeType.light
                     ? lightBackgroundColor
@@ -134,14 +134,14 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             AirBnBText(
-                              '1ST MAY- SAT -2:00 PM',
+                              'Wed, Apr 28 • 5:30 PM',
                               color: const Color(0xFFFFB459),
                               fontSize: 12.sp,
                               fontWeight: FontWeight.w400,
                             ),
                             SizedBox(height: 3.h),
                             AirBnBText(
-                              'International kids safe parents night out',
+                              'Jo Malone London’s Mother’s Day Presents',
                               color: Theme.of(context).colorScheme.secondary,
                               fontSize: 15.sp,
                               fontWeight: FontWeight.w500,
