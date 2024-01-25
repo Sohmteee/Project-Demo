@@ -166,9 +166,9 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
                       left: 8.w,
                     ),
                     child: Icon(
-                      IconlyLight.bookmark,
+                      IconlyBold.bookmark,
                       size: 16.sp,
-                      color: Theme.of(context).colorScheme.secondary,
+                      color: redColorCategory,
                     ),
                   ),
                 ],
