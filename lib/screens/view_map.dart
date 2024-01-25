@@ -102,7 +102,8 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
                     Container(
                       height: 106.h,
                       padding: EdgeInsets.fromLTRB(10.w, 14.h, 14.w, 14.h),
-                      margin: EdgeInsets.symmetric(vertical: 40.h, horizontal: 24.w),
+                      margin: EdgeInsets.symmetric(
+                          vertical: 40.h, horizontal: 24.w),
                       decoration: BoxDecoration(
                         color: themeProvider.themeType == ThemeType.light
                             ? lightBackgroundColor
@@ -142,7 +143,8 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
                                 ),
                                 AirBnBText(
                                   'Jo Malone London’s Mother’s Day Presents',
-                                  color: Theme.of(context).colorScheme.secondary,
+                                  color:
+                                      Theme.of(context).colorScheme.secondary,
                                   fontSize: 15.sp,
                                   fontWeight: FontWeight.w500,
                                 ),
