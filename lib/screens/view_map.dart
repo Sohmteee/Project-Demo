@@ -95,89 +95,84 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
             Expanded(
               child: Container(),
             ),
-            Column(
-              children: [
-                Container(
-                  height: 106.h,
-                  padding: EdgeInsets.fromLTRB(10.w, 14.h, 14.w, 14.h),
-                  margin:
-                      EdgeInsets.symmetric(vertical: 40.h, horizontal: 24.w),
-                  decoration: BoxDecoration(
-                    color: themeProvider.themeType == ThemeType.light
-                        ? lightBackgroundColor
-                        : darkBackgroundColor,
-                    borderRadius: BorderRadius.circular(18.r),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Color(0x0F4F5588),
-                        blurRadius: 30,
-                        offset: Offset(0, 8),
-                        spreadRadius: 0,
-                      )
-                    ],
+            Container(
+              height: 106.h,
+              padding: EdgeInsets.fromLTRB(10.w, 14.h, 14.w, 14.h),
+              margin: EdgeInsets.symmetric(vertical: 40.h, horizontal: 24.w),
+              decoration: BoxDecoration(
+                color: themeProvider.themeType == ThemeType.light
+                    ? lightBackgroundColor
+                    : darkBackgroundColor,
+                borderRadius: BorderRadius.circular(18.r),
+                boxShadow: const [
+                  BoxShadow(
+                    color: Color(0x0F4F5588),
+                    blurRadius: 30,
+                    offset: Offset(0, 8),
+                    spreadRadius: 0,
+                  )
+                ],
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10.r),
+                    child: Image.asset(
+                      'assets/images/view-map/map-pic-cover.png',
+                      width: 79.w,
+                      height: 92.h,
+                    ),
                   ),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(10.r),
-                        child: Image.asset(
-                          'assets/images/view-map/map-pic-cover.png',
-                          width: 79.w,
-                          height: 92.h,
+                  SizedBox(width: 18.w),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        AirBnBText(
+                          'Wed, Apr 28 • 5:30 PM',
+                          color: const Color(0xFFFFB459),
+                          fontSize: 12.sp,
+                          fontWeight: FontWeight.w400,
                         ),
-                      ),
-                      SizedBox(width: 18.w),
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        AirBnBText(
+                          'Jo Malone London’s Mother’s Day Presents',
+                          color: Theme.of(context).colorScheme.secondary,
+                          fontSize: 15.sp,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        Row(
                           children: [
-                            AirBnBText(
-                              'Wed, Apr 28 • 5:30 PM',
-                              color: const Color(0xFFFFB459),
-                              fontSize: 12.sp,
+                            SvgPicture.asset(
+                              'assets/svg/map-pin.svg',
+                              height: 12.h,
+                              width: 12.w,
+                            ),
+                            SizedBox(width: 5.w),
+                            DMSansText(
+                              'Radius Gallery • Santa Cruz',
+                              color: const Color(0xFF747688),
+                              fontSize: 11,
                               fontWeight: FontWeight.w400,
-                            ),
-                            AirBnBText(
-                              'Jo Malone London’s Mother’s Day Presents',
-                              color: Theme.of(context).colorScheme.secondary,
-                              fontSize: 15.sp,
-                              fontWeight: FontWeight.w500,
-                            ),
-                            Row(
-                              children: [
-                                SvgPicture.asset(
-                                  'assets/svg/map-pin.svg',
-                                  height: 12.h,
-                                  width: 12.w,
-                                ),
-                                SizedBox(width: 5.w),
-                                DMSansText(
-                                  'Radius Gallery • Santa Cruz',
-                                  color: const Color(0xFF747688),
-                                  fontSize: 11,
-                                  fontWeight: FontWeight.w400,
-                                )
-                              ],
-                            ),
+                            )
                           ],
                         ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(
-                          left: 8.w,
-                        ),
-                        child: Icon(
-                          IconlyBold.bookmark,
-                          size: 16.sp,
-                          color: redColorCategory,
-                        ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                  Padding(
+                    padding: EdgeInsets.only(
+                      left: 8.w,
+                    ),
+                    child: Icon(
+                      IconlyBold.bookmark,
+                      size: 16.sp,
+                      color: redColorCategory,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
