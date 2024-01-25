@@ -92,6 +92,9 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
         child: Stack(
           alignment: Alignment.bottomCenter,
           children: [
+            Expanded(
+              child: Container(),
+            ),
             Container(
               height: 112.h,
               padding: EdgeInsets.fromLTRB(10.w, 14.h, 14.w, 14.h),
