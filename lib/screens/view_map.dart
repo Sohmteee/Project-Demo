@@ -82,8 +82,7 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
             fit: BoxFit.fill,
           ),
         ),
-        child: Expanded(
-          child: Stack(
+        child:Stack(
             children: [
               
             ],
