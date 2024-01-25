@@ -130,23 +130,17 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            AirBnBText(
-                              'Wed, Apr 28 • 5:30 PM',
-                              color: const Color(0xFFFFB459),
-                              fontSize: 12.sp,
-                              fontWeight: FontWeight.w400,
-                            ),
-                            SizedBox(height: 3.h),
-                            AirBnBText(
-                              'Jo Malone London’s Mother’s Day Presents',
-                              color: Theme.of(context).colorScheme.secondary,
-                              fontSize: 15.sp,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ],
+                        AirBnBText(
+                          'Wed, Apr 28 • 5:30 PM',
+                          color: const Color(0xFFFFB459),
+                          fontSize: 12.sp,
+                          fontWeight: FontWeight.w400,
+                        ),
+                        AirBnBText(
+                          'Jo Malone London’s Mother’s Day Presents',
+                          color: Theme.of(context).colorScheme.secondary,
+                          fontSize: 15.sp,
+                          fontWeight: FontWeight.w500,
                         ),
                         Row(
                           children: [
