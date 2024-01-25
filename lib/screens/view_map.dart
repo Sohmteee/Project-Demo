@@ -146,14 +146,6 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
                               fontSize: 15.sp,
                               fontWeight: FontWeight.w500,
                             ),
-                            SizedBox(height: 5.h),
-                            DMSansText(
-                              'FREE - \$25',
-                              textAlign: TextAlign.center,
-                              color: const Color(0xFFFFB459),
-                              fontSize: 11.sp,
-                              fontWeight: FontWeight.w700,
-                            ),
                           ],
                         ),
                         Row(
