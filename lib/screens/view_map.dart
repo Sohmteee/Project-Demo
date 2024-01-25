@@ -97,6 +97,7 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
             ),
             Positioned(
               bottom: 150.h,
+              right: 32.w,
               child: SvgPicture.asset('assets/svg/filter-circle.svg'),
             ),
             Container(
