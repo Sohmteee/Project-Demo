@@ -862,7 +862,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                     ),
                   ),
                   SizedBox(
-                    height: 300.h,
+                    height: MediaQuery.of(context).size.height * .6,
                     child: ListView.builder(
                       itemCount: friends.length,
                       itemBuilder: (BuildContext context, int index) {
