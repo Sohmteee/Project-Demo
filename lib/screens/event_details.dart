@@ -766,6 +766,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
             insetPadding: const EdgeInsets.all(0),
             child: Container(
               padding: EdgeInsets.fromLTRB(24.w, 5.h, 24.w, 24.h),
+              width: double.maxFinite,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -777,6 +778,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       color: HexColor('#B2B2B2').withOpacity(.5),
                     ),
                   ),
+                  
                 ],
               ),
             ),
