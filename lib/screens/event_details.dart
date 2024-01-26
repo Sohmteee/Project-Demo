@@ -5,6 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:yeerlo/colors/app_colors.dart';
+import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/models/registration/button.dart';
 import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/theme.dart';
@@ -766,11 +767,14 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
             child: Container(
               padding: EdgeInsets.fromLTRB(24.w, 5.h, 24.w, 24.h),
               child: Column(
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   Container(
+                    width: 26.w,
+                    height: 2.5.h,
                     margin: EdgeInsets.only(bottom: 24.h),
                     decoration: BoxDecoration(
-                      
+                      color: HexColor('#B2B2B2').withOpacity(.5),
                     ),
                   ),
                 ],
