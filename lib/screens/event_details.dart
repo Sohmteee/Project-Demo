@@ -915,7 +915,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                               ZoomTapAnimation(
                                 onTap: () {
                                   setState(() {
-                                    isTicked = !isTicked;
+                                    isTicked[index] = !isTicked[index];
                                   });
                                 },
                                 child: Container(
@@ -946,7 +946,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                                       ],
                                     ),
                                     child: SvgPicture.asset(
-                                        'assets/svg/view-map/${isTicked ? 'select' : 'no-select'}.svg')),
+                                        'assets/svg/view-map/${isTicked[index] ? 'select' : 'no-select'}.svg')),
                               ),
                             ],
                           ),
