@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_sliding_up_panel/sliding_up_panel_widget.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
@@ -809,6 +810,10 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
         )
       ],
     );
+  }
+
+  SlidingUpPanelWidget friendsPanel() {
+    return SlidingUpPanelWidget(child: child, controlHeight: controlHeight, panelController: panelController)
   }
 
   void showFriendsDialog() {
