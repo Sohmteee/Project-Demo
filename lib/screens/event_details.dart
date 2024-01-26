@@ -763,7 +763,12 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
               ),
             ),
             insetPadding: const EdgeInsets.all(0),
-            child: Container(),
+            child: Container(
+              padding: EdgeInsets.fromLTRB(left, top, right, bottom),
+              child: Column(
+                children: [],
+              ),
+            ),
           );
         });
   }
