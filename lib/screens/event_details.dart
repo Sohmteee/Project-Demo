@@ -882,15 +882,23 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                               SizedBox(width: 12.w),
                               Expanded(
                                 child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        
-                                      ],
+                                    AirBnBText(
+                                      friends[index]['name'],
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .secondary,
+                                      fontSize: 18.sp,
+                                      fontWeight: FontWeight.w500,
                                     ),
-                                    
+                                    AirBnBText(
+                                      friends[index]['followers'],
+                                      textAlign: TextAlign.right,
+                                      color: Vx.gray400,
+                                      fontSize: 15.sp,
+                                      fontWeight: FontWeight.w400,
+                                    ),
                                   ],
                                 ),
                               ),
