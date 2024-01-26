@@ -812,6 +812,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
   }
 
   void showFriendsDialog() {
+    List isTicked = List.generate()
     showDialog(
         context: context,
         builder: (context) {
@@ -869,7 +870,6 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       padding: EdgeInsets.symmetric(vertical: 16.h),
                       physics: const BouncingScrollPhysics(),
                       itemBuilder: (BuildContext context, int index) {
-                        bool isTicked = false;
 
                         return Container(
                           padding: EdgeInsets.symmetric(vertical: 8.h),
@@ -919,36 +919,34 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                                   });
                                 },
                                 child: Container(
-                                  padding: EdgeInsets.symmetric(
-                                    horizontal: 12.w,
-                                    vertical: 6.h,
-                                  ),
-                                  margin: EdgeInsets.only(right: 6.w),
-                                  decoration: ShapeDecoration(
-                                    gradient: LinearGradient(
-                                      begin: const Alignment(0, -1),
-                                      end: const Alignment(0, 1),
-                                      colors: [
-                                        lightOrangeColor.withOpacity(.12),
-                                        darkOrangeColor.withOpacity(.12),
+                                    padding: EdgeInsets.symmetric(
+                                      horizontal: 12.w,
+                                      vertical: 6.h,
+                                    ),
+                                    margin: EdgeInsets.only(right: 6.w),
+                                    decoration: ShapeDecoration(
+                                      gradient: LinearGradient(
+                                        begin: const Alignment(0, -1),
+                                        end: const Alignment(0, 1),
+                                        colors: [
+                                          lightOrangeColor.withOpacity(.12),
+                                          darkOrangeColor.withOpacity(.12),
+                                        ],
+                                      ),
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(7.r)),
+                                      shadows: const [
+                                        BoxShadow(
+                                          color: Color(0x144AD2E4),
+                                          blurRadius: 20,
+                                          offset: Offset(0, 8),
+                                          spreadRadius: 0,
+                                        )
                                       ],
                                     ),
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(7.r)),
-                                    shadows: const [
-                                      BoxShadow(
-                                        color: Color(0x144AD2E4),
-                                        blurRadius: 20,
-                                        offset: Offset(0, 8),
-                                        spreadRadius: 0,
-                                      )
-                                    ],
-                                  ),
-                                  child:isTicked ? SvgPicture.asset(
-                                      'assets/svg/view-map/select.svg') : SvgPicture.asset(
-                                      'assets/svg/view-map/no-select.svg'),
-                                ),
+                                    child: SvgPicture.asset(
+                                        'assets/svg/view-map/${isTicked ? 'select' : 'no-select'}.svg')),
                               ),
                             ],
                           ),
