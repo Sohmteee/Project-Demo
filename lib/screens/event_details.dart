@@ -869,6 +869,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       padding: EdgeInsets.symmetric(vertical: 16.h),
                       physics: const BouncingScrollPhysics(),
                       itemBuilder: (BuildContext context, int index) {
+                        bool isTicked = false;
                         return Container(
                           padding: EdgeInsets.symmetric(vertical: 8.h),
                           child: Row(
