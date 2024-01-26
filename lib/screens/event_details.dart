@@ -22,60 +22,6 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
-      /* appBar: AppBar(
-        elevation: 0,
-        toolbarHeight: 140.h,
-        leading: BackButton(color: Theme.of(context).colorScheme.primary),
-        titleSpacing: 0.w,
-        backgroundColor: Colors.transparent,
-        title: AirBnBText(
-          'Event Details',
-          color: Theme.of(context).colorScheme.primary,
-          fontSize: 24.sp,
-          fontWeight: FontWeight.w500,
-        ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Container(
-              height: 36.h,
-              decoration: ShapeDecoration(
-                color: Colors.white.withOpacity(0.2),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.r),
-                ),
-              ),
-              child: Center(
-                child: SvgPicture.asset(
-                  'assets/svg/send.svg',
-                  height: 18.h,
-                  width: 18.w,
-                ),
-              ),
-            ),
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: Container(
-              height: 36.h,
-              decoration: ShapeDecoration(
-                color: Colors.white.withOpacity(0.2),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.r),
-                ),
-              ),
-              child: Center(
-                child: SvgPicture.asset(
-                  'assets/svg/bookmark-outline.svg',
-                  height: 15.h,
-                  width: 15.w,
-                ),
-              ),
-            ),
-          ),
-          SizedBox(width: 12.w),
-        ],
-      ), */
       backgroundColor: Theme.of(context).colorScheme.primary,
       body: Stack(
         alignment: Alignment.bottomCenter,
@@ -101,7 +47,9 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                 ),
                 actions: [
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      showSendDialog();
+                    },
                     icon: Container(
                       height: 36.h,
                       decoration: ShapeDecoration(
@@ -801,5 +749,11 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
         )
       ],
     );
+  }
+
+  void showSendDialog() {
+    showDialog(context: context, builder: (context) {
+      return Theme(data: data, child: child)
+    });
   }
 }
