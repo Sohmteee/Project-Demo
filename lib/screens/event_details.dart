@@ -923,16 +923,8 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                                         ),
                                       ),
                                     ),
-                                    ZoomTapAnimation(
-                                      onTap: () {
-                                        updateState(() {
-                                          isTicked[index] = !isTicked[index];
-                                        });
-                                        setState(() {});
-                                      },
-                                      child: SvgPicture.asset(
-                                          'assets/svg/view-map/${isTicked[index] ? 'select' : 'no-select'}.svg'),
-                                    ),
+                                    SvgPicture.asset(
+                                        'assets/svg/view-map/${isTicked[index] ? 'select' : 'no-select'}.svg'),
                                   ],
                                 ),
                               ),
