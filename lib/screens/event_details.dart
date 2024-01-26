@@ -821,6 +821,11 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
       panelController: panelController,
       child: Container(
         padding: EdgeInsets.fromLTRB(24.w, 12.h, 24.w, 24.h),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.vertical(
+            top: Radius.circular(20.r),
+          ),
+        ),
         width: double.maxFinite,
         child: Column(
           mainAxisSize: MainAxisSize.min,
