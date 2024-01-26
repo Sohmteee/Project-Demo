@@ -35,7 +35,8 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
       'image': '',
       'name': 'Cristofer',
       'followers': '300',
-    },{
+    },
+    {
       'image': '',
       'name': 'David  Silbia',
       'followers': '5k',
@@ -44,7 +45,8 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
       'image': '',
       'name': 'Ashfak Sayem',
       'followers': '402',
-    },{
+    },
+    {
       'image': '',
       'name': 'Rocks Velkeinjen',
       'followers': '893',
@@ -69,7 +71,6 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
       'name': 'Zenifero Bolex',
       'followers': '3k',
     },
-    
   ];
 
   @override
@@ -123,7 +124,9 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                     ),
                   ),
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      showFriendsDialog();
+                    },
                     icon: Container(
                       height: 36.h,
                       decoration: ShapeDecoration(
@@ -806,7 +809,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
     );
   }
 
-  void showSendDialog() {
+  void showFriendsDialog() {
     showDialog(
         context: context,
         builder: (context) {
@@ -836,7 +839,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                     alignment: Alignment.centerLeft,
                     margin: EdgeInsets.only(bottom: 24.h),
                     child: AirBnBText(
-                      'Share with friends',
+                      'Invite Friend',
                       color: Theme.of(context).colorScheme.secondary,
                       fontSize: 24.sp,
                       fontWeight: FontWeight.w500,
