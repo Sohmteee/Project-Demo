@@ -819,7 +819,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
 
     return SlidingUpPanelWidget(
       controlHeight: 30.h,
-      upperBound: .8.h,
+      upperBound: .85.h,
       panelController: panelController,
       child: Container(
         padding: EdgeInsets.fromLTRB(24.w, 12.h, 24.w, 24.h),
@@ -866,8 +866,8 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
               ),
             ),
             SizedBox(height: 16.h),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * .6,
+            Expanded(
+              // height: MediaQuery.of(context).size.height * .6,
               child: ListView.builder(
                 itemCount: friends.length,
                 padding: EdgeInsets.symmetric(vertical: 16.h),
