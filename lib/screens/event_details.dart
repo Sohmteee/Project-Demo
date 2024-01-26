@@ -828,7 +828,8 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       fontSize: 24.sp,
                       fontWeight: FontWeight.w500,
                     ),
-                  )
+                  ),
+                  
                 ],
               ),
             ),
