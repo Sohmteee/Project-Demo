@@ -19,6 +19,7 @@ class EventDetailsScreen extends StatefulWidget {
 }
 
 class _EventDetailsScreenState extends State<EventDetailsScreen> {
+  List shareIcons = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -780,7 +781,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                   ),
                   Container(
                     alignment: Alignment.centerLeft,
-                    margin: ,
+                    margin: EdgeInsets.only(bottom: 24.h),
                     child: AirBnBText(
                       'Share with friends',
                       color: Theme.of(context).colorScheme.secondary,
