@@ -23,30 +23,26 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
   List<Map<String, dynamic>> shareIcons = [
     {
       'image': '',
-      'name': '{
-      'image': '',
-      'name': '',
-      'followers': '',
-    },',
-      'followers': '',
+      'name': 'Alex Lee',
+      'followers': '2k',
     },
     {
       'image': '',
-      'name': '',
-      'followers': '',
+      'name': 'Micheal Ulasi',
+      'followers': '56',
     },
     {
       'image': '',
-      'name': '',
-      'followers': '',
+      'name': 'Cristofer',
+      'followers': '300',
     },{
       'image': '',
-      'name': '',
-      'followers': '',
+      'name': 'David  Silbia',
+      'followers': '5k',
     },
     {
       'image': '',
-      'name': '',
+      'name': 'Ashfak Sayem',
       'followers': '',
     },{
       'image': '',
