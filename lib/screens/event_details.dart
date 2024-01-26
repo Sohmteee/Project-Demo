@@ -21,6 +21,7 @@ class EventDetailsScreen extends StatefulWidget {
 }
 
 class _EventDetailsScreenState extends State<EventDetailsScreen> {
+  final panelController = SlidingUpPanelController();
   List<Map<String, dynamic>> friends = [
     {
       'image': 'assets/images/view-map/friend-1.png',
@@ -73,7 +74,6 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
       'followers': '3k',
     },
   ];
-  
 
   @override
   Widget build(BuildContext context) {
@@ -815,7 +815,10 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
 
   SlidingUpPanelWidget friendsPanel() {
     return SlidingUpPanelWidget(
-        child: child, controlHeight: 0.h, panelController: panelController);
+      controlHeight: 0.h,
+      panelController: panelController,
+      child: child,
+    );
   }
 
   void showFriendsDialog() {
