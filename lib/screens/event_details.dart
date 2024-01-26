@@ -912,41 +912,17 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                                   ),
                                 ),
                               ),
-                              ZoomTapAnimation(
-                                onTap: () {
-                                  setState(() {
-                                    isTicked[index] = !isTicked[index];
-                                  });
-                                },
-                                child: Container(
-                                    padding: EdgeInsets.symmetric(
-                                      horizontal: 12.w,
-                                      vertical: 6.h,
-                                    ),
-                                    margin: EdgeInsets.only(right: 6.w),
-                                    decoration: ShapeDecoration(
-                                      gradient: LinearGradient(
-                                        begin: const Alignment(0, -1),
-                                        end: const Alignment(0, 1),
-                                        colors: [
-                                          lightOrangeColor.withOpacity(.12),
-                                          darkOrangeColor.withOpacity(.12),
-                                        ],
-                                      ),
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(7.r)),
-                                      shadows: const [
-                                        BoxShadow(
-                                          color: Color(0x144AD2E4),
-                                          blurRadius: 20,
-                                          offset: Offset(0, 8),
-                                          spreadRadius: 0,
-                                        )
-                                      ],
-                                    ),
-                                    child: SvgPicture.asset(
-                                        'assets/svg/view-map/${isTicked[index] ? 'select' : 'no-select'}.svg')),
+                              Builder(
+                                builder: (context) {
+                                  return ZoomTapAnimation(
+                                      onTap: () {
+                                        setState(() {
+                                          isTicked[index] = !isTicked[index];
+                                        });
+                                      },
+                                      child: SvgPicture.asset(
+                                          'assets/svg/view-map/${isTicked[index] ? 'select' : 'no-select'}.svg'));
+                                }
                               ),
                             ],
                           ),
