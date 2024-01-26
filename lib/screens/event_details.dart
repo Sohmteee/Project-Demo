@@ -32,26 +32,26 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
     },
     {
       'image': '',
-      'title': '',
+      'title': 'Facebook',
       'onTap': () {},
     },
     {
       'image': '',
-      'title': '',
+      'title': 'Messsenger',
       'onTap': () {},
     },
     {
       'image': '',
-      'title': '',
+      'title': 'Twitter',
       'onTap': () {},
     },{
       'image': '',
-      'title': '',
+      'title': 'Instagram',
       'onTap': () {},
     },
     {
       'image': '',
-      'title': '',
+      'title': 'Skype',
       'onTap': () {},
     },{
       'image': '',
