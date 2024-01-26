@@ -103,7 +103,6 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                 actions: [
                   IconButton(
                     onPressed: () {
-                      // showSendDialog();
                       Share.share('https://www.yeerlo.com');
                     },
                     icon: Container(
@@ -124,9 +123,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                     ),
                   ),
                   IconButton(
-                    onPressed: () {
-                      showFriendsDialog();
-                    },
+                    onPressed: () {},
                     icon: Container(
                       height: 36.h,
                       decoration: ShapeDecoration(
