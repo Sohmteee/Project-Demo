@@ -108,7 +108,7 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
               bottom: 250.h,
               left: 32.w,
               child: SvgPicture.asset(
-                'assets/svg/filter-circle.svg',
+                'assets/svg/view-map/sports.svg',
                 height: 32.h,
                 width: 32.w,
               ),
