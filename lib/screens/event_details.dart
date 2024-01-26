@@ -870,6 +870,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       physics: const BouncingScrollPhysics(),
                       itemBuilder: (BuildContext context, int index) {
                         bool isTicked = false;
+
                         return Container(
                           padding: EdgeInsets.symmetric(vertical: 8.h),
                           child: Row(
@@ -937,25 +938,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                                     )
                                   ],
                                 ),
-                                child: ShaderMask(
-                                  blendMode: BlendMode.srcIn,
-                                  shaderCallback: (Rect bounds) =>
-                                      LinearGradient(
-                                    begin: Alignment.topCenter,
-                                    end: Alignment.bottomCenter,
-                                    colors: [
-                                      lightOrangeColor,
-                                      darkOrangeColor,
-                                    ],
-                                    tileMode: TileMode.mirror,
-                                  ).createShader(bounds),
-                                  child: DMSansText(
-                                    'Invite',
-                                    textAlign: TextAlign.center,
-                                    fontSize: 12.sp,
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                ),
+                                child: SvgPi
                               ),
                             ],
                           ),
