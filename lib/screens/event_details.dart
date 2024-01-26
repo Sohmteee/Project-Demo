@@ -818,7 +818,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
     List isTicked = List.generate(friends.length, (index) => index % 2 == 0);
 
     return SlidingUpPanelWidget(
-      controlHeight: 0.h,
+      controlHeight: 30.h,
       panelController: panelController,
       child: Container(
         padding: EdgeInsets.fromLTRB(24.w, 12.h, 24.w, 24.h),
