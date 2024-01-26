@@ -870,12 +870,12 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                           child: Row(
                             children: [
                               CircleAvatar(
-                                radius: 17.r,
+                                radius: 22.5.r,
                                 backgroundColor: Colors.white,
                                 backgroundImage: Image.asset(
                                   'assets/images/event/comment-image.png',
-                                  height: 34.h,
-                                  width: 34.w,
+                                  height: 45.h,
+                                  width: 45.w,
                                   fit: BoxFit.fitWidth,
                                 ).image,
                               ),
