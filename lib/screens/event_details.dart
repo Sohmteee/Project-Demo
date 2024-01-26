@@ -772,7 +772,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                 ),
                 ZoomTapAnimation(
                   onTap: () {
-                    showFriendsDialog();
+                    panelController.expand();
                   },
                   child: Container(
                     padding:
@@ -818,7 +818,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
     List isTicked = List.generate(friends.length, (index) => index % 2 == 0);
 
     return SlidingUpPanelWidget(
-      controlHeight: 30.h,
+      controlHeight: .5.h,
       upperBound: .85.h,
       panelController: panelController,
       child: Container(
@@ -940,5 +940,4 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
       ),
     );
   }
-
-  }
+}
