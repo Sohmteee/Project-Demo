@@ -767,35 +767,40 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-                Container(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 18.w, vertical: 6.h),
-                  decoration: ShapeDecoration(
-                    gradient: LinearGradient(
-                      begin: const Alignment(0.00, -1.00),
-                      end: const Alignment(0, 1),
-                      colors: [
-                        lightOrangeColor,
-                        darkOrangeColor,
+                ZoomTapAnimation(
+                  onTap: () {
+                    showFriendsDialog();
+                  },
+                  child: Container(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 18.w, vertical: 6.h),
+                    decoration: ShapeDecoration(
+                      gradient: LinearGradient(
+                        begin: const Alignment(0.00, -1.00),
+                        end: const Alignment(0, 1),
+                        colors: [
+                          lightOrangeColor,
+                          darkOrangeColor,
+                        ],
+                      ),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(7)),
+                      shadows: const [
+                        BoxShadow(
+                          color: Color(0x144AD2E4),
+                          blurRadius: 20,
+                          offset: Offset(0, 8),
+                          spreadRadius: 0,
+                        )
                       ],
                     ),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(7)),
-                    shadows: const [
-                      BoxShadow(
-                        color: Color(0x144AD2E4),
-                        blurRadius: 20,
-                        offset: Offset(0, 8),
-                        spreadRadius: 0,
-                      )
-                    ],
-                  ),
-                  child: AirBnBText(
-                    'Invite',
-                    textAlign: TextAlign.center,
-                    color: Colors.white,
-                    fontSize: 12.sp,
-                    fontWeight: FontWeight.w400,
+                    child: AirBnBText(
+                      'Invite',
+                      textAlign: TextAlign.center,
+                      color: Colors.white,
+                      fontSize: 12.sp,
+                      fontWeight: FontWeight.w400,
+                    ),
                   ),
                 )
               ],
@@ -842,6 +847,17 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       fontWeight: FontWeight.w500,
                     ),
                   ),
+                  Container(
+                    width: 327,
+                    height: 50,
+                    decoration: ShapeDecoration(
+                      color: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        side: BorderSide(width: 1.24, color: Color(0xFFEFEFEF)),
+                        borderRadius: BorderRadius.circular(100),
+                      ),
+                    ),
+                  )
                 ],
               ),
             ),
