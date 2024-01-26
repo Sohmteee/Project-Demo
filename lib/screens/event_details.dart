@@ -818,16 +818,19 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
     List isTicked = List.generate(friends.length, (index) => index % 2 == 0);
 
     return SlidingUpPanelWidget(
-      controlHeight: .5.h,
+      controlHeight: 0.h,
       upperBound: .85.h,
       panelController: panelController,
       enableOnTap: false,
       onStatusChanged: (status) {
-        if (status == SlidingUpPanelStatus.collapsed) {
+         if (status == SlidingUpPanelStatus.collapsed) {
           setState(() {
-            isTicked = List.generate(friends.length, (index) => index % 2 == 0);
+            isOpenFilter = false;
           });
-          panelController.hide();
+        } else {
+          setState(() {
+            isOpenFilter = true;
+          });
         }
       },
       child: Container(
