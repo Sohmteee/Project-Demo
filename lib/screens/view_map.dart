@@ -107,10 +107,14 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
             Positioned(
               bottom: 250.h,
               left: 32.w,
-              child: SvgPicture.asset(
-                'assets/svg/view-map/sports.svg',
-                height: 32.h,
-                width: 32.w,
+              child: Container(
+                padding: EdgeInsets.all(20.sp),
+                
+                child: SvgPicture.asset(
+                  'assets/svg/view-map/sports.svg',
+                  height: 32.h,
+                  width: 32.w,
+                ),
               ),
             ),
             Container(
