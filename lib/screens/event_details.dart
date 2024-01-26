@@ -819,7 +819,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
 
     return SlidingUpPanelWidget(
       controlHeight: 30.h,
-      
+      upperBound: .8.h,
       panelController: panelController,
       child: Container(
         padding: EdgeInsets.fromLTRB(24.w, 12.h, 24.w, 24.h),
