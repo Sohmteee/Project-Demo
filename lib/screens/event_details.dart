@@ -22,52 +22,52 @@ class EventDetailsScreen extends StatefulWidget {
 class _EventDetailsScreenState extends State<EventDetailsScreen> {
   List<Map<String, dynamic>> friends = [
     {
-      'image': '',
+      'image': 'assets/images/view-map/friend-1.png',
       'name': 'Alex Lee',
       'followers': '2k',
     },
     {
-      'image': '',
+      'image': 'assets/images/view-map/friend-2.png',
       'name': 'Micheal Ulasi',
       'followers': '56',
     },
     {
-      'image': '',
+      'image': 'assets/images/view-map/friend-3.png',
       'name': 'Cristofer',
       'followers': '300',
     },
     {
-      'image': '',
+      'image': 'assets/images/view-map/friend-4.png',
       'name': 'David  Silbia',
       'followers': '5k',
     },
     {
-      'image': '',
+      'image': 'assets/images/view-map/friend-5.png',
       'name': 'Ashfak Sayem',
       'followers': '402',
     },
     {
-      'image': '',
+      'image': 'assets/images/view-map/friend-6.png',
       'name': 'Rocks Velkeinjen',
       'followers': '893',
     },
     {
-      'image': '',
+      'image': 'assets/images/view-map/friend-7.png',
       'name': 'Roman Kutepov',
       'followers': '225',
     },
     {
-      'image': '',
+      'image': 'assets/images/view-map/friend-8.png',
       'name': 'Cristofer Nolan',
       'followers': '322',
     },
     {
-      'image': '',
+      'image': 'assets/images/view-map/friend-9.png',
       'name': 'Jhon Wick',
       'followers': '256',
     },
     {
-      'image': '',
+      'image': 'assets/images/view-map/friend-10.png',
       'name': 'Zenifero Bolex',
       'followers': '3k',
     },
