@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_share/flutter_share.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -94,15 +93,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                   IconButton(
                     onPressed: () {
                       // showSendDialog();
-                      Future<void> share() async {
-                        await FlutterShare.share(
-                            title: 'Example sharshare ple',
-                            text: 'Example share text',
-                            linkUrl: 'https://flutter.dev/',
-                            chooserTitle: 'Example Chooser Title');
-                      }
-
-                      share();
+                      
                     },
                     icon: Container(
                       height: 36.h,
