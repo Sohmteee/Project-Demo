@@ -108,7 +108,7 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
               bottom: 250.h,
               left: 130.w,
               child: Container(
-                padding: EdgeInsets.all(10.sp),
+                padding: EdgeInsets.all(5.sp),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10.r),
