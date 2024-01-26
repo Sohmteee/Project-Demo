@@ -23,44 +23,10 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
   List<Map<String, dynamic>> shareIcons = [
     {
       'image': '',
-      'title': 'Copy Link',
-      'onTap': () {},
+      'name': '',
+      'followers': ,
     },
-    {
-      'image': '',
-      'title': 'WhatsApp',
-      'onTap': () {},
-    },
-    {
-      'image': '',
-      'title': 'Facebook',
-      'onTap': () {},
-    },
-    {
-      'image': '',
-      'title': 'Messsenger',
-      'onTap': () {},
-    },
-    {
-      'image': '',
-      'title': 'Twitter',
-      'onTap': () {},
-    },
-    {
-      'image': '',
-      'title': 'Instagram',
-      'onTap': () {},
-    },
-    {
-      'image': '',
-      'title': 'Skype',
-      'onTap': () {},
-    },
-    {
-      'image': '',
-      'title': 'Message',
-      'onTap': () {},
-    },
+    
   ];
 
   @override
