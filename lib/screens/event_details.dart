@@ -821,6 +821,8 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
       controlHeight: .5.h,
       upperBound: .85.h,
       panelController: panelController,
+      enableOnTap: false,
+      
       child: Container(
         padding: EdgeInsets.fromLTRB(24.w, 12.h, 24.w, 0),
         decoration: BoxDecoration(
