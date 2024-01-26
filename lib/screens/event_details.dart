@@ -867,6 +867,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       itemCount: friends.length,
                       itemBuilder: (BuildContext context, int index) {
                         return Container(
+                          padding: EdgeInsets.symmetric(vertical: 8.h),
                           child: Row(
                             children: [
                               CircleAvatar(
@@ -881,25 +882,29 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                               ),
                               SizedBox(width: 12.w),
                               Expanded(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    AirBnBText(
-                                      friends[index]['name'],
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .secondary,
-                                      fontSize: 18.sp,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                    AirBnBText(
-                                      friends[index]['followers'],
-                                      textAlign: TextAlign.right,
-                                      color: Vx.gray400,
-                                      fontSize: 15.sp,
-                                      fontWeight: FontWeight.w400,
-                                    ),
-                                  ],
+                                child: Padding(
+                                  padding: EdgeInsets.symmetric(vertical: 3.h),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      AirBnBText(
+                                        friends[index]['name'],
+                                        color: Theme.of(context)
+                                            .colorScheme
+                                            .secondary,
+                                        fontSize: 18.sp,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                      AirBnBText(
+                                        friends[index]['followers'],
+                                        textAlign: TextAlign.right,
+                                        color: Vx.gray400,
+                                        fontSize: 15.sp,
+                                        fontWeight: FontWeight.w400,
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                               Container(
