@@ -94,8 +94,10 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                   IconButton(
                     onPressed: () {
                       // showSendDialog();
-                      Share.share('https://www.youtube.com',
-                          subject: 'Nice Service');
+                      Share.share(
+                        ''
+                        'https://www.yeerlo.com',
+                      );
                     },
                     icon: Container(
                       height: 36.h,
