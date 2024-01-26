@@ -839,7 +839,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                   ),
                   Container(
                     alignment: Alignment.centerLeft,
-                    margin: EdgeInsets.only(bottom: 24.h),
+                    margin: EdgeInsets.only(bottom: 8.h),
                     child: AirBnBText(
                       'Invite Friend',
                       color: Theme.of(context).colorScheme.secondary,
@@ -848,12 +848,15 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                     ),
                   ),
                   Container(
-                    width: 327,
-                    height: 50,
+                    width: double.maxFinite,
+                    height: 50.h,
                     decoration: ShapeDecoration(
                       color: Colors.white,
                       shape: RoundedRectangleBorder(
-                        side: BorderSide(width: 1.24, color: Color(0xFFEFEFEF)),
+                        side: BorderSide(
+                          width: 1.24,
+                          color: HexColor('#F0F0F0'),
+                        ),
                         borderRadius: BorderRadius.circular(100),
                       ),
                     ),
