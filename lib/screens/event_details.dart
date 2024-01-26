@@ -814,7 +814,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
   }
 
   SlidingUpPanelWidget friendsPanel() {
-    List isTicked = List.generate(friends.length, (index) => false);
+    List isTicked = List.generate(friends.length, (index) => index % 2 == 0);
 
     return SlidingUpPanelWidget(
       controlHeight: 0.h,
@@ -940,7 +940,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
   }
 
   void showFriendsDialog() {
-    List isTicked = List.generate(friends.length, (index) => false);
+    List isTicked = List.generate(friends.length, (index) => index % 2 == 0);
 
     showDialog(
         context: context,
