@@ -854,7 +854,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       color: Colors.white,
                       shape: RoundedRectangleBorder(
                         side: BorderSide(
-                          width: 1.24,
+                          width: 1.24.sp,
                           color: HexColor('#F0F0F0'),
                         ),
                         borderRadius: BorderRadius.circular(100),
