@@ -938,7 +938,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                                     )
                                   ],
                                 ),
-                                child: SvgPi
+                                child: SvgPicture.asset('assets/svg/view-map/${ isTicked ? 'select' : 'no-select'}.svg')
                               ),
                             ],
                           ),
