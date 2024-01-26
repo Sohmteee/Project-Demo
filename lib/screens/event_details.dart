@@ -19,7 +19,14 @@ class EventDetailsScreen extends StatefulWidget {
 }
 
 class _EventDetailsScreenState extends State<EventDetailsScreen> {
-  List shareIcons = [];
+  List<Map<String, dynamic>> shareIcons = [
+    {
+      'image': '',
+      'title': '',
+      'onTap': () {},
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
