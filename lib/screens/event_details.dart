@@ -861,105 +861,110 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       ),
                     ),
                   ),
-                  ListView.builder(
-                    itemCount: friends.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Container(
-                        child: Row(
-                          children: [
-                            CircleAvatar(
-                              radius: 17.r,
-                              backgroundColor: Colors.white,
-                              backgroundImage: Image.asset(
-                                'assets/images/event/comment-image.png',
-                                height: 34.h,
-                                width: 34.w,
-                                fit: BoxFit.fitWidth,
-                              ).image,
-                            ),
-                            SizedBox(width: 16.w),
-                            Expanded(
-                              child: Column(
-                                children: [
-                                  Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      AirBnBText(
-                                        friends[index]['name'],
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .secondary,
-                                        fontSize: 18.sp,
-                                        fontWeight: FontWeight.w500,
+                  SizedBox(
+                    height: 300.h,
+                    child: ListView.builder(
+                      itemCount: friends.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return Container(
+                          child: Row(
+                            children: [
+                              CircleAvatar(
+                                radius: 17.r,
+                                backgroundColor: Colors.white,
+                                backgroundImage: Image.asset(
+                                  'assets/images/event/comment-image.png',
+                                  height: 34.h,
+                                  width: 34.w,
+                                  fit: BoxFit.fitWidth,
+                                ).image,
+                              ),
+                              SizedBox(width: 16.w),
+                              Expanded(
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        AirBnBText(
+                                          friends[index]['name'],
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .secondary,
+                                          fontSize: 18.sp,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                        AirBnBText(
+                                          friends[index]['followers'],
+                                          textAlign: TextAlign.right,
+                                          color: Vx.gray400,
+                                          fontSize: 15.sp,
+                                          fontWeight: FontWeight.w400,
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: List.generate(
+                                        4,
+                                        (index) => SvgPicture.asset(
+                                            'assets/svg/event/star.svg'),
                                       ),
-                                      AirBnBText(
-                                        friends[index]['followers'],
-                                        textAlign: TextAlign.right,
-                                        color: Vx.gray400,
-                                        fontSize: 15.sp,
-                                        fontWeight: FontWeight.w400,
-                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 12.w,
+                                  vertical: 6.h,
+                                ),
+                                margin: EdgeInsets.only(right: 6.w),
+                                decoration: ShapeDecoration(
+                                  gradient: LinearGradient(
+                                    begin: const Alignment(0, -1),
+                                    end: const Alignment(0, 1),
+                                    colors: [
+                                      lightOrangeColor.withOpacity(.12),
+                                      darkOrangeColor.withOpacity(.12),
                                     ],
                                   ),
-                                  Row(
-                                    children: List.generate(
-                                      4,
-                                      (index) => SvgPicture.asset(
-                                          'assets/svg/event/star.svg'),
-                                    ),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(7.r)),
+                                  shadows: const [
+                                    BoxShadow(
+                                      color: Color(0x144AD2E4),
+                                      blurRadius: 20,
+                                      offset: Offset(0, 8),
+                                      spreadRadius: 0,
+                                    )
+                                  ],
+                                ),
+                                child: ShaderMask(
+                                  blendMode: BlendMode.srcIn,
+                                  shaderCallback: (Rect bounds) =>
+                                      LinearGradient(
+                                    begin: Alignment.topCenter,
+                                    end: Alignment.bottomCenter,
+                                    colors: [
+                                      lightOrangeColor,
+                                      darkOrangeColor,
+                                    ],
+                                    tileMode: TileMode.mirror,
+                                  ).createShader(bounds),
+                                  child: DMSansText(
+                                    'Invite',
+                                    textAlign: TextAlign.center,
+                                    fontSize: 12.sp,
+                                    fontWeight: FontWeight.w700,
                                   ),
-                                ],
-                              ),
-                            ),
-                            Container(
-                              padding: EdgeInsets.symmetric(
-                                horizontal: 12.w,
-                                vertical: 6.h,
-                              ),
-                              margin: EdgeInsets.only(right: 6.w),
-                              decoration: ShapeDecoration(
-                                gradient: LinearGradient(
-                                  begin: const Alignment(0, -1),
-                                  end: const Alignment(0, 1),
-                                  colors: [
-                                    lightOrangeColor.withOpacity(.12),
-                                    darkOrangeColor.withOpacity(.12),
-                                  ],
-                                ),
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(7.r)),
-                                shadows: const [
-                                  BoxShadow(
-                                    color: Color(0x144AD2E4),
-                                    blurRadius: 20,
-                                    offset: Offset(0, 8),
-                                    spreadRadius: 0,
-                                  )
-                                ],
-                              ),
-                              child: ShaderMask(
-                                blendMode: BlendMode.srcIn,
-                                shaderCallback: (Rect bounds) =>
-                                    LinearGradient(
-                                  begin: Alignment.topCenter,
-                                  end: Alignment.bottomCenter,
-                                  colors: [
-                                    lightOrangeColor,
-                                    darkOrangeColor,
-                                  ],
-                                  tileMode: TileMode.mirror,
-                                ).createShader(bounds),
-                                child: DMSansText(
-                                  'Invite',
-                                  textAlign: TextAlign.center,
-                                  fontSize: 12.sp,
-                                  fontWeight: FontWeight.w700,
                                 ),
                               ),
-                            ),
-                ],));
-                    },
+                            ],
+                          ),
+                        );
+                      },
+                    ),
                   ),
                 ],
               ),
