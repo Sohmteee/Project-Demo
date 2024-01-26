@@ -104,6 +104,15 @@ class _ViewMapScreenState extends State<ViewMapScreen> {
                 width: 32.w,
               ),
             ),
+            Positioned(
+              bottom: 250.h,
+              left: 32.w,
+              child: SvgPicture.asset(
+                'assets/svg/filter-circle.svg',
+                height: 32.h,
+                width: 32.w,
+              ),
+            ),
             Container(
               height: 106.h,
               padding: EdgeInsets.fromLTRB(10.w, 14.h, 14.w, 14.h),
