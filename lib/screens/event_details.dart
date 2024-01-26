@@ -73,56 +73,6 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
       'name': 'Zenifero Bolex',
       'followers': '3k',
     },
-    {
-      'image': 'assets/images/view-map/friend-1.png',
-      'name': 'Alex Lee',
-      'followers': '2k',
-    },
-    {
-      'image': 'assets/images/view-map/friend-2.png',
-      'name': 'Micheal Ulasi',
-      'followers': '56',
-    },
-    {
-      'image': 'assets/images/view-map/friend-3.png',
-      'name': 'Cristofer',
-      'followers': '300',
-    },
-    {
-      'image': 'assets/images/view-map/friend-4.png',
-      'name': 'David  Silbia',
-      'followers': '5k',
-    },
-    {
-      'image': 'assets/images/view-map/friend-5.png',
-      'name': 'Ashfak Sayem',
-      'followers': '402',
-    },
-    {
-      'image': 'assets/images/view-map/friend-6.png',
-      'name': 'Rocks Velkeinjen',
-      'followers': '893',
-    },
-    {
-      'image': 'assets/images/view-map/friend-7.png',
-      'name': 'Roman Kutepov',
-      'followers': '225',
-    },
-    {
-      'image': 'assets/images/view-map/friend-8.png',
-      'name': 'Cristofer Nolan',
-      'followers': '322',
-    },
-    {
-      'image': 'assets/images/view-map/friend-9.png',
-      'name': 'Jhon Wick',
-      'followers': '256',
-    },
-    {
-      'image': 'assets/images/view-map/friend-10.png',
-      'name': 'Zenifero Bolex',
-      'followers': '3k',
-    },
   ];
 
   @override
