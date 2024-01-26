@@ -73,6 +73,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
       'followers': '3k',
     },
   ];
+  
 
   @override
   Widget build(BuildContext context) {
@@ -813,7 +814,8 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
   }
 
   SlidingUpPanelWidget friendsPanel() {
-    return SlidingUpPanelWidget(child: child, controlHeight: controlHeight, panelController: panelController)
+    return SlidingUpPanelWidget(
+        child: child, controlHeight: 0.h, panelController: panelController);
   }
 
   void showFriendsDialog() {
