@@ -43,21 +43,21 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
     {
       'image': '',
       'name': 'Ashfak Sayem',
-      'followers': '',
+      'followers': '402',
     },{
       'image': '',
-      'name': '',
-      'followers': '',
+      'name': 'Rocks Velkeinjen',
+      'followers': '893',
     },
     {
       'image': '',
-      'name': '',
-      'followers': '',
+      'name': 'Roman Kutepov',
+      'followers': '225',
     },
     {
       'image': '',
-      'name': '',
-      'followers': '',
+      'name': 'Cristofer Nolan',
+      'followers': '322',
     },
     {
       'image': '',
