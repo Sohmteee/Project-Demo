@@ -20,7 +20,7 @@ class EventDetailsScreen extends StatefulWidget {
 }
 
 class _EventDetailsScreenState extends State<EventDetailsScreen> {
-  List<Map<String, dynamic>> shareIcons = [
+  List<Map<String, dynamic>> friends = [
     {
       'image': '',
       'name': 'Alex Lee',
@@ -862,9 +862,11 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                     ),
                   ),
                   ListView.builder(
-                    itemCount: 1,
+                    itemCount: friends.length,
                     itemBuilder: (BuildContext context, int index) {
-                      return ;
+                      return Container(
+                        
+                      );
                     },
                   ),
                 ],
