@@ -873,6 +873,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       itemBuilder: (BuildContext context, int index) {
                         return Container(
                           padding: EdgeInsets.symmetric(vertical: 8.h),
+                          color: Colors.transparent,
                           child: Row(
                             children: [
                               CircleAvatar(
@@ -912,18 +913,17 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                                   ),
                                 ),
                               ),
-                              Builder(
-                                builder: (context) {
-                                  return ZoomTapAnimation(
-                                      onTap: () {
-                                        setState(() {
-                                          isTicked[index] = !isTicked[index];
-                                        });
-                                      },
-                                      child: SvgPicture.asset(
-                                          'assets/svg/view-map/${isTicked[index] ? 'select' : 'no-select'}.svg'));
-                                }
-                              ),
+                              StatefulBuilder(builder: (context, updateState) {
+                                return ZoomTapAnimation(
+                                    onTap: () {
+                                      updateState(() {
+                                        isTicked[index] = !isTicked[index];
+                                      });
+                                      setState(() {});
+                                    },
+                                    child: SvgPicture.asset(
+                                        'assets/svg/view-map/${isTicked[index] ? 'select' : 'no-select'}.svg'));
+                              }),
                             ],
                           ),
                         );
