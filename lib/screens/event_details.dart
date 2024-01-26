@@ -817,7 +817,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
     return SlidingUpPanelWidget(
       controlHeight: 0.h,
       panelController: panelController,
-      child: child,
+      child: ,
     );
   }
 
