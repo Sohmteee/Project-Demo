@@ -889,7 +889,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                                       radius: 22.5.r,
                                       backgroundColor: Colors.white,
                                       backgroundImage: Image.asset(
-                                        'assets/images/event/comment-image.png',
+                                        friends[index]['image'],
                                         height: 45.h,
                                         width: 45.w,
                                         fit: BoxFit.fitWidth,
