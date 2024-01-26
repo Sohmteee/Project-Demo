@@ -879,7 +879,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                                   fit: BoxFit.fitWidth,
                                 ).image,
                               ),
-                              SizedBox(width: 16.w),
+                              SizedBox(width: 12.w),
                               Expanded(
                                 child: Column(
                                   children: [
@@ -887,30 +887,10 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       children: [
-                                        AirBnBText(
-                                          friends[index]['name'],
-                                          color: Theme.of(context)
-                                              .colorScheme
-                                              .secondary,
-                                          fontSize: 18.sp,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                        AirBnBText(
-                                          friends[index]['followers'],
-                                          textAlign: TextAlign.right,
-                                          color: Vx.gray400,
-                                          fontSize: 15.sp,
-                                          fontWeight: FontWeight.w400,
-                                        ),
+                                        
                                       ],
                                     ),
-                                    Row(
-                                      children: List.generate(
-                                        4,
-                                        (index) => SvgPicture.asset(
-                                            'assets/svg/event/star.svg'),
-                                      ),
-                                    ),
+                                    
                                   ],
                                 ),
                               ),
