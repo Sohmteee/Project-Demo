@@ -752,8 +752,19 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
   }
 
   void showSendDialog() {
-    showDialog(context: context, builder: (context) {
-      return Theme(data: data, child: child)
-    });
+    showDialog(
+        context: context,
+        builder: (context) {
+          return Dialog(
+            alignment: Alignment.bottomCenter,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.vertical(
+                top: Radius.circular(20.r),
+              ),
+            ),
+            insetPadding: const EdgeInsets.all(0),
+            child: Container(),
+          );
+        });
   }
 }
