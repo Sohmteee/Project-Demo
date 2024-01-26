@@ -778,7 +778,16 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       color: HexColor('#B2B2B2').withOpacity(.5),
                     ),
                   ),
-                  
+                  Text(
+                    'Share with friends',
+                    style: TextStyle(
+                      color: Color(0xFF110C26),
+                      fontSize: 24,
+                      fontFamily: 'Airbnb Cereal App',
+                      fontWeight: FontWeight.w500,
+                      height: 0,
+                    ),
+                  )
                 ],
               ),
             ),
