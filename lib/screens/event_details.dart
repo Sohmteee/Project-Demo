@@ -860,7 +860,13 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                         borderRadius: BorderRadius.circular(100),
                       ),
                     ),
-                  )
+                  ),
+                  ListView.builder(
+                    itemCount: 1,
+                    itemBuilder: (BuildContext context, int index) {
+                      return ;
+                    },
+                  ),
                 ],
               ),
             ),
