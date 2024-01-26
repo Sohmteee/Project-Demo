@@ -861,11 +861,13 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 32.h),
+                  SizedBox(height: 16.h),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * .6,
                     child: ListView.builder(
                       itemCount: friends.length,
+                      padding: EdgeInsets.symmetric(vertical: 16.h),
+                      physics: const BouncingScrollPhysics(),
                       itemBuilder: (BuildContext context, int index) {
                         return Container(
                           padding: EdgeInsets.symmetric(vertical: 8.h),
