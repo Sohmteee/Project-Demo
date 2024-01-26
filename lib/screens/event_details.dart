@@ -24,7 +24,45 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
     {
       'image': '',
       'name': '',
-      'followers': ,
+      'followers': '',
+    },
+    {
+      'image': '',
+      'name': '',
+      'followers': '',
+    },
+    {
+      'image': '',
+      'name': '',
+      'followers': '',
+    },{
+      'image': '',
+      'name': '',
+      'followers': '',
+    },
+    {
+      'image': '',
+      'name': '',
+      'followers': '',
+    },{
+      'image': '',
+      'name': '',
+      'followers': '',
+    },
+    {
+      'image': '',
+      'name': '',
+      'followers': '',
+    },
+    {
+      'image': '',
+      'name': '',
+      'followers': '',
+    },
+    {
+      'image': '',
+      'name': '',
+      'followers': '',
     },
     
   ];
