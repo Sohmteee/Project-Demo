@@ -824,7 +824,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
             ),
             insetPadding: const EdgeInsets.all(0),
             child: Container(
-              padding: EdgeInsets.fromLTRB(24.w, 5.h, 24.w, 24.h),
+              padding: EdgeInsets.fromLTRB(24.w, 12.h, 24.w, 24.h),
               width: double.maxFinite,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -832,7 +832,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                   Container(
                     width: 26.w,
                     height: 2.5.h,
-                    margin: EdgeInsets.only(bottom: 24.h),
+                    margin: EdgeInsets.only(bottom: 16.h),
                     decoration: BoxDecoration(
                       color: HexColor('#B2B2B2').withOpacity(.5),
                     ),
