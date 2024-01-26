@@ -893,14 +893,14 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                                         color: Theme.of(context)
                                             .colorScheme
                                             .secondary,
-                                        fontSize: 18.sp,
+                                        fontSize: 14.sp,
                                         fontWeight: FontWeight.w500,
                                       ),
                                       AirBnBText(
-                                        friends[index]['followers'],
+                                        '${friends[index]['followers']} followers',
                                         textAlign: TextAlign.right,
                                         color: Vx.gray400,
-                                        fontSize: 15.sp,
+                                        fontSize: 13.sp,
                                         fontWeight: FontWeight.w400,
                                       ),
                                     ],
