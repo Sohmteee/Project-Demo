@@ -45,7 +45,8 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
       'image': '',
       'title': 'Twitter',
       'onTap': () {},
-    },{
+    },
+    {
       'image': '',
       'title': 'Instagram',
       'onTap': () {},
@@ -54,7 +55,8 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
       'image': '',
       'title': 'Skype',
       'onTap': () {},
-    },{
+    },
+    {
       'image': '',
       'title': 'Message',
       'onTap': () {},
@@ -92,14 +94,15 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                   IconButton(
                     onPressed: () {
                       // showSendDialog();
-                       Future<void> share() async {
+                      Future<void> share() async {
                         await FlutterShare.share(
                             title: 'Example share',
                             text: 'Example share text',
                             linkUrl: 'https://flutter.dev/',
                             chooserTitle: 'Example Chooser Title');
                       }
-                      share()
+
+                      share();
                     },
                     icon: Container(
                       height: 36.h,
@@ -803,11 +806,9 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
   }
 
   void showSendDialog() {
-   
     showDialog(
         context: context,
         builder: (context) {
-          
           return Dialog(
             alignment: Alignment.bottomCenter,
             shape: RoundedRectangleBorder(
@@ -840,7 +841,6 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-
                 ],
               ),
             ),
