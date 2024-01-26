@@ -55,7 +55,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
       'onTap': () {},
     },{
       'image': '',
-      'title': '',
+      'title': 'Message',
       'onTap': () {},
     },
   ];
