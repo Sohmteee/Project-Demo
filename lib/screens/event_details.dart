@@ -764,9 +764,16 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
             ),
             insetPadding: const EdgeInsets.all(0),
             child: Container(
-              padding: EdgeInsets.fromLTRB(left, top, right, bottom),
+              padding: EdgeInsets.fromLTRB(24.w, 5.h, 24.w, 24.h),
               child: Column(
-                children: [],
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(bottom: 24.h),
+                    decoration: BoxDecoration(
+                      
+                    ),
+                  ),
+                ],
               ),
             ),
           );
