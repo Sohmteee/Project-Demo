@@ -96,7 +96,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       // showSendDialog();
                       Future<void> share() async {
                         await FlutterShare.share(
-                            title: 'Example share',
+                            title: 'Example sharshare ple',
                             text: 'Example share text',
                             linkUrl: 'https://flutter.dev/',
                             chooserTitle: 'Example Chooser Title');
