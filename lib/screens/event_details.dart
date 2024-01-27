@@ -22,6 +22,7 @@ class EventDetailsScreen extends StatefulWidget {
 
 class _EventDetailsScreenState extends State<EventDetailsScreen> {
   final panelController = SlidingUpPanelController();
+  bool isOpenInvite = false;
   List<Map<String, dynamic>> friends = [
     {
       'image': 'assets/images/view-map/friend-1.png',
