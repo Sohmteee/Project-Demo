@@ -20,192 +20,204 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size(double.infinity, 160.h),
+      appBar: buildAppBar(context),
+      body: Expanded(
         child: Container(
-          color: Colors.white,
-          child: Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.only(
-                  left: 10.w,
-                  top: 30.h,
-                  bottom: 26.h,
-                ),
-                child: Row(
-                  children: [
-                    BackButton(color: Theme.of(context).colorScheme.secondary),
-                    DMSansText(
-                      'Get a Ticket',
-                      color: Theme.of(context).colorScheme.secondary,
-                      fontSize: 24.sp,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                width: double.maxFinite,
-                padding: EdgeInsets.symmetric(horizontal: 8.w),
-                child: Row(
-                  children: [
-                    Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        SvgPicture.asset(
-                          'assets/svg/get-ticket/button-outline.svg',
-                          width: 34.w,
-                          height: 34.h,
-                        ),
-                        ShaderMask(
-                          blendMode: BlendMode.srcIn,
-                          shaderCallback: (Rect bounds) => LinearGradient(
-                            begin: Alignment.centerLeft,
-                            end: Alignment.centerRight,
-                            colors: [
-                              darkOrangeColor,
-                              lightOrangeColor,
-                            ],
-                            tileMode: TileMode.mirror,
-                          ).createShader(bounds),
-                          child: Icon(
-                            Icons.chevron_left,
-                            size: 20.sp,
-                          ),
-                        )
-                      ],
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 48.h,
-                        padding: EdgeInsets.symmetric(horizontal: 6.w),
-                        child: Stack(
-                          children: [
-                            ListView.separated(
-                              itemCount: 30,
-                              controller: dateController,
-                              scrollDirection: Axis.horizontal,
-                              physics: const BouncingScrollPhysics(),
-                              padding: EdgeInsets.symmetric(horizontal: 18.w),
-                              itemBuilder: (BuildContext context, int index) {
-                                return ZoomTapAnimation(
-                                  onTap: () {
-                                    setState(() {
-                                      selectedDateIndex = index;
-                                    });
-                                  },
-                                  child: Container(
-                                    width: 48.w,
-                                    height: 48.h,
-                                    // padding: EdgeInsets.all(8.sp),
-                                    decoration: ShapeDecoration(
-                                        color: selectedDateIndex == index
-                                            ? null
-                                            : HexColor('#979797')
-                                                .withOpacity(.09),
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(10.r),
-                                        ),
-                                        gradient: selectedDateIndex == index
-                                            ? LinearGradient(
-                                                colors: [
-                                                  lightOrangeColor,
-                                                  darkOrangeColor,
-                                                ],
-                                                begin: Alignment.topCenter,
-                                                end: Alignment.bottomCenter,
-                                              )
-                                            : null),
-                                    child: Center(
-                                      child: DMSansText(
-                                        '${index + 1 < 10 ? '0${index + 1}' : '${index + 1}'}\nDec',
-                                        textAlign: TextAlign.center,
-                                        color: selectedDateIndex == index
-                                            ? Colors.white
-                                            : HexColor('#979797'),
-                                        fontSize: 14.sp,
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                    ),
-                                  ),
-                                );
-                              },
-                              separatorBuilder: (context, index) =>
-                                  SizedBox(width: 9.w),
-                            ),
-                            Positioned(
-                              left: -1,
-                              child: Container(
-                                height: 48.h,
-                                width: 20.w,
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(
-                                    colors: [
-                                      Colors.white,
-                                      Colors.white.withOpacity(0),
-                                    ],
-                                    begin: Alignment.centerLeft,
-                                    end: Alignment.centerRight,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              right: -1,
-                              child: Container(
-                                height: 48.h,
-                                width: 20.w,
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(
-                                    colors: [
-                                      Colors.white,
-                                      Colors.white.withOpacity(0),
-                                    ],
-                                    begin: Alignment.centerRight,
-                                    end: Alignment.centerLeft,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        SvgPicture.asset(
-                          'assets/svg/get-ticket/button-outline.svg',
-                          width: 34.w,
-                          height: 34.h,
-                        ),
-                        ShaderMask(
-                          blendMode: BlendMode.srcIn,
-                          shaderCallback: (Rect bounds) => LinearGradient(
-                            begin: Alignment.centerLeft,
-                            end: Alignment.centerRight,
-                            colors: [
-                              darkOrangeColor,
-                              lightOrangeColor,
-                            ],
-                            tileMode: TileMode.mirror,
-                          ).createShader(bounds),
-                          child: Icon(
-                            Icons.chevron_right,
-                            size: 20.sp,
-                          ),
-                        )
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ],
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.vertical(
+              top: Radius.circular(27.r),
+            ),
           ),
         ),
       ),
-      body: Column(),
+    );
+  }
+
+  PreferredSize buildAppBar(BuildContext context) {
+    return PreferredSize(
+      preferredSize: Size(double.infinity, 160.h),
+      child: Container(
+        color: Colors.white,
+        child: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.only(
+                left: 10.w,
+                top: 30.h,
+                bottom: 26.h,
+              ),
+              child: Row(
+                children: [
+                  BackButton(color: Theme.of(context).colorScheme.secondary),
+                  DMSansText(
+                    'Get a Ticket',
+                    color: Theme.of(context).colorScheme.secondary,
+                    fontSize: 24.sp,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              width: double.maxFinite,
+              padding: EdgeInsets.symmetric(horizontal: 8.w),
+              child: Row(
+                children: [
+                  Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      SvgPicture.asset(
+                        'assets/svg/get-ticket/button-outline.svg',
+                        width: 34.w,
+                        height: 34.h,
+                      ),
+                      ShaderMask(
+                        blendMode: BlendMode.srcIn,
+                        shaderCallback: (Rect bounds) => LinearGradient(
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
+                          colors: [
+                            darkOrangeColor,
+                            lightOrangeColor,
+                          ],
+                          tileMode: TileMode.mirror,
+                        ).createShader(bounds),
+                        child: Icon(
+                          Icons.chevron_left,
+                          size: 20.sp,
+                        ),
+                      )
+                    ],
+                  ),
+                  Expanded(
+                    child: Container(
+                      height: 48.h,
+                      padding: EdgeInsets.symmetric(horizontal: 6.w),
+                      child: Stack(
+                        children: [
+                          ListView.separated(
+                            itemCount: 30,
+                            controller: dateController,
+                            scrollDirection: Axis.horizontal,
+                            physics: const BouncingScrollPhysics(),
+                            padding: EdgeInsets.symmetric(horizontal: 18.w),
+                            itemBuilder: (BuildContext context, int index) {
+                              return ZoomTapAnimation(
+                                onTap: () {
+                                  setState(() {
+                                    selectedDateIndex = index;
+                                  });
+                                },
+                                child: Container(
+                                  width: 48.w,
+                                  height: 48.h,
+                                  // padding: EdgeInsets.all(8.sp),
+                                  decoration: ShapeDecoration(
+                                      color: selectedDateIndex == index
+                                          ? null
+                                          : HexColor('#979797')
+                                              .withOpacity(.09),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(10.r),
+                                      ),
+                                      gradient: selectedDateIndex == index
+                                          ? LinearGradient(
+                                              colors: [
+                                                lightOrangeColor,
+                                                darkOrangeColor,
+                                              ],
+                                              begin: Alignment.topCenter,
+                                              end: Alignment.bottomCenter,
+                                            )
+                                          : null),
+                                  child: Center(
+                                    child: DMSansText(
+                                      '${index + 1 < 10 ? '0${index + 1}' : '${index + 1}'}\nDec',
+                                      textAlign: TextAlign.center,
+                                      color: selectedDateIndex == index
+                                          ? Colors.white
+                                          : HexColor('#979797'),
+                                      fontSize: 14.sp,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ),
+                              );
+                            },
+                            separatorBuilder: (context, index) =>
+                                SizedBox(width: 9.w),
+                          ),
+                          Positioned(
+                            left: -1,
+                            child: Container(
+                              height: 48.h,
+                              width: 20.w,
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                  colors: [
+                                    Colors.white,
+                                    Colors.white.withOpacity(0),
+                                  ],
+                                  begin: Alignment.centerLeft,
+                                  end: Alignment.centerRight,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            right: -1,
+                            child: Container(
+                              height: 48.h,
+                              width: 20.w,
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                  colors: [
+                                    Colors.white,
+                                    Colors.white.withOpacity(0),
+                                  ],
+                                  begin: Alignment.centerRight,
+                                  end: Alignment.centerLeft,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      SvgPicture.asset(
+                        'assets/svg/get-ticket/button-outline.svg',
+                        width: 34.w,
+                        height: 34.h,
+                      ),
+                      ShaderMask(
+                        blendMode: BlendMode.srcIn,
+                        shaderCallback: (Rect bounds) => LinearGradient(
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
+                          colors: [
+                            darkOrangeColor,
+                            lightOrangeColor,
+                          ],
+                          tileMode: TileMode.mirror,
+                        ).createShader(bounds),
+                        child: Icon(
+                          Icons.chevron_right,
+                          size: 20.sp,
+                        ),
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
