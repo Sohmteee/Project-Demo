@@ -42,10 +42,20 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                 padding: EdgeInsets.symmetric(horizontal: 8.w),
                 child: Row(
                   children: [
-                    SvgPicture.asset(
-                      'assets/svg/get-ticket/button-outline.svg',
-                      width: 34.w,
-                      height: 34.h,
+                    Stack(
+                      children: [
+                        SvgPicture.asset(
+                          'assets/svg/get-ticket/button-outline.svg',
+                          width: 34.w,
+                          height: 34.h,
+                        ),
+                        SvgPicture.asset(
+                          'assets/svg/get-ticket/button-
+                        .svg',
+                          width: 34.w,
+                          height: 34.h,
+                        ),
+                      ],
                     )
                   ],
                 ),
