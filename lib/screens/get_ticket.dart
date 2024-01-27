@@ -95,7 +95,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                           color: Colors.white,
                           shape: BoxShape.circle,
                         ),
-                        child: selectedOption == index ? Icon(Icons.) : null,
+                        child: selectedOption == index ? Icon(Icons.g) : null,
                       ),
                     ],
                   ),
