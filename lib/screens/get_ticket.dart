@@ -171,6 +171,8 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                           SizedBox(width: 18.w),
                           Expanded(
                             child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 DMSansText(
                                   'International kids safe parents night out',
@@ -182,13 +184,10 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                                 SizedBox(height: 8.h),
                                 DMSansText(
                                   '10 spot left',
-                                    color: Color(0xFF747688),
-                                    fontSize: 13,
-                                    fontFamily: 'DM Sans',
-                                    fontWeight: FontWeight.w400,
-                                    height: 0,
-                                  ),
-                                )
+                                  color: HexColor('#747688'),
+                                  fontSize: 13.sp,
+                                  fontWeight: FontWeight.w400,
+                                ),
                               ],
                             ),
                           ),
