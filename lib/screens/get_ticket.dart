@@ -71,6 +71,32 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                     )
                   
                   ,Expanded(child: Container(),),
+                    Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        SvgPicture.asset(
+                          'assets/svg/get-ticket/button-outline.svg',
+                          width: 34.w,
+                          height: 34.h,
+                        ),
+                        ShaderMask(
+                          blendMode: BlendMode.srcIn,
+                          shaderCallback: (Rect bounds) => LinearGradient(
+                            begin: Alignment.centerLeft,
+                            end: Alignment.centerRight,
+                            colors: [
+                              darkOrangeColor,
+                              lightOrangeColor,
+                            ],
+                            tileMode: TileMode.mirror,
+                          ).createShader(bounds),
+                          child: Icon(
+                            Icons.chevron_left,
+                            size: 12.sp,
+                          ),
+                        )
+                      ],
+                    ),
                   ],
                 ),
               ),
