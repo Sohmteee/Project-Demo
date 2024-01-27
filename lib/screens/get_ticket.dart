@@ -74,6 +74,8 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                       child: Expanded(
                         child: ListView.separated(
                           itemCount: 30,
+                          scrollDirection: Axis.horizontal,
+                          physics: const BouncingScrollPhysics(),
                           padding: EdgeInsets.symmetric(horizontal: 12.w),
                           itemBuilder: (BuildContext context, int index) {
                             return Container(
