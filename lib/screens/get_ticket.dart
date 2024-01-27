@@ -90,16 +90,12 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                                   borderRadius: BorderRadius.circular(10.r),
                                 ),
                               ),
-                              child: Text(
-                                '03',
+                              child:  DMSansText(
+                                '${index+ 1 < 10 ? '0'${inde}}',
                                 textAlign: TextAlign.center,
-                                style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 14,
-                                  fontFamily: 'DM Sans',
+                                  fontSize: 14.sp,
                                   fontWeight: FontWeight.w500,
-                                  height: 0.10,
-                                ),
                               ),
                             );
                           },
