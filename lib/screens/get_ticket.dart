@@ -159,6 +159,9 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                       bottom: Radius.circular(19.r),
                     ),
                   ),
+                  child: Column(
+                    children: [],
+                  ),
                 ),
               ),
             ],
