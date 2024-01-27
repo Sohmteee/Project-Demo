@@ -825,11 +825,11 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
       onStatusChanged: (status) {
          if (status == SlidingUpPanelStatus.collapsed) {
           setState(() {
-            isOpenFilter = false;
+            isOpenInvite = false;
           });
         } else {
           setState(() {
-            isOpenFilter = true;
+            isOpenInvite = true;
           });
         }
       },
