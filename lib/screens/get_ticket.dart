@@ -30,14 +30,20 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
               top: Radius.circular(27.r),
             ),
           ),
-          child: ListView.builder(
-            itemCount: 3,
-            itemBuilder: (BuildContext context, int index) {
-              return Container();
-            },
-          ),
+          child: buildTicketOptions(),
         ),
       ),
+    );
+  }
+
+  ListView buildTicketOptions() {
+    int selectedOption = 0;
+
+    return ListView.builder(
+      itemCount: 3,
+      itemBuilder: (BuildContext context, int index) {
+        return Container();
+      },
     );
   }
 
