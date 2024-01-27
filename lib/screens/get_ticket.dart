@@ -46,11 +46,16 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
 
     return ListView.separated(
       itemCount: 3,
-      padding: EdgeInsets.symmetric(vertical: 22.sp),
+      padding: EdgeInsets.symmetric(
+        vertical: 22.sp,
+        horizontal: 16.w,
+      ),
       itemBuilder: (BuildContext context, int index) {
         return Column(
           children: [
             Container(
+              width: double.maxFinite,
+              height: 50.h,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.vertical(
                   top: Radius.circular(18.r),
