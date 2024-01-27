@@ -72,12 +72,14 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 12.w),
                       child: Expanded(
-                        child: ListView.builder(
+                        child: ListView.separated(
                           itemCount: 30,
                           padding: EdgeInsets.symmetric(horizontal: 12.w),
                           itemBuilder: (BuildContext context, int index) {
                             return Container();
                           },
+                          separatorBuilder: (context, index) =>
+                              SizedBox(width: 9.w),
                         ),
                       ),
                     ),
