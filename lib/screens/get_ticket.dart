@@ -53,7 +53,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
       ),
       itemBuilder: (BuildContext context, int index) {
         return Container(
-          height: 211.h,
+          height: 300.h,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(19.r),
             boxShadow: const [
