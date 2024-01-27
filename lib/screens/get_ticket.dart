@@ -84,6 +84,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                             return Container(
                               width: 48.w,
                               height: 48.h,
+                              padding: EdgeInsets.all(8.sp),
                               decoration: ShapeDecoration(
                                 color: HexColor('#979797').withOpacity(.09),
                                 shape: RoundedRectangleBorder(
@@ -95,7 +96,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                                     index + 1
                                   }}',
                                 textAlign: TextAlign.center,
-                                color: Colors.white,
+                                color: HexColor('#979797'),
                                 fontSize: 14.sp,
                                 fontWeight: FontWeight.w500,
                               ),
