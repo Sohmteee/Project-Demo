@@ -58,7 +58,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
               height: 300.h,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(19.r),
-                shadows: [
+                boxShadow: const [
                   BoxShadow(
                     color: Color(0x0F4F5588),
                     blurRadius: 30,
@@ -82,7 +82,6 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                         width: 0,
                         color: Colors.transparent,
                       ),
-                      
               ),
               child: Column(
                 children: [
