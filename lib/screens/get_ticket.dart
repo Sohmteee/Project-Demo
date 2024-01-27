@@ -163,11 +163,10 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                     children: [
                       Row(
                         children: [
-                          SizedBox(
-                            width: 79, ,
-                            child: Image.asset(
-                              'assets/images/home/near-you-2.png',
-                            ),
+                          Image.asset(
+                            'assets/images/home/near-you-2.png',
+                            width: 79.w,
+                            height: 79.h,
                           ),
                         ],
                       ),
