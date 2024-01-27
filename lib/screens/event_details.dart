@@ -906,7 +906,8 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                         // height: MediaQuery.of(context).size.height * .6,
                         child: ListView.builder(
                           itemCount: friends.length,
-                          padding: EdgeInsets.symmetric(vertical: 16.h),
+                          padding: EdgeInsets.only(top: 16.h, bottom: MediaQuery.of(context).size.width * .2,
+                          ),
                           physics: const BouncingScrollPhysics(),
                           itemBuilder: (BuildContext context, int index) {
                             return StatefulBuilder(
@@ -920,7 +921,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                                   },
                                   child: Container(
                                     padding:
-                                        EdgeInsets.only(top: 8.h, bottom: ),
+                                        EdgeInsets.symmetric(vertical: 8.h),
                                     color: Colors.transparent,
                                     child: Row(
                                       children: [
