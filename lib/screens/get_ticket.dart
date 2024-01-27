@@ -191,14 +191,23 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                               ],
                             ),
                           ),
-                          DMSansText(
-                            '\$35.00',
-                              color: Color(0xFFFFB459),
-                              fontSize: 16,
+                          ShaderMask(
+                            blendMode: BlendMode.srcIn,
+                            shaderCallback: (Rect bounds) => LinearGradient(
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                              colors: [
+                                darkOrangeColor,
+                                lightOrangeColor,
+                              ],
+                              tileMode: TileMode.mirror,
+                            ).createShader(bounds),
+                            child: DMSansText(
+                              '\$35.00',
+                              fontSize: 16.sp,
                               fontWeight: FontWeight.w700,
-                              height: 0,
                             ),
-                          
+                          ),
                         ],
                       ),
                     ],
