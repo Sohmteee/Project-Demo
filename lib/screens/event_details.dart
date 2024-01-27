@@ -983,13 +983,14 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                   ),
                 ),
         ),
-        if (panelController.) Padding(
-          padding: EdgeInsets.symmetric(horizontal: 52.w, vertical: 27.h),
-          child: ArrowButton(
-            text: 'INVITE',
-            onPressed: () {},
-          ),
-        )
+        if (panelController.status != SlidingUpPanelStatus.collapsed)
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 52.w, vertical: 27.h),
+            child: ArrowButton(
+              text: 'INVITE',
+              onPressed: () {},
+            ),
+          )
       ],
     );
   }
