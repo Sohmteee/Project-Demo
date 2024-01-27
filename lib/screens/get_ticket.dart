@@ -72,7 +72,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                     ),
                     Expanded(
                       child: Container(
-                        height: 100.h,
+                        height: 48.h,
                         padding: EdgeInsets.symmetric(horizontal: 12.w),
                         child: ListView.separated(
                           itemCount: 30,
@@ -83,6 +83,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                             return Container(
                               width: 48.w,
                               height: 48.h,
+                              color: lightOrangeColor,
                             );
                           },
                           separatorBuilder: (context, index) =>
