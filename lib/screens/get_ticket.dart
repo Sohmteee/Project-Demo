@@ -92,11 +92,12 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10.r),
                                 ),
+                                gradient: selectedDateIndex == index ?
                               ),
                               child: DMSansText(
                                 '${index + 1 < 10 ? '0${index + 1}' : '${index + 1}'}\nDec',
                                 textAlign: TextAlign.center,
-                                color: HexColor('#979797'),
+                                color: selectedDateIndex == index ? Colors.white : HexColor('#979797'),
                                 fontSize: 14.sp,
                                 fontWeight: FontWeight.w500,
                               ),
