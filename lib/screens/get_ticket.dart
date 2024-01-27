@@ -38,14 +38,17 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                   ],
                 ),
               ),
-              Row(
-                children: [
-                  SvgPicture.asset(
-                    'assets/svg/get-ticket/button-outline.svg',
-                    width: 34.w,
-                    height: 34.h,
-                  )
-                ],
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 8.w),
+                child: Row(
+                  children: [
+                    SvgPicture.asset(
+                      'assets/svg/get-ticket/button-outline.svg',
+                      width: 34.w,
+                      height: 34.h,
+                    )
+                  ],
+                ),
               ),
             ],
           ),
