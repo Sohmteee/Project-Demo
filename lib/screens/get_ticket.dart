@@ -68,9 +68,10 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                           ),
                         )
                       ],
-                    )
-                  
-                  ,Expanded(child: Container(),),
+                    ),
+                    Expanded(
+                      child: Container(),
+                    ),
                     Stack(
                       alignment: Alignment.center,
                       children: [
@@ -92,7 +93,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                           ).createShader(bounds),
                           child: Icon(
                             Icons.chevron_left,
-                            size: 12.sp,
+                            size: 14.sp,
                           ),
                         )
                       ],
