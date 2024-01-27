@@ -920,7 +920,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                                   },
                                   child: Container(
                                     padding:
-                                        EdgeInsets.symmetric(vertical: 8.h),
+                                        EdgeInsets.only(top: 8.h, bottom: ),
                                     color: Colors.transparent,
                                     child: Row(
                                       children: [
