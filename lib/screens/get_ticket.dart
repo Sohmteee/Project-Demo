@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/models/text.dart';
@@ -57,6 +58,10 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
               height: 300.h,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(19.r),
+                border: const GradientBoxBorder(
+                  gradient: LinearGradient(colors: [Colors.blue, Colors.red]),
+                  width: 4,
+                ),
                 border: Border.all(
                   color: selectedOption == index
                       ? lightOrangeColor
