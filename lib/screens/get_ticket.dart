@@ -191,6 +191,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                               ],
                             ),
                           ),
+                          SizedBox(width: 5.w),
                           ShaderMask(
                             blendMode: BlendMode.srcIn,
                             shaderCallback: (Rect bounds) => LinearGradient(
