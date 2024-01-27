@@ -69,8 +69,17 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                         )
                       ],
                     ),
-                    Expanded(
-                      child: Container(),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 12.w),
+                      child: Expanded(
+                        child: ListView.builder(
+                          itemCount: 30,
+                          padding: EdgeInsets.symmetric(horizontal: 12.w),
+                          itemBuilder: (BuildContext context, int index) {
+                            return Container();
+                          },
+                        ),
+                      ),
                     ),
                     Stack(
                       alignment: Alignment.center,
