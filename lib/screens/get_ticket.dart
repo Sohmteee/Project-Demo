@@ -54,10 +54,9 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
         return Column(
           children: [
             Container(
+              height: 300.h,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(
-                  top: Radius.circular(18.r),
-                ),
+                borderRadius: BorderRadius.circular(18.r),
                 border: Border.all(
                   color: selectedOption == index
                       ? lightOrangeColor
