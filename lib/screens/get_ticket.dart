@@ -15,26 +15,33 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size(double.infinity, 100.h),
-        child: Column(
-          children: [
-            Padding(
-              padding: EdgeInsets.only(
-                left: 10.w,
-                top: 30.h,
+        child: Container(
+          color: Colors.white,
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.only(
+                  left: 10.w,
+                  top: 30.h,
+                  bottom: 28.h,
+                ),
+                child: Row(
+                  children: [
+                    BackButton(color: Theme.of(context).colorScheme.secondary),
+                    DMSansText(
+                      'Get a Ticket',
+                      color: Theme.of(context).colorScheme.secondary,
+                      fontSize: 24.sp,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ],
+                ),
               ),
-              child: Row(
-                children: [
-                  BackButton(color: Theme.of(context).colorScheme.secondary),
-                  DMSansText(
-                    'Get a Ticket',
-                    color: Theme.of(context).colorScheme.secondary,
-                    fontSize: 24.sp,
-                    fontWeight: FontWeight.w400,
-                  ),
-                ],
+              Row(
+                children: [],
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
       body: Column(),
