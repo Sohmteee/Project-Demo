@@ -87,7 +87,12 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
   Widget build(BuildContext context) {
     return PopScope(
       onPopInvoked: (value) {
-        if
+        if (isOpenInvite) {
+          panelController.collapse();
+          isOpenInvite = false;
+        } else {
+          return true;
+        }
       },
       child: Scaffold(
         extendBodyBehindAppBar: true,
