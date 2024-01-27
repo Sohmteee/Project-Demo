@@ -138,7 +138,14 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                                 height: 48.h,
                                 width: 20.w,
                                 decoration: BoxDecoration(
-                                  
+                                  gradient: LinearGradient(
+                                    colors: [
+                                      Colors.white,
+                                      Colors.transparent,
+                                    ],
+                                    begin: Alignment.centerLeft,
+                                    end: Alignment.centerRight,
+                                  ),
                                 ),
                               ),
                             ),
