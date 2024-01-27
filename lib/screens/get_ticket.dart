@@ -42,7 +42,9 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
     return ListView.builder(
       itemCount: 3,
       itemBuilder: (BuildContext context, int index) {
-        return Container();
+        return Container(
+          
+        );
       },
     );
   }
