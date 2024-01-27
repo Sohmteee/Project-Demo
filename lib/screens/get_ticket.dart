@@ -132,8 +132,16 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                               separatorBuilder: (context, index) =>
                                   SizedBox(width: 9.w),
                             ),
-                          
-                          
+                            Positioned(
+                              left: 0,
+                              child: Container(
+                                height: 48.h,
+                                width: 20.w,
+                                decoration: BoxDecoration(
+                                  
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),
