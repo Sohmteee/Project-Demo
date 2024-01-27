@@ -13,8 +13,8 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
+      appBar: PreferredSize(
+        preferredSize: 200.h,
         leading: BackButton(color: Theme.of(context).colorScheme.secondary),
         title: DMSansText(
           'Get a Ticket',
