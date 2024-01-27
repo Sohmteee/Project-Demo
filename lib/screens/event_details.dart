@@ -921,7 +921,6 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                             color: Theme.of(context).colorScheme.secondary,
                             fontSize: 14.sp,
                           ),
-                          
                           textCapitalization: TextCapitalization.words,
                           decoration: InputDecoration(
                             hintText: 'Search',
@@ -930,7 +929,10 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                               fontSize: 14.sp,
                             ),
                             border: InputBorder.none,
-                            
+                            contentPadding: EdgeInsets.symmetric(
+                              vertical: 14.w,
+                              horizontal: 20.w,
+                            ),
                           ),
                         ),
                       ),
