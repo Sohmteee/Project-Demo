@@ -916,6 +916,21 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                             borderRadius: BorderRadius.circular(100),
                           ),
                         ),
+                        child: TextField(
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20.sp,
+                          ),
+                          textCapitalization: TextCapitalization.words,
+                          decoration: InputDecoration(
+                            hintText: 'Search...',
+                            hintStyle: TextStyle(
+                              color: Vx.gray300,
+                              fontSize: 20.sp,
+                            ),
+                            border: InputBorder.none,
+                          ),
+                        ),
                       ),
                       SizedBox(height: 16.h),
                       Expanded(
