@@ -152,6 +152,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
               ),
               Expanded(
                 child: Container(
+                  padding: EdgeInsets.all(16.sp),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.vertical(
