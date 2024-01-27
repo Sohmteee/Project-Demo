@@ -21,17 +21,17 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(context),
-      backgroundColor: Colors.white,
-      body: Expanded(
-        child: Container(
-          decoration: BoxDecoration(
-            color: HexColor('#D9D9D9').withOpacity(.16),
-            borderRadius: BorderRadius.vertical(
-              top: Radius.circular(27.r),
-            ),
+      backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
+      body: Container(
+        width: double.maxFinite,
+        height: double.maxFinite,
+        decoration: BoxDecoration(
+          color: HexColor('#D9D9D9').withOpacity(.16),
+          borderRadius: BorderRadius.vertical(
+            top: Radius.circular(27.r),
           ),
-          child: buildTicketOptions(),
         ),
+        child: buildTicketOptions(),
       ),
     );
   }
