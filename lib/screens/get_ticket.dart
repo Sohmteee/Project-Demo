@@ -88,16 +88,26 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                               height: 48.h,
                               padding: EdgeInsets.all(8.sp),
                               decoration: ShapeDecoration(
-                                color: HexColor('#979797').withOpacity(.09),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10.r),
-                                ),
-                                gradient: selectedDateIndex == index ?
-                              ),
+                                  color: HexColor('#979797').withOpacity(.09),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.r),
+                                  ),
+                                  gradient: selectedDateIndex == index
+                                      ? LinearGradient(
+                                          colors: [
+                                            lightOrangeColor,
+                                            darkOrangeColor,
+                                          ],
+                                          begin: Alignment.topCenter,
+                                          end: Alignment.bottomCenter,
+                                        )
+                                      : null),
                               child: DMSansText(
                                 '${index + 1 < 10 ? '0${index + 1}' : '${index + 1}'}\nDec',
                                 textAlign: TextAlign.center,
-                                color: selectedDateIndex == index ? Colors.white : HexColor('#979797'),
+                                color: selectedDateIndex == index
+                                    ? Colors.white
+                                    : HexColor('#979797'),
                                 fontSize: 14.sp,
                                 fontWeight: FontWeight.w500,
                               ),
