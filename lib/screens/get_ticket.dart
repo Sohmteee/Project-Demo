@@ -55,7 +55,11 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
           children: [
             Container(
               decoration: BoxDecoration(
-                
+                border: Border.all(
+                  color: selectedOption == index
+                      ? Colors.transparent
+                      : null,
+                ),
               ),
               child: Container(
                 width: double.maxFinite,
