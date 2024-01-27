@@ -836,7 +836,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
       panelController: panelController,
       enableOnTap: false,
       onStatusChanged: (status) {
-         if (status == SlidingUpPanelStatus.collapsed) {
+        if (status == SlidingUpPanelStatus.collapsed) {
           setState(() {
             isOpenInvite = false;
           });
@@ -846,123 +846,126 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
           });
         }
       },
-      child: Container(
-        padding: EdgeInsets.fromLTRB(24.w, 12.h, 24.w, 0),
-        decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.primary,
-          borderRadius: BorderRadius.vertical(
-            top: Radius.circular(20.r),
-          ),
-        ),
-        width: double.maxFinite,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Container(
-              width: 26.w,
-              height: 2.5.h,
-              margin: EdgeInsets.only(bottom: 16.h),
+      child: !isOpenInvite
+          ? const SizedBox(height: 1)
+          : Container(
+              padding: EdgeInsets.fromLTRB(24.w, 12.h, 24.w, 0),
               decoration: BoxDecoration(
-                color: HexColor('#B2B2B2').withOpacity(.5),
-              ),
-            ),
-            Container(
-              alignment: Alignment.centerLeft,
-              margin: EdgeInsets.only(bottom: 8.h),
-              child: AirBnBText(
-                'Invite Friend',
-                color: Theme.of(context).colorScheme.secondary,
-                fontSize: 24.sp,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            Container(
-              width: double.maxFinite,
-              height: 50.h,
-              decoration: ShapeDecoration(
-                color: Colors.white,
-                shape: RoundedRectangleBorder(
-                  side: BorderSide(
-                    width: 1.24.sp,
-                    color: HexColor('#F0F0F0'),
-                  ),
-                  borderRadius: BorderRadius.circular(100),
+                color: Theme.of(context).colorScheme.primary,
+                borderRadius: BorderRadius.vertical(
+                  top: Radius.circular(20.r),
                 ),
               ),
-            ),
-            SizedBox(height: 16.h),
-            Expanded(
-              // height: MediaQuery.of(context).size.height * .6,
-              child: ListView.builder(
-                itemCount: friends.length,
-                padding: EdgeInsets.symmetric(vertical: 16.h),
-                physics: const BouncingScrollPhysics(),
-                itemBuilder: (BuildContext context, int index) {
-                  return StatefulBuilder(
-                    builder: (context, updateState) {
-                      return ZoomTapAnimation(
-                        onTap: () {
-                          updateState(() {
-                            isTicked[index] = !isTicked[index];
-                          });
-                          setState(() {});
-                        },
-                        child: Container(
-                          padding: EdgeInsets.symmetric(vertical: 8.h),
-                          color: Colors.transparent,
-                          child: Row(
-                            children: [
-                              CircleAvatar(
-                                radius: 22.5.r,
-                                backgroundColor: Colors.white,
-                                backgroundImage: Image.asset(
-                                  friends[index]['image'],
-                                  height: 45.h,
-                                  width: 45.w,
-                                  fit: BoxFit.fitWidth,
-                                ).image,
-                              ),
-                              SizedBox(width: 12.w),
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsets.symmetric(vertical: 3.h),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      AirBnBText(
-                                        friends[index]['name'],
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .secondary,
-                                        fontSize: 14.sp,
-                                        fontWeight: FontWeight.w500,
+              width: double.maxFinite,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(
+                    width: 26.w,
+                    height: 2.5.h,
+                    margin: EdgeInsets.only(bottom: 16.h),
+                    decoration: BoxDecoration(
+                      color: HexColor('#B2B2B2').withOpacity(.5),
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    margin: EdgeInsets.only(bottom: 8.h),
+                    child: AirBnBText(
+                      'Invite Friend',
+                      color: Theme.of(context).colorScheme.secondary,
+                      fontSize: 24.sp,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  Container(
+                    width: double.maxFinite,
+                    height: 50.h,
+                    decoration: ShapeDecoration(
+                      color: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        side: BorderSide(
+                          width: 1.24.sp,
+                          color: HexColor('#F0F0F0'),
+                        ),
+                        borderRadius: BorderRadius.circular(100),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 16.h),
+                  Expanded(
+                    // height: MediaQuery.of(context).size.height * .6,
+                    child: ListView.builder(
+                      itemCount: friends.length,
+                      padding: EdgeInsets.symmetric(vertical: 16.h),
+                      physics: const BouncingScrollPhysics(),
+                      itemBuilder: (BuildContext context, int index) {
+                        return StatefulBuilder(
+                          builder: (context, updateState) {
+                            return ZoomTapAnimation(
+                              onTap: () {
+                                updateState(() {
+                                  isTicked[index] = !isTicked[index];
+                                });
+                                setState(() {});
+                              },
+                              child: Container(
+                                padding: EdgeInsets.symmetric(vertical: 8.h),
+                                color: Colors.transparent,
+                                child: Row(
+                                  children: [
+                                    CircleAvatar(
+                                      radius: 22.5.r,
+                                      backgroundColor: Colors.white,
+                                      backgroundImage: Image.asset(
+                                        friends[index]['image'],
+                                        height: 45.h,
+                                        width: 45.w,
+                                        fit: BoxFit.fitWidth,
+                                      ).image,
+                                    ),
+                                    SizedBox(width: 12.w),
+                                    Expanded(
+                                      child: Padding(
+                                        padding:
+                                            EdgeInsets.symmetric(vertical: 3.h),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            AirBnBText(
+                                              friends[index]['name'],
+                                              color: Theme.of(context)
+                                                  .colorScheme
+                                                  .secondary,
+                                              fontSize: 14.sp,
+                                              fontWeight: FontWeight.w500,
+                                            ),
+                                            AirBnBText(
+                                              '${friends[index]['followers']} followers',
+                                              textAlign: TextAlign.right,
+                                              color: Vx.gray400,
+                                              fontSize: 13.sp,
+                                              fontWeight: FontWeight.w400,
+                                            ),
+                                          ],
+                                        ),
                                       ),
-                                      AirBnBText(
-                                        '${friends[index]['followers']} followers',
-                                        textAlign: TextAlign.right,
-                                        color: Vx.gray400,
-                                        fontSize: 13.sp,
-                                        fontWeight: FontWeight.w400,
-                                      ),
-                                    ],
-                                  ),
+                                    ),
+                                    SvgPicture.asset(
+                                        'assets/svg/view-map/${isTicked[index] ? 'select' : 'no-select'}.svg'),
+                                  ],
                                 ),
                               ),
-                              SvgPicture.asset(
-                                  'assets/svg/view-map/${isTicked[index] ? 'select' : 'no-select'}.svg'),
-                            ],
-                          ),
-                        ),
-                      );
-                    },
-                  );
-                },
+                            );
+                          },
+                        );
+                      },
+                    ),
+                  ),
+                ],
               ),
             ),
-          ],
-        ),
-      ),
     );
   }
 }
