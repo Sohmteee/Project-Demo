@@ -220,7 +220,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
               onTap: () {
                 panelController.collapse();
                 setState(() {
-                  isOpenFriend = false;
+                  isOpenInvite = false;
                 });
               },
               child: Container(
