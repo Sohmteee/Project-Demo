@@ -97,21 +97,21 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                         ),
                         child: selectedOption == index
                             ? ShaderMask(
-                              blendMode: BlendMode.srcIn,
+                                blendMode: BlendMode.srcIn,
                                 shaderCallback: (Rect bounds) => LinearGradient(
-                                  begin: Alignment.centerLeft,
-                                  end: Alignment.centerRight,
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter,
                                   colors: [
-                                    darkOrangeColor,
                                     lightOrangeColor,
+                                    darkOrangeColor,
                                   ],
                                   tileMode: TileMode.mirror,
                                 ).createShader(bounds),
-                              child: Icon(
+                                child: Icon(
                                   Icons.check,
                                   size: 16.sp,
                                 ),
-                            )
+                              )
                             : null,
                       ),
                     ],
