@@ -15,6 +15,7 @@ class GetTicketScreen extends StatefulWidget {
 
 class _GetTicketScreenState extends State<GetTicketScreen> {
   int selectedDateIndex = 2;
+  final dateController = ScrollController();
 
   @override
   Widget build(BuildContext context) {
@@ -80,13 +81,16 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                         padding: EdgeInsets.symmetric(horizontal: 12.w),
                         child: ListView.separated(
                           itemCount: 30,
+                          controller: dateController,
                           scrollDirection: Axis.horizontal,
                           physics: const BouncingScrollPhysics(),
                           padding: EdgeInsets.symmetric(horizontal: 12.w),
                           itemBuilder: (BuildContext context, int index) {
                             return ZoomTapAnimation(
                               onTap: () {
-                                
+                                setState(() {
+                                  selectedDateIndex = index;
+                                });
                               },
                               child: Container(
                                 width: 48.w,
