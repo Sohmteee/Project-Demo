@@ -85,163 +85,168 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      extendBodyBehindAppBar: true,
-      backgroundColor: Theme.of(context).colorScheme.primary,
-      body: Stack(
-        alignment: Alignment.bottomCenter,
-        children: [
-          CustomScrollView(
-            physics: const BouncingScrollPhysics(),
-            slivers: [
-              SliverAppBar(
-                pinned: true,
-                snap: false,
-                floating: false,
-                expandedHeight: 350.h,
-                elevation: 0,
-                toolbarHeight: 80.h,
-                leading: const BackButton(color: Colors.white),
-                titleSpacing: 0.w,
-                backgroundColor: darkOrangeColor,
-                title: AirBnBText(
-                  'Event Details',
-                  color: Colors.white,
-                  fontSize: 24.sp,
-                  fontWeight: FontWeight.w500,
-                ),
-                actions: [
-                  ZoomTapAnimation(
-                    child: IconButton(
-                      splashColor: Colors.transparent,
-                      onPressed: () {
-                        Share.share('https://www.yeerlo.com');
-                      },
-                      icon: Container(
-                        height: 36.h,
-                        decoration: ShapeDecoration(
-                          color: Colors.white.withOpacity(0.2),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10.r),
-                          ),
-                        ),
-                        child: Center(
-                          child: SvgPicture.asset(
-                            'assets/svg/send.svg',
-                            height: 18.h,
-                            width: 18.w,
-                          ),
-                        ),
-                      ),
-                    ),
+    return PopScope(
+      onPopInvoked: (value) {
+        if
+      },
+      child: Scaffold(
+        extendBodyBehindAppBar: true,
+        backgroundColor: Theme.of(context).colorScheme.primary,
+        body: Stack(
+          alignment: Alignment.bottomCenter,
+          children: [
+            CustomScrollView(
+              physics: const BouncingScrollPhysics(),
+              slivers: [
+                SliverAppBar(
+                  pinned: true,
+                  snap: false,
+                  floating: false,
+                  expandedHeight: 350.h,
+                  elevation: 0,
+                  toolbarHeight: 80.h,
+                  leading: const BackButton(color: Colors.white),
+                  titleSpacing: 0.w,
+                  backgroundColor: darkOrangeColor,
+                  title: AirBnBText(
+                    'Event Details',
+                    color: Colors.white,
+                    fontSize: 24.sp,
+                    fontWeight: FontWeight.w500,
                   ),
-                  ZoomTapAnimation(
-                    child: IconButton(
-                      splashColor: Colors.transparent,
-                      onPressed: () {},
-                      icon: Container(
-                        height: 36.h,
-                        decoration: ShapeDecoration(
-                          color: Colors.white.withOpacity(0.2),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10.r),
+                  actions: [
+                    ZoomTapAnimation(
+                      child: IconButton(
+                        splashColor: Colors.transparent,
+                        onPressed: () {
+                          Share.share('https://www.yeerlo.com');
+                        },
+                        icon: Container(
+                          height: 36.h,
+                          decoration: ShapeDecoration(
+                            color: Colors.white.withOpacity(0.2),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.r),
+                            ),
                           ),
-                        ),
-                        child: Center(
-                          child: SvgPicture.asset(
-                            'assets/svg/bookmark-outline.svg',
-                            height: 15.h,
-                            width: 15.w,
+                          child: Center(
+                            child: SvgPicture.asset(
+                              'assets/svg/send.svg',
+                              height: 18.h,
+                              width: 18.w,
+                            ),
                           ),
                         ),
                       ),
                     ),
+                    ZoomTapAnimation(
+                      child: IconButton(
+                        splashColor: Colors.transparent,
+                        onPressed: () {},
+                        icon: Container(
+                          height: 36.h,
+                          decoration: ShapeDecoration(
+                            color: Colors.white.withOpacity(0.2),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.r),
+                            ),
+                          ),
+                          child: Center(
+                            child: SvgPicture.asset(
+                              'assets/svg/bookmark-outline.svg',
+                              height: 15.h,
+                              width: 15.w,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 12.w),
+                  ],
+                  flexibleSpace: FlexibleSpaceBar(
+                    background: buildImageStack(),
                   ),
-                  SizedBox(width: 12.w),
-                ],
-                flexibleSpace: FlexibleSpaceBar(
-                  background: buildImageStack(),
                 ),
-              ),
-              SliverList(
-                delegate: SliverChildListDelegate(
-                  [
-                    SizedBox(height: 20.h),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 24.w),
-                      child: DMSansText(
-                        'SAMUEL MEET & GREET PARTY',
-                        color: Theme.of(context).colorScheme.secondary,
-                        fontSize: 28.sp,
-                        fontWeight: FontWeight.w400,
+                SliverList(
+                  delegate: SliverChildListDelegate(
+                    [
+                      SizedBox(height: 20.h),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 24.w),
+                        child: DMSansText(
+                          'SAMUEL MEET & GREET PARTY',
+                          color: Theme.of(context).colorScheme.secondary,
+                          fontSize: 28.sp,
+                          fontWeight: FontWeight.w400,
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 18.h),
-                    buildDetailTilesColumn(context),
-                    SizedBox(height: 35.h),
-                    buildAboutEvent(context),
-                    SizedBox(height: 50.h),
-                    buildCommentSection(context),
-                    SizedBox(height: 50.h),
+                      SizedBox(height: 18.h),
+                      buildDetailTilesColumn(context),
+                      SizedBox(height: 35.h),
+                      buildAboutEvent(context),
+                      SizedBox(height: 50.h),
+                      buildCommentSection(context),
+                      SizedBox(height: 50.h),
+                    ],
+                  ),
+                )
+              ],
+            ),
+            Container(
+              alignment: Alignment.bottomCenter,
+              width: double.maxFinite,
+              height: 150.h,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Theme.of(context).colorScheme.primary.withOpacity(.1),
+                    Theme.of(context).colorScheme.primary,
+                    Theme.of(context).colorScheme.primary,
                   ],
                 ),
-              )
-            ],
-          ),
-          Container(
-            alignment: Alignment.bottomCenter,
-            width: double.maxFinite,
-            height: 150.h,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Theme.of(context).colorScheme.primary.withOpacity(.1),
-                  Theme.of(context).colorScheme.primary,
-                  Theme.of(context).colorScheme.primary,
-                ],
               ),
-            ),
-            child: Container(
-              height: 60.h,
-              margin: EdgeInsets.all(20.sp),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  DMSansText(
-                    'FREE - \$25',
-                    textAlign: TextAlign.center,
-                    color: Theme.of(context).colorScheme.secondary,
-                    fontSize: 19.sp,
-                    fontWeight: FontWeight.w700,
-                  ),
-                  SizedBox(
-                    width: 200.w,
-                    child: ArrowButton(
-                      onPressed: () {},
-                      text: 'GET TICKETS',
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          if (panelController.status != SlidingUpPanelStatus.collapsed)
-            GestureDetector(
-              onTap: () {
-                panelController.collapse();
-                setState(() {
-                  isOpenInvite = false;
-                });
-              },
               child: Container(
-                color: Colors.black38,
+                height: 60.h,
+                margin: EdgeInsets.all(20.sp),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    DMSansText(
+                      'FREE - \$25',
+                      textAlign: TextAlign.center,
+                      color: Theme.of(context).colorScheme.secondary,
+                      fontSize: 19.sp,
+                      fontWeight: FontWeight.w700,
+                    ),
+                    SizedBox(
+                      width: 200.w,
+                      child: ArrowButton(
+                        onPressed: () {},
+                        text: 'GET TICKETS',
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
-          friendsPanel(),
-        ],
+            if (panelController.status != SlidingUpPanelStatus.collapsed)
+              GestureDetector(
+                onTap: () {
+                  panelController.collapse();
+                  setState(() {
+                    isOpenInvite = false;
+                  });
+                },
+                child: Container(
+                  color: Colors.black38,
+                ),
+              ),
+            friendsPanel(),
+          ],
+        ),
       ),
     );
   }
