@@ -91,11 +91,16 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                       Container(
                         width: 20.w,
                         height: 20.h,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.white,
                           shape: BoxShape.circle,
                         ),
-                        child: selectedOption == index ? Icon(Icons.check) : null,
+                        child: selectedOption == index
+                            ? Icon(
+                                Icons.check,
+                                size: 16.sp,
+                              )
+                            : null,
                       ),
                     ],
                   ),
