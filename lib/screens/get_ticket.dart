@@ -64,7 +64,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                           ).createShader(bounds),
                           child: Icon(
                             Icons.chevron_left,
-                            size: 12.sp,
+                            size: 20.sp,
                           ),
                         )
                       ],
@@ -92,8 +92,8 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                             tileMode: TileMode.mirror,
                           ).createShader(bounds),
                           child: Icon(
-                            Icons.chevron_left,
-                            size: 14.sp,
+                            Icons.chevron_right,
+                            size: 20.sp,
                           ),
                         )
                       ],
