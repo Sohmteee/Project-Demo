@@ -38,6 +38,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
 
   ListView buildTicketOptions() {
     int selectedOption = 0;
+    List<String> priceTitles = ['Premium price', 'Regular price', 'Free',];
 
     return ListView.separated(
       itemCount: 3,
@@ -47,7 +48,9 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
           children: [
             Container(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.vertical(top: Radius.circular(18.r),),
+                borderRadius: BorderRadius.vertical(
+                  top: Radius.circular(18.r),
+                ),
               ),
             ),
           ],
