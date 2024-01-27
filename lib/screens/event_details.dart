@@ -906,9 +906,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       Container(
                         width: double.maxFinite,
                         height: 50.h,
-                        padding: EdgeInsets.only(
-                          horizontal: 20.w,
-                        ),
+                        padding: EdgeInsets.symmetric(horizontal: 20.w),
                         decoration: ShapeDecoration(
                           color: Colors.white,
                           shape: RoundedRectangleBorder(
@@ -938,7 +936,6 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                                   border: InputBorder.none,
                                   contentPadding: EdgeInsets.symmetric(
                                     vertical: 14.w,
-                                    horizontal: 20.w,
                                   ),
                                 ),
                               ),
