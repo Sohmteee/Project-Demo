@@ -78,7 +78,15 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                 padding: EdgeInsets.only(left: 15.w, right: 10.w),
                 child: Center(
                   child: Row(
-                    children: [],
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      DMSansText(
+                        priceTitles[index],
+                        color: selectedOption == index ? Colors.white : ,
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ],
                   ),
                 ),
               ),
