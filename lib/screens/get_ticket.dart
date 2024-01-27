@@ -39,11 +39,15 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
   ListView buildTicketOptions() {
     int selectedOption = 0;
 
-    return ListView.builder(
+    return ListView.separated(
       itemCount: 3,
+      padding: EdgeInsets.symmetric(vertical: 22.sp),
       itemBuilder: (BuildContext context, int index) {
-        return Container(
-          
+        return Container();
+      },
+      separatorBuilder: (BuildContext context, int index) {
+        return SizedBox(
+          height: 22.h,
         );
       },
     );
