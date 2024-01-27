@@ -71,8 +71,8 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                       ],
                     ),
                     Container(
-                      height: 100.h,
-                      padding: EdgeInsets.symmetric(horizontal: 12.w),
+                      // height: 100.h,
+                      // padding: EdgeInsets.symmetric(horizontal: 12.w),
                       child: Expanded(
                         child: ListView.separated(
                           itemCount: 30,
