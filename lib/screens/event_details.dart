@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_sliding_up_panel/sliding_up_panel_widget.dart';
@@ -990,7 +991,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
               text: 'INVITE',
               onPressed: () {},
             ),
-          )
+          ).animate().fadeIn(duration: .5.seconds),
       ],
     );
   }
