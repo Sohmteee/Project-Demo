@@ -916,24 +916,34 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                             borderRadius: BorderRadius.circular(100),
                           ),
                         ),
-                        child: TextField(
-                          style: TextStyle(
-                            color: Theme.of(context).colorScheme.secondary,
-                            fontSize: 14.sp,
-                          ),
-                          textCapitalization: TextCapitalization.words,
-                          decoration: InputDecoration(
-                            hintText: 'Search',
-                            hintStyle: TextStyle(
-                              color: Vx.gray300,
-                              fontSize: 14.sp,
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: TextField(
+                                style: TextStyle(
+                                  color:
+                                      Theme.of(context).colorScheme.secondary,
+                                  fontSize: 14.sp,
+                                ),
+                                textCapitalization: TextCapitalization.words,
+                                decoration: InputDecoration(
+                                  hintText: 'Search',
+                                  hintStyle: TextStyle(
+                                    color: Vx.gray300,
+                                    fontSize: 14.sp,
+                                  ),
+                                  border: InputBorder.none,
+                                  contentPadding: EdgeInsets.symmetric(
+                                    vertical: 14.w,
+                                    horizontal: 20.w,
+                                  ),
+                                ),
+                              ),
                             ),
-                            border: InputBorder.none,
-                            contentPadding: EdgeInsets.symmetric(
-                              vertical: 14.w,
-                              horizontal: 20.w,
+                            SvgPicture.asset(
+                              'assets/svg/search-orange.svg',
                             ),
-                          ),
+                          ],
                         ),
                       ),
                       SizedBox(height: 16.h),
