@@ -943,6 +943,8 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                             ),
                             SvgPicture.asset(
                               'assets/svg/search-orange.svg',
+                              width: 16.w,
+                              height: 16.h,
                             ),
                           ],
                         ),
