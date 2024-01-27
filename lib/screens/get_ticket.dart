@@ -84,7 +84,23 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                             return Container(
                               width: 48.w,
                               height: 48.h,
-                              color: HexColor('#979797').withOpacity(.09),
+                              decoration: ShapeDecoration(
+                                color: HexColor('#979797').withOpacity(.09),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10.r),
+                                ),
+                              ),
+                              child: Text(
+                                '03',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                  fontFamily: 'DM Sans',
+                                  fontWeight: FontWeight.w500,
+                                  height: 0.10,
+                                ),
+                              ),
                             );
                           },
                           separatorBuilder: (context, index) =>
