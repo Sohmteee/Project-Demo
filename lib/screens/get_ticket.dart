@@ -16,7 +16,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size(double.infinity, 150.h),
+        preferredSize: Size(double.infinity, 200.h),
         child: Container(
           color: Colors.white,
           child: Column(
@@ -70,10 +70,8 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                         )
                       ],
                     ),
-                    Container(
-                      // height: 100.h,
-                      // padding: EdgeInsets.symmetric(horizontal: 12.w),
-                      child: Expanded(
+                    Expanded(
+                      child: Container(
                         child: ListView.separated(
                           itemCount: 30,
                           scrollDirection: Axis.horizontal,
