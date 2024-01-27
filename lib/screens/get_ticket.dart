@@ -40,7 +40,6 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                 ),
               ),
               Padding(
-                width: double.maxFinite,
                 padding: EdgeInsets.symmetric(horizontal: 8.w),
                 child: Row(
                   children: [
@@ -72,22 +71,21 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                     ),
                     Container(
                       height: 100.h,
+                      width: double.maxFinite,
                       padding: EdgeInsets.symmetric(horizontal: 12.w),
-                      child: Expanded(
-                        child: ListView.separated(
-                          itemCount: 30,
-                          scrollDirection: Axis.horizontal,
-                          physics: const BouncingScrollPhysics(),
-                          padding: EdgeInsets.symmetric(horizontal: 12.w),
-                          itemBuilder: (BuildContext context, int index) {
-                            return Container(
-                              width: 48.w,
-                              height: 48.h,
-                            );
-                          },
-                          separatorBuilder: (context, index) =>
-                              SizedBox(width: 9.w),
-                        ),
+                      child: ListView.separated(
+                        itemCount: 30,
+                        scrollDirection: Axis.horizontal,
+                        physics: const BouncingScrollPhysics(),
+                        padding: EdgeInsets.symmetric(horizontal: 12.w),
+                        itemBuilder: (BuildContext context, int index) {
+                          return Container(
+                            width: 48.w,
+                            height: 48.h,
+                          );
+                        },
+                        separatorBuilder: (context, index) =>
+                            SizedBox(width: 9.w),
                       ),
                     ),
                     Stack(
