@@ -10,6 +10,8 @@ class GetTicketScreen extends StatefulWidget {
 class _GetTicketScreenState extends State<GetTicketScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Container(),
+    );
   }
 }

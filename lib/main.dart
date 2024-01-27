@@ -7,6 +7,7 @@ import 'package:yeerlo/providers/notifications.dart';
 import 'package:yeerlo/providers/theme.dart';
 import 'package:yeerlo/screens/drawer/events.dart';
 import 'package:yeerlo/screens/event_details.dart';
+import 'package:yeerlo/screens/get_ticket.dart';
 import 'package:yeerlo/screens/home/home.dart';
 import 'package:yeerlo/screens/home/nearby_events.dart';
 import 'package:yeerlo/screens/home/notifications.dart';
@@ -92,6 +93,8 @@ class MyApp extends StatelessWidget {
             '/events': (context) => const EventsScreen(),
             '/event-details': (context) => const EventDetailsScreen(),
             '/view-map': (context) => const ViewMapScreen(),
+            '/get-ticket': (context) => const GetTicketScreen(),
+
           },
         );
       },
