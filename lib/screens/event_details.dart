@@ -954,5 +954,21 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                                     ),
                                     SvgPicture.asset(
                                       'assets/svg/view-map/${isTicked[index] ? 'select' : 'no-select'}.svg',
-                                      width: 20.w
-                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                      width: 20.w,
+                                      height: 20.h,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            );
+                          },
+                        );
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ),
+    );
+  }
+}
