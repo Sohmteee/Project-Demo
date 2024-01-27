@@ -82,10 +82,13 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                     children: [
                       DMSansText(
                         priceTitles[index],
-                        color: selectedOption == index ? Colors.white : ,
+                        color: selectedOption == index
+                            ? Colors.white
+                            : Theme.of(context).colorScheme.secondary,
                         fontSize: 16.sp,
                         fontWeight: FontWeight.w500,
                       ),
+                      Container()
                     ],
                   ),
                 ),
