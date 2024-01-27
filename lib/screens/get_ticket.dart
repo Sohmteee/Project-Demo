@@ -54,67 +54,72 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
         return Column(
           children: [
             Container(
-              width: double.maxFinite,
-              height: 50.h,
               decoration: BoxDecoration(
-                color: selectedOption == index
-                    ? null
-                    : HexColor('#D8D8D8').withOpacity(.46),
-                borderRadius: BorderRadius.vertical(
-                  top: Radius.circular(18.r),
-                ),
-                gradient: selectedOption == index
-                    ? LinearGradient(
-                        colors: [
-                          lightOrangeColor,
-                          darkOrangeColor,
-                        ],
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                      )
-                    : null,
+                
               ),
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.w),
-                child: Center(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      DMSansText(
-                        priceTitles[index],
-                        color: selectedOption == index
-                            ? Colors.white
-                            : Theme.of(context).colorScheme.secondary,
-                        fontSize: 16.sp,
-                        fontWeight: FontWeight.w500,
-                      ),
-                      Container(
-                        width: 20.w,
-                        height: 20.h,
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          shape: BoxShape.circle,
+              child: Container(
+                width: double.maxFinite,
+                height: 50.h,
+                decoration: BoxDecoration(
+                  color: selectedOption == index
+                      ? null
+                      : HexColor('#D8D8D8').withOpacity(.46),
+                  borderRadius: BorderRadius.vertical(
+                    top: Radius.circular(18.r),
+                  ),
+                  gradient: selectedOption == index
+                      ? LinearGradient(
+                          colors: [
+                            lightOrangeColor,
+                            darkOrangeColor,
+                          ],
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                        )
+                      : null,
+                ),
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20.w),
+                  child: Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        DMSansText(
+                          priceTitles[index],
+                          color: selectedOption == index
+                              ? Colors.white
+                              : Theme.of(context).colorScheme.secondary,
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w500,
                         ),
-                        child: selectedOption == index
-                            ? ShaderMask(
-                                blendMode: BlendMode.srcIn,
-                                shaderCallback: (Rect bounds) => LinearGradient(
-                                  begin: Alignment.topCenter,
-                                  end: Alignment.bottomCenter,
-                                  colors: [
-                                    lightOrangeColor,
-                                    darkOrangeColor,
-                                  ],
-                                  tileMode: TileMode.mirror,
-                                ).createShader(bounds),
-                                child: Icon(
-                                  Icons.check,
-                                  size: 16.sp,
-                                ),
-                              )
-                            : null,
-                      ),
-                    ],
+                        Container(
+                          width: 20.w,
+                          height: 20.h,
+                          decoration: const BoxDecoration(
+                            color: Colors.white,
+                            shape: BoxShape.circle,
+                          ),
+                          child: selectedOption == index
+                              ? ShaderMask(
+                                  blendMode: BlendMode.srcIn,
+                                  shaderCallback: (Rect bounds) => LinearGradient(
+                                    begin: Alignment.topCenter,
+                                    end: Alignment.bottomCenter,
+                                    colors: [
+                                      lightOrangeColor,
+                                      darkOrangeColor,
+                                    ],
+                                    tileMode: TileMode.mirror,
+                                  ).createShader(bounds),
+                                  child: Icon(
+                                    Icons.check,
+                                    size: 16.sp,
+                                  ),
+                                )
+                              : null,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
