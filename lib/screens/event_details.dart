@@ -215,6 +215,18 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
               ),
             ),
           ),
+          if (panelController.status != SlidingUpPanelStatus.collapsed)
+            GestureDetector(
+              onTap: () {
+                panelController.collapse();
+                setState(() {
+                  isOpenFriend = false;
+                });
+              },
+              child: Container(
+                color: Colors.black38,
+              ),
+            ),
           friendsPanel(),
         ],
       ),
