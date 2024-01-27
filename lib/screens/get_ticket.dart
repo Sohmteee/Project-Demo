@@ -191,6 +191,14 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                               ],
                             ),
                           ),
+                          DMSansText(
+                            '\$35.00',
+                              color: Color(0xFFFFB459),
+                              fontSize: 16,
+                              fontWeight: FontWeight.w700,
+                              height: 0,
+                            ),
+                          
                         ],
                       ),
                     ],
