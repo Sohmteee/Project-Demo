@@ -70,7 +70,10 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                         ),
                         width: 1,
                       )
-                    : Border.all(width: 0),
+                    : Border.all(
+                        width: 0,
+                        color: Colors.transparent,
+                      ),
               ),
               child: Column(
                 children: [
