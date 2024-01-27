@@ -75,7 +75,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                     : null,
               ),
               child: Padding(
-                padding: EdgeInsets.only(left: 15.w, right: 20.w),
+                padding: EdgeInsets.symmetric(horizontal: 20.w),
                 child: Center(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -95,6 +95,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                           color: Colors.white,
                           shape: BoxShape.circle,
                         ),
+                        child: selectedOption == index ? Icon(Icons.) : null,
                       ),
                     ],
                   ),
