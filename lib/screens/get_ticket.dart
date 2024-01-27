@@ -179,12 +179,21 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                                   fontSize: 15.sp,
                                   fontWeight: FontWeight.w400,
                                 ),
+                                SizedBox(height: 8.h),
+                                DMSansText(
+                                  '10 spot left',
+                                    color: Color(0xFF747688),
+                                    fontSize: 13,
+                                    fontFamily: 'DM Sans',
+                                    fontWeight: FontWeight.w400,
+                                    height: 0,
+                                  ),
+                                )
                               ],
                             ),
                           ),
                         ],
                       ),
-                      
                     ],
                   ),
                 ),
