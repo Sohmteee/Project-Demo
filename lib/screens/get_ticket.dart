@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:yeerlo/models/text.dart';
 
 class GetTicketScreen extends StatefulWidget {
@@ -14,7 +15,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size(double.infinity, 100.h),
+        preferredSize: Size(double.infinity, 150.h),
         child: Container(
           color: Colors.white,
           child: Column(
@@ -38,7 +39,13 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                 ),
               ),
               Row(
-                children: [],
+                children: [
+                  SvgPicture.asset(
+                    'assets/svg/get-ticket/button-outline.svg',
+                    width: 34.w,
+                    height: 34.h,
+                  )
+                ],
               ),
             ],
           ),
