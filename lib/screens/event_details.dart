@@ -77,6 +77,12 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
   ];
 
   @override
+  void dispose() {
+    panelController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
