@@ -160,7 +160,9 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                     ),
                   ),
                   child: Column(
-                    children: [],
+                    children: [
+                      
+                    ],
                   ),
                 ),
               ),
