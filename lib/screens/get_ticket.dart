@@ -14,13 +14,21 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: 200.h,
-        leading: BackButton(color: Theme.of(context).colorScheme.secondary),
-        title: DMSansText(
-          'Get a Ticket',
-          color: Theme.of(context).colorScheme.secondary,
-          fontSize: 24.sp,
-          fontWeight: FontWeight.w400,
+        preferredSize: Size(double.infinity, 40.h),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                BackButton(color: Theme.of(context).colorScheme.secondary),
+                DMSansText(
+                  'Get a Ticket',
+                  color: Theme.of(context).colorScheme.secondary,
+                  fontSize: 24.sp,
+                  fontWeight: FontWeight.w400,
+                ),
+              ],
+            ),
+          ],
         ),
       ),
       body: Column(),
