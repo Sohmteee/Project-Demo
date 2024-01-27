@@ -79,54 +79,62 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                       child: Container(
                         height: 48.h,
                         padding: EdgeInsets.symmetric(horizontal: 6.w),
-                        child: ListView.separated(
-                          itemCount: 30,
-                          controller: dateController,
-                          scrollDirection: Axis.horizontal,
-                          physics: const BouncingScrollPhysics(),
-                          padding: EdgeInsets.symmetric(horizontal: 18.w),
-                          itemBuilder: (BuildContext context, int index) {
-                            return ZoomTapAnimation(
-                              onTap: () {
-                                setState(() {
-                                  selectedDateIndex = index;
-                                });
-                              },
-                              child: Container(
-                                width: 48.w,
-                                height: 48.h,
-                                padding: EdgeInsets.all(8.sp),
-                                decoration: ShapeDecoration(
-                                    color: selectedDateIndex == index
-                                        ? null
-                                        : HexColor('#979797').withOpacity(.09),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10.r),
+                        child: Stack(
+                          children: [
+                            ListView.separated(
+                              itemCount: 30,
+                              controller: dateController,
+                              scrollDirection: Axis.horizontal,
+                              physics: const BouncingScrollPhysics(),
+                              padding: EdgeInsets.symmetric(horizontal: 18.w),
+                              itemBuilder: (BuildContext context, int index) {
+                                return ZoomTapAnimation(
+                                  onTap: () {
+                                    setState(() {
+                                      selectedDateIndex = index;
+                                    });
+                                  },
+                                  child: Container(
+                                    width: 48.w,
+                                    height: 48.h,
+                                    padding: EdgeInsets.all(8.sp),
+                                    decoration: ShapeDecoration(
+                                        color: selectedDateIndex == index
+                                            ? null
+                                            : HexColor('#979797')
+                                                .withOpacity(.09),
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(10.r),
+                                        ),
+                                        gradient: selectedDateIndex == index
+                                            ? LinearGradient(
+                                                colors: [
+                                                  lightOrangeColor,
+                                                  darkOrangeColor,
+                                                ],
+                                                begin: Alignment.topCenter,
+                                                end: Alignment.bottomCenter,
+                                              )
+                                            : null),
+                                    child: DMSansText(
+                                      '${index + 1 < 10 ? '0${index + 1}' : '${index + 1}'}\nDec',
+                                      textAlign: TextAlign.center,
+                                      color: selectedDateIndex == index
+                                          ? Colors.white
+                                          : HexColor('#979797'),
+                                      fontSize: 14.sp,
+                                      fontWeight: FontWeight.w500,
                                     ),
-                                    gradient: selectedDateIndex == index
-                                        ? LinearGradient(
-                                            colors: [
-                                              lightOrangeColor,
-                                              darkOrangeColor,
-                                            ],
-                                            begin: Alignment.topCenter,
-                                            end: Alignment.bottomCenter,
-                                          )
-                                        : null),
-                                child: DMSansText(
-                                  '${index + 1 < 10 ? '0${index + 1}' : '${index + 1}'}\nDec',
-                                  textAlign: TextAlign.center,
-                                  color: selectedDateIndex == index
-                                      ? Colors.white
-                                      : HexColor('#979797'),
-                                  fontSize: 14.sp,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                            );
-                          },
-                          separatorBuilder: (context, index) =>
-                              SizedBox(width: 9.w),
+                                  ),
+                                );
+                              },
+                              separatorBuilder: (context, index) =>
+                                  SizedBox(width: 9.w),
+                            ),
+                          
+                          
+                          ],
                         ),
                       ),
                     ),
