@@ -39,7 +39,8 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                   ],
                 ),
               ),
-              Padding(
+              Container(
+                width: 100,
                 padding: EdgeInsets.symmetric(horizontal: 8.w),
                 child: Row(
                   children: [
