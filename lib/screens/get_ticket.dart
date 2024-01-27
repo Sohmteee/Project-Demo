@@ -43,6 +43,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                 child: Row(
                   children: [
                     Stack(
+                      alignment: Alignment.center,
                       children: [
                         SvgPicture.asset(
                           'assets/svg/get-ticket/button-outline.svg',
@@ -50,8 +51,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                           height: 34.h,
                         ),
                         SvgPicture.asset(
-                          'assets/svg/get-ticket/button-
-                        .svg',
+                          'assets/svg/get-ticket/arrow.svg',
                           width: 34.w,
                           height: 34.h,
                         ),
