@@ -163,7 +163,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
               ),
             ],
           ),
-        );
+        );  
       },
       separatorBuilder: (BuildContext context, int index) {
         return SizedBox(
