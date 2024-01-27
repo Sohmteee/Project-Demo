@@ -25,7 +25,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                 padding: EdgeInsets.only(
                   left: 10.w,
                   top: 30.h,
-                  bottom: 28.h,
+                  bottom: 26.h,
                 ),
                 child: Row(
                   children: [
@@ -72,6 +72,8 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                     ),
                     Expanded(
                       child: Container(
+                        height: 100.h,
+                        padding: EdgeInsets.symmetric(horizontal: 12.w),
                         child: ListView.separated(
                           itemCount: 30,
                           scrollDirection: Axis.horizontal,
