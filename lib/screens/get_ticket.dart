@@ -75,7 +75,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                     : null,
               ),
               child: Padding(
-                padding: EdgeInsets.only(left: 15.w, right: 10.w),
+                padding: EdgeInsets.only(left: 15.w, right: 20.w),
                 child: Center(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -88,7 +88,14 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                         fontSize: 16.sp,
                         fontWeight: FontWeight.w500,
                       ),
-                      Container()
+                      Container(
+                        width: 20.w,
+                        height: 20.h,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          shape: BoxShape.circle,
+                        ),
+                      ),
                     ],
                   ),
                 ),
