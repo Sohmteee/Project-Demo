@@ -173,7 +173,16 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                       SizedBox(width: 18.w),
                       Column(
                         children: [
-                          
+                          Expanded(
+                            child: DMSansText(
+                              'International kids safe parents night out',
+                                color: Theme.of(context).colorScheme.secondary,
+                                fontSize: 15.sp,
+                                fontWeight: FontWeight.w400,
+                                height: 0,
+                              ),
+                            ),
+                          )
                         ],
                       ),
                     ],
