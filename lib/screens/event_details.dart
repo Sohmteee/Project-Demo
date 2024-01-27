@@ -906,6 +906,9 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       Container(
                         width: double.maxFinite,
                         height: 50.h,
+                        padding: EdgeInsets.only(
+                          horizontal: 20.w,
+                        ),
                         decoration: ShapeDecoration(
                           color: Colors.white,
                           shape: RoundedRectangleBorder(
@@ -942,6 +945,8 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                             ),
                             SvgPicture.asset(
                               'assets/svg/search-orange.svg',
+                              width: 14.w,
+                              height: 14.h,
                             ),
                           ],
                         ),
