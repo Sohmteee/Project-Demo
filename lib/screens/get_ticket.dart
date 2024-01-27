@@ -171,6 +171,11 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                         ],
                       ),
                       SizedBox(width: 18.w),
+                      Column(
+                        children: [
+                          
+                        ],
+                      ),
                     ],
                   ),
                 ),
