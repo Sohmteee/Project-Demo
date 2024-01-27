@@ -104,13 +104,13 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                   fontWeight: FontWeight.w500,
                 ),
                 actions: [
-                  ZoomTapAnimation(
-                    onTap: () {
+                  IconButton
+                  sp(
+                    onPressed: () {
                       Share.share('https://www.yeerlo.com');
                     },
-                    child: Container(
+                    icon: Container(
                       height: 36.h,
-                      margin: EdgeInsets.all(horizontal: ),
                       decoration: ShapeDecoration(
                         color: Colors.white.withOpacity(0.2),
                         shape: RoundedRectangleBorder(
@@ -126,9 +126,10 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       ),
                     ),
                   ),
-                  ZoomTapAnimation(
-                    onTap: () {},
-                    child: Container(
+                  IconButton
+                  sp(
+                    onPressed: () {},
+                    icon: Container(
                       height: 36.h,
                       decoration: ShapeDecoration(
                         color: Colors.white.withOpacity(0.2),
