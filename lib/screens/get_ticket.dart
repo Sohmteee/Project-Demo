@@ -141,7 +141,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                                   gradient: LinearGradient(
                                     colors: [
                                       Colors.white,
-                                      Colors.transparent,
+                                      Colors.white.withOpacity(.3),
                                     ],
                                     begin: Alignment.centerLeft,
                                     end: Alignment.centerRight,
