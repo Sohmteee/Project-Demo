@@ -21,7 +21,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size(double.infinity, 200.h),
+        preferredSize: Size(double.infinity, 160.h),
         child: Container(
           color: Colors.white,
           child: Column(
@@ -97,7 +97,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                                   child: Container(
                                     width: 48.w,
                                     height: 48.h,
-                                    padding: EdgeInsets.all(8.sp),
+                                    // padding: EdgeInsets.all(8.sp),
                                     decoration: ShapeDecoration(
                                         color: selectedDateIndex == index
                                             ? null
@@ -117,14 +117,16 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                                                 end: Alignment.bottomCenter,
                                               )
                                             : null),
-                                    child: DMSansText(
-                                      '${index + 1 < 10 ? '0${index + 1}' : '${index + 1}'}\nDec',
-                                      textAlign: TextAlign.center,
-                                      color: selectedDateIndex == index
-                                          ? Colors.white
-                                          : HexColor('#979797'),
-                                      fontSize: 14.sp,
-                                      fontWeight: FontWeight.w500,
+                                    child: Center(
+                                      child: DMSansText(
+                                        '${index + 1 < 10 ? '0${index + 1}' : '${index + 1}'}\nDec',
+                                        textAlign: TextAlign.center,
+                                        color: selectedDateIndex == index
+                                            ? Colors.white
+                                            : HexColor('#979797'),
+                                        fontSize: 14.sp,
+                                        fontWeight: FontWeight.w500,
+                                      ),
                                     ),
                                   ),
                                 );
