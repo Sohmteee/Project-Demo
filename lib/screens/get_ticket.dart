@@ -152,10 +152,10 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
               ),
               Expanded(
                 child: Container(
-                  color: Colors.white,
                   decoration: BoxDecoration(
+                    color: Colors.white,
                     borderRadius: BorderRadius.vertical(
-                      top: Radius.circular(18.r),
+                      bottom: Radius.circular(19.r),
                     ),
                   ),
                 ),
