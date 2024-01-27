@@ -78,13 +78,13 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                     Expanded(
                       child: Container(
                         height: 48.h,
-                        padding: EdgeInsets.symmetric(horizontal: 12.w),
+                        padding: EdgeInsets.symmetric(horizontal: 6.w),
                         child: ListView.separated(
                           itemCount: 30,
                           controller: dateController,
                           scrollDirection: Axis.horizontal,
                           physics: const BouncingScrollPhysics(),
-                          padding: EdgeInsets.symmetric(horizontal: 12.w),
+                          padding: EdgeInsets.symmetric(horizontal: 18.w),
                           itemBuilder: (BuildContext context, int index) {
                             return ZoomTapAnimation(
                               onTap: () {
