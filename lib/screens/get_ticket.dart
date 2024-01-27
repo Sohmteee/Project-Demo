@@ -57,18 +57,22 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
               width: double.maxFinite,
               height: 50.h,
               decoration: BoxDecoration(
-                color: selectedOption == index ? null :  
+                color: selectedOption == index
+                    ? null
+                    : HexColor('#D8D8D8').withOpacity(.46),
                 borderRadius: BorderRadius.vertical(
                   top: Radius.circular(18.r),
                 ),
-                gradient: selectedOption == index ? LinearGradient(
-                  colors: [
-                    lightOrangeColor,
-                    darkOrangeColor,
-                  ],
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                ) : null,
+                gradient: selectedOption == index
+                    ? LinearGradient(
+                        colors: [
+                          lightOrangeColor,
+                          darkOrangeColor,
+                        ],
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                      )
+                    : null,
               ),
             ),
           ],
