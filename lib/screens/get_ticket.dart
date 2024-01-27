@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/models/text.dart';
 
 class GetTicketScreen extends StatefulWidget {
@@ -50,12 +51,26 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                           width: 34.w,
                           height: 34.h,
                         ),
-                        Icon(
-                          Icons.chevron_left,
-                          size: 12.sp,
+                        ShaderMask(
+                          blendMode: BlendMode.srcIn,
+                          shaderCallback: (Rect bounds) => LinearGradient(
+                            begin: Alignment.centerLeft,
+                            end: Alignment.centerRight,
+                            colors: [
+                              darkOrangeColor,
+                              lightOrangeColor,
+                            ],
+                            tileMode: TileMode.mirror,
+                          ).createShader(bounds),
+                          child: Icon(
+                            Icons.chevron_left,
+                            size: 12.sp,
+                          ),
                         )
                       ],
                     )
+                  
+                  ,Expanded(child: Container(),),
                   ],
                 ),
               ),
