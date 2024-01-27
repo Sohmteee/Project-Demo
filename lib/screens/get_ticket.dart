@@ -152,7 +152,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
               ),
               Expanded(
                 child: Container(
-                  padding: EdgeInsets.fromLTRB(10.w, 16.sp),
+                  padding: EdgeInsets.fromLTRB(10.w, 16.h, 16.w, 16.h),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.vertical(
@@ -163,7 +163,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
               ),
             ],
           ),
-        );  
+        );
       },
       separatorBuilder: (BuildContext context, int index) {
         return SizedBox(
