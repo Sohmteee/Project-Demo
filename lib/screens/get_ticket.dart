@@ -39,84 +39,81 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                   ],
                 ),
               ),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 8.w),
-                child: Row(
-                  children: [
-                    Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        SvgPicture.asset(
-                          'assets/svg/get-ticket/button-outline.svg',
-                          width: 34.w,
-                          height: 34.h,
+              Row(
+                children: [
+                  Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      SvgPicture.asset(
+                        'assets/svg/get-ticket/button-outline.svg',
+                        width: 34.w,
+                        height: 34.h,
+                      ),
+                      ShaderMask(
+                        blendMode: BlendMode.srcIn,
+                        shaderCallback: (Rect bounds) => LinearGradient(
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
+                          colors: [
+                            darkOrangeColor,
+                            lightOrangeColor,
+                          ],
+                          tileMode: TileMode.mirror,
+                        ).createShader(bounds),
+                        child: Icon(
+                          Icons.chevron_left,
+                          size: 20.sp,
                         ),
-                        ShaderMask(
-                          blendMode: BlendMode.srcIn,
-                          shaderCallback: (Rect bounds) => LinearGradient(
-                            begin: Alignment.centerLeft,
-                            end: Alignment.centerRight,
-                            colors: [
-                              darkOrangeColor,
-                              lightOrangeColor,
-                            ],
-                            tileMode: TileMode.mirror,
-                          ).createShader(bounds),
-                          child: Icon(
-                            Icons.chevron_left,
-                            size: 20.sp,
-                          ),
-                        )
-                      ],
-                    ),
-                    Container(
-                      height: 100.h,
-                      padding: EdgeInsets.symmetric(horizontal: 12.w),
-                      child: Expanded(
-                        child: ListView.separated(
-                          itemCount: 30,
-                          scrollDirection: Axis.horizontal,
-                          physics: const BouncingScrollPhysics(),
-                          padding: EdgeInsets.symmetric(horizontal: 12.w),
-                          itemBuilder: (BuildContext context, int index) {
-                            return Container(
-                              width: 48.w,
-                              height: 48.h,
-                            );
-                          },
-                          separatorBuilder: (context, index) =>
-                              SizedBox(width: 9.w),
-                        ),
+                      )
+                    ],
+                  ),
+                  Container(
+                    height: 100.h,
+                    padding: EdgeInsets.symmetric(horizontal: 12.w),
+                    child: Expanded(
+                      child: ListView.separated(
+                        itemCount: 30,
+                        scrollDirection: Axis.horizontal,
+                        physics: const BouncingScrollPhysics(),
+                        padding: EdgeInsets.symmetric(horizontal: 12.w),
+                        itemBuilder: (BuildContext context, int index) {
+                          return Container(
+                            width: 48.w,
+                            height: 48.h,
+                          );
+                        },
+                        separatorBuilder: (context, index) =>
+                            SizedBox(width: 9.w),
                       ),
                     ),
-                    Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        SvgPicture.asset(
-                          'assets/svg/get-ticket/button-outline.svg',
-                          width: 34.w,
-                          height: 34.h,
+                  ),
+                  Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      SvgPicture.asset(
+                        'assets/svg/get-ticket/button-outline.svg',
+                        width: 34.w,
+                        height: 34.h,
+                      ),
+                      ShaderMask(
+                        blendMode: BlendMode.srcIn,
+                        shaderCallback: (Rect bounds) => LinearGradient(
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
+                          colors: [
+                            darkOrangeColor,
+                            lightOrangeColor,
+                          ],
+                          tileMode: TileMode.mirror,
+                        ).createShader(bounds),
+                        child: Icon(
+                          Icons.chevron_right,
+                          size: 20.sp,
                         ),
-                        ShaderMask(
-                          blendMode: BlendMode.srcIn,
-                          shaderCallback: (Rect bounds) => LinearGradient(
-                            begin: Alignment.centerLeft,
-                            end: Alignment.centerRight,
-                            colors: [
-                              darkOrangeColor,
-                              lightOrangeColor,
-                            ],
-                            tileMode: TileMode.mirror,
-                          ).createShader(bounds),
-                          child: Icon(
-                            Icons.chevron_right,
-                            size: 20.sp,
-                          ),
-                        )
-                      ],
-                    ),
-                  ],
-                ),
+                      )
+                    ],
+                  ),
+                ],
               ),
             ],
           ),
