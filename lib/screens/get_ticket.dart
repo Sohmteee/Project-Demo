@@ -162,7 +162,6 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                   child: Column(
                     children: [
                       Row(
-                        crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           Image.asset(
                             'assets/images/get-ticket/price-pic.png',
