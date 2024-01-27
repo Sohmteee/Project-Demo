@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/models/text.dart';
+import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 class GetTicketScreen extends StatefulWidget {
   const GetTicketScreen({super.key});
@@ -83,33 +84,40 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                           physics: const BouncingScrollPhysics(),
                           padding: EdgeInsets.symmetric(horizontal: 12.w),
                           itemBuilder: (BuildContext context, int index) {
-                            return Container(
-                              width: 48.w,
-                              height: 48.h,
-                              padding: EdgeInsets.all(8.sp),
-                              decoration: ShapeDecoration(
-                                  color: HexColor('#979797').withOpacity(.09),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10.r),
-                                  ),
-                                  gradient: selectedDateIndex == index
-                                      ? LinearGradient(
-                                          colors: [
-                                            lightOrangeColor,
-                                            darkOrangeColor,
-                                          ],
-                                          begin: Alignment.topCenter,
-                                          end: Alignment.bottomCenter,
-                                        )
-                                      : null),
-                              child: DMSansText(
-                                '${index + 1 < 10 ? '0${index + 1}' : '${index + 1}'}\nDec',
-                                textAlign: TextAlign.center,
-                                color: selectedDateIndex == index
-                                    ? Colors.white
-                                    : HexColor('#979797'),
-                                fontSize: 14.sp,
-                                fontWeight: FontWeight.w500,
+                            return ZoomTapAnimation(
+                              onTap: () {
+                                
+                              },
+                              child: Container(
+                                width: 48.w,
+                                height: 48.h,
+                                padding: EdgeInsets.all(8.sp),
+                                decoration: ShapeDecoration(
+                                    color: selectedDateIndex == index
+                                        ? null
+                                        : HexColor('#979797').withOpacity(.09),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10.r),
+                                    ),
+                                    gradient: selectedDateIndex == index
+                                        ? LinearGradient(
+                                            colors: [
+                                              lightOrangeColor,
+                                              darkOrangeColor,
+                                            ],
+                                            begin: Alignment.topCenter,
+                                            end: Alignment.bottomCenter,
+                                          )
+                                        : null),
+                                child: DMSansText(
+                                  '${index + 1 < 10 ? '0${index + 1}' : '${index + 1}'}\nDec',
+                                  textAlign: TextAlign.center,
+                                  color: selectedDateIndex == index
+                                      ? Colors.white
+                                      : HexColor('#979797'),
+                                  fontSize: 14.sp,
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
                             );
                           },
