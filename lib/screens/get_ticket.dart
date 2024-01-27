@@ -74,6 +74,11 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                       )
                     : null,
               ),
+              child: Center(
+                child: Row(
+                  children: [],
+                ),
+              ),
             ),
           ],
         );
