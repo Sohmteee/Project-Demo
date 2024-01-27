@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:yeerlo/models/text.dart';
 
 class GetTicketScreen extends StatefulWidget {
   const GetTicketScreen({super.key});
@@ -13,15 +15,11 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: true,
-        title: Text(
+        title: DMSansText(
           'Get a Ticket',
-          style: TextStyle(
-            color: Color(0xFF110C26),
-            fontSize: 24,
-            fontFamily: 'DM Sans',
-            fontWeight: FontWeight.w400,
-            height: 0,
-          ),
+          color: Theme.of(context).colorScheme.secondary,
+          fontSize: 24.sp,
+          fontWeight: FontWeight.w400,
         ),
       ),
       body: Column(),

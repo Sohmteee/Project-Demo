@@ -228,7 +228,9 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                     SizedBox(
                       width: 200.w,
                       child: ArrowButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/get_ticket');
+                        },
                         text: 'GET TICKETS',
                       ),
                     ),
