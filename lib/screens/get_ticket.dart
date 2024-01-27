@@ -76,7 +76,10 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                           itemCount: 30,
                           padding: EdgeInsets.symmetric(horizontal: 12.w),
                           itemBuilder: (BuildContext context, int index) {
-                            return Container();
+                            return Container(
+                              width: 48.w,
+                              height: 48.h,
+                            );
                           },
                           separatorBuilder: (context, index) =>
                               SizedBox(width: 9.w),
