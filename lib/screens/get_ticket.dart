@@ -55,16 +55,15 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                 borderRadius: BorderRadius.vertical(
                   top: Radius.circular(18.r),
                 ),
-                
-              ),
-                LinearGradient(
+                gradient: LinearGradient(
                   colors: [
                     lightOrangeColor,
                     darkOrangeColor,
                   ],
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
-                )
+                ),
+              ),
             ),
           ],
         );
