@@ -229,7 +229,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       width: 200.w,
                       child: ArrowButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, '/get_ticket');
+                          Navigator.pushNamed(context, '/get-ticket');
                         },
                         text: 'GET TICKETS',
                       ),

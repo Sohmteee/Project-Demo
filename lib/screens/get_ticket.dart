@@ -14,7 +14,8 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: true,
+        elevation: 0,
+        leading: BackButton(color: Theme.of(context).colorScheme.secondary),
         title: DMSansText(
           'Get a Ticket',
           color: Theme.of(context).colorScheme.secondary,
