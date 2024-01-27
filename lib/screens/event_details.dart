@@ -872,14 +872,14 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                       Container(
                         width: 26.w,
                         height: 2.5.h,
-                        margin: EdgeInsets.only(bottom: 16.h),
+                        margin: EdgeInsets.only(bottom: 32.h),
                         decoration: BoxDecoration(
                           color: HexColor('#B2B2B2').withOpacity(.5),
                         ),
                       ),
                       Container(
                         alignment: Alignment.centerLeft,
-                        margin: EdgeInsets.only(bottom: 8.h),
+                        margin: EdgeInsets.only(bottom: 16.h),
                         child: AirBnBText(
                           'Invite Friend',
                           color: Theme.of(context).colorScheme.secondary,
