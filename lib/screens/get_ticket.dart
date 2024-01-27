@@ -133,7 +133,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                                   SizedBox(width: 9.w),
                             ),
                             Positioned(
-                              left: 0,
+                              left: -1,
                               child: Container(
                                 height: 48.h,
                                 width: 20.w,
@@ -141,7 +141,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                                   gradient: LinearGradient(
                                     colors: [
                                       Colors.white,
-                                      Colors.white.withOpacity(.3),
+                                      Colors.white.withOpacity(0),
                                     ],
                                     begin: Alignment.centerLeft,
                                     end: Alignment.centerRight,
