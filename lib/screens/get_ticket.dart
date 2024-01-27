@@ -59,9 +59,15 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(19.r),
                 border: selectedOption == index
-                    ? const GradientBoxBorder(
-                        gradient:
-                            LinearGradient(colors: [Colors.blue, Colors.red]),
+                    ? GradientBoxBorder(
+                        gradient: LinearGradient(
+                          colors: [
+                            lightOrangeColor,
+                            darkOrangeColor,
+                          ],
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                        ),
                         width: 1,
                       )
                     : Border.all(width: 0),
