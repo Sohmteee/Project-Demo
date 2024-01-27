@@ -37,7 +37,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
 
   PreferredSize buildAppBar(BuildContext context) {
     return PreferredSize(
-      preferredSize: Size(double.infinity, 160.h),
+      preferredSize: Size(double.infinity, 140.h),
       child: Container(
         color: Colors.white,
         child: Column(
@@ -46,7 +46,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
               padding: EdgeInsets.only(
                 left: 10.w,
                 top: 30.h,
-                bottom: 26.h,
+                bottom: 20.h,
               ),
               child: Row(
                 children: [
