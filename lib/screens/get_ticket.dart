@@ -13,6 +13,8 @@ class GetTicketScreen extends StatefulWidget {
 }
 
 class _GetTicketScreenState extends State<GetTicketScreen> {
+  int selectedDateIndex = 2;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -92,9 +94,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                                 ),
                               ),
                               child: DMSansText(
-                                index + 1 < 10
-                                    ? '0${index + 1}'
-                                    : '${index + 1}',
+                                '${index + 1 < 10 ? '0${index + 1}' : '${index + 1}'}\nDec',
                                 textAlign: TextAlign.center,
                                 color: HexColor('#979797'),
                                 fontSize: 14.sp,
