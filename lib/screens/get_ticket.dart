@@ -195,8 +195,8 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                           ShaderMask(
                             blendMode: BlendMode.srcIn,
                             shaderCallback: (Rect bounds) => LinearGradient(
-                              begin: Alignment.centerLeft,
-                              end: Alignment.centerRight,
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
                               colors: [
                                 darkOrangeColor,
                                 lightOrangeColor,
