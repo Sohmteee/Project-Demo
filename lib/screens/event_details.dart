@@ -926,6 +926,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                                       Theme.of(context).colorScheme.secondary,
                                   fontSize: 14.sp,
                                 ),
+                                cursorColor: lightOrangeColor,
                                 textCapitalization: TextCapitalization.words,
                                 decoration: InputDecoration(
                                   hintText: 'Search',
