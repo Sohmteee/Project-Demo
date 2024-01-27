@@ -906,7 +906,9 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                         // height: MediaQuery.of(context).size.height * .6,
                         child: ListView.builder(
                           itemCount: friends.length,
-                          padding: EdgeInsets.only(top: 16.h, bottom: MediaQuery.of(context).size.width * .2,
+                          padding: EdgeInsets.only(
+                            top: 16.h,
+                            bottom: MediaQuery.of(context).size.width * .25,
                           ),
                           physics: const BouncingScrollPhysics(),
                           itemBuilder: (BuildContext context, int index) {
