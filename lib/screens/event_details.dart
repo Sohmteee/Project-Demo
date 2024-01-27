@@ -918,12 +918,12 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                         ),
                         child: TextField(
                           style: TextStyle(
-                            color: Colors.white,
+                            color: HexColor('#8193AE'),
                             fontSize: 20.sp,
                           ),
                           textCapitalization: TextCapitalization.words,
                           decoration: InputDecoration(
-                            hintText: 'Search...',
+                            hintText: 'Search',
                             hintStyle: TextStyle(
                               color: Vx.gray300,
                               fontSize: 20.sp,
