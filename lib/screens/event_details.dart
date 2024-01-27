@@ -974,6 +974,13 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                   ),
                 ),
         ),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 52.w),
+          child: ArrowButton(
+            text: 'INVITE',
+            onPressed: () {},
+          ),
+        )
       ],
     );
   }
