@@ -55,10 +55,13 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
           children: [
             Container(
               decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(
+                  top: Radius.circular(18.r),
+                ),
                 border: Border.all(
                   color: selectedOption == index
-                      ? Colors.transparent
-                      : null,
+                      ? lightOrangeColor
+                      : Colors.transparent,
                 ),
               ),
               child: Container(
@@ -106,7 +109,8 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
                           child: selectedOption == index
                               ? ShaderMask(
                                   blendMode: BlendMode.srcIn,
-                                  shaderCallback: (Rect bounds) => LinearGradient(
+                                  shaderCallback: (Rect bounds) =>
+                                      LinearGradient(
                                     begin: Alignment.topCenter,
                                     end: Alignment.bottomCenter,
                                     colors: [
