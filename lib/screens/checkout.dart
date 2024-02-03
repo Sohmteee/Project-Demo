@@ -228,7 +228,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
       children: [
         Container(
           color: gray100.withOpacity(.4),
-          margin: EdgeInsets.symmetric(
+          padding: EdgeInsets.symmetric(
             vertical: 18.h,
             horizontal: 27.w,
           ),
