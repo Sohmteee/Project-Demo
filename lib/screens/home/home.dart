@@ -929,6 +929,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   top: Radius.circular(20.r),
                 ),
               ),
+              backgroundColor: themeProvider.themeType == ThemeType.light
+                  ? lightBackgroundColor
+                  : Colors.black,
               insetPadding: const EdgeInsets.all(0),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -938,10 +941,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       horizontal: 15.w,
                       vertical: 10.h,
                     ),
-                    // color: themeProvider.themeType == ThemeType.light
-                    //     ? lightBackgroundColor
-                    //     : darkBackgroundColor,
-
                     width: double.maxFinite,
                     child: Column(
                       children: List.generate(newPopUpItems.length, (index) {
@@ -954,7 +953,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             vertical: 7.h,
                           ),
                           decoration: BoxDecoration(
-                            color: newPopUpItems[index]['background-color'],
+                            color: themeProvider.themeType == ThemeType.light
+                                ? newPopUpItems[index]['background-color']
+                                : darkBackgroundColor,
                             borderRadius: BorderRadius.circular(8.r),
                           ),
                           child: Row(
@@ -971,7 +972,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                   children: [
                                     DMSansText(
                                       newPopUpItems[index]['title'],
-                                      color: const Color(0xFF171766),
+                                      color: themeProvider.themeType ==
+                                              ThemeType.light
+                                          ? const Color(0xFF171766)
+                                          : Colors.white,
                                       fontSize: 15.sp,
                                       fontWeight: FontWeight.w700,
                                     ),
@@ -1050,7 +1054,7 @@ class _HomeScreenState extends State<HomeScreen> {
         BottomBarItem(
           icon: Icon(
             IconlyBold.calendar,
-            color: Vx.gray400,
+            color: gray400,
             size: 23.w,
           ),
           label: 'Calendar',
@@ -1059,7 +1063,7 @@ class _HomeScreenState extends State<HomeScreen> {
         BottomBarItem(
           icon: SvgPicture.asset(
             'assets/svg/bookmark.svg',
-            color: Vx.gray400,
+            color: gray400,
             height: 23.h,
             width: 23.w,
           ),
@@ -1069,7 +1073,7 @@ class _HomeScreenState extends State<HomeScreen> {
         BottomBarItem(
           icon: SvgPicture.asset(
             'assets/svg/ticket.svg',
-            color: Vx.gray400,
+            color: gray400,
             height: 23.h,
             width: 23.w,
           ),
@@ -1887,7 +1891,7 @@ class _HomeScreenState extends State<HomeScreen> {
               decoration: InputDecoration(
                 hintText: 'Search...',
                 hintStyle: TextStyle(
-                  color: Vx.gray300,
+                  color: gray300,
                   fontSize: 20.sp,
                 ),
                 border: InputBorder.none,
@@ -1966,18 +1970,18 @@ class _HomeScreenState extends State<HomeScreen> {
                 borderRadius: BorderRadius.circular(10.r),
                 menuMaxHeight: 400.h,
                 icon: Container(),
-                hint: const Center(
+                hint:  Center(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
                         'Current Location',
                         style: TextStyle(
-                          color: Vx.gray200,
+                          color: gray200,
                           fontSize: 14,
                         ),
                       ),
-                      Icon(
+                     const Icon(
                         Icons.arrow_drop_down,
                         color: Vx.white,
                       )
@@ -2046,14 +2050,12 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         ZoomTapAnimation(
           onTap: () {
-            final provider =
-                context.read<NotificationProvider>();
+            final provider = context.read<NotificationProvider>();
             provider.showNoNotification();
             Navigator.pushNamed(context, '/notifications');
           },
           onLongTap: () {
-            final provider =
-                context.read<NotificationProvider>();
+            final provider = context.read<NotificationProvider>();
             provider.showNotifications();
             Navigator.pushNamed(context, '/notifications');
           },

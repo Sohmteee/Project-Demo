@@ -6,7 +6,6 @@ import 'package:flutter_sliding_up_panel/sliding_up_panel_widget.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
-import 'package:velocity_x/velocity_x.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/models/registration/button.dart';
@@ -24,6 +23,8 @@ class EventDetailsScreen extends StatefulWidget {
 class _EventDetailsScreenState extends State<EventDetailsScreen> {
   final panelController = SlidingUpPanelController();
   bool isOpenInvite = false;
+  List isTicked =
+      List.generate(/* friends.length */ 10, (index) => index % 2 == 0);
   List<Map<String, dynamic>> friends = [
     {
       'image': 'assets/images/view-map/friend-1.png',
@@ -388,7 +389,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                   AirBnBText(
                     '10 Feb',
                     textAlign: TextAlign.right,
-                    color: Vx.gray400,
+                    color: gray400,
                     fontSize: 15.sp,
                     fontWeight: FontWeight.w400,
                   ),
@@ -444,7 +445,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                   text:
                       'Enjoy your favorite comedy show with lovely friends and family and have a great time. ',
                   style: TextStyle(
-                    color: Vx.gray400,
+                    color: gray400,
                     fontSize: 16.sp,
                     fontFamily: 'DM Sans',
                     fontWeight: FontWeight.w400,
@@ -689,7 +690,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                 ),
                 AirBnBText(
                   subtitle,
-                  color: Vx.gray400,
+                  color: gray400,
                   fontSize: 12.sp,
                   fontWeight: FontWeight.w400,
                 ),
@@ -703,6 +704,8 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
   }
 
   Stack buildImageStack() {
+    final themeProvider = context.watch<ThemeProvider>();
+
     return Stack(
       alignment: Alignment.bottomCenter,
       children: [
@@ -774,7 +777,9 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
             width: 290.w,
             padding: EdgeInsets.fromLTRB(18.w, 16.h, 14.w, 16.h),
             decoration: ShapeDecoration(
-              color: Colors.white,
+              color: themeProvider.themeType == ThemeType.light
+                  ? lightBackgroundColor
+                  : darkBackgroundColor,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30),
               ),
@@ -852,7 +857,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
   }
 
   Widget friendsPanel() {
-    List isTicked = List.generate(friends.length, (index) => index % 2 == 0);
+    final themeProvider = context.watch<ThemeProvider>();
 
     return Stack(
       alignment: Alignment.bottomCenter,
@@ -910,7 +915,9 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                         height: 50.h,
                         padding: EdgeInsets.symmetric(horizontal: 20.w),
                         decoration: ShapeDecoration(
-                          color: Colors.white,
+                          color: themeProvider.themeType == ThemeType.light
+                              ? lightBackgroundColor
+                              : darkBackgroundColor,
                           shape: RoundedRectangleBorder(
                             side: BorderSide(
                               width: 1.24.sp,
@@ -933,7 +940,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                                 decoration: InputDecoration(
                                   hintText: 'Search',
                                   hintStyle: TextStyle(
-                                    color: Vx.gray300,
+                                    color: gray300,
                                     fontSize: 14.sp,
                                   ),
                                   border: InputBorder.none,
@@ -958,11 +965,11 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                           itemCount: friends.length,
                           padding: EdgeInsets.only(
                             top: 16.h,
-                            bottom: MediaQuery.of(context).size.width * .25,
+                            bottom: MediaQuery.of(context).size.width * .5,
                           ),
                           physics: const BouncingScrollPhysics(),
                           itemBuilder: (BuildContext context, int index) {
-                            return ZoomTapAnimation(
+                            return GestureDetector(
                               onTap: () {
                                 setState(() {
                                   isTicked[index] = !isTicked[index];
@@ -1003,7 +1010,7 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                                             AirBnBText(
                                               '${friends[index]['followers']} followers',
                                               textAlign: TextAlign.right,
-                                              color: Vx.gray400,
+                                              color: gray400,
                                               fontSize: 13.sp,
                                               fontWeight: FontWeight.w400,
                                             ),
@@ -1032,7 +1039,10 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
             padding: EdgeInsets.symmetric(horizontal: 52.w, vertical: 27.h),
             child: ArrowButton(
               text: 'INVITE',
-              onPressed: () {},
+              onPressed: () {
+                panelController.collapse();
+                isOpenInvite = false;
+              },
             ),
           ).animate().fadeIn(duration: .5.seconds),
       ],

@@ -5,7 +5,6 @@ import 'package:flutter_sliding_up_panel/sliding_up_panel_widget.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
 import 'package:syncfusion_flutter_sliders/sliders.dart';
-import 'package:velocity_x/velocity_x.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/data.dart';
@@ -52,7 +51,7 @@ class _SearchScreenState extends State<SearchScreen> {
             ),
           ),
           backgroundColor:
-              (themeProvider.themeType == ThemeType.light) ? Vx.gray100 : null,
+              (themeProvider.themeType == ThemeType.light) ? gray100 : null,
           body: buildSearchBody(themeProvider, context),
         ),
         if (panelController.status != SlidingUpPanelStatus.collapsed)
@@ -250,7 +249,7 @@ class _SearchScreenState extends State<SearchScreen> {
   Container buildSearchBody(ThemeProvider themeProvider, BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: (themeProvider.themeType == ThemeType.light) ? Vx.gray100 : null,
+        color: (themeProvider.themeType == ThemeType.light) ? gray100 : null,
         image: (themeProvider.themeType == ThemeType.dark)
             ? const DecorationImage(
                 image: AssetImage('assets/images/dark-gradient-background.png'),
@@ -727,7 +726,7 @@ class _SearchScreenState extends State<SearchScreen> {
               decoration: InputDecoration(
                 hintText: 'Search...',
                 hintStyle: TextStyle(
-                  color: Vx.gray300,
+                  color: gray300,
                   fontSize: 20.sp,
                 ),
                 border: InputBorder.none,

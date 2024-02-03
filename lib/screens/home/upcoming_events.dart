@@ -5,7 +5,6 @@ import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
-import 'package:velocity_x/velocity_x.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/theme.dart';
@@ -53,12 +52,11 @@ class _UpcomingEventsScreenState extends State<UpcomingEventsScreen> {
           ),
         ],
       ),
-      backgroundColor: Vx.gray100,
+      backgroundColor: gray100,
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 24.w),
         decoration: BoxDecoration(
-          color:
-              (themeProvider.themeType == ThemeType.light) ? Vx.gray100 : null,
+          color: (themeProvider.themeType == ThemeType.light) ? gray100 : null,
           image: (themeProvider.themeType == ThemeType.dark)
               ? const DecorationImage(
                   image:

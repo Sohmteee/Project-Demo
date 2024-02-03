@@ -5,7 +5,6 @@ import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
-import 'package:velocity_x/velocity_x.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/models/text.dart';
@@ -54,8 +53,7 @@ class _EventsScreenState extends State<EventsScreen> {
       body: Container(
         padding: EdgeInsets.only(top: 90.h),
         decoration: BoxDecoration(
-          color:
-              (themeProvider.themeType == ThemeType.light) ? Vx.gray100 : null,
+          color: (themeProvider.themeType == ThemeType.light) ? gray100 : null,
           image: (themeProvider.themeType == ThemeType.dark)
               ? const DecorationImage(
                   image:
@@ -193,7 +191,7 @@ class _EventsScreenState extends State<EventsScreen> {
             DMSansText(
               'We couldn’t find any active\nevent in your current location',
               textAlign: TextAlign.center,
-              color: Vx.gray400,
+              color: gray400,
               fontSize: 16.sp,
               fontWeight: FontWeight.w400,
             ),

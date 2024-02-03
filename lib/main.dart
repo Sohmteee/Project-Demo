@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/providers/notifications.dart';
 import 'package:yeerlo/providers/theme.dart';
+import 'package:yeerlo/screens/checkout.dart';
 import 'package:yeerlo/screens/drawer/events.dart';
 import 'package:yeerlo/screens/event_details.dart';
 import 'package:yeerlo/screens/get_ticket.dart';
@@ -94,7 +95,7 @@ class MyApp extends StatelessWidget {
             '/event-details': (context) => const EventDetailsScreen(),
             '/view-map': (context) => const ViewMapScreen(),
             '/get-ticket': (context) => const GetTicketScreen(),
-
+            '/checkout': (context) => const CheckoutScreen(),
           },
         );
       },
