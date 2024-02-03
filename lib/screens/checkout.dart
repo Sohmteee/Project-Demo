@@ -62,8 +62,8 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
           children: [
             buildTicket(themeProvider, context),
             buildCoupon(context, themeProvider),
-            buildOrderSummary(context),
-            buildPaymentMethods(context),
+            buildOrderSummary(context, themeProvider),
+            buildPaymentMethods(context, themeProvider),
           ],
         ),
       ),
@@ -326,7 +326,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
     );
   }
 
-  Column buildOrderSummary(BuildContext context) {
+  Column buildOrderSummary(BuildContext context, ThemeProvider themeProvider) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -345,7 +345,9 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
           ),
         ),
         Container(
-          color: Colors.white,
+          color: themeProvider.themeType == ThemeType.light
+              ? lightBackgroundColor
+              : Colors.transparent,
           padding: EdgeInsets.all(26.sp),
           child: Container(
             color: HexColor('#D9D9D9').withOpacity(.12),
