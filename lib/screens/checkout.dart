@@ -55,8 +55,8 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
               image: themeProvider.themeType == ThemeType.light
                   ? null
                   : const DecorationImage(
-                      image:
-                          AssetImage('assets/images/dark-gradient-background.png'),
+                      image: AssetImage(
+                          'assets/images/dark-gradient-background.png'),
                       fit: BoxFit.cover,
                     ),
             ),
@@ -70,8 +70,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
               ],
             ),
           ),
-        
-        Container(
+          Container(
             width: double.maxFinite,
             height: 84.h,
             padding: EdgeInsets.symmetric(vertical: 18.h, horizontal: 22.w),
@@ -108,103 +107,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                   ],
                 ),
                 ZoomTapAnimation(
-                  onTap: () {
-                    showDialog(
-                      context: context,
-                      builder: (context) {
-                        return Dialog(
-                          alignment: Alignment.bottomCenter,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.vertical(
-                              top: Radius.circular(20.r),
-                            ),
-                          ),
-                          backgroundColor:
-                              themeProvider.themeType == ThemeType.light
-                                  ? lightBackgroundColor
-                                  : Colors.black,
-                          insetPadding: const EdgeInsets.all(0),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Container(
-                                padding: EdgeInsets.symmetric(
-                                  horizontal: 15.w,
-                                  vertical: 10.h,
-                                ),
-                                width: double.maxFinite,
-                                child: Column(
-                                  children: List.generate(checkoutItems.length,
-                                      (index) {
-                                    return ZoomTapAnimation(
-                                      onTap: checkoutItems[index]['onTap'],
-                                      child: Container(
-                                        padding: EdgeInsets.symmetric(
-                                          horizontal: 13.w,
-                                          vertical: 16.h,
-                                        ),
-                                        margin: EdgeInsets.symmetric(
-                                          vertical: 7.h,
-                                        ),
-                                        decoration: BoxDecoration(
-                                          color: themeProvider.themeType ==
-                                                  ThemeType.light
-                                              ? checkoutItems[index]
-                                                  ['background-color']
-                                              : darkBackgroundColor,
-                                          borderRadius:
-                                              BorderRadius.circular(8.r),
-                                        ),
-                                        child: Row(
-                                          children: [
-                                            Icon(
-                                              index == 0
-                                                  ? IconlyLight.addUser
-                                                  : IconlyLight.user2,
-                                              size: 30.sp,
-                                              color: checkoutItems[index]
-                                                  ['icon-color'],
-                                            ),
-                                            SizedBox(width: 18.w),
-                                            Expanded(
-                                              child: Column(
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  DMSansText(
-                                                    checkoutItems[index]
-                                                        ['title'],
-                                                    color: themeProvider
-                                                                .themeType ==
-                                                            ThemeType.light
-                                                        ? HexColor('#171766')
-                                                        : Colors.white,
-                                                    fontSize: 15.sp,
-                                                    fontWeight: FontWeight.w700,
-                                                  ),
-                                                  DMSansText(
-                                                    checkoutItems[index]
-                                                        ['subtitle'],
-                                                    color: HexColor('#767676'),
-                                                    fontSize: 15.sp,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    );
-                                  }),
-                                ),
-                              ),
-                            ],
-                          ),
-                        );
-                      },
-                    );
-                  },
+                  onTap: () {},
                   child: Container(
                     padding:
                         EdgeInsets.symmetric(vertical: 13.h, horizontal: 20.w),
@@ -221,7 +124,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                           borderRadius: BorderRadius.circular(9)),
                     ),
                     child: DMSansText(
-                      'Checkout',
+                      'Proceed',
                       color: Colors.white,
                       fontSize: 16.sp,
                       fontWeight: FontWeight.w700,
