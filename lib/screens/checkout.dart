@@ -45,7 +45,6 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
       ),
       extendBodyBehindAppBar: true,
       body: Container(
-        // padding: EdgeInsets.only(top: 50.h),
         decoration: BoxDecoration(
           color: themeProvider.themeType == ThemeType.light
               ? lightBackgroundColor
@@ -76,7 +75,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
       padding: EdgeInsets.fromLTRB(26.w, 26.h, 32.w, 38.h),
       color: themeProvider.themeType == ThemeType.light
           ? lightBackgroundColor
-          : Colors.transparent,
+          : gray100.withOpacity(.4),
       child: Column(
         children: [
           Row(

@@ -25,7 +25,7 @@ final darkGreyBackgroundColor = HexColor('#F1573D');
 
 final registrationIconColor = HexColor('#807A7A');
 
-final gray100 = Colors.grey[100];
-final gray200 = Colors.grey[200];
-final gray300 = Colors.grey[300];
-final gray400 = Colors.grey[400];
+final gray100 = Colors.grey[100]!;
+final gray200 = Colors.grey[200]!;
+final gray300 = Colors.grey[300]!;
+final gray400 = Colors.grey[400]!;
