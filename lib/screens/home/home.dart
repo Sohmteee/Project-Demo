@@ -52,9 +52,9 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
     _firebaseMessaging = FirebaseMessaging.instance;
-    _firebaseMessaging.getToken().then((token) {
+    _firebaseMessaging.getToken().then((token){
       print("token is $token");
-    });
+  });
     panelController.collapse();
     Timer.periodic(1.seconds, (timer) {
       setState(() {
