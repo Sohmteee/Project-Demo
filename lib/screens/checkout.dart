@@ -350,7 +350,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
               : Colors.transparent,
           padding: EdgeInsets.all(26.sp),
           child: Container(
-            color: HexColor('#D9D9D9').withOpacity(.12),
+            color:  HexColor('#D9D9D9').withOpacity(.12),
             padding: EdgeInsets.symmetric(
               horizontal: 18.w,
               vertical: 22.h,
@@ -391,7 +391,8 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
     );
   }
 
-  Column buildPaymentMethods(BuildContext context) {
+  Column buildPaymentMethods(
+      BuildContext context, ThemeProvider themeProvider) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -409,7 +410,6 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
             fontWeight: FontWeight.w700,
           ),
         ),
-        
         Container(
           color: Colors.white,
           padding: EdgeInsets.only(top: 24.h, bottom: 65.h),
