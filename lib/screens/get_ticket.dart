@@ -378,10 +378,7 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
     return ListView.separated(
       itemCount: 3,
       physics: const BouncingScrollPhysics(),
-      padding: EdgeInsets.symmetric(
-        vertical: 22.sp,
-        horizontal: 16.w,
-      ),
+      padding: EdgeInsets.fromLTRB(16.w, 22.h, 16.w, 90.h),
       itemBuilder: (BuildContext context, int index) {
         return Container(
           height: 215.h,
