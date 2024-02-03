@@ -45,6 +45,13 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
       ),
       body: Container(
         decoration: BoxDecoration(
+          color: themeProvider.themeType == ThemeType.light
+              ? light
+              : const DecorationImage(
+                  image:
+                      AssetImage('assets/images/dark-gradient-background.png'),
+                  fit: BoxFit.cover,
+                ),
           image: themeProvider.themeType == ThemeType.light
               ? null
               : const DecorationImage(
@@ -71,7 +78,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
       padding: EdgeInsets.fromLTRB(26.w, 26.h, 32.w, 38.h),
       color: themeProvider.themeType == ThemeType.light
           ? lightBackgroundColor
-          : darkBackgroundColor,
+          : Colors.transparent,
       child: Column(
         children: [
           Row(
