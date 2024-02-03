@@ -44,28 +44,194 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
         ),
       ),
       extendBodyBehindAppBar: true,
-      body: Container(
-        decoration: BoxDecoration(
-          color: themeProvider.themeType == ThemeType.light
-              ? lightBackgroundColor
-              : null,
-          image: themeProvider.themeType == ThemeType.light
-              ? null
-              : const DecorationImage(
-                  image:
-                      AssetImage('assets/images/dark-gradient-background.png'),
-                  fit: BoxFit.cover,
+      body: Stack(
+        alignment: Alignment.bottomCenter,
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              color: themeProvider.themeType == ThemeType.light
+                  ? lightBackgroundColor
+                  : null,
+              image: themeProvider.themeType == ThemeType.light
+                  ? null
+                  : const DecorationImage(
+                      image:
+                          AssetImage('assets/images/dark-gradient-background.png'),
+                      fit: BoxFit.cover,
+                    ),
+            ),
+            child: ListView(
+              physics: const BouncingScrollPhysics(),
+              children: [
+                buildTicket(themeProvider, context),
+                buildCoupon(context, themeProvider),
+                buildOrderSummary(context, themeProvider),
+                buildPaymentMethods(context, themeProvider),
+              ],
+            ),
+          ),
+        
+        Container(
+            width: double.maxFinite,
+            height: 84.h,
+            padding: EdgeInsets.symmetric(vertical: 18.h, horizontal: 22.w),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ShaderMask(
+                      blendMode: BlendMode.srcIn,
+                      shaderCallback: (Rect bounds) => LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          lightOrangeColor,
+                          darkOrangeColor,
+                        ],
+                        tileMode: TileMode.mirror,
+                      ).createShader(bounds),
+                      child: DMSansText(
+                        '\$35.00',
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                    DMSansText(
+                      'You\'re going +1',
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.w700,
+                      color: HexColor('#767676').withOpacity(.76),
+                    ),
+                  ],
                 ),
-        ),
-        child: ListView(
-          physics: const BouncingScrollPhysics(),
-          children: [
-            buildTicket(themeProvider, context),
-            buildCoupon(context, themeProvider),
-            buildOrderSummary(context, themeProvider),
-            buildPaymentMethods(context, themeProvider),
-          ],
-        ),
+                ZoomTapAnimation(
+                  onTap: () {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return Dialog(
+                          alignment: Alignment.bottomCenter,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.vertical(
+                              top: Radius.circular(20.r),
+                            ),
+                          ),
+                          backgroundColor:
+                              themeProvider.themeType == ThemeType.light
+                                  ? lightBackgroundColor
+                                  : Colors.black,
+                          insetPadding: const EdgeInsets.all(0),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Container(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 15.w,
+                                  vertical: 10.h,
+                                ),
+                                width: double.maxFinite,
+                                child: Column(
+                                  children: List.generate(checkoutItems.length,
+                                      (index) {
+                                    return ZoomTapAnimation(
+                                      onTap: checkoutItems[index]['onTap'],
+                                      child: Container(
+                                        padding: EdgeInsets.symmetric(
+                                          horizontal: 13.w,
+                                          vertical: 16.h,
+                                        ),
+                                        margin: EdgeInsets.symmetric(
+                                          vertical: 7.h,
+                                        ),
+                                        decoration: BoxDecoration(
+                                          color: themeProvider.themeType ==
+                                                  ThemeType.light
+                                              ? checkoutItems[index]
+                                                  ['background-color']
+                                              : darkBackgroundColor,
+                                          borderRadius:
+                                              BorderRadius.circular(8.r),
+                                        ),
+                                        child: Row(
+                                          children: [
+                                            Icon(
+                                              index == 0
+                                                  ? IconlyLight.addUser
+                                                  : IconlyLight.user2,
+                                              size: 30.sp,
+                                              color: checkoutItems[index]
+                                                  ['icon-color'],
+                                            ),
+                                            SizedBox(width: 18.w),
+                                            Expanded(
+                                              child: Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  DMSansText(
+                                                    checkoutItems[index]
+                                                        ['title'],
+                                                    color: themeProvider
+                                                                .themeType ==
+                                                            ThemeType.light
+                                                        ? HexColor('#171766')
+                                                        : Colors.white,
+                                                    fontSize: 15.sp,
+                                                    fontWeight: FontWeight.w700,
+                                                  ),
+                                                  DMSansText(
+                                                    checkoutItems[index]
+                                                        ['subtitle'],
+                                                    color: HexColor('#767676'),
+                                                    fontSize: 15.sp,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    );
+                                  }),
+                                ),
+                              ),
+                            ],
+                          ),
+                        );
+                      },
+                    );
+                  },
+                  child: Container(
+                    padding:
+                        EdgeInsets.symmetric(vertical: 13.h, horizontal: 20.w),
+                    decoration: ShapeDecoration(
+                      gradient: LinearGradient(
+                        begin: const Alignment(0, -1),
+                        end: const Alignment(0, 1),
+                        colors: [
+                          lightOrangeColor,
+                          darkOrangeColor,
+                        ],
+                      ),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(9)),
+                    ),
+                    child: DMSansText(
+                      'Checkout',
+                      color: Colors.white,
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
