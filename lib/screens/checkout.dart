@@ -456,10 +456,14 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                     Container(
                       width: 19.w,
                       height: 19.h,
-                      decoration: const BoxDecoration(
+                      decoration:  BoxDecoration(
                         
                         shape: BoxShape.circle,
-                        border: Border(),
+                        border: Border.all(
+                          color: themeProvider.themeType == ThemeType.dark
+                          ? Colors.white
+                          : Colors.black.withOpacity(.7),
+                        )
                       ),
                     )
                   ],
