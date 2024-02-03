@@ -36,7 +36,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
         toolbarHeight: 50.h,
         backgroundColor: themeProvider.themeType == ThemeType.light
             ? lightBackgroundColor
-            : (scrollController.hasClients) ? darkBackgroundColor:Colors.transparent,
+            : (scrollController.hasClients) ? (scrollController.position.p):Colors.transparent,
         leading: BackButton(color: Theme.of(context).colorScheme.secondary),
         title: DMSansText(
           'Checkout',
