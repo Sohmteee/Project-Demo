@@ -375,7 +375,9 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                             ),
                             DMSansText(
                               value,
-                              color: HexColor('#060518').withOpacity(.66),
+                              color: themeProvider.themeType == ThemeType.light
+                                  ? HexColor('#060518').withOpacity(.66)
+                                  : lightBackgroundColor,
                               fontSize: 15.sp,
                               fontWeight: FontWeight.w700,
                             ),
