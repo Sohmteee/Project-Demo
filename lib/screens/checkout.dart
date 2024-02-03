@@ -415,7 +415,9 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
           ),
         ),
         Container(
-          color: Colors.white,
+          color: themeProvider.themeType == ThemeType.light
+              ? lightBackgroundColor
+              : Colors.transparent,
           padding: EdgeInsets.only(top: 24.h, bottom: 65.h),
           child: Column(
             children: [
@@ -434,7 +436,9 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                       children: [
                         DMSansText(
                           '\$100.00',
-                          color: Colors.black.withOpacity(.7),
+                          color: themeProvider.themeType == ThemeType.light
+                                  ? lightBackgroundColor
+                                  : Colors.transparent,Colors.black.withOpacity(.7),
                           fontSize: 16.sp,
                           fontWeight: FontWeight.w700,
                         ),
