@@ -351,9 +351,8 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
           padding: EdgeInsets.all(26.sp),
           child: Container(
             color: themeProvider.themeType == ThemeType.light
-                ? lightBackgroundColor
+                ? HexColor('#D9D9D9').withOpacity(.12)
                 : linkTextColor.withOpacity(.6),
-            HexColor('#D9D9D9').withOpacity(.12),
             padding: EdgeInsets.symmetric(
               horizontal: 18.w,
               vertical: 22.h,
