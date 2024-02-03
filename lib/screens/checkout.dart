@@ -158,7 +158,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                               borderRadius: BorderRadius.circular(9)),
                         ),
                         child: DMSansText(
-                          'Checkout',
+                          'Proceed',
                           color: Colors.white,
                           fontSize: 16.sp,
                           fontWeight: FontWeight.w700,
