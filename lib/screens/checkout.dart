@@ -190,161 +190,111 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
               ],
             ),
           ),
-          Padding(
-            padding: EdgeInsets.symmetric(
-              vertical: 18.h,
-              horizontal: 27.w,
-            ),
-            child: DMSansText(
-              'Coupon Code',
-              color: Theme.of(context).colorScheme.secondary,
-              fontSize: 20.sp,
-              fontWeight: FontWeight.w700,
-            ),
-          ),
-          Container(
-            color: Colors.white,
-            padding: EdgeInsets.symmetric(
-              vertical: 48.h,
-              horizontal: 29.w,
-            ),
-            child: Container(
-              height: 56.h,
-              width: double.maxFinite,
-              padding: EdgeInsets.symmetric(
-                vertical: 13.h,
-                horizontal: 16.w,
-              ),
-              decoration: ShapeDecoration(
-                color: themeProvider.themeType == ThemeType.light
-                    ? lightBackgroundColor
-                    : darkBackgroundColor,
-                shape: RoundedRectangleBorder(
-                  side: BorderSide(
-                    width: 1,
-                    color: HexColor('#E4DFDF'),
-                  ),
-                  borderRadius: BorderRadius.circular(12),
+          Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  vertical: 18.h,
+                  horizontal: 27.w,
+                ),
+                child: DMSansText(
+                  'Coupon Code',
+                  color: Theme.of(context).colorScheme.secondary,
+                  fontSize: 20.sp,
+                  fontWeight: FontWeight.w700,
                 ),
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Expanded(
-                    child: TextField(
-                      style: TextStyle(
-                        color: Theme.of(context).colorScheme.secondary,
-                        fontSize: 14.sp,
+              Container(
+                color: Colors.white,
+                padding: EdgeInsets.symmetric(
+                  vertical: 48.h,
+                  horizontal: 29.w,
+                ),
+                child: Container(
+                  height: 56.h,
+                  width: double.maxFinite,
+                  padding: EdgeInsets.symmetric(
+                    vertical: 13.h,
+                    horizontal: 16.w,
+                  ),
+                  decoration: ShapeDecoration(
+                    color: themeProvider.themeType == ThemeType.light
+                        ? lightBackgroundColor
+                        : darkBackgroundColor,
+                    shape: RoundedRectangleBorder(
+                      side: BorderSide(
+                        width: 1,
+                        color: HexColor('#E4DFDF'),
                       ),
-                      cursorColor: lightOrangeColor,
-                      textCapitalization: TextCapitalization.words,
-                      decoration: InputDecoration(
-                        hintText: 'Enter Code',
-                        hintStyle: TextStyle(
-                          color: gray300,
-                          fontSize: 14.sp,
-                        ),
-                        border: InputBorder.none,
-                        contentPadding: EdgeInsets.symmetric(
-                          vertical: 12.h,
-                        ),
-                      ),
+                      borderRadius: BorderRadius.circular(12),
                     ),
                   ),
-                  ZoomTapAnimation(
-                    onTap: () {},
-                    child: Container(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 6.h, horizontal: 11.w),
-                      decoration: ShapeDecoration(
-                        gradient: LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: [
-                            lightOrangeColor,
-                            darkOrangeColor,
-                          ],
-                        ),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(5.r),
-                        ),
-                      ),
-                      child: DMSansText(
-                        'Redeem',
-                        color: Colors.white,
-                        fontSize: 13.sp,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(
-              vertical: 18.h,
-              horizontal: 27.w,
-            ),
-            child: DMSansText(
-              'Order Summary',
-              color: Theme.of(context).colorScheme.secondary,
-              fontSize: 20.sp,
-              fontWeight: FontWeight.w700,
-            ),
-          ),
-          Container(
-            color: Colors.white,
-            padding: EdgeInsets.all(26.sp),
-            child: Container(
-              color: HexColor('#D9D9D9').withOpacity(.12),
-              padding: EdgeInsets.symmetric(
-                horizontal: 18.w,
-                vertical: 22.h,
-              ),
-              child: Column(
-                children: orderSummary
-                    .map((key, value) {
-                      return MapEntry(
-                        key,
-                        Padding(
-                          padding: EdgeInsets.only(bottom: 16.h),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              DMSansText(
-                                '$key:',
-                                color: HexColor('#807A7A'),
-                                fontSize: 13.sp,
-                                fontWeight: FontWeight.w700,
-                              ),
-                              DMSansText(
-                                value,
-                                color: HexColor('#060518').withOpacity(.66),
-                                fontSize: 15.sp,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ],
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: TextField(
+                          style: TextStyle(
+                            color: Theme.of(context).colorScheme.secondary,
+                            fontSize: 14.sp,
+                          ),
+                          cursorColor: lightOrangeColor,
+                          textCapitalization: TextCapitalization.words,
+                          decoration: InputDecoration(
+                            hintText: 'Enter Code',
+                            hintStyle: TextStyle(
+                              color: gray300,
+                              fontSize: 14.sp,
+                            ),
+                            border: InputBorder.none,
+                            contentPadding: EdgeInsets.symmetric(
+                              vertical: 12.h,
+                            ),
                           ),
                         ),
-                      );
-                    })
-                    .values
-                    .toList(),
+                      ),
+                      ZoomTapAnimation(
+                        onTap: () {},
+                        child: Container(
+                          padding:
+                              EdgeInsets.symmetric(vertical: 6.h, horizontal: 11.w),
+                          decoration: ShapeDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [
+                                lightOrangeColor,
+                                darkOrangeColor,
+                              ],
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5.r),
+                            ),
+                          ),
+                          child: DMSansText(
+                            'Redeem',
+                            color: Colors.white,
+                            fontSize: 13.sp,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
-            ),
+            ],
           ),
+          buildOrderSummary(context),
           buildPaymentMethods(context),
-          
         ],
       ),
     );
   }
 
-  Column buildPaymentMethods(BuildContext context) {
+  Column buildOrderSummary(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
               padding: EdgeInsets.symmetric(
@@ -352,13 +302,152 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                 horizontal: 27.w,
               ),
               child: DMSansText(
-                'Payment Method',
+                'Order Summary',
                 color: Theme.of(context).colorScheme.secondary,
                 fontSize: 20.sp,
                 fontWeight: FontWeight.w700,
               ),
             ),
+            Container(
+              color: Colors.white,
+              padding: EdgeInsets.all(26.sp),
+              child: Container(
+                color: HexColor('#D9D9D9').withOpacity(.12),
+                padding: EdgeInsets.symmetric(
+                  horizontal: 18.w,
+                  vertical: 22.h,
+                ),
+                child: Column(
+                  children: orderSummary
+                      .map((key, value) {
+                        return MapEntry(
+                          key,
+                          Padding(
+                            padding: EdgeInsets.only(bottom: 16.h),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                DMSansText(
+                                  '$key:',
+                                  color: HexColor('#807A7A'),
+                                  fontSize: 13.sp,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                                DMSansText(
+                                  value,
+                                  color: HexColor('#060518').withOpacity(.66),
+                                  fontSize: 15.sp,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ],
+                            ),
+                          ),
+                        );
+                      })
+                      .values
+                      .toList(),
+                ),
+              ),
+            ),
           ],
         );
+  }
+
+  Column buildPaymentMethods(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: EdgeInsets.symmetric(
+            vertical: 18.h,
+            horizontal: 27.w,
+          ),
+          child: DMSansText(
+            'Payment Method',
+            color: Theme.of(context).colorScheme.secondary,
+            fontSize: 20.sp,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+        Container(
+          color: Colors.white,
+          padding: EdgeInsets.only(top: 24.h, bottom: 65.h),
+          child: Column(
+            children: [
+              Divider(
+                color: HexColor('#D8D8D8'),
+              ),
+              Container(
+                height: 64.h,
+                padding: EdgeInsets.only(left: 27.w, right: 19.w),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        DMSansText(
+                          '\$100.00',
+                          color: Colors.black.withOpacity(.7),
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w700,
+                        ),
+                        SizedBox(height: 2.h),
+                        DMSansText(
+                          'Wallet',
+                          color: Colors.black.withOpacity(.7),
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ],
+                    ),
+                    Container(
+                      width: 19.w,
+                      height: 19.h,
+                      decoration: const ShapeDecoration(
+                        shape: OvalBorder(
+                          side: BorderSide(width: 1),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Divider(
+                color: HexColor('#D8D8D8'),
+              ),
+              Container(
+                height: 64.h,
+                padding: EdgeInsets.only(left: 27.w, right: 19.w),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    DMSansText(
+                      'Pay Online',
+                      color: Colors.black.withOpacity(.7),
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.w700,
+                    ),
+                    Container(
+                      width: 19.w,
+                      height: 19.h,
+                      decoration: const ShapeDecoration(
+                        shape: OvalBorder(
+                          side: BorderSide(width: 1),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Divider(
+                color: HexColor('#D8D8D8'),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
   }
 }
