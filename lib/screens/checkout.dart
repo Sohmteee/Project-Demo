@@ -47,7 +47,11 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
         decoration: BoxDecoration(
           image: themeProvider.themeType == ThemeType.light
               ? null
-              : DecorationImage(image: AssetImage('')),
+              : const DecorationImage(
+                  image:
+                      AssetImage('assets/images/dark-gradient-background.png'),
+                  fit: BoxFit.cover,
+                ),
         ),
         child: ListView(
           physics: const BouncingScrollPhysics(),
