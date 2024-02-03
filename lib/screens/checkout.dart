@@ -30,6 +30,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
+        toolbarHeight: 60.h,
         leading: BackButton(color: Theme.of(context).colorScheme.secondary),
         title: DMSansText(
           'Checkout',
