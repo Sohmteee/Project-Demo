@@ -458,9 +458,8 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                       height: 19.h,
                       decoration: const BoxDecoration(
                         
-                        shape: OvalBorder(
-                          side: BorderSide(width: 1),
-                        ),
+                        shape: BoxShape.circle,
+                        border: Border(),
                       ),
                     )
                   ],
