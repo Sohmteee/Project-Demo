@@ -395,7 +395,9 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
+        Container(
+          width: double.maxFinite,
+          color: linkTextColor.withOpacity(.6),
           padding: EdgeInsets.symmetric(
             vertical: 18.h,
             horizontal: 27.w,
@@ -407,6 +409,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
             fontWeight: FontWeight.w700,
           ),
         ),
+        
         Container(
           color: Colors.white,
           padding: EdgeInsets.only(top: 24.h, bottom: 65.h),
