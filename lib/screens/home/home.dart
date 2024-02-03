@@ -7,6 +7,7 @@ import 'package:countries_flag/countries_flag.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_sliding_up_panel/sliding_up_panel_widget.dart';
@@ -1983,7 +1984,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                      const Icon(
                         Icons.arrow_drop_down,
-                        color: Vx.white,
+                        color: Colors.white,
                       )
                     ],
                   ),
