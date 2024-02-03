@@ -31,7 +31,10 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
       backgroundColor: Theme.of(context).colorScheme.secondary,
       appBar: AppBar(
         elevation: 0,
-        toolbarHeight: 60.h,
+        toolbarHeight: 50.h,
+        backgroundColor: themeProvider.themeType == ThemeType.light
+            ? lightBackgroundColor
+            : darkBackgroundColor,
         leading: BackButton(color: Theme.of(context).colorScheme.secondary),
         title: DMSansText(
           'Checkout',
