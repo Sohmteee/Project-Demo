@@ -227,7 +227,8 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          color: gray100.withOpacity(.4),
+          width: double.maxFinite,
+          color: darkBackgroundColor,
           padding: EdgeInsets.symmetric(
             vertical: 18.h,
             horizontal: 27.w,
