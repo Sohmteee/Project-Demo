@@ -16,6 +16,7 @@ class CheckoutScreen extends StatefulWidget {
 }
 
 class _CheckoutScreenState extends State<CheckoutScreen> {
+  final scrollController = ScrollController();
   Map orderSummary = {
     'Event Name': 'My Event Party',
     'Type of Ticket': 'Premium Ticket',
