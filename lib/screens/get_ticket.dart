@@ -1053,6 +1053,8 @@ class _GetTicketScreenState extends State<GetTicketScreen> {
               onPressed: () {
                 panelController.collapse();
                 isOpenInvite = false;
+
+                Navigator.pushNamed(context, '/checkout');
               },
             ),
           ).animate().fadeIn(duration: .5.seconds),
