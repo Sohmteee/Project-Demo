@@ -336,84 +336,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
             ),
           ),
           buildPaymentMethods(context),
-          Container(
-            color: Colors.white,
-            padding: EdgeInsets.only(top: 24.h, bottom: 65.h),
-            child: Column(
-              children: [
-                Divider(
-                  color: HexColor('#D8D8D8'),
-                ),
-                Container(
-                  height: 64.h,
-                  padding: EdgeInsets.only(left: 27.w, right: 19.w),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          DMSansText(
-                            '\$100.00',
-                            color: Colors.black.withOpacity(.7),
-                            fontSize: 16.sp,
-                            fontWeight: FontWeight.w700,
-                          ),
-                          SizedBox(height: 2.h),
-                          DMSansText(
-                            'Wallet',
-                            color: Colors.black.withOpacity(.7),
-                            fontSize: 16.sp,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ],
-                      ),
-                      Container(
-                        width: 19.w,
-                        height: 19.h,
-                        decoration: const ShapeDecoration(
-                          shape: OvalBorder(
-                            side: BorderSide(width: 1),
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                Divider(
-                  color: HexColor('#D8D8D8'),
-                ),
-                Container(
-                  height: 64.h,
-                  padding: EdgeInsets.only(left: 27.w, right: 19.w),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      DMSansText(
-                        'Pay Online',
-                        color: Colors.black.withOpacity(.7),
-                        fontSize: 16.sp,
-                        fontWeight: FontWeight.w700,
-                      ),
-                      Container(
-                        width: 19.w,
-                        height: 19.h,
-                        decoration: const ShapeDecoration(
-                          shape: OvalBorder(
-                            side: BorderSide(width: 1),
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                Divider(
-                  color: HexColor('#D8D8D8'),
-                ),
-              ],
-            ),
-          )
+          
         ],
       ),
     );
@@ -421,6 +344,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
 
   Column buildPaymentMethods(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
               padding: EdgeInsets.symmetric(
