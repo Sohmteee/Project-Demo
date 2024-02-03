@@ -34,7 +34,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
         toolbarHeight: 50.h,
         backgroundColor: themeProvider.themeType == ThemeType.light
             ? lightBackgroundColor
-            : darkBackgroundColor,
+            : Colors.transparent,
         leading: BackButton(color: Theme.of(context).colorScheme.secondary),
         title: DMSansText(
           'Checkout',
@@ -43,15 +43,13 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
           fontWeight: FontWeight.w400,
         ),
       ),
+      extendBodyBehindAppBar: true,
       body: Container(
+        // padding: EdgeInsets.only(top: 50.h),
         decoration: BoxDecoration(
           color: themeProvider.themeType == ThemeType.light
-              ? light
-              : const DecorationImage(
-                  image:
-                      AssetImage('assets/images/dark-gradient-background.png'),
-                  fit: BoxFit.cover,
-                ),
+              ? lightBackgroundColor
+              : null,
           image: themeProvider.themeType == ThemeType.light
               ? null
               : const DecorationImage(
