@@ -335,18 +335,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
               ),
             ),
           ),
-          Padding(
-            padding: EdgeInsets.symmetric(
-              vertical: 18.h,
-              horizontal: 27.w,
-            ),
-            child: DMSansText(
-              'Payment Method',
-              color: Theme.of(context).colorScheme.secondary,
-              fontSize: 20.sp,
-              fontWeight: FontWeight.w700,
-            ),
-          ),
+          buildPaymentMethods(context),
           Container(
             color: Colors.white,
             padding: EdgeInsets.only(top: 24.h, bottom: 65.h),
@@ -428,5 +417,24 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
         ],
       ),
     );
+  }
+
+  Column buildPaymentMethods(BuildContext context) {
+    return Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(
+                vertical: 18.h,
+                horizontal: 27.w,
+              ),
+              child: DMSansText(
+                'Payment Method',
+                color: Theme.of(context).colorScheme.secondary,
+                fontSize: 20.sp,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+          ],
+        );
   }
 }
