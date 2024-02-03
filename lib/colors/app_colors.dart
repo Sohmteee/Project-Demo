@@ -20,9 +20,6 @@ final cyanBackgroundColor = HexColor('#E5FEFF');
 const lightBackgroundColor = Colors.white;
 final darkBackgroundColor = HexColor('#191818');
 
-final lightGreyBackgroundColor = HexColor('#FFB459');
-final darkGreyBackgroundColor = HexColor('#F1573D');
-
 final registrationIconColor = HexColor('#807A7A');
 
 final gray100 = Colors.grey[100]!;
