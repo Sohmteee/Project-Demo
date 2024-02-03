@@ -28,6 +28,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
     final themeProvider = context.watch<ThemeProvider>();
 
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.secondary,
       appBar: AppBar(
         elevation: 0,
         toolbarHeight: 60.h,
