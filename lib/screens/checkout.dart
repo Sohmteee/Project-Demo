@@ -436,16 +436,18 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                       children: [
                         DMSansText(
                           '\$100.00',
-                          color: themeProvider.themeType == ThemeType.light
-                                  ? lightBackgroundColor
-                                  : Colors.transparent,Colors.black.withOpacity(.7),
+                          color: themeProvider.themeType == ThemeType.dark
+                                  ? Colors.black
+                                  : Colors.black.withOpacity(.7),
                           fontSize: 16.sp,
                           fontWeight: FontWeight.w700,
                         ),
                         SizedBox(height: 2.h),
                         DMSansText(
                           'Wallet',
-                          color: Colors.black.withOpacity(.7),
+                          color: themeProvider.themeType == ThemeType.dark
+                              ? Colors.black
+                              : Colors.black.withOpacity(.7),
                           fontSize: 16.sp,
                           fontWeight: FontWeight.w400,
                         ),
@@ -474,7 +476,9 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                   children: [
                     DMSansText(
                       'Pay Online',
-                      color: Colors.black.withOpacity(.7),
+                      color: themeProvider.themeType == ThemeType.dark
+                          ? Colors.black
+                          : Colors.black.withOpacity(.7),
                       fontSize: 16.sp,
                       fontWeight: FontWeight.w700,
                     ),
