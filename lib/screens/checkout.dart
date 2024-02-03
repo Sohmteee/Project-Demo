@@ -43,14 +43,16 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
           fontWeight: FontWeight.w400,
         ),
       ),
-      body: ListView(
-        physics: const BouncingScrollPhysics(),
-        children: [
-          buildTicket(themeProvider, context),
-          buildCoupon(context, themeProvider),
-          buildOrderSummary(context),
-          buildPaymentMethods(context),
-        ],
+      body: Container(
+        child: ListView(
+          physics: const BouncingScrollPhysics(),
+          children: [
+            buildTicket(themeProvider, context),
+            buildCoupon(context, themeProvider),
+            buildOrderSummary(context),
+            buildPaymentMethods(context),
+          ],
+        ),
       ),
     );
   }
