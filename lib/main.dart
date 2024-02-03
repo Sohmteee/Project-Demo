@@ -24,6 +24,8 @@ import 'package:yeerlo/screens/splash.dart';
 import 'package:yeerlo/screens/view_map.dart';
 
 Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  Fireba
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
