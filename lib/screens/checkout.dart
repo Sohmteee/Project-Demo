@@ -258,7 +258,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
             decoration: ShapeDecoration(
               color: themeProvider.themeType == ThemeType.light
                   ? lightBackgroundColor
-                  : darkBackgroundColor,
+                  : Colors.transparent,
               shape: RoundedRectangleBorder(
                 side: BorderSide(
                   width: 1,
