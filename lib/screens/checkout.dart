@@ -36,7 +36,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
         toolbarHeight: 50.h,
         backgroundColor: themeProvider.themeType == ThemeType.light
             ? lightBackgroundColor
-            : Colors.transparent,
+            : (scrollController.hasClients) ? darkBackgroundColor:Colors.transparent,
         leading: BackButton(color: Theme.of(context).colorScheme.secondary),
         title: DMSansText(
           'Checkout',
@@ -63,6 +63,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                     ),
             ),
             child: ListView(
+              controller: scrollController,
               physics: const BouncingScrollPhysics(),
               children: [
                 buildTicket(themeProvider, context),
