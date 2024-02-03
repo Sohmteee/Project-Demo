@@ -333,7 +333,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
       children: [
         Container(
           width: double.maxFinite,
-          color: linkTextColor.withOpacity(.6),
+          color: HexColor('#D8D8D8'),
           padding: EdgeInsets.symmetric(
             vertical: 18.h,
             horizontal: 27.w,
@@ -437,7 +437,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
       children: [
         Container(
           width: double.maxFinite,
-          color: linkTextColor.withOpacity(.6),
+          color: HexColor('#D8D8D8'),
           padding: EdgeInsets.symmetric(
             vertical: 18.h,
             horizontal: 27.w,
@@ -457,7 +457,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
           child: Container(
             color: themeProvider.themeType == ThemeType.light
                 ? HexColor('#D9D9D9').withOpacity(.12)
-                : linkTextColor.withOpacity(.6),
+                : HexColor('#D8D8D8'),
             padding: EdgeInsets.symmetric(
               horizontal: 18.w,
               vertical: 22.h,
@@ -507,7 +507,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
       children: [
         Container(
           width: double.maxFinite,
-          color: linkTextColor.withOpacity(.6),
+          color: HexColor('#D8D8D8'),
           padding: EdgeInsets.symmetric(
             vertical: 18.h,
             horizontal: 27.w,
