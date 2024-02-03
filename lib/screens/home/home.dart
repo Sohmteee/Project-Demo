@@ -4,6 +4,7 @@ import 'dart:async';
 
 import 'package:blur/blur.dart';
 import 'package:countries_flag/countries_flag.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
@@ -37,7 +38,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final drawerController = AdvancedDrawerController();
   final panelController = SlidingUpPanelController();
-    late  FirebaseMessaging _firebaseMessaging;
+  late FirebaseMessaging _firebaseMessaging;
   int selectedFilterCategoryIndex = 0;
   int selectedTimeCategoryIndex = 1;
   bool isOpenDrawer = false;
@@ -50,7 +51,10 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    _firebaseMessaging = FirebaseMessaging.instance
+    _firebaseMessaging = FirebaseMessaging.instance;
+    _firebaseMessaging.getToken().then((token) {
+      print("token is $token");
+    });
     panelController.collapse();
     Timer.periodic(1.seconds, (timer) {
       setState(() {
@@ -1972,7 +1976,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 borderRadius: BorderRadius.circular(10.r),
                 menuMaxHeight: 400.h,
                 icon: Container(),
-                hint:  Center(
+                hint: Center(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -1983,7 +1987,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           fontSize: 14,
                         ),
                       ),
-                     const Icon(
+                      const Icon(
                         Icons.arrow_drop_down,
                         color: Colors.white,
                       )
