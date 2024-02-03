@@ -44,6 +44,11 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
         ),
       ),
       body: Container(
+        decoration: BoxDecoration(
+          image: themeProvider.themeType == ThemeType.light
+              ? null
+              : DecorationImage(image: AssetImage('')),
+        ),
         child: ListView(
           physics: const BouncingScrollPhysics(),
           children: [
