@@ -437,8 +437,8 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                         DMSansText(
                           '\$100.00',
                           color: themeProvider.themeType == ThemeType.dark
-                                  ? Colors.black
-                                  : Colors.black.withOpacity(.7),
+                              ? Colors.white
+                              : Colors.black.withOpacity(.7),
                           fontSize: 16.sp,
                           fontWeight: FontWeight.w700,
                         ),
@@ -446,7 +446,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                         DMSansText(
                           'Wallet',
                           color: themeProvider.themeType == ThemeType.dark
-                              ? Colors.black
+                              ? Colors.white
                               : Colors.black.withOpacity(.7),
                           fontSize: 16.sp,
                           fontWeight: FontWeight.w400,
@@ -456,7 +456,10 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                     Container(
                       width: 19.w,
                       height: 19.h,
-                      decoration: const ShapeDecoration(
+                      decoration:  ShapeDecoration(
+                        color: themeProvider.themeType == ThemeType.dark
+                            ? Colors.white
+                            : Colors.black.withOpacity(.7),
                         shape: OvalBorder(
                           side: BorderSide(width: 1),
                         ),
@@ -477,7 +480,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                     DMSansText(
                       'Pay Online',
                       color: themeProvider.themeType == ThemeType.dark
-                          ? Colors.black
+                          ? Colors.white
                           : Colors.black.withOpacity(.7),
                       fontSize: 16.sp,
                       fontWeight: FontWeight.w700,
