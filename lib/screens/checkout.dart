@@ -1,3 +1,4 @@
+import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
@@ -70,69 +71,104 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
               ],
             ),
           ),
-          Container(
-            width: double.maxFinite,
-            height: 84.h,
-            padding: EdgeInsets.symmetric(vertical: 18.h, horizontal: 22.w),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ShaderMask(
-                      blendMode: BlendMode.srcIn,
-                      shaderCallback: (Rect bounds) => LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [
-                          lightOrangeColor,
-                          darkOrangeColor,
-                        ],
-                        tileMode: TileMode.mirror,
-                      ).createShader(bounds),
-                      child: DMSansText(
-                        '\$35.00',
-                        fontSize: 16.sp,
-                        fontWeight: FontWeight.w700,
+          Stack(
+            alignment: Alignment.center,
+            children: [
+              themeProvider.themeType == ThemeType.light
+                  ? Blur(
+                      borderRadius: BorderRadius.vertical(
+                        top: Radius.circular(12.r),
+                      ),
+                      child: Container(
+                        width: double.maxFinite,
+                        height: 84.h,
+                        decoration: ShapeDecoration(
+                          color: Colors.white.withOpacity(0.6),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.vertical(
+                              top: Radius.circular(12.r),
+                            ),
+                          ),
+                        ),
+                      ),
+                    )
+                  : Container(
+                      width: double.maxFinite,
+                      height: 84.h,
+                      decoration: ShapeDecoration(
+                        color: darkBackgroundColor,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.vertical(
+                            top: Radius.circular(12.r),
+                          ),
+                        ),
                       ),
                     ),
-                    DMSansText(
-                      'You\'re going +1',
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w700,
-                      color: HexColor('#767676').withOpacity(.76),
+              Container(
+                width: double.maxFinite,
+                height: 84.h,
+                padding: EdgeInsets.symmetric(vertical: 18.h, horizontal: 22.w),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ShaderMask(
+                          blendMode: BlendMode.srcIn,
+                          shaderCallback: (Rect bounds) => LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [
+                              lightOrangeColor,
+                              darkOrangeColor,
+                            ],
+                            tileMode: TileMode.mirror,
+                          ).createShader(bounds),
+                          child: DMSansText(
+                            '\$35.00',
+                            fontSize: 16.sp,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                        DMSansText(
+                          'You\'re going +1',
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w700,
+                          color: HexColor('#767676').withOpacity(.76),
+                        ),
+                      ],
                     ),
+                    ZoomTapAnimation(
+                      onTap: () {},
+                      child: Container(
+                        padding: EdgeInsets.symmetric(
+                            vertical: 13.h, horizontal: 20.w),
+                        decoration: ShapeDecoration(
+                          gradient: LinearGradient(
+                            begin: const Alignment(0, -1),
+                            end: const Alignment(0, 1),
+                            colors: [
+                              lightOrangeColor,
+                              darkOrangeColor,
+                            ],
+                          ),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(9)),
+                        ),
+                        child: DMSansText(
+                          'Checkout',
+                          color: Colors.white,
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    )
                   ],
                 ),
-                ZoomTapAnimation(
-                  onTap: () {},
-                  child: Container(
-                    padding:
-                        EdgeInsets.symmetric(vertical: 13.h, horizontal: 20.w),
-                    decoration: ShapeDecoration(
-                      gradient: LinearGradient(
-                        begin: const Alignment(0, -1),
-                        end: const Alignment(0, 1),
-                        colors: [
-                          lightOrangeColor,
-                          darkOrangeColor,
-                        ],
-                      ),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(9)),
-                    ),
-                    child: DMSansText(
-                      'Proceed',
-                      color: Colors.white,
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                )
-              ],
-            ),
+              ),
+            ],
           ),
         ],
       ),
