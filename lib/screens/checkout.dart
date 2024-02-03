@@ -75,7 +75,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
       padding: EdgeInsets.fromLTRB(26.w, 26.h, 32.w, 38.h),
       color: themeProvider.themeType == ThemeType.light
           ? lightBackgroundColor
-          : gray100.withOpacity(.4),
+          : Colors.transparent,
       child: Column(
         children: [
           Row(
@@ -226,8 +226,9 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: EdgeInsets.symmetric(
+        Container(
+          color: gray100.withOpacity(.4),
+          margin: EdgeInsets.symmetric(
             vertical: 18.h,
             horizontal: 27.w,
           ),
