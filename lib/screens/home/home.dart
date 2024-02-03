@@ -38,7 +38,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final drawerController = AdvancedDrawerController();
   final panelController = SlidingUpPanelController();
-  late FirebaseMessaging _firebaseMessaging;
+  // late FirebaseMessaging _firebaseMessaging;
   int selectedFilterCategoryIndex = 0;
   int selectedTimeCategoryIndex = 1;
   bool isOpenDrawer = false;
@@ -51,10 +51,10 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    _firebaseMessaging = FirebaseMessaging.instance;
-    _firebaseMessaging.getToken().then((token){
+    /* _firebaseMessaging = FirebaseMessaging.instance;
+    _firebaseMessaging.getToken().then((token) {
       print("token is $token");
-  });
+    }); */
     panelController.collapse();
     Timer.periodic(1.seconds, (timer) {
       setState(() {
