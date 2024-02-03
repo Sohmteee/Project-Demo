@@ -241,7 +241,9 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
           ),
         ),
         Container(
-          color: Colors.white,
+          color: themeProvider.themeType == ThemeType.light
+              ? lightBackgroundColor
+              : Colors.transparent,
           padding: EdgeInsets.symmetric(
             vertical: 48.h,
             horizontal: 29.w,
