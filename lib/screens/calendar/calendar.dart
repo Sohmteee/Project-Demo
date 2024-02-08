@@ -359,6 +359,13 @@ class _CalendarScreenState extends State<CalendarScreen> {
                             fontSize: 16.sp,
                             fontWeight: FontWeight.w600,
                           ),
+                          SizedBox(height: 5.h),
+                          DMSansText(
+                            _getEventsForDay(_selectedDay)[index].description,
+                            color: Colors.white,
+                            fontSize: 12.sp,
+                            fontWeight: FontWeight.w400,
+                          ),
                         ],
                       ),
                     ),
