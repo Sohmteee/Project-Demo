@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -91,7 +93,6 @@ class _CalendarScreenState extends State<CalendarScreen> {
             },
             calendarBuilders: CalendarBuilders(
               markerBuilder: (context, day, events) {
-                int index = 0;
                 List<Color> colors = [
                   HexColor('#00B383'),
                   darkOrangeColor,
@@ -101,7 +102,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                 return Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: List.generate(
-                    _getEventsForDay(_selectedDay).length,
+                    /* _getEventsForDay(_selectedDay).length */ Random().nextInt(3),
                     (index) => Container(
                       width: 4.sp,
                       height: 4.sp,
