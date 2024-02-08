@@ -91,6 +91,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
               _selectedEvents.value = _getEventsForDay(selectedDay);
             },
             calendarStyle: CalendarStyle(
+              tablePadding: EdgeInsets.symmetric(),
               defaultTextStyle: TextStyle(
                 fontSize: 15.sp,
                 fontWeight: FontWeight.w500,
