@@ -91,6 +91,11 @@ class _CalendarScreenState extends State<CalendarScreen> {
             },
             calendarBuilders: CalendarBuilders(
               markerBuilder: (context, day, events) {
+                List<Color> colors = [
+                  HexColor('#00B383'),
+                  darkOrangeColor,
+                ];
+
                 return Row(
                   children: [
                     Container(),
