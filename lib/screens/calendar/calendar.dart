@@ -91,7 +91,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
             },
             calendarBuilders: CalendarBuilders(
               markerBuilder: (context, day, events) {
-                index
+                int index = 0;
                 List<Color> colors = [
                   HexColor('#00B383'),
                   darkOrangeColor,
@@ -99,13 +99,18 @@ class _CalendarScreenState extends State<CalendarScreen> {
                 ];
 
                 return Row(
-                  children: [
-                    Container(
+                  children: List.generate(
+                    3,
+                    (index) => Container(
                       width: 2.sp,
                       height: 2.sp,
-                      decoration: BoxDecoration(),
+                      
+                      decoration: BoxDecoration(
+                        color: colors[index],
+
+                      ),
                     ),
-                  ],
+                  ),
                 );
               },
             ),
