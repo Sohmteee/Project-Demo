@@ -279,7 +279,9 @@ class _CalendarScreenState extends State<CalendarScreen> {
                           6 => 'Sat',
                           7 => 'Sun',
                           _ => '',
-                        }}, ${switch(_selectedDay.day){}}'),
+                        }}, _selectedDay.day${switch (_selectedDay.day.toString()[]) {
+                          _ => 'th',
+                        }}'),
                       ],
                     ),
                   ],
