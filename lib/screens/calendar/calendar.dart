@@ -259,7 +259,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                                 fontSize: 13.sp,
                               ),
                               AirBnBText(
-                              '${}' + _selectedDay.day.toString(),
+                                '${_selectedDay.day.toString().length == 1 ? '0' : ''}${_selectedDay.day}',
                                 color: eventColor(index),
                                 fontSize: 13.sp,
                                 fontWeight: FontWeight.bold,
