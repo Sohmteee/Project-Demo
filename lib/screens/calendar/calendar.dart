@@ -309,8 +309,17 @@ class _CalendarScreenState extends State<CalendarScreen> {
                     SizedBox(height: 20.h),
                     Container(
                       padding: EdgeInsets.all(20.sp),
-                      
-                      color: HexColor('#FF8D5E'),
+                      decoration: BoxDecoration(
+                        color: HexColor('#FF8D5E'),
+                        borderRadius: BorderRadius.circular(10.r),
+                      ),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [],
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 );
