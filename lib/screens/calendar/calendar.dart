@@ -18,7 +18,7 @@ class CalendarScreen extends StatefulWidget {
 
 class _CalendarScreenState extends State<CalendarScreen> {
   final now = DateTime.now();
-  late final _firstDay;
+  late final DateTime _firstDay;
   DateTime _focusedDay = DateTime.now();
   DateTime _selectedDay = DateTime.now();
 
@@ -44,10 +44,10 @@ class _CalendarScreenState extends State<CalendarScreen> {
     super.initState();
     _selectedDay = _focusedDay;
     _firstDay = DateTime.utc(now.year, now.month, 1);
-    for (int i = 0; i < 2 * 365; i++) {
+    for (int index = 0; index < 2 * 365; index++) {
       events.add(
         Event(
-          day: _firstDay + _firstDay,
+          day: _firstDay.add(index.days),
           title: 'International Kids Day',
           description: 'Start from screen 16',
         ),
