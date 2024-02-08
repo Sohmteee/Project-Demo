@@ -350,9 +350,8 @@ class _CalendarScreenState extends State<CalendarScreen> {
                               ),
                             ],
                           ),
-                          SizedBox(
-                            height: 10.h,
-                          ),
+                          SizedBox(height: 10.h),
+                          DMSansText(text),
                         ],
                       ),
                     ),
