@@ -7,8 +7,7 @@ class Event {
   String description;
   Color color;
 
-
-
+  
 }
 
 /* 
