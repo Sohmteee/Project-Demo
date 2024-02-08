@@ -346,9 +346,12 @@ class _CalendarScreenState extends State<CalendarScreen> {
                               Icon(
                                 Icons.more_horiz,
                                 color: Colors.white,
-                                size: 3.sp,
+                                size: 13.sp,
                               ),
                             ],
+                          ),
+                          SizedBox(
+                            height: 10.h,
                           ),
                         ],
                       ),
