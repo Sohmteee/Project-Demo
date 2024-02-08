@@ -108,7 +108,6 @@ class _CalendarScreenState extends State<CalendarScreen> {
             calendarFormat: CalendarFormat.month,
             eventLoader: _getEventsForDay,
             selectedDayPredicate: (day) {
-              _selectedEvents.value = _getEventsForDay(_selectedDay);
               return isSameDay(_selectedDay, day);
             },
             onDaySelected: (selectedDay, focusedDay) {
