@@ -330,6 +330,8 @@ class _CalendarScreenState extends State<CalendarScreen> {
                                   ),
                                 ),
                               ),
+                              SizedBox(width: 10.w),
+                              
                             ],
                           ),
                         ],
