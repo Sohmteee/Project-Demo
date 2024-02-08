@@ -1014,7 +1014,7 @@ class _HomeScreenState extends State<HomeScreen> {
             width: 23.w,
           ),
           selectedIcon: SvgPicture.asset(
-            'assets/svg/compass.svg',
+            'assets/svg/compass-selected.svg',
             height: 23.h,
             width: 23.w,
           ),
