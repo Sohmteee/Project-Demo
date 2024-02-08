@@ -216,7 +216,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
           ),
           Expanded(
             child: ListView.separated(
-              itemCount: 3,
+              itemCount: _getEventsForDay(_selectedDay).length,
               padding: EdgeInsets.symmetric(
                 horizontal: 20.w,
                 vertical: 50.h,
@@ -259,7 +259,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                                 fontSize: 13.sp,
                               ),
                               AirBnBText(
-                                _selectedDay.day.toString(),
+                              '${}' + _selectedDay.day.toString(),
                                 color: eventColor(index),
                                 fontSize: 13.sp,
                                 fontWeight: FontWeight.bold,
