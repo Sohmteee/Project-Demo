@@ -218,7 +218,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
           Expanded(
             child: ListView.separated(
               itemCount: _getEventsForDay(_selectedDay).length,
-              physics: BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               padding: EdgeInsets.symmetric(
                 horizontal: 20.w,
                 vertical: 30.h,
@@ -352,7 +352,8 @@ class _CalendarScreenState extends State<CalendarScreen> {
                             ],
                           ),
                           SizedBox(height: 10.h),
-                          DMSansText(text),
+                          DMSansText(
+                              _getEventsForDay(_selectedDay)[index].title),
                         ],
                       ),
                     ),
