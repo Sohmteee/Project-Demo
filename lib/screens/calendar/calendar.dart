@@ -36,7 +36,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
     HexColor('#0095FF'),
   ];
 
-  Color eventColor(int index) {
+  Color markerColors(int index) {
     return switch (index % 3) {
       0 => HexColor('#3D50DF'),
       1 => HexColor('#F1573D'),
@@ -234,7 +234,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                           width: 43.w,
                           height: 43.h,
                           decoration: BoxDecoration(
-                            color: eventColor(index).withOpacity(.16),
+                            color: markerColors(index].withOpacity(.16),
                             borderRadius: BorderRadius.circular(10.r),
                           ),
                           child: Column(
