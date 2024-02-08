@@ -31,7 +31,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
   }
 
   List<Color> markerColors = [
-    HexColor('#0095FF'),
+    HexColor('#3D50DF'),
     darkOrangeColor,
     HexColor('#00B383'),
   ];
@@ -324,8 +324,8 @@ class _CalendarScreenState extends State<CalendarScreen> {
                               Row(
                                 children: [
                                   Container(
-                                    width: 6.sp,
-                                    height: 6.sp,
+                                    width: 10.sp,
+                                    height: 10.sp,
                                     margin:
                                         EdgeInsets.symmetric(horizontal: 1.w),
                                     decoration: BoxDecoration(
@@ -333,6 +333,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                                       color: Colors.transparent,
                                       border: Border.all(
                                         color: markerColors[index],
+                                        width: 2.sp,
                                       ),
                                     ),
                                   ),
