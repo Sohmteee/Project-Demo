@@ -205,10 +205,18 @@ class _CalendarScreenState extends State<CalendarScreen> {
                     horizontal: 10.w,
                     vertical: 10.h,
                   ),
-                  child:  Column(
+                  child: Column(
                     children: [
                       Row(
-                        children: [Container(),],
+                        children: [
+                          Container(
+                            width: 43.w,
+                            height: 43.h,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.r),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
