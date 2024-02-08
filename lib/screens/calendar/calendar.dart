@@ -121,8 +121,6 @@ class _CalendarScreenState extends State<CalendarScreen> {
             },
             calendarBuilders: CalendarBuilders(
               markerBuilder: (context, day, events) {
-                
-
                 return Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: List.generate(
@@ -216,6 +214,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
               headerMargin: EdgeInsets.symmetric(horizontal: 40.w),
             ),
           ),
+          SizedBox()
           Expanded(
             child: ListView.separated(
               itemCount: _getEventsForDay(_selectedDay).length,
@@ -320,8 +319,8 @@ class _CalendarScreenState extends State<CalendarScreen> {
                           Row(
                             children: [
                               Container(
-                                width: 4.sp,
-                                height: 4.sp,
+                                width: 6.sp,
+                                height: 6.sp,
                                 margin: EdgeInsets.symmetric(horizontal: 1.w),
                                 decoration: BoxDecoration(
                                   shape: BoxShape.circle,
