@@ -228,7 +228,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               AirBnBText(
-                                switch (now.month) {
+                                switch (_selectedDay.month) {
                                   1 => 'JAN',
                                   2 => 'FEB',
                                   3 => 'MAR',
@@ -244,6 +244,13 @@ class _CalendarScreenState extends State<CalendarScreen> {
                                   _ => ''
                                 },
                                 color: eventColor(index),
+                                fontSize: 13.sp,
+                              ),
+                              AirBnBText(
+                                _selectedDay.day.toString(),
+                                color: eventColor(index),
+                                fontSize: 13.sp,
+                                fontWeight: FontWeight.bold,
                               ),
                             ],
                           ),
