@@ -18,6 +18,7 @@ class CalendarScreen extends StatefulWidget {
 
 class _CalendarScreenState extends State<CalendarScreen> {
   final now = DateTime.now();
+  late final _firstDay;
   DateTime _focusedDay = DateTime.now();
   DateTime _selectedDay = DateTime.now();
 
@@ -42,8 +43,9 @@ class _CalendarScreenState extends State<CalendarScreen> {
   void initState() {
     super.initState();
     _selectedDay = _focusedDay;
+    _firstDay = DateTime.utc(now.year, now.month, 1);
     for (int i = 0; i < 2 * 365; i++) {
-      
+      events
     }
     _selectedEvents = ValueNotifier(_getEventsForDay(_selectedDay));
   }
