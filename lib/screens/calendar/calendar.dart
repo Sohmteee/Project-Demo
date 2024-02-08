@@ -29,12 +29,11 @@ class _CalendarScreenState extends State<CalendarScreen> {
     // return kEvents[day] ?? [];
   }
 
-  Map<String, Color> eventColors(int index) {
+  Color eventColor(int index) {
     return switch (index % 3) {
-      0 => {
-        'background': HexColor('#3D50DF').withOpacity(.16),
-      },
-      _=> {},
+      0 => HexColor('#3D50DF'),
+        
+      _ => {},
     };
   }
 
