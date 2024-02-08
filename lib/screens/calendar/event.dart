@@ -1,12 +1,12 @@
-/* import 'package:flutter/material.dart';
+// /* import 'package:flutter/material.dart';
 
-class Event {
-  DateTime? day;
-  String? time;
-  String? title;
-  String? description;
-  Color? color;
-} */
+// class Event {
+//   DateTime? day;
+//   String? time;
+//   String? title;
+//   String? description;
+//   Color? color;
+// } */
 
 
 import 'dart:collection';

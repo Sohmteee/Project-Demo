@@ -25,8 +25,8 @@ class _CalendarScreenState extends State<CalendarScreen> {
   List<Event> events = [];
 
   List<Event> _getEventsForDay(DateTime day) {
-    // return events.where((event) => event.day == day).toList();
-    return kEvents[day] ?? [];
+    return events.where((event) => event.day == day).toList();
+    // return kEvents[day] ?? [];
   }
 
   @override
