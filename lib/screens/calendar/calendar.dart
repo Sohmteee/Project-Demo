@@ -50,7 +50,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
     super.initState();
     _firstDay = DateTime.utc(now.year, now.month, 1);
     for (int index = 0; index < 2 * 365; index++) {
-      for (int rand = 0; rand < Random().nextInt(5); rand++) {
+      for (int rand = 0; rand < Random().nextInt(4); rand++) {
         events.add(
           Event(
             day: _firstDay.add(index.days),
