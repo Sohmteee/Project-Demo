@@ -98,9 +98,9 @@ class _CalendarScreenState extends State<CalendarScreen> {
               canMarkersOverflow: true,
               markersMaxCount: 3,
               // markerDecoration: const BoxDecoration(),
-              markersAnchor: -.3,
+              markersAnchor: -.4,
               markerMargin: EdgeInsets.symmetric(horizontal: 1.w),
-              markerSize: 5.sp,
+              markerSize: 4.sp,
               markerDecoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: Colors.transparent,
