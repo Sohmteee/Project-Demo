@@ -211,7 +211,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                 Icons.chevron_right,
                 color: Theme.of(context).colorScheme.secondary,
               ),
-              headerMargin: EdgeInsets.symmetric(horizontal: 60.w),
+              headerMargin: EdgeInsets.symmetric(horizontal: 40.w),
             ),
           ),
           Expanded(
