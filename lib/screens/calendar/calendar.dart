@@ -20,7 +20,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
   final now = DateTime.now();
   late final DateTime _firstDay;
   DateTime _focusedDay = DateTime.now();
-  DateTime _selectedDay = DateTime.now();
+  late DateTime _selectedDay;
 
   late final ValueNotifier<List<Event>> _selectedEvents;
   List<Event> events = [];
