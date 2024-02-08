@@ -33,6 +33,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
     return switch (index % 3) {
       0 => HexColor('#3D50DF'),
       1 => HexColor('#F1573D'),
+      2 => HexColor('#29D697'),
       _ => Colors.transparent,
     };
   }
@@ -220,7 +221,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                           width: 43.w,
                           height: 43.h,
                           decoration: BoxDecoration(
-                            color: HexColor('#3D50DF').withOpacity(.16),
+                            color: eventColor.withOpacity(.16),
                             borderRadius: BorderRadius.circular(10.r),
                           ),
                           child: Column(
