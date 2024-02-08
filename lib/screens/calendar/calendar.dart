@@ -29,12 +29,12 @@ class _CalendarScreenState extends State<CalendarScreen> {
     // return kEvents[day] ?? [];
   }
 
-  String intToMonth(int month {
-    switch (expression) {
-      case value:
-        
-        break;
+  String intToMonth(int month) {
+    switch (month) {
+      case 1:
+        'Monday';
       default:
+        '';
     }
   }
 
@@ -224,10 +224,8 @@ class _CalendarScreenState extends State<CalendarScreen> {
                             color: HexColor('#3D50DF').withOpacity(.16),
                             borderRadius: BorderRadius.circular(10.r),
                           ),
-                          child:  Column(
-                            children: [
-                              AirBnBText('${now.month}')
-                            ],
+                          child: Column(
+                            children: [AirBnBText('${now.month}')],
                           ),
                         ),
                       ],
