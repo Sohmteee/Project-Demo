@@ -214,13 +214,13 @@ class _CalendarScreenState extends State<CalendarScreen> {
               headerMargin: EdgeInsets.symmetric(horizontal: 40.w),
             ),
           ),
-          SizedBox()
+          SizedBox(height: 20.h),
           Expanded(
             child: ListView.separated(
               itemCount: _getEventsForDay(_selectedDay).length,
               padding: EdgeInsets.symmetric(
                 horizontal: 20.w,
-                vertical: 50.h,
+                vertical: 30.h,
               ),
               separatorBuilder: (BuildContext context, int index) {
                 return SizedBox(height: 20.h);
