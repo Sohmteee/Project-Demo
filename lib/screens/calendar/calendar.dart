@@ -42,7 +42,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
   void initState() {
     super.initState();
     _selectedDay = _focusedDay;
-    for (var element in collection) {
+    for (var day in now.) {
       
     }
     _selectedEvents = ValueNotifier(_getEventsForDay(_selectedDay));
