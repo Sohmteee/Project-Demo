@@ -40,8 +40,6 @@ class _CalendarScreenState extends State<CalendarScreen> {
     super.dispose();
   }
 
-  
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -87,9 +85,9 @@ class _CalendarScreenState extends State<CalendarScreen> {
                 setState(() {
                   _selectedDay = selectedDay;
                   _focusedDay = focusedDay;
+                  _selectedEvents.value = _getEventsForDay(selectedDay);
                 });
               }
-              _selectedEvents.value = _getEventsForDay(selectedDay);
             },
             calendarStyle: CalendarStyle(
               tablePadding: EdgeInsets.symmetric(horizontal: 5.w),
