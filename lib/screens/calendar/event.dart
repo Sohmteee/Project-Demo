@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class Event {
   DateTime day;
-  String? time;
+  Duration? startTime;
+  Duration? endTime;
   String title;
   String description;
   // Color color;
