@@ -343,7 +343,11 @@ class _CalendarScreenState extends State<CalendarScreen> {
                                   ),
                                 ],
                               ),
-                              Icon(Icons.more_horiz, color: ,),
+                              Icon(
+                                Icons.more_horiz,
+                                color: Colors.white,
+                                size: 3.sp,
+                              ),
                             ],
                           ),
                         ],
