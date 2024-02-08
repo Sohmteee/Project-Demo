@@ -31,13 +31,13 @@ class _CalendarScreenState extends State<CalendarScreen> {
 
   String intToMonth(int month) {
     return switch (month) {
-      1 => 'January',
-      2 => 'February',
-      3 => 'March',
-      4 => 'April',
-      5 => 'May',
-      6 => 'June',
-      7 => 'July',
+      1 => 'JAN',
+      2 => 'FEB',
+      3 => 'MAR',
+      4 => 'APR',
+      5 => 'MAY',
+      6 => 'JUN',
+      7 => 'JUL',
       8 => 'August',
       9 => 'September',
       10 => 'October',
@@ -234,7 +234,11 @@ class _CalendarScreenState extends State<CalendarScreen> {
                             borderRadius: BorderRadius.circular(10.r),
                           ),
                           child: Column(
-                            children: [AirBnBText('${now.month}')],
+                            children: [
+                              AirBnBText(
+                                intToMonth(now.month),
+                              ),
+                            ],
                           ),
                         ),
                       ],
