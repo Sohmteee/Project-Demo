@@ -98,7 +98,8 @@ class _CalendarScreenState extends State<CalendarScreen> {
               canMarkersOverflow: true,
               markersMaxCount: 3,
               // markerDecoration: const BoxDecoration(),
-              markersAnchor: -.5,
+              markersAnchor: -.3,
+              markerMargin: EdgeInsets.symmetric(horizontal: 1.w),
               selectedDecoration: BoxDecoration(
                 shape: BoxShape.circle,
                 gradient: LinearGradient(
