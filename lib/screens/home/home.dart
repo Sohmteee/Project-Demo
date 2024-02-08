@@ -1013,6 +1013,7 @@ class _HomeScreenState extends State<HomeScreen> {
             height: 23.h,
             width: 23.w,
           ),
+          selectedIcon: ,
           label: 'Explore',
           bottomItemSelectedColor: darkOrangeColor,
           screen: Scaffold(
