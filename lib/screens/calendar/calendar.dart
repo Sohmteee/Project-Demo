@@ -104,10 +104,12 @@ class _CalendarScreenState extends State<CalendarScreen> {
                     (index) => Container(
                       width: 2.sp,
                       height: 2.sp,
-                      
                       decoration: BoxDecoration(
-                        color: colors[index],
-
+                        shape: BoxShape.circle,
+                        color: Colors.transparent,
+                        border: Border.all(
+                          color: colors[index],
+                        ),
                       ),
                     ),
                   ),
