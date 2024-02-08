@@ -316,6 +316,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                         borderRadius: BorderRadius.circular(10.r),
                       ),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -353,7 +354,11 @@ class _CalendarScreenState extends State<CalendarScreen> {
                           ),
                           SizedBox(height: 10.h),
                           DMSansText(
-                              _getEventsForDay(_selectedDay)[index].title),
+                            _getEventsForDay(_selectedDay)[index].title,
+                            color: Colors.white,
+                            fontSize: 16.sp,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ],
                       ),
                     ),
