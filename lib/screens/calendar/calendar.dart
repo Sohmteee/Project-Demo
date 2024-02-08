@@ -91,7 +91,11 @@ class _CalendarScreenState extends State<CalendarScreen> {
             },
             calendarBuilders: CalendarBuilders(
               markerBuilder: (context, day, events) {
-                
+                return Row(
+                  children: [
+                    Container(),
+                  ],
+                );
               },
             ),
             calendarStyle: CalendarStyle(
