@@ -241,7 +241,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                                               ? index - 1
                                               : index)]
                                           .icon ??
-                                      
+                                      SvgPicture(
                                         widget
                                             .bottomItems[(index >
                                                     (widget.bottomItems.length /
@@ -272,7 +272,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                                             : widget.bottomItems[_pageIndex]
                                                     .bottomItemUnSelectedColor ??
                                                 Colors.grey,
-                                      
+                                      ),
                                 ),
                                 SizedBox(
                                   height: widget.bottomNavItemLabelHeight ?? 15,
