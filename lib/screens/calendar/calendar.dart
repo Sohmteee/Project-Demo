@@ -48,7 +48,10 @@ class _CalendarScreenState extends State<CalendarScreen> {
   @override
   void initState() {
     super.initState();
-    _selectedDay = _focusedDay;
+    setState(() {
+      
+      _selectedDay = _focusedDay;
+    });
     _firstDay = DateTime.utc(now.year, now.month, 1);
     for (int index = 0; index < 2 * 365; index++) {
       for (int rand = 0; rand < Random().nextInt(4); rand++) {
