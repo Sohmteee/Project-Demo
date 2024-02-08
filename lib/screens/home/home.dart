@@ -4,7 +4,6 @@ import 'dart:async';
 
 import 'package:blur/blur.dart';
 import 'package:countries_flag/countries_flag.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
@@ -26,6 +25,7 @@ import 'package:yeerlo/models/registration/switch.dart';
 import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/notifications.dart';
 import 'package:yeerlo/providers/theme.dart';
+import 'package:yeerlo/screens/calendar/calendar.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -1064,7 +1064,7 @@ class _HomeScreenState extends State<HomeScreen> {
             size: 23.w,
           ),
           label: 'Calendar',
-          screen: Container(),
+          screen: const CalendarScreen(),
         ),
         BottomBarItem(
           icon: SvgPicture.asset(
