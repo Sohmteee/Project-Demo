@@ -213,6 +213,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                             width: 43.w,
                             height: 43.h,
                             decoration: BoxDecoration(
+                              color: HexColor('#3D50DF').withOpacity(.16),
                               borderRadius: BorderRadius.circular(10.r),
                             ),
                           ),
