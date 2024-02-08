@@ -7,7 +7,8 @@ class Event {
   String description;
   Color color;
 
-  
+  Event({required this.day, required this.title, required this.description, required
+   this.color})
 }
 
 /* 
