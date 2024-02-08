@@ -90,6 +90,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
               _selectedEvents.value = _getEventsForDay(selectedDay);
             },
             calendarStyle: CalendarStyle(
+              
               tablePadding: EdgeInsets.symmetric(horizontal: 5.w),
               defaultTextStyle: TextStyle(
                 fontSize: 15.sp,
@@ -98,7 +99,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
               canMarkersOverflow: false,
               markersMaxCount: 3,
               // markerDecoration: const BoxDecoration(),
-              markersAnchor: -1,
+              markersAnchor: 0,
               selectedDecoration: BoxDecoration(
                 shape: BoxShape.circle,
                 gradient: LinearGradient(
