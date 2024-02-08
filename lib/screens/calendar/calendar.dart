@@ -30,6 +30,12 @@ class _CalendarScreenState extends State<CalendarScreen> {
     // return kEvents[day] ?? [];
   }
 
+  List<Color> markerColors = [
+    HexColor('#00B383'),
+    darkOrangeColor,
+    HexColor('#0095FF'),
+  ];
+
   Color eventColor(int index) {
     return switch (index % 3) {
       0 => HexColor('#3D50DF'),
@@ -115,11 +121,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
             },
             calendarBuilders: CalendarBuilders(
               markerBuilder: (context, day, events) {
-                List<Color> colors = [
-                  HexColor('#00B383'),
-                  darkOrangeColor,
-                  HexColor('#0095FF'),
-                ];
+                
 
                 return Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -133,7 +135,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                         shape: BoxShape.circle,
                         color: Colors.transparent,
                         border: Border.all(
-                          color: colors[index],
+                          color: markerColors[index],
                         ),
                       ),
                     ),
@@ -316,7 +318,20 @@ class _CalendarScreenState extends State<CalendarScreen> {
                       child: Column(
                         children: [
                           Row(
-                            children: [],
+                            children: [
+                              Container(
+                                width: 4.sp,
+                                height: 4.sp,
+                                margin: EdgeInsets.symmetric(horizontal: 1.w),
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.transparent,
+                                  border: Border.all(
+                                    color: markerColors[index],
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
