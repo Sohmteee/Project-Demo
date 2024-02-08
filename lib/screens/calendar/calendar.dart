@@ -200,7 +200,15 @@ class _CalendarScreenState extends State<CalendarScreen> {
                 return SizedBox(height: 10.h);
               },
               itemBuilder: (BuildContext context, int index) {
-                return Container();
+                return Container(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 10.w,
+                    vertical: 10.h,
+                  ),
+                  child: const Column(
+                    children: [],
+                  ),
+                );
               },
             ),
           ),
