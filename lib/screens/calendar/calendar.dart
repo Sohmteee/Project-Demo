@@ -29,6 +29,15 @@ class _CalendarScreenState extends State<CalendarScreen> {
     // return kEvents[day] ?? [];
   }
 
+  String intToMonth(int month {
+    switch (expression) {
+      case value:
+        
+        break;
+      default:
+    }
+  }
+
   @override
   void initState() {
     super.initState();
@@ -217,7 +226,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                           ),
                           child:  Column(
                             children: [
-                              
+                              AirBnBText('${now.month}')
                             ],
                           ),
                         ),
