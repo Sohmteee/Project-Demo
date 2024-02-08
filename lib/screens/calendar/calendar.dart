@@ -267,6 +267,10 @@ class _CalendarScreenState extends State<CalendarScreen> {
                             ],
                           ),
                         ),
+                        SizedBox(
+                          width: 5.w,
+                        ),
+                        AirBnBText('text'),
                       ],
                     ),
                   ],
