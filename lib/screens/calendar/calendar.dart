@@ -100,10 +100,10 @@ class _CalendarScreenState extends State<CalendarScreen> {
 
                 return Row(
                   children: List.generate(
-                    3,
+                    _getEventsForDay(_selectedDay).length,
                     (index) => Container(
-                      width: 2.sp,
-                      height: 2.sp,
+                      width: 4.sp,
+                      height: 4.sp,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: Colors.transparent,
