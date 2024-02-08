@@ -73,7 +73,6 @@ class _CalendarScreenState extends State<CalendarScreen> {
               now.month,
               now.day,
             ),
-            
             focusedDay: _focusedDay,
             startingDayOfWeek: StartingDayOfWeek.monday,
             calendarFormat: CalendarFormat.month,
@@ -91,7 +90,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
               _selectedEvents.value = _getEventsForDay(selectedDay);
             },
             calendarStyle: CalendarStyle(
-              tablePadding: EdgeInsets.symmetric(),
+              tablePadding: EdgeInsets.symmetric(horizontal: 5.w),
               defaultTextStyle: TextStyle(
                 fontSize: 15.sp,
                 fontWeight: FontWeight.w500,
