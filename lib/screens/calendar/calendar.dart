@@ -30,12 +30,13 @@ class _CalendarScreenState extends State<CalendarScreen> {
   }
 
   String intToMonth(int month) {
-    switch (month) {
-      case 1:
-        'Monday';
-      default:
-        '';
-    }
+    return switch (month) {
+      1 => 'January',
+      2 => 'February',
+      3 => 'March',
+      
+      _ => '',
+    };
   }
 
   @override
