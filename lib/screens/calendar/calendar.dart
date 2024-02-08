@@ -45,8 +45,14 @@ class _CalendarScreenState extends State<CalendarScreen> {
     _selectedDay = _focusedDay;
     _firstDay = DateTime.utc(now.year, now.month, 1);
     for (int index = 0; index < 2 * 365; index++) {
-      for (int times in Random().nextInt(4)) {
-        
+      for (int rand = 0; rand < Random().nextInt(4); rand++) {
+        events.add(
+          Event(
+            day: _firstDay.add(index.days),
+            title: 'International Kids Day',
+            description: 'Start from screen 16',
+          ),
+        );
       }
     }
     _selectedEvents = ValueNotifier(_getEventsForDay(_selectedDay));
