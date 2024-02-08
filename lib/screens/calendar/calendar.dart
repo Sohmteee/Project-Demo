@@ -270,7 +270,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                         SizedBox(
                           width: 5.w,
                         ),
-                        AirBnBText('${switch (now.weekday) {
+                        AirBnBText('${switch (_selectedDay.weekday) {
                           1 => 'Mon',
                           2 => 'Tues',
                           3 => 'Wed',
@@ -279,7 +279,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                           6 => 'Sat',
                           7 => 'Sun',
                           _ => '',
-                        }}'),
+                        }}, ${switch(_selectedDay.day){}}'),
                       ],
                     ),
                   ],
