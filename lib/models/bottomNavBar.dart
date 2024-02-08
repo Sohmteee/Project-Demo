@@ -1,7 +1,6 @@
 // ignore_for_file: library_private_types_in_public_api, implementation_imports
 
 import 'package:botton_nav_bar/src/notched_shape.dart';
-
 import 'package:flutter/material.dart';
 
 ///this is a model for custom navigatorBar with following parameter
@@ -161,11 +160,11 @@ class BottomNavBar extends StatefulWidget {
 ///Collector   Function
 
 class _BottomNavBarState extends State<BottomNavBar> {
-  int _pageIndex = 0;
+  int pageIndex = 0;
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        body: widget.bottomItems[_pageIndex].screen,
+        body: widget.bottomItems[pageIndex].screen,
         floatingActionButtonLocation: widget.floatingActionButtonLocation ??
             FloatingActionButtonLocation.centerDocked,
         floatingActionButton: SizedBox(
@@ -213,13 +212,13 @@ class _BottomNavBarState extends State<BottomNavBar> {
                       : InkWell(
                           onTap: () {
                             setState(() {
-                              _pageIndex =
+                              pageIndex =
                                   index > (widget.bottomItems.length / 2)
                                       ? index - 1
                                       : index;
                             });
 
-                            if (_pageIndex == 0) {
+                            if (pageIndex == 0) {
                               setState(() {});
                             }
                           },
@@ -253,7 +252,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                                                             2
                                                     ? index - 1
                                                     : index) ==
-                                                _pageIndex
+                                                pageIndex
                                             ? widget.bottomNavItemSelectedIconSize ??
                                                 33
                                             : widget.bottomNavItemunSelectedIconSize ??
@@ -264,10 +263,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
                                                             2
                                                     ? index - 1
                                                     : index) ==
-                                                _pageIndex
-                                            ? widget.bottomItems[_pageIndex]
+                                                pageIndex
+                                            ? widget.bottomItems[pageIndex]
                                                 .bottomItemSelectedColor
-                                            : widget.bottomItems[_pageIndex]
+                                            : widget.bottomItems[pageIndex]
                                                     .bottomItemUnSelectedColor ??
                                                 Colors.grey,
                                       ),
@@ -288,10 +287,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
                                                           2
                                                   ? index - 1
                                                   : index) ==
-                                              _pageIndex
-                                          ? widget.bottomItems[_pageIndex]
+                                              pageIndex
+                                          ? widget.bottomItems[pageIndex]
                                               .bottomItemSelectedColor
-                                          : widget.bottomItems[_pageIndex]
+                                          : widget.bottomItems[pageIndex]
                                                   .bottomItemUnSelectedColor ??
                                               Colors.grey,
                                       fontWeight:
@@ -303,7 +302,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                                                           2
                                                   ? index - 1
                                                   : index) ==
-                                              _pageIndex
+                                              pageIndex
                                           ? widget.bottomNavItemSelectedLabelSize ??
                                               11
                                           : widget.bottomNavItemunSelectedLabelSize ??
