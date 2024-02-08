@@ -48,13 +48,9 @@ class _CalendarScreenState extends State<CalendarScreen> {
   @override
   void initState() {
     super.initState();
-    setState(() {
-      
-      _selectedDay = _focusedDay;
-    });
     _firstDay = DateTime.utc(now.year, now.month, 1);
     for (int index = 0; index < 2 * 365; index++) {
-      for (int rand = 0; rand < Random().nextInt(4); rand++) {
+      for (int rand = 0; rand < Random().nextInt(5); rand++) {
         events.add(
           Event(
             day: _firstDay.add(index.days),
@@ -64,6 +60,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
         );
       }
     }
+    _selectedDay = _focusedDay;
     _selectedEvents = ValueNotifier(_getEventsForDay(_selectedDay));
   }
 
