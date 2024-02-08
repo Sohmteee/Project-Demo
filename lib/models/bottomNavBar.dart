@@ -31,7 +31,7 @@ class BottomBarItem {
 
   ///Icon of bottom nav bar
 
-  IconData? selectedIcon;
+  String? selectedIcon;
 
   ///selected item color
 
@@ -249,7 +249,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                                                         2)
                                                 ? index - 1
                                                 : index)]
-                                            .selectedIcon,
+                                            .selectedIcon!,
                                         width: (index >
                                                         widget.bottomItems
                                                                 .length /
