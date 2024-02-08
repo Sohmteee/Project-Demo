@@ -1061,10 +1061,13 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
         BottomBarItem(
-          icon: Icon(
-            IconlyBold.calendar,
+          icon: SvgPicture.asset(
+            'assets/svg/nav-bar/calendar.svg',
+            // color: HexColor('#979797'),
             color: gray400,
-            size: 23.w,
+          ),
+          selectedIcon: SvgPicture.asset(
+            'assets/svg/nav-bar/calendar-selected.svg',
           ),
           label: 'Calendar',
           screen: const CalendarScreen(),
