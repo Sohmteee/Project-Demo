@@ -306,6 +306,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                         ),
                       ],
                     ),
+                    SizedBox(height: 20.h),
                   ],
                 );
               },
