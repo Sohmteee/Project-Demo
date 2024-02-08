@@ -279,15 +279,26 @@ class _CalendarScreenState extends State<CalendarScreen> {
                           6 => 'Sat',
                           7 => 'Sun',
                           _ => '',
-                        }}, ${_selectedDay.day}${_selectedDay.day.toString().length == 2 && 
-                        _selectedDay.day.toString()[0] == '1' ? 
-                        'th' : 
-                        switch (_selectedDay.day.toString()[_selectedDay.day.toString().length - 1]) {
+                        }}, ${_selectedDay.day}${_selectedDay.day.toString().length == 2 && _selectedDay.day.toString()[0] == '1' ? 'th' : switch (_selectedDay.day.toString()[_selectedDay.day.toString().length - 1]) {
                             '1' => 'st',
                             '2' => 'nd',
                             '3' => 'rd',
                             _ => 'th',
-                          }}'),
+                          }} ${switch (_selectedDay.month) {
+                          1 => 'JANUARY',
+                          2 => 'FEBRUARY',
+                          3 => 'MARCH',
+                          4 => 'APRIL',
+                          5 => 'MAY',
+                          6 => 'JUNE',
+                          7 => 'JULY',
+                          8 => 'AUGUST',
+                          9 => 'SEPTEMBER',
+                          10 => 'OCTOBER',
+                          11 => 'NOVEMBER',
+                          12 => 'DECEMBER',
+                          _ => ''
+                        }} ${}'),
                       ],
                     ),
                   ],
