@@ -317,25 +317,33 @@ class _CalendarScreenState extends State<CalendarScreen> {
                       child: Column(
                         children: [
                           Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Container(
-                                width: 6.sp,
-                                height: 6.sp,
-                                margin: EdgeInsets.symmetric(horizontal: 1.w),
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: Colors.transparent,
-                                  border: Border.all(
-                                    color: markerColors[index],
+                              Row(
+                                children: [
+                                  Container(
+                                    width: 6.sp,
+                                    height: 6.sp,
+                                    margin:
+                                        EdgeInsets.symmetric(horizontal: 1.w),
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Colors.transparent,
+                                      border: Border.all(
+                                        color: markerColors[index],
+                                      ),
+                                    ),
                                   ),
-                                ),
+                                  SizedBox(width: 10.w),
+                                  DMSansText(
+                                    '10:00 - 13:00',
+                                    fontSize: 12.sp,
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.white,
+                                  ),
+                                ],
                               ),
-                              SizedBox(width: 10.w),
-                              DMSansText(
-                                '10:00 - 13:00',
-                                fontSize: 12.sp,
-                                fontWeight: FontWeight.w600,
-                              ),
+                              Icon(Icons.more_horiz, color: ,),
                             ],
                           ),
                         ],
