@@ -122,8 +122,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                 return Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: List.generate(
-                    /* _getEventsForDay(_selectedDay).length */ Random()
-                        .nextInt(4),
+                    _getEventsForDay(_selectedDay).length,
                     (index) => Container(
                       width: 4.sp,
                       height: 4.sp,
