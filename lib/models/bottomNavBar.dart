@@ -250,7 +250,18 @@ class _BottomNavBarState extends State<BottomNavBar> {
                                                 ? index - 1
                                                 : index)]
                                             .selectedIcon,
-                                        size: (index >
+                                        width: (index >
+                                                        widget.bottomItems
+                                                                .length /
+                                                            2
+                                                    ? index - 1
+                                                    : index) ==
+                                                _pageIndex
+                                            ? widget.bottomNavItemSelectedIconSize ??
+                                                33
+                                            : widget.bottomNavItemunSelectedIconSize ??
+                                                27,
+                                        height: (index >
                                                         widget.bottomItems
                                                                 .length /
                                                             2
