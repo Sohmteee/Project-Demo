@@ -31,9 +31,9 @@ class _CalendarScreenState extends State<CalendarScreen> {
   }
 
   List<Color> markerColors = [
-    HexColor('#00B383'),
-    darkOrangeColor,
     HexColor('#0095FF'),
+    darkOrangeColor,
+    HexColor('#00B383'),
   ];
 
   Color eventColor(int index) {
@@ -301,7 +301,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                             12 => 'DECEMBER',
                             _ => ''
                           }} ${_selectedDay.year}',
-                          color: eventColor(index),
+                          color: markerColors[index],
                           fontSize: 15.sp,
                           fontWeight: FontWeight.bold,
                         ),
