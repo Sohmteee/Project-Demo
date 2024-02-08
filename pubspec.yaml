@@ -84,6 +84,7 @@ flutter:
     - assets/svg/event/
     - assets/svg/view-map/
     - assets/svg/get-ticket/
+    - assets/svg/nav-bar/
 
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
