@@ -221,7 +221,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                           width: 43.w,
                           height: 43.h,
                           decoration: BoxDecoration(
-                            color: eventColor.withOpacity(.16),
+                            color: eventColor(index).withOpacity(.16),
                             borderRadius: BorderRadius.circular(10.r),
                           ),
                           child: Column(
@@ -243,6 +243,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                                   12 => 'DEC',
                                   _ => ''
                                 },
+                                color: eventColor(index),
                               ),
                             ],
                           ),
