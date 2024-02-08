@@ -45,7 +45,11 @@ class _CalendarScreenState extends State<CalendarScreen> {
     _selectedDay = _focusedDay;
     _firstDay = DateTime.utc(now.year, now.month, 1);
     for (int i = 0; i < 2 * 365; i++) {
-      events
+      events.add(
+        Event(
+          
+        ),
+      );
     }
     _selectedEvents = ValueNotifier(_getEventsForDay(_selectedDay));
   }

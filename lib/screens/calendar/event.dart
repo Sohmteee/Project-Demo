@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
 class Event {
-  DateTime? day;
+  DateTime day;
   String? time;
-  String? title;
-  String? description;
-  Color? color;
+  String title;
+  String description;
+  Color color;
 
-  
+
+
 }
 
 /* 
