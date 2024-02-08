@@ -1013,7 +1013,11 @@ class _HomeScreenState extends State<HomeScreen> {
             height: 23.h,
             width: 23.w,
           ),
-          selectedIcon: 'assets/svg/compass.svg',
+         /*  selectedIcon: SvgPicture.asset(
+            'assets/svg/compass.svg',
+            height: 23.h,
+            width: 23.w,
+          ), */
           label: 'Explore',
           bottomItemSelectedColor: darkOrangeColor,
           screen: Scaffold(

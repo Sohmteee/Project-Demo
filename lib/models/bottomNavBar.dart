@@ -2,7 +2,6 @@
 
 import 'package:botton_nav_bar/src/notched_shape.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 ///this is a model for custom navigatorBar with following parameter
 
@@ -31,7 +30,7 @@ class BottomBarItem {
 
   ///Icon of bottom nav bar
 
-  String? selectedIcon;
+  IconData? selectedIcon;
 
   ///selected item color
 
@@ -242,26 +241,15 @@ class _BottomNavBarState extends State<BottomNavBar> {
                                               ? index - 1
                                               : index)]
                                           .icon ??
-                                      SvgPicture.asset(
+                                      Icon(
                                         widget
                                             .bottomItems[(index >
                                                     (widget.bottomItems.length /
                                                         2)
                                                 ? index - 1
                                                 : index)]
-                                            .selectedIcon!,
-                                        width: (index >
-                                                        widget.bottomItems
-                                                                .length /
-                                                            2
-                                                    ? index - 1
-                                                    : index) ==
-                                                _pageIndex
-                                            ? widget.bottomNavItemSelectedIconSize ??
-                                                33
-                                            : widget.bottomNavItemunSelectedIconSize ??
-                                                27,
-                                        height: (index >
+                                            .selectedIcon,
+                                        size: (index >
                                                         widget.bottomItems
                                                                 .length /
                                                             2
