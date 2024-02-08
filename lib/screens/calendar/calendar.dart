@@ -29,6 +29,10 @@ class _CalendarScreenState extends State<CalendarScreen> {
     // return kEvents[day] ?? [];
   }
 
+  Map<String, Color> eventColors() {
+
+  };
+
   @override
   void initState() {
     super.initState();
