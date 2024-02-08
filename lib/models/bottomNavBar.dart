@@ -231,24 +231,25 @@ class _BottomNavBarState extends State<BottomNavBar> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
                                 SizedBox(
-                                  height: widget.bottomNavItemIconHeight ??
-                                      MediaQuery.of(context).size.height *
-                                          0.029,
-                                  child: widget
-                                          .bottomItems[(index >
-                                                  (widget.bottomItems.length /
-                                                      2)
-                                              ? index - 1
-                                              : index)]
-                                          .icon ??
-                                          widget
+                                    height: widget.bottomNavItemIconHeight ??
+                                        MediaQuery.of(context).size.height *
+                                            0.029,
+                                    child: _pageIndex != index
+                                        ? widget
+                                            .bottomItems[(index >
+                                                    (widget.bottomItems.length /
+                                                        2)
+                                                ? index - 1
+                                                : index)]
+                                            .icon
+                                        : widget
                                             .bottomItems[(index >
                                                     (widget.bottomItems.length /
                                                         2)
                                                 ? index - 1
                                                 : index)]
                                             .selectedIcon
-                                      /* Icon(
+                                    /* Icon(
                                         widget
                                             .bottomItems[(index >
                                                     (widget.bottomItems.length /
@@ -280,7 +281,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                                                     .bottomItemUnSelectedColor ??
                                                 Colors.grey,
                                       ), */
-                                ),
+                                    ),
                                 SizedBox(
                                   height: widget.bottomNavItemLabelHeight ?? 15,
                                   child: Text(
