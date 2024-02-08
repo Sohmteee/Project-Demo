@@ -1,7 +1,6 @@
 // ignore_for_file: library_private_types_in_public_api, implementation_imports
 
 import 'package:botton_nav_bar/src/notched_shape.dart';
-
 import 'package:flutter/material.dart';
 
 ///this is a model for custom navigatorBar with following parameter
@@ -16,6 +15,7 @@ class BottomBarItem {
     this.centerDockedTitle,
     this.bottomItemSelectedColor,
     this.icon,
+    this.activeIcon,
   });
 
   ///screen of bottomNavigation Bar
@@ -25,6 +25,8 @@ class BottomBarItem {
   ///Selected Icon of a NavigationBar
 
   Widget? icon;
+
+  Widget? activeIcon;
 
   ///Icon of bottom nav bar
 
@@ -239,7 +241,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                                               ? index - 1
                                               : index)]
                                           .icon ??
-                                      Icon(
+                                      
                                         widget
                                             .bottomItems[(index >
                                                     (widget.bottomItems.length /
@@ -270,7 +272,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                                             : widget.bottomItems[_pageIndex]
                                                     .bottomItemUnSelectedColor ??
                                                 Colors.grey,
-                                      ),
+                                      
                                 ),
                                 SizedBox(
                                   height: widget.bottomNavItemLabelHeight ?? 15,
