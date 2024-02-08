@@ -66,7 +66,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
           ),
         ],
       ),
-      body: ListView(
+      body: Column(
         children: [
           TableCalendar<Event>(
             firstDay: DateTime.utc(now.year, now.month, 1),
@@ -193,14 +193,16 @@ class _CalendarScreenState extends State<CalendarScreen> {
               headerMargin: EdgeInsets.symmetric(horizontal: 60.w),
             ),
           ),
-          ListView.separated(
-            itemCount: 1,
-            separatorBuilder: (BuildContext context, int index) {
-              return SizedBox(height: 10.h);
-            },
-            itemBuilder: (BuildContext context, int index) {
-              return Container();
-            },
+          Expanded(
+            child: ListView.separated(
+              itemCount: 3,
+              separatorBuilder: (BuildContext context, int index) {
+                return SizedBox(height: 10.h);
+              },
+              itemBuilder: (BuildContext context, int index) {
+                return Container();
+              },
+            ),
           ),
         ],
       ),
