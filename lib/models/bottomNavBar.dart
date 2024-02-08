@@ -30,7 +30,7 @@ class BottomBarItem {
 
   ///Icon of bottom nav bar
 
-  IconData? selectedIcon;
+  Widget? selectedIcon;
 
   ///selected item color
 
@@ -241,7 +241,14 @@ class _BottomNavBarState extends State<BottomNavBar> {
                                               ? index - 1
                                               : index)]
                                           .icon ??
-                                      Icon(
+                                          widget
+                                            .bottomItems[(index >
+                                                    (widget.bottomItems.length /
+                                                        2)
+                                                ? index - 1
+                                                : index)]
+                                            .selectedIcon
+                                      /* Icon(
                                         widget
                                             .bottomItems[(index >
                                                     (widget.bottomItems.length /
@@ -272,7 +279,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                                             : widget.bottomItems[_pageIndex]
                                                     .bottomItemUnSelectedColor ??
                                                 Colors.grey,
-                                      ),
+                                      ), */
                                 ),
                                 SizedBox(
                                   height: widget.bottomNavItemLabelHeight ?? 15,
