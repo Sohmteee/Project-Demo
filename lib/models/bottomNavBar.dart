@@ -2,6 +2,7 @@
 
 import 'package:botton_nav_bar/src/notched_shape.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 ///this is a model for custom navigatorBar with following parameter
 
@@ -241,7 +242,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                                               ? index - 1
                                               : index)]
                                           .icon ??
-                                      SvgPicture(
+                                      SvgPicture.asset(
                                         widget
                                             .bottomItems[(index >
                                                     (widget.bottomItems.length /
