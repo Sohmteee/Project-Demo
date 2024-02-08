@@ -337,7 +337,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                                       ),
                                     ),
                                   ),
-                                  SizedBox(width: 10.w),
+                                  SizedBox(width: 8.h),
                                   DMSansText(
                                     '10:00 - 13:00',
                                     fontSize: 12.sp,
