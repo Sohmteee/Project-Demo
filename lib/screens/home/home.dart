@@ -1074,20 +1074,21 @@ class _HomeScreenState extends State<HomeScreen> {
           bottomItemSelectedColor: darkOrangeColor,
         ),
         BottomBarItem(
-           icon: SvgPicture.asset(
+          icon: SvgPicture.asset(
             'assets/svg/nav-bar/bookmark.svg',
             // color: HexColor('#979797'),
             color: gray400,
           ),
           selectedIcon: SvgPicture.asset(
             'assets/svg/nav-bar/bookmark.svg',
+            color: gray400,
           ),
           label: 'Bookmarks',
           screen: Container(),
           bottomItemSelectedColor: darkOrangeColor,
         ),
         BottomBarItem(
-           icon: SvgPicture.asset(
+          icon: SvgPicture.asset(
             'assets/svg/nav-bar/ticket.svg',
             // color: HexColor('#979797'),
             color: gray400,
