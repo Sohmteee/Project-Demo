@@ -47,8 +47,9 @@ class _CalendarScreenState extends State<CalendarScreen> {
     for (int i = 0; i < 2 * 365; i++) {
       events.add(
         Event(
-          day: _firstDay.add(),
-          title: 
+          day: _firstDay + _firstDay,
+          title: 'International Kids Day',
+          description: 'Start from screen 16',
         ),
       );
     }

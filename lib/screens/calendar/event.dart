@@ -5,13 +5,13 @@ class Event {
   String? time;
   String title;
   String description;
-  Color color;
+  // Color color;
 
   Event({
     required this.day,
     required this.title,
     required this.description,
-    required this.color,
+    // required this.color,
   });
 }
 
