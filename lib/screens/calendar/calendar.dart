@@ -69,7 +69,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
           TableCalendar<Event>(
             firstDay: DateTime.utc(now.year, now.month, 1),
             lastDay: DateTime.utc(
-              now.add((5 * 365).days).year,
+              now.add((2 * 365).days).year,
               now.month,
               now.day,
             ),
