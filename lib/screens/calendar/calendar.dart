@@ -73,6 +73,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
               now.month,
               now.day,
             ),
+            
             focusedDay: _focusedDay,
             startingDayOfWeek: StartingDayOfWeek.monday,
             calendarFormat: CalendarFormat.month,
