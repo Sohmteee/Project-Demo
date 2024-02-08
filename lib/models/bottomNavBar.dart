@@ -15,6 +15,7 @@ class BottomBarItem {
     this.centerDockedTitle,
     this.bottomItemSelectedColor,
     this.icon,
+    this.activeIcon,
   });
 
   ///screen of bottomNavigation Bar
@@ -24,6 +25,8 @@ class BottomBarItem {
   ///Selected Icon of a NavigationBar
 
   Widget? icon;
+
+  Widget? activeIcon;
 
   ///Icon of bottom nav bar
 
