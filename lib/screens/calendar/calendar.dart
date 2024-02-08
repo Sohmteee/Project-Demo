@@ -89,6 +89,11 @@ class _CalendarScreenState extends State<CalendarScreen> {
                 });
               }
             },
+            calendarBuilders: CalendarBuilders(
+              markerBuilder: (context, day, events) {
+                
+              },
+            ),
             calendarStyle: CalendarStyle(
               tablePadding: EdgeInsets.symmetric(horizontal: 5.w),
               defaultTextStyle: TextStyle(
