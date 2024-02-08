@@ -1080,6 +1080,12 @@ class _HomeScreenState extends State<HomeScreen> {
             height: 23.h,
             width: 23.w,
           ),
+          icon: SvgPicture.asset(
+            'assets/svg/bookmark.svg',
+            color: gray400,
+            height: 23.h,
+            width: 23.w,
+          ),
           label: 'Bookmarks',
           screen: Container(),
           bottomItemSelectedColor: darkOrangeColor,
