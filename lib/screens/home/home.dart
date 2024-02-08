@@ -1010,15 +1010,11 @@ class _HomeScreenState extends State<HomeScreen> {
         BottomBarItem(
           icon: SvgPicture.asset(
             'assets/svg/compass.svg',
-            height: 23.h,
-            width: 23.w,
             // color: HexColor('#979797'),
             color: gray400,
           ),
           selectedIcon: SvgPicture.asset(
             'assets/svg/compass-selected.svg',
-            height: 23.h,
-            width: 23.w,
           ),
           label: 'Explore',
           bottomItemSelectedColor: darkOrangeColor,
