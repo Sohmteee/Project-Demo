@@ -100,6 +100,11 @@ class _CalendarScreenState extends State<CalendarScreen> {
               // markerDecoration: const BoxDecoration(),
               markersAnchor: -.3,
               markerMargin: EdgeInsets.symmetric(horizontal: 1.w),
+              markerDecoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.transparent,
+                border: Border.all(color: HexColor('#00B383'))
+              ),
               selectedDecoration: BoxDecoration(
                 shape: BoxShape.circle,
                 gradient: LinearGradient(
