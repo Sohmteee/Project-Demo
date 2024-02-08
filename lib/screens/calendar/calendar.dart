@@ -197,30 +197,33 @@ class _CalendarScreenState extends State<CalendarScreen> {
             child: ListView.separated(
               itemCount: 3,
               padding: EdgeInsets.symmetric(
-                horizontal: 10.w,
-                vertical: 20.h,
+                horizontal: 20.w,
+                vertical: 50.h,
               ),
               separatorBuilder: (BuildContext context, int index) {
-                return SizedBox(height: 10.h);
+                return SizedBox(height: 20.h);
               },
               itemBuilder: (BuildContext context, int index) {
-                return Container(
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            width: 43.w,
-                            height: 43.h,
-                            decoration: BoxDecoration(
-                              color: HexColor('#3D50DF').withOpacity(.16),
-                              borderRadius: BorderRadius.circular(10.r),
-                            ),
+                return Column(
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          width: 43.w,
+                          height: 43.h,
+                          decoration: BoxDecoration(
+                            color: HexColor('#3D50DF').withOpacity(.16),
+                            borderRadius: BorderRadius.circular(10.r),
                           ),
-                        ],
-                      ),
-                    ],
-                  ),
+                          child:  Column(
+                            children: [
+                              
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
                 );
               },
             ),
