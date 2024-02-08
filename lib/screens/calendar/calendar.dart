@@ -196,15 +196,15 @@ class _CalendarScreenState extends State<CalendarScreen> {
           Expanded(
             child: ListView.separated(
               itemCount: 3,
+              padding: EdgeInsets.symmetric(
+                horizontal: 10.w,
+                vertical: 20.h,
+              ),
               separatorBuilder: (BuildContext context, int index) {
                 return SizedBox(height: 10.h);
               },
               itemBuilder: (BuildContext context, int index) {
                 return Container(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 10.w,
-                    vertical: 10.h,
-                  ),
                   child: Column(
                     children: [
                       Row(
