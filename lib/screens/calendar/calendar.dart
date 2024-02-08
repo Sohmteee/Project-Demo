@@ -99,11 +99,13 @@ class _CalendarScreenState extends State<CalendarScreen> {
                 ];
 
                 return Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: List.generate(
                     _getEventsForDay(_selectedDay).length,
                     (index) => Container(
                       width: 4.sp,
                       height: 4.sp,
+                      margin: EdgeInsets.symmetric(horizontal: 1.w),
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: Colors.transparent,
