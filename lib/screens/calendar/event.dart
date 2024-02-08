@@ -6,6 +6,8 @@ class Event {
   String? title;
   String? description;
   Color? color;
+
+  
 }
 
 /* 
