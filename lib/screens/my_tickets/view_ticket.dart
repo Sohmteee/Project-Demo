@@ -77,9 +77,20 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
                             width: 35.w,
                           ),
                           Positioned(
-                            child: SizedBox(
+                            child: Container(
                               height: 35.h,
                               width: 35.w,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                gradient: LinearGradient(
+                                  colors: [
+                                    lightOrangeColor,
+                                    darkOrangeColor,
+                                  ],
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter,
+                                ),
+                              ),
                             ),
                           )
                         ],
