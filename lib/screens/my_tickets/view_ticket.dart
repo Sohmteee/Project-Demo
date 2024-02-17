@@ -38,7 +38,7 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
               Expanded(
                 child: Container(
                   margin: EdgeInsets.fromLTRB(20.sp, 20.sp, 20.sp, 60.sp),
-                  padding: EdgeInsets.all(15.sp),
+                  padding: EdgeInsets.all(18.sp),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(20.sp),
@@ -46,6 +46,7 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
                   child: Column(
                     children: [
                       Image.asset('assets/images/view-ticket/event-pic.png'),
+                      SizedBox(height: 16.h),
                       DMSansText(
                         'Coldplay : Music of the Spheres',
                         color: Theme.of(context).colorScheme.secondary,
