@@ -62,8 +62,8 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
                       ),
                       SizedBox(height: 40.h),
                       TicketDetails(
-                          name: 'name',
-                          orderNumber: orderNumber,
+                          name: 'Indriyani Puspita',
+                          orderNumber: 'CLD09738PL',
                           date: date,
                           time: time,
                           gate: gate,
