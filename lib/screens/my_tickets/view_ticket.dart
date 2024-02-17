@@ -52,7 +52,13 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
                         color: Theme.of(context).colorScheme.secondary,
                         fontSize: 18.sp,
                         fontWeight: FontWeight.w600,
-                      )
+                      ),
+                      DMSansText(
+                        'Nov 15 2023 ~ Gelora Bung Karno Stadium, Jakarta',
+                        color: Theme.of(context).colorScheme.secondary,
+                        fontSize: 12.sp,
+                        fontWeight: FontWeight.w400,
+                      ),
                     ],
                   ),
                 ),
