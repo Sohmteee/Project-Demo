@@ -36,110 +36,108 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
                   ),
                 ],
               ),
-              Expanded(
-                child: Container(
-                  clipBehavior: Clip.hardEdge,
-                  margin: EdgeInsets.fromLTRB(20.sp, 20.sp, 20.sp, 60.sp),
-                  padding: EdgeInsets.all(18.sp),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(20.sp),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.asset('assets/images/view-ticket/event-pic.png'),
-                      SizedBox(height: 16.h),
-                      DMSansText(
-                        'Coldplay : Music of the Spheres',
-                        color: Theme.of(context).colorScheme.secondary,
-                        fontSize: 18.sp,
-                        fontWeight: FontWeight.w600,
-                      ),
-                      DMSansText(
-                        'Nov 15 2023 ~ Gelora Bung Karno Stadium, Jakarta',
-                        color: Colors.grey[400],
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w400,
-                      ),
-                      SizedBox(height: 40.h),
-                      const TicketDetails(
-                        name: 'Indriyani Puspita',
-                        orderNumber: 'CLD09738PL',
-                        date: 'NOV 15, 2024',
-                        time: '9:00 PM',
-                        gate: 'Yellow',
-                        serialNumber: 1234568,
-                      ),
-                      Stack(
-                        clipBehavior: Clip.none,
-                        alignment: Alignment.center,
-                        children: [
-                          DashDivider(
-                            color: Colors.grey[400]!,
-                          ),
-                          Positioned(
-                            left: -(17.5 + 18).w,
-                            child: Container(
-                              height: 35.h,
-                              width: 35.w,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                gradient: LinearGradient(
-                                  colors: [
-                                    lightOrangeColor,
-                                    darkOrangeColor,
-                                  ],
-                                  begin: Alignment.topCenter,
-                                  end: Alignment.bottomCenter,
-                                ),
+              Container(
+                clipBehavior: Clip.hardEdge,
+                margin: EdgeInsets.fromLTRB(20.sp, 20.sp, 20.sp, 60.sp),
+                padding: EdgeInsets.all(18.sp),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20.sp),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Image.asset('assets/images/view-ticket/event-pic.png'),
+                    SizedBox(height: 16.h),
+                    DMSansText(
+                      'Coldplay : Music of the Spheres',
+                      color: Theme.of(context).colorScheme.secondary,
+                      fontSize: 18.sp,
+                      fontWeight: FontWeight.w600,
+                    ),
+                    DMSansText(
+                      'Nov 15 2023 ~ Gelora Bung Karno Stadium, Jakarta',
+                      color: Colors.grey[400],
+                      fontSize: 12.sp,
+                      fontWeight: FontWeight.w400,
+                    ),
+                    SizedBox(height: 40.h),
+                    const TicketDetails(
+                      name: 'Indriyani Puspita',
+                      orderNumber: 'CLD09738PL',
+                      date: 'Nov 15, 2024',
+                      time: '9:00 PM',
+                      gate: 'Yellow',
+                      serialNumber: 1234568,
+                    ),
+                    Stack(
+                      clipBehavior: Clip.none,
+                      alignment: Alignment.center,
+                      children: [
+                        DashDivider(
+                          color: Colors.grey[400]!,
+                        ),
+                        Positioned(
+                          left: -(17.5 + 18).w,
+                          child: Container(
+                            height: 35.h,
+                            width: 35.w,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              gradient: LinearGradient(
+                                colors: [
+                                  lightOrangeColor,
+                                  darkOrangeColor,
+                                ],
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
                               ),
                             ),
                           ),
-                          Positioned(
-                            right: -(17.5 + 18).w,
-                            child: Container(
-                              height: 35.h,
-                              width: 35.w,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                gradient: LinearGradient(
-                                  colors: [
-                                    lightOrangeColor,
-                                    darkOrangeColor,
-                                  ],
-                                  begin: Alignment.topCenter,
-                                  end: Alignment.bottomCenter,
-                                ),
+                        ),
+                        Positioned(
+                          right: -(17.5 + 18).w,
+                          child: Container(
+                            height: 35.h,
+                            width: 35.w,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              gradient: LinearGradient(
+                                colors: [
+                                  lightOrangeColor,
+                                  darkOrangeColor,
+                                ],
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
                               ),
                             ),
                           ),
-                        ],
-                      ),
-                      SizedBox(height: 20.h),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Image.asset(
-                                'assets/images/view-ticket/bar-code.png',
-                              ),
-                              SizedBox(height: 12.h),
-                              DMSansText(
-                                'Present your serieal Number (S/N) above \nat the entry gate',
-                                color: Theme.of(context).colorScheme.secondary,
-                                fontSize: 11.sp,
-                                fontWeight: FontWeight.w400,
-                                textAlign: TextAlign.center,
-                              )
-                            ],
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 20.h),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'assets/images/view-ticket/bar-code.png',
+                            ),
+                            SizedBox(height: 12.h),
+                            DMSansText(
+                              'Present your serieal Number (S/N) above \nat the entry gate',
+                              color: Theme.of(context).colorScheme.secondary,
+                              fontSize: 11.sp,
+                              fontWeight: FontWeight.w400,
+                              textAlign: TextAlign.center,
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ),
             ],
