@@ -103,7 +103,25 @@ class TicketDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            DMSansText(
+              'Name',
+              color: Colors.grey[400],
+              fontSize: 12.sp,
+              fontWeight: FontWeight.w400,
+            ),
+            DMSansText(
+              name,
+              color: Theme.of(context).colorScheme.secondary,
+              fontSize: 15.sp,
+              fontWeight: FontWeight.w600,
+
+            ),
+            
+          ],
+        ),
       ],
     );
   }
