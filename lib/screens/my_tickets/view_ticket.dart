@@ -74,7 +74,15 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
 }
 
 class TicketDetails extends StatelessWidget {
-  const TicketDetails({super.key, });
+  const TicketDetails({
+    super.key,
+    required this.name,
+    required this.orderNumber,
+    required this.date,
+    required this.time,
+    required this.gate,
+    required this.serialNumber,
+  });
 
   String name;
   String orderNumber;
