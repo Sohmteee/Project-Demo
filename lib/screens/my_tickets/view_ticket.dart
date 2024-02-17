@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 
 class ViewTicketScreen extends StatefulWidget {
@@ -23,16 +24,17 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
             end: Alignment.bottomCenter,
           ),
         ),
-        child: const SafeArea(
+        child: SafeArea(
           child: Column(
             children: [
-              Row(
+              const Row(
                 children: [
                   BackButton(
                     color: Colors.white,
                   ),
                 ],
               ),
+                child: Container(margin: EdgeInsets.all(20.sp),),
               
             ],
           ),
