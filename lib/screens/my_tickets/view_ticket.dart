@@ -60,6 +60,7 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
                         fontSize: 12.sp,
                         fontWeight: FontWeight.w400,
                       ),
+                      SizedBox(height: 40.h),
                     ],
                   ),
                 ),
