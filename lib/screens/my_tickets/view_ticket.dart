@@ -12,7 +12,13 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(leading: BackButton(color: Theme.of(context).colorScheme.,),),
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        leading: const BackButton(
+          color: Colors.white,
+        ),
+      ),
       body: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(
