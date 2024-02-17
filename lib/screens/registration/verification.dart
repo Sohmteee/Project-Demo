@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pin_input_text_field/pin_input_text_field.dart';
 import 'package:pinput/pinput.dart';
 import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
@@ -12,13 +11,6 @@ import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/models/registration/button.dart';
 import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/theme.dart';
-import 'package:your_app_name/utils/hex_color.dart';
-import 'package:your_app_name/utils/iconly_light.dart';
-import 'package:your_app_name/utils/theme_provider.dart';
-import 'package:your_app_name/utils/theme_type.dart';
-import 'package:your_app_name/widgets/airbnb_text.dart';
-import 'package:your_app_name/widgets/arrow_button.dart';
-import 'package:your_app_name/widgets/dmsans_text.dart';
 
 class VerificationScreen extends StatefulWidget {
   const VerificationScreen({super.key});
