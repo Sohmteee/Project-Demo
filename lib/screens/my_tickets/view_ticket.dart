@@ -21,14 +21,15 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
       ),
       body: Container(
         decoration: BoxDecoration(
-            gradient: LinearGradient(
-          colors: [
-            lightOrangeColor,
-            darkOrangeColor,
-          ],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-        )),
+          gradient: LinearGradient(
+            colors: [
+              lightOrangeColor,
+              darkOrangeColor,
+            ],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          ),
+        ),
       ),
     );
   }
