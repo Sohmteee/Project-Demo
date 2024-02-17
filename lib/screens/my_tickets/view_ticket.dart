@@ -73,10 +73,10 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
                       ),
                       Stack(
                         clipBehavior: Clip.none,
+                        alignment: Alignment.center,
                         children: [
-                          SizedBox(
-                            height: 35.h,
-                            width: double.maxFinite,
+                          DashDivider(
+                            color: Colors.grey[400]!,
                           ),
                           Positioned(
                             left: -(17.5 + 18).w,
@@ -115,9 +115,6 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
                             ),
                           ),
                         ],
-                      ),
-                      DashDivider(
-                        color: Colors.grey[400]!,
                       ),
                     ],
                   ),
