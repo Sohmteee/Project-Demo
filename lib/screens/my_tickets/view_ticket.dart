@@ -116,6 +116,8 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
                           ),
                         ],
                       ),
+                      SizedBox(height: 6.h),
+                      Image.asset('assets/images/view-ticket/bar-code.png')
                     ],
                   ),
                 ),
