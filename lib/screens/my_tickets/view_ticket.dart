@@ -74,10 +74,18 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
 }
 
 class TicketDetails extends StatelessWidget {
-  const TicketDetails({super.key});
+  const TicketDetails({super.key, this.name});
 
+  String name;
+  String orderNumber;
+
+  
   @override
   Widget build(BuildContext context) {
-    return Row();
+    return Row(
+      children: [
+        Container(),
+      ],
+    );
   }
 }
