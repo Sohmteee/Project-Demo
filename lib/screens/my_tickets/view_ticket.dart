@@ -12,13 +12,6 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        leading: const BackButton(
-          color: Colors.white,
-        ),
-      ),
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -28,6 +21,20 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
             ],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
+          ),
+        ),
+        child: const SafeArea(
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  BackButton(
+                    color: Colors.white,
+                  ),
+                ],
+              ),
+              
+            ],
           ),
         ),
       ),
