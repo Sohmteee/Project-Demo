@@ -70,8 +70,19 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
                         gate: 'Yellow',
                         serialNumber: 1234568,
                       ),
-                      DashDivider(
-                        color: Colors.grey[400]!,
+                      Row(
+                        children: [
+                          Stack(
+                            children: [
+                              Container(),
+                              Positioned(child: child)
+                            ],
+                          ),
+
+                          DashDivider(
+                            color: Colors.grey[400]!,
+                          ),
+                        ],
                       ),
                     ],
                   ),
