@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:yeerlo/colors/app_colors.dart';
+import 'package:yeerlo/models/text.dart';
 
 class ViewTicketScreen extends StatefulWidget {
   const ViewTicketScreen({super.key});
@@ -45,6 +46,12 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
                   child: Column(
                     children: [
                       Image.asset('assets/images/view-ticket/event-pic.png'),
+                      DMSansText(
+                        'Coldplay : Music of the Spheres',
+                        color: Theme.of(context).colorScheme.secondary,
+                        fontSize: 18.sp,
+                        fontWeight: FontWeight.w600,
+                      )
                     ],
                   ),
                 ),
