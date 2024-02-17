@@ -4,6 +4,18 @@ import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/screens/get_ticket.dart';
 
+/// A screen widget that displays the details of a ticket.
+///
+/// This widget is used to show the information related to a ticket, such as the concert title, location, ticket holder name, order number, date, time, gate, and serial number. It also includes a barcode image and instructions for presenting the serial number at the entry gate.
+///
+/// The [ViewTicketScreen] class extends the [StatefulWidget] class and requires a [key] parameter. It creates an instance of the [_ViewTicketScreenState] class as its state.
+///
+/// Example usage:
+/// ```dart
+/// ViewTicketScreen(
+///   key: Key('ticketScreen'),
+/// )
+/// ```
 class ViewTicketScreen extends StatefulWidget {
   const ViewTicketScreen({super.key});
 
