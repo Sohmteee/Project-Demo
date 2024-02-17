@@ -37,7 +37,7 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
               Expanded(
                 child: Container(
                   margin: EdgeInsets.fromLTRB(20.sp, 20.sp, 20.sp, 60.sp),
-                  padding: EdgeInsets.all(20.sp),
+                  padding: EdgeInsets.all(15.sp),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(20.sp),
