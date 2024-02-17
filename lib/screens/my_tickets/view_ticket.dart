@@ -44,6 +44,7 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
                     borderRadius: BorderRadius.circular(20.sp),
                   ),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Image.asset('assets/images/view-ticket/event-pic.png'),
                       SizedBox(height: 16.h),
@@ -55,7 +56,7 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
                       ),
                       DMSansText(
                         'Nov 15 2023 ~ Gelora Bung Karno Stadium, Jakarta',
-                        color: Theme.of(context).colorScheme.secondary,
+                        color: Colors.grey[400],
                         fontSize: 12.sp,
                         fontWeight: FontWeight.w400,
                       ),
