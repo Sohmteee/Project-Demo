@@ -38,6 +38,7 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
               ),
               Expanded(
                 child: Container(
+                  clipBehavior: Clip.hardEdge,
                   margin: EdgeInsets.fromLTRB(20.sp, 20.sp, 20.sp, 60.sp),
                   padding: EdgeInsets.all(18.sp),
                   decoration: BoxDecoration(
@@ -75,7 +76,7 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
                         children: [
                           SizedBox(
                             height: 35.h,
-                            width: 35.w,
+                            width: double.maxFinite,
                           ),
                           Positioned(
                             left: -(17.5 + 18).w,
@@ -94,7 +95,25 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
                                 ),
                               ),
                             ),
-                          )
+                          ),
+                          Positioned(
+                            right: -(17.5 + 18).w,
+                            child: Container(
+                              height: 35.h,
+                              width: 35.w,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                gradient: LinearGradient(
+                                  colors: [
+                                    lightOrangeColor,
+                                    darkOrangeColor,
+                                  ],
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter,
+                                ),
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                       DashDivider(
