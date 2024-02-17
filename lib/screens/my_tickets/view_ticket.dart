@@ -12,6 +12,16 @@ class ViewTicketScreen extends StatefulWidget {
 }
 
 class _ViewTicketScreenState extends State<ViewTicketScreen> {
+  final String concertTitle = 'Coldplay : Music of the Spheres';
+  final String concertLocation =
+      'Nov 15 2023 ~ Gelora Bung Karno Stadium, Jakarta';
+  final String ticketHolderName = 'Indriyani Puspita';
+  final String ticketOrderNumber = 'CLD09738PL';
+  final String ticketDate = 'Nov 15, 2024';
+  final String ticketTime = '9:00 PM';
+  final String ticketGate = 'Yellow';
+  final int ticketSerialNumber = 1234568;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,25 +60,25 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
                     Image.asset('assets/images/view-ticket/event-pic.png'),
                     SizedBox(height: 16.h),
                     DMSansText(
-                      'Coldplay : Music of the Spheres',
+                      concertTitle,
                       color: Theme.of(context).colorScheme.secondary,
                       fontSize: 18.sp,
                       fontWeight: FontWeight.w600,
                     ),
                     DMSansText(
-                      'Nov 15 2023 ~ Gelora Bung Karno Stadium, Jakarta',
+                      concertLocation,
                       color: Colors.grey[400],
                       fontSize: 12.sp,
                       fontWeight: FontWeight.w400,
                     ),
                     SizedBox(height: 40.h),
-                    const TicketDetails(
-                      name: 'Indriyani Puspita',
-                      orderNumber: 'CLD09738PL',
-                      date: 'Nov 15, 2024',
-                      time: '9:00 PM',
-                      gate: 'Yellow',
-                      serialNumber: 1234568,
+                    TicketDetails(
+                      name: ticketHolderName,
+                      orderNumber: ticketOrderNumber,
+                      date: ticketDate,
+                      time: ticketTime,
+                      gate: ticketGate,
+                      serialNumber: ticketSerialNumber,
                     ),
                     Stack(
                       clipBehavior: Clip.none,
