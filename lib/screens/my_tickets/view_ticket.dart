@@ -159,13 +159,13 @@ class TicketDetails extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             DMSansText(
-              'Name',
+              'Order Number',
               color: Colors.grey[400],
               fontSize: 12.sp,
               fontWeight: FontWeight.w400,
             ),
             DMSansText(
-              name,
+              orderNumber,
               color: Theme.of(context).colorScheme.secondary,
               fontSize: 15.sp,
               fontWeight: FontWeight.w600,
@@ -174,13 +174,13 @@ class TicketDetails extends StatelessWidget {
               height: 24.h,
             ),
             DMSansText(
-              'Date',
+              'Time',
               color: Colors.grey[400],
               fontSize: 12.sp,
               fontWeight: FontWeight.w400,
             ),
             DMSansText(
-              date,
+              time,
               color: Theme.of(context).colorScheme.secondary,
               fontSize: 15.sp,
               fontWeight: FontWeight.w600,
@@ -189,13 +189,13 @@ class TicketDetails extends StatelessWidget {
               height: 24.h,
             ),
             DMSansText(
-              'Gate',
+              'Serial Number',
               color: Colors.grey[400],
               fontSize: 12.sp,
               fontWeight: FontWeight.w400,
             ),
             DMSansText(
-              gate,
+              serialNumber.toString(),
               color: Theme.of(context).colorScheme.secondary,
               fontSize: 15.sp,
               fontWeight: FontWeight.w600,
