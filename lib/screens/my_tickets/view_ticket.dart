@@ -223,7 +223,6 @@ class TicketDetails extends StatelessWidget {
                 fontSize: 15.sp,
                 fontWeight: FontWeight.w600,
               ),
-              
             ],
           ),
         ),
@@ -274,9 +273,6 @@ class TicketDetails extends StatelessWidget {
               color: secondaryColor,
               fontSize: 15.sp,
               fontWeight: FontWeight.w600,
-            ),
-            Padding(
-              padding: EdgeInsets.only(bottom: 24.h),
             ),
           ],
         ),
