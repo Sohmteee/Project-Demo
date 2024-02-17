@@ -125,6 +125,9 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
                           ),
                         ],
                       ),
+                      SizedBox(height: 12.h),
+                      DMSansText(
+                          'Present your serieal Number (S/N) above \nat the entry gate')
                     ],
                   ),
                 ),
