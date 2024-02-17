@@ -61,6 +61,13 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
                         fontWeight: FontWeight.w400,
                       ),
                       SizedBox(height: 40.h),
+                      TicketDetails(
+                          name: 'name',
+                          orderNumber: orderNumber,
+                          date: date,
+                          time: time,
+                          gate: gate,
+                          serialNumber: serialNumber)
                     ],
                   ),
                 ),
@@ -84,12 +91,12 @@ class TicketDetails extends StatelessWidget {
     required this.serialNumber,
   });
 
-  String name;
-  String orderNumber;
-  String date;
-  String time;
-  String gate;
-  int serialNumber;
+  final String name;
+  final String orderNumber;
+  final String date;
+  final String time;
+  final String gate;
+  final int serialNumber;
 
   @override
   Widget build(BuildContext context) {
