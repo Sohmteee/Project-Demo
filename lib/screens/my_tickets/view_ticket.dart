@@ -74,12 +74,15 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
 }
 
 class TicketDetails extends StatelessWidget {
-  const TicketDetails({super.key, this.name});
+  const TicketDetails({super.key, });
 
   String name;
   String orderNumber;
+  String date;
+  String time;
+  String gate;
+  int serialNumber;
 
-  
   @override
   Widget build(BuildContext context) {
     return Row(
