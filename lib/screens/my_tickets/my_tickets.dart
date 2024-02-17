@@ -122,7 +122,7 @@ class _MyTicketsScreenState extends State<MyTicketsScreen> {
                     children: [
                       ZoomTapAnimation(
                         onTap: () {
-                          Navigator.pushNamed(context, '/view-map');
+                          Navigator.pushNamed(context, '/view-ticket');
                         },
                         child: Container(
                           padding: EdgeInsets.symmetric(

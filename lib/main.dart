@@ -16,6 +16,7 @@ import 'package:yeerlo/screens/home/notifications.dart';
 import 'package:yeerlo/screens/home/search.dart';
 import 'package:yeerlo/screens/home/upcoming_events.dart';
 import 'package:yeerlo/screens/my_tickets/my_tickets.dart';
+import 'package:yeerlo/screens/my_tickets/view_ticket.dart';
 import 'package:yeerlo/screens/onboarding.dart';
 import 'package:yeerlo/screens/registration/location.dart';
 import 'package:yeerlo/screens/registration/reset_password.dart';
@@ -100,6 +101,7 @@ class MyApp extends StatelessWidget {
             '/get-ticket': (context) => const GetTicketScreen(),
             '/checkout': (context) => const CheckoutScreen(),
             '/my_tickets':(context) => const MyTicketsScreen(),
+            '/view-ticket':(context) => const ViewTicketScreen(), 
           },
         );
       },
