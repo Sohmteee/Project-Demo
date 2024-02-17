@@ -120,20 +120,24 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image.asset(
-                            'assets/images/view-ticket/bar-code.png',
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                'assets/images/view-ticket/bar-code.png',
+                              ),
+                              SizedBox(height: 12.h),
+                              DMSansText(
+                                'Present your serieal Number (S/N) above \nat the entry gate',
+                                color: Theme.of(context).colorScheme.secondary,
+                                fontSize: 11.sp,
+                                fontWeight: FontWeight.w400,
+                                textAlign: TextAlign.center,
+                              )
+                            ],
                           ),
                         ],
-                          SizedBox(height: 12.h),
-                          DMSansText(
-                            'Present your serieal Number (S/N) above \nat the entry gate',
-                            color: Theme.of(context).colorScheme.secondary,
-                            fontSize: 11.sp,
-                            fontWeight: FontWeight.w400,
-                            textAlign: TextAlign.center,
-                          )
                       ),
-                      
                     ],
                   ),
                 ),
