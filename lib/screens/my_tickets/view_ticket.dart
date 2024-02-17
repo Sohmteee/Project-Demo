@@ -72,13 +72,24 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
                       ),
                       Row(
                         children: [
-                          Stack(
-                            children: [
-                              Container(),
-                              Positioned(child: child)
-                            ],
+                          SizedBox(
+                            height: 35.h,
+                            width: 35.w,
+                            child: Stack(
+                              children: [
+                                SizedBox(
+                                  height: 35.h,
+                                  width: 35.w,
+                                ),
+                                Positioned(
+                                  child: SizedBox(
+                                    height: 35.h,
+                                    width: 35.w,
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
-
                           DashDivider(
                             color: Colors.grey[400]!,
                           ),
