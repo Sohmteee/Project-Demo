@@ -61,13 +61,14 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
                         fontWeight: FontWeight.w400,
                       ),
                       SizedBox(height: 40.h),
-                      TicketDetails(
-                          name: 'Indriyani Puspita',
-                          orderNumber: 'CLD09738PL',
-                          date: date,
-                          time: time,
-                          gate: gate,
-                          serialNumber: serialNumber)
+                      const TicketDetails(
+                        name: 'Indriyani Puspita',
+                        orderNumber: 'CLD09738PL',
+                        date: 'NOV 15, 2024',
+                        time: '9:00 PM',
+                        gate: 'Yellow',
+                        serialNumber: 1234568,
+                      )
                     ],
                   ),
                 ),
