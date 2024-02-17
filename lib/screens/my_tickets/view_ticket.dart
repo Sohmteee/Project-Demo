@@ -71,12 +71,14 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
                         serialNumber: 1234568,
                       ),
                       Stack(
+                        clipBehavior: Clip.none,
                         children: [
                           SizedBox(
                             height: 35.h,
                             width: 35.w,
                           ),
                           Positioned(
+                            left: -(17.5 + 18).w,
                             child: Container(
                               height: 35.h,
                               width: 35.w,
