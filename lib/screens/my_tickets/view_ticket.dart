@@ -43,7 +43,9 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
                     borderRadius: BorderRadius.circular(20.sp),
                   ),
                   child: Column(
-                    children: [],
+                    children: [
+                      Image.asset('assets/images/view-ticket/event-pic.png'),
+                    ],
                   ),
                 ),
               ),
