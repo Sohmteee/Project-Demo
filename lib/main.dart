@@ -25,15 +25,14 @@ import 'package:yeerlo/screens/splash.dart';
 import 'package:yeerlo/screens/view_map.dart';
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  /* WidgetsFlutterBinding.ensureInitialized();
   // await Firebase.initializeApp();
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
       statusBarBrightness: Brightness.dark,
     ),
-  );
-  WidgetsFlutterBinding.ensureInitialized();
+  ); */
 
   runApp(
     MultiProvider(
