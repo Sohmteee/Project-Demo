@@ -42,6 +42,9 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(20.sp),
                   ),
+                  child: Column(
+                    children: [],
+                  ),
                 ),
               ),
             ],
