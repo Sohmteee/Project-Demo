@@ -168,107 +168,115 @@ class TicketDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    final Color greyColor = Colors.grey[400]!;
+    final Color secondaryColor = Theme.of(context).colorScheme.secondary;
+
+    return ListView(
       children: [
-        Expanded(
+        Flexible(
+          fit: FlexFit.tight,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              DMSansText(
-                'Name',
-                color: Colors.grey[400],
-                fontSize: 12.sp,
-                fontWeight: FontWeight.w400,
+              Padding(
+                padding: EdgeInsets.only(bottom: 24.h),
+                child: DMSansText(
+                  'Name',
+                  color: greyColor,
+                  fontSize: 12.sp,
+                  fontWeight: FontWeight.w400,
+                ),
               ),
               DMSansText(
                 name,
-                color: Theme.of(context).colorScheme.secondary,
+                color: secondaryColor,
                 fontSize: 15.sp,
                 fontWeight: FontWeight.w600,
               ),
-              SizedBox(
-                height: 24.h,
-              ),
-              DMSansText(
-                'Date',
-                color: Colors.grey[400],
-                fontSize: 12.sp,
-                fontWeight: FontWeight.w400,
+              Padding(
+                padding: EdgeInsets.only(bottom: 24.h),
+                child: DMSansText(
+                  'Date',
+                  color: greyColor,
+                  fontSize: 12.sp,
+                  fontWeight: FontWeight.w400,
+                ),
               ),
               DMSansText(
                 date,
-                color: Theme.of(context).colorScheme.secondary,
+                color: secondaryColor,
                 fontSize: 15.sp,
                 fontWeight: FontWeight.w600,
               ),
-              SizedBox(
-                height: 24.h,
-              ),
-              DMSansText(
-                'Gate',
-                color: Colors.grey[400],
-                fontSize: 12.sp,
-                fontWeight: FontWeight.w400,
+              Padding(
+                padding: EdgeInsets.only(bottom: 24.h),
+                child: DMSansText(
+                  'Gate',
+                  color: greyColor,
+                  fontSize: 12.sp,
+                  fontWeight: FontWeight.w400,
+                ),
               ),
               DMSansText(
                 gate,
-                color: Theme.of(context).colorScheme.secondary,
+                color: secondaryColor,
                 fontSize: 15.sp,
                 fontWeight: FontWeight.w600,
               ),
-              SizedBox(
-                height: 24.h,
-              ),
+              
             ],
           ),
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            DMSansText(
-              'Order Number',
-              color: Colors.grey[400],
-              fontSize: 12.sp,
-              fontWeight: FontWeight.w400,
+            Padding(
+              padding: EdgeInsets.only(bottom: 24.h),
+              child: DMSansText(
+                'Order Number',
+                color: greyColor,
+                fontSize: 12.sp,
+                fontWeight: FontWeight.w400,
+              ),
             ),
             DMSansText(
               orderNumber,
-              color: Theme.of(context).colorScheme.secondary,
+              color: secondaryColor,
               fontSize: 15.sp,
               fontWeight: FontWeight.w600,
             ),
-            SizedBox(
-              height: 24.h,
-            ),
-            DMSansText(
-              'Time',
-              color: Colors.grey[400],
-              fontSize: 12.sp,
-              fontWeight: FontWeight.w400,
+            Padding(
+              padding: EdgeInsets.only(bottom: 24.h),
+              child: DMSansText(
+                'Time',
+                color: greyColor,
+                fontSize: 12.sp,
+                fontWeight: FontWeight.w400,
+              ),
             ),
             DMSansText(
               time,
-              color: Theme.of(context).colorScheme.secondary,
+              color: secondaryColor,
               fontSize: 15.sp,
               fontWeight: FontWeight.w600,
             ),
-            SizedBox(
-              height: 24.h,
-            ),
-            DMSansText(
-              'Serial Number',
-              color: Colors.grey[400],
-              fontSize: 12.sp,
-              fontWeight: FontWeight.w400,
+            Padding(
+              padding: EdgeInsets.only(bottom: 24.h),
+              child: DMSansText(
+                'Serial Number',
+                color: greyColor,
+                fontSize: 12.sp,
+                fontWeight: FontWeight.w400,
+              ),
             ),
             DMSansText(
               serialNumber.toString(),
-              color: Theme.of(context).colorScheme.secondary,
+              color: secondaryColor,
               fontSize: 15.sp,
               fontWeight: FontWeight.w600,
             ),
-            SizedBox(
-              height: 24.h,
+            Padding(
+              padding: EdgeInsets.only(bottom: 24.h),
             ),
           ],
         ),
