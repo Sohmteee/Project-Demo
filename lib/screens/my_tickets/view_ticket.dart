@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/models/text.dart';
+import 'package:yeerlo/screens/get_ticket.dart';
 
 class ViewTicketScreen extends StatefulWidget {
   const ViewTicketScreen({super.key});
@@ -68,7 +69,10 @@ class _ViewTicketScreenState extends State<ViewTicketScreen> {
                         time: '9:00 PM',
                         gate: 'Yellow',
                         serialNumber: 1234568,
-                      )
+                      ),
+                      DashDivider(
+                        color: Colors.grey[400]!,
+                      ),
                     ],
                   ),
                 ),
