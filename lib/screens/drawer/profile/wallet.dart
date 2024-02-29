@@ -128,17 +128,18 @@ class _WalletScreenState extends State<WalletScreen> {
                                         SizedBox(height: 11.h),
                                         Container(
                                           decoration: BoxDecoration(
-                                            color: HexColor('#B2B2B2')
-                                                .withOpacity(.5),
+                                            color: HexColor('#B2B2B2'),
                                             borderRadius:
                                                 BorderRadius.circular(20.r),
                                           ),
                                         ),
                                         SizedBox(height: 18.h),
-                                        DMSansText('Fund Wallet',
-                                            color: Colors.black,
-                                            fontSize: 18.sp,
-                                            fontWeight: FontWeight.w700),
+                                        DMSansText(
+                                          'Fund Wallet',
+                                          color: Colors.black,
+                                          fontSize: 18.sp,
+                                          fontWeight: FontWeight.w700,
+                                        ),
                                       ],
                                     ),
                                   );
