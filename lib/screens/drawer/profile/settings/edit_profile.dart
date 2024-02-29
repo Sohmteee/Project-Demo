@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class EditProfileScreen extends StatelessWidget {
   const EditProfileScreen({super.key});
@@ -11,8 +12,14 @@ class EditProfileScreen extends StatelessWidget {
         elevation: 0,
         leading: BackButton(color: Theme.of(context).colorScheme.secondary),
       ),
-      body: const Column(
-        children: [],
+      body: Column(
+        children: [
+          Image.asset(
+            'assets/images/drawer/profile/profile.png',
+            width: 96.w,
+            height: 96.h,
+          ),
+        ],
       ),
     );
   }
