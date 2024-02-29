@@ -106,6 +106,11 @@ class EditProfileScreen extends StatelessWidget {
                 hintText: 'Full name',
                 icon: const Icon(IconlyLight.profile),
               ),
+              SizedBox(height: 22.h),
+              AppTextField(
+                hintText: 'abc@gmail.com',
+                icon: const Icon(IconlyLight.message),
+              ),
             ],
           ),
         ),
