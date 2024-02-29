@@ -14,7 +14,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       appBar: AppBar(
         elevation: 0,
         leading: BackButton(color: Theme.of(context).colorScheme.secondary),
-        title: Text('Settings', style: Theme.of(context).textTheme.titleLarge),
+        title: Text('Settings', style: TS),
       ),
       body: Container(),
     );
