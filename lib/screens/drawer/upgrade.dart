@@ -49,6 +49,9 @@ class UpgradeScreen extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 20.h),
+                Image.asset(
+                  'assets/images/drawer/upgrade/upgrade.png',
+                ),
               ],
             ),
           ),
