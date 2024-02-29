@@ -884,12 +884,13 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             const Spacer(flex: 7),
             ZoomTapAnimation(
-              onTap: () {Navigator.push(
-                context,
-                PageTransition(
-                    child: const UpgradeScreen(),
-                    type: PageTransitionType.bottomToTop),
-              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  PageTransition(
+                      child: const UpgradeScreen(),
+                      type: PageTransitionType.bottomToTop),
+                );
               },
               child: Container(
                 padding: EdgeInsets.symmetric(
