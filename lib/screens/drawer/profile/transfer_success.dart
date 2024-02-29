@@ -84,6 +84,12 @@ class TransferSuccessScreen extends StatelessWidget {
               fontSize: 35.28.sp,
               fontWeight: FontWeight.w700,
             ),
+            SizedBox(height: 47.28.h),
+            Row(
+              children: [
+                DMSansText('Receipient'),
+              ],
+            ),
           ],
         ),
       ),
