@@ -80,6 +80,26 @@ class UpgradeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
+                SizedBox(height: 11.h),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    DMSansText(
+                      '2. ',
+                      color: Colors.white,
+                      fontSize: 17.sp,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    Expanded(
+                      child: DMSansText(
+                        'Dedicatd Customer Support',
+                        color: Colors.white,
+                        fontSize: 17.sp,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
