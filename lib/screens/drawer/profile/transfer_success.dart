@@ -23,7 +23,10 @@ class TransferSuccessScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: Container(),
+      body: Container(
+        width: double.infinity,
+        padding: EdgeInsets.symmetric(horizontal: 16.66.w),
+      ),
     );
   }
 }
