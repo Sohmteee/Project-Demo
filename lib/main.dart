@@ -10,6 +10,7 @@ import 'package:yeerlo/screens/checkout.dart';
 import 'package:yeerlo/screens/drawer/events.dart';
 import 'package:yeerlo/screens/drawer/friends.dart';
 import 'package:yeerlo/screens/drawer/profile/profile.dart';
+import 'package:yeerlo/screens/drawer/profile/settings.dart';
 import 'package:yeerlo/screens/drawer/profile/transfer_success.dart';
 import 'package:yeerlo/screens/drawer/profile/wallet.dart';
 import 'package:yeerlo/screens/event_details.dart';
@@ -112,6 +113,7 @@ class MyApp extends StatelessWidget {
             '/find-friends':(context) => const FindFriendsScreen(),
             '/wallet':(context) => const WalletScreen(),
             '/transfer-success':(context) => const TransferSuccessScreen(),
+            '/settings': (context) => const SettingsScreen(),
           },
         );
       },
