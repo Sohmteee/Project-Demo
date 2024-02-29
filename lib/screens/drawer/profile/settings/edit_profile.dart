@@ -211,7 +211,7 @@ class EditProfileScreen extends StatelessWidget {
                   SizedBox(width: 6.w),
                   Container(
                     padding:
-                        EdgeInsets.symmetric(horizontal: 9.75, vertical: 6.sp),
+                        EdgeInsets.symmetric(horizontal: 9.75.w, vertical: 6.h),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.r),
                       gradient: LinearGradient(
@@ -225,6 +225,24 @@ class EditProfileScreen extends StatelessWidget {
                     ),
                     child: SvgPicture.asset(
                       'assets/svg/drawer/profile/settings/f.svg',
+                    ),
+                  ),
+                  SizedBox(width: 6.w),
+                  Container(
+                    padding: EdgeInsets.all(6.sp),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.r),
+                      gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          HexColor('#0163E0'),
+                          HexColor('#18ACFE'),
+                        ],
+                      ),
+                    ),
+                    child: SvgPicture.asset(
+                      'assets/svg/drawer/profile/settings/twitter.svg',
                     ),
                   ),
                   /* ShaderMask(
