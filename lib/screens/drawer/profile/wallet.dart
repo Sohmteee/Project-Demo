@@ -108,13 +108,17 @@ class _WalletScreenState extends State<WalletScreen> {
                           onTap: () {
                             showModalBottomSheet(
                                 context: context,
-                                
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.vertical(
+                                    top: Radius.circular(30.r),
+                                  ),
+                                ),
                                 builder: (context) {
                                   return Container(
                                     decoration: BoxDecoration(
                                       color: Colors.white,
                                       borderRadius: BorderRadius.vertical(
-                                        top: Radius.circular(20.r),
+                                        top: Radius.circular(30.r),
                                       ),
                                     ),
                                     child: Column(
