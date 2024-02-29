@@ -256,6 +256,8 @@ class EditProfileScreen extends StatelessWidget {
                       ),
                       SvgPicture.asset(
                         'assets/svg/drawer/profile/settings/instagram.svg',
+                        height: 16.25.h,
+                        width: 16.25.w,
                       )
                     ],
                   ),
