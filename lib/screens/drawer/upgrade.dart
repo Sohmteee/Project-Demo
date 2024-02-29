@@ -6,8 +6,13 @@ class UpgradeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [],
+      body: Container(
+        decoration: BoxDecoration(
+          
+        ),
+        child: Column(
+          children: [],
+        ),
       ),
     );
   }

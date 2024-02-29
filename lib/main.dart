@@ -14,6 +14,7 @@ import 'package:yeerlo/screens/drawer/profile/settings/edit_profile.dart';
 import 'package:yeerlo/screens/drawer/profile/settings/settings.dart';
 import 'package:yeerlo/screens/drawer/profile/transfer_success.dart';
 import 'package:yeerlo/screens/drawer/profile/wallet.dart';
+import 'package:yeerlo/screens/drawer/upgrade.dart';
 import 'package:yeerlo/screens/event_details.dart';
 import 'package:yeerlo/screens/get_ticket.dart';
 import 'package:yeerlo/screens/home/bookmarks.dart';
@@ -116,6 +117,7 @@ class MyApp extends StatelessWidget {
             '/transfer-success':(context) => const TransferSuccessScreen(),
             '/settings': (context) => const SettingsScreen(),
             '/edit-profile': (context) => const EditProfileScreen(),
+            '/upgrade':(context) => const UpgradeScreen(),
           },
         );
       },

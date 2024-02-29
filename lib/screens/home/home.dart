@@ -881,31 +881,36 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             const Spacer(flex: 7),
-            Container(
-              padding: EdgeInsets.symmetric(
-                horizontal: 15.w,
-                vertical: 10.h,
-              ),
-              decoration: BoxDecoration(
-                color: themeProvider.themeType == ThemeType.light
-                    ? cyanBackgroundColor
-                    : const Color(0x3300F8FF),
-                borderRadius: BorderRadius.circular(10.r),
-              ),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  SvgPicture.asset('assets/svg/drawer/crown.svg'),
-                  SizedBox(width: 10.w),
-                  Text(
-                    'Upgrade Pro',
-                    style: TextStyle(
-                      color: cyanTextColor,
-                      fontSize: 18.sp,
-                      fontWeight: FontWeight.bold,
+            ZoomTapAnimation(
+              onTap: () {
+                Navigator.pushNamed(context, '/upgrade');
+              },
+              child: Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 15.w,
+                  vertical: 10.h,
+                ),
+                decoration: BoxDecoration(
+                  color: themeProvider.themeType == ThemeType.light
+                      ? cyanBackgroundColor
+                      : const Color(0x3300F8FF),
+                  borderRadius: BorderRadius.circular(10.r),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    SvgPicture.asset('assets/svg/drawer/crown.svg'),
+                    SizedBox(width: 10.w),
+                    Text(
+                      'Upgrade Pro',
+                      style: TextStyle(
+                        color: cyanTextColor,
+                        fontSize: 18.sp,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
             const Spacer(),
