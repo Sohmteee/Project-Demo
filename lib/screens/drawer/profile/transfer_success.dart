@@ -78,7 +78,12 @@ class TransferSuccessScreen extends StatelessWidget {
               fontWeight: FontWeight.w400,
               textAlign: TextAlign.center,
             ),
-            AirBnBText('$132')
+            AirBnBText(
+              '\$132.00',
+              color: Colors.black,
+              fontSize: 35.28.sp,
+              fontWeight: FontWeight.w700,
+            ),
           ],
         ),
       ),
