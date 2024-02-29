@@ -122,6 +122,8 @@ class _WalletScreenState extends State<WalletScreen> {
                                       ),
                                     ),
                                     child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
                                       children: [
                                         Container(
                                           decoration: BoxDecoration(
