@@ -118,7 +118,8 @@ class TransferSuccessScreen extends StatelessWidget {
             ArrowButton(
               text: 'DONE',
               onPressed: () {
-                Navigator.push
+                Navigator.popUntil(
+                    context, '/wallet');
               },
             ),
           ],
