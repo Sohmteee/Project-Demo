@@ -121,10 +121,16 @@ class EditProfileScreen extends StatelessWidget {
     );
   }
 
-  buildColoredTextField(BuildContext context,
-      {required ThemeProvider themeProvider,
-      required String hintText,
-      IconData? icon}) {
+  buildColoredTextField(
+    BuildContext context, {
+    required ThemeProvider themeProvider,
+     required String hintText,
+   IconData? icon,
+    controller,
+    keyboardType = TextInputType.text,
+    textInputAction = TextInputAction.next,
+    textCapitalization = TextCapitalization.none,
+  }) {
     Container(
       padding: EdgeInsets.symmetric(horizontal: 15.w),
       decoration: BoxDecoration(
