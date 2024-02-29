@@ -39,7 +39,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           Divider(
             color: HexColor('#D8D8D8'),
           ),
-          settingsListTile(context, title: 'Edit Profile'),
+          settingsListTile(context, title: 'Edit Profile', onTap: () => Navigator.pushNamed(context, '/'),),
           Divider(
             color: HexColor('#D8D8D8'),
           ),
