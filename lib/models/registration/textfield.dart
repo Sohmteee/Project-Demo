@@ -25,6 +25,7 @@ class AppTextField extends StatefulWidget {
     this.textInputAction = TextInputAction.next,
     this.textCapitalization = TextCapitalization.none,
     this.maxLines,
+    this.inputType,
   });
 
   /// The hint text to display in the text field.
@@ -62,8 +63,6 @@ class AppTextField extends StatefulWidget {
 
   /// The maximum number of lines to use for the text field.
   int? maxLines = 1;
-
-  TextInputType get inputType => isPassword ? TextInputType.text : keyboardType;
 
   @override
   State<AppTextField> createState() => _AppTextFieldState();
