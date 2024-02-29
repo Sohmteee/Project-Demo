@@ -143,10 +143,11 @@ class EditProfileScreen extends StatelessWidget {
               AppTextField(
                 hintText: 'Bio',
                 color: HexColor('#979797'),
-                maxLines: 5,
+                maxLines: 3,
                 textInputAction: TextInputAction.newline,
                 keyboardType: TextInputType.multiline,
               ),
+              SizedBox(height: 52.h),
             ],
           ),
         ),
