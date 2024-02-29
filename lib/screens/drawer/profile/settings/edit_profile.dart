@@ -148,7 +148,7 @@ class EditProfileScreen extends StatelessWidget {
                 textInputAction: TextInputAction.newline,
                 keyboardType: TextInputType.multiline,
               ),
-              SizedBox(height: 52.h),
+              SizedBox(height: 42.h),
               DMSansText(
                 'Social Profile',
                 color: Colors.black,
@@ -345,7 +345,7 @@ class EditProfileScreen extends StatelessWidget {
         children: [
           Container(
             padding: EdgeInsets.symmetric(
-              vertical: 20.h,
+              vertical: 22.h,
               horizontal: 20.w,
             ),
             decoration: BoxDecoration(
@@ -356,7 +356,7 @@ class EditProfileScreen extends StatelessWidget {
               hintText,
               color: HexColor('#747688'),
               fontWeight: FontWeight.w400,
-              fontSize: 16.sp,
+              fontSize: 14.sp,
             ),
           ),
           Expanded(
