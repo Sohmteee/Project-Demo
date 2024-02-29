@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 
 class TransferSuccessScreen extends StatelessWidget {
@@ -26,6 +27,12 @@ class TransferSuccessScreen extends StatelessWidget {
       body: Container(
         width: double.infinity,
         padding: EdgeInsets.symmetric(horizontal: 16.66.w),
+        child: Column(
+          children: [
+            SvgPicture.asset(
+                'assets/svg/drawer/profile/wallet/transfer-successful.svg'),
+          ],
+        ),
       ),
     );
   }
