@@ -138,7 +138,7 @@ class EditProfileScreen extends StatelessWidget {
     TextInputAction textInputAction = TextInputAction.next,
     TextCapitalization textCapitalization = TextCapitalization.none,
   }) {
-    Container(
+    return Container(
       padding: EdgeInsets.symmetric(horizontal: 15.w),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12.r),
