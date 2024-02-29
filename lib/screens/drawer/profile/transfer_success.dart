@@ -29,8 +29,14 @@ class TransferSuccessScreen extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 16.66.w),
         child: Column(
           children: [
-            SvgPicture.asset(
-                'assets/svg/drawer/profile/wallet/transfer-successful.svg'),
+            Stack(
+              children: [
+                SvgPicture.asset(
+                    'assets/svg/drawer/profile/wallet/gradient-circle.svg'),
+                SvgPicture.asset(
+                    'assets/svg/drawer/profile/wallet/done.svg'),
+              ],
+            ),
           ],
         ),
       ),
