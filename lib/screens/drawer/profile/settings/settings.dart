@@ -34,10 +34,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
           Center(
             child: ZoomTapAnimation(
               onTap: () => Navigator.push(
-                  context,
-                  PageTransition(
-                      child: const UpgradeScreen(),
-                      type: PageTransitionType.topToBottom)),
+                context,
+                PageTransition(
+                    child: const UpgradeScreen(),
+                    type: PageTransitionType.bottomToTop),
+              ),
               child: SvgPicture.asset(
                 'assets/svg/drawer/profile/settings/upgrade-to-pro.svg',
                 width: 343.w,
