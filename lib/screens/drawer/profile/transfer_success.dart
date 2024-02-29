@@ -99,7 +99,7 @@ class TransferSuccessScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     DMSansText(
-                      'Receipient',
+                      'Recipient',
                       color: Colors.grey[400],
                       fontSize: 12.6.sp,
                       fontWeight: FontWeight.w600,
@@ -117,7 +117,9 @@ class TransferSuccessScreen extends StatelessWidget {
             const Spacer(flex: 2),
             ArrowButton(
               text: 'DONE',
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push
+              },
             ),
           ],
         ),
