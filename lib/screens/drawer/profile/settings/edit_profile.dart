@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:yeerlo/colors/app_colors.dart';
+import 'package:yeerlo/models/registration/textfield.dart';
 import 'package:yeerlo/models/text.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
@@ -98,6 +99,7 @@ class EditProfileScreen extends StatelessWidget {
               ],
             ),
             SizedBox(height: 22.h),
+            AppTextField(hintText: 'Full Name'),
           ],
         ),
       ),
