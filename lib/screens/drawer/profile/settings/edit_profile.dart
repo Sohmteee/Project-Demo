@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
@@ -190,7 +191,6 @@ class EditProfileScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(width: 16.w),
-
                   ShaderMask(
                     blendMode: BlendMode.srcIn,
                     shaderCallback: (Rect bounds) => LinearGradient(
@@ -208,7 +208,9 @@ class EditProfileScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(16.r),
                         color: Colors.white,
                       ),
-                      child: SvgPicture.asset('assetName')
+                      child: SvgPicture.asset(
+                        'assets/svg/drawer/profile/settings/whatsapp.svg',
+                      ),
                     ),
                   ),
                 ],
