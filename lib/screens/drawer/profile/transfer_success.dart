@@ -70,6 +70,15 @@ class TransferSuccessScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
+            SizedBox(height: 35.h),
+            DMSansText(
+              'Total Transfer',
+              color: Colors.grey[400],
+              fontSize: 12.6.sp,
+              fontWeight: FontWeight.w400,
+              textAlign: TextAlign.center,
+            ),
+            AirBnBText('$132')
           ],
         ),
       ),
