@@ -78,6 +78,7 @@ flutter:
     - assets/images/view-map/
     - assets/images/get-ticket/
     - assets/images/view-ticket/
+    - assets/images/drawer/profile/
     - assets/svg/
     - assets/svg/drawer/
     - assets/svg/onboarding/
@@ -86,6 +87,9 @@ flutter:
     - assets/svg/view-map/
     - assets/svg/get-ticket/
     - assets/svg/nav-bar/
+    - assets/svg/bookmarks/
+    - assets/svg/drawer/profile/
+    - assets/svg/drawer/profile/wallet/
 
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see

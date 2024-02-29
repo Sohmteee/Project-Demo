@@ -25,7 +25,6 @@ class _MyTicketsScreenState extends State<MyTicketsScreen> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        leading: BackButton(color: Theme.of(context).colorScheme.secondary),
         titleSpacing: 0.w,
         backgroundColor: Colors.transparent,
         title: AirBnBText(
@@ -52,13 +51,16 @@ class _MyTicketsScreenState extends State<MyTicketsScreen> {
           ),
         ],
       ),
-      body: Expanded(
-        child: ListView.builder(
-          itemCount: 10,
-          physics: const BouncingScrollPhysics(),
-          padding: EdgeInsets.symmetric(horizontal: 24.w),
-          itemBuilder: (context, index) {
-            return Container(
+      body: ListView.builder(
+        itemCount: 10,
+        physics: const BouncingScrollPhysics(),
+        padding: EdgeInsets.symmetric(horizontal: 24.w),
+        itemBuilder: (context, index) {
+          return ZoomTapAnimation(
+            onTap: () {
+              Navigator.pushNamed(context, '/view-ticket');
+            },
+            child: Container(
               height: 112.h,
               padding: EdgeInsets.fromLTRB(10.sp, 10.sp, 15.sp, 10.sp),
               margin: EdgeInsets.symmetric(vertical: 7.h),
@@ -120,52 +122,47 @@ class _MyTicketsScreenState extends State<MyTicketsScreen> {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      ZoomTapAnimation(
-                        onTap: () {
-                          Navigator.pushNamed(context, '/view-ticket');
-                        },
-                        child: Container(
-                          padding: EdgeInsets.symmetric(
-                            horizontal: 7.w,
-                            vertical: 6.h,
-                          ),
-                          decoration: ShapeDecoration(
-                            gradient: LinearGradient(
-                              begin: const Alignment(0, -1),
-                              end: const Alignment(0, 1),
-                              colors: [
-                                lightOrangeColor.withOpacity(.12),
-                                darkOrangeColor.withOpacity(.12),
-                              ],
-                            ),
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(7.r)),
-                            shadows: const [
-                              BoxShadow(
-                                color: Color(0x144AD2E4),
-                                blurRadius: 20,
-                                offset: Offset(0, 8),
-                                spreadRadius: 0,
-                              )
+                      Container(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 7.w,
+                          vertical: 6.h,
+                        ),
+                        decoration: ShapeDecoration(
+                          gradient: LinearGradient(
+                            begin: const Alignment(0, -1),
+                            end: const Alignment(0, 1),
+                            colors: [
+                              lightOrangeColor.withOpacity(.12),
+                              darkOrangeColor.withOpacity(.12),
                             ],
                           ),
-                          child: ShaderMask(
-                            blendMode: BlendMode.srcIn,
-                            shaderCallback: (Rect bounds) => LinearGradient(
-                              begin: Alignment.topCenter,
-                              end: Alignment.bottomCenter,
-                              colors: [
-                                lightOrangeColor,
-                                darkOrangeColor,
-                              ],
-                              tileMode: TileMode.mirror,
-                            ).createShader(bounds),
-                            child: DMSansText(
-                              'View',
-                              textAlign: TextAlign.center,
-                              fontSize: 12.sp,
-                              fontWeight: FontWeight.w700,
-                            ),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(7.r)),
+                          shadows: const [
+                            BoxShadow(
+                              color: Color(0x144AD2E4),
+                              blurRadius: 20,
+                              offset: Offset(0, 8),
+                              spreadRadius: 0,
+                            )
+                          ],
+                        ),
+                        child: ShaderMask(
+                          blendMode: BlendMode.srcIn,
+                          shaderCallback: (Rect bounds) => LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [
+                              lightOrangeColor,
+                              darkOrangeColor,
+                            ],
+                            tileMode: TileMode.mirror,
+                          ).createShader(bounds),
+                          child: DMSansText(
+                            'View',
+                            textAlign: TextAlign.center,
+                            fontSize: 12.sp,
+                            fontWeight: FontWeight.w700,
                           ),
                         ),
                       ),
@@ -173,9 +170,9 @@ class _MyTicketsScreenState extends State<MyTicketsScreen> {
                   ),
                 ],
               ),
-            );
-          },
-        ),
+            ),
+          );
+        },
       ),
     );
   }

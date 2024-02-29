@@ -75,7 +75,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        leading: BackButton(color: Theme.of(context).colorScheme.secondary),
+        centerTitle: true,
         titleSpacing: 0.w,
         backgroundColor: Colors.transparent,
         title: AirBnBText(

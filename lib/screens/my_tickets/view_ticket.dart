@@ -193,21 +193,18 @@ class TicketDetails extends StatelessWidget {
     final Color greyColor = Colors.grey[400]!;
     final Color secondaryColor = Theme.of(context).colorScheme.secondary;
 
-    return ListView(
+    return Row(
       children: [
         Flexible(
           fit: FlexFit.tight,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: EdgeInsets.only(bottom: 24.h),
-                child: DMSansText(
-                  'Name',
-                  color: greyColor,
-                  fontSize: 12.sp,
-                  fontWeight: FontWeight.w400,
-                ),
+              DMSansText(
+                'Name',
+                color: greyColor,
+                fontSize: 12.sp,
+                fontWeight: FontWeight.w400,
               ),
               DMSansText(
                 name,
@@ -215,14 +212,12 @@ class TicketDetails extends StatelessWidget {
                 fontSize: 15.sp,
                 fontWeight: FontWeight.w600,
               ),
-              Padding(
-                padding: EdgeInsets.only(bottom: 24.h),
-                child: DMSansText(
-                  'Date',
-                  color: greyColor,
-                  fontSize: 12.sp,
-                  fontWeight: FontWeight.w400,
-                ),
+              SizedBox(height: 24.h),
+              DMSansText(
+                'Date',
+                color: greyColor,
+                fontSize: 12.sp,
+                fontWeight: FontWeight.w400,
               ),
               DMSansText(
                 date,
@@ -230,14 +225,12 @@ class TicketDetails extends StatelessWidget {
                 fontSize: 15.sp,
                 fontWeight: FontWeight.w600,
               ),
-              Padding(
-                padding: EdgeInsets.only(bottom: 24.h),
-                child: DMSansText(
-                  'Gate',
-                  color: greyColor,
-                  fontSize: 12.sp,
-                  fontWeight: FontWeight.w400,
-                ),
+              SizedBox(height: 24.h),
+              DMSansText(
+                'Gate',
+                color: greyColor,
+                fontSize: 12.sp,
+                fontWeight: FontWeight.w400,
               ),
               DMSansText(
                 gate,
@@ -245,20 +238,18 @@ class TicketDetails extends StatelessWidget {
                 fontSize: 15.sp,
                 fontWeight: FontWeight.w600,
               ),
+              SizedBox(height: 24.h),
             ],
           ),
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: EdgeInsets.only(bottom: 24.h),
-              child: DMSansText(
-                'Order Number',
-                color: greyColor,
-                fontSize: 12.sp,
-                fontWeight: FontWeight.w400,
-              ),
+            DMSansText(
+              'Order Number',
+              color: greyColor,
+              fontSize: 12.sp,
+              fontWeight: FontWeight.w400,
             ),
             DMSansText(
               orderNumber,
@@ -266,14 +257,12 @@ class TicketDetails extends StatelessWidget {
               fontSize: 15.sp,
               fontWeight: FontWeight.w600,
             ),
-            Padding(
-              padding: EdgeInsets.only(bottom: 24.h),
-              child: DMSansText(
-                'Time',
-                color: greyColor,
-                fontSize: 12.sp,
-                fontWeight: FontWeight.w400,
-              ),
+            SizedBox(height: 24.h),
+            DMSansText(
+              'Time',
+              color: greyColor,
+              fontSize: 12.sp,
+              fontWeight: FontWeight.w400,
             ),
             DMSansText(
               time,
@@ -281,14 +270,12 @@ class TicketDetails extends StatelessWidget {
               fontSize: 15.sp,
               fontWeight: FontWeight.w600,
             ),
-            Padding(
-              padding: EdgeInsets.only(bottom: 24.h),
-              child: DMSansText(
-                'Serial Number',
-                color: greyColor,
-                fontSize: 12.sp,
-                fontWeight: FontWeight.w400,
-              ),
+            SizedBox(height: 24.h),
+            DMSansText(
+              'Serial Number',
+              color: greyColor,
+              fontSize: 12.sp,
+              fontWeight: FontWeight.w400,
             ),
             DMSansText(
               serialNumber.toString(),
@@ -296,6 +283,7 @@ class TicketDetails extends StatelessWidget {
               fontSize: 15.sp,
               fontWeight: FontWeight.w600,
             ),
+            SizedBox(height: 24.h),
           ],
         ),
       ],

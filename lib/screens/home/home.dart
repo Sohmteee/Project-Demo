@@ -26,6 +26,7 @@ import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/notifications.dart';
 import 'package:yeerlo/providers/theme.dart';
 import 'package:yeerlo/screens/calendar/calendar.dart';
+import 'package:yeerlo/screens/home/bookmarks.dart';
 import 'package:yeerlo/screens/my_tickets/my_tickets.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
@@ -58,9 +59,11 @@ class _HomeScreenState extends State<HomeScreen> {
     }); */
     panelController.collapse();
     Timer.periodic(1.seconds, (timer) {
-      setState(() {
-        timeRemaining = eventDate.difference(DateTime.now());
-      });
+      if (mounted) {
+        setState(() {
+          timeRemaining = eventDate.difference(DateTime.now());
+        });
+      }
     });
     drawerController.addListener(() {
       if (mounted) {
@@ -745,7 +748,9 @@ class _HomeScreenState extends State<HomeScreen> {
           height: 23.h,
         ),
         'title': 'My Profile',
-        'onTap': () {},
+        'onTap': () {
+          Navigator.pushNamed(context, '/profile');
+        },
       },
       {
         'icon': SvgPicture.asset(
@@ -793,7 +798,9 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
         'title': 'Find Friends',
-        'onTap': () {},
+        'onTap': () {
+          Navigator.pushNamed(context, '/find-friends');
+        },
       },
       {
         'icon': ThemeSwitch(
@@ -1092,11 +1099,10 @@ class _HomeScreenState extends State<HomeScreen> {
             color: gray400,
           ),
           selectedIcon: SvgPicture.asset(
-            'assets/svg/nav-bar/bookmark.svg',
-            color: gray400,
+            'assets/svg/nav-bar/bookmark-selected.svg',
           ),
           label: 'Bookmarks',
-          screen: Container(),
+          screen: const BookmarksScreen(),
           bottomItemSelectedColor: darkOrangeColor,
         ),
         BottomBarItem(
@@ -1993,9 +1999,9 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         Column(
           children: [
-            SizedBox(
+            const SizedBox(
               width: 200,
-              child: DropdownButton(
+              /*  child: DropdownButton(
                 isExpanded: true,
                 isDense: true,
                 dropdownColor: Theme.of(context).colorScheme.primary,
@@ -2059,6 +2065,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                 underline: Container(),
               ),
+            */
             ),
             Row(
               children: [

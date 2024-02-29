@@ -8,8 +8,12 @@ import 'package:yeerlo/providers/notifications.dart';
 import 'package:yeerlo/providers/theme.dart';
 import 'package:yeerlo/screens/checkout.dart';
 import 'package:yeerlo/screens/drawer/events.dart';
+import 'package:yeerlo/screens/drawer/friends.dart';
+import 'package:yeerlo/screens/drawer/profile/profile.dart';
+import 'package:yeerlo/screens/drawer/profile/wallet.dart';
 import 'package:yeerlo/screens/event_details.dart';
 import 'package:yeerlo/screens/get_ticket.dart';
+import 'package:yeerlo/screens/home/bookmarks.dart';
 import 'package:yeerlo/screens/home/home.dart';
 import 'package:yeerlo/screens/home/nearby_events.dart';
 import 'package:yeerlo/screens/home/notifications.dart';
@@ -102,6 +106,10 @@ class MyApp extends StatelessWidget {
             '/checkout': (context) => const CheckoutScreen(),
             '/my_tickets':(context) => const MyTicketsScreen(),
             '/view-ticket':(context) => const ViewTicketScreen(), 
+            '/bookmarks': (context) => const BookmarksScreen(),
+            '/profile':(context) => const ProfileScreen(),
+            '/find-friends':(context) => const FindFriendsScreen(),
+            '/wallet':(context) => const WalletScreen(),
           },
         );
       },
