@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:yeerlo/models/text.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -35,7 +36,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
           SizedBox(height: 40.h),
           const Divider(),
           ListTile(
-            
+            title: DMSansText(
+              'Account',
+              color: Theme.of(context).colorScheme.secondary,
+              fontSize: 16.sp,
+              fontWeight: FontWeight.w400,
+            ),
+            trailing: Icon(
+              Icons.chevron_right,
+              color: Theme.of(context).colorScheme.secondary,
+            ),
           ),
         ],
       ),
