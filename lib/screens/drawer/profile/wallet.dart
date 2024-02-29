@@ -116,7 +116,6 @@ class _WalletScreenState extends State<WalletScreen> {
                                   ),
                                 ),
                                 showDragHandle: true,
-                                
                                 constraints: BoxConstraints.tight(
                                   Size(
                                     MediaQuery.of(context).size.width,
