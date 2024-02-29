@@ -50,7 +50,7 @@ class EditProfileScreen extends StatelessWidget {
                       'Upload New Image',
                       color: Colors.white,
                       fontWeight: FontWeight.w700,
-                      fontSize: 11.sp,
+                      fontSize: 14.sp,
                     ),
                   ),
                 ),
@@ -62,7 +62,6 @@ class EditProfileScreen extends StatelessWidget {
                   child: Container(
                     padding:
                         EdgeInsets.symmetric(horizontal: 11.w, vertical: 6.w),
-                    margin: EdgeInsets.symmetric(horizontal: 5.w),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8.r),
                       border: GradientBoxBorder(
@@ -91,7 +90,7 @@ class EditProfileScreen extends StatelessWidget {
                         'Select From Gallery',
                         color: Colors.white,
                         fontWeight: FontWeight.w700,
-                        fontSize: 11.sp,
+                        fontSize: 14.sp,
                       ),
                     ),
                   ),
