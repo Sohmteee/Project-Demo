@@ -245,6 +245,11 @@ class EditProfileScreen extends StatelessWidget {
                       'assets/svg/drawer/profile/settings/twitter.svg',
                     ),
                   ),
+                  SizedBox(width: 6.w),
+                  Image.asset(
+                    'assets/images/drawer/profile/settings/instagram-background.png',
+                  ),
+
                   /* ShaderMask(
                     blendMode: BlendMode.srcIn,
                     shaderCallback: (Rect bounds) => LinearGradient(
