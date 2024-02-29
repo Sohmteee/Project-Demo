@@ -200,6 +200,13 @@ class _WalletScreenState extends State<WalletScreen> {
                           fontSize: 14.sp,
                           fontWeight: FontWeight.w600,
                         ),
+                        SizedBox(height: 4.h),
+                        AirBnBText(
+                          'Completed',
+                          color: HexColor('#9E9E9E'),
+                          fontSize: 14.sp,
+                          fontWeight: FontWeight.w400,
+                        ),
                       ],
                     ),
                   );
