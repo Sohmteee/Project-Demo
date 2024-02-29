@@ -33,8 +33,8 @@ class EditProfileScreen extends StatelessWidget {
                     // Navigator.pushNamed(context, '/wallet');
                   },
                   child: Container(
-                    padding: EdgeInsets.fromLTRB(34.w, 12.h, 37.w, 12.h),
-                    margin: EdgeInsets.symmetric(horizontal: 5.w),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 11.w, vertical: 6.w),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8.r),
                       gradient: LinearGradient(
@@ -49,8 +49,8 @@ class EditProfileScreen extends StatelessWidget {
                     child: DMSansText(
                       'Upload New Image',
                       color: Colors.white,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 16.sp,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 11.sp,
                     ),
                   ),
                 ),
@@ -60,7 +60,8 @@ class EditProfileScreen extends StatelessWidget {
                     // Navigator.pushNamed(context, '/settings');
                   },
                   child: Container(
-                    padding: EdgeInsets.fromLTRB(18.w, 12.h, 36.w, 12.h),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 11.w, vertical: 6.w),
                     margin: EdgeInsets.symmetric(horizontal: 5.w),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8.r),
@@ -89,8 +90,8 @@ class EditProfileScreen extends StatelessWidget {
                       child: DMSansText(
                         'Select From Gallery',
                         color: Colors.white,
-                        fontWeight: FontWeight.w400,
-                        fontSize: 16.sp,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 11.sp,
                       ),
                     ),
                   ),
