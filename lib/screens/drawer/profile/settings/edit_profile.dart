@@ -144,6 +144,8 @@ class EditProfileScreen extends StatelessWidget {
                 hintText: 'Bio',
                 color: HexColor('#979797'),
                 maxLines: 5,
+                textInputAction: TextInputAction.newline,
+                
               ),
             ],
           ),

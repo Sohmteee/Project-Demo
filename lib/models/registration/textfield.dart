@@ -63,6 +63,8 @@ class AppTextField extends StatefulWidget {
   /// The maximum number of lines to use for the text field.
   int? maxLines = 1;
 
+  TextInputType get inputType => isPassword ? TextInputType.text : keyboardType;
+
   @override
   State<AppTextField> createState() => _AppTextFieldState();
 }
