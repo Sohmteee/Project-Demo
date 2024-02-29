@@ -38,29 +38,18 @@ class _SettingsScreenState extends State<SettingsScreen> {
           Divider(
             color: HexColor('#D8D8D8'),
           ),
-          settingsListTile(context, title: ''Edit Profile''),
+          settingsListTile(context, title: 'Edit Profile'),
           Divider(
             color: HexColor('#D8D8D8'),
           ),
-          ListTile(
-            title: DMSansText(
-              'Change Password',
-              color: Theme.of(context).colorScheme.secondary,
-              fontSize: 16.sp,
-              fontWeight: FontWeight.w400,
-            ),
-            trailing: Icon(
-              Icons.chevron_right,
-              color: Theme.of(context).colorScheme.secondary,
-              size: 24.sp,
-            ),
-          ),
+          settingsListTile(context, title: 'Change Password'),
         ],
       ),
     );
   }
 
-  ListTile settingsListTile(BuildContext context, {required String title, void Function()? onTap}) {
+  ListTile settingsListTile(BuildContext context,
+      {required String title, void Function()? onTap}) {
     return ListTile(
       onTap: onTap,
       title: DMSansText(
