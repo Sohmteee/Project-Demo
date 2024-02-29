@@ -24,9 +24,11 @@ class UpgradeScreen extends StatelessWidget {
         ),
         child: SafeArea(
           child: Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: 22.8.w,
-              vertical: 26.h,
+            padding: EdgeInsets.fromLTRB(
+              22.8.w,
+              26.h,
+              22.8.w,
+              0,
             ),
             child: ListView(
               physics: const BouncingScrollPhysics(),
