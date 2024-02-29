@@ -16,7 +16,7 @@ class AppTextField extends StatefulWidget {
   AppTextField({
     super.key,
     required this.hintText,
-    required this.icon,
+    this.icon,
     this.controller,
     this.isPassword = false,
     this.keyboardType = TextInputType.text,
@@ -29,7 +29,7 @@ class AppTextField extends StatefulWidget {
   final String hintText;
 
   /// The icon widget to display in the text field.
-  final Widget icon;
+  Widget? icon;
 
   /// The text editing controller for controlling the text being edited.
   /// Can be null to create a new controller internally.
@@ -81,7 +81,7 @@ class _AppTextFieldState extends State<AppTextField> {
       ),
       child: Row(
         children: [
-          widget.icon,
+          if (widget.icon != null) widget.icon!,
           Expanded(
             child: TextField(
               controller: widget.controller,

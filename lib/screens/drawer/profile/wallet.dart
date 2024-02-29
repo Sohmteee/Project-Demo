@@ -126,7 +126,9 @@ class _WalletScreenState extends State<WalletScreen> {
                                         fontWeight: FontWeight.w700,
                                       ),
                                       SizedBox(height: 55.h),
-                                      AppTextField(hintText: 'Select Currency', icon: icon)
+                                      AppTextField(
+                                        hintText: 'Select Currency',
+                                      ),
                                     ],
                                   );
                                 });
