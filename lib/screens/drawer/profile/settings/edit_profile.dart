@@ -306,6 +306,13 @@ class EditProfileScreen extends StatelessWidget {
                 keyboardType: TextInputType.url,
               ),
               SizedBox(height: 22.h),
+              buildColoredTextField(
+                context,
+                themeProvider: themeProvider,
+                hintText: 'Instagram Link',
+                keyboardType: TextInputType.url,
+              ),
+              SizedBox(height: 22.h),
               SizedBox(height: 200.h),
             ],
           ),
