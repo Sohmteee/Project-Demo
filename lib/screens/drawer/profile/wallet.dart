@@ -116,24 +116,28 @@ class _WalletScreenState extends State<WalletScreen> {
                                 ),
                                 showDragHandle: true,
                                 builder: (context) {
-                                  return Column(
-                                    children: [
-                                      // SizedBox(height: 18.h),
-                                      DMSansText(
-                                        'Fund Wallet',
-                                        color: Colors.black,
-                                        fontSize: 18.sp,
-                                        fontWeight: FontWeight.w700,
-                                      ),
-                                      SizedBox(height: 55.h),
-                                      AppTextField(
-                                        hintText: 'Select Currency',
-                                        trailing: Icon(
-                                          Icons.chevron_right,
-                                          color: HexColor('#979797'),
+                                  return Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 29.ws),
+                                    child: Column(
+                                      children: [
+                                        // SizedBox(height: 18.h),
+                                        DMSansText(
+                                          'Fund Wallet',
+                                          color: Colors.black,
+                                          fontSize: 18.sp,
+                                          fontWeight: FontWeight.w700,
                                         ),
-                                      ),
-                                    ],
+                                        SizedBox(height: 55.h),
+                                        AppTextField(
+                                          hintText: 'Select Currency',
+                                          trailing: Icon(
+                                            Icons.chevron_right,
+                                            color: HexColor('#979797'),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   );
                                 });
                           },
