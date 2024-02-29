@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:yeerlo/colors/app_colors.dart';
+import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/models/text.dart';
 
 class WalletScreen extends StatefulWidget {
@@ -180,13 +181,20 @@ class _WalletScreenState extends State<WalletScreen> {
               ],
             ),
             SizedBox(height: 16.h),
-            ListView.builder(
-              itemCount: 10,
-              itemBuilder: (context, index) {
-                return ListTile(
-                  leading: ,
-                );
-              },
+            Expanded(
+              child: ListView.builder(
+                itemCount: 10,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    leading: DMSansText(
+                      '20 - 01 2023, 06:00 PM',
+                      color: HexColor('#9E9E9E'),
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  );
+                },
+              ),
             ),
           ],
         ),
