@@ -81,6 +81,9 @@ class _FindFriendsScreenState extends State<FindFriendsScreen> {
     pageController = PageController();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       pageController.addListener(() {
+        if (pageController.page!.round() != pageIndex) {
+          pageController.animateToPage(, duration: duration, curve: curve)
+        }
         setState(() {
           pageIndex = pageController.page!.round();
         });
