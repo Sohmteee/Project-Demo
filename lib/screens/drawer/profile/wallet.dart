@@ -138,21 +138,30 @@ class _WalletScreenState extends State<WalletScreen> {
                           color: Colors.black,
                         ),
                         const Spacer(),
-                        Row(
-                          children: [
-                            SvgPicture.asset(
-                              'assets/svg/drawer/profile/wallet/money-send.svg',
-                              width: 20.w,
-                              height: 20.h,
-                            ),
-                            SizedBox(width: 10.w),
-                            DMSansText(
-                              'Withdraw',
-                              color: Colors.black,
-                              fontSize: 16.sp,
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ],
+                        GestureDetector(
+                          onTap: () {
+                            showModalSheet(
+                              context,
+                              title: 'Withdraw',
+                              buttonText: 'WITHDRAW',
+                            );
+                          },
+                          child: Row(
+                            children: [
+                              SvgPicture.asset(
+                                'assets/svg/drawer/profile/wallet/money-send.svg',
+                                width: 20.w,
+                                height: 20.h,
+                              ),
+                              SizedBox(width: 10.w),
+                              DMSansText(
+                                'Withdraw',
+                                color: Colors.black,
+                                fontSize: 16.sp,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),
