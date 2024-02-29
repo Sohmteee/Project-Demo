@@ -46,7 +46,23 @@ class _SettingsScreenState extends State<SettingsScreen> {
           Divider(
             color: HexColor('#D8D8D8'),
           ),
-          settingsListTile(context, title: 'Change Password'),
+          settingsListTile(context, title: 'Withdrawal Info'),
+          Divider(
+            color: HexColor('#D8D8D8'),
+          ),
+          settingsListTile(context, title: 'Notification'),
+          Divider(
+            color: HexColor('#D8D8D8'),
+          ),
+          settingsListTile(context, title: 'Terms & Conditions'),
+          Divider(
+            color: HexColor('#D8D8D8'),
+          ),
+          settingsListTile(context, title: ''),
+          Divider(
+            color: HexColor('#D8D8D8'),
+          ),
+          settingsListTile(context, title: ''),
         ],
       ),
     );
