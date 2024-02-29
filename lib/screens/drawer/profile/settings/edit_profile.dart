@@ -175,7 +175,6 @@ class EditProfileScreen extends StatelessWidget {
                     child: Icon(
                       IconlyLight.message,
                       color: HexColor('#807A7A'),
-                      size: 12.sp,
                     ),
                   ),
                 ],
