@@ -20,7 +20,7 @@ class _FindFriendsScreenState extends State<FindFriendsScreen> {
   int pageIndex = 0;
   List isTicked =
       List.generate(/* friends.length */ 10, (index) => index % 2 == 0);
-  final pageController = PageController();
+  late PageController pageController;
 
   List<Map<String, dynamic>> friends = [
     {
@@ -74,6 +74,12 @@ class _FindFriendsScreenState extends State<FindFriendsScreen> {
       'followers': '3k',
     },
   ];
+
+  @override
+  void initState() {
+    super.initState();
+    pageController = PageController();
+  }
 
   @override
   Widget build(BuildContext context) {
