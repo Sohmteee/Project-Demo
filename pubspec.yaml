@@ -80,6 +80,7 @@ flutter:
     - assets/images/view-ticket/
     - assets/images/drawer/profile/
     - assets/images/drawer/profile/settings/
+    - assets/images/drawer/upgrade/
     - assets/svg/
     - assets/svg/drawer/
     - assets/svg/onboarding/
