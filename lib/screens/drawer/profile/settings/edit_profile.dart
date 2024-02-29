@@ -138,7 +138,9 @@ class EditProfileScreen extends StatelessWidget {
                   Icons.chevron_right,
                   color: HexColor('#979797'),
                 ),
-              )
+              ),
+              SizedBox(height: 22.h),
+              
             ],
           ),
         ),

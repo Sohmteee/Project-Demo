@@ -24,7 +24,7 @@ class AppTextField extends StatefulWidget {
     this.keyboardType = TextInputType.text,
     this.textInputAction = TextInputAction.next,
     this.textCapitalization = TextCapitalization.none,
-
+    this.maxLines,
   });
 
   /// The hint text to display in the text field.
@@ -60,7 +60,8 @@ class AppTextField extends StatefulWidget {
   /// This determines how the text input is capitalized, e.g. none, sentences, words, etc.
   final TextCapitalization textCapitalization;
 
-
+  /// The maximum number of lines to use for the text field.
+  int? maxLines = 1;
 
   @override
   State<AppTextField> createState() => _AppTextFieldState();
@@ -101,7 +102,7 @@ class _AppTextFieldState extends State<AppTextField> {
               keyboardType: widget.keyboardType,
               textInputAction: widget.textInputAction,
               textCapitalization: widget.textCapitalization,
-              
+              maxLines: widget.maxLines,
               style: TextStyle(
                 fontSize: 16.sp,
                 fontWeight: FontWeight.w400,
