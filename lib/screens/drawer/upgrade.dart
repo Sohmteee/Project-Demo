@@ -142,13 +142,8 @@ class UpgradeScreen extends StatelessWidget {
                   ],
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: 14.w),
-                  child: DMSansText(
-                    '. Email Marketing',
-                    color: Colors.white,
-                    fontSize: 12.sp,
-                    fontWeight: FontWeight.w400,
-                  ),
+                  padding: EdgeInsets.only(left: 16.w),
+                  child: Column(children: List.generate(length, (index) => null)),
                 ),
               ],
             ),
