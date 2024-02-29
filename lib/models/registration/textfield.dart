@@ -24,6 +24,7 @@ class AppTextField extends StatefulWidget {
     this.keyboardType = TextInputType.text,
     this.textInputAction = TextInputAction.next,
     this.textCapitalization = TextCapitalization.none,
+
   });
 
   /// The hint text to display in the text field.
@@ -58,6 +59,8 @@ class AppTextField extends StatefulWidget {
   /// The text capitalization to use for the text field input.
   /// This determines how the text input is capitalized, e.g. none, sentences, words, etc.
   final TextCapitalization textCapitalization;
+
+
 
   @override
   State<AppTextField> createState() => _AppTextFieldState();
@@ -98,6 +101,7 @@ class _AppTextFieldState extends State<AppTextField> {
               keyboardType: widget.keyboardType,
               textInputAction: widget.textInputAction,
               textCapitalization: widget.textCapitalization,
+              
               style: TextStyle(
                 fontSize: 16.sp,
                 fontWeight: FontWeight.w400,
