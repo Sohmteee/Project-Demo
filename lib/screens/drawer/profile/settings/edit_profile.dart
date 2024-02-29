@@ -192,13 +192,14 @@ class EditProfileScreen extends StatelessWidget {
                   ),
                   SizedBox(width: 16.w),
                   Container(
+                    padding: EdgeInsets.all(6.sp),
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
                         colors: [
+                          HexColor('#27B43E'),
                           HexColor('#5BD066'),
-                          HexColor(''),
                         ],
                       ),
                     ),
