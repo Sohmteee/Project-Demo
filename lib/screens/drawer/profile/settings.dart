@@ -43,6 +43,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
             color: HexColor('#D8D8D8'),
           ),
           settingsListTile(context, title: 'Change Password'),
+          Divider(
+            color: HexColor('#D8D8D8'),
+          ),
+          settingsListTile(context, title: 'Change Password'),
         ],
       ),
     );
