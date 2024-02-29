@@ -144,8 +144,11 @@ class EditProfileScreen extends StatelessWidget {
       child: Row(
         children: [
           Container(
+            padding: EdgeInsets.symmetric(vertical: 18.h, horizontal: ),
             decoration: BoxDecoration(
               color: HexColor('#E4DFDF'),
+              borderRadius: BorderRadius.circular(12.r),
+
             ),
           ),
           Expanded(
