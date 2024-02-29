@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/models/text.dart';
@@ -26,16 +25,25 @@ class UpgradeScreen extends StatelessWidget {
         child: SafeArea(
           child: Column(
             children: [
-              Row(
-                children: [
-                  DMSansText(
-                    'Yeerlo',
-                    color: Colors.white,
-                    fontSize: 16.sp,
-                    fontWeight: FontWeight.w800,
-                  ),
-                  RotatedBox(quarterTurns:, child: Icon(Icons.chevron_right, color: Colors.white)),
-                ],
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 22.8.w),
+                child: Row(
+                  children: [
+                    DMSansText(
+                      'Yeerlo',
+                      color: Colors.white,
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.w800,
+                    ),
+                    const RotatedBox(
+                      quarterTurns: 1,
+                      child: Icon(
+                        Icons.chevron_right,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
