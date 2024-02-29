@@ -123,7 +123,10 @@ class EditProfileScreen extends StatelessWidget {
                 hintText: 'Username',
               ),
               SizedBox(height: 22.h),
-              AppTextField(hintText: hintText)
+              AppTextField(
+                hintText: 'Country',
+                trailing:  Icon(Icons.chevron_right, color: HexColor('#979797')),
+              )
             ],
           ),
         ),
