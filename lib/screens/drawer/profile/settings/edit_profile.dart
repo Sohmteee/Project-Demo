@@ -6,6 +6,7 @@ class EditProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.primary,
       appBar: AppBar(
         elevation: 0,
         leading: BackButton(color: Theme.of(context).colorScheme.secondary),
