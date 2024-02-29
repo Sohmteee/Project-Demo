@@ -26,7 +26,7 @@ class EditProfileScreen extends StatelessWidget {
       body: Center(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 24.w),
-          child: Column(
+          child: ListView(
             children: [
               Image.asset(
                 'assets/images/drawer/profile/profile.png',
@@ -140,7 +140,11 @@ class EditProfileScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 22.h),
-              
+              AppTextField(
+                hintText: 'Bio',
+                color: HexColor('#979797'),
+                maxLines: 5,
+              ),
             ],
           ),
         ),
