@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:yeerlo/colors/app_colors.dart';
+import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/models/registration/button.dart';
 import 'package:yeerlo/models/text.dart';
+import 'package:yeerlo/screens/get_ticket.dart';
 
 class TransferSuccessScreen extends StatelessWidget {
   const TransferSuccessScreen({super.key});
@@ -86,6 +88,11 @@ class TransferSuccessScreen extends StatelessWidget {
               fontWeight: FontWeight.w700,
             ),
             SizedBox(height: 47.28.h),
+            SizedBox(height: 16.h),
+            DashDivider(
+              color: HexColor('#E0E0E0'),
+            ),
+            SizedBox(height: 16.h),
             Row(
               children: [
                 Column(
