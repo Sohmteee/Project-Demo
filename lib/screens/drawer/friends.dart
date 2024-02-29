@@ -78,7 +78,6 @@ class _FindFriendsScreenState extends State<FindFriendsScreen> {
   @override
   void initState() {
     super.initState();
-
     pageController = PageController();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       pageController.addListener(() {
@@ -382,11 +381,11 @@ class _FindFriendsScreenState extends State<FindFriendsScreen> {
               : GestureDetector(
                   onTap: () => setState(() {
                     pageIndex = 0;
-                    pageController.animateToPage(
+                    /*  pageController.animateToPage(
                       0,
                       duration: .5.seconds,
                       curve: Curves.easeInOut,
-                    );
+                    ); */
                   }),
                   child: Padding(
                     padding: EdgeInsets.only(left: 30.w),
@@ -443,11 +442,11 @@ class _FindFriendsScreenState extends State<FindFriendsScreen> {
               : GestureDetector(
                   onTap: () => setState(() {
                     pageIndex = 1;
-                    pageController.animateToPage(
+                    /* pageController.animateToPage(
                       1,
                       duration: .5.seconds,
                       curve: Curves.easeInOut,
-                    );
+                    ); */
                   }),
                   child: Padding(
                     padding: EdgeInsets.only(right: 30.w),
