@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -20,7 +21,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
           style: TextStyle(color: Theme.of(context).colorScheme.secondary),
         ),
       ),
-      body: Container(),
+      body: Column(
+        children: [
+          SvgPicture.asset(
+            'assets/svg/drawer/profile/settings/upgrade-to-pro.svg',
+            width: 343.w,
+            height: 56.h,
+          ),
+        ],
+      ),
     );
   }
 }
