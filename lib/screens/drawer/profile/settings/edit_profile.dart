@@ -121,7 +121,9 @@ class EditProfileScreen extends StatelessWidget {
                 context,
                 themeProvider: themeProvider,
                 hintText: 'Username',
-              )
+              ),
+              SizedBox(height: 22.h),
+              AppTextField(hintText: hintText)
             ],
           ),
         ),
@@ -162,7 +164,7 @@ class EditProfileScreen extends StatelessWidget {
             ),
             child: AirBnBText(
               hintText,
-              color: Colors.grey[400],
+              color: HexColor('#747688'),
               fontWeight: FontWeight.w400,
               fontSize: 16.sp,
             ),
