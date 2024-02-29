@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -22,11 +23,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
         ),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SvgPicture.asset(
-            'assets/svg/drawer/profile/settings/upgrade-to-pro.svg',
-            width: 343.w,
-            height: 56.h,
+          Center(
+            child: SvgPicture.asset(
+              'assets/svg/drawer/profile/settings/upgrade-to-pro.svg',
+              width: 343.w,
+              height: 56.h,
+            ),
           ),
         ],
       ),
