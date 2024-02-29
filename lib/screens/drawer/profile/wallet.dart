@@ -119,7 +119,12 @@ class _WalletScreenState extends State<WalletScreen> {
                                     child: Column(
                                       children: [
                                         Container(
-                                          color: ,
+                                          decoration: BoxDecoration(
+                                            color: HexColor('#B2B2B2')
+                                                .withOpacity(.5),
+                                          borderRadius: BorderRadius.vertical(
+                                            top: Radius.circular(20.r),
+                                          
                                         ),
                                       ],
                                     ),
