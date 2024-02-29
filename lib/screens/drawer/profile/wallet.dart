@@ -186,6 +186,7 @@ class _WalletScreenState extends State<WalletScreen> {
                 itemCount: 10,
                 itemBuilder: (context, index) {
                   return ListTile(
+                    contentPadding: EdgeInsets.symmetric(vertical: 18.h),
                     leading: DMSansText(
                       '20 - 01 2023, 06:00 PM',
                       color: HexColor('#9E9E9E'),
