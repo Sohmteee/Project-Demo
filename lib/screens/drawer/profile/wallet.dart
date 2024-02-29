@@ -149,32 +149,37 @@ class _WalletScreenState extends State<WalletScreen> {
               ),
             ),
             SizedBox(height: 20.h),
-            Expanded(
-              child: Container(
-                width: double.infinity,
-                padding: EdgeInsets.fromLTRB(24.w, 24.w, 24.w, 0),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.vertical(
-                    top: Radius.circular(20.r),
-                  ),
+            buildTransactions(),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Expanded buildTransactions() {
+    return Expanded(
+      child: Container(
+        width: double.infinity,
+        padding: EdgeInsets.fromLTRB(24.w, 24.w, 24.w, 0),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.vertical(
+            top: Radius.circular(20.r),
+          ),
+        ),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                DMSansText(
+                  'Transactions',
+                  color: Colors.black,
+                  fontSize: 18.sp,
+                  fontWeight: FontWeight.w700,
                 ),
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        DMSansText(
-                          'Transactions',
-                          color: Colors.black,
-                          fontSize: 18.sp,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
+              ],
             ),
+            SizedBox(height: 1)
           ],
         ),
       ),
