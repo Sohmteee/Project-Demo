@@ -113,6 +113,7 @@ class _WalletScreenState extends State<WalletScreen> {
                                     top: Radius.circular(30.r),
                                   ),
                                 ),
+                                showDragHandle: true,
                                 builder: (context) {
                                   return Container(
                                     decoration: BoxDecoration(
@@ -141,6 +142,7 @@ class _WalletScreenState extends State<WalletScreen> {
                                           fontSize: 18.sp,
                                           fontWeight: FontWeight.w700,
                                         ),
+                                        SizedBox(height: 55.h),
                                       ],
                                     ),
                                   );
