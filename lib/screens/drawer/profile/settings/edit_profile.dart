@@ -163,6 +163,8 @@ class EditProfileScreen extends StatelessWidget {
                 fontSize: 12.sp,
                 textAlign: TextAlign.center,
               ),
+              SizedBox(height: 30.h),
+              
               SizedBox(height: 52.h),
             ],
           ),
