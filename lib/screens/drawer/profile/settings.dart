@@ -35,26 +35,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
             ),
           ),
           SizedBox(height: 40.h),
-          const Divider(),
-          ListTile(
-            title: DMSansText(
-              'Account',
-              color: Theme.of(context).colorScheme.secondary,
-              fontSize: 16.sp,
-              fontWeight: FontWeight.w400,
-            ),
-            trailing: Icon(
-              Icons.chevron_right,
-              color: Theme.of(context).colorScheme.secondary,
-              size: 24.sp,
-            ),
+          Divider(
+            color: HexColor('#D8D8D8'),
           ),
+          settingsListTile(context),
           Divider(
             color: HexColor('#D8D8D8'),
           ),
           ListTile(
             title: DMSansText(
-              'Account',
+              'Change Password',
               color: Theme.of(context).colorScheme.secondary,
               fontSize: 16.sp,
               fontWeight: FontWeight.w400,
@@ -66,6 +56,22 @@ class _SettingsScreenState extends State<SettingsScreen> {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  ListTile settingsListTile(BuildContext context, {required String title, required  icon}) {
+    return ListTile(
+      title: DMSansText(
+        'Edit Profile',
+        color: Theme.of(context).colorScheme.secondary,
+        fontSize: 16.sp,
+        fontWeight: FontWeight.w400,
+      ),
+      trailing: Icon(
+        Icons.chevron_right,
+        color: Theme.of(context).colorScheme.secondary,
+        size: 24.sp,
       ),
     );
   }
