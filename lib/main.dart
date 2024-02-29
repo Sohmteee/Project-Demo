@@ -1,6 +1,4 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
@@ -117,6 +115,7 @@ class MyApp extends StatelessWidget {
             '/transfer-success':(context) => const TransferSuccessScreen(),
             '/settings': (context) => const SettingsScreen(),
             '/edit-profile': (context) => const EditProfileScreen(),
+            '/'
             '/upgrade':(context) => const UpgradeScreen(),
           },
         );
