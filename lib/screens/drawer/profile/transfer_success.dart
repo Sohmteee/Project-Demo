@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:yeerlo/colors/app_colors.dart';
+import 'package:yeerlo/models/registration/button.dart';
 import 'package:yeerlo/models/text.dart';
 
 class TransferSuccessScreen extends StatelessWidget {
@@ -87,17 +88,25 @@ class TransferSuccessScreen extends StatelessWidget {
             SizedBox(height: 47.28.h),
             Row(
               children: [
-                DMSansText(
-                  'Receipient',
-                  color: Colors.grey[400],
-                  fontSize: 12.6.sp,
-                  fontWeight: FontWeight.w600,
-                ),
-                DMSansText(
-                  'Samuel Emenike',
-                  color: Colors.black,
-                  fontSize: 12.6.sp,
-                  fontWeight: FontWeight.w600,
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    DMSansText(
+                      'Receipient',
+                      color: Colors.grey[400],
+                      fontSize: 12.6.sp,
+                      fontWeight: FontWeight.w600,
+                    ),
+                    DMSansText(
+                      'Samuel Emenike',
+                      color: Colors.black,
+                      fontSize: 12.6.sp,
+                      fontWeight: FontWeight.w600,
+                    ),
+                    const Spacer(flex: 2),
+                    ArrowButton(text: 'text', onPressed: onPressed)
+                    const Spacer(),
+                  ],
                 ),
               ],
             ),
