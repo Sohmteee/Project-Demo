@@ -25,7 +25,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
         ),
       ),
       body: ListView(
-        ph
+        physics: const BouncingScrollPhysics(),
         children: [
           SizedBox(height: 30.h),
           Center(
