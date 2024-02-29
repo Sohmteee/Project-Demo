@@ -53,6 +53,7 @@ class TransferSuccessScreen extends StatelessWidget {
               ],
             ),
             SizedBox(height: 35.h),
+            
           ],
         ),
       ),
