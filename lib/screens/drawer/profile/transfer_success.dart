@@ -103,12 +103,14 @@ class TransferSuccessScreen extends StatelessWidget {
                       fontSize: 12.6.sp,
                       fontWeight: FontWeight.w600,
                     ),
-                    const Spacer(flex: 2),
-                    ArrowButton(text: 'text', onPressed: onPressed)
-                    const Spacer(),
                   ],
                 ),
               ],
+            ),
+            const Spacer(flex: 2),
+            ArrowButton(
+              text: 'DONE',
+              onPressed: () {},
             ),
           ],
         ),
