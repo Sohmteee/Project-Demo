@@ -122,13 +122,14 @@ class _WalletScreenState extends State<WalletScreen> {
                                       ),
                                     ),
                                     child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
                                       children: [
                                         SizedBox(height: 11.h),
                                         Container(
+                                          height: 5.h,
+                                          width: 26.w,
                                           decoration: BoxDecoration(
-                                            color: HexColor('#B2B2B2'),
+                                            color: HexColor('#B2B2B2')
+                                                .withOpacity(.5),
                                             borderRadius:
                                                 BorderRadius.circular(20.r),
                                           ),
