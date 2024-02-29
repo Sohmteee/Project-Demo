@@ -125,7 +125,10 @@ class EditProfileScreen extends StatelessWidget {
               SizedBox(height: 22.h),
               AppTextField(
                 hintText: 'Country',
-                trailing:  Icon(Icons.chevron_right, color: HexColor('#979797')),
+                trailing: Icon(
+                  Icons.chevron_right,
+                  color: HexColor('#979797'),
+                ),
               )
             ],
           ),

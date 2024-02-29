@@ -16,6 +16,7 @@ class AppTextField extends StatefulWidget {
   AppTextField({
     super.key,
     required this.hintText,
+    this.color,
     this.icon,
     this.trailing,
     this.controller,
@@ -28,6 +29,9 @@ class AppTextField extends StatefulWidget {
   /// The hint text to display in the text field.
   /// This indicates the expected input for the text field.
   final String hintText;
+
+  /// The color of the hint text.
+  final Color? color;
 
   /// The icon widget to display in the text field.
   Widget? icon;
@@ -104,7 +108,7 @@ class _AppTextFieldState extends State<AppTextField> {
                 hintStyle: TextStyle(
                   fontSize: 16.sp,
                   fontWeight: FontWeight.w400,
-                  color: linkTextColor,
+                  color: color ?? linkTextColor,
                 ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12.r),
