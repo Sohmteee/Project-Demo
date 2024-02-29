@@ -124,12 +124,12 @@ class EditProfileScreen extends StatelessWidget {
   buildColoredTextField(
     BuildContext context, {
     required ThemeProvider themeProvider,
-     required String hintText,
-   IconData? icon,
-    controller,
-    keyboardType = TextInputType.text,
-    textInputAction = TextInputAction.next,
-    textCapitalization = TextCapitalization.none,
+    required String hintText,
+    Icon? icon,
+    TextEditingController? controller,
+    TextInputType? keyboardType = TextInputType.text,
+    TextInputAction textInputAction = TextInputAction.next,
+    TextCapitalization textCapitalization = TextCapitalization.none,
   }) {
     Container(
       padding: EdgeInsets.symmetric(horizontal: 15.w),
@@ -144,12 +144,11 @@ class EditProfileScreen extends StatelessWidget {
       ),
       child: Row(
         children: [
-          if (icon != null) icon!,
+          if (icon != null) icon,
           Expanded(
             child: TextField(
               controller: controller,
               cursorColor: darkOrangeColor,
-              obscureText: isPassword ? !showPassword : false,
               keyboardType: keyboardType,
               textInputAction: textInputAction,
               textCapitalization: textCapitalization,
