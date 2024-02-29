@@ -226,7 +226,7 @@ class _WalletScreenState extends State<WalletScreen> {
                   text: buttonText,
                   onPressed: () {
                     if(buttonText == 'WITHDRAW') {
-                      
+                      Navigator.pushNamed(context, '/withdraw-re')
                     }
                     else {
                       Navigator.pop(context);
