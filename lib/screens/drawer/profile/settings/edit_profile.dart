@@ -30,7 +30,7 @@ class EditProfileScreen extends StatelessWidget {
               children: [
                 ZoomTapAnimation(
                   onTap: () {
-                    Navigator.pushNamed(context, '/wallet');
+                    // Navigator.pushNamed(context, '/wallet');
                   },
                   child: Container(
                     padding: EdgeInsets.fromLTRB(34.w, 12.h, 37.w, 12.h),
@@ -47,7 +47,7 @@ class EditProfileScreen extends StatelessWidget {
                       ),
                     ),
                     child: DMSansText(
-                      'Wallet',
+                      'Upload New Image',
                       color: Colors.white,
                       fontWeight: FontWeight.w400,
                       fontSize: 16.sp,
@@ -57,7 +57,7 @@ class EditProfileScreen extends StatelessWidget {
                 SizedBox(width: 18.sp),
                 ZoomTapAnimation(
                   onTap: () {
-                    Navigator.pushNamed(context, '/settings');
+                    // Navigator.pushNamed(context, '/settings');
                   },
                   child: Container(
                     padding: EdgeInsets.fromLTRB(18.w, 12.h, 36.w, 12.h),
@@ -87,7 +87,7 @@ class EditProfileScreen extends StatelessWidget {
                         tileMode: TileMode.mirror,
                       ).createShader(bounds),
                       child: DMSansText(
-                        'Settings',
+                        'Select From Gallery',
                         color: Colors.white,
                         fontWeight: FontWeight.w400,
                         fontSize: 16.sp,
