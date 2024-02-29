@@ -5,3 +5,5 @@
 - Fix Friends section not showing
 - Search button on event screen
 - Categories on modal sheet
+
+- Email Link
