@@ -153,7 +153,7 @@ class EditProfileScreen extends StatelessWidget {
         children: [
           Container(
             padding: EdgeInsets.symmetric(
-              vertical: 18.h,
+              vertical: 20.h,
               horizontal: 20.w,
             ),
             decoration: BoxDecoration(
