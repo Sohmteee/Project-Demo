@@ -128,6 +128,7 @@ class _WalletScreenState extends State<WalletScreen> {
                                       SizedBox(height: 55.h),
                                       AppTextField(
                                         hintText: 'Select Currency',
+                                        
                                       ),
                                     ],
                                   );

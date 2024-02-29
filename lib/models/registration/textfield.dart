@@ -17,6 +17,7 @@ class AppTextField extends StatefulWidget {
     super.key,
     required this.hintText,
     this.icon,
+    this.trailing,
     this.controller,
     this.isPassword = false,
     this.keyboardType = TextInputType.text,
@@ -30,6 +31,9 @@ class AppTextField extends StatefulWidget {
 
   /// The icon widget to display in the text field.
   Widget? icon;
+
+  /// The trailing widget to display in the text field.
+  Widget? trailing;
 
   /// The text editing controller for controlling the text being edited.
   /// Can be null to create a new controller internally.
@@ -113,6 +117,7 @@ class _AppTextFieldState extends State<AppTextField> {
               ),
             ),
           ),
+          if (widget.trailing != null) widget.trailing!,
           if (widget.isPassword)
             GestureDetector(
               onTap: () {
