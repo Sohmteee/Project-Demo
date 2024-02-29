@@ -153,7 +153,7 @@ class ProfileScreen extends StatelessWidget {
               ),
             ),
             ZoomTapAnimation(
-                onTap: () {
+              onTap: () {
                 Navigator.pushNamed(context, '/settings');
               },
               child: Container(
@@ -313,14 +313,18 @@ class ProfileScreen extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 3.5.w),
-              child: ChoiceChip(
-                color: MaterialStateColor.resolveWith(
-                    (states) => HexColor('#6B7AED')),
-                label: AirBnBText(
-                  'Games Online',
-                  color: Colors.white,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 13.sp,
+              child: ChipTheme(
+                data: ChipThemeData(
+                  backgroundColor: MaterialStateColor.resolveWith(
+                      (states) => HexColor('#6B7AED')),
+                ),
+                child: Chip(
+                  label: AirBnBText(
+                    'Games Online',
+                    color: Colors.white,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 13.sp,
+                  ),
                 ),
               ),
             ),
