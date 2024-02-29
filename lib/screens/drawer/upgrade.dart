@@ -92,7 +92,47 @@ class UpgradeScreen extends StatelessWidget {
                     ),
                     Expanded(
                       child: DMSansText(
-                        'Dedicatd Customer Support',
+                        'Dedicated Customer Support',
+                        color: Colors.white,
+                        fontSize: 17.sp,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 11.h),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    DMSansText(
+                      '3. ',
+                      color: Colors.white,
+                      fontSize: 17.sp,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    Expanded(
+                      child: DMSansText(
+                        'Vendors',
+                        color: Colors.white,
+                        fontSize: 17.sp,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 11.h),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    DMSansText(
+                      '4. ',
+                      color: Colors.white,
+                      fontSize: 17.sp,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    Expanded(
+                      child: DMSansText(
+                        'Targeted EventMarketing (market to attendees in your event location)',
                         color: Colors.white,
                         fontSize: 17.sp,
                         fontWeight: FontWeight.w500,
