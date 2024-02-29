@@ -27,6 +27,7 @@ class EditProfileScreen extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 24.w),
           child: ListView(
+            physics: const BouncingScrollPhysics(),
             children: [
               Image.asset(
                 'assets/images/drawer/profile/profile.png',
@@ -148,6 +149,12 @@ class EditProfileScreen extends StatelessWidget {
                 keyboardType: TextInputType.multiline,
               ),
               SizedBox(height: 52.h),
+              DMSansText(
+                'Social Profile',
+                color: Colors.black,
+                fontWeight: FontWeight.w700,
+                fontSize: 14.sp,
+              ),
             ],
           ),
         ),
