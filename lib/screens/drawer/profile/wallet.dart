@@ -108,59 +108,7 @@ class _WalletScreenState extends State<WalletScreen> {
                       children: [
                         GestureDetector(
                           onTap: () {
-                            showModalBottomSheet(
-                                context: context,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.vertical(
-                                    top: Radius.circular(30.r),
-                                  ),
-                                ),
-                                showDragHandle: true,
-                                constraints: BoxConstraints.tight(
-                                  Size(
-                                    MediaQuery.of(context).size.width,
-                                    MediaQuery.of(context).size.height * .5,
-                                  ),
-                                ),
-                                builder: (context) {
-                                  return Padding(
-                                    padding:
-                                        EdgeInsets.symmetric(horizontal: 29.w),
-                                    child: Column(
-                                      children: [
-                                        // SizedBox(height: 18.h),
-                                        DMSansText(
-                                          'Fund Wallet',
-                                          color: Colors.black,
-                                          fontSize: 18.sp,
-                                          fontWeight: FontWeight.w700,
-                                        ),
-                                        const Spacer(),
-                                        AppTextField(
-                                          hintText: 'Select Currency',
-                                          trailing: Icon(
-                                            Icons.chevron_right,
-                                            color: HexColor('#979797'),
-                                          ),
-                                        ),
-                                        SizedBox(height: 22.h),
-                                        AppTextField(
-                                          hintText: 'Enter Amount',
-                                          trailing: Icon(
-                                            Icons.chevron_right,
-                                            color: HexColor('#979797'),
-                                          ),
-                                        ),
-                                        const Spacer(),
-                                        ArrowButton(
-                                          text: 'FUND',
-                                          onPressed: () {},
-                                        ),
-                                        const Spacer(),
-                                      ],
-                                    ),
-                                  );
-                                });
+                            showModalSheet(context);
                           },
                           child: Row(
                             children: [
@@ -214,6 +162,61 @@ class _WalletScreenState extends State<WalletScreen> {
         ),
       ),
     );
+  }
+
+  Future<dynamic> showModalSheet(BuildContext context, {String? title, String? button}) {
+    return showModalBottomSheet(
+        context: context,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            top: Radius.circular(30.r),
+          ),
+        ),
+        showDragHandle: true,
+        constraints: BoxConstraints.tight(
+          Size(
+            MediaQuery.of(context).size.width,
+            MediaQuery.of(context).size.height * .5,
+          ),
+        ),
+        builder: (context) {
+          return Padding(
+            padding: EdgeInsets.symmetric(horizontal: 29.w),
+            child: Column(
+              children: [
+                // SizedBox(height: 18.h),
+                DMSansText(
+                  'Fund Wallet',
+                  color: Colors.black,
+                  fontSize: 18.sp,
+                  fontWeight: FontWeight.w700,
+                ),
+                const Spacer(),
+                AppTextField(
+                  hintText: 'Select Currency',
+                  trailing: Icon(
+                    Icons.chevron_right,
+                    color: HexColor('#979797'),
+                  ),
+                ),
+                SizedBox(height: 22.h),
+                AppTextField(
+                  hintText: 'Enter Amount',
+                  trailing: Icon(
+                    Icons.chevron_right,
+                    color: HexColor('#979797'),
+                  ),
+                ),
+                const Spacer(),
+                ArrowButton(
+                  text: 'FUND',
+                  onPressed: () {},
+                ),
+                const Spacer(),
+              ],
+            ),
+          );
+        });
   }
 
   Expanded buildTransactions() {
