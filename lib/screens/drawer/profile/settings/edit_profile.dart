@@ -139,7 +139,7 @@ class EditProfileScreen extends StatelessWidget {
     TextCapitalization textCapitalization = TextCapitalization.none,
   }) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 15.w),
+      padding: EdgeInsets.only(right: 15.w),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12.r),
         border: Border.all(
@@ -159,6 +159,12 @@ class EditProfileScreen extends StatelessWidget {
             decoration: BoxDecoration(
               color: HexColor('#E4DFDF'),
               borderRadius: BorderRadius.circular(12.r),
+            ),
+            child: AirBnBText(
+              hintText,
+              color: Colors.grey[400],
+              fontWeight: FontWeight.w400,
+              fontSize: 16.sp,
             ),
           ),
           Expanded(
