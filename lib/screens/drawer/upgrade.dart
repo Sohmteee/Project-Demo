@@ -42,7 +42,8 @@ class UpgradeScreen extends StatelessWidget {
                       fontSize: 16.sp,
                       fontWeight: FontWeight.w800,
                     ),
-                    widget(
+                    GestureDetector(
+                      onTap: () => Navigator.pop(context),
                       child: const RotatedBox(
                         quarterTurns: 1,
                         child: Icon(

@@ -12,6 +12,7 @@ import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_sliding_up_panel/sliding_up_panel_widget.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'package:syncfusion_flutter_sliders/sliders.dart';
 import 'package:yeerlo/colors/app_colors.dart';
@@ -26,6 +27,7 @@ import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/notifications.dart';
 import 'package:yeerlo/providers/theme.dart';
 import 'package:yeerlo/screens/calendar/calendar.dart';
+import 'package:yeerlo/screens/drawer/upgrade.dart';
 import 'package:yeerlo/screens/home/bookmarks.dart';
 import 'package:yeerlo/screens/my_tickets/my_tickets.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
@@ -882,8 +884,12 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             const Spacer(flex: 7),
             ZoomTapAnimation(
-              onTap: () {
-                Navigator.pushNamed(context, '/upgrade');
+              onTap: () {Navigator.push(
+                context,
+                PageTransition(
+                    child: const UpgradeScreen(),
+                    type: PageTransitionType.bottomToTop),
+              ),
               },
               child: Container(
                 padding: EdgeInsets.symmetric(
