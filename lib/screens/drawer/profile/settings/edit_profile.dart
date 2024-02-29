@@ -5,6 +5,7 @@ import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/models/registration/textfield.dart';
 import 'package:yeerlo/models/text.dart';
+import 'package:yeerlo/providers/theme.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 class EditProfileScreen extends StatelessWidget {
@@ -111,10 +112,79 @@ class EditProfileScreen extends StatelessWidget {
                 hintText: 'abc@gmail.com',
                 icon: const Icon(IconlyLight.message),
               ),
+              SizedBox(height: 22.h),
+              
             ],
           ),
         ),
       ),
     );
+  }
+
+  buildColoredTextField(BuildContext context, String hintText, IconData icon) {
+    final themeProvider = context.watch<ThemeProvider>();
+    Container(
+      padding: EdgeInsets.symmetric(horizontal: 15.w),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12.r),
+        border: Border.all(
+          color: themeProvider.themeType == ThemeType.light
+              ? HexColor('#E4DFDF')
+              : const Color(0x21E4DEDE),
+          width: 1.w,
+        ),
+      ),
+      child: Row(
+        children: [
+          if (widget.icon != null) widget.icon!,
+          Expanded(
+            child: TextField(
+              controller: widget.controller,
+              cursorColor: darkOrangeColor,
+              obscureText: widget.isPassword ? !showPassword : false,
+              keyboardType: widget.keyboardType,
+              textInputAction: widget.textInputAction,
+              textCapitalization: widget.textCapitalization,
+              style: TextStyle(
+                fontSize: 16.sp,
+                fontWeight: FontWeight.w400,
+                color: Theme.of(context).colorScheme.secondary,
+              ),
+              decoration: InputDecoration(
+                hintText: widget.hintText,
+                hintStyle: TextStyle(
+                  fontSize: 16.sp,
+                  fontWeight: FontWeight.w400,
+                  color: linkTextColor,
+                ),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12.r),
+                  borderSide: BorderSide.none,
+                ),
+                contentPadding: EdgeInsets.symmetric(
+                  horizontal: 14.w,
+                  vertical: 20.h,
+                ),
+              ),
+            ),
+          ),
+          if (widget.trailing != null) widget.trailing!,
+          if (widget.isPassword)
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  showPassword = !showPassword;
+                });
+              },
+              child: Icon(
+                showPassword ? IconlyLight.show : IconlyLight.hide,
+                size: 22.sp,
+                color: registrationIconColor,
+              ),
+            ),
+        ],
+      ),
+    );
+
   }
 }
