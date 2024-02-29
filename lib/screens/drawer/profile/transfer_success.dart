@@ -119,7 +119,7 @@ class TransferSuccessScreen extends StatelessWidget {
               text: 'DONE',
               onPressed: () {
                 Navigator.popUntil(
-                    context, '/wallet');
+                    context, ModalRoute.withName('/wallet'));
               },
             ),
           ],
