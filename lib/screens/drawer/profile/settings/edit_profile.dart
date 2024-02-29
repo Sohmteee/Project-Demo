@@ -125,7 +125,6 @@ class EditProfileScreen extends StatelessWidget {
     BuildContext context, {
     required ThemeProvider themeProvider,
     required String hintText,
-    Icon? icon,
     TextEditingController? controller,
     TextInputType keyboardType = TextInputType.text,
     TextInputAction textInputAction = TextInputAction.next,
@@ -144,7 +143,11 @@ class EditProfileScreen extends StatelessWidget {
       ),
       child: Row(
         children: [
-          if (icon != null) icon,
+          Container(
+            decoration: BoxDecoration(
+              color: HexColor('#E4DFDF'),
+            ),
+          ),
           Expanded(
             child: TextField(
               controller: controller,
@@ -158,12 +161,6 @@ class EditProfileScreen extends StatelessWidget {
                 color: Theme.of(context).colorScheme.secondary,
               ),
               decoration: InputDecoration(
-                hintText: hintText,
-                hintStyle: TextStyle(
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.w400,
-                  color: linkTextColor,
-                ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12.r),
                   borderSide: BorderSide.none,
