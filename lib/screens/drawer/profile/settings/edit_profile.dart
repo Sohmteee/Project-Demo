@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/models/text.dart';
+import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 class EditProfileScreen extends StatelessWidget {
   const EditProfileScreen({super.key});
@@ -23,9 +24,9 @@ class EditProfileScreen extends StatelessWidget {
               width: 96.w,
               height: 96.h,
             ),
-            SizedBox(height: 16.h),
+            SizedBox(height: 22.h),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ZoomTapAnimation(
                   onTap: () {
@@ -45,24 +46,15 @@ class EditProfileScreen extends StatelessWidget {
                         end: Alignment.bottomCenter,
                       ),
                     ),
-                    child: Row(
-                      children: [
-                        SvgPicture.asset(
-                          'assets/svg/drawer/profile/dollar.svg',
-                          width: 21.w,
-                          height: 21.h,
-                        ),
-                        SizedBox(width: 16.w),
-                        DMSansText(
-                          'Wallet',
-                          color: Colors.white,
-                          fontWeight: FontWeight.w400,
-                          fontSize: 16.sp,
-                        ),
-                      ],
+                    child: DMSansText(
+                      'Wallet',
+                      color: Colors.white,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 16.sp,
                     ),
                   ),
                 ),
+                SizedBox(width: 18.sp),
                 ZoomTapAnimation(
                   onTap: () {
                     Navigator.pushNamed(context, '/settings');
@@ -105,7 +97,6 @@ class EditProfileScreen extends StatelessWidget {
                 ),
               ],
             ),
-     
           ],
         ),
       ),
