@@ -116,7 +116,13 @@ class _WalletScreenState extends State<WalletScreen> {
                                         top: Radius.circular(20.r),
                                       ),
                                     ),
-                                    child: Column(children: [],),
+                                    child: Column(
+                                      children: [
+                                        Container(
+                                          color: ,
+                                        ),
+                                      ],
+                                    ),
                                   );
                                 });
                           },
