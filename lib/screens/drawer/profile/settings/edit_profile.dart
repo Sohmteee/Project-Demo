@@ -127,7 +127,7 @@ class EditProfileScreen extends StatelessWidget {
     required String hintText,
     Icon? icon,
     TextEditingController? controller,
-    TextInputType? keyboardType = TextInputType.text,
+    TextInputType keyboardType = TextInputType.text,
     TextInputAction textInputAction = TextInputAction.next,
     TextCapitalization textCapitalization = TextCapitalization.none,
   }) {
@@ -175,20 +175,6 @@ class EditProfileScreen extends StatelessWidget {
               ),
             ),
           ),
-          if (trailing != null) trailing!,
-          if (isPassword)
-            GestureDetector(
-              onTap: () {
-                setState(() {
-                  showPassword = !showPassword;
-                });
-              },
-              child: Icon(
-                showPassword ? IconlyLight.show : IconlyLight.hide,
-                size: 22.sp,
-                color: registrationIconColor,
-              ),
-            ),
         ],
       ),
     );
