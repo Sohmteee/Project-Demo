@@ -52,6 +52,13 @@ class UpgradeScreen extends StatelessWidget {
                 Image.asset(
                   'assets/images/drawer/upgrade/upgrade.png',
                 ),
+                SizedBox(height: 8.h),
+                DMSansText(
+                  'Yeerlo Premium for \$60/year',
+                  color: Colors.white,
+                  fontSize: 25.sp,
+                  fontWeight: FontWeight.w700,
+                ),
               ],
             ),
           ),
