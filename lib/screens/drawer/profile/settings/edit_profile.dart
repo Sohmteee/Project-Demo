@@ -208,10 +208,7 @@ class EditProfileScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(16.r),
                         color: Colors.white,
                       ),
-                      child: Icon(
-                        Icons.add,
-                        color: Colors.white,
-                      ),
+                      child: SvgPicture.asset('assetName')
                     ),
                   ),
                 ],
