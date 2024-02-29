@@ -154,7 +154,7 @@ class ProfileScreen extends StatelessWidget {
             ),
             ZoomTapAnimation(
                 onTap: () {
-                Navigator.pushNamed(context, '/wallet');
+                Navigator.pushNamed(context, '/settings');
               },
               child: Container(
                 padding: EdgeInsets.fromLTRB(18.w, 12.h, 36.w, 12.h),
