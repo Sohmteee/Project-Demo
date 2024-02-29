@@ -206,7 +206,6 @@ class EditProfileScreen extends StatelessWidget {
                       padding: EdgeInsets.all(6.sp),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(16.r),
-                        color: Colors.white,
                       ),
                       child: SvgPicture.asset(
                         'assets/svg/drawer/profile/settings/whatsapp.svg',
