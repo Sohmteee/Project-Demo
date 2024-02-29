@@ -115,36 +115,17 @@ class _WalletScreenState extends State<WalletScreen> {
                                 ),
                                 showDragHandle: true,
                                 builder: (context) {
-                                  return Container(
-                                    decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.vertical(
-                                        top: Radius.circular(30.r),
+                                  return Column(
+                                    children: [
+                                      // SizedBox(height: 18.h),
+                                      DMSansText(
+                                        'Fund Wallet',
+                                        color: Colors.black,
+                                        fontSize: 18.sp,
+                                        fontWeight: FontWeight.w700,
                                       ),
-                                    ),
-                                    child: Column(
-                                      children: [
-                                        SizedBox(height: 11.h),
-                                        Container(
-                                          height: 5.h,
-                                          width: 26.w,
-                                          decoration: BoxDecoration(
-                                            color: HexColor('#B2B2B2')
-                                                .withOpacity(.5),
-                                            borderRadius:
-                                                BorderRadius.circular(20.r),
-                                          ),
-                                        ),
-                                        SizedBox(height: 18.h),
-                                        DMSansText(
-                                          'Fund Wallet',
-                                          color: Colors.black,
-                                          fontSize: 18.sp,
-                                          fontWeight: FontWeight.w700,
-                                        ),
-                                        SizedBox(height: 55.h),
-                                      ],
-                                    ),
+                                      SizedBox(height: 55.h),
+                                    ],
                                   );
                                 });
                           },
