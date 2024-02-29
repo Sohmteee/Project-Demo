@@ -12,14 +12,16 @@ class EditProfileScreen extends StatelessWidget {
         elevation: 0,
         leading: BackButton(color: Theme.of(context).colorScheme.secondary),
       ),
-      body: Column(
-        children: [
-          Image.asset(
-            'assets/images/drawer/profile/profile.png',
-            width: 96.w,
-            height: 96.h,
-          ),
-        ],
+      body: Center(
+        child: Column(
+          children: [
+            Image.asset(
+              'assets/images/drawer/profile/profile.png',
+              width: 96.w,
+              height: 96.h,
+            ),
+          ],
+        ),
       ),
     );
   }
