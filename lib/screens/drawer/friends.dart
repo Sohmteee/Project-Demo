@@ -178,73 +178,70 @@ class _FindFriendsScreenState extends State<FindFriendsScreen> {
                         );
                       },
                     ),
-                    Expanded(
-                      // height: MediaQuery.of(context).size.height * .6,
-                      child: ListView.builder(
-                        itemCount: friends.length,
-                        padding: EdgeInsets.only(
-                          top: 16.h,
-                          bottom: MediaQuery.of(context).size.width * .3,
-                          left: 24.w,
-                          right: 24.w,
-                        ),
-                        physics: const BouncingScrollPhysics(),
-                        itemBuilder: (BuildContext context, int index) {
-                          return GestureDetector(
-                            onTap: () {
-                              setState(() {
-                                isTicked[index] = !isTicked[index];
-                              });
-                            },
-                            child: Container(
-                              padding: EdgeInsets.symmetric(vertical: 8.h),
-                              color: Colors.transparent,
-                              child: Row(
-                                children: [
-                                  CircleAvatar(
-                                    radius: 22.5.r,
-                                    backgroundColor: Colors.white,
-                                    backgroundImage: Image.asset(
-                                      friends[index]['image'],
-                                      height: 45.h,
-                                      width: 45.w,
-                                      fit: BoxFit.fitWidth,
-                                    ).image,
-                                  ),
-                                  SizedBox(width: 12.w),
-                                  Expanded(
-                                    child: Padding(
-                                      padding:
-                                          EdgeInsets.symmetric(vertical: 3.h),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          AirBnBText(
-                                            friends[index]['name'],
-                                            color: Theme.of(context)
-                                                .colorScheme
-                                                .secondary,
-                                            fontSize: 14.sp,
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                          AirBnBText(
-                                            '${friends[index]['followers']} followers',
-                                            textAlign: TextAlign.right,
-                                            color: gray400,
-                                            fontSize: 13.sp,
-                                            fontWeight: FontWeight.w400,
-                                          ),
-                                        ],
-                                      ),
+                    ListView.builder(
+                      itemCount: friends.length,
+                      padding: EdgeInsets.only(
+                        top: 16.h,
+                        bottom: MediaQuery.of(context).size.width * .3,
+                        left: 24.w,
+                        right: 24.w,
+                      ),
+                      physics: const BouncingScrollPhysics(),
+                      itemBuilder: (BuildContext context, int index) {
+                        return GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              isTicked[index] = !isTicked[index];
+                            });
+                          },
+                          child: Container(
+                            padding: EdgeInsets.symmetric(vertical: 8.h),
+                            color: Colors.transparent,
+                            child: Row(
+                              children: [
+                                CircleAvatar(
+                                  radius: 22.5.r,
+                                  backgroundColor: Colors.white,
+                                  backgroundImage: Image.asset(
+                                    friends[index]['image'],
+                                    height: 45.h,
+                                    width: 45.w,
+                                    fit: BoxFit.fitWidth,
+                                  ).image,
+                                ),
+                                SizedBox(width: 12.w),
+                                Expanded(
+                                  child: Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(vertical: 3.h),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        AirBnBText(
+                                          friends[index]['name'],
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .secondary,
+                                          fontSize: 14.sp,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                        AirBnBText(
+                                          '${friends[index]['followers']} followers',
+                                          textAlign: TextAlign.right,
+                                          color: gray400,
+                                          fontSize: 13.sp,
+                                          fontWeight: FontWeight.w400,
+                                        ),
+                                      ],
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
-                          );
-                        },
-                      ),
+                          ),
+                        );
+                      },
                     ),
                   ],
                 ),
@@ -371,7 +368,7 @@ class _FindFriendsScreenState extends State<FindFriendsScreen> {
               : GestureDetector(
                   onTap: () => setState(() {
                     pageIndex = 0;
-                    if (mounted) {
+                    if (pageController.hasClients) {
                       pageController.animateToPage(
                         0,
                         duration: .5.seconds,
