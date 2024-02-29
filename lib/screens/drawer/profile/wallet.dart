@@ -189,8 +189,18 @@ class _WalletScreenState extends State<WalletScreen> {
                     leading: DMSansText(
                       '20 - 01 2023, 06:00 PM',
                       color: HexColor('#9E9E9E'),
-                      fontSize: 16.sp,
+                      fontSize: 14.sp,
                       fontWeight: FontWeight.w400,
+                    ),
+                    trailing: Column(
+                      children: [
+                        DMSansText(
+                          '20 - 01 2023, 06:00 PM',
+                          color: HexColor('#9E9E9E'),
+                          fontSize: 14.sp,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ],
                     ),
                   );
                 },
