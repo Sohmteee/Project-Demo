@@ -58,27 +58,51 @@ class _SettingsScreenState extends State<SettingsScreen> {
           Divider(
             color: HexColor('#D8D8D8'),
           ),
-          settingsListTile(context, title: 'Change Password', onTap:() => Navigator.pushNamed(context, '/change-password'),),
- ,         Divider(
-            color: HexColor('#D8D8D8'),
+          settingsListTile(
+            context,
+            title: 'Change Password',
+            onTap: () => Navigator.pushNamed(context, '/change-password'),
           ),
-          settingsListTile(context, title: 'Withdrawal Info', onTap:() => Navigator.pushNamed(context, '/'),),
           Divider(
             color: HexColor('#D8D8D8'),
           ),
-          settingsListTile(context, title: 'Notification', onTap:() => Navigator.pushNamed(context, '/'),),
+          settingsListTile(
+            context,
+            title: 'Withdrawal Info',
+            onTap: () => Navigator.pushNamed(context, '/'),
+          ),
           Divider(
             color: HexColor('#D8D8D8'),
           ),
-          settingsListTile(context, title: 'Terms & Conditions', onTap:() => Navigator.pushNamed(context, '/'),),
+          settingsListTile(
+            context,
+            title: 'Notification',
+            onTap: () => Navigator.pushNamed(context, '/'),
+          ),
           Divider(
             color: HexColor('#D8D8D8'),
           ),
-          settingsListTile(context, title: 'Privacy & Security', onTap:() => Navigator.pushNamed(context, '/'),),
+          settingsListTile(
+            context,
+            title: 'Terms & Conditions',
+            onTap: () => Navigator.pushNamed(context, '/'),
+          ),
           Divider(
             color: HexColor('#D8D8D8'),
           ),
-          settingsListTile(context, title: 'Help', onTap:() => Navigator.pushNamed(context, '/'),),
+          settingsListTile(
+            context,
+            title: 'Privacy & Security',
+            onTap: () => Navigator.pushNamed(context, '/'),
+          ),
+          Divider(
+            color: HexColor('#D8D8D8'),
+          ),
+          settingsListTile(
+            context,
+            title: 'Help',
+            onTap: () => Navigator.pushNamed(context, '/'),
+          ),
           Divider(
             color: HexColor('#D8D8D8'),
           ),

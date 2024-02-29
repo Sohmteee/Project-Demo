@@ -14,7 +14,8 @@ class ChangePasswordScreen extends StatelessWidget {
           'Change Password',
           style: TextStyle(color: Theme.of(context).colorScheme.secondary),
         ),
-      ),
+      )
+      ,
     );
   }
 }
