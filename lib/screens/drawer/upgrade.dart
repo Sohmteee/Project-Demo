@@ -189,6 +189,9 @@ class UpgradeScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 50.h),
                       ZoomTapAnimation(
+                        onTap: () {
+                          // Navigator.pushNamed(context, '/sign-up');
+                        },
                         child: Container(
                           width: double.infinity,
                           padding: EdgeInsets.symmetric(vertical: 12.h),
