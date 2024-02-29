@@ -183,13 +183,13 @@ class UpgradeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 20.h),
+                SizedBox(height: 50.h),
                 Container(
                   width: double.infinity,
-                  padding: ei,
+                  padding: EdgeInsets.symmetric(vertical: 12.h),
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(12.r),
+                    borderRadius: BorderRadius.circular(30.r),
                   ),
                   child: Center(
                     child: AirBnBText(
@@ -200,6 +200,7 @@ class UpgradeScreen extends StatelessWidget {
                     ),
                   ),
                 ),
+                SizedBox(height: 50.h),
               ],
             ),
           ),
