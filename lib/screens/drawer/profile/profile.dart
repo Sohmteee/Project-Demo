@@ -152,48 +152,53 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
-              padding: EdgeInsets.fromLTRB(18.w, 12.h, 36.w, 12.h),
-              margin: EdgeInsets.symmetric(horizontal: 5.w),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8.r),
-                border: GradientBoxBorder(
-                  gradient: LinearGradient(
+            ZoomTapAnimation(
+                onTap: () {
+                Navigator.pushNamed(context, '/wallet');
+              },
+              child: Container(
+                padding: EdgeInsets.fromLTRB(18.w, 12.h, 36.w, 12.h),
+                margin: EdgeInsets.symmetric(horizontal: 5.w),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.r),
+                  border: GradientBoxBorder(
+                    gradient: LinearGradient(
+                      colors: [
+                        lightOrangeColor,
+                        darkOrangeColor,
+                      ],
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                    ),
+                  ),
+                ),
+                child: ShaderMask(
+                  blendMode: BlendMode.srcIn,
+                  shaderCallback: (Rect bounds) => LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
                     colors: [
                       lightOrangeColor,
                       darkOrangeColor,
                     ],
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
+                    tileMode: TileMode.mirror,
+                  ).createShader(bounds),
+                  child: Row(
+                    children: [
+                      SvgPicture.asset(
+                        'assets/svg/drawer/profile/settings.svg',
+                        width: 21.w,
+                        height: 21.h,
+                      ),
+                      SizedBox(width: 16.w),
+                      DMSansText(
+                        'Settings',
+                        color: Colors.white,
+                        fontWeight: FontWeight.w400,
+                        fontSize: 16.sp,
+                      ),
+                    ],
                   ),
-                ),
-              ),
-              child: ShaderMask(
-                blendMode: BlendMode.srcIn,
-                shaderCallback: (Rect bounds) => LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    lightOrangeColor,
-                    darkOrangeColor,
-                  ],
-                  tileMode: TileMode.mirror,
-                ).createShader(bounds),
-                child: Row(
-                  children: [
-                    SvgPicture.asset(
-                      'assets/svg/drawer/profile/settings.svg',
-                      width: 21.w,
-                      height: 21.h,
-                    ),
-                    SizedBox(width: 16.w),
-                    DMSansText(
-                      'Settings',
-                      color: Colors.white,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 16.sp,
-                    ),
-                  ],
                 ),
               ),
             ),
