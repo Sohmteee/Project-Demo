@@ -53,7 +53,14 @@ class TransferSuccessScreen extends StatelessWidget {
               ],
             ),
             SizedBox(height: 35.h),
-            
+            Text(
+              'Transfer Success',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 24.sp,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
           ],
         ),
       ),
