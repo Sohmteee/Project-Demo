@@ -194,6 +194,7 @@ class EditProfileScreen extends StatelessWidget {
                   Container(
                     padding: EdgeInsets.all(6.sp),
                     decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.r),
                       gradient: LinearGradient(
                         begin: Alignment.centerLeft,
                         end: Alignment.centerRight,
@@ -207,6 +208,7 @@ class EditProfileScreen extends StatelessWidget {
                       'assets/svg/drawer/profile/settings/whatsapp.svg',
                     ),
                   ),
+                  SizedBox(width: 6.w),
                   /* ShaderMask(
                     blendMode: BlendMode.srcIn,
                     shaderCallback: (Rect bounds) => LinearGradient(
