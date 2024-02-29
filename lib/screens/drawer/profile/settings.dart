@@ -38,7 +38,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           Divider(
             color: HexColor('#D8D8D8'),
           ),
-          settingsListTile(context),
+          settingsListTile(context, title: ''Edit Profile''),
           Divider(
             color: HexColor('#D8D8D8'),
           ),
@@ -60,10 +60,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
     );
   }
 
-  ListTile settingsListTile(BuildContext context, {required String title, required  icon}) {
+  ListTile settingsListTile(BuildContext context, {required String title, void Function()? onTap}) {
     return ListTile(
+      onTap: onTap,
       title: DMSansText(
-        'Edit Profile',
+        title,
         color: Theme.of(context).colorScheme.secondary,
         fontSize: 16.sp,
         fontWeight: FontWeight.w400,
