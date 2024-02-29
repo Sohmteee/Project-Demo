@@ -108,6 +108,7 @@ class _WalletScreenState extends State<WalletScreen> {
                           onTap: () {
                             showModalBottomSheet(
                                 context: context,
+                                
                                 builder: (context) {
                                   return Container(
                                     decoration: BoxDecoration(
@@ -122,9 +123,9 @@ class _WalletScreenState extends State<WalletScreen> {
                                           decoration: BoxDecoration(
                                             color: HexColor('#B2B2B2')
                                                 .withOpacity(.5),
-                                          borderRadius: BorderRadius.vertical(
-                                            top: Radius.circular(20.r),
-                                          
+                                            borderRadius:
+                                                BorderRadius.circular(20.r),
+                                          ),
                                         ),
                                       ],
                                     ),
