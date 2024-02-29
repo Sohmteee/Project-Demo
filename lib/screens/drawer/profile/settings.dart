@@ -58,11 +58,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
           Divider(
             color: HexColor('#D8D8D8'),
           ),
-          settingsListTile(context, title: ''),
+          settingsListTile(context, title: 'Privacy & Security'),
           Divider(
             color: HexColor('#D8D8D8'),
           ),
-          settingsListTile(context, title: ''),
+          settingsListTile(context, title: 'Help'),
+          Divider(
+            color: HexColor('#D8D8D8'),
+          ),
         ],
       ),
     );
