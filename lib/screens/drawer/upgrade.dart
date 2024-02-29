@@ -28,7 +28,8 @@ class UpgradeScreen extends StatelessWidget {
               horizontal: 22.8.w,
               vertical: 26.h,
             ),
-            child: Column(
+            child: ListView(
+              physics: const BouncingScrollPhysics(),
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -139,6 +140,12 @@ class UpgradeScreen extends StatelessWidget {
                       ),
                     ),
                   ],
+                ),
+                DMSansText(
+                  '',
+                  color: Colors.white,
+                  fontSize: 17.sp,
+                  fontWeight: FontWeight.w500,
                 ),
               ],
             ),
