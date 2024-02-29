@@ -109,11 +109,13 @@ class EditProfileScreen extends StatelessWidget {
               SizedBox(height: 22.h),
               AppTextField(
                 hintText: 'Full name',
+                color: HexColor('#979797'),
                 icon: const Icon(IconlyLight.profile),
               ),
               SizedBox(height: 22.h),
               AppTextField(
                 hintText: 'abc@gmail.com',
+                color: HexColor('#979797'),
                 icon: const Icon(IconlyLight.message),
               ),
               SizedBox(height: 22.h),
@@ -125,6 +127,7 @@ class EditProfileScreen extends StatelessWidget {
               SizedBox(height: 22.h),
               AppTextField(
                 hintText: 'Country',
+                color: HexColor('#979797'),
                 trailing: Icon(
                   Icons.chevron_right,
                   color: HexColor('#979797'),

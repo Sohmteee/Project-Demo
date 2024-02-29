@@ -108,7 +108,7 @@ class _AppTextFieldState extends State<AppTextField> {
                 hintStyle: TextStyle(
                   fontSize: 16.sp,
                   fontWeight: FontWeight.w400,
-                  color: color ?? linkTextColor,
+                  color: widget.color ?? linkTextColor,
                 ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12.r),
