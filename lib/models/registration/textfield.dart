@@ -25,7 +25,6 @@ class AppTextField extends StatefulWidget {
     this.textInputAction = TextInputAction.next,
     this.textCapitalization = TextCapitalization.none,
     this.maxLines,
-    this.inputType,
   });
 
   /// The hint text to display in the text field.
