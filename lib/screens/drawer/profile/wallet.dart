@@ -194,11 +194,11 @@ class _WalletScreenState extends State<WalletScreen> {
                     ),
                     trailing: Column(
                       children: [
-                        DMSansText(
-                          '20 - 01 2023, 06:00 PM',
-                          color: HexColor('#9E9E9E'),
+                        AirBnBText(
+                          '-\$1,200.00',
+                          color: HexColor('#D86045'),
                           fontSize: 14.sp,
-                          fontWeight: FontWeight.w400,
+                          fontWeight: FontWeight.w600,
                         ),
                       ],
                     ),
