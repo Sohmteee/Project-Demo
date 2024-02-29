@@ -161,6 +161,26 @@ class UpgradeScreen extends StatelessWidget {
                         .toList(),
                   ),
                 ),
+                SizedBox(height: 11.h),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    DMSansText(
+                      '5. ',
+                      color: Colors.white,
+                      fontSize: 17.sp,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    Expanded(
+                      child: DMSansText(
+                        'Personalized Domain Name',
+                        color: Colors.white,
+                        fontSize: 17.sp,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
