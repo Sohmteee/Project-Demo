@@ -165,7 +165,7 @@ class EditProfileScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 30.h),
-              Row(
+              /* Row(
                 children: [
                   Container(
                     padding: EdgeInsets.all(6.sp),
@@ -285,6 +285,8 @@ class EditProfileScreen extends StatelessWidget {
                   ), */
                 ],
               ),
+               */
+              
               SizedBox(height: 200.h),
             ],
           ),
