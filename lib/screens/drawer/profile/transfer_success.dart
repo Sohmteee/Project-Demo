@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:yeerlo/colors/app_colors.dart';
+import 'package:yeerlo/models/text.dart';
 
 class TransferSuccessScreen extends StatelessWidget {
   const TransferSuccessScreen({super.key});
@@ -53,13 +54,17 @@ class TransferSuccessScreen extends StatelessWidget {
               ],
             ),
             SizedBox(height: 35.h),
-            Text(
+            AirBnBText(
               'Transfer Success',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 24.sp,
-                fontWeight: FontWeight.w500,
-              ),
+              color: Colors.black,
+              fontSize: 24.sp,
+              fontWeight: FontWeight.w600,
+            ),
+            DMSansText(
+              'Your money has been successfully sent to Nayantara V.',
+              color: Colors.grey[400],
+              fontSize: 12.6.sp,
+              fontWeight: FontWeight.w400,
             ),
           ],
         ),
