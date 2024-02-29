@@ -183,6 +183,23 @@ class UpgradeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
+                SizedBox(height: 20.h),
+                Container(
+                  width: double.infinity,
+                  padding: ei,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(12.r),
+                  ),
+                  child: Center(
+                    child: AirBnBText(
+                      'Get Started',
+                      color: darkOrangeColor,
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
