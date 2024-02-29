@@ -118,7 +118,7 @@ class _WalletScreenState extends State<WalletScreen> {
                                 constraints: BoxConstraints.tight(
                                   Size(
                                     MediaQuery.of(context).size.width,
-                                    MediaQuery.of(context).size.height * .4,
+                                    MediaQuery.of(context).size.height * .5,
                                   ),
                                 ),
                                 builder: (context) {
@@ -134,9 +134,17 @@ class _WalletScreenState extends State<WalletScreen> {
                                           fontSize: 18.sp,
                                           fontWeight: FontWeight.w700,
                                         ),
-                                        SizedBox(height: 55.h),
+                                        Spacer()
                                         AppTextField(
                                           hintText: 'Select Currency',
+                                          trailing: Icon(
+                                            Icons.chevron_right,
+                                            color: HexColor('#979797'),
+                                          ),
+                                        ),
+                                        SizedBox(height: 22.h),
+                                        AppTextField(
+                                          hintText: 'Enter Amount',
                                           trailing: Icon(
                                             Icons.chevron_right,
                                             color: HexColor('#979797'),
