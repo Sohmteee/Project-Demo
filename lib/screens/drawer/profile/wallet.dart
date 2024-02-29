@@ -108,7 +108,11 @@ class _WalletScreenState extends State<WalletScreen> {
                       children: [
                         GestureDetector(
                           onTap: () {
-                            showModalSheet(context);
+                            showModalSheet(
+                              context,
+                              title: 'Fund Wallet',
+                              buttonText: 'FUND',
+                            );
                           },
                           child: Row(
                             children: [
@@ -164,7 +168,8 @@ class _WalletScreenState extends State<WalletScreen> {
     );
   }
 
-  Future<dynamic> showModalSheet(BuildContext context, {String? title, String? button}) {
+  Future<dynamic> showModalSheet(BuildContext context,
+      {required String title, required String buttonText}) {
     return showModalBottomSheet(
         context: context,
         shape: RoundedRectangleBorder(
@@ -186,7 +191,7 @@ class _WalletScreenState extends State<WalletScreen> {
               children: [
                 // SizedBox(height: 18.h),
                 DMSansText(
-                  'Fund Wallet',
+                  title,
                   color: Colors.black,
                   fontSize: 18.sp,
                   fontWeight: FontWeight.w700,
@@ -209,7 +214,7 @@ class _WalletScreenState extends State<WalletScreen> {
                 ),
                 const Spacer(),
                 ArrowButton(
-                  text: 'FUND',
+                  text: buttonText,
                   onPressed: () {},
                 ),
                 const Spacer(),
