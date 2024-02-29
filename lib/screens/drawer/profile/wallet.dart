@@ -184,6 +184,7 @@ class _WalletScreenState extends State<WalletScreen> {
             Expanded(
               child: ListView.builder(
                 itemCount: 10,
+                physics: const BouncingScrollPhysics(),
                 itemBuilder: (context, index) {
                   return ListTile(
                     contentPadding: EdgeInsets.symmetric(vertical: 18.h),
