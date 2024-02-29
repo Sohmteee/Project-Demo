@@ -36,10 +36,14 @@ class TransferSuccessScreen extends StatelessWidget {
                   width: 160.w,
                   height: 153.h,
                 ),
-                SvgPicture.asset(
-                  'assets/svg/drawer/profile/wallet/done.svg',
-                  width: 80.w,
-                  height: 60.h,
+                Positioned(
+                  left: 42.w,
+                  bottom: 39.h,
+                  child: SvgPicture.asset(
+                    'assets/svg/drawer/profile/wallet/done.svg',
+                    width: 80.w,
+                    height: 60.h,
+                  ),
                 ),
               ],
             ),
