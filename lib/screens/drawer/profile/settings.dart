@@ -45,6 +45,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             trailing: Icon(
               Icons.chevron_right,
               color: Theme.of(context).colorScheme.secondary,
+              size: 24.sp,
             ),
           ),
         ],
