@@ -25,8 +25,8 @@ class _MyTicketsScreenState extends State<MyTicketsScreen> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        titleSpacing: 0.w,
         backgroundColor: Colors.transparent,
+        automaticallyImplyLeading: false,
         title: AirBnBText(
           'My Tickets',
           color: Theme.of(context).colorScheme.secondary,

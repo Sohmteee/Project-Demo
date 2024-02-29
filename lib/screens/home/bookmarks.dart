@@ -23,8 +23,8 @@ class _BookmarksScreenState extends State<BookmarksScreen> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        titleSpacing: 0.w,
         backgroundColor: Colors.transparent,
+        automaticallyImplyLeading: false,
         title: AirBnBText(
           'Bookmarks',
           color: Theme.of(context).colorScheme.secondary,
