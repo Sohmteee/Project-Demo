@@ -142,10 +142,10 @@ class UpgradeScreen extends StatelessWidget {
                   ],
                 ),
                 DMSansText(
-                  '',
+                  '. Email Marketing',
                   color: Colors.white,
-                  fontSize: 17.sp,
-                  fontWeight: FontWeight.w500,
+                  fontSize: 12.sp,
+                  fontWeight: FontWeight.w400,
                 ),
               ],
             ),
