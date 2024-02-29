@@ -313,7 +313,7 @@ class ProfileScreen extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 3.5.w),
-              child: Chip(
+              child: ChoiceChip(
                 color: MaterialStateColor.resolveWith(
                     (states) => HexColor('#6B7AED')),
                 label: AirBnBText(
