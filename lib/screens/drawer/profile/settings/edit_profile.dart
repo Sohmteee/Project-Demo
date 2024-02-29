@@ -19,54 +19,28 @@ class EditProfileScreen extends StatelessWidget {
         leading: BackButton(color: Theme.of(context).colorScheme.secondary),
       ),
       body: Center(
-        child: Column(
-          children: [
-            Image.asset(
-              'assets/images/drawer/profile/profile.png',
-              width: 96.w,
-              height: 96.h,
-            ),
-            SizedBox(height: 22.h),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ZoomTapAnimation(
-                  onTap: () {
-                    // Navigator.pushNamed(context, '/wallet');
-                  },
-                  child: Container(
-                    padding:
-                        EdgeInsets.symmetric(horizontal: 11.w, vertical: 6.w),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8.r),
-                      gradient: LinearGradient(
-                        colors: [
-                          lightOrangeColor,
-                          darkOrangeColor,
-                        ],
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                      ),
-                    ),
-                    child: DMSansText(
-                      'Upload New Image',
-                      color: Colors.white,
-                      fontWeight: FontWeight.w700,
-                      fontSize: 12.sp,
-                    ),
-                  ),
-                ),
-                SizedBox(width: 18.sp),
-                ZoomTapAnimation(
-                  onTap: () {
-                    // Navigator.pushNamed(context, '/settings');
-                  },
-                  child: Container(
-                    padding:
-                        EdgeInsets.symmetric(horizontal: 11.w, vertical: 6.w),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8.r),
-                      border: GradientBoxBorder(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 24.w),
+          child: Column(
+            children: [
+              Image.asset(
+                'assets/images/drawer/profile/profile.png',
+                width: 96.w,
+                height: 96.h,
+              ),
+              SizedBox(height: 22.h),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ZoomTapAnimation(
+                    onTap: () {
+                      // Navigator.pushNamed(context, '/wallet');
+                    },
+                    child: Container(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 11.w, vertical: 6.w),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8.r),
                         gradient: LinearGradient(
                           colors: [
                             lightOrangeColor,
@@ -76,35 +50,64 @@ class EditProfileScreen extends StatelessWidget {
                           end: Alignment.bottomCenter,
                         ),
                       ),
-                    ),
-                    child: ShaderMask(
-                      blendMode: BlendMode.srcIn,
-                      shaderCallback: (Rect bounds) => LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [
-                          lightOrangeColor,
-                          darkOrangeColor,
-                        ],
-                        tileMode: TileMode.mirror,
-                      ).createShader(bounds),
                       child: DMSansText(
-                        'Select From Gallery',
+                        'Upload New Image',
                         color: Colors.white,
                         fontWeight: FontWeight.w700,
                         fontSize: 12.sp,
                       ),
                     ),
                   ),
-                ),
-              ],
-            ),
-            SizedBox(height: 22.h),
-            AppTextField(
-              hintText: 'Full Name',
-              icon: const Icon(IconlyLight.profile),
-            ),
-          ],
+                  SizedBox(width: 18.sp),
+                  ZoomTapAnimation(
+                    onTap: () {
+                      // Navigator.pushNamed(context, '/settings');
+                    },
+                    child: Container(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 11.w, vertical: 6.w),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8.r),
+                        border: GradientBoxBorder(
+                          gradient: LinearGradient(
+                            colors: [
+                              lightOrangeColor,
+                              darkOrangeColor,
+                            ],
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                          ),
+                        ),
+                      ),
+                      child: ShaderMask(
+                        blendMode: BlendMode.srcIn,
+                        shaderCallback: (Rect bounds) => LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [
+                            lightOrangeColor,
+                            darkOrangeColor,
+                          ],
+                          tileMode: TileMode.mirror,
+                        ).createShader(bounds),
+                        child: DMSansText(
+                          'Select From Gallery',
+                          color: Colors.white,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 12.sp,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 22.h),
+              AppTextField(
+                hintText: 'Full name',
+                icon: const Icon(IconlyLight.profile),
+              ),
+            ],
+          ),
         ),
       ),
     );
