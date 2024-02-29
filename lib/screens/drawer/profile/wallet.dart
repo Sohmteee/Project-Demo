@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/colors/hex_color.dart';
+import 'package:yeerlo/models/registration/button.dart';
 import 'package:yeerlo/models/registration/textfield.dart';
 import 'package:yeerlo/models/text.dart';
 
@@ -134,7 +135,7 @@ class _WalletScreenState extends State<WalletScreen> {
                                           fontSize: 18.sp,
                                           fontWeight: FontWeight.w700,
                                         ),
-                                        Spacer()
+                                        const Spacer(),
                                         AppTextField(
                                           hintText: 'Select Currency',
                                           trailing: Icon(
@@ -150,6 +151,12 @@ class _WalletScreenState extends State<WalletScreen> {
                                             color: HexColor('#979797'),
                                           ),
                                         ),
+                                        const Spacer(),
+                                        ArrowButton(
+                                          text: 'FUND',
+                                          onPressed: () {},
+                                        ),
+                                        const Spacer(),
                                       ],
                                     ),
                                   );
