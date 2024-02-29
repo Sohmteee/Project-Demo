@@ -61,12 +61,24 @@ class UpgradeScreen extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: 21.h),
-                DMSansText(
-                  '1. Event Livestreaming to Youtube and Twitch',
-                  color: Colors.white,
-                  fontSize: 17.sp,
-                  fontWeight: FontWeight.w500,
-                  textAlign: TextAlign.center,
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    DMSansText(
+                      '1. ',
+                      color: Colors.white,
+                      fontSize: 17.sp,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    Expanded(
+                      child: DMSansText(
+                        'Event Livestreaming to Youtube and Twitch',
+                        color: Colors.white,
+                        fontSize: 17.sp,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
