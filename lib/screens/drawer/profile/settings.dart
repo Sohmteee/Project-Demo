@@ -23,7 +23,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
         ),
       ),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Center(
             child: SvgPicture.asset(
