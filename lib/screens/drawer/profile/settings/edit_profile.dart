@@ -246,8 +246,16 @@ class EditProfileScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(width: 6.w),
-                  Image.asset(
-                    'assets/images/drawer/profile/settings/instagram-background.png',
+                  Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/drawer/profile/settings/instagram-background.png',
+                        height: 30.h,
+                        width: 30.w,
+                      ),
+                      SvgPicture.asset('')
+                    ],
                   ),
 
                   /* ShaderMask(
