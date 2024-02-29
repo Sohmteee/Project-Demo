@@ -353,7 +353,6 @@ class ProfileScreen extends StatelessWidget {
                       (states) => HexColor('#FF8D5D')),
                 ),
                 child: Chip(
-                  
                   label: AirBnBText(
                     'Music',
                     color: Colors.white,
@@ -371,8 +370,6 @@ class ProfileScreen extends StatelessWidget {
                       (states) => HexColor('#7D67EE')),
                 ),
                 child: Chip(
-                  color: MaterialStateColor.resolveWith(
-                      (states) => HexColor('#7D67EE')),
                   label: AirBnBText(
                     'Art',
                     color: Colors.white,
@@ -384,27 +381,35 @@ class ProfileScreen extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 3.5.w),
-              child: Chip(
-                color: MaterialStateColor.resolveWith(
-                    (states) => HexColor('#29D697')),
-                label: AirBnBText(
-                  'Movie',
-                  color: Colors.white,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 13.sp,
+              child: ChipTheme(
+                data: ChipThemeData(
+                  backgroundColor: MaterialStateColor.resolveWith(
+                      (states) => HexColor('#29D697')),
+                ),
+                child: Chip(
+                  label: AirBnBText(
+                    'Movie',
+                    color: Colors.white,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 13.sp,
+                  ),
                 ),
               ),
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 3.5.w),
-              child: Chip(
-                color: MaterialStateColor.resolveWith(
-                    (states) => HexColor('#39D1F2')),
-                label: AirBnBText(
-                  'Others',
-                  color: Colors.white,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 13.sp,
+              child: ChipTheme(
+                data: ChipThemeData(
+                  backgroundColor: MaterialStateColor.resolveWith(
+                      (states) => HexColor('#39D1F2')),
+                ),
+                child: Chip(
+                  label: AirBnBText(
+                    'Others',
+                    color: Colors.white,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 13.sp,
+                  ),
                 ),
               ),
             ),
