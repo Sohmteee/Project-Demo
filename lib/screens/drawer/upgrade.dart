@@ -26,8 +26,12 @@ class UpgradeScreen extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 22.8.w),
+                padding: EdgeInsets.symmetric(
+                  horizontal: 22.8.w,
+                  vertical: 26.h,
+                ),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     DMSansText(
                       'Yeerlo',
