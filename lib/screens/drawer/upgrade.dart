@@ -144,10 +144,15 @@ class UpgradeScreen extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.only(left: 16.w),
                   child: Column(
-                    children: ['Email Marketing', 'Push Notification']
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      'Email Marketing',
+                      'Push Notification',
+                      'Social Media Integration'
+                    ]
                         .map(
                           (item) => DMSansText(
-                            '. ',
+                            '. $item',
                             color: Colors.white,
                             fontSize: 12.sp,
                             fontWeight: FontWeight.w400,
