@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/models/text.dart';
+import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -29,10 +30,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
         children: [
           SizedBox(height: 30.h),
           Center(
-            child: SvgPicture.asset(
-              'assets/svg/drawer/profile/settings/upgrade-to-pro.svg',
-              width: 343.w,
-              height: 56.h,
+            child: ZoomTapAnimation(
+              onTap: () => Navigator.pushNamed(context, '/upgrade'),
+              child: SvgPicture.asset(
+                'assets/svg/drawer/profile/settings/upgrade-to-pro.svg',
+                width: 343.w,
+                height: 56.h,
+              ),
             ),
           ),
           SizedBox(height: 40.h),
