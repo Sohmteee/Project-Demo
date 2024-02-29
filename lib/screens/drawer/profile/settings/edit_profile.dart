@@ -193,7 +193,14 @@ class EditProfileScreen extends StatelessWidget {
                   SizedBox(width: 16.w),
                   Container(
                     decoration: BoxDecoration(
-                      gradient: 
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          HexColor('#5BD066'),
+                          HexColor(''),
+                        ],
+                      ),
                     ),
                     child: SvgPicture.asset(
                       'assets/svg/drawer/profile/settings/whatsapp.svg',
