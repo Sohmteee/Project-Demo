@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/colors/hex_color.dart';
+import 'package:yeerlo/models/registration/textfield.dart';
 import 'package:yeerlo/models/text.dart';
 
 class WalletScreen extends StatefulWidget {
@@ -125,6 +126,7 @@ class _WalletScreenState extends State<WalletScreen> {
                                         fontWeight: FontWeight.w700,
                                       ),
                                       SizedBox(height: 55.h),
+                                      AppTextField(hintText: 'Select Currency', icon: icon)
                                     ],
                                   );
                                 });
