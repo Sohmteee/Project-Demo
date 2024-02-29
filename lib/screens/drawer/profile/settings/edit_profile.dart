@@ -164,7 +164,16 @@ class EditProfileScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 30.h),
-              
+              Row(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12.r),
+                      color: HexColor('#EFE9E9'),
+                    ),
+                  )
+                ],
+              ),
               SizedBox(height: 52.h),
             ],
           ),
