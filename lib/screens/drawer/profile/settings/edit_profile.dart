@@ -3,6 +3,7 @@ import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:yeerlo/colors/app_colors.dart';
+import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/models/registration/textfield.dart';
 import 'package:yeerlo/models/text.dart';
 import 'package:yeerlo/providers/theme.dart';
@@ -113,7 +114,6 @@ class EditProfileScreen extends StatelessWidget {
                 icon: const Icon(IconlyLight.message),
               ),
               SizedBox(height: 22.h),
-              
             ],
           ),
         ),
@@ -121,8 +121,10 @@ class EditProfileScreen extends StatelessWidget {
     );
   }
 
-  buildColoredTextField(BuildContext context, String hintText, IconData icon) {
-    final themeProvider = context.watch<ThemeProvider>();
+  buildColoredTextField(BuildContext context,
+      {required ThemeProvider themeProvider,
+      required String hintText,
+      IconData? icon}) {
     Container(
       padding: EdgeInsets.symmetric(horizontal: 15.w),
       decoration: BoxDecoration(
@@ -136,22 +138,22 @@ class EditProfileScreen extends StatelessWidget {
       ),
       child: Row(
         children: [
-          if (widget.icon != null) widget.icon!,
+          if (icon != null) icon!,
           Expanded(
             child: TextField(
-              controller: widget.controller,
+              controller: controller,
               cursorColor: darkOrangeColor,
-              obscureText: widget.isPassword ? !showPassword : false,
-              keyboardType: widget.keyboardType,
-              textInputAction: widget.textInputAction,
-              textCapitalization: widget.textCapitalization,
+              obscureText: isPassword ? !showPassword : false,
+              keyboardType: keyboardType,
+              textInputAction: textInputAction,
+              textCapitalization: textCapitalization,
               style: TextStyle(
                 fontSize: 16.sp,
                 fontWeight: FontWeight.w400,
                 color: Theme.of(context).colorScheme.secondary,
               ),
               decoration: InputDecoration(
-                hintText: widget.hintText,
+                hintText: hintText,
                 hintStyle: TextStyle(
                   fontSize: 16.sp,
                   fontWeight: FontWeight.w400,
@@ -168,8 +170,8 @@ class EditProfileScreen extends StatelessWidget {
               ),
             ),
           ),
-          if (widget.trailing != null) widget.trailing!,
-          if (widget.isPassword)
+          if (trailing != null) trailing!,
+          if (isPassword)
             GestureDetector(
               onTap: () {
                 setState(() {
@@ -185,6 +187,5 @@ class EditProfileScreen extends StatelessWidget {
         ],
       ),
     );
-
   }
 }
