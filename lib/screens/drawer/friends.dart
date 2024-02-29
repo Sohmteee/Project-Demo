@@ -270,7 +270,7 @@ class _FindFriendsScreenState extends State<FindFriendsScreen> {
       padding: EdgeInsets.only(
         left: 24.w,
         right: 24.w,
-        top: 26.h,
+        top: 10.h,
         bottom: 0.h,
       ),
       child: Row(
