@@ -367,8 +367,8 @@ class _FindFriendsScreenState extends State<FindFriendsScreen> {
                 )
               : GestureDetector(
                   onTap: () => setState(() {
-                    pageIndex = 0;
                     if (pageController.hasClients) {
+                      pageIndex = 0;
                       pageController.animateToPage(
                         0,
                         duration: .5.seconds,
@@ -430,8 +430,8 @@ class _FindFriendsScreenState extends State<FindFriendsScreen> {
                 )
               : GestureDetector(
                   onTap: () => setState(() {
-                    pageIndex = 1;
-                    if (mounted) {
+                    if (pageController.hasClients) {
+                      pageIndex = 1;
                       pageController.animateToPage(
                         1,
                         duration: .5.seconds,
