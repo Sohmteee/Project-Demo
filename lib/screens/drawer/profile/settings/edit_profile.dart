@@ -229,7 +229,7 @@ class EditProfileScreen extends StatelessWidget {
                   ),
                   SizedBox(width: 6.w),
                   Container(
-                    padding: EdgeInsets.all(6.sp),
+                    padding: EdgeInsets.all(8.sp),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.r),
                       gradient: LinearGradient(
