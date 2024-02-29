@@ -27,6 +27,7 @@ class TransferSuccessScreen extends StatelessWidget {
       body: Container(
         width: double.infinity,
         padding: EdgeInsets.symmetric(horizontal: 16.66.w),
+        deco
         child: Column(
           children: [
             Stack(
