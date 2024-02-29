@@ -53,7 +53,7 @@ class ArrowButton extends StatelessWidget {
           children: [
             Center(
               child: AirBnBText(
-                text,
+                text.toUpperCase(),
                 color: Colors.white,
                 fontSize: 16.sp,
                 fontWeight: FontWeight.w500,
