@@ -888,8 +888,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 Navigator.push(
                   context,
                   PageTransition(
-                      child: const UpgradeScreen(),
-                      type: PageTransitionType.bottomToTop),
+                    child: const UpgradeScreen(),
+                    type: PageTransitionType.bottomToTop,
+                  ),
                 );
               },
               child: Container(
