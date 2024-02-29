@@ -115,10 +115,16 @@ class _WalletScreenState extends State<WalletScreen> {
                                   ),
                                 ),
                                 showDragHandle: true,
+                                constraints: BoxConstraints.tight(
+                                  Size(
+                                    MediaQuery.of(context).size.width,
+                                    MediaQuery.of(context).size.height * .4,
+                                  ),
+                                ),
                                 builder: (context) {
                                   return Padding(
                                     padding:
-                                        EdgeInsets.symmetric(horizontal: 29.ws),
+                                        EdgeInsets.symmetric(horizontal: 29.w),
                                     child: Column(
                                       children: [
                                         // SizedBox(height: 18.h),
