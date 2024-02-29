@@ -225,10 +225,9 @@ class _WalletScreenState extends State<WalletScreen> {
                 ArrowButton(
                   text: buttonText,
                   onPressed: () {
-                    if(buttonText == 'WITHDRAW') {
-                      Navigator.pushNamed(context, '/withdraw-re')
-                    }
-                    else {
+                    if (buttonText == 'WITHDRAW') {
+                      Navigator.pushNamed(context, '/transfer-success');
+                    } else {
                       Navigator.pop(context);
                     }
                   },
