@@ -45,6 +45,7 @@ dependencies:
   flutter_svg: ^2.0.9
   flutter_typeahead: ^5.0.1
   gradient_borders: ^1.0.0
+  page_transition: ^2.1.0
   path_provider: ^2.1.1
   pinput: ^3.0.1
   provider: ^6.1.1
@@ -93,7 +94,6 @@ flutter:
     - assets/svg/drawer/profile/
     - assets/svg/drawer/profile/wallet/
     - assets/svg/drawer/profile/settings/
-    
 
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
