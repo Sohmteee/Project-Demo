@@ -224,7 +224,14 @@ class _WalletScreenState extends State<WalletScreen> {
                 const Spacer(),
                 ArrowButton(
                   text: buttonText,
-                  onPressed: () {},
+                  onPressed: () {
+                    if(buttonText == 'WITHDRAW') {
+                      
+                    }
+                    else {
+                      Navigator.pop(context);
+                    }
+                  },
                 ),
                 const Spacer(),
               ],
