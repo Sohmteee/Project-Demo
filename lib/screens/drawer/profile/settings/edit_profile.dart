@@ -216,10 +216,10 @@ class EditProfileScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10.r),
                       gradient: LinearGradient(
                         begin: Alignment.topLeft,
-                        end: Alignment.centerRight,
+                        end: Alignment.bottomRight,
                         colors: [
-                          HexColor('#0163E0'),
                           HexColor('#18ACFE'),
+                          HexColor('#0163E0'),
                         ],
                       ),
                     ),
