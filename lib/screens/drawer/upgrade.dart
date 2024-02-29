@@ -23,14 +23,14 @@ class UpgradeScreen extends StatelessWidget {
           ),
         ),
         child: SafeArea(
-          child: Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: 22.8.w,
-                  vertical: 26.h,
-                ),
-                child: Row(
+          child: Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: 22.8.w,
+              vertical: 26.h,
+            ),
+            child: Column(
+              children: [
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     DMSansText(
@@ -48,8 +48,9 @@ class UpgradeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ],
+                SizedBox(height: 20.h),
+              ],
+            ),
           ),
         ),
       ),
