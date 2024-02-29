@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
@@ -286,7 +285,12 @@ class EditProfileScreen extends StatelessWidget {
                 ],
               ),
                */
-              
+              buildColoredTextField(
+                context,
+                themeProvider: themeProvider,
+                hintText: 'Facebook Link',
+                keyboardType: TextInputType.url,
+              ),
               SizedBox(height: 200.h),
             ],
           ),
