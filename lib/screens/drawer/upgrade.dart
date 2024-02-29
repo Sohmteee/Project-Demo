@@ -42,11 +42,13 @@ class UpgradeScreen extends StatelessWidget {
                       fontSize: 16.sp,
                       fontWeight: FontWeight.w800,
                     ),
-                    const RotatedBox(
-                      quarterTurns: 1,
-                      child: Icon(
-                        Icons.chevron_right,
-                        color: Colors.white,
+                    widget(
+                      child: const RotatedBox(
+                        quarterTurns: 1,
+                        child: Icon(
+                          Icons.chevron_right,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ],
