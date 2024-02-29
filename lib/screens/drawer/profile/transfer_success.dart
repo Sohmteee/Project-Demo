@@ -60,11 +60,15 @@ class TransferSuccessScreen extends StatelessWidget {
               fontSize: 24.sp,
               fontWeight: FontWeight.w600,
             ),
-            DMSansText(
-              'Your money has been successfully sent to Nayantara V.',
-              color: Colors.grey[400],
-              fontSize: 12.6.sp,
-              fontWeight: FontWeight.w400,
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 40.w),
+              child: DMSansText(
+                'Your money has been successfully sent to Nayantara V.',
+                color: Colors.grey[400],
+                fontSize: 12.6.sp,
+                fontWeight: FontWeight.w400,
+                textAlign: TextAlign.center,
+              ),
             ),
           ],
         ),
