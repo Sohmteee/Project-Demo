@@ -82,11 +82,15 @@ class _FindFriendsScreenState extends State<FindFriendsScreen> {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       pageController.addListener(() {
         if (pageController.page!.round() != pageIndex) {
-          pageController.animateToPage(, duration: duration, curve: curve)
+          pageController.animateToPage(
+            pageIndex,
+            duration: .5.seconds,
+            curve: Curves.easeInOut,
+          );
+          setState(() {
+            pageIndex = pageController.page!.round();
+          });
         }
-        setState(() {
-          pageIndex = pageController.page!.round();
-        });
       });
     });
   }
