@@ -189,7 +189,31 @@ class EditProfileScreen extends StatelessWidget {
                       color: HexColor('#807A7A'),
                     ),
                   ),
-                  Shader
+                  SizedBox(width: 16.w),
+
+                  ShaderMask(
+                    blendMode: BlendMode.srcIn,
+                    shaderCallback: (Rect bounds) => LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        lightOrangeColor,
+                        darkOrangeColor,
+                      ],
+                      tileMode: TileMode.mirror,
+                    ).createShader(bounds),
+                    child: Container(
+                      padding: EdgeInsets.all(6.sp),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(16.r),
+                        color: Colors.white,
+                      ),
+                      child: Icon(
+                        Icons.add,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
                 ],
               ),
               SizedBox(height: 200.h),
