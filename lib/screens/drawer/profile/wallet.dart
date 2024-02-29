@@ -179,7 +179,15 @@ class _WalletScreenState extends State<WalletScreen> {
                 ),
               ],
             ),
-            SizedBox(height: 1)
+            SizedBox(height: 16.h),
+            ListView.builder(
+              itemCount: 10,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  leading: ,
+                );
+              },
+            ),
           ],
         ),
       ),
