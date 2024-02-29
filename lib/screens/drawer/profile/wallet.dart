@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:yeerlo/colors/app_colors.dart';
@@ -104,21 +105,24 @@ class _WalletScreenState extends State<WalletScreen> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Row(
-                          children: [
-                            SvgPicture.asset(
-                              'assets/svg/drawer/profile/wallet/money-recive.svg',
-                              width: 20.w,
-                              height: 20.h,
-                            ),
-                            SizedBox(width: 10.w),
-                            DMSansText(
-                              'Fund',
-                              color: Colors.black,
-                              fontSize: 16.sp,
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ],
+                        GestureDetector(
+                          on
+                          child: Row(
+                            children: [
+                              SvgPicture.asset(
+                                'assets/svg/drawer/profile/wallet/money-recive.svg',
+                                width: 20.w,
+                                height: 20.h,
+                              ),
+                              SizedBox(width: 10.w),
+                              DMSansText(
+                                'Fund',
+                                color: Colors.black,
+                                fontSize: 16.sp,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ],
+                          ),
                         ),
                         const Spacer(),
                         Container(
