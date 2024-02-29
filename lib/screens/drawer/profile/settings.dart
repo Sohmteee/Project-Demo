@@ -22,14 +22,20 @@ class _SettingsScreenState extends State<SettingsScreen> {
           style: TextStyle(color: Theme.of(context).colorScheme.secondary),
         ),
       ),
-      body: Column(
+      body: ListView(
         children: [
+          SizedBox(height: 30.h),
           Center(
             child: SvgPicture.asset(
               'assets/svg/drawer/profile/settings/upgrade-to-pro.svg',
               width: 343.w,
               height: 56.h,
             ),
+          ),
+          SizedBox(height: 40.h),
+          const Divider(),
+          ListTile(
+            
           ),
         ],
       ),
