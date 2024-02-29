@@ -177,6 +177,19 @@ class EditProfileScreen extends StatelessWidget {
                       color: HexColor('#807A7A'),
                     ),
                   ),
+                  SizedBox(width: 16.w),
+                  Container(
+                    padding: EdgeInsets.all(6.sp),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16.r),
+                      color: HexColor('#EFE9E9'),
+                    ),
+                    child: Icon(
+                      Icons.copy,
+                      color: HexColor('#807A7A'),
+                    ),
+                  ),
+                  Shader
                 ],
               ),
               SizedBox(height: 200.h),
