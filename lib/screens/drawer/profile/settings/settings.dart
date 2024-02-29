@@ -58,27 +58,27 @@ class _SettingsScreenState extends State<SettingsScreen> {
           Divider(
             color: HexColor('#D8D8D8'),
           ),
-          settingsListTile(context, title: 'Change Password'),
+          settingsListTile(context, title: 'Change Password', onTap:() => Navigator.pushNamed(context, '/change-password'),
           Divider(
             color: HexColor('#D8D8D8'),
           ),
-          settingsListTile(context, title: 'Withdrawal Info'),
+          settingsListTile(context, title: 'Withdrawal Info', onTap:() => ),
           Divider(
             color: HexColor('#D8D8D8'),
           ),
-          settingsListTile(context, title: 'Notification'),
+          settingsListTile(context, title: 'Notification', onTap:() => ),
           Divider(
             color: HexColor('#D8D8D8'),
           ),
-          settingsListTile(context, title: 'Terms & Conditions'),
+          settingsListTile(context, title: 'Terms & Conditions', onTap:() => ),
           Divider(
             color: HexColor('#D8D8D8'),
           ),
-          settingsListTile(context, title: 'Privacy & Security'),
+          settingsListTile(context, title: 'Privacy & Security', onTap:() => ),
           Divider(
             color: HexColor('#D8D8D8'),
           ),
-          settingsListTile(context, title: 'Help'),
+          settingsListTile(context, title: 'Help', onTap:() => ),
           Divider(
             color: HexColor('#D8D8D8'),
           ),
