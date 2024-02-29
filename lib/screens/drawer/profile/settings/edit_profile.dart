@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
+import 'package:provider/provider.dart';
 import 'package:yeerlo/colors/app_colors.dart';
 import 'package:yeerlo/colors/hex_color.dart';
 import 'package:yeerlo/models/registration/textfield.dart';
@@ -14,6 +15,8 @@ class EditProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context);
+
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
       appBar: AppBar(
@@ -114,6 +117,11 @@ class EditProfileScreen extends StatelessWidget {
                 icon: const Icon(IconlyLight.message),
               ),
               SizedBox(height: 22.h),
+              buildColoredTextField(
+                context,
+                themeProvider: themeProvider,
+                hintText: 'Username',
+              )
             ],
           ),
         ),
@@ -144,11 +152,13 @@ class EditProfileScreen extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            padding: EdgeInsets.symmetric(vertical: 18.h, horizontal: ),
+            padding: EdgeInsets.symmetric(
+              vertical: 18.h,
+              horizontal: 20.w,
+            ),
             decoration: BoxDecoration(
               color: HexColor('#E4DFDF'),
               borderRadius: BorderRadius.circular(12.r),
-
             ),
           ),
           Expanded(
