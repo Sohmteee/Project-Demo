@@ -223,7 +223,7 @@ class EditProfileScreen extends StatelessWidget {
                       ),
                     ),
                     child: SvgPicture.asset(
-                      'assets/svg/drawer/profile/settings/whatsapp.svg',
+                      'assets/svg/drawer/profile/settings/f.svg',
                     ),
                   ),
                   /* ShaderMask(
