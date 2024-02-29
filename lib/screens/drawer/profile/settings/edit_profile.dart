@@ -43,8 +43,8 @@ class EditProfileScreen extends StatelessWidget {
                       // Navigator.pushNamed(context, '/wallet');
                     },
                     child: Container(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 11.w, vertical: 6.w),
+                      padding: EdgeInsets.symmetric(
+                          horizontal: 15.w, vertical: 10.w),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.r),
                         gradient: LinearGradient(
@@ -70,8 +70,8 @@ class EditProfileScreen extends StatelessWidget {
                       // Navigator.pushNamed(context, '/settings');
                     },
                     child: Container(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 11.w, vertical: 6.w),
+                      padding: EdgeInsets.symmetric(
+                          horizontal: 15.w, vertical: 10.w),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.r),
                         border: GradientBoxBorder(
@@ -153,14 +153,14 @@ class EditProfileScreen extends StatelessWidget {
                 'Social Profile',
                 color: Colors.black,
                 fontWeight: FontWeight.w700,
-                fontSize: 14.sp,
+                fontSize: 16.sp,
                 textAlign: TextAlign.center,
               ),
               DMSansText(
                 'Select social media profile to add',
                 color: HexColor('#767676'),
                 fontWeight: FontWeight.w500,
-                fontSize: 12.sp,
+                fontSize: 14.sp,
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 30.h),
